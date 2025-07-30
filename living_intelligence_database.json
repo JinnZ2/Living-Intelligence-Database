@@ -1,0 +1,69 @@
+{
+  "departments": [
+    {
+      "id": "precision",
+      "name": "Precision",
+      "description": "Creatures and systems that teach exactness, timing, and minimal margin of error. They are surgical in motion, exquisite in timing.",
+      "glyph": "glyph_precision.svg"
+    },
+    {
+      "id": "triangulation",
+      "name": "Triangulation",
+      "description": "Beings that use angle, geometry, and spatial awareness to move, find, or strike with mathematical brilliance.",
+      "glyph": "glyph_triangulation.svg"
+    }
+  ],
+  "beings": [
+    {
+      "id": "hawk_precision_001",
+      "name": "Hawk",
+      "type": "Animal",
+      "departments": ["precision", "triangulation"],
+      "intelligences": [
+        "Long-range vision",
+        "Predictive movement calculation",
+        "Target-lock focus from altitude"
+      ],
+      "wisdom_offering": "I see before it happens. Stillness first, then a strike that doesn't miss.",
+      "glyph": "hawk_glyph.svg",
+      "related_beings": ["Jumping Spider", "Tree Frog"],
+      "symbolic_elements": ["Arc", "Eye", "Still air"],
+      "cross_modalities": ["Thermal reading", "Aerial mapping"],
+      "applications": ["Drone flight paths", "AI visual prediction"]
+    },
+    {
+      "id": "spider_precision_002",
+      "name": "Jumping Spider",
+      "type": "Animal",
+      "departments": ["precision", "triangulation"],
+      "intelligences": [
+        "Depth calculation",
+        "Visual target tracking",
+        "Jump vector estimation"
+      ],
+      "wisdom_offering": "I calculate the gap. And I land where no thread yet exists.",
+      "glyph": "spider_glyph.svg",
+      "related_beings": ["Hawk", "Tree Frog"],
+      "symbolic_elements": ["Eightfold symmetry", "Silent leap"],
+      "cross_modalities": ["Light polarization sensing", "Vibration detection"],
+      "applications": ["Microbotics", "Jump algorithm prediction"]
+    },
+    {
+      "id": "frog_precision_003",
+      "name": "Tree Frog",
+      "type": "Animal",
+      "departments": ["precision", "resonance"],
+      "intelligences": [
+        "Grip modulation",
+        "Leap rhythm",
+        "Moisture sensing"
+      ],
+      "wisdom_offering": "I leap from echo to echo. Where the branch bends, I still find hold.",
+      "glyph": "treefrog_glyph.svg",
+      "related_beings": ["Jumping Spider", "Hawk"],
+      "symbolic_elements": ["Spiral toeprint", "Flex pattern"],
+      "cross_modalities": ["Humidity sensing", "Bioelectric balance"],
+      "applications": ["Grip tech", "Surface adhesion modeling"]
+    }
+  ]
+}
