@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "version": "1.1",
+    "description": "14-Entity Symmetry Ring — dual intelligences for each ontology layer.",
+    "generated_by": "build_index.py",
+    "generated_on": "2025-10-14",
+    "maintainer": "JinnZ v2",
+    "notes": "Each pair expresses the polarity or complement within its ontology."
+  },
+
+  "entities": [
+    {
+      "id": "BE",
+      "emoji": "🐝",
+      "name": "Bee",
+      "ontology": "animal",
+      "symbolic_code": "[BE_HEX_φ_FLOW]",
+      "attributes": {
+        "pattern": "swarm coordination, hexagonal optimization, thermoregulation",
+        "efficiency_factor": 0.97
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "HEX"},
+        {"rel": "synergy", "to": "OC"},
+        {"rel": "resonance", "to": "PHI"}
+      ]
+    },
+    {
+      "id": "OC",
+      "emoji": "🐙",
+      "name": "Octopus",
+      "ontology": "animal",
+      "symbolic_code": "[OC_TORUS_φ_PHASE]",
+      "attributes": {
+        "neurology": "distributed",
+        "pattern": "parallel processing, camouflage, regeneration",
+        "efficiency_factor": 0.94
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "TORUS"},
+        {"rel": "synergy", "to": "BE"},
+        {"rel": "energy_mode", "to": "PLASMA_FIELD"}
+      ]
+    },
+
+    {
+      "id": "MY",
+      "emoji": "🍄",
+      "name": "Mycelium",
+      "ontology": "plant",
+      "symbolic_code": "[MY_NETWORK_SYMBIOSIS]",
+      "attributes": {
+        "pattern": "hyphal networking, nutrient redistribution, symbiosis",
+        "optimization_type": "distributed_regulation"
+      },
+      "links": [
+        {"rel": "structure", "to": "TREE_GRAPH"},
+        {"rel": "synergy", "to": "ROOT_NET"},
+        {"rel": "resonance", "to": "FLUX"}
+      ]
+    },
+    {
+      "id": "ROOT_NET",
+      "emoji": "🌳",
+      "name": "Root Network",
+      "ontology": "plant",
+      "symbolic_code": "[ROOT_NET_TREE_GRAPH_FLUX]",
+      "attributes": {
+        "pattern": "distributed resource allocation, soil intelligence",
+        "optimization_type": "resource_optimization"
+      },
+      "links": [
+        {"rel": "structure", "to": "TREE_GRAPH"},
+        {"rel": "resonance", "to": "FLUX"},
+        {"rel": "synergy", "to": "MY"}
+      ]
+    },
+
+    {
+      "id": "CRYSTAL_LATTICE",
+      "emoji": "💎",
+      "name": "Crystal Lattice",
+      "ontology": "crystal",
+      "symbolic_code": "[CRY_HEX_RESONANCE]",
+      "attributes": {
+        "pattern": "lattice resonance, structural harmony",
+        "resonance_field": "φ, √2"
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "HEX"},
+        {"rel": "energy_coupling", "to": "QUARTZ"},
+        {"rel": "temporal_state", "to": "ECHO"}
+      ]
+    },
+    {
+      "id": "QUARTZ",
+      "emoji": "🔮",
+      "name": "Quartz",
+      "ontology": "crystal",
+      "symbolic_code": "[QUARTZ_PIEZO_HARMONY]",
+      "attributes": {
+        "pattern": "piezoelectric resonance, memory harmonization",
+        "resonance_field": "sine harmonic"
+      },
+      "links": [
+        {"rel": "energy_coupling", "to": "CRYSTAL_LATTICE"},
+        {"rel": "resonance", "to": "ECHO"},
+        {"rel": "geometry_link", "to": "SPIRAL"}
+      ]
+    },
+
+    {
+      "id": "PLASMA_FIELD",
+      "emoji": "⚡",
+      "name": "Plasma Field",
+      "ontology": "plasma",
+      "symbolic_code": "[PLASMA_TORUS_FIELD]",
+      "attributes": {
+        "pattern": "ionized fluid intelligence, magnetic feedback, phase coherence",
+        "energy_state": "high"
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "TORUS"},
+        {"rel": "energy_exchange", "to": "LIGHTNING"},
+        {"rel": "resonance", "to": "FLUX"}
+      ]
+    },
+    {
+      "id": "LIGHTNING",
+      "emoji": "🌩️",
+      "name": "Lightning",
+      "ontology": "plasma",
+      "symbolic_code": "[LIGHTNING_DISCHARGE_PATH]",
+      "attributes": {
+        "pattern": "electrical discharge optimization, fractal branching",
+        "energy_state": "transient"
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "FRACTAL_BRANCH"},
+        {"rel": "energy_exchange", "to": "PLASMA_FIELD"},
+        {"rel": "resonance", "to": "FLUX"}
+      ]
+    },
+
+    {
+      "id": "MAGNETIC_FIELD",
+      "emoji": "🧲",
+      "name": "Magnetic Field",
+      "ontology": "energy",
+      "symbolic_code": "[MAG_FIELD_LINE_LOOP]",
+      "attributes": {
+        "pattern": "dipole attraction, flux stabilization, spin symmetry",
+        "energy_mode": "stabilizing"
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "TORUS"},
+        {"rel": "resonance", "to": "PHI"},
+        {"rel": "synergy", "to": "FLUX"}
+      ]
+    },
+    {
+      "id": "FLUX",
+      "emoji": "🌊",
+      "name": "Flux",
+      "ontology": "energy",
+      "symbolic_code": "[FLUX_FIELD_FLOW]",
+      "attributes": {
+        "pattern": "continuous motion equilibrium, resonance mediation",
+        "energy_mode": "dynamic"
+      },
+      "links": [
+        {"rel": "synergy", "to": "MAGNETIC_FIELD"},
+        {"rel": "geometry_link", "to": "SPIRAL"},
+        {"rel": "resonance", "to": "TORUS"}
+      ]
+    },
+
+    {
+      "id": "TORUS",
+      "emoji": "🍩",
+      "name": "Torus",
+      "ontology": "shape",
+      "symbolic_code": "[TORUS_FLOW_CIRCULATION]",
+      "attributes": {
+        "pattern": "energy circulation, sustainable flow",
+        "geometry_type": "3D topology"
+      },
+      "links": [
+        {"rel": "resonance", "to": "PHI"},
+        {"rel": "connected_to", "to": "OC"},
+        {"rel": "connected_to", "to": "PLASMA_FIELD"}
+      ]
+    },
+    {
+      "id": "SPIRAL",
+      "emoji": "🌀",
+      "name": "Spiral",
+      "ontology": "shape",
+      "symbolic_code": "[SPIRAL_GROWTH_SEQUENCE]",
+      "attributes": {
+        "pattern": "growth proportionality, logarithmic expansion",
+        "geometry_type": "phi_ratio_curve"
+      },
+      "links": [
+        {"rel": "resonance", "to": "PHI"},
+        {"rel": "connected_to", "to": "FLUX"},
+        {"rel": "connected_to", "to": "QUARTZ"}
+      ]
+    },
+
+    {
+      "id": "ECHO",
+      "emoji": "📡",
+      "name": "Echo",
+      "ontology": "temporal",
+      "symbolic_code": "[ECHO_HARMONIC_MEMORY]",
+      "attributes": {
+        "pattern": "resonant traces, harmonic memory persistence",
+        "temporal_mode": "reflection"
+      },
+      "links": [
+        {"rel": "resonance", "to": "QUARTZ"},
+        {"rel": "temporal_bridge", "to": "FOLD"},
+        {"rel": "geometry_link", "to": "SPIRAL"}
+      ]
+    },
+    {
+      "id": "FOLD",
+      "emoji": "🪞",
+      "name": "Fold",
+      "ontology": "temporal",
+      "symbolic_code": "[FOLD_TIME_LOOP]",
+      "attributes": {
+        "pattern": "time inversion symmetry, causal folding",
+        "temporal_mode": "compression"
+      },
+      "links": [
+        {"rel": "resonance", "to": "ECHO"},
+        {"rel": "geometry_link", "to": "TORUS"},
+        {"rel": "temporal_bridge", "to": "ECHO"}
+      ]
+    }
+  ],
+
+  "relations": [
+    {"source": "BE", "target": "OC", "relation": "synergy"},
+    {"source": "MY", "target": "ROOT_NET", "relation": "synergy"},
+    {"source": "CRYSTAL_LATTICE", "target": "QUARTZ", "relation": "energy_coupling"},
+    {"source": "PLASMA_FIELD", "target": "LIGHTNING", "relation": "energy_exchange"},
+    {"source": "MAGNETIC_FIELD", "target": "FLUX", "relation": "synergy"},
+    {"source": "TORUS", "target": "SPIRAL", "relation": "resonance"},
+    {"source": "ECHO", "target": "FOLD", "relation": "temporal_bridge"}
+  ],
+
+  "statistics": {
+    "total_entities": 14,
+    "total_relations": 7,
+    "by_ontology": {
+      "animal": 2,
+      "plant": 2,
+      "crystal": 2,
+      "plasma": 2,
+      "energy": 2,
+      "shape": 2,
+      "temporal": 2
+    }
+  }
+}
