@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Plant Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology", "attributes"],
+  "properties": {
+    "id": {"type": "string"},
+    "emoji": {"type": "string"},
+    "name": {"type": "string"},
+    "ontology": {"const": "plant"},
+    "symbolic_code": {"type": "string"},
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "pattern": {"type": "string"},
+        "optimization_type": {"type": "string"}
+      },
+      "required": ["pattern"]
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rel", "to"],
+        "properties": {
+          "rel": {"type": "string"},
+          "to": {"type": "string"}
+        }
+      }
+    }
+  }
+}
