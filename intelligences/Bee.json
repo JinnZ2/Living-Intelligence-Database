@@ -1,0 +1,19 @@
+{
+  "bee": {
+    "name": "Bee Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "spatial_optimization": "hexagonal_efficiency_packing",
+      "collective_decision": "swarm_consensus",
+      "resource_allocation": "dance_communication",
+      "exploration_strategy": "scout_worker_coordination"
+    },
+    "binary_translation": {
+      "algorithm_type": "parallel_spatial_optimization",
+      "data_structure": "hexagonal_grid_arrays",
+      "memory_pattern": "spatial_locality",
+      "communication": "distributed_consensus",
+      "scalability": "swarm_parallel"
+    }
+  }
+}
