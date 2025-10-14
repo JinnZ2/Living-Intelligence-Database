@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Shape Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "emoji": { "type": "string" },
+    "ontology": { "const": "shape" },
+    "geometry_class": { "type": "string" },
+    "dimension": { "type": "integer" },
+    "harmonic_ratios": { "type": "array", "items": { "type": "number" } },
+    "applications": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
