@@ -1,0 +1,29 @@
+[
+  {
+    "id": "CRYSTAL_LATTICE",
+    "kind": "CRYSTAL",
+    "label": "Crystalline Lattice",
+    "attributes": {
+      "pattern": "Lattice resonance; symmetry groups; phonon propagation",
+      "geometry": "CUBE/HEX",
+      "constraints": { "protocols": ["SYMMETRY_EXPLOIT"] }
+    },
+    "links": [
+      { "rel": "SHAPE", "to": "HEX" },
+      { "rel": "SHAPE", "to": "CUBE" }
+    ]
+  },
+  {
+    "id": "QUARTZ_PIEZO",
+    "kind": "CRYSTAL",
+    "label": "Quartz (Piezoelectric)",
+    "attributes": {
+      "pattern": "Charge–stress coupling; timebase stability",
+      "constraints": { "protocols": ["SIGNAL_CONVERT", "OSC_STABILIZE"] }
+    },
+    "links": [
+      { "rel": "ENERGY_FIELD", "to": "ELECTRIC_FIELD" },
+      { "rel": "ENERGY_FIELD", "to": "MECHANICAL_STRAIN" }
+    ]
+  }
+]
