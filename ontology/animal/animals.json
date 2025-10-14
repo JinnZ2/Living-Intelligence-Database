@@ -1,0 +1,64 @@
+[
+  {
+    "id": "BEE",
+    "kind": "ANIMAL",
+    "label": "Bee",
+    "attributes": {
+      "pattern": "Hexagonal packing, swarm consensus, scout-worker exploration",
+      "domain": "terrestrial",
+      "geometry": "HEX",
+      "constraints": {
+        "phi": "≈1.618",
+        "protocols": ["SYMMETRY_EXPLOIT", "SIMD_OPTIMIZE"]
+      }
+    },
+    "links": [
+      { "rel": "STRUCTURE", "to": "HEX" },
+      { "rel": "ENERGY_FIELD", "to": "ELECTROMAGNETIC_FIELD" }
+    ]
+  },
+  {
+    "id": "OCTOPUS",
+    "kind": "ANIMAL",
+    "label": "Octopus",
+    "attributes": {
+      "pattern": "Independent-arm parallelism, adaptive strategy, decentralized control",
+      "domain": "marine",
+      "constraints": {
+        "temporal": "ADAPTIVE",
+        "protocols": ["ENCODE", "ASYNC_COORDINATION"]
+      }
+    },
+    "links": [
+      { "rel": "NETWORK", "to": "DISTRIBUTED_GRAPH" },
+      { "rel": "FLOW", "to": "ADAPTIVE_PARALLELISM" }
+    ]
+  },
+  {
+    "id": "SHARK",
+    "kind": "ANIMAL",
+    "label": "Shark",
+    "attributes": {
+      "pattern": "Pursuit algorithms; electromagnetic prey sensing",
+      "domain": "marine",
+      "constraints": { "protocols": ["PURSUE_TRACK", "SIGNAL_FILTER"] }
+    },
+    "links": [
+      { "rel": "EFFICIENCY", "to": "TORPEDO_FORM" },
+      { "rel": "SENSES", "to": "ELECTROMAGNETIC_FIELD" }
+    ]
+  },
+  {
+    "id": "ROOT_NET",
+    "kind": "PLANT",
+    "label": "Root Networks (as plant exemplar)",
+    "attributes": {
+      "pattern": "Distributed resource allocation, growth toward gradients",
+      "domain": "terrestrial",
+      "constraints": { "protocols": ["FLOW_BALANCE", "MIN_PATH"] }
+    },
+    "links": [
+      { "rel": "STRUCTURE", "to": "TREE_GRAPH" }
+    ]
+  }
+]
