@@ -1,0 +1,17 @@
+{
+  "id": "MAGNETIC_FIELD",
+  "name": "Magnetic Field",
+  "emoji": "🧲",
+  "ontology": "energy",
+  "symbolic_code": "[MAG_FIELD_LINE_LOOP]",
+  "description": "Dipole-based energy field maintaining spatial coherence through aligned spin and flux stabilization.",
+  "core_attributes": {
+    "pattern": "dipole attraction, spin symmetry, field stabilization",
+    "energy_mode": "stabilizing"
+  },
+  "links": [
+    {"relation": "resonance", "target": "PHI"},
+    {"relation": "synergy", "target": "FLUX"}
+  ],
+  "validation_meta": {"schema": "energy_intelligence.schema.json", "version": "1.1"}
+}
