@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Energy Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology", "attributes"],
+  "properties": {
+    "id": {"type": "string"},
+    "emoji": {"type": "string"},
+    "name": {"type": "string"},
+    "ontology": {"const": "energy"},
+    "symbolic_code": {"type": "string"},
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "pattern": {"type": "string"},
+        "energy_mode": {"type": "string"},
+        "efficiency_factor": {"type": "number"}
+      },
+      "required": ["pattern"]
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rel", "to"],
+        "properties": {
+          "rel": {"type": "string"},
+          "to": {"type": "string"}
+        }
+      }
+    }
+  }
+}
