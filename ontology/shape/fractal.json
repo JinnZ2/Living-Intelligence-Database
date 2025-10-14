@@ -1,0 +1,18 @@
+{
+  "id": "FRACTAL",
+  "kind": "SHAPE",
+  "label": "Fractal",
+  "attributes": {
+    "pattern": "Self-similarity; recursive scaling; boundary of order and chaos",
+    "geometry": "2.5D",
+    "constraints": {
+      "phi": "≈1.618",
+      "protocols": ["RECURSION", "SELF_SIMILARITY", "SCALE_INVARIANCE"]
+    }
+  },
+  "links": [
+    { "rel": "FLOW", "to": "SPIRAL" },
+    { "rel": "FIELD", "to": "TORUS" },
+    { "rel": "CONSTRAINT", "to": "PHI" }
+  ]
+}
