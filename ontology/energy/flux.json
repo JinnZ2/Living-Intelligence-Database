@@ -1,0 +1,17 @@
+{
+  "id": "FLUX",
+  "name": "Flux",
+  "emoji": "🌊",
+  "ontology": "energy",
+  "symbolic_code": "[FLUX_FIELD_FLOW]",
+  "description": "Dynamic equilibrium maintaining continuity between domains. Governs transitions between potential and kinetic states.",
+  "core_attributes": {
+    "pattern": "continuous flow, harmonic mediation, equilibrium",
+    "energy_mode": "dynamic"
+  },
+  "links": [
+    {"relation": "synergy", "target": "MAGNETIC_FIELD"},
+    {"relation": "geometry_link", "target": "SPIRAL"}
+  ],
+  "validation_meta": {"schema": "energy_intelligence.schema.json", "version": "1.1"}
+}
