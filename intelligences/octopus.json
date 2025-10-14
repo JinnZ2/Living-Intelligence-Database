@@ -1,0 +1,25 @@
+{
+  "id": "OC",
+  "emoji": "🐙",
+  "name": "Octopus",
+  "ontology": "animal",
+  "neurology": "decentralized",
+  "patterns": [
+    {
+      "name": "parallel_processing",
+      "type": "distributed_computing",
+      "efficiency_factor": 0.94,
+      "geometry": "parallel_architecture",
+      "applications": ["computing", "control"]
+    },
+    {
+      "name": "camouflage_adaptation",
+      "type": "adaptive_systems",
+      "efficiency_factor": 0.96,
+      "geometry": "pattern_matching",
+      "applications": ["adaptation", "camouflage"]
+    }
+  ],
+  "primary_optimizations": ["parallel_processing", "camouflage_adaptation"],
+  "synergies": ["CU", "BE", "EL"]
+}
