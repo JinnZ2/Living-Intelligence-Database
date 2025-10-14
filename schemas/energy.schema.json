@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Energy Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "ontology": { "const": "energy" },
+    "transmission_modes": { "type": "array", "items": { "type": "string" } },
+    "conversion_efficiency": { "type": "number" },
+    "pattern_couplings": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
