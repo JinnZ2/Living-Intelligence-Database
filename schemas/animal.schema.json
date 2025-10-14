@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Animal Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "emoji": { "type": "string" },
+    "name": { "type": "string" },
+    "ontology": { "const": "animal" },
+    "patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "efficiency_factor"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "efficiency_factor": { "type": "number" },
+          "geometry": { "type": "string" },
+          "applications": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "primary_optimizations": { "type": "array", "items": { "type": "string" } },
+    "synergies": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
