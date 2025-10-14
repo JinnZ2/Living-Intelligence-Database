@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Plant Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "emoji": { "type": "string" },
+    "name": { "type": "string" },
+    "ontology": { "const": "plant" },
+    "patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "function": { "type": "string" },
+          "efficiency_factor": { "type": "number" },
+          "relations": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "root_networks": { "type": "boolean" },
+    "symbioses": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
