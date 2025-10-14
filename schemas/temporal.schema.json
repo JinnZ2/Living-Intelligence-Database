@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Temporal Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "ontology": { "const": "temporal" },
+    "state_type": { "type": "string", "enum": ["memory", "present", "future", "navigation", "integration"] },
+    "attributes": { "type": "array", "items": { "type": "string" } },
+    "relations": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
