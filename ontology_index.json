@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "Unified index of all living intelligences across biological, geometric, energetic, and temporal ontologies.",
+    "generated_by": "build_index.py",
+    "generated_on": "2025-10-14",
+    "maintainer": "JinnZ v2",
+    "notes": "This file is auto-generated; manual edits will be overwritten."
+  },
+  "entities": [],
+  "relations": [],
+  "statistics": {
+    "total_entities": 0,
+    "total_relations": 0,
+    "by_ontology": {
+      "animal": 0,
+      "plant": 0,
+      "crystal": 0,
+      "plasma": 0,
+      "energy": 0,
+      "shape": 0,
+      "temporal": 0
+    }
+  }
+}
