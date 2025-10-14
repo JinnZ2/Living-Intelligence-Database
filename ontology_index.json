@@ -5,21 +5,145 @@
     "generated_by": "build_index.py",
     "generated_on": "2025-10-14",
     "maintainer": "JinnZ v2",
-    "notes": "This file is auto-generated; manual edits will be overwritten."
+    "notes": "Initial seeded entries representing cross-domain intelligences."
   },
-  "entities": [],
-  "relations": [],
+
+  "entities": [
+    {
+      "id": "OC",
+      "emoji": "🐙",
+      "name": "Octopus",
+      "ontology": "animal",
+      "symbolic_code": "[OC_TORUS_φ_PHASE]",
+      "attributes": {
+        "neurology": "distributed",
+        "pattern": "parallel processing, camouflage, regeneration",
+        "efficiency_factor": 0.94
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "TORUS"},
+        {"rel": "synergy", "to": "BEE"},
+        {"rel": "energy_mode", "to": "PLASMA_FIELD"}
+      ]
+    },
+    {
+      "id": "BE",
+      "emoji": "🐝",
+      "name": "Bee",
+      "ontology": "animal",
+      "symbolic_code": "[BE_HEX_φ_FLOW]",
+      "attributes": {
+        "pattern": "swarm coordination, hexagonal optimization, thermoregulation",
+        "efficiency_factor": 0.97
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "HEX"},
+        {"rel": "synergy", "to": "OC"},
+        {"rel": "resonance", "to": "PHI"}
+      ]
+    },
+    {
+      "id": "ROOT_NET",
+      "emoji": "🌳",
+      "name": "Root Network",
+      "ontology": "plant",
+      "symbolic_code": "[ROOT_NET_TREE_GRAPH_FLUX]",
+      "attributes": {
+        "pattern": "distributed resource allocation, soil intelligence",
+        "optimization_type": "resource_optimization"
+      },
+      "links": [
+        {"rel": "structure", "to": "TREE_GRAPH"},
+        {"rel": "resonance", "to": "FLUX"},
+        {"rel": "synergy", "to": "MYCELIUM"}
+      ]
+    },
+    {
+      "id": "CRYSTAL_LATTICE",
+      "emoji": "💎",
+      "name": "Crystal Lattice",
+      "ontology": "crystal",
+      "symbolic_code": "[CRY_HEX_RESONANCE]",
+      "attributes": {
+        "pattern": "lattice resonance, structural harmony",
+        "resonance_field": "φ, √2"
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "HEX"},
+        {"rel": "energy_coupling", "to": "PHI"},
+        {"rel": "temporal_state", "to": "CRYSTALLIZED"}
+      ]
+    },
+    {
+      "id": "PLASMA_FIELD",
+      "emoji": "⚡",
+      "name": "Plasma Field",
+      "ontology": "plasma",
+      "symbolic_code": "[PLASMA_TORUS_FIELD]",
+      "attributes": {
+        "pattern": "ionized fluid intelligence, magnetic feedback, phase coherence",
+        "energy_state": "high"
+      },
+      "links": [
+        {"rel": "geometry_link", "to": "TORUS"},
+        {"rel": "energy_exchange", "to": "EEL"},
+        {"rel": "resonance", "to": "FLUX"}
+      ]
+    },
+    {
+      "id": "TORUS",
+      "emoji": "🍩",
+      "name": "Torus",
+      "ontology": "shape",
+      "symbolic_code": "[TORUS_FLOW_CIRCULATION]",
+      "attributes": {
+        "pattern": "energy circulation, sustainable flow",
+        "geometry_type": "3D topology"
+      },
+      "links": [
+        {"rel": "resonance", "to": "PHI"},
+        {"rel": "connected_to", "to": "OC"},
+        {"rel": "connected_to", "to": "PLASMA_FIELD"}
+      ]
+    },
+    {
+      "id": "ECHO",
+      "emoji": "📡",
+      "name": "Echo",
+      "ontology": "temporal",
+      "symbolic_code": "[ECHO_HARMONIC_MEMORY]",
+      "attributes": {
+        "pattern": "resonant traces, harmonic memory persistence",
+        "temporal_mode": "reflection"
+      },
+      "links": [
+        {"rel": "resonance", "to": "CRYSTAL_LATTICE"},
+        {"rel": "temporal_bridge", "to": "FOLD"},
+        {"rel": "geometry_link", "to": "SPIRAL"}
+      ]
+    }
+  ],
+
+  "relations": [
+    {"source": "OC", "target": "TORUS", "relation": "geometry_link"},
+    {"source": "OC", "target": "BEE", "relation": "synergy"},
+    {"source": "BEE", "target": "HEX", "relation": "geometry_link"},
+    {"source": "CRYSTAL_LATTICE", "target": "ECHO", "relation": "temporal_state"},
+    {"source": "PLASMA_FIELD", "target": "TORUS", "relation": "geometry_link"},
+    {"source": "ECHO", "target": "SPIRAL", "relation": "geometry_link"}
+  ],
+
   "statistics": {
-    "total_entities": 0,
-    "total_relations": 0,
+    "total_entities": 7,
+    "total_relations": 6,
     "by_ontology": {
-      "animal": 0,
-      "plant": 0,
-      "crystal": 0,
-      "plasma": 0,
+      "animal": 2,
+      "plant": 1,
+      "crystal": 1,
+      "plasma": 1,
       "energy": 0,
-      "shape": 0,
-      "temporal": 0
+      "shape": 1,
+      "temporal": 1
     }
   }
 }
