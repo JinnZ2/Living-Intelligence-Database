@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ELECTROMAGNETIC_FIELD",
+    "kind": "ENERGY",
+    "label": "Electromagnetic Field",
+    "attributes": {
+      "pattern": "Signal carrier; resonance and coupling across scales",
+      "constraints": { "tau": "≈6.283", "protocols": ["SIGNAL_TRANSMIT", "FILTER"] }
+    }
+  },
+  {
+    "id": "PRESSURE_FIELD",
+    "kind": "ENERGY",
+    "label": "Pressure Field",
+    "attributes": {
+      "pattern": "Flow induction by gradients; hydraulic/pneumatic computation",
+      "constraints": { "protocols": ["FLOW_BALANCE", "MIN_PATH"] }
+    }
+  },
+  {
+    "id": "SINE_WAVE",
+    "kind": "ENERGY",
+    "label": "Sine Wave",
+    "attributes": {
+      "pattern": "Fundamental oscillation; superposition basis",
+      "constraints": { "tau": "≈6.283", "protocols": ["OSC_STABILIZE"] }
+    }
+  }
+]
