@@ -1,0 +1,17 @@
+{
+  "id": "SPIRAL",
+  "name": "Spiral",
+  "emoji": "🌀",
+  "ontology": "shape",
+  "symbolic_code": "[SPIRAL_GROWTH_SEQUENCE]",
+  "description": "Phi-ratio growth curve representing natural proportionality and temporal unfolding.",
+  "core_attributes": {
+    "pattern": "logarithmic expansion, fractal proportionality, growth path",
+    "geometry_type": "phi_curve"
+  },
+  "links": [
+    {"relation": "resonance", "target": "PHI"},
+    {"relation": "connected_to", "target": "FLUX"}
+  ],
+  "validation_meta": {"schema": "shape_intelligence.schema.json", "version": "1.1"}
+}
