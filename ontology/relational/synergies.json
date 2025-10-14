@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    { "id": "BE", "label": "Bee" },
+    { "id": "OC", "label": "Octopus" },
+    { "id": "EL", "label": "Elephant" }
+  ],
+  "edges": [
+    { "source": "BE", "target": "OC", "relation": "synergy" },
+    { "source": "OC", "target": "EL", "relation": "synergy" }
+  ]
+}
