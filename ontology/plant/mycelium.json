@@ -1,0 +1,17 @@
+{
+  "id": "MY",
+  "name": "Mycelium",
+  "emoji": "🍄",
+  "ontology": "plant",
+  "symbolic_code": "[MY_NETWORK_SYMBIOSIS]",
+  "description": "Fungal network intelligence embodying distributed regulation, decomposition, and nutrient redistribution across multi-species systems.",
+  "core_attributes": {
+    "pattern": "hyphal networking, chemical signaling, resource optimization",
+    "efficiency_type": "distributed_regulation"
+  },
+  "links": [
+    {"relation": "synergy", "target": "ROOT_NET"},
+    {"relation": "resonance", "target": "FLUX"}
+  ],
+  "validation_meta": {"schema": "plant_intelligence.schema.json", "version": "1.1"}
+}
