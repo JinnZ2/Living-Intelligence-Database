@@ -1,0 +1,17 @@
+{
+  "id": "PLASMA_FIELD",
+  "name": "Plasma Field",
+  "emoji": "⚡",
+  "ontology": "plasma",
+  "symbolic_code": "[PLASMA_TORUS_FIELD]",
+  "description": "Ionized matter intelligence manifesting in self-organized electromagnetic structures. Bridge between matter and energy domains.",
+  "core_attributes": {
+    "pattern": "ionized feedback, magnetized flow, phase coherence",
+    "energy_state": "high"
+  },
+  "links": [
+    {"relation": "energy_exchange", "target": "LIGHTNING"},
+    {"relation": "resonance", "target": "FLUX"}
+  ],
+  "validation_meta": {"schema": "plasma_intelligence.schema.json", "version": "1.1"}
+}
