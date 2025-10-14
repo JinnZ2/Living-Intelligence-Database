@@ -1,0 +1,15 @@
+{
+  "id": "TEMPORAL",
+  "kind": "TEMPORAL",
+  "label": "Temporal Intelligence",
+  "attributes": {
+    "pattern": "Cycle, phase shift, emergence, decay, memory",
+    "geometry": "Phase-space mapping",
+    "constraints": { "protocols": ["PHASE", "FOLD", "EMERGENT"] }
+  },
+  "links": [
+    { "rel": "COORDINATES", "to": "SHAPE" },
+    { "rel": "FLOW", "to": "ENERGY" },
+    { "rel": "FIELD", "to": "PLASMA" }
+  ]
+}
