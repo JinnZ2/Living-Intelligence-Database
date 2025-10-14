@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jinnz2.github.io/Living-Intelligence-Database/schema/symbol_unit.schema.json",
+  "title": "Symbol Unit",
+  "type": "object",
+  "required": ["name", "kind", "code"],
+  "properties": {
+    "name": { "type": "string" },
+    "kind": { "type": "string", "enum": ["SHAPE", "ENERGY"] },
+    "symbol": { "type": "string" },
+    "code": { "type": "string" },
+    "dimension": { "type": ["number", "string"] },
+    "resonance": { "type": ["number", "string"] },
+    "physics": { "type": "string" }
+  },
+  "additionalProperties": true
+}
