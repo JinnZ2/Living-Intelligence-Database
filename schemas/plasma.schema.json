@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Plasma Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "ontology": { "const": "plasma" },
+    "field_dynamics": { "type": "string" },
+    "charge_modes": { "type": "array", "items": { "type": "string" } },
+    "coherence_states": { "type": "array", "items": { "type": "string" } },
+    "links": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
