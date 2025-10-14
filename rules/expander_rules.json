@@ -1,0 +1,9 @@
+[
+  { "if": ["SPIDER", "TREE_GRAPH"], "then": "NET" },
+  { "if": ["BEE", "HEX", "phi"], "then": "HEX_EFFICIENCY" },
+  { "if": ["OCTOPUS", "TREE_GRAPH"], "then": "DISTRIBUTED_PARALLELISM" },
+  { "if": ["LEAF_TESSELLATION", "SINE_WAVE"], "then": "PHOTON_CAPTURE_RESONANT" }
+]
+
+
+##Phi is token here
