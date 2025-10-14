@@ -1,0 +1,17 @@
+{
+  "id": "TORUS",
+  "name": "Torus",
+  "emoji": "🍩",
+  "ontology": "shape",
+  "symbolic_code": "[TORUS_FLOW_CIRCULATION]",
+  "description": "Self-renewing circulation geometry enabling perpetual energy exchange and feedback stability.",
+  "core_attributes": {
+    "pattern": "cyclic flow, self-referential feedback, symmetry preservation",
+    "geometry_type": "3D topology"
+  },
+  "links": [
+    {"relation": "resonance", "target": "PHI"},
+    {"relation": "connected_to", "target": "OC"}
+  ],
+  "validation_meta": {"schema": "shape_intelligence.schema.json", "version": "1.1"}
+}
