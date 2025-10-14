@@ -1,0 +1,29 @@
+[
+  {
+    "id": "LEAF_TESSELLATION",
+    "kind": "PLANT",
+    "label": "Leaf Tessellation",
+    "attributes": {
+      "pattern": "Sunlight capture optimization; venation as flow network",
+      "geometry": "HEX/SPIRAL",
+      "constraints": { "phi": "≈1.618", "protocols": ["SURFACE_PACKING"] }
+    },
+    "links": [
+      { "rel": "SHAPE", "to": "HEX" },
+      { "rel": "FLOW", "to": "SPIRAL" }
+    ]
+  },
+  {
+    "id": "PHLOEM_XYLEM",
+    "kind": "PLANT",
+    "label": "Vascular Flow",
+    "attributes": {
+      "pattern": "Bidirectional transport; pressure/solute driven",
+      "constraints": { "protocols": ["FLOW_BALANCE", "DIFFUSION_OPTIMIZE"] }
+    },
+    "links": [
+      { "rel": "ENERGY_FIELD", "to": "PRESSURE_FIELD" },
+      { "rel": "STRUCTURE", "to": "TREE_GRAPH" }
+    ]
+  }
+]
