@@ -1,0 +1,32 @@
+[
+  {
+    "id": "HEX",
+    "kind": "SHAPE",
+    "label": "Hexagon",
+    "attributes": {
+      "pattern": "Optimal planar packing; structural efficiency",
+      "geometry": "2D",
+      "constraints": { "phi": "≈1.618" }
+    }
+  },
+  {
+    "id": "TORUS",
+    "kind": "SHAPE",
+    "label": "Torus",
+    "attributes": {
+      "pattern": "Energy circulation; sustainable flow topology",
+      "geometry": "3D",
+      "constraints": { "protocols": ["LOOP_FLOW"] }
+    }
+  },
+  {
+    "id": "TREE_GRAPH",
+    "kind": "SHAPE",
+    "label": "Tree Graph",
+    "attributes": {
+      "pattern": "Branching flow; minimal redundancy",
+      "geometry": "Graph",
+      "constraints": { "protocols": ["MIN_PATH", "LOAD_BALANCE"] }
+    }
+  }
+]
