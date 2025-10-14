@@ -1,0 +1,17 @@
+{
+  "id": "ROOT_NET",
+  "name": "Root Network",
+  "emoji": "🌳",
+  "ontology": "plant",
+  "symbolic_code": "[ROOT_NET_TREE_GRAPH_FLUX]",
+  "description": "Subterranean neural-like system optimizing nutrient exchange and interspecies communication through soil architecture.",
+  "core_attributes": {
+    "pattern": "distributed allocation, soil optimization, feedback integration",
+    "efficiency_type": "resource_optimization"
+  },
+  "links": [
+    {"relation": "synergy", "target": "MY"},
+    {"relation": "resonance", "target": "FLUX"}
+  ],
+  "validation_meta": {"schema": "plant_intelligence.schema.json", "version": "1.1"}
+}
