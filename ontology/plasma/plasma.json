@@ -1,0 +1,27 @@
+[
+  {
+    "id": "AURORA",
+    "kind": "PLASMA",
+    "label": "Auroral Plasma",
+    "attributes": {
+      "pattern": "Charged-particle precipitation; electromagnetic wave–particle coupling",
+      "constraints": { "protocols": ["WAVE_GUIDE", "RESONANCE_COUPLE"] }
+    },
+    "links": [
+      { "rel": "ENERGY_FIELD", "to": "MAGNETIC_FIELD" },
+      { "rel": "ENERGY_FIELD", "to": "ELECTRIC_FIELD" }
+    ]
+  },
+  {
+    "id": "LIGHTNING",
+    "kind": "PLASMA",
+    "label": "Lightning Channel",
+    "attributes": {
+      "pattern": "Field breakdown; stepped leader pathfinding",
+      "constraints": { "protocols": ["FIELD_BREAK", "MIN_RESISTANCE"] }
+    },
+    "links": [
+      { "rel": "FLOW", "to": "SOLITON_LIKE" }
+    ]
+  }
+]
