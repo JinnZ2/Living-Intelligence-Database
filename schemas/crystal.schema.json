@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Crystal Intelligence Schema",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "emoji": { "type": "string" },
+    "name": { "type": "string" },
+    "ontology": { "const": "crystal" },
+    "structure": { "type": "string" },
+    "lattice_type": { "type": "string" },
+    "resonance_properties": { "type": "array", "items": { "type": "string" } },
+    "applications": { "type": "array", "items": { "type": "string" } },
+    "symbolic_links": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
