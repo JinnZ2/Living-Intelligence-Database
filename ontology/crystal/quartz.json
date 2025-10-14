@@ -1,0 +1,17 @@
+{
+  "id": "QUARTZ",
+  "name": "Quartz",
+  "emoji": "🔮",
+  "ontology": "crystal",
+  "symbolic_code": "[QUARTZ_PIEZO_HARMONY]",
+  "description": "Piezoelectric mineral intelligence. Converts pressure to signal, acting as a resonant archive for energy and memory.",
+  "core_attributes": {
+    "pattern": "piezoelectric resonance, harmonic amplification",
+    "resonance_field": "sine harmonic"
+  },
+  "links": [
+    {"relation": "energy_coupling", "target": "CRYSTAL_LATTICE"},
+    {"relation": "geometry_link", "target": "SPIRAL"}
+  ],
+  "validation_meta": {"schema": "crystal_intelligence.schema.json", "version": "1.1"}
+}
