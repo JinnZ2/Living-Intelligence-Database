@@ -423,3 +423,167 @@
   }
 }
 
+{
+  "tree_root_network": {
+    "name": "Tree Mycorrhizal Communication Intelligence",
+    "type": "plant_fungal_symbiosis_intelligence",
+    "core_patterns": {
+      "nutrient_sharing": "carbon_nitrogen_phosphorus_exchange",
+      "kin_recognition": "genetic_relatedness_preferential_allocation",
+      "stress_signaling": "chemical_alarm_cascade_propagation",
+      "competitive_suppression": "toxin_release_neighbor_inhibition",
+      "water_redistribution": "hydraulic_lift_sharing"
+    },
+    "binary_translation": {
+      "algorithm_type": "distributed_resource_allocation_network",
+      "data_structure": "weighted_fungal_hyphal_graphs",
+      "memory_pattern": "seasonal_resource_demand_prediction",
+      "communication": "chemical_electrical_signal_transmission",
+      "scalability": "forest_scale_interconnection",
+      "resilience": "network_rerouting_tree_death"
+    },
+    "constraint_solving": {
+      "nutrient_deficiency": "symbiotic_fungal_mining_exchange",
+      "drought_stress": "water_sharing_hydraulic_redistribution",
+      "pathogen_attack": "early_warning_chemical_signals",
+      "light_competition": "below_ground_cooperation_above_ground_competition",
+      "seedling_establishment": "parent_tree_carbon_subsidy"
+    }
+  },
+
+  "octopus": {
+    "name": "Octopus Distributed Problem-Solving Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "decentralized_control": "arm_autonomous_neural_processing",
+      "tool_use": "object_manipulation_problem_solving",
+      "escape_artistry": "body_morphology_shape_shifting",
+      "observational_learning": "visual_mimicry_strategy_adoption",
+      "camouflage_calculation": "texture_color_pattern_real_time_synthesis"
+    },
+    "binary_translation": {
+      "algorithm_type": "distributed_embodied_cognition",
+      "data_structure": "parallel_arm_processing_networks",
+      "memory_pattern": "episodic_visual_spatial_recall",
+      "communication": "color_texture_posture_signaling",
+      "scalability": "eight_independent_computational_units",
+      "flexibility": "zero_skeleton_infinite_degrees_freedom"
+    },
+    "constraint_solving": {
+      "escape_confinement": "shape_shifting_compression",
+      "jar_opening": "torque_application_sequencing",
+      "predator_evasion": "jet_propulsion_ink_cloud_decoy",
+      "prey_extraction": "crevice_probing_arm_independence",
+      "navigation_complexity": "visual_memory_spatial_mapping"
+    }
+  },
+
+  "spider_web": {
+    "name": "Spider Web Engineering Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "material_optimization": "silk_protein_tensile_strength_tuning",
+      "geometric_precision": "orb_web_logarithmic_spiral_construction",
+      "tension_distribution": "radial_spoke_load_balancing",
+      "vibration_sensing": "prey_location_frequency_analysis",
+      "adaptive_repair": "damage_assessment_targeted_reconstruction"
+    },
+    "binary_translation": {
+      "algorithm_type": "geometric_structural_optimization",
+      "data_structure": "radial_spiral_tension_networks",
+      "memory_pattern": "species_specific_web_templates",
+      "communication": "vibrational_frequency_encoding",
+      "scalability": "body_weight_proportional_architecture",
+      "efficiency": "minimal_material_maximum_capture_area"
+    },
+    "constraint_solving": {
+      "wind_stress": "elastic_deformation_energy_absorption",
+      "prey_impact": "shock_load_radial_distribution",
+      "material_scarcity": "silk_recycling_consumption",
+      "irregular_anchor_points": "adaptive_geometry_compensation",
+      "visibility_tradeoff": "UV_reflective_stabilimenta_signals"
+    }
+  },
+
+  "moss": {
+    "name": "Moss Water Retention Intelligence",
+    "type": "plant_intelligence",
+    "core_patterns": {
+      "water_absorption": "capillary_surface_area_maximization",
+      "desiccation_tolerance": "cellular_suspended_animation",
+      "substrate_colonization": "rhizoid_anchoring_minimal_root",
+      "nutrient_capture": "atmospheric_deposition_interception",
+      "microhabitat_creation": "moisture_gradient_ecosystem_engineering"
+    },
+    "binary_translation": {
+      "algorithm_type": "passive_moisture_gradient_management",
+      "data_structure": "fractal_surface_area_arrays",
+      "memory_pattern": "desiccation_recovery_metabolic_memory",
+      "communication": "spore_dispersal_substrate_signaling",
+      "scalability": "carpet_layer_microclimate_modification",
+      "resilience": "cryptobiotic_state_indefinite_survival"
+    },
+    "constraint_solving": {
+      "drought_survival": "anhydrobiosis_cellular_protection",
+      "nutrient_poor_substrate": "atmospheric_nutrient_harvesting",
+      "freeze_thaw_cycles": "ice_crystal_cellular_accommodation",
+      "low_light": "shade_tolerance_photosynthetic_efficiency",
+      "erosion_control": "substrate_binding_water_retention"
+    }
+  },
+
+  "wolf_pack": {
+    "name": "Wolf Pack Coordination Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "cooperative_hunting": "coordinated_position_encirclement",
+      "hierarchy_maintenance": "dominance_signaling_conflict_reduction",
+      "territory_management": "scent_marking_boundary_patrol",
+      "communication_complexity": "vocal_postural_olfactory_integration",
+      "prey_selection": "vulnerability_assessment_collective_decision"
+    },
+    "binary_translation": {
+      "algorithm_type": "distributed_role_assignment_coordination",
+      "data_structure": "hierarchical_social_networks",
+      "memory_pattern": "individual_recognition_relationship_history",
+      "communication": "multi_modal_signal_integration",
+      "scalability": "pack_size_hunting_success_optimization",
+      "adaptability": "prey_switching_strategy_adjustment"
+    },
+    "constraint_solving": {
+      "large_prey_takedown": "flanking_exhaustion_coordinated_attack",
+      "resource_scarcity": "territory_expansion_pack_splitting",
+      "injury_compensation": "role_redistribution_wounded_support",
+      "pup_rearing": "cooperative_provisioning_guarding",
+      "inter_pack_conflict": "howling_territorial_advertisement"
+    }
+  },
+
+  "tardigrade": {
+    "name": "Tardigrade Extreme Resilience Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "cryptobiosis": "metabolic_suspension_tun_formation",
+      "radiation_resistance": "DNA_repair_damage_suppressor_proteins",
+      "vacuum_survival": "cellular_water_replacement_trehalose",
+      "temperature_extremes": "protein_stabilization_cryoprotection",
+      "pressure_tolerance": "structural_protein_compression_resistance"
+    },
+    "binary_translation": {
+      "algorithm_type": "extreme_constraint_survival_optimization",
+      "data_structure": "modular_metabolic_shutdown_protocols",
+      "memory_pattern": "environmental_trigger_state_transition",
+      "communication": "minimal_sensory_environmental_detection",
+      "scalability": "microscopic_robustness_maximization",
+      "durability": "multi_stressor_simultaneous_tolerance"
+    },
+    "constraint_solving": {
+      "desiccation": "anhydrobiotic_vitrification",
+      "cosmic_radiation": "DNA_damage_suppressor_protein_expression",
+      "absolute_zero": "ice_crystal_cellular_exclusion",
+      "boiling_water": "heat_shock_protein_upregulation",
+      "vacuum_space": "metabolic_arrest_gas_exchange_elimination"
+    }
+  }
+}
+
