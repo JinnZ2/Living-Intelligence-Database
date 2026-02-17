@@ -122,3 +122,139 @@
     }
   }
 }
+
+
+{
+  "cuttlefish": {
+    "name": "Cuttlefish Adaptive Camouflage Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "pattern_matching": "real_time_visual_texture_replication",
+      "color_shifting": "chromatophore_distributed_control",
+      "predator_evasion": "instantaneous_background_mimicry",
+      "communication": "dynamic_skin_pattern_signaling",
+      "hunting_strategy": "hypnotic_wave_distraction"
+    },
+    "binary_translation": {
+      "algorithm_type": "parallel_distributed_pattern_synthesis",
+      "data_structure": "pixel_grid_chromatophore_arrays",
+      "memory_pattern": "visual_template_library",
+      "communication": "spatial_frequency_skin_displays",
+      "scalability": "millisecond_whole_body_transformation",
+      "resolution": "sub_cellular_color_granularity"
+    },
+    "constraint_solving": {
+      "predator_detection": "instant_camouflage_activation",
+      "prey_ambush": "texture_matched_concealment",
+      "social_signaling": "rapid_pattern_language_switching",
+      "decision_speed": "decentralized_chromatophore_control"
+    }
+  },
+
+  "orchid": {
+    "name": "Orchid Deceptive Pollination Intelligence",
+    "type": "plant_intelligence",
+    "core_patterns": {
+      "pollinator_attraction": "chemical_pheromone_mimicry",
+      "visual_deception": "insect_morphology_replication",
+      "resource_efficiency": "zero_nectar_reward_strategy",
+      "timing_synchronization": "pollinator_lifecycle_matching",
+      "scent_engineering": "species_specific_olfactory_signals"
+    },
+    "binary_translation": {
+      "algorithm_type": "sensory_deception_optimization",
+      "data_structure": "multimodal_signal_templates",
+      "memory_pattern": "evolutionary_pollinator_tracking",
+      "communication": "chemical_visual_tactile_convergence",
+      "scalability": "species_specific_exploitation",
+      "efficiency": "zero_energy_reward_deception"
+    },
+    "constraint_solving": {
+      "pollinator_scarcity": "multi_species_deception_strategies",
+      "competition": "hyper_specialized_mimicry",
+      "resource_limitation": "nectar_free_reproduction",
+      "geographic_isolation": "single_pollinator_dependency_optimization"
+    }
+  },
+
+  "aspen_grove": {
+    "name": "Aspen Clonal Colony Intelligence",
+    "type": "plant_intelligence",
+    "core_patterns": {
+      "resource_sharing": "underground_root_network_distribution",
+      "clone_coordination": "unified_genetic_response",
+      "stress_signaling": "chemical_warning_propagation",
+      "regeneration": "distributed_meristem_activation",
+      "fire_adaptation": "root_survival_surface_sacrifice"
+    },
+    "binary_translation": {
+      "algorithm_type": "distributed_resource_balancing",
+      "data_structure": "interconnected_root_graphs",
+      "memory_pattern": "colony_level_state_persistence",
+      "communication": "hydraulic_chemical_signaling",
+      "scalability": "largest_organism_by_mass",
+      "fault_tolerance": "individual_stem_redundancy"
+    },
+    "constraint_solving": {
+      "drought_survival": "deep_root_water_sharing",
+      "fire_resilience": "protected_underground_network",
+      "nutrient_scarcity": "colony_wide_redistribution",
+      "genetic_diversity_loss": "epigenetic_variation_across_clones",
+      "competitive_advantage": "synchronized_leaf_emergence"
+    }
+  },
+
+  "sawgrass": {
+    "name": "Sawgrass Wetland Stabilization Intelligence",
+    "type": "plant_intelligence",
+    "core_patterns": {
+      "substrate_binding": "dense_rhizome_mat_formation",
+      "water_filtration": "root_zone_nutrient_sequestration",
+      "flood_resilience": "flexible_blade_flow_accommodation",
+      "fire_cycle_integration": "rapid_post_burn_regeneration",
+      "soil_building": "organic_matter_accumulation"
+    },
+    "binary_translation": {
+      "algorithm_type": "distributed_substrate_stabilization",
+      "data_structure": "interlocking_rhizome_mesh",
+      "memory_pattern": "seasonal_flood_pulse_response",
+      "communication": "rhizome_connected_nutrient_sharing",
+      "scalability": "vast_monoculture_dominance",
+      "resilience": "underground_bud_bank_persistence"
+    },
+    "constraint_solving": {
+      "water_flow_stress": "flexible_architecture_energy_dissipation",
+      "nutrient_poor_substrate": "efficient_uptake_recycling",
+      "fire_disturbance": "protected_meristem_rapid_recovery",
+      "sediment_accumulation": "vertical_growth_tracking",
+      "salinity_intrusion": "facultative_tolerance_gradients"
+    }
+  },
+
+  "beetle": {
+    "name": "Beetle Structural Optimization Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "exoskeleton_engineering": "chitin_composite_load_distribution",
+      "flight_mechanics": "elytra_wing_protection_deployment",
+      "chemical_defense": "reactive_compound_synthesis",
+      "metamorphosis": "complete_body_reorganization",
+      "substrate_excavation": "mandible_leverage_optimization"
+    },
+    "binary_translation": {
+      "algorithm_type": "structural_load_path_optimization",
+      "data_structure": "hierarchical_composite_matrices",
+      "memory_pattern": "metamorphic_state_transitions",
+      "communication": "pheromone_acoustic_signaling",
+      "scalability": "size_variant_structural_adaptation",
+      "efficiency": "weight_to_strength_ratio_maximization"
+    },
+    "constraint_solving": {
+      "body_armor": "lightweight_high_strength_composites",
+      "flight_capability": "protective_cover_aerodynamic_integration",
+      "predator_defense": "chemical_spray_targeting",
+      "resource_extraction": "wood_cellulose_digestion_symbiosis",
+      "size_scaling": "exoskeleton_thickness_optimization"
+    }
+  }
+}
