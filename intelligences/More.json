@@ -1,0 +1,124 @@
+{
+  "mycelium": {
+    "name": "Mycelial Network Intelligence",
+    "type": "fungal_intelligence",
+    "core_patterns": {
+      "resource_distribution": "gradient_flow_optimization",
+      "network_topology": "fractal_branching_efficiency",
+      "stress_detection": "chemical_signaling_cascade",
+      "adaptive_reinforcement": "load_responsive_growth",
+      "boundary_management": "chemical_gradient_containment"
+    },
+    "binary_translation": {
+      "algorithm_type": "distributed_graph_optimization",
+      "data_structure": "weighted_adjacency_networks",
+      "memory_pattern": "distributed_state_persistence",
+      "communication": "chemical_gradient_propagation",
+      "scalability": "fractal_self_similar_expansion",
+      "fault_tolerance": "redundant_pathway_rerouting"
+    },
+    "constraint_solving": {
+      "freeze_thaw_adaptation": "flexible_matrix_expansion",
+      "moisture_regulation": "capillary_redistribution",
+      "substrate_stabilization": "hyphal_binding_networks",
+      "chemical_tolerance": "species_gradient_specialization"
+    }
+  },
+
+  "bat": {
+    "name": "Bat Echolocation Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "navigation": "ultrasonic_pulse_reflection_mapping",
+      "obstacle_detection": "doppler_shift_analysis",
+      "prey_tracking": "dynamic_frequency_modulation",
+      "spatial_memory": "echo_signature_recognition"
+    },
+    "binary_translation": {
+      "algorithm_type": "real_time_signal_processing",
+      "data_structure": "temporal_frequency_arrays",
+      "memory_pattern": "echo_pattern_compression",
+      "communication": "frequency_modulated_pulses",
+      "scalability": "parallel_multi_target_tracking",
+      "resolution": "sub_millimeter_spatial_accuracy"
+    },
+    "constraint_solving": {
+      "zero_visibility_navigation": "acoustic_environmental_reconstruction",
+      "high_speed_obstacle_avoidance": "predictive_trajectory_modeling",
+      "energy_efficiency": "adaptive_pulse_rate_modulation"
+    }
+  },
+
+  "dandelion": {
+    "name": "Dandelion Resource Intelligence",
+    "type": "plant_intelligence",
+    "core_patterns": {
+      "dispersal_strategy": "wind_optimized_seed_geometry",
+      "resource_acquisition": "deep_taproot_mineral_access",
+      "symbiotic_coordination": "ant_fly_pollinator_networks",
+      "temporal_adaptation": "rapid_lifecycle_cycling"
+    },
+    "binary_translation": {
+      "algorithm_type": "probabilistic_distribution_optimization",
+      "data_structure": "radial_spoke_arrays",
+      "memory_pattern": "seasonal_cycle_persistence",
+      "communication": "chemical_signaling_mutualism",
+      "scalability": "exponential_dispersal_coverage"
+    },
+    "constraint_solving": {
+      "nutrient_scarcity": "deep_root_mineral_mining",
+      "competition": "early_emergence_timing",
+      "dispersal_efficiency": "parachute_aerodynamic_optimization",
+      "symbiotic_resource_sharing": "nectar_for_pollination_exchange"
+    }
+  },
+
+  "dolphin": {
+    "name": "Dolphin Echolocation Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "navigation": "binaural_click_phase_detection",
+      "object_discrimination": "acoustic_texture_analysis",
+      "cooperative_hunting": "coordinated_sonar_sweeps",
+      "social_communication": "signature_whistle_identification"
+    },
+    "binary_translation": {
+      "algorithm_type": "stereoscopic_acoustic_imaging",
+      "data_structure": "3D_spatial_phase_arrays",
+      "memory_pattern": "individual_acoustic_signatures",
+      "communication": "frequency_layered_signaling",
+      "scalability": "group_coordinated_sensing",
+      "resolution": "internal_structure_penetration"
+    },
+    "constraint_solving": {
+      "turbid_water_navigation": "acoustic_over_visual_primacy",
+      "prey_detection": "buried_object_acoustic_penetration",
+      "group_coordination": "non_interfering_frequency_allocation"
+    }
+  },
+
+  "ant_colony": {
+    "name": "Ant Colony Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "pathfinding": "pheromone_gradient_reinforcement",
+      "task_allocation": "threshold_response_distribution",
+      "resource_transport": "cooperative_load_carrying",
+      "nest_construction": "stigmergic_self_organization"
+    },
+    "binary_translation": {
+      "algorithm_type": "swarm_optimization_ACO",
+      "data_structure": "pheromone_weighted_graphs",
+      "memory_pattern": "environmental_stigmergy",
+      "communication": "chemical_trail_networks",
+      "scalability": "emergent_colony_level_behavior",
+      "fault_tolerance": "redundant_agent_replacement"
+    },
+    "constraint_solving": {
+      "shortest_path": "positive_feedback_pheromone_reinforcement",
+      "dynamic_obstacles": "trail_rerouting_adaptation",
+      "load_distribution": "recruitment_threshold_adjustment",
+      "nest_climate_control": "distributed_ventilation_coordination"
+    }
+  }
+}
