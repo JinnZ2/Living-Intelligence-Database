@@ -258,3 +258,168 @@
     }
   }
 }
+
+{
+  "slime_mold": {
+    "name": "Slime Mold Network Optimization Intelligence",
+    "type": "protist_intelligence",
+    "core_patterns": {
+      "network_optimization": "minimum_path_maximum_efficiency",
+      "resource_distribution": "pulsatile_flow_balancing",
+      "obstacle_navigation": "exploratory_pseudopod_probing",
+      "memory_formation": "chemical_trail_reinforcement",
+      "decision_making": "distributed_consensus_without_brain"
+    },
+    "binary_translation": {
+      "algorithm_type": "physarum_inspired_optimization",
+      "data_structure": "dynamic_weighted_network_graphs",
+      "memory_pattern": "environmental_chemical_encoding",
+      "communication": "cytoplasmic_streaming_signals",
+      "scalability": "exponential_exploration_coverage",
+      "efficiency": "pareto_optimal_network_pruning"
+    },
+    "constraint_solving": {
+      "shortest_path": "tokyo_subway_network_replication",
+      "redundancy_elimination": "adaptive_tube_diameter_adjustment",
+      "food_source_location": "chemotactic_gradient_following",
+      "predator_avoidance": "chemical_repellent_memory",
+      "network_resilience": "multi_path_redundancy_maintenance"
+    }
+  },
+
+  "termite_mound": {
+    "name": "Termite Mound Climate Engineering Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "thermoregulation": "convective_chimney_airflow",
+      "humidity_control": "water_vapor_gradient_management",
+      "structural_engineering": "arch_buttress_load_distribution",
+      "collective_construction": "stigmergic_building_coordination",
+      "fungus_cultivation": "temperature_controlled_agriculture"
+    },
+    "binary_translation": {
+      "algorithm_type": "passive_environmental_control",
+      "data_structure": "3D_porous_ventilation_networks",
+      "memory_pattern": "pheromone_construction_templates",
+      "communication": "stigmergic_architectural_feedback",
+      "scalability": "colony_size_proportional_ventilation",
+      "efficiency": "zero_energy_climate_control"
+    },
+    "constraint_solving": {
+      "desert_heat": "evaporative_cooling_chimney_effect",
+      "oxygen_supply": "passive_convection_circulation",
+      "fungal_temperature": "precise_23C_maintenance",
+      "structural_integrity": "compression_arch_geometry",
+      "seasonal_adaptation": "adjustable_vent_opening_behavior"
+    }
+  },
+
+  "indigenous_fire": {
+    "name": "Indigenous Fire Management Intelligence",
+    "type": "human_ecological_intelligence",
+    "core_patterns": {
+      "fuel_load_management": "controlled_low_intensity_burns",
+      "biodiversity_enhancement": "mosaic_burn_pattern_creation",
+      "water_cycle_regulation": "soil_infiltration_improvement",
+      "game_management": "habitat_quality_optimization",
+      "seasonal_timing": "humidity_wind_phenology_synchronization"
+    },
+    "binary_translation": {
+      "algorithm_type": "adaptive_landscape_mosaic_optimization",
+      "data_structure": "spatial_temporal_burn_matrices",
+      "memory_pattern": "multi_generational_ecological_knowledge",
+      "communication": "oral_tradition_observational_transfer",
+      "scalability": "continental_ecosystem_management",
+      "resilience": "catastrophic_wildfire_prevention"
+    },
+    "constraint_solving": {
+      "fuel_accumulation": "frequent_low_intensity_reduction",
+      "biodiversity_loss": "patchy_burn_heterogeneity",
+      "water_scarcity": "vegetation_thinning_aquifer_recharge",
+      "catastrophic_fire": "fuel_continuity_interruption",
+      "invasive_species": "fire_regime_restoration_control"
+    }
+  },
+
+  "whale_migration": {
+    "name": "Whale Long-Distance Navigation Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "magnetic_navigation": "geomagnetic_field_detection",
+      "acoustic_mapping": "ocean_floor_topography_echolocation",
+      "celestial_orientation": "sun_angle_position_tracking",
+      "thermal_gradient_following": "ocean_current_temperature_sensing",
+      "cultural_transmission": "learned_route_social_inheritance"
+    },
+    "binary_translation": {
+      "algorithm_type": "multi_modal_sensor_fusion_navigation",
+      "data_structure": "geospatial_acoustic_thermal_overlays",
+      "memory_pattern": "multi_generational_route_maps",
+      "communication": "long_range_acoustic_coordination",
+      "scalability": "trans_oceanic_precision_navigation",
+      "accuracy": "specific_breeding_ground_return"
+    },
+    "constraint_solving": {
+      "open_ocean_navigation": "magnetic_field_contour_following",
+      "feeding_ground_location": "seasonal_upwelling_prediction",
+      "predator_avoidance": "deep_dive_acoustic_silence",
+      "energy_efficiency": "current_assisted_migration_timing",
+      "social_coordination": "synchronized_pod_movement"
+    }
+  },
+
+  "coral_reef": {
+    "name": "Coral Reef Ecosystem Engineering Intelligence",
+    "type": "symbiotic_intelligence",
+    "core_patterns": {
+      "structural_foundation": "calcium_carbonate_framework_construction",
+      "symbiotic_energy": "zooxanthellae_photosynthesis_exchange",
+      "wave_energy_dissipation": "fractal_structure_force_distribution",
+      "nutrient_cycling": "polyp_filtering_waste_conversion",
+      "biodiversity_scaffolding": "niche_creation_habitat_complexity"
+    },
+    "binary_translation": {
+      "algorithm_type": "distributed_construction_symbiosis",
+      "data_structure": "fractal_3D_habitat_matrices",
+      "memory_pattern": "species_succession_templates",
+      "communication": "chemical_symbiont_coordination",
+      "scalability": "reef_system_coastal_protection",
+      "resilience": "bleaching_recovery_symbiont_flexibility"
+    },
+    "constraint_solving": {
+      "wave_stress": "flexible_branching_energy_absorption",
+      "nutrient_scarcity": "symbiotic_photosynthesis_efficiency",
+      "predation_pressure": "chemical_defense_nematocyst_deployment",
+      "temperature_stress": "symbiont_strain_switching",
+      "carbonate_chemistry": "calcification_rate_pH_adaptation"
+    }
+  },
+
+  "salmon_navigation": {
+    "name": "Salmon Natal Stream Homing Intelligence",
+    "type": "animal_intelligence",
+    "core_patterns": {
+      "olfactory_imprinting": "natal_stream_chemical_signature_memory",
+      "magnetic_ocean_navigation": "geomagnetic_open_water_orientation",
+      "sequential_decision_trees": "tributary_choice_cascade",
+      "physiological_transformation": "freshwater_saltwater_osmoregulation",
+      "energy_management": "upstream_migration_starvation_endurance"
+    },
+    "binary_translation": {
+      "algorithm_type": "hierarchical_chemical_gradient_following",
+      "data_structure": "nested_olfactory_decision_trees",
+      "memory_pattern": "juvenile_imprint_adult_recall",
+      "communication": "pheromone_spawning_aggregation",
+      "scalability": "population_level_spawning_synchronization",
+      "precision": "exact_gravel_bed_natal_site_return"
+    },
+    "constraint_solving": {
+      "ocean_to_river_transition": "osmoregulatory_enzyme_switching",
+      "upstream_obstacle_navigation": "leap_height_optimization",
+      "predator_gauntlet": "burst_speed_energy_tradeoff",
+      "spawning_site_selection": "gravel_size_flow_velocity_matching",
+      "die_off_nutrient_transfer": "marine_derived_nitrogen_deposition"
+    }
+  }
+}
+
