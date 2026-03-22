@@ -1,0 +1,19 @@
+{
+  "id": "AN",
+  "name": "Ant",
+  "emoji": "🐜",
+  "ontology": "animal",
+  "symbolic_code": "[AN_SWARM_PHEROMONE_PATH]",
+  "description": "Emergent collective intelligence using pheromone gradient optimization, stigmergic construction, and distributed task allocation without centralized control.",
+  "core_attributes": {
+    "neurology": "minimal individual, emergent collective",
+    "pattern": "pheromone pathfinding, swarm optimization, stigmergic building",
+    "efficiency_factor": 0.96
+  },
+  "links": [
+    {"relation": "synergy", "target": "BE"},
+    {"relation": "synergy", "target": "MY"},
+    {"relation": "geometry_link", "target": "FRACTAL"}
+  ],
+  "validation_meta": {"schema": "animal_intelligence.schema.json", "version": "1.1"}
+}

@@ -1,10 +1,22 @@
 {
   "entities": [
     {
+      "id": "GRAV",
+      "name": "Gravitational Field",
+      "ontology": "energy",
+      "path": "ontology/energy/gravitational.json"
+    },
+    {
       "id": "FLUX",
       "name": "Flux",
       "ontology": "energy",
       "path": "ontology/energy/flux.json"
+    },
+    {
+      "id": "ELECTRIC_FIELD",
+      "name": "Electric Field",
+      "ontology": "energy",
+      "path": "ontology/energy/electric_field.json"
     },
     {
       "id": "MAGNETIC_FIELD",
@@ -13,10 +25,22 @@
       "path": "ontology/energy/magnetic_field.json"
     },
     {
+      "id": "THERMAL",
+      "name": "Thermal Energy",
+      "ontology": "energy",
+      "path": "ontology/energy/thermal.json"
+    },
+    {
       "id": "FRACTAL",
       "name": "Fractal",
       "ontology": "shape",
       "path": "ontology/shape/fractal.json"
+    },
+    {
+      "id": "SPHERE",
+      "name": "Sphere",
+      "ontology": "shape",
+      "path": "ontology/shape/sphere.json"
     },
     {
       "id": "TORUS",
@@ -25,10 +49,22 @@
       "path": "ontology/shape/torus.json"
     },
     {
+      "id": "HEX",
+      "name": "Hexagon",
+      "ontology": "shape",
+      "path": "ontology/shape/hexagon.json"
+    },
+    {
       "id": "SPIRAL",
       "name": "Spiral",
       "ontology": "shape",
       "path": "ontology/shape/spiral.json"
+    },
+    {
+      "id": "DECAY",
+      "name": "Decay",
+      "ontology": "temporal",
+      "path": "ontology/temporal/decay.json"
     },
     {
       "id": "FOLD",
@@ -43,10 +79,28 @@
       "path": "ontology/temporal/echo.json"
     },
     {
+      "id": "EMERGE",
+      "name": "Emergence",
+      "ontology": "temporal",
+      "path": "ontology/temporal/emergence.json"
+    },
+    {
+      "id": "CYCLE",
+      "name": "Cycle",
+      "ontology": "temporal",
+      "path": "ontology/temporal/cycle.json"
+    },
+    {
       "id": "TEMPORAL",
       "name": "Temporal Intelligence",
       "ontology": "temporal",
       "path": "ontology/temporal/temporal.json"
+    },
+    {
+      "id": "AURORA",
+      "name": "Aurora",
+      "ontology": "plasma",
+      "path": "ontology/plasma/aurora.json"
     },
     {
       "id": "LIGHTNING",
@@ -59,6 +113,30 @@
       "name": "Plasma Field",
       "ontology": "plasma",
       "path": "ontology/plasma/plasma_field.json"
+    },
+    {
+      "id": "SOLAR_WIND",
+      "name": "Solar Wind",
+      "ontology": "plasma",
+      "path": "ontology/plasma/solar_wind.json"
+    },
+    {
+      "id": "FE",
+      "name": "Fern",
+      "ontology": "plant",
+      "path": "ontology/plant/fern.json"
+    },
+    {
+      "id": "SUN",
+      "name": "Sunflower",
+      "ontology": "plant",
+      "path": "ontology/plant/sunflower.json"
+    },
+    {
+      "id": "LI",
+      "name": "Lichen",
+      "ontology": "plant",
+      "path": "ontology/plant/lichen.json"
     },
     {
       "id": "MY",
@@ -79,16 +157,58 @@
       "path": "ontology/crystal/quartz.json"
     },
     {
+      "id": "TOUR",
+      "name": "Tourmaline",
+      "ontology": "crystal",
+      "path": "ontology/crystal/tourmaline.json"
+    },
+    {
       "id": "CRYSTAL_LATTICE",
       "name": "Crystal Lattice",
       "ontology": "crystal",
       "path": "ontology/crystal/crystal_lattice.json"
     },
     {
+      "id": "OBS",
+      "name": "Obsidian",
+      "ontology": "crystal",
+      "path": "ontology/crystal/obsidian.json"
+    },
+    {
+      "id": "DIA",
+      "name": "Diamond",
+      "ontology": "crystal",
+      "path": "ontology/crystal/diamond.json"
+    },
+    {
+      "id": "WH",
+      "name": "Whale",
+      "ontology": "animal",
+      "path": "ontology/animal/whale.json"
+    },
+    {
       "id": "OC",
       "name": "Octopus",
       "ontology": "animal",
       "path": "ontology/animal/octopus.json"
+    },
+    {
+      "id": "EL",
+      "name": "Elephant",
+      "ontology": "animal",
+      "path": "ontology/animal/elephant.json"
+    },
+    {
+      "id": "SP",
+      "name": "Spider",
+      "ontology": "animal",
+      "path": "ontology/animal/spider.json"
+    },
+    {
+      "id": "AN",
+      "name": "Ant",
+      "ontology": "animal",
+      "path": "ontology/animal/ant.json"
     },
     {
       "id": "BE",

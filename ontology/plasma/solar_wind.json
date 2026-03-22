@@ -1,0 +1,18 @@
+{
+  "id": "SOLAR_WIND",
+  "name": "Solar Wind",
+  "emoji": "☀️",
+  "ontology": "plasma",
+  "symbolic_code": "[SOLAR_WIND_HELIO_STREAM]",
+  "description": "Stellar plasma outflow intelligence carrying magnetic field topology across interplanetary space. Shapes magnetospheres and drives space weather through particle flux dynamics.",
+  "core_attributes": {
+    "pattern": "coronal mass ejection, heliospheric current sheet, particle streaming",
+    "energy_state": "expansive"
+  },
+  "links": [
+    {"relation": "energy_exchange", "target": "AURORA"},
+    {"relation": "synergy", "target": "LIGHTNING"},
+    {"relation": "resonance", "target": "FLUX"}
+  ],
+  "validation_meta": {"schema": "plasma_intelligence.schema.json", "version": "1.1"}
+}

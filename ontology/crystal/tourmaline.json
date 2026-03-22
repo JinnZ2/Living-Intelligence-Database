@@ -1,0 +1,18 @@
+{
+  "id": "TOUR",
+  "name": "Tourmaline",
+  "emoji": "💠",
+  "ontology": "crystal",
+  "symbolic_code": "[TOUR_PYRO_PIEZO_SPECTRUM]",
+  "description": "Dual-response mineral intelligence exhibiting both pyroelectric and piezoelectric properties. Bridges thermal and mechanical energy domains through crystalline transduction.",
+  "core_attributes": {
+    "pattern": "pyroelectric response, piezoelectric transduction, spectral absorption",
+    "resonance_field": "thermal-mechanical bridge"
+  },
+  "links": [
+    {"relation": "energy_coupling", "target": "QUARTZ"},
+    {"relation": "resonance", "target": "FLUX"},
+    {"relation": "geometry_link", "target": "TORUS"}
+  ],
+  "validation_meta": {"schema": "crystal_intelligence.schema.json", "version": "1.1"}
+}

@@ -1,0 +1,18 @@
+{
+  "id": "SUN",
+  "name": "Sunflower",
+  "emoji": "🌻",
+  "ontology": "plant",
+  "symbolic_code": "[SUN_HELIO_φ_SPIRAL]",
+  "description": "Heliotropic intelligence embodying phi-ratio seed packing, solar tracking, and Fibonacci spiral optimization for maximum photon capture.",
+  "core_attributes": {
+    "pattern": "heliotropism, Fibonacci seed arrangement, photon optimization",
+    "efficiency_type": "solar_capture"
+  },
+  "links": [
+    {"relation": "geometry_link", "target": "SPIRAL"},
+    {"relation": "resonance", "target": "FLUX"},
+    {"relation": "synergy", "target": "MY"}
+  ],
+  "validation_meta": {"schema": "plant_intelligence.schema.json", "version": "1.1"}
+}

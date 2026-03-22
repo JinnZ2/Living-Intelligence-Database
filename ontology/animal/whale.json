@@ -1,0 +1,19 @@
+{
+  "id": "WH",
+  "name": "Whale",
+  "emoji": "🐋",
+  "ontology": "animal",
+  "symbolic_code": "[WH_ACOUSTIC_φ_DEPTH]",
+  "description": "Long-range acoustic intelligence navigating ocean basins through song, magnetic sensing, and multi-generational cultural memory.",
+  "core_attributes": {
+    "neurology": "centralized with acoustic specialization",
+    "pattern": "long-range acoustic communication, magnetic navigation, cultural transmission",
+    "efficiency_factor": 0.91
+  },
+  "links": [
+    {"relation": "geometry_link", "target": "SPIRAL"},
+    {"relation": "synergy", "target": "OC"},
+    {"relation": "resonance", "target": "ECHO"}
+  ],
+  "validation_meta": {"schema": "animal_intelligence.schema.json", "version": "1.1"}
+}

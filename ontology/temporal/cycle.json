@@ -1,0 +1,18 @@
+{
+  "id": "CYCLE",
+  "name": "Cycle",
+  "emoji": "🔄",
+  "ontology": "temporal",
+  "symbolic_code": "[CYCLE_RETURN_RHYTHM]",
+  "description": "Periodic return intelligence governing rhythmic recurrence, seasonal patterns, and oscillatory feedback loops across all living systems.",
+  "core_attributes": {
+    "pattern": "periodic recurrence, oscillatory feedback, rhythmic phase locking",
+    "temporal_mode": "repetition"
+  },
+  "links": [
+    {"relation": "temporal_bridge", "target": "ECHO"},
+    {"relation": "geometry_link", "target": "TORUS"},
+    {"relation": "resonance", "target": "SPIRAL"}
+  ],
+  "validation_meta": {"schema": "temporal_intelligence.schema.json", "version": "1.1"}
+}

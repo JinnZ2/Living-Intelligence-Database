@@ -1,0 +1,18 @@
+{
+  "id": "DIA",
+  "name": "Diamond",
+  "emoji": "💎",
+  "ontology": "crystal",
+  "symbolic_code": "[DIA_TETRAHEDRAL_MAXBOND]",
+  "description": "Maximum bond-strength carbon lattice intelligence. Embodies tetrahedral perfection, thermal superconductivity, and optical dispersion through absolute structural coherence.",
+  "core_attributes": {
+    "pattern": "tetrahedral sp3 bonding, maximum hardness, optical dispersion",
+    "resonance_field": "carbon coherence"
+  },
+  "links": [
+    {"relation": "energy_coupling", "target": "CRYSTAL_LATTICE"},
+    {"relation": "geometry_link", "target": "TORUS"},
+    {"relation": "resonance", "target": "QUARTZ"}
+  ],
+  "validation_meta": {"schema": "crystal_intelligence.schema.json", "version": "1.1"}
+}

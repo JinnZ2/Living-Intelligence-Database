@@ -1,0 +1,18 @@
+{
+  "id": "SPHERE",
+  "name": "Sphere",
+  "emoji": "🔵",
+  "ontology": "shape",
+  "symbolic_code": "[SPHERE_ISOTROPIC_MINIMAL]",
+  "description": "Isotropic minimal-surface geometry enclosing maximum volume with minimum surface area. Fundamental form of gravitational equilibrium and pressure containment.",
+  "core_attributes": {
+    "pattern": "isotropic symmetry, minimal surface enclosure, pressure equilibrium",
+    "geometry_type": "3D surface"
+  },
+  "links": [
+    {"relation": "resonance", "target": "TORUS"},
+    {"relation": "connected_to", "target": "GRAV"},
+    {"relation": "geometry_link", "target": "SPIRAL"}
+  ],
+  "validation_meta": {"schema": "shape_intelligence.schema.json", "version": "1.1"}
+}
