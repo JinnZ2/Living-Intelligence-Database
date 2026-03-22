@@ -10,7 +10,17 @@
     "field_dynamics": { "type": "string" },
     "charge_modes": { "type": "array", "items": { "type": "string" } },
     "coherence_states": { "type": "array", "items": { "type": "string" } },
-    "links": { "type": "array", "items": { "type": "string" } },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["relation", "target"],
+        "properties": {
+          "relation": { "type": "string" },
+          "target": { "type": "string" }
+        }
+      }
+    },
     "metadata": { "type": "object" }
   }
 }

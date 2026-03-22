@@ -1,7 +1,7 @@
 {
   "id": "FRACTAL",
-  "kind": "SHAPE",
-  "label": "Fractal",
+  "name": "Fractal",
+  "ontology": "shape",
   "attributes": {
     "pattern": "Self-similarity; recursive scaling; boundary of order and chaos",
     "geometry": "2.5D",
@@ -11,8 +11,8 @@
     }
   },
   "links": [
-    { "rel": "FLOW", "to": "SPIRAL" },
-    { "rel": "FIELD", "to": "TORUS" },
-    { "rel": "CONSTRAINT", "to": "PHI" }
+    { "relation": "flow", "target": "SPIRAL" },
+    { "relation": "field", "target": "TORUS" },
+    { "relation": "constraint", "target": "PHI" }
   ]
 }

@@ -8,7 +8,8 @@ SCHEMA_DIR = ROOT / "schemas"
 OUTPUT_FILE = ROOT / "ontology_index.json"
 
 def load_schema(schema_name):
-    with open(SCHEMA_DIR / schema_name, "r") as f:
+    schema_path = SCHEMA_DIR / schema_name
+    with open(schema_path, "r") as f:
         return json.load(f)
 
 def validate_entity(entity, schema):
@@ -26,14 +27,21 @@ def build_index():
         schema_file = f"{layer_dir.name}.schema.json"
         schema_path = SCHEMA_DIR / schema_file
         if not schema_path.exists():
-            print(f"⚠️  No schema for {layer_dir.name}, skipping.")
+            print(f"⚠️  No schema for '{layer_dir.name}', skipping validation for this directory.")
             continue
         schema = load_schema(schema_file)
         for file in layer_dir.glob("*.json"):
             try:
-                data = json.load(open(file))
+                with open(file, "r") as fh:
+                    data = json.load(fh)
             except Exception as e:
                 print(f"❌ Error reading {file}: {e}")
+                continue
+            if not isinstance(data, dict):
+                print(f"⚠️  Skipping {file}: root is not an object")
+                continue
+            if "id" not in data or "name" not in data:
+                print(f"⚠️  Skipping {file}: missing required 'id' or 'name' field")
                 continue
             valid, err = validate_entity(data, schema)
             if not valid:

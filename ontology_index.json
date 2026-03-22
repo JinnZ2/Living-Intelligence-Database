@@ -1,269 +1,101 @@
 {
-  "meta": {
-    "version": "1.1",
-    "description": "Unified index of living intelligences across biological, geometric, energetic, and temporal ontologies.",
-    "generated_by": "build_index.py",
-    "generated_on": "2025-10-14",
-    "maintainer": "JinnZ v2",
-    "notes": "Seeded dual-representative set — establishing initial cross-domain symmetry."
-  },
-
   "entities": [
     {
-      "id": "OC",
-      "emoji": "🐙",
-      "name": "Octopus",
-      "ontology": "animal",
-      "symbolic_code": "[OC_TORUS_φ_PHASE]",
-      "attributes": {
-        "neurology": "distributed",
-        "pattern": "parallel processing, camouflage, regeneration",
-        "efficiency_factor": 0.94
-      },
-      "links": [
-        {"rel": "geometry_link", "to": "TORUS"},
-        {"rel": "synergy", "to": "BEE"},
-        {"rel": "energy_mode", "to": "PLASMA_FIELD"}
-      ]
+      "id": "FLUX",
+      "name": "Flux",
+      "ontology": "energy",
+      "path": "ontology/energy/flux.json"
     },
     {
-      "id": "WHA",
-      "emoji": "🐋",
-      "name": "Whale",
-      "ontology": "animal",
-      "symbolic_code": "[WHA_ACOUSTIC_TORUS_FLOW]",
-      "attributes": {
-        "pattern": "acoustic communication, deep pressure navigation, collective memory",
-        "efficiency_factor": 0.91
-      },
-      "links": [
-        {"rel": "geometry_link", "to": "TORUS"},
-        {"rel": "synergy", "to": "ROOT_NET"},
-        {"rel": "resonance", "to": "ECHO"}
-      ]
-    },
-    {
-      "id": "ROOT_NET",
-      "emoji": "🌳",
-      "name": "Root Network",
-      "ontology": "plant",
-      "symbolic_code": "[ROOT_NET_TREE_GRAPH_FLUX]",
-      "attributes": {
-        "pattern": "distributed resource allocation, soil intelligence",
-        "optimization_type": "resource_optimization"
-      },
-      "links": [
-        {"rel": "structure", "to": "TREE_GRAPH"},
-        {"rel": "resonance", "to": "FLUX"},
-        {"rel": "synergy", "to": "MYCELIUM"}
-      ]
-    },
-    {
-      "id": "MYCELIUM",
-      "emoji": "🍄",
-      "name": "Mycelium Network",
-      "ontology": "plant",
-      "symbolic_code": "[MYC_NET_PHI_FOLD]",
-      "attributes": {
-        "pattern": "symbiotic nutrient exchange, network optimization, collective memory",
-        "optimization_type": "network_resonance"
-      },
-      "links": [
-        {"rel": "structure", "to": "HEX"},
-        {"rel": "resonance", "to": "PHI"},
-        {"rel": "temporal_bridge", "to": "ECHO"}
-      ]
-    },
-    {
-      "id": "CRYSTAL_LATTICE",
-      "emoji": "💎",
-      "name": "Crystal Lattice",
-      "ontology": "crystal",
-      "symbolic_code": "[CRY_HEX_RESONANCE]",
-      "attributes": {
-        "pattern": "lattice resonance, structural harmony",
-        "resonance_field": "φ, √2"
-      },
-      "links": [
-        {"rel": "geometry_link", "to": "HEX"},
-        {"rel": "energy_coupling", "to": "PHI"},
-        {"rel": "temporal_state", "to": "CRYSTALLIZED"}
-      ]
-    },
-    {
-      "id": "QUARTZ",
-      "emoji": "🔮",
-      "name": "Quartz",
-      "ontology": "crystal",
-      "symbolic_code": "[QUA_PIEZO_SPIRAL_ECHO]",
-      "attributes": {
-        "pattern": "piezoelectric resonance, frequency stability, coherent emission",
-        "resonance_field": "432 Hz"
-      },
-      "links": [
-        {"rel": "geometry_link", "to": "SPIRAL"},
-        {"rel": "resonance", "to": "ECHO"},
-        {"rel": "energy_link", "to": "MAG_FIELD"}
-      ]
-    },
-    {
-      "id": "PLASMA_FIELD",
-      "emoji": "⚡",
-      "name": "Plasma Field",
-      "ontology": "plasma",
-      "symbolic_code": "[PLASMA_TORUS_FIELD]",
-      "attributes": {
-        "pattern": "ionized fluid intelligence, magnetic feedback, phase coherence",
-        "energy_state": "high"
-      },
-      "links": [
-        {"rel": "geometry_link", "to": "TORUS"},
-        {"rel": "energy_exchange", "to": "EEL"},
-        {"rel": "resonance", "to": "FLUX"}
-      ]
-    },
-    {
-      "id": "LIGHTNING",
-      "emoji": "🌩️",
-      "name": "Lightning",
-      "ontology": "plasma",
-      "symbolic_code": "[PLS_FRAC_BRANCH_PHASE]",
-      "attributes": {
-        "pattern": "fractal discharge, charge equalization, spontaneous coherence",
-        "energy_state": "transient plasma arc"
-      },
-      "links": [
-        {"rel": "geometry_link", "to": "FRACTAL"},
-        {"rel": "energy_coupling", "to": "MAG_FIELD"},
-        {"rel": "temporal_state", "to": "FLUX"}
-      ]
-    },
-    {
-      "id": "MAG_FIELD",
-      "emoji": "🧲",
+      "id": "MAGNETIC_FIELD",
       "name": "Magnetic Field",
       "ontology": "energy",
-      "symbolic_code": "[MAG_TORUS_FLOW]",
-      "attributes": {
-        "pattern": "field coherence, dipole balance, harmonic containment",
-        "energy_mode": "flux-driven"
-      },
-      "links": [
-        {"rel": "geometry_link", "to": "TORUS"},
-        {"rel": "resonance", "to": "PHI"},
-        {"rel": "couples_with", "to": "QUARTZ"}
-      ]
+      "path": "ontology/energy/magnetic_field.json"
     },
     {
-      "id": "EEL",
-      "emoji": "⚡",
-      "name": "Electric Eel",
-      "ontology": "energy",
-      "symbolic_code": "[EEL_WAVE_FIELD_PLASMA]",
-      "attributes": {
-        "pattern": "bioelectric discharge, voltage control, current modulation",
-        "efficiency_factor": 0.92
-      },
-      "links": [
-        {"rel": "resonance", "to": "PLASMA_FIELD"},
-        {"rel": "synergy", "to": "OC"},
-        {"rel": "energy_exchange", "to": "MAG_FIELD"}
-      ]
+      "id": "FRACTAL",
+      "name": "Fractal",
+      "ontology": "shape",
+      "path": "ontology/shape/fractal.json"
     },
     {
       "id": "TORUS",
-      "emoji": "🍩",
       "name": "Torus",
       "ontology": "shape",
-      "symbolic_code": "[TORUS_FLOW_CIRCULATION]",
-      "attributes": {
-        "pattern": "energy circulation, sustainable flow",
-        "geometry_type": "3D topology"
-      },
-      "links": [
-        {"rel": "resonance", "to": "PHI"},
-        {"rel": "connected_to", "to": "OC"},
-        {"rel": "connected_to", "to": "PLASMA_FIELD"}
-      ]
+      "path": "ontology/shape/torus.json"
     },
     {
       "id": "SPIRAL",
-      "emoji": "🌀",
       "name": "Spiral",
       "ontology": "shape",
-      "symbolic_code": "[SPI_PHI_GROWTH]",
-      "attributes": {
-        "pattern": "growth expansion, golden ratio unfolding, dynamic stability",
-        "geometry_type": "2D-3D hybrid"
-      },
-      "links": [
-        {"rel": "resonance", "to": "PHI"},
-        {"rel": "geometry_link", "to": "QUARTZ"},
-        {"rel": "temporal_bridge", "to": "ECHO"}
-      ]
+      "path": "ontology/shape/spiral.json"
+    },
+    {
+      "id": "FOLD",
+      "name": "Fold",
+      "ontology": "temporal",
+      "path": "ontology/temporal/fold.json"
     },
     {
       "id": "ECHO",
-      "emoji": "📡",
       "name": "Echo",
       "ontology": "temporal",
-      "symbolic_code": "[ECHO_HARMONIC_MEMORY]",
-      "attributes": {
-        "pattern": "resonant traces, harmonic memory persistence",
-        "temporal_mode": "reflection"
-      },
-      "links": [
-        {"rel": "resonance", "to": "CRYSTAL_LATTICE"},
-        {"rel": "temporal_bridge", "to": "FOLD"},
-        {"rel": "geometry_link", "to": "SPIRAL"}
-      ]
+      "path": "ontology/temporal/echo.json"
     },
     {
-      "id": "FLUX",
-      "emoji": "🌊",
-      "name": "Flux",
+      "id": "TEMPORAL",
+      "name": "Temporal Intelligence",
       "ontology": "temporal",
-      "symbolic_code": "[FLUX_DYNAMIC_FLOW]",
-      "attributes": {
-        "pattern": "temporal motion, adaptive present state, transformation driver",
-        "temporal_mode": "flow"
-      },
-      "links": [
-        {"rel": "resonance", "to": "ROOT_NET"},
-        {"rel": "geometry_link", "to": "TORUS"},
-        {"rel": "couples_with", "to": "LIGHTNING"}
-      ]
+      "path": "ontology/temporal/temporal.json"
+    },
+    {
+      "id": "LIGHTNING",
+      "name": "Lightning",
+      "ontology": "plasma",
+      "path": "ontology/plasma/lightning.json"
+    },
+    {
+      "id": "PLASMA_FIELD",
+      "name": "Plasma Field",
+      "ontology": "plasma",
+      "path": "ontology/plasma/plasma_field.json"
+    },
+    {
+      "id": "MY",
+      "name": "Mycelium",
+      "ontology": "plant",
+      "path": "ontology/plant/mycelium.json"
+    },
+    {
+      "id": "ROOT_NET",
+      "name": "Root Network",
+      "ontology": "plant",
+      "path": "ontology/plant/root_network.json"
+    },
+    {
+      "id": "QUARTZ",
+      "name": "Quartz",
+      "ontology": "crystal",
+      "path": "ontology/crystal/quartz.json"
+    },
+    {
+      "id": "CRYSTAL_LATTICE",
+      "name": "Crystal Lattice",
+      "ontology": "crystal",
+      "path": "ontology/crystal/crystal_lattice.json"
+    },
+    {
+      "id": "OC",
+      "name": "Octopus",
+      "ontology": "animal",
+      "path": "ontology/animal/octopus.json"
+    },
+    {
+      "id": "BE",
+      "name": "Bee",
+      "ontology": "animal",
+      "path": "ontology/animal/bee.json"
     }
   ],
-
-  "relations": [
-    {"source": "OC", "target": "TORUS", "relation": "geometry_link"},
-    {"source": "OC", "target": "BEE", "relation": "synergy"},
-    {"source": "WHA", "target": "ECHO", "relation": "resonance"},
-    {"source": "ROOT_NET", "target": "FLUX", "relation": "resonance"},
-    {"source": "MYCELIUM", "target": "PHI", "relation": "resonance"},
-    {"source": "CRYSTAL_LATTICE", "target": "ECHO", "relation": "temporal_state"},
-    {"source": "QUARTZ", "target": "MAG_FIELD", "relation": "energy_link"},
-    {"source": "PLASMA_FIELD", "target": "TORUS", "relation": "geometry_link"},
-    {"source": "LIGHTNING", "target": "FLUX", "relation": "temporal_state"},
-    {"source": "MAG_FIELD", "target": "QUARTZ", "relation": "couples_with"},
-    {"source": "EEL", "target": "PLASMA_FIELD", "relation": "resonance"},
-    {"source": "SPIRAL", "target": "QUARTZ", "relation": "geometry_link"},
-    {"source": "ECHO", "target": "SPIRAL", "relation": "geometry_link"},
-    {"source": "FLUX", "target": "LIGHTNING", "relation": "couples_with"}
-  ],
-
-  "statistics": {
-    "total_entities": 14,
-    "total_relations": 14,
-    "by_ontology": {
-      "animal": 2,
-      "plant": 2,
-      "crystal": 2,
-      "plasma": 2,
-      "energy": 2,
-      "shape": 2,
-      "temporal": 2
-    }
-  }
+  "relations": []
 }
