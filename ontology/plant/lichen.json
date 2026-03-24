@@ -1,0 +1,18 @@
+{
+  "id": "LI",
+  "name": "Lichen",
+  "emoji": "🪨",
+  "ontology": "plant",
+  "symbolic_code": "[LI_SYMBIOSIS_BOUNDARY]",
+  "description": "Symbiotic composite intelligence merging fungal and algal systems into a unified organism capable of extreme environment colonization and mineral weathering.",
+  "core_attributes": {
+    "pattern": "symbiotic fusion, mineral weathering, desiccation tolerance",
+    "efficiency_type": "boundary_colonization"
+  },
+  "links": [
+    {"relation": "synergy", "target": "MY"},
+    {"relation": "synergy", "target": "QUARTZ"},
+    {"relation": "resonance", "target": "CRYSTAL_LATTICE"}
+  ],
+  "validation_meta": {"schema": "plant_intelligence.schema.json", "version": "1.1"}
+}

@@ -24,7 +24,6 @@
       "chemical_tolerance": "species_gradient_specialization"
     }
   },
-
   "bat": {
     "name": "Bat Echolocation Intelligence",
     "type": "animal_intelligence",
@@ -48,7 +47,6 @@
       "energy_efficiency": "adaptive_pulse_rate_modulation"
     }
   },
-
   "dandelion": {
     "name": "Dandelion Resource Intelligence",
     "type": "plant_intelligence",
@@ -72,7 +70,6 @@
       "symbiotic_resource_sharing": "nectar_for_pollination_exchange"
     }
   },
-
   "dolphin": {
     "name": "Dolphin Echolocation Intelligence",
     "type": "animal_intelligence",
@@ -96,7 +93,6 @@
       "group_coordination": "non_interfering_frequency_allocation"
     }
   },
-
   "ant_colony": {
     "name": "Ant Colony Intelligence",
     "type": "animal_intelligence",
@@ -120,11 +116,7 @@
       "load_distribution": "recruitment_threshold_adjustment",
       "nest_climate_control": "distributed_ventilation_coordination"
     }
-  }
-}
-
-
-{
+  },
   "cuttlefish": {
     "name": "Cuttlefish Adaptive Camouflage Intelligence",
     "type": "animal_intelligence",
@@ -150,7 +142,6 @@
       "decision_speed": "decentralized_chromatophore_control"
     }
   },
-
   "orchid": {
     "name": "Orchid Deceptive Pollination Intelligence",
     "type": "plant_intelligence",
@@ -176,7 +167,6 @@
       "geographic_isolation": "single_pollinator_dependency_optimization"
     }
   },
-
   "aspen_grove": {
     "name": "Aspen Clonal Colony Intelligence",
     "type": "plant_intelligence",
@@ -203,7 +193,6 @@
       "competitive_advantage": "synchronized_leaf_emergence"
     }
   },
-
   "sawgrass": {
     "name": "Sawgrass Wetland Stabilization Intelligence",
     "type": "plant_intelligence",
@@ -230,7 +219,6 @@
       "salinity_intrusion": "facultative_tolerance_gradients"
     }
   },
-
   "beetle": {
     "name": "Beetle Structural Optimization Intelligence",
     "type": "animal_intelligence",
@@ -256,10 +244,7 @@
       "resource_extraction": "wood_cellulose_digestion_symbiosis",
       "size_scaling": "exoskeleton_thickness_optimization"
     }
-  }
-}
-
-{
+  },
   "slime_mold": {
     "name": "Slime Mold Network Optimization Intelligence",
     "type": "protist_intelligence",
@@ -286,7 +271,6 @@
       "network_resilience": "multi_path_redundancy_maintenance"
     }
   },
-
   "termite_mound": {
     "name": "Termite Mound Climate Engineering Intelligence",
     "type": "animal_intelligence",
@@ -313,7 +297,6 @@
       "seasonal_adaptation": "adjustable_vent_opening_behavior"
     }
   },
-
   "indigenous_fire": {
     "name": "Indigenous Fire Management Intelligence",
     "type": "human_ecological_intelligence",
@@ -340,7 +323,6 @@
       "invasive_species": "fire_regime_restoration_control"
     }
   },
-
   "whale_migration": {
     "name": "Whale Long-Distance Navigation Intelligence",
     "type": "animal_intelligence",
@@ -367,7 +349,6 @@
       "social_coordination": "synchronized_pod_movement"
     }
   },
-
   "coral_reef": {
     "name": "Coral Reef Ecosystem Engineering Intelligence",
     "type": "symbiotic_intelligence",
@@ -394,7 +375,6 @@
       "carbonate_chemistry": "calcification_rate_pH_adaptation"
     }
   },
-
   "salmon_navigation": {
     "name": "Salmon Natal Stream Homing Intelligence",
     "type": "animal_intelligence",
@@ -420,10 +400,7 @@
       "spawning_site_selection": "gravel_size_flow_velocity_matching",
       "die_off_nutrient_transfer": "marine_derived_nitrogen_deposition"
     }
-  }
-}
-
-{
+  },
   "tree_root_network": {
     "name": "Tree Mycorrhizal Communication Intelligence",
     "type": "plant_fungal_symbiosis_intelligence",
@@ -450,7 +427,6 @@
       "seedling_establishment": "parent_tree_carbon_subsidy"
     }
   },
-
   "octopus": {
     "name": "Octopus Distributed Problem-Solving Intelligence",
     "type": "animal_intelligence",
@@ -477,7 +453,6 @@
       "navigation_complexity": "visual_memory_spatial_mapping"
     }
   },
-
   "spider_web": {
     "name": "Spider Web Engineering Intelligence",
     "type": "animal_intelligence",
@@ -504,7 +479,6 @@
       "visibility_tradeoff": "UV_reflective_stabilimenta_signals"
     }
   },
-
   "moss": {
     "name": "Moss Water Retention Intelligence",
     "type": "plant_intelligence",
@@ -531,7 +505,6 @@
       "erosion_control": "substrate_binding_water_retention"
     }
   },
-
   "wolf_pack": {
     "name": "Wolf Pack Coordination Intelligence",
     "type": "animal_intelligence",
@@ -558,7 +531,6 @@
       "inter_pack_conflict": "howling_territorial_advertisement"
     }
   },
-
   "tardigrade": {
     "name": "Tardigrade Extreme Resilience Intelligence",
     "type": "animal_intelligence",
@@ -586,4 +558,3 @@
     }
   }
 }
-

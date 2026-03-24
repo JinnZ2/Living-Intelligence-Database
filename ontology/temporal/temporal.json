@@ -1,15 +1,17 @@
 {
   "id": "TEMPORAL",
-  "kind": "TEMPORAL",
-  "label": "Temporal Intelligence",
-  "attributes": {
+  "name": "Temporal Intelligence",
+  "ontology": "temporal",
+  "state_type": "integration",
+  "attributes": ["cycle", "phase_shift", "emergence", "decay", "memory"],
+  "core_attributes": {
     "pattern": "Cycle, phase shift, emergence, decay, memory",
     "geometry": "Phase-space mapping",
     "constraints": { "protocols": ["PHASE", "FOLD", "EMERGENT"] }
   },
   "links": [
-    { "rel": "COORDINATES", "to": "SHAPE" },
-    { "rel": "FLOW", "to": "ENERGY" },
-    { "rel": "FIELD", "to": "PLASMA" }
+    { "relation": "coordinates", "target": "SHAPE" },
+    { "relation": "flow", "target": "ENERGY" },
+    { "relation": "field", "target": "PLASMA" }
   ]
 }
