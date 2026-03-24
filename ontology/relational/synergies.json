@@ -34,7 +34,10 @@
     { "id": "FOLD", "label": "Fold" },
     { "id": "CYCLE", "label": "Cycle" },
     { "id": "EMERGE", "label": "Emergence" },
-    { "id": "DECAY", "label": "Decay" }
+    { "id": "DECAY", "label": "Decay" },
+    { "id": "BIOGRID2", "label": "BioGrid 2.0" },
+    { "id": "ROSETTA_SHAPE", "label": "Rosetta Shape Core" },
+    { "id": "POLY_INT", "label": "Polyhedral Intelligence" }
   ],
   "edges": [
     { "source": "BE", "target": "OC", "relation": "synergy" },
@@ -71,6 +74,14 @@
     { "source": "SUN", "target": "SPIRAL", "relation": "geometry_link" },
     { "source": "FE", "target": "FRACTAL", "relation": "geometry_link" },
     { "source": "MY", "target": "FLUX", "relation": "resonance" },
-    { "source": "DECAY", "target": "MY", "relation": "synergy" }
+    { "source": "DECAY", "target": "MY", "relation": "synergy" },
+    { "source": "BIOGRID2", "target": "ROSETTA_SHAPE", "relation": "synergy" },
+    { "source": "BIOGRID2", "target": "POLY_INT", "relation": "synergy" },
+    { "source": "ROSETTA_SHAPE", "target": "POLY_INT", "relation": "synergy" },
+    { "source": "BIOGRID2", "target": "MY", "relation": "resonance" },
+    { "source": "BIOGRID2", "target": "FLUX", "relation": "energy_coupling" },
+    { "source": "ROSETTA_SHAPE", "target": "CRYSTAL_LATTICE", "relation": "resonance" },
+    { "source": "POLY_INT", "target": "SPHERE", "relation": "resonance" },
+    { "source": "POLY_INT", "target": "CRYSTAL_LATTICE", "relation": "geometry_link" }
   ]
 }

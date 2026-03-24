@@ -31,6 +31,12 @@
       "path": "ontology/energy/thermal.json"
     },
     {
+      "id": "BIOGRID2",
+      "name": "BioGrid 2.0",
+      "ontology": "energy",
+      "path": "ontology/energy/biogrid2.json"
+    },
+    {
       "id": "FRACTAL",
       "name": "Fractal",
       "ontology": "shape",
@@ -59,6 +65,18 @@
       "name": "Spiral",
       "ontology": "shape",
       "path": "ontology/shape/spiral.json"
+    },
+    {
+      "id": "POLY_INT",
+      "name": "Polyhedral Intelligence",
+      "ontology": "shape",
+      "path": "ontology/shape/polyhedral_intelligence.json"
+    },
+    {
+      "id": "ROSETTA_SHAPE",
+      "name": "Rosetta Shape Core",
+      "ontology": "shape",
+      "path": "ontology/shape/rosetta_shape_core.json"
     },
     {
       "id": "DECAY",
