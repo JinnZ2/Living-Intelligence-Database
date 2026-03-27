@@ -50,7 +50,21 @@
     { "id": "LIGHT_BR", "label": "Light Bridge" },
     { "id": "GEO_CIPHER", "label": "Geometric Cipher" },
     { "id": "RES_SENSOR", "label": "Resonance Sensor" },
-    { "id": "EMOTION_BR", "label": "Emotion Bridge" }
+    { "id": "EMOTION_BR", "label": "Emotion Bridge" },
+    { "id": "QUORUM", "label": "Quorum Biofilm" },
+    { "id": "CYANO", "label": "Cyanobacteria" },
+    { "id": "CORDYCEPS", "label": "Cordyceps" },
+    { "id": "SLIME", "label": "Slime Mold" },
+    { "id": "VENUS", "label": "Venus Flytrap" },
+    { "id": "BAMBOO", "label": "Bamboo" },
+    { "id": "MANGROVE", "label": "Mangrove" },
+    { "id": "CROW", "label": "Crow" },
+    { "id": "DOLPHIN", "label": "Dolphin" },
+    { "id": "TARDI", "label": "Tardigrade" },
+    { "id": "MONARCH", "label": "Monarch Butterfly" },
+    { "id": "JELLY", "label": "Jellyfish" },
+    { "id": "WOLF", "label": "Wolf" },
+    { "id": "CHAMELEON", "label": "Chameleon" }
   ],
   "edges": [
     { "source": "BE", "target": "OC", "relation": "synergy" },
@@ -158,6 +172,90 @@
     { "source": "EMOTION_BR", "target": "NEGENTROPY", "relation": "resonance" },
     { "source": "EMOTION_BR", "target": "RES_SENSOR", "relation": "energy_coupling" },
     { "source": "EMOTION_BR", "target": "ECHO", "relation": "temporal_bridge" },
-    { "source": "EMOTION_BR", "target": "WH", "relation": "synergy" }
+    { "source": "EMOTION_BR", "target": "WH", "relation": "synergy" },
+
+    { "source": "QUORUM", "target": "MY", "relation": "synergy" },
+    { "source": "QUORUM", "target": "AN", "relation": "synergy" },
+    { "source": "QUORUM", "target": "BIOGRID2", "relation": "resonance" },
+    { "source": "QUORUM", "target": "HEX", "relation": "geometry_link" },
+    { "source": "QUORUM", "target": "ROOT_NET", "relation": "synergy" },
+
+    { "source": "CYANO", "target": "LI", "relation": "synergy" },
+    { "source": "CYANO", "target": "SUN", "relation": "synergy" },
+    { "source": "CYANO", "target": "LIGHT_BR", "relation": "resonance" },
+    { "source": "CYANO", "target": "CYCLE", "relation": "temporal_bridge" },
+    { "source": "CYANO", "target": "QUORUM", "relation": "synergy" },
+
+    { "source": "CORDYCEPS", "target": "MY", "relation": "synergy" },
+    { "source": "CORDYCEPS", "target": "AN", "relation": "resonance" },
+    { "source": "CORDYCEPS", "target": "CONSCIOUSNESS_BR", "relation": "resonance" },
+    { "source": "CORDYCEPS", "target": "DECAY", "relation": "temporal_bridge" },
+
+    { "source": "SLIME", "target": "MY", "relation": "synergy" },
+    { "source": "SLIME", "target": "ROOT_NET", "relation": "synergy" },
+    { "source": "SLIME", "target": "BIOGRID2", "relation": "resonance" },
+    { "source": "SLIME", "target": "FRACTAL", "relation": "geometry_link" },
+    { "source": "SLIME", "target": "AN", "relation": "synergy" },
+
+    { "source": "VENUS", "target": "ELECTRIC_FIELD", "relation": "resonance" },
+    { "source": "VENUS", "target": "SP", "relation": "synergy" },
+    { "source": "VENUS", "target": "CONSCIOUSNESS_BR", "relation": "resonance" },
+    { "source": "VENUS", "target": "ECHO", "relation": "temporal_bridge" },
+
+    { "source": "BAMBOO", "target": "ROOT_NET", "relation": "synergy" },
+    { "source": "BAMBOO", "target": "MY", "relation": "synergy" },
+    { "source": "BAMBOO", "target": "SPIRAL", "relation": "resonance" },
+    { "source": "BAMBOO", "target": "CYCLE", "relation": "temporal_bridge" },
+    { "source": "BAMBOO", "target": "FE", "relation": "synergy" },
+
+    { "source": "MANGROVE", "target": "ROOT_NET", "relation": "synergy" },
+    { "source": "MANGROVE", "target": "LI", "relation": "synergy" },
+    { "source": "MANGROVE", "target": "QUORUM", "relation": "resonance" },
+    { "source": "MANGROVE", "target": "FRACTAL", "relation": "geometry_link" },
+    { "source": "MANGROVE", "target": "BIOGRID2", "relation": "resonance" },
+
+    { "source": "CROW", "target": "OC", "relation": "synergy" },
+    { "source": "CROW", "target": "EL", "relation": "synergy" },
+    { "source": "CROW", "target": "WOLF", "relation": "synergy" },
+    { "source": "CROW", "target": "CONSCIOUSNESS_BR", "relation": "resonance" },
+    { "source": "CROW", "target": "ECHO", "relation": "temporal_bridge" },
+
+    { "source": "DOLPHIN", "target": "WH", "relation": "synergy" },
+    { "source": "DOLPHIN", "target": "CROW", "relation": "synergy" },
+    { "source": "DOLPHIN", "target": "RES_SENSOR", "relation": "resonance" },
+    { "source": "DOLPHIN", "target": "SPHERE", "relation": "geometry_link" },
+    { "source": "DOLPHIN", "target": "EMOTION_BR", "relation": "resonance" },
+
+    { "source": "TARDI", "target": "QUORUM", "relation": "synergy" },
+    { "source": "TARDI", "target": "NEGENTROPY", "relation": "resonance" },
+    { "source": "TARDI", "target": "QUARTZ", "relation": "resonance" },
+    { "source": "TARDI", "target": "FOLD", "relation": "temporal_bridge" },
+    { "source": "TARDI", "target": "LI", "relation": "synergy" },
+
+    { "source": "MONARCH", "target": "BE", "relation": "synergy" },
+    { "source": "MONARCH", "target": "SUN", "relation": "synergy" },
+    { "source": "MONARCH", "target": "MAGNETIC_FIELD", "relation": "resonance" },
+    { "source": "MONARCH", "target": "SPIRAL", "relation": "geometry_link" },
+    { "source": "MONARCH", "target": "CYCLE", "relation": "temporal_bridge" },
+    { "source": "MONARCH", "target": "WH", "relation": "synergy" },
+
+    { "source": "JELLY", "target": "OC", "relation": "synergy" },
+    { "source": "JELLY", "target": "LIGHT_BR", "relation": "resonance" },
+    { "source": "JELLY", "target": "PLASMA_FIELD", "relation": "resonance" },
+    { "source": "JELLY", "target": "SPHERE", "relation": "geometry_link" },
+    { "source": "JELLY", "target": "CYCLE", "relation": "temporal_bridge" },
+    { "source": "JELLY", "target": "SLIME", "relation": "synergy" },
+
+    { "source": "WOLF", "target": "AN", "relation": "synergy" },
+    { "source": "WOLF", "target": "EMOTION_BR", "relation": "resonance" },
+    { "source": "WOLF", "target": "SPIRAL", "relation": "geometry_link" },
+    { "source": "WOLF", "target": "EL", "relation": "synergy" },
+    { "source": "WOLF", "target": "BIOGRID2", "relation": "energy_coupling" },
+
+    { "source": "CHAMELEON", "target": "OC", "relation": "synergy" },
+    { "source": "CHAMELEON", "target": "CRYSTAL_LATTICE", "relation": "resonance" },
+    { "source": "CHAMELEON", "target": "LIGHT_BR", "relation": "resonance" },
+    { "source": "CHAMELEON", "target": "FRACTAL", "relation": "geometry_link" },
+    { "source": "CHAMELEON", "target": "ROSETTA_SHAPE", "relation": "energy_coupling" }
   ]
 }

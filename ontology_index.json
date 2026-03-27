@@ -211,6 +211,12 @@
       "path": "ontology/plasma/vortex_dynamics.json"
     },
     {
+      "id": "QUORUM",
+      "name": "Quorum Biofilm",
+      "ontology": "plant",
+      "path": "ontology/plant/quorum_biofilm.json"
+    },
+    {
       "id": "FE",
       "name": "Fern",
       "ontology": "plant",
@@ -223,10 +229,34 @@
       "path": "ontology/plant/sunflower.json"
     },
     {
+      "id": "VENUS",
+      "name": "Venus Flytrap",
+      "ontology": "plant",
+      "path": "ontology/plant/venus_flytrap.json"
+    },
+    {
+      "id": "SLIME",
+      "name": "Slime Mold",
+      "ontology": "plant",
+      "path": "ontology/plant/slime_mold.json"
+    },
+    {
+      "id": "CYANO",
+      "name": "Cyanobacteria",
+      "ontology": "plant",
+      "path": "ontology/plant/cyanobacteria.json"
+    },
+    {
       "id": "LI",
       "name": "Lichen",
       "ontology": "plant",
       "path": "ontology/plant/lichen.json"
+    },
+    {
+      "id": "BAMBOO",
+      "name": "Bamboo",
+      "ontology": "plant",
+      "path": "ontology/plant/bamboo.json"
     },
     {
       "id": "MY",
@@ -235,10 +265,22 @@
       "path": "ontology/plant/mycelium.json"
     },
     {
+      "id": "MANGROVE",
+      "name": "Mangrove",
+      "ontology": "plant",
+      "path": "ontology/plant/mangrove.json"
+    },
+    {
       "id": "ROOT_NET",
       "name": "Root Network",
       "ontology": "plant",
       "path": "ontology/plant/root_network.json"
+    },
+    {
+      "id": "CORDYCEPS",
+      "name": "Cordyceps",
+      "ontology": "plant",
+      "path": "ontology/plant/cordyceps.json"
     },
     {
       "id": "QUARTZ",
@@ -277,6 +319,24 @@
       "path": "ontology/crystal/diamond.json"
     },
     {
+      "id": "CHAMELEON",
+      "name": "Chameleon",
+      "ontology": "animal",
+      "path": "ontology/animal/chameleon.json"
+    },
+    {
+      "id": "CROW",
+      "name": "Crow",
+      "ontology": "animal",
+      "path": "ontology/animal/crow.json"
+    },
+    {
+      "id": "WOLF",
+      "name": "Wolf",
+      "ontology": "animal",
+      "path": "ontology/animal/wolf.json"
+    },
+    {
       "id": "WH",
       "name": "Whale",
       "ontology": "animal",
@@ -289,16 +349,40 @@
       "path": "ontology/animal/octopus.json"
     },
     {
+      "id": "JELLY",
+      "name": "Jellyfish",
+      "ontology": "animal",
+      "path": "ontology/animal/jellyfish.json"
+    },
+    {
       "id": "EL",
       "name": "Elephant",
       "ontology": "animal",
       "path": "ontology/animal/elephant.json"
     },
     {
+      "id": "MONARCH",
+      "name": "Monarch Butterfly",
+      "ontology": "animal",
+      "path": "ontology/animal/monarch_butterfly.json"
+    },
+    {
       "id": "SP",
       "name": "Spider",
       "ontology": "animal",
       "path": "ontology/animal/spider.json"
+    },
+    {
+      "id": "DOLPHIN",
+      "name": "Dolphin",
+      "ontology": "animal",
+      "path": "ontology/animal/dolphin.json"
+    },
+    {
+      "id": "TARDI",
+      "name": "Tardigrade",
+      "ontology": "animal",
+      "path": "ontology/animal/tardigrade.json"
     },
     {
       "id": "AN",
