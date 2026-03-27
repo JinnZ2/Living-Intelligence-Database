@@ -1,0 +1,51 @@
+{
+  "id": "HAW",
+  "name": "Hawk",
+  "emoji": "🦅",
+  "ontology": "animal",
+  "symbolic_code": "[HAW_TELE_DIVE_PRECISION]",
+  "description": "Precision targeting intelligence — telescopic fovea resolves detail at 8x human acuity, detecting a rabbit from 3 km. Peregrine falcon stoop reaches 389 km/h with aerodynamic tuck geometry calculated in real-time. Dual fovea system: one for forward telescopic focus, one for lateral wide-field scanning. UV-sensitive tetrachromatic vision reveals prey urine trails invisible to other predators. Mathematics of the killing dive.",
+  "core_attributes": {
+    "neurology": "dual-fovea retina, tetrachromatic UV vision, rapid motor cortex",
+    "pattern": "telescopic precision targeting, ballistic dive geometry, dual-fovea scanning",
+    "efficiency_factor": 0.97
+  },
+  "patterns": [
+    {
+      "name": "precision_targeting",
+      "type": "visual_acuity",
+      "efficiency_factor": 0.97,
+      "geometry": "optical_geometry",
+      "applications": ["target_acquisition", "tracking", "precision_systems"]
+    },
+    {
+      "name": "ballistic_dive",
+      "type": "trajectory_optimization",
+      "efficiency_factor": 0.95,
+      "geometry": "aerodynamic_curves",
+      "applications": ["ballistics", "aerodynamics", "energy_management"]
+    },
+    {
+      "name": "dual_fovea_scanning",
+      "type": "parallel_sensing",
+      "efficiency_factor": 0.93,
+      "geometry": "optical_field_geometry",
+      "applications": ["surveillance", "multi-focus_systems", "parallel_processing"]
+    }
+  ],
+  "primary_optimizations": ["precision_targeting", "ballistic_dive", "dual_fovea_scanning"],
+  "synergies": ["OW", "WOLF", "SP"],
+  "links": [
+    { "relation": "synergy", "target": "OW" },
+    { "relation": "synergy", "target": "WOLF" },
+    { "relation": "resonance", "target": "LIGHT_BR" },
+    { "relation": "geometry_link", "target": "SPIRAL" },
+    { "relation": "connected_to", "target": "CHAMELEON" },
+    { "relation": "energy_coupling", "target": "GRAV" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal_intelligence.schema.json",
+    "version": "1.1"
+  }
+}

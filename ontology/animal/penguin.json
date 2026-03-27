@@ -1,0 +1,51 @@
+{
+  "id": "PE",
+  "name": "Penguin",
+  "emoji": "🐧",
+  "ontology": "animal",
+  "symbolic_code": "[PE_HUDDLE_THERM_ROTATE]",
+  "description": "Collective thermodynamic intelligence — Emperor penguin huddles achieve internal temperatures of 37°C in -60°C winds through continuous rotation patterns. Each penguin takes turns on the exposed exterior, creating a self-organizing thermal engine. Huddle geometry spontaneously optimizes to minimize collective surface area. Counter-current heat exchange in flippers and legs prevents thermal loss. The mathematics of survival through shared warmth.",
+  "core_attributes": {
+    "neurology": "social thermoregulation cortex, counter-current vascular system",
+    "pattern": "collective thermal rotation, surface area minimization, counter-current exchange",
+    "efficiency_factor": 0.95
+  },
+  "patterns": [
+    {
+      "name": "thermal_huddle_rotation",
+      "type": "collective_thermodynamics",
+      "efficiency_factor": 0.95,
+      "geometry": "surface_area_minimization",
+      "applications": ["thermal_management", "collective_systems", "energy_conservation"]
+    },
+    {
+      "name": "counter_current_exchange",
+      "type": "heat_transfer_efficiency",
+      "efficiency_factor": 0.93,
+      "geometry": "parallel_flow_dynamics",
+      "applications": ["heat_exchangers", "thermal_design", "energy_efficiency"]
+    },
+    {
+      "name": "hydrodynamic_diving",
+      "type": "fluid_optimization",
+      "efficiency_factor": 0.91,
+      "geometry": "streamlined_body",
+      "applications": ["hydrodynamics", "diving_systems", "pressure_adaptation"]
+    }
+  ],
+  "primary_optimizations": ["thermal_huddle_rotation", "counter_current_exchange", "hydrodynamic_diving"],
+  "synergies": ["BE", "AN", "WH"],
+  "links": [
+    { "relation": "synergy", "target": "BE" },
+    { "relation": "synergy", "target": "AN" },
+    { "relation": "resonance", "target": "THERMAL" },
+    { "relation": "geometry_link", "target": "HEX" },
+    { "relation": "connected_to", "target": "TARDI" },
+    { "relation": "energy_coupling", "target": "NEGENTROPY" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal_intelligence.schema.json",
+    "version": "1.1"
+  }
+}

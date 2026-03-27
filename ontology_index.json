@@ -1,6 +1,12 @@
 {
   "entities": [
     {
+      "id": "LIGHT_BR",
+      "name": "Light Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/light_bridge.json"
+    },
+    {
       "id": "GRAV",
       "name": "Gravitational Field",
       "ontology": "energy",
@@ -19,10 +25,34 @@
       "path": "ontology/energy/electric_field.json"
     },
     {
+      "id": "NEGENTROPY",
+      "name": "Negentropic Field",
+      "ontology": "energy",
+      "path": "ontology/energy/negentropic_field.json"
+    },
+    {
+      "id": "RES_SENSOR",
+      "name": "Resonance Sensor",
+      "ontology": "energy",
+      "path": "ontology/energy/resonance_sensor.json"
+    },
+    {
       "id": "MAGNETIC_FIELD",
       "name": "Magnetic Field",
       "ontology": "energy",
       "path": "ontology/energy/magnetic_field.json"
+    },
+    {
+      "id": "EMOTION_BR",
+      "name": "Emotion Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/emotion_bridge.json"
+    },
+    {
+      "id": "CONSCIOUSNESS_BR",
+      "name": "Consciousness Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/consciousness_bridge.json"
     },
     {
       "id": "THERMAL",
@@ -35,6 +65,18 @@
       "name": "BioGrid 2.0",
       "ontology": "energy",
       "path": "ontology/energy/biogrid2.json"
+    },
+    {
+      "id": "MAG_BRIDGE",
+      "name": "Magnetic Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/magnetic_bridge.json"
+    },
+    {
+      "id": "GEIS_ENC",
+      "name": "GEIS Encoder",
+      "ontology": "shape",
+      "path": "ontology/shape/geis_encoder.json"
     },
     {
       "id": "FRACTAL",
@@ -55,6 +97,12 @@
       "path": "ontology/shape/torus.json"
     },
     {
+      "id": "MULTI_HELIX",
+      "name": "Multi-Helix Architecture",
+      "ontology": "shape",
+      "path": "ontology/shape/multi_helix.json"
+    },
+    {
       "id": "HEX",
       "name": "Hexagon",
       "ontology": "shape",
@@ -73,10 +121,28 @@
       "path": "ontology/shape/polyhedral_intelligence.json"
     },
     {
+      "id": "MANDALA",
+      "name": "Mandala Bloom",
+      "ontology": "shape",
+      "path": "ontology/shape/mandala_bloom.json"
+    },
+    {
+      "id": "OCTA_STATE",
+      "name": "Octahedral State",
+      "ontology": "shape",
+      "path": "ontology/shape/octahedral_state.json"
+    },
+    {
       "id": "ROSETTA_SHAPE",
       "name": "Rosetta Shape Core",
       "ontology": "shape",
       "path": "ontology/shape/rosetta_shape_core.json"
+    },
+    {
+      "id": "GEO_CIPHER",
+      "name": "Geometric Cipher",
+      "ontology": "shape",
+      "path": "ontology/shape/geometric_cipher.json"
     },
     {
       "id": "DECAY",
@@ -139,6 +205,18 @@
       "path": "ontology/plasma/solar_wind.json"
     },
     {
+      "id": "VORTEX_DYN",
+      "name": "Vortex Dynamics",
+      "ontology": "plasma",
+      "path": "ontology/plasma/vortex_dynamics.json"
+    },
+    {
+      "id": "QUORUM",
+      "name": "Quorum Biofilm",
+      "ontology": "plant",
+      "path": "ontology/plant/quorum_biofilm.json"
+    },
+    {
       "id": "FE",
       "name": "Fern",
       "ontology": "plant",
@@ -151,10 +229,34 @@
       "path": "ontology/plant/sunflower.json"
     },
     {
+      "id": "VENUS",
+      "name": "Venus Flytrap",
+      "ontology": "plant",
+      "path": "ontology/plant/venus_flytrap.json"
+    },
+    {
+      "id": "SLIME",
+      "name": "Slime Mold",
+      "ontology": "plant",
+      "path": "ontology/plant/slime_mold.json"
+    },
+    {
+      "id": "CYANO",
+      "name": "Cyanobacteria",
+      "ontology": "plant",
+      "path": "ontology/plant/cyanobacteria.json"
+    },
+    {
       "id": "LI",
       "name": "Lichen",
       "ontology": "plant",
       "path": "ontology/plant/lichen.json"
+    },
+    {
+      "id": "BAMBOO",
+      "name": "Bamboo",
+      "ontology": "plant",
+      "path": "ontology/plant/bamboo.json"
     },
     {
       "id": "MY",
@@ -163,10 +265,22 @@
       "path": "ontology/plant/mycelium.json"
     },
     {
+      "id": "MANGROVE",
+      "name": "Mangrove",
+      "ontology": "plant",
+      "path": "ontology/plant/mangrove.json"
+    },
+    {
       "id": "ROOT_NET",
       "name": "Root Network",
       "ontology": "plant",
       "path": "ontology/plant/root_network.json"
+    },
+    {
+      "id": "CORDYCEPS",
+      "name": "Cordyceps",
+      "ontology": "plant",
+      "path": "ontology/plant/cordyceps.json"
     },
     {
       "id": "QUARTZ",
@@ -179,6 +293,12 @@
       "name": "Tourmaline",
       "ontology": "crystal",
       "path": "ontology/crystal/tourmaline.json"
+    },
+    {
+      "id": "SILICON_LAT",
+      "name": "Silicon Lattice",
+      "ontology": "crystal",
+      "path": "ontology/crystal/silicon_lattice.json"
     },
     {
       "id": "CRYSTAL_LATTICE",
@@ -199,10 +319,70 @@
       "path": "ontology/crystal/diamond.json"
     },
     {
+      "id": "BT",
+      "name": "Beetle",
+      "ontology": "animal",
+      "path": "ontology/animal/beetle.json"
+    },
+    {
+      "id": "CHAMELEON",
+      "name": "Chameleon",
+      "ontology": "animal",
+      "path": "ontology/animal/chameleon.json"
+    },
+    {
+      "id": "KA",
+      "name": "Kangaroo",
+      "ontology": "animal",
+      "path": "ontology/animal/kangaroo.json"
+    },
+    {
+      "id": "CROW",
+      "name": "Crow",
+      "ontology": "animal",
+      "path": "ontology/animal/crow.json"
+    },
+    {
+      "id": "CU",
+      "name": "Cuttlefish",
+      "ontology": "animal",
+      "path": "ontology/animal/cuttlefish.json"
+    },
+    {
+      "id": "WOLF",
+      "name": "Wolf",
+      "ontology": "animal",
+      "path": "ontology/animal/wolf.json"
+    },
+    {
+      "id": "BX",
+      "name": "Bat",
+      "ontology": "animal",
+      "path": "ontology/animal/bat.json"
+    },
+    {
       "id": "WH",
       "name": "Whale",
       "ontology": "animal",
       "path": "ontology/animal/whale.json"
+    },
+    {
+      "id": "TU",
+      "name": "Sea Turtle",
+      "ontology": "animal",
+      "path": "ontology/animal/sea_turtle.json"
+    },
+    {
+      "id": "RA",
+      "name": "Rat",
+      "ontology": "animal",
+      "path": "ontology/animal/rat.json"
+    },
+    {
+      "id": "CR",
+      "name": "Cricket",
+      "ontology": "animal",
+      "path": "ontology/animal/cricket.json"
     },
     {
       "id": "OC",
@@ -211,16 +391,64 @@
       "path": "ontology/animal/octopus.json"
     },
     {
+      "id": "PE",
+      "name": "Penguin",
+      "ontology": "animal",
+      "path": "ontology/animal/penguin.json"
+    },
+    {
+      "id": "JELLY",
+      "name": "Jellyfish",
+      "ontology": "animal",
+      "path": "ontology/animal/jellyfish.json"
+    },
+    {
       "id": "EL",
       "name": "Elephant",
       "ontology": "animal",
       "path": "ontology/animal/elephant.json"
     },
     {
+      "id": "MONARCH",
+      "name": "Monarch Butterfly",
+      "ontology": "animal",
+      "path": "ontology/animal/monarch_butterfly.json"
+    },
+    {
       "id": "SP",
       "name": "Spider",
       "ontology": "animal",
       "path": "ontology/animal/spider.json"
+    },
+    {
+      "id": "SN",
+      "name": "Snake",
+      "ontology": "animal",
+      "path": "ontology/animal/snake.json"
+    },
+    {
+      "id": "DOLPHIN",
+      "name": "Dolphin",
+      "ontology": "animal",
+      "path": "ontology/animal/dolphin.json"
+    },
+    {
+      "id": "OW",
+      "name": "Owl",
+      "ontology": "animal",
+      "path": "ontology/animal/owl.json"
+    },
+    {
+      "id": "HAW",
+      "name": "Hawk",
+      "ontology": "animal",
+      "path": "ontology/animal/hawk.json"
+    },
+    {
+      "id": "TARDI",
+      "name": "Tardigrade",
+      "ontology": "animal",
+      "path": "ontology/animal/tardigrade.json"
     },
     {
       "id": "AN",
@@ -233,7 +461,194 @@
       "name": "Bee",
       "ontology": "animal",
       "path": "ontology/animal/bee.json"
+    },
+    {
+      "id": "GE",
+      "name": "Gecko",
+      "ontology": "animal",
+      "path": "ontology/animal/gecko.json"
     }
   ],
-  "relations": []
+  "relations": [
+    {
+      "source": "BT",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "BT",
+      "target": "MONARCH",
+      "relation": "synergy"
+    },
+    {
+      "source": "BT",
+      "target": "CR",
+      "relation": "synergy"
+    },
+    {
+      "source": "KA",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "KA",
+      "target": "GE",
+      "relation": "synergy"
+    },
+    {
+      "source": "KA",
+      "target": "DOLPHIN",
+      "relation": "synergy"
+    },
+    {
+      "source": "CU",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "CU",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    },
+    {
+      "source": "CU",
+      "target": "JELLY",
+      "relation": "synergy"
+    },
+    {
+      "source": "BX",
+      "target": "DOLPHIN",
+      "relation": "synergy"
+    },
+    {
+      "source": "BX",
+      "target": "OW",
+      "relation": "synergy"
+    },
+    {
+      "source": "BX",
+      "target": "SP",
+      "relation": "synergy"
+    },
+    {
+      "source": "TU",
+      "target": "MONARCH",
+      "relation": "synergy"
+    },
+    {
+      "source": "TU",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "TU",
+      "target": "QUORUM",
+      "relation": "synergy"
+    },
+    {
+      "source": "RA",
+      "target": "SLIME",
+      "relation": "synergy"
+    },
+    {
+      "source": "RA",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "RA",
+      "target": "CROW",
+      "relation": "synergy"
+    },
+    {
+      "source": "CR",
+      "target": "BT",
+      "relation": "synergy"
+    },
+    {
+      "source": "CR",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "CR",
+      "target": "BX",
+      "relation": "synergy"
+    },
+    {
+      "source": "PE",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "PE",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "PE",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "SN",
+      "target": "BX",
+      "relation": "synergy"
+    },
+    {
+      "source": "SN",
+      "target": "HAW",
+      "relation": "synergy"
+    },
+    {
+      "source": "SN",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    },
+    {
+      "source": "OW",
+      "target": "HAW",
+      "relation": "synergy"
+    },
+    {
+      "source": "OW",
+      "target": "BX",
+      "relation": "synergy"
+    },
+    {
+      "source": "OW",
+      "target": "WOLF",
+      "relation": "synergy"
+    },
+    {
+      "source": "HAW",
+      "target": "OW",
+      "relation": "synergy"
+    },
+    {
+      "source": "HAW",
+      "target": "WOLF",
+      "relation": "synergy"
+    },
+    {
+      "source": "HAW",
+      "target": "SP",
+      "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "SP",
+      "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "KA",
+      "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    }
+  ]
 }
