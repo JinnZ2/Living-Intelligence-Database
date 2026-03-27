@@ -28,5 +28,16 @@
   { "if": ["JELLY", "LIGHT_BR", "CYCLE"], "then": "BIOLUMINESCENT_IMMORTALITY" },
   { "if": ["CYANO", "LI", "SUN"], "then": "PHOTOSYNTHETIC_ORIGIN" },
   { "if": ["BAMBOO", "ROOT_NET", "SPIRAL"], "then": "EXPLOSIVE_RHIZOME_GROWTH" },
-  { "if": ["MANGROVE", "QUORUM", "FRACTAL"], "then": "BOUNDARY_ECOSYSTEM" }
+  { "if": ["MANGROVE", "QUORUM", "FRACTAL"], "then": "BOUNDARY_ECOSYSTEM" },
+  { "if": ["KA", "FLUX", "SPIRAL"], "then": "ELASTIC_RESONANCE_LOCOMOTION" },
+  { "if": ["TU", "MONARCH", "MAGNETIC_FIELD"], "then": "MAGNETIC_HOMING_TRIAD" },
+  { "if": ["BX", "DOLPHIN", "RES_SENSOR"], "then": "BIOSONAR_CONVERGENCE" },
+  { "if": ["HAW", "OW", "LIGHT_BR"], "then": "AERIAL_PRECISION_SENSE" },
+  { "if": ["PE", "BE", "HEX"], "then": "COLLECTIVE_THERMAL_GEOMETRY" },
+  { "if": ["GE", "CRYSTAL_LATTICE", "FRACTAL"], "then": "NANOSCALE_ADHESION" },
+  { "if": ["SN", "THERMAL", "RES_SENSOR"], "then": "INFRARED_FIELD_MAPPING" },
+  { "if": ["CU", "OC", "CHAMELEON"], "then": "CEPHALOPOD_CAMOUFLAGE_TRIAD" },
+  { "if": ["RA", "HEX", "ECHO"], "then": "COGNITIVE_MAP_ARCHITECTURE" },
+  { "if": ["BT", "LIGHT_BR", "SPIRAL"], "then": "GALACTIC_NAVIGATION" },
+  { "if": ["CR", "THERMAL", "SPIRAL"], "then": "ACOUSTIC_THERMOMETER" }
 ]

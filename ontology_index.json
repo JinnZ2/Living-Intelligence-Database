@@ -319,10 +319,22 @@
       "path": "ontology/crystal/diamond.json"
     },
     {
+      "id": "BT",
+      "name": "Beetle",
+      "ontology": "animal",
+      "path": "ontology/animal/beetle.json"
+    },
+    {
       "id": "CHAMELEON",
       "name": "Chameleon",
       "ontology": "animal",
       "path": "ontology/animal/chameleon.json"
+    },
+    {
+      "id": "KA",
+      "name": "Kangaroo",
+      "ontology": "animal",
+      "path": "ontology/animal/kangaroo.json"
     },
     {
       "id": "CROW",
@@ -331,10 +343,22 @@
       "path": "ontology/animal/crow.json"
     },
     {
+      "id": "CU",
+      "name": "Cuttlefish",
+      "ontology": "animal",
+      "path": "ontology/animal/cuttlefish.json"
+    },
+    {
       "id": "WOLF",
       "name": "Wolf",
       "ontology": "animal",
       "path": "ontology/animal/wolf.json"
+    },
+    {
+      "id": "BX",
+      "name": "Bat",
+      "ontology": "animal",
+      "path": "ontology/animal/bat.json"
     },
     {
       "id": "WH",
@@ -343,10 +367,34 @@
       "path": "ontology/animal/whale.json"
     },
     {
+      "id": "TU",
+      "name": "Sea Turtle",
+      "ontology": "animal",
+      "path": "ontology/animal/sea_turtle.json"
+    },
+    {
+      "id": "RA",
+      "name": "Rat",
+      "ontology": "animal",
+      "path": "ontology/animal/rat.json"
+    },
+    {
+      "id": "CR",
+      "name": "Cricket",
+      "ontology": "animal",
+      "path": "ontology/animal/cricket.json"
+    },
+    {
       "id": "OC",
       "name": "Octopus",
       "ontology": "animal",
       "path": "ontology/animal/octopus.json"
+    },
+    {
+      "id": "PE",
+      "name": "Penguin",
+      "ontology": "animal",
+      "path": "ontology/animal/penguin.json"
     },
     {
       "id": "JELLY",
@@ -373,10 +421,28 @@
       "path": "ontology/animal/spider.json"
     },
     {
+      "id": "SN",
+      "name": "Snake",
+      "ontology": "animal",
+      "path": "ontology/animal/snake.json"
+    },
+    {
       "id": "DOLPHIN",
       "name": "Dolphin",
       "ontology": "animal",
       "path": "ontology/animal/dolphin.json"
+    },
+    {
+      "id": "OW",
+      "name": "Owl",
+      "ontology": "animal",
+      "path": "ontology/animal/owl.json"
+    },
+    {
+      "id": "HAW",
+      "name": "Hawk",
+      "ontology": "animal",
+      "path": "ontology/animal/hawk.json"
     },
     {
       "id": "TARDI",
@@ -395,7 +461,194 @@
       "name": "Bee",
       "ontology": "animal",
       "path": "ontology/animal/bee.json"
+    },
+    {
+      "id": "GE",
+      "name": "Gecko",
+      "ontology": "animal",
+      "path": "ontology/animal/gecko.json"
     }
   ],
-  "relations": []
+  "relations": [
+    {
+      "source": "BT",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "BT",
+      "target": "MONARCH",
+      "relation": "synergy"
+    },
+    {
+      "source": "BT",
+      "target": "CR",
+      "relation": "synergy"
+    },
+    {
+      "source": "KA",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "KA",
+      "target": "GE",
+      "relation": "synergy"
+    },
+    {
+      "source": "KA",
+      "target": "DOLPHIN",
+      "relation": "synergy"
+    },
+    {
+      "source": "CU",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "CU",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    },
+    {
+      "source": "CU",
+      "target": "JELLY",
+      "relation": "synergy"
+    },
+    {
+      "source": "BX",
+      "target": "DOLPHIN",
+      "relation": "synergy"
+    },
+    {
+      "source": "BX",
+      "target": "OW",
+      "relation": "synergy"
+    },
+    {
+      "source": "BX",
+      "target": "SP",
+      "relation": "synergy"
+    },
+    {
+      "source": "TU",
+      "target": "MONARCH",
+      "relation": "synergy"
+    },
+    {
+      "source": "TU",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "TU",
+      "target": "QUORUM",
+      "relation": "synergy"
+    },
+    {
+      "source": "RA",
+      "target": "SLIME",
+      "relation": "synergy"
+    },
+    {
+      "source": "RA",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "RA",
+      "target": "CROW",
+      "relation": "synergy"
+    },
+    {
+      "source": "CR",
+      "target": "BT",
+      "relation": "synergy"
+    },
+    {
+      "source": "CR",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "CR",
+      "target": "BX",
+      "relation": "synergy"
+    },
+    {
+      "source": "PE",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "PE",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "PE",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "SN",
+      "target": "BX",
+      "relation": "synergy"
+    },
+    {
+      "source": "SN",
+      "target": "HAW",
+      "relation": "synergy"
+    },
+    {
+      "source": "SN",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    },
+    {
+      "source": "OW",
+      "target": "HAW",
+      "relation": "synergy"
+    },
+    {
+      "source": "OW",
+      "target": "BX",
+      "relation": "synergy"
+    },
+    {
+      "source": "OW",
+      "target": "WOLF",
+      "relation": "synergy"
+    },
+    {
+      "source": "HAW",
+      "target": "OW",
+      "relation": "synergy"
+    },
+    {
+      "source": "HAW",
+      "target": "WOLF",
+      "relation": "synergy"
+    },
+    {
+      "source": "HAW",
+      "target": "SP",
+      "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "SP",
+      "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "KA",
+      "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    }
+  ]
 }
