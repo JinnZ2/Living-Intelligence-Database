@@ -1,6 +1,12 @@
 {
   "entities": [
     {
+      "id": "LIGHT_BR",
+      "name": "Light Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/light_bridge.json"
+    },
+    {
       "id": "GRAV",
       "name": "Gravitational Field",
       "ontology": "energy",
@@ -19,10 +25,34 @@
       "path": "ontology/energy/electric_field.json"
     },
     {
+      "id": "NEGENTROPY",
+      "name": "Negentropic Field",
+      "ontology": "energy",
+      "path": "ontology/energy/negentropic_field.json"
+    },
+    {
+      "id": "RES_SENSOR",
+      "name": "Resonance Sensor",
+      "ontology": "energy",
+      "path": "ontology/energy/resonance_sensor.json"
+    },
+    {
       "id": "MAGNETIC_FIELD",
       "name": "Magnetic Field",
       "ontology": "energy",
       "path": "ontology/energy/magnetic_field.json"
+    },
+    {
+      "id": "EMOTION_BR",
+      "name": "Emotion Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/emotion_bridge.json"
+    },
+    {
+      "id": "CONSCIOUSNESS_BR",
+      "name": "Consciousness Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/consciousness_bridge.json"
     },
     {
       "id": "THERMAL",
@@ -35,6 +65,18 @@
       "name": "BioGrid 2.0",
       "ontology": "energy",
       "path": "ontology/energy/biogrid2.json"
+    },
+    {
+      "id": "MAG_BRIDGE",
+      "name": "Magnetic Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/magnetic_bridge.json"
+    },
+    {
+      "id": "GEIS_ENC",
+      "name": "GEIS Encoder",
+      "ontology": "shape",
+      "path": "ontology/shape/geis_encoder.json"
     },
     {
       "id": "FRACTAL",
@@ -55,6 +97,12 @@
       "path": "ontology/shape/torus.json"
     },
     {
+      "id": "MULTI_HELIX",
+      "name": "Multi-Helix Architecture",
+      "ontology": "shape",
+      "path": "ontology/shape/multi_helix.json"
+    },
+    {
       "id": "HEX",
       "name": "Hexagon",
       "ontology": "shape",
@@ -73,10 +121,28 @@
       "path": "ontology/shape/polyhedral_intelligence.json"
     },
     {
+      "id": "MANDALA",
+      "name": "Mandala Bloom",
+      "ontology": "shape",
+      "path": "ontology/shape/mandala_bloom.json"
+    },
+    {
+      "id": "OCTA_STATE",
+      "name": "Octahedral State",
+      "ontology": "shape",
+      "path": "ontology/shape/octahedral_state.json"
+    },
+    {
       "id": "ROSETTA_SHAPE",
       "name": "Rosetta Shape Core",
       "ontology": "shape",
       "path": "ontology/shape/rosetta_shape_core.json"
+    },
+    {
+      "id": "GEO_CIPHER",
+      "name": "Geometric Cipher",
+      "ontology": "shape",
+      "path": "ontology/shape/geometric_cipher.json"
     },
     {
       "id": "DECAY",
@@ -139,6 +205,12 @@
       "path": "ontology/plasma/solar_wind.json"
     },
     {
+      "id": "VORTEX_DYN",
+      "name": "Vortex Dynamics",
+      "ontology": "plasma",
+      "path": "ontology/plasma/vortex_dynamics.json"
+    },
+    {
       "id": "FE",
       "name": "Fern",
       "ontology": "plant",
@@ -179,6 +251,12 @@
       "name": "Tourmaline",
       "ontology": "crystal",
       "path": "ontology/crystal/tourmaline.json"
+    },
+    {
+      "id": "SILICON_LAT",
+      "name": "Silicon Lattice",
+      "ontology": "crystal",
+      "path": "ontology/crystal/silicon_lattice.json"
     },
     {
       "id": "CRYSTAL_LATTICE",
