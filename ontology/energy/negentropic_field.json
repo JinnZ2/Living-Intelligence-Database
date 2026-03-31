@@ -1,29 +1,55 @@
 {
   "id": "NEGENTROPY",
   "name": "Negentropic Field",
-  "emoji": "🌀",
+  "emoji": "\ud83d\udd04",
   "ontology": "energy",
-  "symbolic_code": "[NEG_ALIGN_φ_ORDER]",
-  "description": "The tendency of living systems to spontaneously organize rather than dissolve. Measured by M(S) = (R_e · A · D) − L, where geometric resonance, adaptability, and diversity overcome loss. Grounded in Fokker-Planck dynamics where reducing diffusion triggers probability collapse into coherent states.",
+  "symbolic_code": "[NEG_ALIGN_\u03c6_ORDER]",
+  "description": "The tendency of living systems to spontaneously organize rather than dissolve. Measured by M(S) = (R_e \u00b7 A \u00b7 D) \u2212 L, where geometric resonance, adaptability, and diversity overcome loss. Grounded in Fokker-Planck dynamics where reducing diffusion triggers probability collapse into coherent states.",
   "core_attributes": {
     "pattern": "self-organization, entropy reversal, phase transition coherence",
     "energy_mode": "organizing",
-    "transmission_modes": ["resonance cascade", "geometric alignment", "information concentration"],
+    "transmission_modes": [
+      "resonance cascade",
+      "geometric alignment",
+      "information concentration"
+    ],
     "conversion_efficiency": 0.96,
-    "pattern_couplings": ["consciousness_bridge", "mandala_bloom", "crystal_coherence"],
+    "pattern_couplings": [
+      "consciousness_bridge",
+      "mandala_bloom",
+      "crystal_coherence"
+    ],
     "metrics": {
-      "M_S": "R_e · A · D − L",
+      "M_S": "R_e \u00b7 A \u00b7 D \u2212 L",
       "consciousness_threshold": 3.618,
       "phase_transition": "Fokker-Planck collapse"
     }
   },
   "links": [
-    { "relation": "synergy", "target": "CONSCIOUSNESS_BR" },
-    { "relation": "synergy", "target": "MANDALA" },
-    { "relation": "resonance", "target": "BIOGRID2" },
-    { "relation": "energy_coupling", "target": "CRYSTAL_LATTICE" },
-    { "relation": "temporal_bridge", "target": "EMERGE" },
-    { "relation": "connected_to", "target": "MY" }
+    {
+      "relation": "synergy",
+      "target": "CONSCIOUSNESS_BR"
+    },
+    {
+      "relation": "synergy",
+      "target": "MANDALA"
+    },
+    {
+      "relation": "resonance",
+      "target": "BIOGRID2"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "CRYSTAL_LATTICE"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "EMERGE"
+    },
+    {
+      "relation": "connected_to",
+      "target": "MY"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

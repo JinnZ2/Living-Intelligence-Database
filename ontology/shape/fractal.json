@@ -1,18 +1,23 @@
 {
   "id": "FRACTAL",
   "name": "Fractal",
+  "emoji": "🌿",
   "ontology": "shape",
-  "attributes": {
-    "pattern": "Self-similarity; recursive scaling; boundary of order and chaos",
-    "geometry": "2.5D",
-    "constraints": {
-      "phi": "≈1.618",
-      "protocols": ["RECURSION", "SELF_SIMILARITY", "SCALE_INVARIANCE"]
-    }
+  "symbolic_code": "[FRACTAL_RECURSE_φ_SCALE]",
+  "description": "Self-similar recursive geometry where each scale contains the pattern of the whole. Occupies fractional dimensions (2.5D) at the boundary between order and chaos. Found in ferns, coastlines, blood vessels, and lightning.",
+  "core_attributes": {
+    "pattern": "self-similarity, recursive scaling, fractional dimension",
+    "geometry_type": "2.5D fractional",
+    "geometry_class": "recursive",
+    "dimension": 2.5,
+    "harmonic_ratios": [1.618, 2.0],
+    "applications": ["branching networks", "surface area optimization", "scale-invariant design"]
   },
   "links": [
-    { "relation": "flow", "target": "SPIRAL" },
-    { "relation": "field", "target": "TORUS" },
-    { "relation": "constraint", "target": "PHI" }
-  ]
+    { "relation": "resonance", "target": "SPIRAL" },
+    { "relation": "connected_to", "target": "TORUS" },
+    { "relation": "geometry_link", "target": "FE" }
+  ],
+  "co_creation": true,
+  "validation_meta": { "schema": "shape_intelligence.schema.json", "version": "1.1" }
 }

@@ -1,7 +1,7 @@
 {
   "id": "EL",
   "name": "Elephant",
-  "emoji": "🐘",
+  "emoji": "\ud83d\udc18",
   "ontology": "animal",
   "symbolic_code": "[EL_MEMORY_INFRASONIC_BOND]",
   "description": "Deep memory intelligence with infrasonic communication, multi-generational spatial knowledge, and empathic social bonding across vast distances.",
@@ -11,9 +11,54 @@
     "efficiency_factor": 0.89
   },
   "links": [
-    {"relation": "synergy", "target": "WH"},
-    {"relation": "resonance", "target": "ECHO"},
-    {"relation": "energy_mode", "target": "MAGNETIC_FIELD"}
+    {
+      "relation": "synergy",
+      "target": "WH"
+    },
+    {
+      "relation": "resonance",
+      "target": "ECHO"
+    },
+    {
+      "relation": "energy_mode",
+      "target": "MAGNETIC_FIELD"
+    }
   ],
-  "validation_meta": {"schema": "animal_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "animal_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "patterns": [
+    {
+      "name": "infrasonic_communication",
+      "type": "acoustic_communication",
+      "efficiency_factor": 0.9,
+      "geometry": "low_frequency_waves",
+      "applications": [
+        "long_range_signaling",
+        "seismic_detection"
+      ]
+    },
+    {
+      "name": "spatial_memory_mapping",
+      "type": "spatial_memory",
+      "efficiency_factor": 0.92,
+      "geometry": "cognitive_mapping",
+      "applications": [
+        "navigation",
+        "resource_location",
+        "memory_systems"
+      ]
+    },
+    {
+      "name": "empathic_social_bonding",
+      "type": "social_intelligence",
+      "efficiency_factor": 0.89,
+      "geometry": "social_network",
+      "applications": [
+        "group_coordination",
+        "emotional_intelligence"
+      ]
+    }
+  ]
 }

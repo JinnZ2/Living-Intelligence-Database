@@ -471,6 +471,1071 @@
   ],
   "relations": [
     {
+      "source": "LIGHT_BR",
+      "target": "MAG_BRIDGE",
+      "relation": "synergy"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "ELECTRIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "AURORA",
+      "relation": "resonance"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "GEIS_ENC",
+      "relation": "connected_to"
+    },
+    {
+      "source": "GRAV",
+      "target": "MAGNETIC_FIELD",
+      "relation": "synergy"
+    },
+    {
+      "source": "GRAV",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GRAV",
+      "target": "TORUS",
+      "relation": "resonance"
+    },
+    {
+      "source": "FLUX",
+      "target": "MAGNETIC_FIELD",
+      "relation": "synergy"
+    },
+    {
+      "source": "FLUX",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "ELECTRIC_FIELD",
+      "target": "MAGNETIC_FIELD",
+      "relation": "synergy"
+    },
+    {
+      "source": "ELECTRIC_FIELD",
+      "target": "LIGHTNING",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "ELECTRIC_FIELD",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
+      "source": "NEGENTROPY",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "NEGENTROPY",
+      "target": "MANDALA",
+      "relation": "synergy"
+    },
+    {
+      "source": "NEGENTROPY",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "NEGENTROPY",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "NEGENTROPY",
+      "target": "EMERGE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "NEGENTROPY",
+      "target": "MY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "MAG_BRIDGE",
+      "relation": "synergy"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "LIGHT_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "MAGNETIC_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "GEIS_ENC",
+      "relation": "connected_to"
+    },
+    {
+      "source": "MAGNETIC_FIELD",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "MAGNETIC_FIELD",
+      "target": "FLUX",
+      "relation": "synergy"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "MULTI_HELIX",
+      "relation": "synergy"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "NEGENTROPY",
+      "relation": "resonance"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "RES_SENSOR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "WH",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CONSCIOUSNESS_BR",
+      "target": "NEGENTROPY",
+      "relation": "synergy"
+    },
+    {
+      "source": "CONSCIOUSNESS_BR",
+      "target": "MULTI_HELIX",
+      "relation": "synergy"
+    },
+    {
+      "source": "CONSCIOUSNESS_BR",
+      "target": "EMOTION_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "CONSCIOUSNESS_BR",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "CONSCIOUSNESS_BR",
+      "target": "GEIS_ENC",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CONSCIOUSNESS_BR",
+      "target": "EMERGE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "THERMAL",
+      "target": "FLUX",
+      "relation": "synergy"
+    },
+    {
+      "source": "THERMAL",
+      "target": "PLASMA_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "THERMAL",
+      "target": "TOUR",
+      "relation": "resonance"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "ROSETTA_SHAPE",
+      "relation": "synergy"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "POLY_INT",
+      "relation": "synergy"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "MY",
+      "relation": "resonance"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "ROOT_NET",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "FLUX",
+      "relation": "connected_to"
+    },
+    {
+      "source": "MAG_BRIDGE",
+      "target": "MAGNETIC_FIELD",
+      "relation": "synergy"
+    },
+    {
+      "source": "MAG_BRIDGE",
+      "target": "SILICON_LAT",
+      "relation": "synergy"
+    },
+    {
+      "source": "MAG_BRIDGE",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "MAG_BRIDGE",
+      "target": "ELECTRIC_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "MAG_BRIDGE",
+      "target": "GEIS_ENC",
+      "relation": "connected_to"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "OCTA_STATE",
+      "relation": "synergy"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "SILICON_LAT",
+      "relation": "synergy"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "ROSETTA_SHAPE",
+      "relation": "synergy"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "GEO_CIPHER",
+      "relation": "resonance"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "BIOGRID2",
+      "relation": "connected_to"
+    },
+    {
+      "source": "FRACTAL",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "FRACTAL",
+      "target": "TORUS",
+      "relation": "connected_to"
+    },
+    {
+      "source": "FRACTAL",
+      "target": "FE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SPHERE",
+      "target": "TORUS",
+      "relation": "resonance"
+    },
+    {
+      "source": "SPHERE",
+      "target": "GRAV",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SPHERE",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "TORUS",
+      "target": "SPHERE",
+      "relation": "resonance"
+    },
+    {
+      "source": "TORUS",
+      "target": "OC",
+      "relation": "connected_to"
+    },
+    {
+      "source": "MULTI_HELIX",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "MULTI_HELIX",
+      "target": "NEGENTROPY",
+      "relation": "synergy"
+    },
+    {
+      "source": "MULTI_HELIX",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "MULTI_HELIX",
+      "target": "TORUS",
+      "relation": "resonance"
+    },
+    {
+      "source": "MULTI_HELIX",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MULTI_HELIX",
+      "target": "OC",
+      "relation": "connected_to"
+    },
+    {
+      "source": "HEX",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "HEX",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "HEX",
+      "target": "TORUS",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SPIRAL",
+      "target": "FRACTAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "SPIRAL",
+      "target": "FLUX",
+      "relation": "connected_to"
+    },
+    {
+      "source": "POLY_INT",
+      "target": "BIOGRID2",
+      "relation": "synergy"
+    },
+    {
+      "source": "POLY_INT",
+      "target": "ROSETTA_SHAPE",
+      "relation": "synergy"
+    },
+    {
+      "source": "POLY_INT",
+      "target": "SPHERE",
+      "relation": "resonance"
+    },
+    {
+      "source": "POLY_INT",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "POLY_INT",
+      "target": "TORUS",
+      "relation": "connected_to"
+    },
+    {
+      "source": "POLY_INT",
+      "target": "QUARTZ",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "MANDALA",
+      "target": "OCTA_STATE",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANDALA",
+      "target": "NEGENTROPY",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANDALA",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "MANDALA",
+      "target": "FRACTAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "MANDALA",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MANDALA",
+      "target": "ROSETTA_SHAPE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "SILICON_LAT",
+      "relation": "synergy"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "MANDALA",
+      "relation": "synergy"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "GEIS_ENC",
+      "relation": "synergy"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "POLY_INT",
+      "relation": "resonance"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "SPHERE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "ROSETTA_SHAPE",
+      "target": "BIOGRID2",
+      "relation": "synergy"
+    },
+    {
+      "source": "ROSETTA_SHAPE",
+      "target": "POLY_INT",
+      "relation": "synergy"
+    },
+    {
+      "source": "ROSETTA_SHAPE",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "ROSETTA_SHAPE",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "ROSETTA_SHAPE",
+      "target": "HEX",
+      "relation": "connected_to"
+    },
+    {
+      "source": "ROSETTA_SHAPE",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "GEO_CIPHER",
+      "target": "GEIS_ENC",
+      "relation": "synergy"
+    },
+    {
+      "source": "GEO_CIPHER",
+      "target": "ROSETTA_SHAPE",
+      "relation": "synergy"
+    },
+    {
+      "source": "GEO_CIPHER",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "GEO_CIPHER",
+      "target": "POLY_INT",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GEO_CIPHER",
+      "target": "SILICON_LAT",
+      "relation": "connected_to"
+    },
+    {
+      "source": "DECAY",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "DECAY",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "DECAY",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "FOLD",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "FOLD",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "ECHO",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "ECHO",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "EMERGE",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "EMERGE",
+      "target": "FRACTAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "EMERGE",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "CYCLE",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "CYCLE",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CYCLE",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "EMERGE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "DECAY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "AURORA",
+      "target": "PLASMA_FIELD",
+      "relation": "energy_exchange"
+    },
+    {
+      "source": "AURORA",
+      "target": "MAGNETIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "AURORA",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "LIGHTNING",
+      "target": "PLASMA_FIELD",
+      "relation": "energy_exchange"
+    },
+    {
+      "source": "LIGHTNING",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "PLASMA_FIELD",
+      "target": "LIGHTNING",
+      "relation": "energy_exchange"
+    },
+    {
+      "source": "PLASMA_FIELD",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "SOLAR_WIND",
+      "target": "AURORA",
+      "relation": "energy_exchange"
+    },
+    {
+      "source": "SOLAR_WIND",
+      "target": "LIGHTNING",
+      "relation": "synergy"
+    },
+    {
+      "source": "SOLAR_WIND",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "VORTEX_DYN",
+      "target": "PLASMA_FIELD",
+      "relation": "synergy"
+    },
+    {
+      "source": "VORTEX_DYN",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "VORTEX_DYN",
+      "target": "TORUS",
+      "relation": "resonance"
+    },
+    {
+      "source": "VORTEX_DYN",
+      "target": "MANDALA",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "VORTEX_DYN",
+      "target": "SOLAR_WIND",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "VORTEX_DYN",
+      "target": "AURORA",
+      "relation": "connected_to"
+    },
+    {
+      "source": "QUORUM",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "QUORUM",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "QUORUM",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "QUORUM",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "QUORUM",
+      "target": "ROOT_NET",
+      "relation": "connected_to"
+    },
+    {
+      "source": "QUORUM",
+      "target": "EMERGE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "FE",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "FE",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "FE",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "SUN",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SUN",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "SUN",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "VENUS",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "VENUS",
+      "target": "ELECTRIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "VENUS",
+      "target": "SP",
+      "relation": "connected_to"
+    },
+    {
+      "source": "VENUS",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "VENUS",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SLIME",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "SLIME",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "SLIME",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "SLIME",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SLIME",
+      "target": "AN",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SLIME",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CYANO",
+      "target": "LI",
+      "relation": "synergy"
+    },
+    {
+      "source": "CYANO",
+      "target": "SUN",
+      "relation": "synergy"
+    },
+    {
+      "source": "CYANO",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CYANO",
+      "target": "THERMAL",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CYANO",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "CYANO",
+      "target": "QUORUM",
+      "relation": "connected_to"
+    },
+    {
+      "source": "LI",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "LI",
+      "target": "QUARTZ",
+      "relation": "synergy"
+    },
+    {
+      "source": "LI",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "FE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "MY",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "MY",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "LI",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "QUORUM",
+      "relation": "resonance"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "BIOGRID2",
+      "relation": "connected_to"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "ROOT_NET",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "ROOT_NET",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "AN",
+      "relation": "resonance"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "DECAY",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "NEGENTROPY",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "QUARTZ",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "QUARTZ",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "TOUR",
+      "target": "QUARTZ",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "TOUR",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "TOUR",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "OCTA_STATE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "GEIS_ENC",
+      "relation": "synergy"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "DIA",
+      "relation": "resonance"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "POLY_INT",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CRYSTAL_LATTICE",
+      "target": "QUARTZ",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CRYSTAL_LATTICE",
+      "target": "ECHO",
+      "relation": "resonance"
+    },
+    {
+      "source": "OBS",
+      "target": "PLASMA_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "OBS",
+      "target": "LIGHTNING",
+      "relation": "resonance"
+    },
+    {
+      "source": "OBS",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "DIA",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "DIA",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "DIA",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
       "source": "BT",
       "target": "AN",
       "relation": "synergy"
@@ -482,8 +1547,53 @@
     },
     {
       "source": "BT",
-      "target": "CR",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "BT",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BT",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "BT",
+      "target": "JELLY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "OC",
       "relation": "synergy"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "GEO_CIPHER",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "ROSETTA_SHAPE",
+      "relation": "energy_coupling"
     },
     {
       "source": "KA",
@@ -497,8 +1607,53 @@
     },
     {
       "source": "KA",
-      "target": "DOLPHIN",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "KA",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "KA",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "KA",
+      "target": "NEGENTROPY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CROW",
+      "target": "OC",
       "relation": "synergy"
+    },
+    {
+      "source": "CROW",
+      "target": "EL",
+      "relation": "synergy"
+    },
+    {
+      "source": "CROW",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CROW",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CROW",
+      "target": "WOLF",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CROW",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
     },
     {
       "source": "CU",
@@ -512,8 +1667,53 @@
     },
     {
       "source": "CU",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CU",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CU",
       "target": "JELLY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CU",
+      "target": "ROSETTA_SHAPE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "WOLF",
+      "target": "CROW",
       "relation": "synergy"
+    },
+    {
+      "source": "WOLF",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "WOLF",
+      "target": "EMOTION_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "WOLF",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "WOLF",
+      "target": "EL",
+      "relation": "connected_to"
+    },
+    {
+      "source": "WOLF",
+      "target": "BIOGRID2",
+      "relation": "energy_coupling"
     },
     {
       "source": "BX",
@@ -527,8 +1727,38 @@
     },
     {
       "source": "BX",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "BX",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BX",
+      "target": "MAG_BRIDGE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "BX",
       "target": "SP",
+      "relation": "connected_to"
+    },
+    {
+      "source": "WH",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "WH",
+      "target": "OC",
       "relation": "synergy"
+    },
+    {
+      "source": "WH",
+      "target": "ECHO",
+      "relation": "resonance"
     },
     {
       "source": "TU",
@@ -542,8 +1772,23 @@
     },
     {
       "source": "TU",
-      "target": "QUORUM",
-      "relation": "synergy"
+      "target": "MAGNETIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "TU",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "TU",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TU",
+      "target": "FLUX",
+      "relation": "connected_to"
     },
     {
       "source": "RA",
@@ -557,8 +1802,23 @@
     },
     {
       "source": "RA",
-      "target": "CROW",
-      "relation": "synergy"
+      "target": "HEX",
+      "relation": "resonance"
+    },
+    {
+      "source": "RA",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "RA",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "RA",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
     },
     {
       "source": "CR",
@@ -572,8 +1832,38 @@
     },
     {
       "source": "CR",
-      "target": "BX",
+      "target": "THERMAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "CR",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CR",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CR",
+      "target": "DOLPHIN",
+      "relation": "connected_to"
+    },
+    {
+      "source": "OC",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "OC",
+      "target": "BE",
       "relation": "synergy"
+    },
+    {
+      "source": "OC",
+      "target": "PLASMA_FIELD",
+      "relation": "energy_mode"
     },
     {
       "source": "PE",
@@ -587,18 +1877,113 @@
     },
     {
       "source": "PE",
+      "target": "THERMAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "PE",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "PE",
+      "target": "TARDI",
+      "relation": "connected_to"
+    },
+    {
+      "source": "PE",
+      "target": "NEGENTROPY",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "JELLY",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "JELLY",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "JELLY",
+      "target": "PLASMA_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "JELLY",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "JELLY",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "JELLY",
+      "target": "SLIME",
+      "relation": "connected_to"
+    },
+    {
+      "source": "EL",
       "target": "WH",
       "relation": "synergy"
     },
     {
-      "source": "SN",
-      "target": "BX",
+      "source": "EL",
+      "target": "ECHO",
+      "relation": "resonance"
+    },
+    {
+      "source": "EL",
+      "target": "MAGNETIC_FIELD",
+      "relation": "energy_mode"
+    },
+    {
+      "source": "MONARCH",
+      "target": "BE",
       "relation": "synergy"
     },
     {
-      "source": "SN",
-      "target": "HAW",
+      "source": "MONARCH",
+      "target": "SUN",
       "relation": "synergy"
+    },
+    {
+      "source": "MONARCH",
+      "target": "MAGNETIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "MONARCH",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MONARCH",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "MONARCH",
+      "target": "WH",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SP",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SP",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SP",
+      "target": "FRACTAL",
+      "relation": "resonance"
     },
     {
       "source": "SN",
@@ -606,6 +1991,61 @@
       "relation": "synergy"
     },
     {
+      "source": "SN",
+      "target": "THERMAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "SN",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "SN",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SN",
+      "target": "BX",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SN",
+      "target": "LIGHT_BR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "CROW",
+      "relation": "synergy"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "EMOTION_BR",
+      "relation": "connected_to"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "MAGNETIC_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
       "source": "OW",
       "target": "HAW",
       "relation": "synergy"
@@ -617,8 +2057,23 @@
     },
     {
       "source": "OW",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "OW",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "OW",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "OW",
       "target": "WOLF",
-      "relation": "synergy"
+      "relation": "connected_to"
     },
     {
       "source": "HAW",
@@ -632,23 +2087,113 @@
     },
     {
       "source": "HAW",
-      "target": "SP",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "HAW",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "HAW",
+      "target": "CHAMELEON",
+      "relation": "connected_to"
+    },
+    {
+      "source": "HAW",
+      "target": "GRAV",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "TARDI",
+      "target": "QUORUM",
       "relation": "synergy"
+    },
+    {
+      "source": "TARDI",
+      "target": "NEGENTROPY",
+      "relation": "resonance"
+    },
+    {
+      "source": "TARDI",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
+      "source": "TARDI",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "TARDI",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TARDI",
+      "target": "LI",
+      "relation": "connected_to"
+    },
+    {
+      "source": "AN",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "AN",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "AN",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BE",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BE",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "BE",
+      "target": "SPIRAL",
+      "relation": "resonance"
     },
     {
       "source": "GE",
       "target": "SP",
-      "relation": "synergy"
-    },
-    {
-      "source": "GE",
-      "target": "KA",
       "relation": "synergy"
     },
     {
       "source": "GE",
       "target": "CHAMELEON",
       "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "GE",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GE",
+      "target": "KA",
+      "relation": "connected_to"
+    },
+    {
+      "source": "GE",
+      "target": "ELECTRIC_FIELD",
+      "relation": "energy_coupling"
     }
   ]
 }

@@ -1,29 +1,52 @@
 {
   "id": "SILICON_LAT",
   "name": "Silicon Lattice",
-  "emoji": "💎",
+  "emoji": "\ud83d\udd2c",
   "ontology": "crystal",
-  "symbolic_code": "[SI_5D_TETRA_φ_ENCODE]",
-  "description": "Crystalline computation substrate using silicon's natural sp3 tetrahedral geometry at 109.47° — the universal convergence point where multiple physical constraints meet optimal solutions. Supports 5D encoding via femtosecond laser inscription: X, Y, Z, birefringence orientation, and void size. Theoretical density of 10^15 bits/cm³ with φ-spaced shell radii r_n = r₀·φⁿ.",
+  "symbolic_code": "[SI_5D_TETRA_\u03c6_ENCODE]",
+  "description": "Crystalline computation substrate using silicon's natural sp3 tetrahedral geometry at 109.47\u00b0 \u2014 the universal convergence point where multiple physical constraints meet optimal solutions. Supports 5D encoding via femtosecond laser inscription: X, Y, Z, birefringence orientation, and void size. Theoretical density of 10^15 bits/cm\u00b3 with \u03c6-spaced shell radii r_n = r\u2080\u00b7\u03c6\u207f.",
   "core_attributes": {
-    "pattern": "tetrahedral sp3 hybridization, 5D femtosecond inscription, φ-shell spacing",
+    "pattern": "tetrahedral sp3 hybridization, 5D femtosecond inscription, \u03c6-shell spacing",
     "structure": "diamond cubic",
     "lattice_type": "tetrahedral sp3",
     "resonance_properties": {
       "tetrahedral_angle": 109.47,
-      "shell_spacing": "φ^n",
+      "shell_spacing": "\u03c6^n",
       "coherence_decay": "super-exponential",
       "bits_per_unit": 3
     },
-    "applications": ["5D data storage", "octahedral state computation", "crystalline neural networks", "geometric error correction"]
+    "applications": [
+      "5D data storage",
+      "octahedral state computation",
+      "crystalline neural networks",
+      "geometric error correction"
+    ]
   },
   "links": [
-    { "relation": "synergy", "target": "OCTA_STATE" },
-    { "relation": "synergy", "target": "GEIS_ENC" },
-    { "relation": "resonance", "target": "QUARTZ" },
-    { "relation": "resonance", "target": "DIA" },
-    { "relation": "energy_coupling", "target": "CRYSTAL_LATTICE" },
-    { "relation": "connected_to", "target": "POLY_INT" }
+    {
+      "relation": "synergy",
+      "target": "OCTA_STATE"
+    },
+    {
+      "relation": "synergy",
+      "target": "GEIS_ENC"
+    },
+    {
+      "relation": "resonance",
+      "target": "QUARTZ"
+    },
+    {
+      "relation": "resonance",
+      "target": "DIA"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "CRYSTAL_LATTICE"
+    },
+    {
+      "relation": "connected_to",
+      "target": "POLY_INT"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

@@ -1,9 +1,9 @@
 {
   "id": "OC",
   "name": "Octopus",
-  "emoji": "🐙",
+  "emoji": "\ud83d\udc19",
   "ontology": "animal",
-  "symbolic_code": "[OC_TORUS_φ_PHASE]",
+  "symbolic_code": "[OC_TORUS_\u03c6_PHASE]",
   "description": "A decentralized intelligence with distributed cognition and regenerative morphology. Operates through morphic adaptation, parallel processing, and fluid embodiment.",
   "core_attributes": {
     "neurology": "distributed",
@@ -11,9 +11,53 @@
     "efficiency_factor": 0.94
   },
   "links": [
-    {"relation": "geometry_link", "target": "TORUS"},
-    {"relation": "synergy", "target": "BE"},
-    {"relation": "energy_mode", "target": "PLASMA_FIELD"}
+    {
+      "relation": "geometry_link",
+      "target": "TORUS"
+    },
+    {
+      "relation": "synergy",
+      "target": "BE"
+    },
+    {
+      "relation": "energy_mode",
+      "target": "PLASMA_FIELD"
+    }
   ],
-  "validation_meta": {"schema": "animal_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "animal_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "patterns": [
+    {
+      "name": "distributed_neural_processing",
+      "type": "parallel_computing",
+      "efficiency_factor": 0.94,
+      "geometry": "parallel_architecture",
+      "applications": [
+        "distributed_computing",
+        "autonomous_control"
+      ]
+    },
+    {
+      "name": "chromatophore_camouflage",
+      "type": "adaptive_systems",
+      "efficiency_factor": 0.96,
+      "geometry": "pattern_matching",
+      "applications": [
+        "adaptive_camouflage",
+        "rapid_response"
+      ]
+    },
+    {
+      "name": "arm_regeneration",
+      "type": "regenerative",
+      "efficiency_factor": 0.91,
+      "geometry": "growth_dynamics",
+      "applications": [
+        "regenerative_medicine",
+        "self_repair"
+      ]
+    }
+  ]
 }

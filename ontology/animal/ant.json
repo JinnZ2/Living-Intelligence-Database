@@ -1,7 +1,7 @@
 {
   "id": "AN",
   "name": "Ant",
-  "emoji": "🐜",
+  "emoji": "\ud83d\udc1c",
   "ontology": "animal",
   "symbolic_code": "[AN_SWARM_PHEROMONE_PATH]",
   "description": "Emergent collective intelligence using pheromone gradient optimization, stigmergic construction, and distributed task allocation without centralized control.",
@@ -11,9 +11,54 @@
     "efficiency_factor": 0.96
   },
   "links": [
-    {"relation": "synergy", "target": "BE"},
-    {"relation": "synergy", "target": "MY"},
-    {"relation": "geometry_link", "target": "FRACTAL"}
+    {
+      "relation": "synergy",
+      "target": "BE"
+    },
+    {
+      "relation": "synergy",
+      "target": "MY"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "FRACTAL"
+    }
   ],
-  "validation_meta": {"schema": "animal_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "animal_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "patterns": [
+    {
+      "name": "pheromone_trail_optimization",
+      "type": "chemical_communication",
+      "efficiency_factor": 0.96,
+      "geometry": "gradient_diffusion",
+      "applications": [
+        "pathfinding",
+        "logistics",
+        "supply_chain"
+      ]
+    },
+    {
+      "name": "stigmergic_construction",
+      "type": "distributed_building",
+      "efficiency_factor": 0.93,
+      "geometry": "emergent_architecture",
+      "applications": [
+        "swarm_construction",
+        "self_organizing_systems"
+      ]
+    },
+    {
+      "name": "distributed_task_allocation",
+      "type": "resource_optimization",
+      "efficiency_factor": 0.94,
+      "geometry": "network_flow",
+      "applications": [
+        "task_scheduling",
+        "workforce_optimization"
+      ]
+    }
+  ]
 }

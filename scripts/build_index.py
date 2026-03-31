@@ -53,20 +53,13 @@ def build_index():
                 "ontology": data["ontology"],
                 "path": str(file.relative_to(ROOT))
             })
-            # Collect symbolic and relational data
-            if "synergies" in data:
-                for target in data["synergies"]:
+            # Collect relational data from links array
+            for link in data.get("links", []):
+                if "target" in link:
                     index["relations"].append({
                         "source": data["id"],
-                        "target": target,
-                        "relation": "synergy"
-                    })
-            if "relations" in data:
-                for target in data["relations"]:
-                    index["relations"].append({
-                        "source": data["id"],
-                        "target": target,
-                        "relation": "link"
+                        "target": link["target"],
+                        "relation": link.get("relation", "connected_to")
                     })
     with open(OUTPUT_FILE, "w") as f:
         json.dump(index, f, indent=2)
