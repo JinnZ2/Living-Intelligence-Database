@@ -278,3 +278,88 @@ hypothesis = Hypothesis([sunflower, bee, crystal])
 outcome = hypothesis.run_experiment()
 print(f"Pattern outcome (energy propagation): {outcome:.3f}")
 
+
+import itertools
+import math
+
+# Base Element
+class Element:
+    def __init__(self, name, type_, energy_profile, interaction_rules):
+        self.name = name
+        self.type_ = type_          # animal, plant, crystal, geometry, force
+        self.energy_profile = energy_profile  # scalar or function
+        self.interaction_rules = interaction_rules
+
+    def interact(self, other, environment):
+        # Rule can also use environment (wind, gravity, temp, etc.)
+        rule = self.interaction_rules.get(other.type_, lambda e, env: 0)
+        return rule(other.energy_profile, environment)
+
+# Environment with dynamic forces
+class Environment:
+    def __init__(self, gravity=9.81, wind=0.0, temperature=25.0):
+        self.gravity = gravity
+        self.wind = wind
+        self.temperature = temperature
+
+    def update(self, delta_t):
+        # Could evolve over time (day/night, weather, etc.)
+        self.wind = math.sin(delta_t/10) * 2.0  # example: oscillating wind
+        self.temperature = 25 + 5*math.sin(delta_t/20)
+
+# Experiment over time
+class Experiment:
+    def __init__(self, elements, environment):
+        self.elements = elements
+        self.environment = environment
+
+    def run(self, steps=10):
+        history = []
+        for t in range(steps):
+            self.environment.update(t)
+            total_effect = 0
+            for a, b in itertools.combinations(self.elements, 2):
+                total_effect += a.interact(b, self.environment)
+                total_effect += b.interact(a, self.environment)
+            history.append((t, total_effect))
+            # Feedback: modify energy_profile based on result
+            for el in self.elements:
+                el.energy_profile *= 1 + 0.01 * math.tanh(total_effect)
+        return history
+
+# Example elements
+sunflower = Element(
+    "Sunflower", "plant",
+    energy_profile=1.0,
+    interaction_rules={
+        "animal": lambda e, env: 0.5*e*(1 + env.wind/10),
+        "plant": lambda e, env: 0.2*e
+    }
+)
+
+bee = Element(
+    "Bee", "animal",
+    energy_profile=0.8,
+    interaction_rules={
+        "plant": lambda e, env: 0.3*e*(1 + env.temperature/50),
+        "animal": lambda e, env: -0.1*e
+    }
+)
+
+crystal = Element(
+    "Quartz", "crystal",
+    energy_profile=1.2,
+    interaction_rules={
+        "plant": lambda e, env: 0.1*e,
+        "animal": lambda e, env: 0.2*e
+    }
+)
+
+env = Environment()
+
+# Run the experiment
+experiment = Experiment([sunflower, bee, crystal], env)
+history = experiment.run(steps=20)
+
+for t, outcome in history:
+    print(f"Step {t}: Pattern effect = {outcome:.3f}, Wind={env.wind:.2f}, Temp={env.temperature:.1f}")
