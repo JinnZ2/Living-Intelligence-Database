@@ -1,7 +1,7 @@
 {
   "id": "MY",
   "name": "Mycelium",
-  "emoji": "🍄",
+  "emoji": "\ud83c\udf44",
   "ontology": "plant",
   "symbolic_code": "[MY_NETWORK_SYMBIOSIS]",
   "description": "Fungal network intelligence embodying distributed regulation, decomposition, and nutrient redistribution across multi-species systems.",
@@ -10,8 +10,23 @@
     "efficiency_type": "distributed_regulation"
   },
   "links": [
-    {"relation": "synergy", "target": "ROOT_NET"},
-    {"relation": "resonance", "target": "FLUX"}
+    {
+      "relation": "synergy",
+      "target": "ROOT_NET"
+    },
+    {
+      "relation": "resonance",
+      "target": "FLUX"
+    }
   ],
-  "validation_meta": {"schema": "plant_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "plant_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "root_networks": true,
+  "symbioses": [
+    "tree_mutualism",
+    "nutrient_redistribution",
+    "interspecies_signaling"
+  ]
 }

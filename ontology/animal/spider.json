@@ -1,7 +1,7 @@
 {
   "id": "SP",
   "name": "Spider",
-  "emoji": "🕷️",
+  "emoji": "\ud83d\udd77\ufe0f",
   "ontology": "animal",
   "symbolic_code": "[SP_WEB_TENSION_NET]",
   "description": "Geometric engineering intelligence constructing optimized capture networks through tensile silk architecture and vibrational signal processing.",
@@ -11,9 +11,53 @@
     "efficiency_factor": 0.93
   },
   "links": [
-    {"relation": "geometry_link", "target": "SPIRAL"},
-    {"relation": "synergy", "target": "BE"},
-    {"relation": "resonance", "target": "FRACTAL"}
+    {
+      "relation": "geometry_link",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "synergy",
+      "target": "BE"
+    },
+    {
+      "relation": "resonance",
+      "target": "FRACTAL"
+    }
   ],
-  "validation_meta": {"schema": "animal_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "animal_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "patterns": [
+    {
+      "name": "web_architecture",
+      "type": "structural_optimization",
+      "efficiency_factor": 0.93,
+      "geometry": "radial_network",
+      "applications": [
+        "network_design",
+        "structural_engineering"
+      ]
+    },
+    {
+      "name": "vibration_analysis",
+      "type": "signal_processing",
+      "efficiency_factor": 0.89,
+      "geometry": "wave_mechanics",
+      "applications": [
+        "vibration_sensing",
+        "motion_detection"
+      ]
+    },
+    {
+      "name": "silk_tensile_engineering",
+      "type": "material_science",
+      "efficiency_factor": 0.95,
+      "geometry": "fiber_mechanics",
+      "applications": [
+        "material_design",
+        "tensile_structures"
+      ]
+    }
+  ]
 }

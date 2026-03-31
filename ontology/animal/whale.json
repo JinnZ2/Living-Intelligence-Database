@@ -1,9 +1,9 @@
 {
   "id": "WH",
   "name": "Whale",
-  "emoji": "🐋",
+  "emoji": "\ud83d\udc0b",
   "ontology": "animal",
-  "symbolic_code": "[WH_ACOUSTIC_φ_DEPTH]",
+  "symbolic_code": "[WH_ACOUSTIC_\u03c6_DEPTH]",
   "description": "Long-range acoustic intelligence navigating ocean basins through song, magnetic sensing, and multi-generational cultural memory.",
   "core_attributes": {
     "neurology": "centralized with acoustic specialization",
@@ -11,9 +11,53 @@
     "efficiency_factor": 0.91
   },
   "links": [
-    {"relation": "geometry_link", "target": "SPIRAL"},
-    {"relation": "synergy", "target": "OC"},
-    {"relation": "resonance", "target": "ECHO"}
+    {
+      "relation": "geometry_link",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "synergy",
+      "target": "OC"
+    },
+    {
+      "relation": "resonance",
+      "target": "ECHO"
+    }
   ],
-  "validation_meta": {"schema": "animal_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "animal_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "patterns": [
+    {
+      "name": "long_range_acoustic",
+      "type": "acoustic_communication",
+      "efficiency_factor": 0.93,
+      "geometry": "wave_acoustics",
+      "applications": [
+        "long_range_communication",
+        "ocean_mapping"
+      ]
+    },
+    {
+      "name": "magnetic_navigation",
+      "type": "navigation_precision",
+      "efficiency_factor": 0.91,
+      "geometry": "magnetic_field_geometry",
+      "applications": [
+        "navigation_systems",
+        "migration_routing"
+      ]
+    },
+    {
+      "name": "cultural_song_transmission",
+      "type": "cultural_memory",
+      "efficiency_factor": 0.89,
+      "geometry": "temporal_encoding",
+      "applications": [
+        "knowledge_transfer",
+        "generational_memory"
+      ]
+    }
+  ]
 }

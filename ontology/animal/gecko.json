@@ -1,10 +1,10 @@
 {
   "id": "GE",
   "name": "Gecko",
-  "emoji": "🦎",
+  "emoji": "\ud83e\uddb6",
   "ontology": "animal",
   "symbolic_code": "[GE_VANDERWAALS_GRIP_CLEAN]",
-  "description": "Van der Waals adhesion intelligence — billions of nanoscale setae on each toe pad generate molecular attraction forces strong enough to support full body weight on glass. Self-cleaning mechanism: contaminant particles bind to surfaces more strongly than to setae, ejecting dirt with each step. Directional adhesion: grip activates with shear angle, releases with peel. No glue, no suction — pure geometry at the nanoscale.",
+  "description": "Van der Waals adhesion intelligence \u2014 billions of nanoscale setae on each toe pad generate molecular attraction forces strong enough to support full body weight on glass. Self-cleaning mechanism: contaminant particles bind to surfaces more strongly than to setae, ejecting dirt with each step. Directional adhesion: grip activates with shear angle, releases with peel. No glue, no suction \u2014 pure geometry at the nanoscale.",
   "core_attributes": {
     "neurology": "proprioceptive toe-pad feedback, rapid detachment motor circuits",
     "pattern": "van der Waals nanoscale adhesion, self-cleaning surfaces, directional grip geometry",
@@ -16,32 +16,70 @@
       "type": "nanoscale_adhesion",
       "efficiency_factor": 0.94,
       "geometry": "van_der_waals_forces",
-      "applications": ["adhesive_systems", "climbing_robots", "surface_science"]
+      "applications": [
+        "adhesive_systems",
+        "climbing_robots",
+        "surface_science"
+      ]
     },
     {
       "name": "self_cleaning_locomotion",
       "type": "surface_optimization",
       "efficiency_factor": 0.91,
       "geometry": "contact_mechanics",
-      "applications": ["self_cleaning_materials", "anti_fouling", "surface_design"]
+      "applications": [
+        "self_cleaning_materials",
+        "anti_fouling",
+        "surface_design"
+      ]
     },
     {
       "name": "directional_grip",
       "type": "contact_control",
       "efficiency_factor": 0.92,
       "geometry": "shear_angle_mechanics",
-      "applications": ["robotic_grippers", "adhesion_control", "manufacturing"]
+      "applications": [
+        "robotic_grippers",
+        "adhesion_control",
+        "manufacturing"
+      ]
     }
   ],
-  "primary_optimizations": ["setae_adhesion", "self_cleaning_locomotion", "directional_grip"],
-  "synergies": ["SP", "KA", "CHAMELEON"],
+  "primary_optimizations": [
+    "setae_adhesion",
+    "self_cleaning_locomotion",
+    "directional_grip"
+  ],
+  "synergies": [
+    "SP",
+    "KA",
+    "CHAMELEON"
+  ],
   "links": [
-    { "relation": "synergy", "target": "SP" },
-    { "relation": "synergy", "target": "CHAMELEON" },
-    { "relation": "resonance", "target": "CRYSTAL_LATTICE" },
-    { "relation": "geometry_link", "target": "FRACTAL" },
-    { "relation": "connected_to", "target": "KA" },
-    { "relation": "energy_coupling", "target": "ELECTRIC_FIELD" }
+    {
+      "relation": "synergy",
+      "target": "SP"
+    },
+    {
+      "relation": "synergy",
+      "target": "CHAMELEON"
+    },
+    {
+      "relation": "resonance",
+      "target": "CRYSTAL_LATTICE"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "FRACTAL"
+    },
+    {
+      "relation": "connected_to",
+      "target": "KA"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "ELECTRIC_FIELD"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

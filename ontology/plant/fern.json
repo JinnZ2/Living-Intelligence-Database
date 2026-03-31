@@ -1,7 +1,7 @@
 {
   "id": "FE",
   "name": "Fern",
-  "emoji": "🌿",
+  "emoji": "\ud83c\udf3f",
   "ontology": "plant",
   "symbolic_code": "[FE_FRACTAL_UNFURL_SPORE]",
   "description": "Ancient fractal intelligence exhibiting recursive frond geometry, spore-based reproduction, and shade-adapted photosynthetic efficiency.",
@@ -10,9 +10,27 @@
     "efficiency_type": "shade_optimization"
   },
   "links": [
-    {"relation": "geometry_link", "target": "FRACTAL"},
-    {"relation": "synergy", "target": "ROOT_NET"},
-    {"relation": "resonance", "target": "SPIRAL"}
+    {
+      "relation": "geometry_link",
+      "target": "FRACTAL"
+    },
+    {
+      "relation": "synergy",
+      "target": "ROOT_NET"
+    },
+    {
+      "relation": "resonance",
+      "target": "SPIRAL"
+    }
   ],
-  "validation_meta": {"schema": "plant_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "plant_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "root_networks": true,
+  "symbioses": [
+    "mycorrhizal_association",
+    "shade_canopy_cooperation",
+    "spore_wind_dispersal"
+  ]
 }
