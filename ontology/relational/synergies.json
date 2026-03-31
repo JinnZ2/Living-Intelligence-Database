@@ -76,7 +76,8 @@
     { "id": "CU", "label": "Cuttlefish" },
     { "id": "RA", "label": "Rat" },
     { "id": "BT", "label": "Beetle" },
-    { "id": "CR", "label": "Cricket" }
+    { "id": "CR", "label": "Cricket" },
+    { "id": "TEMPORAL", "label": "Temporal Intelligence" }
   ],
   "edges": [
     { "source": "BE", "target": "OC", "relation": "synergy" },
@@ -294,6 +295,9 @@
     { "source": "CR", "target": "BE", "relation": "synergy" },
     { "source": "CR", "target": "THERMAL", "relation": "resonance" },
     { "source": "CR", "target": "RES_SENSOR", "relation": "resonance" },
-    { "source": "CR", "target": "SPIRAL", "relation": "geometry_link" }
+    { "source": "CR", "target": "SPIRAL", "relation": "geometry_link" },
+    { "source": "TEMPORAL", "target": "ECHO", "relation": "temporal_bridge" },
+    { "source": "TEMPORAL", "target": "FOLD", "relation": "temporal_bridge" },
+    { "source": "TEMPORAL", "target": "CYCLE", "relation": "temporal_bridge" }
   ]
 }
