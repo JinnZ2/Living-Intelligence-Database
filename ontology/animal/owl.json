@@ -1,10 +1,10 @@
 {
   "id": "OW",
   "name": "Owl",
-  "emoji": "🦉",
+  "emoji": "\ud83e\udd89",
   "ontology": "animal",
   "symbolic_code": "[OW_STEALTH_ASYM_SILENT]",
-  "description": "Stealth hunting intelligence — asymmetric ear placement creates 3D acoustic triangulation accurate to 1° in azimuth and elevation. Serrated leading-edge feathers break turbulence into micro-vortices, achieving near-silent flight below prey hearing threshold. Tubular eyes with 100x human light sensitivity and 270° head rotation compensate for fixed eye sockets. The geometry of silence and precision.",
+  "description": "Asymmetric ear placement creates 3D acoustic triangulation accurate to 1 degree. Serrated leading-edge feathers achieve near-silent flight. Tubular eyes with 100x human light sensitivity. 270-degree head rotation compensates for fixed eye sockets.",
   "core_attributes": {
     "neurology": "asymmetric auditory cortex, enhanced rod-cell retina, cervical rotation system",
     "pattern": "asymmetric acoustic triangulation, silent flight aerodynamics, extreme low-light vision",
@@ -16,32 +16,70 @@
       "type": "acoustic_precision",
       "efficiency_factor": 0.96,
       "geometry": "3d_triangulation",
-      "applications": ["sound_localization", "3d_audio", "tracking"]
+      "applications": [
+        "sound_localization",
+        "3d_audio",
+        "tracking"
+      ]
     },
     {
       "name": "silent_flight",
       "type": "stealth_aerodynamics",
       "efficiency_factor": 0.94,
       "geometry": "turbulence_breaking",
-      "applications": ["noise_reduction", "stealth_systems", "aerodynamics"]
+      "applications": [
+        "noise_reduction",
+        "stealth_systems",
+        "aerodynamics"
+      ]
     },
     {
       "name": "extreme_low_light_vision",
       "type": "photon_sensitivity",
       "efficiency_factor": 0.93,
       "geometry": "optical_enhancement",
-      "applications": ["low_light_systems", "sensitivity_enhancement", "detection"]
+      "applications": [
+        "low_light_systems",
+        "sensitivity_enhancement",
+        "detection"
+      ]
     }
   ],
-  "primary_optimizations": ["asymmetric_sound_triangulation", "silent_flight", "extreme_low_light_vision"],
-  "synergies": ["HAW", "BX", "WOLF"],
+  "primary_optimizations": [
+    "asymmetric_sound_triangulation",
+    "silent_flight",
+    "extreme_low_light_vision"
+  ],
+  "synergies": [
+    "HAW",
+    "BX",
+    "WOLF"
+  ],
   "links": [
-    { "relation": "synergy", "target": "HAW" },
-    { "relation": "synergy", "target": "BX" },
-    { "relation": "resonance", "target": "RES_SENSOR" },
-    { "relation": "geometry_link", "target": "SPHERE" },
-    { "relation": "temporal_bridge", "target": "FOLD" },
-    { "relation": "connected_to", "target": "WOLF" }
+    {
+      "relation": "synergy",
+      "target": "HAW"
+    },
+    {
+      "relation": "synergy",
+      "target": "BX"
+    },
+    {
+      "relation": "resonance",
+      "target": "RES_SENSOR"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "SPHERE"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "FOLD"
+    },
+    {
+      "relation": "connected_to",
+      "target": "WOLF"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

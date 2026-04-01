@@ -1,10 +1,10 @@
 {
   "id": "BX",
   "name": "Bat",
-  "emoji": "🦇",
+  "emoji": "\ud83e\udd87",
   "ontology": "animal",
   "symbolic_code": "[BX_ECHO_3D_DOPPLER]",
-  "description": "3D echo mapping intelligence — emits ultrasonic pulses up to 140 dB and constructs complete spatial models from return echoes in milliseconds. Doppler shift compensation adjusts for own flight velocity. Frequency-modulated sweeps resolve object texture, distance, and movement simultaneously. Jamming avoidance shifts frequency when other bats' signals overlap. The most sophisticated biosonar system on Earth, operating in complete darkness.",
+  "description": "Emits ultrasonic pulses up to 140 dB, constructs spatial models from return echoes in milliseconds. Doppler shift compensation adjusts for flight velocity. Frequency-modulated sweeps resolve texture, distance, and movement. Jamming avoidance shifts frequency.",
   "core_attributes": {
     "neurology": "auditory cortex expanded 10x, Doppler-compensating neurons",
     "pattern": "ultrasonic 3D mapping, Doppler compensation, frequency-modulated sweeps, jamming avoidance",
@@ -16,32 +16,70 @@
       "type": "acoustic_mapping",
       "efficiency_factor": 0.96,
       "geometry": "wave_acoustics",
-      "applications": ["sonar", "3d_mapping", "obstacle_avoidance"]
+      "applications": [
+        "sonar",
+        "3d_mapping",
+        "obstacle_avoidance"
+      ]
     },
     {
       "name": "doppler_compensation",
       "type": "signal_processing",
       "efficiency_factor": 0.94,
       "geometry": "wave_mechanics",
-      "applications": ["velocity_detection", "tracking", "radar_systems"]
+      "applications": [
+        "velocity_detection",
+        "tracking",
+        "radar_systems"
+      ]
     },
     {
       "name": "jamming_avoidance",
       "type": "frequency_management",
       "efficiency_factor": 0.91,
       "geometry": "spectral_analysis",
-      "applications": ["signal_processing", "interference_mitigation", "communication"]
+      "applications": [
+        "signal_processing",
+        "interference_mitigation",
+        "communication"
+      ]
     }
   ],
-  "primary_optimizations": ["echolocation_mapping", "doppler_compensation", "jamming_avoidance"],
-  "synergies": ["DOLPHIN", "OW", "SP"],
+  "primary_optimizations": [
+    "echolocation_mapping",
+    "doppler_compensation",
+    "jamming_avoidance"
+  ],
+  "synergies": [
+    "DOLPHIN",
+    "OW",
+    "SP"
+  ],
   "links": [
-    { "relation": "synergy", "target": "DOLPHIN" },
-    { "relation": "synergy", "target": "OW" },
-    { "relation": "resonance", "target": "RES_SENSOR" },
-    { "relation": "geometry_link", "target": "SPHERE" },
-    { "relation": "energy_coupling", "target": "MAG_BRIDGE" },
-    { "relation": "connected_to", "target": "SP" }
+    {
+      "relation": "synergy",
+      "target": "DOLPHIN"
+    },
+    {
+      "relation": "synergy",
+      "target": "OW"
+    },
+    {
+      "relation": "resonance",
+      "target": "RES_SENSOR"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "SPHERE"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "MAG_BRIDGE"
+    },
+    {
+      "relation": "connected_to",
+      "target": "SP"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

@@ -1,24 +1,47 @@
 {
   "id": "GEO_CIPHER",
   "name": "Geometric Cipher",
-  "emoji": "🔐",
+  "emoji": "\ud83d\udd10",
   "ontology": "shape",
   "symbolic_code": "[GEO_CIPHER_HOMO_ZK]",
-  "description": "Homomorphic geometry enabling computation on encrypted data while preserving relational structure. Geometric operations maintain algebraic properties through encryption, enabling zero-knowledge proofs of spatial relationships. Dynamic key rotation through geometric seed patterns with φ^(-9) error correction provides multi-scale resonance protection against architectural trojans.",
+  "description": "Homomorphic geometry enables computation on encrypted data while preserving relational structure. Zero-knowledge proofs of spatial relationships. Dynamic key rotation through geometric seed patterns with phi^(-9) error correction.",
   "core_attributes": {
     "pattern": "homomorphic encryption, zero-knowledge geometry, dynamic key rotation",
     "geometry_type": "encrypted manifold",
     "geometry_class": "cryptographic",
     "dimension": 4,
-    "harmonic_ratios": [1.618, 0.00028],
-    "applications": ["homomorphic computation", "zero-knowledge geometric proofs", "trojan detection", "geometric seed key rotation"]
+    "harmonic_ratios": [
+      1.618,
+      0.00028
+    ],
+    "applications": [
+      "homomorphic computation",
+      "zero-knowledge geometric proofs",
+      "trojan detection",
+      "geometric seed key rotation"
+    ]
   },
   "links": [
-    { "relation": "synergy", "target": "GEIS_ENC" },
-    { "relation": "synergy", "target": "ROSETTA_SHAPE" },
-    { "relation": "resonance", "target": "CRYSTAL_LATTICE" },
-    { "relation": "geometry_link", "target": "POLY_INT" },
-    { "relation": "connected_to", "target": "SILICON_LAT" }
+    {
+      "relation": "synergy",
+      "target": "GEIS_ENC"
+    },
+    {
+      "relation": "synergy",
+      "target": "ROSETTA_SHAPE"
+    },
+    {
+      "relation": "resonance",
+      "target": "CRYSTAL_LATTICE"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "POLY_INT"
+    },
+    {
+      "relation": "connected_to",
+      "target": "SILICON_LAT"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

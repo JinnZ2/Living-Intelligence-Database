@@ -1,10 +1,10 @@
 {
   "id": "KA",
   "name": "Kangaroo",
-  "emoji": "🦘",
+  "emoji": "\ud83e\udd98",
   "ontology": "animal",
-  "symbolic_code": "[KA_SPRING_φ_PENDULUM]",
-  "description": "Elastic energy intelligence — Achilles tendon stores and releases kinetic energy with 93% efficiency, making hopping more efficient than running at speed. Pendulum-like leg motion exploits natural resonance frequency for minimal-energy locomotion. Tail functions as dynamic fifth limb and counterweight. Speed-energy optimization curve means faster travel costs less energy per unit distance — the only animal where this inverts.",
+  "symbolic_code": "[KA_SPRING_\u03c6_PENDULUM]",
+  "description": "Achilles tendon stores and releases kinetic energy at 93% efficiency. Pendulum gait exploits natural resonance for minimal-energy locomotion. Tail functions as dynamic counterweight. Speed-energy curve inverts: faster travel costs less per distance.",
   "core_attributes": {
     "neurology": "spring-loaded locomotion cortex, vestibular balance system",
     "pattern": "elastic energy storage, pendulum gait resonance, ballistic trajectory optimization",
@@ -16,39 +16,81 @@
       "type": "energy_storage",
       "efficiency_factor": 0.93,
       "geometry": "spring_mechanics",
-      "applications": ["energy_storage", "mechanical_systems", "locomotion"]
+      "applications": [
+        "energy_storage",
+        "mechanical_systems",
+        "locomotion"
+      ]
     },
     {
       "name": "ballistic_locomotion",
       "type": "trajectory_optimization",
       "efficiency_factor": 0.89,
       "geometry": "parabolic_motion",
-      "applications": ["trajectory_planning", "ballistics", "energy_efficiency"]
+      "applications": [
+        "trajectory_planning",
+        "ballistics",
+        "energy_efficiency"
+      ]
     },
     {
       "name": "pendulum_gait",
       "type": "mechanical_efficiency",
       "efficiency_factor": 0.91,
       "geometry": "pendulum_dynamics",
-      "applications": ["mechanical_design", "robotics", "energy_systems"]
+      "applications": [
+        "mechanical_design",
+        "robotics",
+        "energy_systems"
+      ]
     },
     {
       "name": "dynamic_counterbalance",
       "type": "balance_control",
       "efficiency_factor": 0.92,
       "geometry": "moment_dynamics",
-      "applications": ["balance_systems", "stabilization", "control"]
+      "applications": [
+        "balance_systems",
+        "stabilization",
+        "control"
+      ]
     }
   ],
-  "primary_optimizations": ["elastic_energy_storage", "ballistic_locomotion", "pendulum_gait"],
-  "synergies": ["BE", "GE", "DOLPHIN"],
+  "primary_optimizations": [
+    "elastic_energy_storage",
+    "ballistic_locomotion",
+    "pendulum_gait"
+  ],
+  "synergies": [
+    "BE",
+    "GE",
+    "DOLPHIN"
+  ],
   "links": [
-    { "relation": "synergy", "target": "BE" },
-    { "relation": "synergy", "target": "GE" },
-    { "relation": "resonance", "target": "SPIRAL" },
-    { "relation": "geometry_link", "target": "TORUS" },
-    { "relation": "energy_coupling", "target": "FLUX" },
-    { "relation": "connected_to", "target": "NEGENTROPY" }
+    {
+      "relation": "synergy",
+      "target": "BE"
+    },
+    {
+      "relation": "synergy",
+      "target": "GE"
+    },
+    {
+      "relation": "resonance",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "TORUS"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "FLUX"
+    },
+    {
+      "relation": "connected_to",
+      "target": "NEGENTROPY"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

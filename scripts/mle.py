@@ -368,6 +368,126 @@ def score_ontology_combo(entity_ids):
     return score, profiles
 
 
+# ── V2: Advanced Field Analysis ───────────────────────────────────────────
+#
+# Non-Gaussian tools for systems where the bell curve is the wrong model.
+
+def mle_powerlaw(sequence):
+    """
+    MLE for power-law scaling exponent alpha: P(x) ~ x^(-alpha).
+    Low alpha = heavy tail = frequent high-energy outliers that
+    a Gaussian would erase as "noise."
+    """
+    x = np.asarray(sequence, dtype=float)
+    x = x[x > 0]
+    x_min = np.min(x)
+    n = len(x)
+    alpha_hat = 1 + n / np.sum(np.log(x / x_min))
+    return round(alpha_hat, 4), round(x_min, 4)
+
+
+def estimate_hurst(sequence):
+    """
+    Rescaled Range (R/S) analysis for long-term memory.
+    H < 0.5: anti-persistent (pulled to mean).
+    H = 0.5: random walk (no memory — Markov assumption).
+    H > 0.5: persistent (momentum carries — Markov fails).
+    """
+    x = np.asarray(sequence, dtype=float)
+    if len(x) < 4:
+        return 0.5
+    y = np.cumsum(x - np.mean(x))
+    r = np.max(y) - np.min(y)
+    s = np.std(x, ddof=1)
+    if s == 0:
+        return 0.5
+    return round(np.log(r / s) / np.log(len(x)), 4)
+
+
+def detect_change_points(sequence, penalty=3.0):
+    """
+    Detect regime shifts via CUSUM (no external dependencies).
+    These are the entropy events — phase boundaries where
+    linear prediction breaks.
+    """
+    x = np.asarray(sequence, dtype=float)
+    n = len(x)
+    if n < 4:
+        return []
+    cusum = np.cumsum(x - np.mean(x))
+    threshold = penalty * np.std(x)
+    above = np.abs(cusum) > threshold
+    return [i for i in range(1, n) if above[i] and not above[i - 1]]
+
+
+def solve_mixture(sequence, n_components=2):
+    """
+    Gaussian mixture via EM algorithm (no sklearn dependency).
+    Finds the resonance peaks that a single Gaussian averages away.
+    """
+    x = np.asarray(sequence, dtype=float)
+    n = len(x)
+    means = np.linspace(np.min(x), np.max(x), n_components)
+    stds = np.full(n_components, np.std(x))
+    weights = np.full(n_components, 1.0 / n_components)
+
+    for _ in range(100):
+        resp = np.zeros((n, n_components))
+        for k in range(n_components):
+            resp[:, k] = weights[k] * np.exp(-0.5 * ((x - means[k]) / stds[k]) ** 2) / (stds[k] + 1e-9)
+        resp_sum = resp.sum(axis=1, keepdims=True)
+        resp_sum[resp_sum == 0] = 1e-9
+        resp /= resp_sum
+        for k in range(n_components):
+            nk = resp[:, k].sum()
+            if nk < 1e-9:
+                continue
+            weights[k] = nk / n
+            means[k] = (resp[:, k] * x).sum() / nk
+            stds[k] = np.sqrt((resp[:, k] * (x - means[k]) ** 2).sum() / nk) + 1e-9
+
+    return {
+        "means": [round(m, 4) for m in means],
+        "stds": [round(s, 4) for s in stds],
+        "weights": [round(w, 4) for w in weights],
+    }
+
+
+def estimate_hysteresis(load_sequence, temp_sequence):
+    """
+    Thermal memory: area of the load-temperature hysteresis loop.
+    High area = system holds entropy longer than environment dissipates.
+    """
+    load = np.asarray(load_sequence, dtype=float)
+    temp = np.asarray(temp_sequence, dtype=float)
+    return round(float(np.abs(np.trapezoid(temp, x=load))), 4)
+
+
+def check_cascading_risk(node_states, threshold=0.5):
+    """
+    Cascading failure risk across coupled systems.
+    Returns stress level and failing nodes.
+    """
+    total_stress = 0.0
+    failing = []
+    for node, efficiency in node_states.items():
+        if efficiency < threshold:
+            total_stress += (threshold - efficiency) * 1.5
+            failing.append((node, round(efficiency, 3)))
+    status = "HIGH RISK — CASCADE IMMINENT" if total_stress > 1.0 else "ABSORPTIVE"
+    return {"total_stress": round(total_stress, 4), "status": status, "failing_nodes": failing}
+
+
+def fisher_distance(mu1, sigma1, mu2, sigma2):
+    """
+    Fisher-Rao distance between two Gaussians on the information manifold.
+    Euclidean distance ignores probability curvature. This doesn't.
+    """
+    d_mu = mu2 - mu1
+    d_sigma = np.log(sigma2) - np.log(sigma1)
+    return round(float(np.sqrt(d_mu ** 2 / sigma1 ** 2 + 2 * d_sigma ** 2)), 4)
+
+
 # ── CLI ────────────────────────────────────────────────────────────────────
 
 def cmd_gaussian(args):
@@ -422,18 +542,38 @@ def main():
     p_resonance = sub.add_parser("resonance", help="Find resonance peak across entropy range")
     p_resonance.add_argument("ids", nargs="+", help="Entity IDs from ontology")
 
+    # V2 commands
+    p_powerlaw = sub.add_parser("powerlaw", help="Power-law exponent (heavy tails)")
+    p_powerlaw.add_argument("values", nargs="+", help="Positive numeric values")
+
+    p_hurst = sub.add_parser("hurst", help="Hurst exponent (fractal memory)")
+    p_hurst.add_argument("values", nargs="+", help="Numeric sequence (10+ values recommended)")
+
+    p_mixture = sub.add_parser("mixture", help="Gaussian mixture decomposition")
+    p_mixture.add_argument("values", nargs="+", help="Numeric values")
+    p_mixture.add_argument("--components", type=int, default=2, help="Number of components")
+
+    p_change = sub.add_parser("change", help="Detect regime shifts (change points)")
+    p_change.add_argument("values", nargs="+", help="Numeric sequence")
+    p_change.add_argument("--penalty", type=float, default=3.0, help="Sensitivity")
+
+    p_fisher = sub.add_parser("fisher", help="Fisher-Rao distance between two Gaussians")
+    p_fisher.add_argument("mu1", type=float)
+    p_fisher.add_argument("sigma1", type=float)
+    p_fisher.add_argument("mu2", type=float)
+    p_fisher.add_argument("sigma2", type=float)
+
     args = parser.parse_args()
 
-    if args.command == "gaussian":
-        cmd_gaussian(args)
-    elif args.command == "markov":
-        cmd_markov(args)
-    elif args.command == "score":
-        cmd_score(args)
-    elif args.command == "erasure":
-        cmd_erasure(args)
-    elif args.command == "resonance":
-        cmd_resonance(args)
+    commands = {
+        "gaussian": cmd_gaussian, "markov": cmd_markov, "score": cmd_score,
+        "erasure": cmd_erasure, "resonance": cmd_resonance,
+        "powerlaw": cmd_powerlaw, "hurst": cmd_hurst, "mixture": cmd_mixture,
+        "change": cmd_change, "fisher": cmd_fisher,
+    }
+
+    if args.command in commands:
+        commands[args.command](args)
     else:
         parser.print_help()
 
@@ -524,70 +664,74 @@ def cmd_resonance(args):
     print()
 
 
+def cmd_powerlaw(args):
+    """Power-law scaling exponent."""
+    values = [float(v) for v in args.values]
+    alpha, x_min = mle_powerlaw(values)
+    print(f"\n  Power-Law MLE (n={len(values)}):")
+    print(f"  Alpha (scaling exponent): {alpha}")
+    print(f"  X_min: {x_min}")
+    if alpha < 2.0:
+        print(f"  -> Heavy tail: frequent high-energy outliers")
+    elif alpha < 3.0:
+        print(f"  -> Moderate tail: some outlier activity")
+    else:
+        print(f"  -> Light tail: rapid decay, near-Gaussian")
+
+
+def cmd_hurst(args):
+    """Hurst exponent for fractal memory."""
+    values = [float(v) for v in args.values]
+    h = estimate_hurst(values)
+    print(f"\n  Hurst Exponent (n={len(values)}): H = {h}")
+    if h > 0.5:
+        print(f"  -> PERSISTENT (H > 0.5): system has memory, trends carry forward")
+        print(f"  -> Markov assumption (H=0.5) would erase this momentum")
+    elif h < 0.5:
+        print(f"  -> ANTI-PERSISTENT (H < 0.5): mean-reverting, pulled back to center")
+    else:
+        print(f"  -> RANDOM WALK (H = 0.5): no memory, Markov-compatible")
+
+
+def cmd_mixture(args):
+    """Gaussian mixture decomposition."""
+    values = [float(v) for v in args.values]
+    result = solve_mixture(values, n_components=args.components)
+    print(f"\n  Gaussian Mixture (n={len(values)}, k={args.components}):")
+    for i, (m, s, w) in enumerate(zip(result["means"], result["stds"], result["weights"])):
+        print(f"    Component {i+1}: mean={m:.4f}  std={s:.4f}  weight={w:.2%}")
+    # Compare with single Gaussian
+    mu, sigma = mle_gaussian(values)
+    print(f"\n  Single Gaussian: mean={mu:.4f}  std={sigma:.4f}")
+    print(f"  -> The mixture reveals {args.components} resonance peaks that averaging collapses into one.")
+
+
+def cmd_change(args):
+    """Detect regime shifts."""
+    values = [float(v) for v in args.values]
+    points = detect_change_points(values, penalty=args.penalty)
+    print(f"\n  Change Point Detection (n={len(values)}, penalty={args.penalty}):")
+    if points:
+        print(f"  Regime shifts at indices: {points}")
+        for cp in points:
+            if cp < len(values):
+                before = np.mean(values[:cp])
+                after = np.mean(values[cp:]) if cp < len(values) else 0
+                print(f"    Index {cp}: mean {before:.3f} -> {after:.3f}")
+    else:
+        print(f"  No regime shifts detected (system is stationary).")
+
+
+def cmd_fisher(args):
+    """Fisher-Rao distance between two Gaussians."""
+    d = fisher_distance(args.mu1, args.sigma1, args.mu2, args.sigma2)
+    print(f"\n  Fisher-Rao Distance:")
+    print(f"    State A: N({args.mu1}, {args.sigma1}^2)")
+    print(f"    State B: N({args.mu2}, {args.sigma2}^2)")
+    print(f"    Distance: {d}")
+    print(f"    -> Measures separation on the information manifold")
+    print(f"    -> Euclidean would give {abs(args.mu2-args.mu1):.4f} (ignores curvature)")
+
+
 if __name__ == "__main__":
     main()
-
-
-
-### possible add ons
-
-def mle_power_law(sequence):
-    """MLE for power-law exponent α (P(x) ~ x^(-α))"""
-    x = np.asarray(sequence, dtype=float)
-    x_min = x.min()
-    alpha = 1 + len(x) / np.sum(np.log(x / x_min))
-    return alpha
-
-def mle_mixture_gaussian(sequence, k=3):
-    """K-component Gaussian mixture (captures multimodality)"""
-    from sklearn.mixture import GaussianMixture
-    gm = GaussianMixture(n_components=k).fit(sequence.reshape(-1, 1))
-    return gm.means_.flatten(), gm.covariances_.flatten(), gm.weights_
-
-
-
-
-def hurst_exponent(sequence, max_lag=20):
-    """Hurst exponent H: H>0.5 = persistent, H<0.5 = anti-persistent"""
-    lag = np.arange(2, max_lag)
-    tau = np.sqrt([np.std(np.subtract(sequence[lag:], :-lag)) for lag in lag])
-    return np.polyfit(np.log(lag), np.log(tau), 1)[0]
-
-def box_dimension(sequence_2d):
-    """Fractal dimension via box-counting (for geometric patterns)"""
-    # Implement for your visual field data
-    pass
-
-
-
-
-from giotto.topology import PersistenceDiagram
-from giotto.diagrams import Vectorization
-
-def tda_persistence(points):
-    """Extract topological features (Betti numbers, persistence)"""
-    # Use giotto-tpyo or gudhi library
-    pass
-
-
-
-
-def fisher_metric(mu1, sigma1, mu2, sigma2):
-    """Fisher-Rao distance between two Gaussians"""
-    d_mu = mu2 - mu1
-    d_sigma = np.log(sigma2) - np.log(sigma1)
-    return np.sqrt(d_mu**2 / sigma1**2 + 2 * d_sigma**2)
-
-
-
-from pgmpy.estimators import MaximumLikelihoodEstimator
-from pgmpy.models import BayesianNetwork
-
-def causal_graph(data, edges):
-    """Learn causal structure from observations"""
-    model = BayesianNetwork(edges)
-    model.fit(data, estimator=MaximumLikelihoodEstimator)
-    return model
-
-
-

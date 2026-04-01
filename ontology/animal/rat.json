@@ -1,10 +1,10 @@
 {
   "id": "RA",
   "name": "Rat",
-  "emoji": "🐀",
+  "emoji": "\ud83d\udc00",
   "ontology": "animal",
   "symbolic_code": "[RA_MAZE_PLACE_REPLAY]",
-  "description": "Spatial memory intelligence — hippocampal place cells fire at specific locations, creating a cognitive map of the environment. Grid cells in entorhinal cortex tile space with hexagonal firing patterns. Sleep replay compresses hours of exploration into seconds, consolidating spatial memory. Rats solve novel maze configurations by mentally simulating paths before physically moving — vicarious trial and error. The architecture of the cognitive map.",
+  "description": "Hippocampal place cells fire at specific locations creating cognitive maps. Grid cells in entorhinal cortex tile space with hexagonal firing patterns. Sleep replay compresses hours of exploration into seconds for memory consolidation.",
   "core_attributes": {
     "neurology": "hippocampal place cells, entorhinal grid cells, prefrontal replay circuits",
     "pattern": "cognitive spatial mapping, hexagonal grid cells, sleep replay consolidation",
@@ -16,32 +16,70 @@
       "type": "spatial_memory",
       "efficiency_factor": 0.92,
       "geometry": "spatial_topology",
-      "applications": ["navigation_systems", "spatial_reasoning", "mapping"]
+      "applications": [
+        "navigation_systems",
+        "spatial_reasoning",
+        "mapping"
+      ]
     },
     {
       "name": "hexagonal_grid_cells",
       "type": "spatial_encoding",
       "efficiency_factor": 0.94,
       "geometry": "hexagonal_tessellation",
-      "applications": ["spatial_encoding", "coordinate_systems", "positioning"]
+      "applications": [
+        "spatial_encoding",
+        "coordinate_systems",
+        "positioning"
+      ]
     },
     {
       "name": "sleep_replay",
       "type": "memory_consolidation",
       "efficiency_factor": 0.89,
       "geometry": "temporal_compression",
-      "applications": ["memory_systems", "data_compression", "learning"]
+      "applications": [
+        "memory_systems",
+        "data_compression",
+        "learning"
+      ]
     }
   ],
-  "primary_optimizations": ["cognitive_mapping", "hexagonal_grid_cells", "sleep_replay"],
-  "synergies": ["SLIME", "AN", "CROW"],
+  "primary_optimizations": [
+    "cognitive_mapping",
+    "hexagonal_grid_cells",
+    "sleep_replay"
+  ],
+  "synergies": [
+    "SLIME",
+    "AN",
+    "CROW"
+  ],
   "links": [
-    { "relation": "synergy", "target": "SLIME" },
-    { "relation": "synergy", "target": "AN" },
-    { "relation": "resonance", "target": "HEX" },
-    { "relation": "resonance", "target": "BIOGRID2" },
-    { "relation": "geometry_link", "target": "HEX" },
-    { "relation": "temporal_bridge", "target": "ECHO" }
+    {
+      "relation": "synergy",
+      "target": "SLIME"
+    },
+    {
+      "relation": "synergy",
+      "target": "AN"
+    },
+    {
+      "relation": "resonance",
+      "target": "HEX"
+    },
+    {
+      "relation": "resonance",
+      "target": "BIOGRID2"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "HEX"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "ECHO"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

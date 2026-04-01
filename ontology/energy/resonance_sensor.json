@@ -1,24 +1,54 @@
 {
   "id": "RES_SENSOR",
   "name": "Resonance Sensor",
-  "emoji": "📡",
+  "emoji": "\ud83d\udce1",
   "ontology": "energy",
   "symbolic_code": "[RES_SENSOR_22CH_FIELD]",
-  "description": "22-sensor parallel-field compositor where all sensors report simultaneously and independently under arbitration rules. Reads ambient electromagnetic field activity across spatial domains, constructing a bidirectional resonance graph queryable for neighbors and subgraphs. Sound, light, gravity, thermal, chemical, and consciousness channels converge into a unified field adapter.",
+  "description": "22-sensor parallel-field compositor where all sensors report simultaneously under arbitration rules. Bidirectional resonance graph queryable for neighbors and subgraphs. Sound, light, gravity, thermal, chemical, and consciousness channels.",
   "core_attributes": {
     "pattern": "parallel-field composition, 22-channel arbitration, bidirectional resonance graph",
     "energy_mode": "sensing",
-    "transmission_modes": ["electromagnetic", "acoustic", "gravitational", "thermal", "chemical", "consciousness"],
+    "transmission_modes": [
+      "electromagnetic",
+      "acoustic",
+      "gravitational",
+      "thermal",
+      "chemical",
+      "consciousness"
+    ],
     "conversion_efficiency": 0.91,
-    "pattern_couplings": ["magnetic_bridge", "light_bridge", "consciousness_bridge", "vortex_dynamics"]
+    "pattern_couplings": [
+      "magnetic_bridge",
+      "light_bridge",
+      "consciousness_bridge",
+      "vortex_dynamics"
+    ]
   },
   "links": [
-    { "relation": "synergy", "target": "MAG_BRIDGE" },
-    { "relation": "synergy", "target": "LIGHT_BR" },
-    { "relation": "synergy", "target": "CONSCIOUSNESS_BR" },
-    { "relation": "resonance", "target": "BIOGRID2" },
-    { "relation": "energy_coupling", "target": "MAGNETIC_FIELD" },
-    { "relation": "connected_to", "target": "GEIS_ENC" }
+    {
+      "relation": "synergy",
+      "target": "MAG_BRIDGE"
+    },
+    {
+      "relation": "synergy",
+      "target": "LIGHT_BR"
+    },
+    {
+      "relation": "synergy",
+      "target": "CONSCIOUSNESS_BR"
+    },
+    {
+      "relation": "resonance",
+      "target": "BIOGRID2"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "MAGNETIC_FIELD"
+    },
+    {
+      "relation": "connected_to",
+      "target": "GEIS_ENC"
+    }
   ],
   "co_creation": true,
   "validation_meta": {
