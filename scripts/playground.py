@@ -218,15 +218,38 @@ def interaction_coefficient(type_a: str, type_b: str) -> float:
     return INTERACTION_MATRIX.get(key, 0.1)
 
 
+def _load_edge_weights() -> Dict[Tuple[str, str], float]:
+    """Load edge weights from synergies graph."""
+    synergies_file = ROOT / "ontology" / "relational" / "synergies.json"
+    weights = {}
+    if synergies_file.exists():
+        try:
+            with open(synergies_file) as f:
+                graph = json.load(f)
+            for edge in graph.get("edges", []):
+                src, tgt = edge["source"], edge["target"]
+                w = edge.get("weight", 0.5)
+                weights[(src, tgt)] = w
+                weights[(tgt, src)] = w
+        except Exception:
+            pass
+    return weights
+
+
+EDGE_WEIGHTS = _load_edge_weights()
+
+
 def compute_interaction(a: Concept, b: Concept, env: Environment) -> float:
     """Compute interaction strength between two concepts in an environment."""
     base = interaction_coefficient(a.category, b.category)
     energy = a.energy_profile * b.energy_profile
 
-    # Link bonus: direct links multiply interaction
-    link_bonus = 1.0
-    if b.id in a.link_targets() or a.id in b.link_targets():
-        link_bonus = phi  # Golden ratio bonus for linked concepts
+    # Link bonus from weighted edge graph (replaces flat phi bonus)
+    edge_weight = EDGE_WEIGHTS.get((a.id, b.id), 0.0)
+    if edge_weight > 0:
+        link_bonus = 1.0 + edge_weight * (phi - 1.0)  # scale: 1.0 to phi
+    else:
+        link_bonus = 1.0
 
     # Environmental modulation
     env_mod = 1.0
