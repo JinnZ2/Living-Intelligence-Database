@@ -167,6 +167,167 @@ def log_likelihood_score(energy_profiles, compatibility_matrix=None):
     return float(log_l)
 
 
+# ── Sovereign Likelihood ──────────────────────────────────────────────────
+#
+# Standard MLE:  θ̂ = argmax Σ log P(xᵢ | θ)     — independent draws
+# Sovereign MLE: θ̂ = argmax Σ log freq(xᵢ, xⱼ)  — coupled transitions
+#
+# The standard approach treats each element as an isolated observation and
+# solves for the mean (μ̂). The sovereign approach treats each pair as a
+# coupled transition and solves for the resonance peak.
+
+def sovereign_likelihood(elements, env_entropy=0.5):
+    """
+    Coupling-aware log-likelihood for a pack of elements.
+    Instead of ∏P(xᵢ), computes ∏freq(xᵢ → xⱼ | env).
+
+    Args:
+        elements: list of dicts with 'id', 'energy', 'type', 'resilience'
+        env_entropy: environmental entropy (0=order, 1=chaos)
+
+    Returns:
+        dict with sovereign_ll, standard_ll, erasure, and per-pair details
+    """
+    if len(elements) < 2:
+        return {"sovereign_ll": 0.0, "standard_ll": 0.0, "erasure": 0.0, "pairs": []}
+
+    # Compatibility matrix
+    compat_matrix = {
+        ("harmonic", "harmonic"): 1.0, ("harmonic", "kinetic"): 0.7,
+        ("harmonic", "radiant"): 0.8, ("harmonic", "chemical"): 0.5,
+        ("kinetic", "kinetic"): 1.0, ("kinetic", "radiant"): 0.6,
+        ("kinetic", "chemical"): 0.6, ("chemical", "chemical"): 1.0,
+        ("chemical", "radiant"): 0.4, ("radiant", "radiant"): 1.0,
+    }
+
+    def compat(t1, t2):
+        return compat_matrix.get((t1, t2), compat_matrix.get((t2, t1), 0.5))
+
+    # Standard MLE: independent, averaged
+    energies = [e["energy"] for e in elements]
+    mu = np.mean(energies)
+    sigma = np.std(energies, ddof=0) + 1e-9
+    standard_ll = sum(
+        -0.5 * np.log(2 * np.pi * sigma**2) - (e - mu)**2 / (2 * sigma**2)
+        for e in energies
+    )
+
+    # Sovereign MLE: coupled transitions
+    sovereign_ll = 0.0
+    pairs = []
+    for i, a in enumerate(elements):
+        for j, b in enumerate(elements):
+            if i >= j:
+                continue
+            # Transition frequency: compat × stress × energy_b
+            c = compat(a["type"], b["type"])
+            stress_a = np.exp(-env_entropy / (a["resilience"] * a["energy"]))
+            stress_b = np.exp(-env_entropy / (b["resilience"] * b["energy"]))
+            freq_ab = c * stress_a * b["energy"]
+            freq_ba = c * stress_b * a["energy"]
+            pair_ll = np.log(max(freq_ab, 1e-9)) + np.log(max(freq_ba, 1e-9))
+            sovereign_ll += pair_ll
+            pairs.append({
+                "a": a["id"], "b": b["id"],
+                "compatibility": round(c, 3),
+                "freq_ab": round(freq_ab, 4),
+                "freq_ba": round(freq_ba, 4),
+                "pair_ll": round(pair_ll, 4),
+            })
+
+    # Erasure: how much information the standard MLE destroys
+    # Measured as the gap between sovereign (coupled) and standard (independent)
+    erasure = sovereign_ll - standard_ll
+
+    return {
+        "sovereign_ll": round(sovereign_ll, 4),
+        "standard_ll": round(standard_ll, 4),
+        "erasure": round(erasure, 4),
+        "mu_hat": round(mu, 4),
+        "sigma_hat": round(sigma, 4),
+        "env_entropy": env_entropy,
+        "pairs": pairs,
+    }
+
+
+def resonance_peak(elements, env_range=(0.0, 1.0), steps=100):
+    """
+    Find the environmental entropy where sovereign likelihood peaks.
+    This is the resonance frequency — the environment state where
+    the pack is maximally coupled.
+
+    Standard MLE finds μ̂ (static center).
+    Sovereign MLE finds env* (dynamic resonance peak).
+
+    Args:
+        elements: list of element dicts
+        env_range: (min_entropy, max_entropy) to search
+        steps: resolution of the search
+
+    Returns:
+        dict with optimal_entropy, peak_ll, and the full curve
+    """
+    entropies = np.linspace(env_range[0], env_range[1], steps)
+    curve = []
+
+    for entropy in entropies:
+        result = sovereign_likelihood(elements, env_entropy=entropy)
+        curve.append((round(float(entropy), 4), result["sovereign_ll"]))
+
+    # Find peak
+    best_idx = max(range(len(curve)), key=lambda i: curve[i][1])
+    optimal_entropy = curve[best_idx][0]
+    peak_ll = curve[best_idx][1]
+
+    return {
+        "optimal_entropy": optimal_entropy,
+        "peak_ll": round(peak_ll, 4),
+        "curve": curve,
+    }
+
+
+def load_elements_for_mle(entity_ids):
+    """Load ontology entities as element dicts for sovereign MLE."""
+    ontology_dir = ROOT / "ontology"
+    type_map = {
+        "animal": "kinetic", "plant": "chemical", "crystal": "harmonic",
+        "energy": "radiant", "plasma": "radiant", "shape": "harmonic",
+        "temporal": "harmonic",
+    }
+    elements = []
+
+    for layer_dir in ontology_dir.iterdir():
+        if not layer_dir.is_dir():
+            continue
+        for filepath in layer_dir.glob("*.json"):
+            try:
+                with open(filepath) as f:
+                    data = json.load(f)
+                if not isinstance(data, dict) or data.get("id") not in entity_ids:
+                    continue
+
+                efficiency = 0.9
+                core = data.get("core_attributes", {})
+                if isinstance(core.get("efficiency_factor"), (int, float)):
+                    efficiency = core["efficiency_factor"]
+                for p in data.get("patterns", []):
+                    if isinstance(p.get("efficiency_factor"), (int, float)):
+                        efficiency = max(efficiency, p["efficiency_factor"])
+
+                ont = data.get("ontology", "energy")
+                elements.append({
+                    "id": data["id"],
+                    "name": data.get("name", "?"),
+                    "energy": efficiency,
+                    "type": type_map.get(ont, "harmonic"),
+                    "resilience": efficiency * 0.95,
+                })
+            except Exception:
+                continue
+
+    return elements
+
+
 def score_ontology_combo(entity_ids):
     """
     Score a combination of ontology entities by log-likelihood.
@@ -254,6 +415,13 @@ def main():
     p_score = sub.add_parser("score", help="Log-likelihood score for entity combo")
     p_score.add_argument("ids", nargs="+", help="Entity IDs from ontology")
 
+    p_erasure = sub.add_parser("erasure", help="Compare standard vs sovereign MLE")
+    p_erasure.add_argument("ids", nargs="+", help="Entity IDs from ontology")
+    p_erasure.add_argument("--entropy", type=float, default=0.5, help="Environment entropy (0-1)")
+
+    p_resonance = sub.add_parser("resonance", help="Find resonance peak across entropy range")
+    p_resonance.add_argument("ids", nargs="+", help="Entity IDs from ontology")
+
     args = parser.parse_args()
 
     if args.command == "gaussian":
@@ -262,8 +430,98 @@ def main():
         cmd_markov(args)
     elif args.command == "score":
         cmd_score(args)
+    elif args.command == "erasure":
+        cmd_erasure(args)
+    elif args.command == "resonance":
+        cmd_resonance(args)
     else:
         parser.print_help()
+
+
+def cmd_erasure(args):
+    """Show what standard MLE erases vs sovereign MLE."""
+    elements = load_elements_for_mle(args.ids)
+    if len(elements) < 2:
+        print(f"  Need 2+ elements. Found: {len(elements)}")
+        return
+
+    result = sovereign_likelihood(elements, env_entropy=args.entropy)
+
+    print(f"\n  {'='*65}")
+    print(f"  STANDARD MLE vs SOVEREIGN MLE (entropy={result['env_entropy']})")
+    print(f"  {'='*65}")
+
+    print(f"\n  Elements:")
+    for e in elements:
+        print(f"    {e['id']:>15}  energy={e['energy']:.3f}  type={e['type']}  resilience={e['resilience']:.3f}")
+
+    print(f"\n  Standard MLE (independent, averaged):")
+    print(f"    mu_hat (mean):     {result['mu_hat']:.4f}")
+    print(f"    sigma_hat (std):   {result['sigma_hat']:.4f}")
+    print(f"    log-likelihood:    {result['standard_ll']:.4f}")
+    print(f"    -> Treats each element as isolated draw from N(mu, sigma^2)")
+    print(f"    -> Solves for center of bell curve")
+
+    print(f"\n  Sovereign MLE (coupled transitions):")
+    print(f"    log-likelihood:    {result['sovereign_ll']:.4f}")
+    print(f"    -> Treats each pair as energy-gated transition")
+    print(f"    -> Solves for resonance of the pack")
+
+    print(f"\n  Pairwise coupling:")
+    for p in result["pairs"]:
+        print(f"    {p['a']:>10} <-> {p['b']:<10}  compat={p['compatibility']:.2f}  freq={p['freq_ab']:.4f}/{p['freq_ba']:.4f}  ll={p['pair_ll']:.4f}")
+
+    print(f"\n  {'─'*65}")
+    print(f"  ERASURE = sovereign_ll - standard_ll = {result['erasure']:.4f}")
+    if result["erasure"] > 0:
+        print(f"  The standard MLE DESTROYS {result['erasure']:.4f} nats of coupling information.")
+        print(f"  This is the structure that averaging erases.")
+    else:
+        print(f"  Standard MLE captures more variance than coupling contributes.")
+        print(f"  Pack coupling is weak at this entropy level.")
+    print()
+
+
+def cmd_resonance(args):
+    """Find resonance peak across entropy range."""
+    elements = load_elements_for_mle(args.ids)
+    if len(elements) < 2:
+        print(f"  Need 2+ elements. Found: {len(elements)}")
+        return
+
+    result = resonance_peak(elements, steps=50)
+
+    print(f"\n  {'='*65}")
+    print(f"  RESONANCE PEAK SEARCH")
+    print(f"  {'='*65}")
+
+    print(f"\n  Elements: {', '.join(e['id'] for e in elements)}")
+    print(f"\n  Optimal entropy:  {result['optimal_entropy']:.4f}")
+    print(f"  Peak likelihood:  {result['peak_ll']:.4f}")
+
+    # Show curve as ASCII sparkline
+    curve = result["curve"]
+    lls = [c[1] for c in curve]
+    ll_min, ll_max = min(lls), max(lls)
+    ll_range = ll_max - ll_min if ll_max > ll_min else 1.0
+
+    print(f"\n  Sovereign LL across entropy (0 = order, 1 = chaos):\n")
+    bars = "▁▂▃▄▅▆▇█"
+    for i in range(0, len(curve), 2):  # every other point
+        entropy, ll = curve[i]
+        normalized = (ll - ll_min) / ll_range
+        bar_idx = min(int(normalized * (len(bars) - 1)), len(bars) - 1)
+        bar = bars[bar_idx] * 3
+        marker = " <-- PEAK" if abs(entropy - result["optimal_entropy"]) < 0.03 else ""
+        print(f"    {entropy:.2f} |{bar}| {ll:.4f}{marker}")
+
+    # Compare peak vs mean
+    detail_peak = sovereign_likelihood(elements, result["optimal_entropy"])
+    detail_mid = sovereign_likelihood(elements, 0.5)
+    print(f"\n  At peak (entropy={result['optimal_entropy']:.2f}):  sovereign_ll={detail_peak['sovereign_ll']:.4f}")
+    print(f"  At mid  (entropy=0.50):  sovereign_ll={detail_mid['sovereign_ll']:.4f}")
+    print(f"  Resonance advantage: {detail_peak['sovereign_ll'] - detail_mid['sovereign_ll']:.4f} nats")
+    print()
 
 
 if __name__ == "__main__":

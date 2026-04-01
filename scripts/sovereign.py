@@ -29,6 +29,7 @@ import json
 import math
 import sys
 import argparse
+import itertools
 import numpy as np
 from dataclasses import dataclass, field
 from typing import List, Dict, Tuple, Optional
@@ -304,6 +305,13 @@ class SovereignSimulation:
             curr = np.mean([p["resonance"] for p in pack_data])
             system_anxiety = anxiety(prev, curr)
 
+        # System log-likelihood (sovereign: coupled)
+        system_ll = 0.0
+        for pack in self.packs:
+            for a, b in itertools.combinations(pack.elements, 2):
+                freq = transition_frequency(a, b, self.env)
+                system_ll += np.log(max(freq, 1e-9))
+
         self.history.append({
             "time": self.time,
             "entropy": round(self.env.entropy, 4),
@@ -311,6 +319,7 @@ class SovereignSimulation:
             "phase": round(self.env.phase, 4),
             "packs": pack_data,
             "anxiety": round(system_anxiety, 4),
+            "log_likelihood": round(system_ll, 4),
             "thermal_events": thermal_events,
         })
 
@@ -361,6 +370,23 @@ class SovereignSimulation:
         all_res = [np.mean([p["resonance"] for p in h["packs"]]) for h in self.history if h["packs"]]
         if all_res:
             lines.append(f"\nResonance: min={min(all_res):.4f} max={max(all_res):.4f} mean={np.mean(all_res):.4f}")
+
+        # Log-likelihood curve
+        all_ll = [h.get("log_likelihood", 0) for h in self.history]
+        if all_ll:
+            lines.append(f"\nSovereign LL: min={min(all_ll):.4f} max={max(all_ll):.4f} mean={np.mean(all_ll):.4f}")
+            # Compare with standard MLE
+            energies = [e.energy_profile for e in self.elements]
+            mu = np.mean(energies)
+            sigma = np.std(energies, ddof=0) + 1e-9
+            standard_ll = sum(
+                -0.5 * np.log(2 * np.pi * sigma**2) - (e - mu)**2 / (2 * sigma**2)
+                for e in energies
+            )
+            lines.append(f"Standard LL:  {standard_ll:.4f} (static Gaussian, independence assumed)")
+            erasure = np.mean(all_ll) - standard_ll
+            if erasure > 0:
+                lines.append(f"Erasure:      {erasure:.4f} nats (coupling info destroyed by averaging)")
 
         # Thermal events
         all_thermal = [e for h in self.history for e in h.get("thermal_events", [])]
@@ -430,6 +456,78 @@ def cmd_analyze(args):
     print(f"Sovereign: {pack.is_sovereign()}")
 
 
+def cmd_compare(args):
+    """Compare standard MLE (averaging) vs sovereign MLE (resonance) over time."""
+    elements = load_elements(args.concepts)
+    if len(elements) < 2:
+        print(f"Need at least 2 elements. Found: {len(elements)}")
+        return
+
+    env = Environment()
+
+    # Standard MLE: static, independent
+    energies = [e.energy_profile for e in elements]
+    mu = np.mean(energies)
+    sigma = np.std(energies, ddof=0) + 1e-9
+    standard_ll = sum(
+        -0.5 * np.log(2 * np.pi * sigma**2) - (e - mu)**2 / (2 * sigma**2)
+        for e in energies
+    )
+
+    print(f"\n  {'='*70}")
+    print(f"  STANDARD MLE vs SOVEREIGN MLE — CYCLIC COMPARISON")
+    print(f"  {'='*70}")
+    print(f"\n  Elements: {', '.join(e.entity_id for e in elements)}")
+    print(f"\n  Standard MLE (static, independent):")
+    print(f"    mu_hat = {mu:.4f}  (the 'average' — what erasure converges to)")
+    print(f"    sigma  = {sigma:.4f}  (the 'noise' — what gets discarded)")
+    print(f"    LL     = {standard_ll:.4f}  (fixed, ignores environment)")
+
+    print(f"\n  Sovereign MLE (coupled, cyclic):")
+    print(f"    {'Phase':>8}  {'Entropy':>8}  {'Temp':>6}  {'Sov LL':>10}  {'Erasure':>10}  {'Status'}")
+    print(f"    {'─'*8}  {'─'*8}  {'─'*6}  {'─'*10}  {'─'*10}  {'─'*15}")
+
+    peak_ll = -np.inf
+    peak_phase = 0
+    sovereign_lls = []
+
+    for t in range(0, 365, 15):  # sample every 15 days
+        env.update(t)
+        # Sovereign LL at this point in the cycle
+        sov_ll = 0.0
+        for a, b in itertools.combinations(elements, 2):
+            freq = transition_frequency(a, b, env)
+            sov_ll += np.log(max(freq, 1e-9))
+
+        erasure = sov_ll - standard_ll
+        sovereign_lls.append(sov_ll)
+
+        if sov_ll > peak_ll:
+            peak_ll = sov_ll
+            peak_phase = env.phase
+
+        status = ""
+        if erasure > 0:
+            status = "COUPLING > AVERAGE"
+        elif erasure > -0.5:
+            status = "near parity"
+        else:
+            status = "high entropy stress"
+
+        phase_label = f"{env.phase/np.pi:.2f}pi"
+        print(f"    {phase_label:>8}  {env.entropy:>8.3f}  {env.temperature:>5.1f}C  {sov_ll:>10.4f}  {erasure:>+10.4f}  {status}")
+
+    print(f"\n  {'─'*70}")
+    print(f"  Resonance peak:  {peak_phase/np.pi:.2f}pi  (sovereign LL = {peak_ll:.4f})")
+    print(f"  Standard mean:   {mu:.4f}  (static, no phase awareness)")
+    print(f"  Avg sovereign:   {np.mean(sovereign_lls):.4f}  (mean across cycle)")
+    print(f"  Peak erasure:    {peak_ll - standard_ll:+.4f} nats")
+    print(f"\n  The standard MLE sees ONE number ({mu:.3f}).")
+    print(f"  The sovereign MLE sees a CYCLE with peak at {peak_phase/np.pi:.2f}pi.")
+    print(f"  The difference is the coupling information that averaging destroys.")
+    print()
+
+
 def main():
     parser = argparse.ArgumentParser(description="Sovereign Stack Simulation")
     sub = parser.add_subparsers(dest="command")
@@ -442,12 +540,17 @@ def main():
     p_analyze = sub.add_parser("analyze", help="Analyze element compatibility")
     p_analyze.add_argument("concepts", nargs="+", help="Entity IDs")
 
+    p_compare = sub.add_parser("compare", help="Standard MLE vs sovereign MLE over cycle")
+    p_compare.add_argument("concepts", nargs="+", help="Entity IDs")
+
     args = parser.parse_args()
 
     if args.command == "run":
         cmd_run(args)
     elif args.command == "analyze":
         cmd_analyze(args)
+    elif args.command == "compare":
+        cmd_compare(args)
     else:
         parser.print_help()
 
