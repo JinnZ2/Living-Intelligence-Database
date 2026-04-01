@@ -157,16 +157,40 @@ class Environment:
         return np.exp(-self.entropy / (element.resilience * element.energy_profile))
 
 
+# ── Edge Weights ───────────────────────────────────────────────────────────
+
+def _load_edge_weights() -> Dict[Tuple[str, str], float]:
+    """Load edge weights from synergies graph."""
+    synergies_file = ROOT / "ontology" / "relational" / "synergies.json"
+    weights = {}
+    if synergies_file.exists():
+        try:
+            with open(synergies_file) as f:
+                graph = json.load(f)
+            for edge in graph.get("edges", []):
+                src, tgt = edge["source"], edge["target"]
+                w = edge.get("weight", 0.5)
+                weights[(src, tgt)] = w
+                weights[(tgt, src)] = w
+        except Exception:
+            pass
+    return weights
+
+
+EDGE_WEIGHTS = _load_edge_weights()
+
+
 # ── Core Physics ───────────────────────────────────────────────────────────
 
 def transition_frequency(a: EnergyElement, b: EnergyElement, env: Environment) -> float:
     """
     Emergent frequency for a → b transition.
-    Frequency = compatibility × stress × energy_profile_b
+    Frequency = compatibility × stress × energy_profile_b × edge_weight
     """
     compat = a.compatible_with(b)
     stress = env.stress_factor(a)
-    return compat * stress * b.energy_profile
+    edge_w = EDGE_WEIGHTS.get((a.entity_id, b.entity_id), 0.5)
+    return compat * stress * b.energy_profile * edge_w
 
 
 def anxiety(expected: float, observed: float) -> float:
