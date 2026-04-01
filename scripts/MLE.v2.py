@@ -114,3 +114,98 @@ def load_elements_for_mle(entity_ids):
                 for p in data.get("patterns", []):
                     if isinstance(p.get("efficiency_factor"), (int, float)): efficiency = max(efficiency, p["efficiency_factor"])
                 ont = data
+
+
+                # Continuing from: ont = data
+                elements.append({
+                    "id": data.get("id"),
+                    "type": type_map.get(data.get("type", "animal"), "kinetic"),
+                    "energy": float(data.get("energy_signature", 1.0)),
+                    "resilience": float(efficiency)
+                })
+            except (json.JSONDecodeError, KeyError, ValueError):
+                continue
+    return elements
+
+# ── V2 FUNCTIONS (Advanced Outlier & Field Analysis) ───────────────────────
+
+def mle_powerlaw(sequence):
+    """
+    Estimates the scaling exponent (alpha) for heavy-tailed distributions.
+    High alpha = rapid decay; Low alpha = frequent high-energy outliers.
+    """
+    x = np.asarray(sequence, dtype=float)
+    x_min = np.min(x)
+    n = len(x)
+    # MLE for power law: alpha = 1 + n / [sum(ln(x_i / x_min))]
+    alpha_hat = 1 + n / np.sum(np.log(x / x_min))
+    return round(alpha_hat, 4), x_min
+
+def estimate_hurst(sequence):
+    """
+    Rescaled Range (R/S) analysis to determine long-term memory (fractal dimension).
+    H < 0.5: Mean-reverting (anti-persistent)
+    H = 0.5: Random walk (Brownian)
+    H > 0.5: Trending (persistent/high-efficiency momentum)
+    """
+    x = np.asarray(sequence, dtype=float)
+    y = np.cumsum(x - np.mean(x))
+    r = np.max(y) - np.min(y)
+    s = np.std(x, ddof=1)
+    # Simplified estimate for short sequences
+    hurst = np.log(r / s) / np.log(len(x)) if s > 0 else 0.5
+    return round(hurst, 4)
+
+def detect_change_points(sequence):
+    """
+    Identifies 'Entropy Events' or regime shifts in the data field.
+    """
+    x = np.asarray(sequence).reshape(-1, 1)
+    # Using Pelt algorithm for optimal segmentation
+    algo = rpt.Pelt(model="rbf").fit(x)
+    result = algo.predict(pen=10)
+    return result
+
+def solve_mixture(sequence, n_components=2):
+    """
+    Deconstructs the signal into underlying energy states (e.g., Waste vs. Efficiency).
+    """
+    x = np.asarray(sequence).reshape(-1, 1)
+    gmm = GaussianMixture(n_components=n_components, random_state=42).fit(x)
+    return {
+        "means": gmm.means_.flatten().tolist(),
+        "weights": gmm.weights_.tolist()
+    }
+
+# ── CLI LOGIC ─────────────────────────────────────────────────────────────
+
+def main():
+    parser = argparse.ArgumentParser(description="Sovereign MLE Toolkit v2.0")
+    parser.add_argument("command", choices=["powerlaw", "hurst", "mixture", "sovereign", "change"])
+    parser.add_argument("data", nargs="*", help="Data points or Entity IDs")
+    parser.add_argument("--entropy", type=float, default=0.5, help="Environment Entropy")
+    
+    args = parser.parse_args()
+
+    if args.command == "sovereign":
+        elements = load_elements_for_mle(args.data)
+        results = sovereign_likelihood(elements, env_entropy=args.entropy)
+        print(json.dumps(results, indent=2))
+    
+    elif args.command in ["powerlaw", "hurst", "mixture", "change"]:
+        seq = [float(x) for x in args.data]
+        if args.command == "powerlaw":
+            alpha, xmin = mle_powerlaw(seq)
+            print(f"Alpha (Scaling Exponent): {alpha} | X_min: {xmin}")
+        elif args.command == "hurst":
+            h = estimate_hurst(seq)
+            print(f"Hurst Exponent: {h}")
+        elif args.command == "mixture":
+            mix = solve_mixture(seq)
+            print(f"Mixture States: {mix}")
+        elif args.command == "change":
+            pts = detect_change_points(seq)
+            print(f"Change Points (Regime Shifts) at Indices: {pts}")
+
+if __name__ == "__main__":
+    main()
