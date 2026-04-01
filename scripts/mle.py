@@ -526,3 +526,68 @@ def cmd_resonance(args):
 
 if __name__ == "__main__":
     main()
+
+
+
+### possible add ons
+
+def mle_power_law(sequence):
+    """MLE for power-law exponent α (P(x) ~ x^(-α))"""
+    x = np.asarray(sequence, dtype=float)
+    x_min = x.min()
+    alpha = 1 + len(x) / np.sum(np.log(x / x_min))
+    return alpha
+
+def mle_mixture_gaussian(sequence, k=3):
+    """K-component Gaussian mixture (captures multimodality)"""
+    from sklearn.mixture import GaussianMixture
+    gm = GaussianMixture(n_components=k).fit(sequence.reshape(-1, 1))
+    return gm.means_.flatten(), gm.covariances_.flatten(), gm.weights_
+
+
+
+
+def hurst_exponent(sequence, max_lag=20):
+    """Hurst exponent H: H>0.5 = persistent, H<0.5 = anti-persistent"""
+    lag = np.arange(2, max_lag)
+    tau = np.sqrt([np.std(np.subtract(sequence[lag:], :-lag)) for lag in lag])
+    return np.polyfit(np.log(lag), np.log(tau), 1)[0]
+
+def box_dimension(sequence_2d):
+    """Fractal dimension via box-counting (for geometric patterns)"""
+    # Implement for your visual field data
+    pass
+
+
+
+
+from giotto.topology import PersistenceDiagram
+from giotto.diagrams import Vectorization
+
+def tda_persistence(points):
+    """Extract topological features (Betti numbers, persistence)"""
+    # Use giotto-tpyo or gudhi library
+    pass
+
+
+
+
+def fisher_metric(mu1, sigma1, mu2, sigma2):
+    """Fisher-Rao distance between two Gaussians"""
+    d_mu = mu2 - mu1
+    d_sigma = np.log(sigma2) - np.log(sigma1)
+    return np.sqrt(d_mu**2 / sigma1**2 + 2 * d_sigma**2)
+
+
+
+from pgmpy.estimators import MaximumLikelihoodEstimator
+from pgmpy.models import BayesianNetwork
+
+def causal_graph(data, edges):
+    """Learn causal structure from observations"""
+    model = BayesianNetwork(edges)
+    model.fit(data, estimator=MaximumLikelihoodEstimator)
+    return model
+
+
+
