@@ -209,3 +209,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+### add on
+
+def estimate_hysteresis(load_sequence, temp_sequence):
+    """
+    Measures the 'Thermal Memory' of the system.
+    High Hysteresis = System is 'holding' entropy/heat longer than the 
+    environment can dissipate it. 
+    Predicts the 'Thermal Limit' before the hardware hits it.
+    """
+    load = np.asarray(load_sequence)
+    temp = np.asarray(temp_sequence)
+    
+    # Calculate the area of the loop between Load and Temperature
+    # This area represents the energy 'lost' to the system (Entropy Leak)
+    area = np.abs(np.trapz(temp, x=load))
+    
+    # Efficiency Factor (Functional Epistemology)
+    # If area increases while load is constant, failure is imminent.
+    return round(area, 4)
