@@ -1,24 +1,46 @@
 {
   "id": "BAMBOO",
   "name": "Bamboo",
-  "emoji": "🎋",
+  "emoji": "\ud83c\udf8b",
   "ontology": "plant",
   "symbolic_code": "[BAMBOO_RHIZOME_EXPLODE_GROW]",
-  "description": "Explosive growth intelligence — up to 91 cm/day, the fastest-growing plant on Earth. Underground rhizome network stores energy for years before synchronized mass flowering events across entire species populations worldwide. Hollow cylindrical geometry achieves maximum strength-to-weight ratio. Clonal colony intelligence where genetically identical culms share resources through the rhizome mesh.",
+  "description": "Fastest-growing plant: up to 91 cm/day. Underground rhizome network stores energy for years before synchronized mass flowering across entire species worldwide. Hollow cylindrical geometry achieves maximum strength-to-weight ratio.",
   "core_attributes": {
     "pattern": "explosive vertical growth, rhizome energy storage, synchronized mass flowering",
     "neurology": "rhizome chemical signaling network",
     "efficiency_factor": 0.96,
     "root_networks": true,
-    "symbioses": ["soil_stabilization", "carbon_sequestration", "panda_coevolution"]
+    "symbioses": [
+      "soil_stabilization",
+      "carbon_sequestration",
+      "panda_coevolution"
+    ]
   },
   "links": [
-    { "relation": "synergy", "target": "ROOT_NET" },
-    { "relation": "synergy", "target": "MY" },
-    { "relation": "resonance", "target": "SPIRAL" },
-    { "relation": "geometry_link", "target": "TORUS" },
-    { "relation": "temporal_bridge", "target": "CYCLE" },
-    { "relation": "connected_to", "target": "FE" }
+    {
+      "relation": "synergy",
+      "target": "ROOT_NET"
+    },
+    {
+      "relation": "synergy",
+      "target": "MY"
+    },
+    {
+      "relation": "resonance",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "TORUS"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "CYCLE"
+    },
+    {
+      "relation": "connected_to",
+      "target": "FE"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

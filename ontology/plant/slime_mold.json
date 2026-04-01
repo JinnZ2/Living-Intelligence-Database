@@ -1,24 +1,45 @@
 {
   "id": "SLIME",
   "name": "Slime Mold",
-  "emoji": "🟡",
+  "emoji": "\ud83d\udfe1",
   "ontology": "plant",
   "symbolic_code": "[SLIME_SOLVE_NET_OPTIMIZE]",
-  "description": "Physarum polycephalum — maze-solving network intelligence without neurons, brain, or central processing. Optimizes nutrient transport networks that independently rediscover human-engineered infrastructure (Tokyo rail, motorway systems). Pulsatile cytoplasmic flow encodes memory through tube diameter reinforcement. A living proof that intelligence requires neither neurons nor centralization.",
+  "description": "Physarum polycephalum: network intelligence without neurons. Optimizes nutrient transport networks that rediscover human-engineered infrastructure layouts. Pulsatile cytoplasmic flow encodes memory through tube diameter reinforcement.",
   "core_attributes": {
     "pattern": "acellular network optimization, pulsatile memory encoding, infrastructure emergence",
-    "neurology": "none — cytoplasmic oscillation network",
+    "neurology": "none \u2014 cytoplasmic oscillation network",
     "efficiency_factor": 0.94,
     "root_networks": true,
-    "symbioses": ["forest_floor_decomposition", "bacterial_farming"]
+    "symbioses": [
+      "forest_floor_decomposition",
+      "bacterial_farming"
+    ]
   },
   "links": [
-    { "relation": "synergy", "target": "MY" },
-    { "relation": "synergy", "target": "ROOT_NET" },
-    { "relation": "resonance", "target": "BIOGRID2" },
-    { "relation": "geometry_link", "target": "FRACTAL" },
-    { "relation": "connected_to", "target": "AN" },
-    { "relation": "energy_coupling", "target": "FLUX" }
+    {
+      "relation": "synergy",
+      "target": "MY"
+    },
+    {
+      "relation": "synergy",
+      "target": "ROOT_NET"
+    },
+    {
+      "relation": "resonance",
+      "target": "BIOGRID2"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "FRACTAL"
+    },
+    {
+      "relation": "connected_to",
+      "target": "AN"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "FLUX"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

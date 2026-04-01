@@ -1,10 +1,10 @@
 {
   "id": "HAW",
   "name": "Hawk",
-  "emoji": "🦅",
+  "emoji": "\ud83e\udd85",
   "ontology": "animal",
   "symbolic_code": "[HAW_TELE_DIVE_PRECISION]",
-  "description": "Precision targeting intelligence — telescopic fovea resolves detail at 8x human acuity, detecting a rabbit from 3 km. Peregrine falcon stoop reaches 389 km/h with aerodynamic tuck geometry calculated in real-time. Dual fovea system: one for forward telescopic focus, one for lateral wide-field scanning. UV-sensitive tetrachromatic vision reveals prey urine trails invisible to other predators. Mathematics of the killing dive.",
+  "description": "Telescopic fovea resolves at 8x human acuity, detecting prey from 3 km. Peregrine stoop reaches 389 km/h with real-time aerodynamic calculation. Dual fovea: forward telescopic + lateral wide-field. UV tetrachromatic vision reveals prey urine trails.",
   "core_attributes": {
     "neurology": "dual-fovea retina, tetrachromatic UV vision, rapid motor cortex",
     "pattern": "telescopic precision targeting, ballistic dive geometry, dual-fovea scanning",
@@ -16,32 +16,70 @@
       "type": "visual_acuity",
       "efficiency_factor": 0.97,
       "geometry": "optical_geometry",
-      "applications": ["target_acquisition", "tracking", "precision_systems"]
+      "applications": [
+        "target_acquisition",
+        "tracking",
+        "precision_systems"
+      ]
     },
     {
       "name": "ballistic_dive",
       "type": "trajectory_optimization",
       "efficiency_factor": 0.95,
       "geometry": "aerodynamic_curves",
-      "applications": ["ballistics", "aerodynamics", "energy_management"]
+      "applications": [
+        "ballistics",
+        "aerodynamics",
+        "energy_management"
+      ]
     },
     {
       "name": "dual_fovea_scanning",
       "type": "parallel_sensing",
       "efficiency_factor": 0.93,
       "geometry": "optical_field_geometry",
-      "applications": ["surveillance", "multi-focus_systems", "parallel_processing"]
+      "applications": [
+        "surveillance",
+        "multi-focus_systems",
+        "parallel_processing"
+      ]
     }
   ],
-  "primary_optimizations": ["precision_targeting", "ballistic_dive", "dual_fovea_scanning"],
-  "synergies": ["OW", "WOLF", "SP"],
+  "primary_optimizations": [
+    "precision_targeting",
+    "ballistic_dive",
+    "dual_fovea_scanning"
+  ],
+  "synergies": [
+    "OW",
+    "WOLF",
+    "SP"
+  ],
   "links": [
-    { "relation": "synergy", "target": "OW" },
-    { "relation": "synergy", "target": "WOLF" },
-    { "relation": "resonance", "target": "LIGHT_BR" },
-    { "relation": "geometry_link", "target": "SPIRAL" },
-    { "relation": "connected_to", "target": "CHAMELEON" },
-    { "relation": "energy_coupling", "target": "GRAV" }
+    {
+      "relation": "synergy",
+      "target": "OW"
+    },
+    {
+      "relation": "synergy",
+      "target": "WOLF"
+    },
+    {
+      "relation": "resonance",
+      "target": "LIGHT_BR"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "connected_to",
+      "target": "CHAMELEON"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "GRAV"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

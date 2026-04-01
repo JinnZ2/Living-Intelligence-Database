@@ -1,23 +1,40 @@
 {
   "id": "VENUS",
   "name": "Venus Flytrap",
-  "emoji": "🪴",
+  "emoji": "\ud83e\udeb4",
   "ontology": "plant",
   "symbolic_code": "[VENUS_TRAP_ACTION_POTENTIAL]",
-  "description": "Plant that generates animal-like action potentials — electrical signals propagating at 10 cm/s trigger snap closure in 100 milliseconds. Counting mechanism requires two trigger hair touches within 20 seconds to fire, preventing false positives. Digestive glands activate on the fifth signal. A plant that counts, remembers, and decides.",
+  "description": "Generates action potentials propagating at 10 cm/s triggering snap closure in 100ms. Counting mechanism requires two trigger hair touches within 20 seconds. Digestive glands activate on the fifth signal.",
   "core_attributes": {
     "pattern": "action potential generation, touch-counting memory, rapid mechanical response",
     "neurology": "electrical action potential without neurons",
     "efficiency_factor": 0.91,
     "root_networks": false,
-    "symbioses": ["carnivorous_nutrient_supplementation"]
+    "symbioses": [
+      "carnivorous_nutrient_supplementation"
+    ]
   },
   "links": [
-    { "relation": "synergy", "target": "CONSCIOUSNESS_BR" },
-    { "relation": "resonance", "target": "ELECTRIC_FIELD" },
-    { "relation": "connected_to", "target": "SP" },
-    { "relation": "temporal_bridge", "target": "ECHO" },
-    { "relation": "geometry_link", "target": "FRACTAL" }
+    {
+      "relation": "synergy",
+      "target": "CONSCIOUSNESS_BR"
+    },
+    {
+      "relation": "resonance",
+      "target": "ELECTRIC_FIELD"
+    },
+    {
+      "relation": "connected_to",
+      "target": "SP"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "ECHO"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "FRACTAL"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

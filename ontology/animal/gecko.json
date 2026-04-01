@@ -4,7 +4,7 @@
   "emoji": "\ud83e\uddb6",
   "ontology": "animal",
   "symbolic_code": "[GE_VANDERWAALS_GRIP_CLEAN]",
-  "description": "Van der Waals adhesion intelligence \u2014 billions of nanoscale setae on each toe pad generate molecular attraction forces strong enough to support full body weight on glass. Self-cleaning mechanism: contaminant particles bind to surfaces more strongly than to setae, ejecting dirt with each step. Directional adhesion: grip activates with shear angle, releases with peel. No glue, no suction \u2014 pure geometry at the nanoscale.",
+  "description": "Billions of nanoscale setae generate van der Waals adhesion supporting full body weight on glass. Self-cleaning: contaminants bind to surfaces more than setae, ejecting dirt per step. Directional adhesion activates with shear angle, releases with peel.",
   "core_attributes": {
     "neurology": "proprioceptive toe-pad feedback, rapid detachment motor circuits",
     "pattern": "van der Waals nanoscale adhesion, self-cleaning surfaces, directional grip geometry",

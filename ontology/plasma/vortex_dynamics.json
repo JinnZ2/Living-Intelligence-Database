@@ -1,10 +1,10 @@
 {
   "id": "VORTEX_DYN",
   "name": "Vortex Dynamics",
-  "emoji": "🌪️",
+  "emoji": "\ud83c\udf2a\ufe0f",
   "ontology": "plasma",
-  "symbolic_code": "[VORTEX_SPIRAL_τ_COUPLE]",
-  "description": "Rotational field intelligence emerging from coupled vortex systems — hurricane dynamics, plasma spirals, and toroidal flow patterns. Vortex coupling transfers angular momentum across scales while maintaining coherence through topological protection. The eye-wall boundary represents a phase transition between ordered rotation and turbulent dissipation.",
+  "symbolic_code": "[VORTEX_SPIRAL_\u03c4_COUPLE]",
+  "description": "Rotational field intelligence from coupled vortex systems. Transfers angular momentum across scales while maintaining coherence through topological protection. Eye-wall boundary represents phase transition between ordered rotation and turbulent dissipation.",
   "core_attributes": {
     "pattern": "rotational coupling, angular momentum transfer, eye-wall phase boundary",
     "field_dynamics": {
@@ -12,16 +12,42 @@
       "coherence_mechanism": "topological winding number",
       "energy_cascade": "inverse"
     },
-    "charge_modes": ["angular momentum", "Coriolis coupling", "pressure gradient"],
-    "coherence_states": ["laminar spiral", "eye-wall boundary", "turbulent dissipation"]
+    "charge_modes": [
+      "angular momentum",
+      "Coriolis coupling",
+      "pressure gradient"
+    ],
+    "coherence_states": [
+      "laminar spiral",
+      "eye-wall boundary",
+      "turbulent dissipation"
+    ]
   },
   "links": [
-    { "relation": "synergy", "target": "PLASMA_FIELD" },
-    { "relation": "resonance", "target": "SPIRAL" },
-    { "relation": "resonance", "target": "TORUS" },
-    { "relation": "geometry_link", "target": "MANDALA" },
-    { "relation": "energy_coupling", "target": "SOLAR_WIND" },
-    { "relation": "connected_to", "target": "AURORA" }
+    {
+      "relation": "synergy",
+      "target": "PLASMA_FIELD"
+    },
+    {
+      "relation": "resonance",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "resonance",
+      "target": "TORUS"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "MANDALA"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "SOLAR_WIND"
+    },
+    {
+      "relation": "connected_to",
+      "target": "AURORA"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

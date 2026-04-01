@@ -1,47 +1,85 @@
 {
   "id": "CR",
   "name": "Cricket",
-  "emoji": "🦗",
+  "emoji": "\ud83e\udd97",
   "ontology": "animal",
   "symbolic_code": "[CR_STRID_PHONOTAX_THERM]",
-  "description": "Acoustic encoding intelligence — stridulation produces species-specific chirp patterns by scraping wing file against plectrum at frequencies carrying mathematical temperature data (Dolbear's Law: count chirps in 14 seconds, add 40 = Fahrenheit). Phonotaxis enables females to navigate purely by sound gradient to locate males. Tympanic membrane on front legs provides directional hearing with inter-leg phase comparison. A living thermometer and acoustic beacon.",
+  "description": "Stridulation produces species-specific chirp patterns encoding temperature data (Dolbear's Law). Phonotaxis enables sound-gradient navigation. Tympanic membranes on front legs provide directional hearing via inter-leg phase comparison.",
   "core_attributes": {
     "neurology": "tibial tympanic organs, stridulation motor pattern generator, phonotactic circuits",
     "pattern": "stridulation encoding, phonotactic navigation, temperature-frequency coupling",
-    "efficiency_factor": 0.90
+    "efficiency_factor": 0.9
   },
   "patterns": [
     {
       "name": "stridulation_encoding",
       "type": "acoustic_communication",
-      "efficiency_factor": 0.90,
+      "efficiency_factor": 0.9,
       "geometry": "frequency_modulation",
-      "applications": ["acoustic_encoding", "temperature_sensing", "communication"]
+      "applications": [
+        "acoustic_encoding",
+        "temperature_sensing",
+        "communication"
+      ]
     },
     {
       "name": "phonotactic_navigation",
       "type": "acoustic_navigation",
       "efficiency_factor": 0.88,
       "geometry": "sound_gradient_tracking",
-      "applications": ["sound_localization", "gradient_following", "navigation"]
+      "applications": [
+        "sound_localization",
+        "gradient_following",
+        "navigation"
+      ]
     },
     {
       "name": "temperature_frequency_coupling",
       "type": "environmental_encoding",
       "efficiency_factor": 0.93,
       "geometry": "thermodynamic_oscillation",
-      "applications": ["environmental_sensing", "thermometry", "biological_clocks"]
+      "applications": [
+        "environmental_sensing",
+        "thermometry",
+        "biological_clocks"
+      ]
     }
   ],
-  "primary_optimizations": ["stridulation_encoding", "phonotactic_navigation", "temperature_frequency_coupling"],
-  "synergies": ["BT", "BE", "BX"],
+  "primary_optimizations": [
+    "stridulation_encoding",
+    "phonotactic_navigation",
+    "temperature_frequency_coupling"
+  ],
+  "synergies": [
+    "BT",
+    "BE",
+    "BX"
+  ],
   "links": [
-    { "relation": "synergy", "target": "BT" },
-    { "relation": "synergy", "target": "BE" },
-    { "relation": "resonance", "target": "THERMAL" },
-    { "relation": "resonance", "target": "RES_SENSOR" },
-    { "relation": "geometry_link", "target": "SPIRAL" },
-    { "relation": "connected_to", "target": "DOLPHIN" }
+    {
+      "relation": "synergy",
+      "target": "BT"
+    },
+    {
+      "relation": "synergy",
+      "target": "BE"
+    },
+    {
+      "relation": "resonance",
+      "target": "THERMAL"
+    },
+    {
+      "relation": "resonance",
+      "target": "RES_SENSOR"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "connected_to",
+      "target": "DOLPHIN"
+    }
   ],
   "co_creation": true,
   "validation_meta": {

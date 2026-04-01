@@ -4,7 +4,7 @@
   "emoji": "\ud83d\udd2c",
   "ontology": "crystal",
   "symbolic_code": "[SI_5D_TETRA_\u03c6_ENCODE]",
-  "description": "Crystalline computation substrate using silicon's natural sp3 tetrahedral geometry at 109.47\u00b0 \u2014 the universal convergence point where multiple physical constraints meet optimal solutions. Supports 5D encoding via femtosecond laser inscription: X, Y, Z, birefringence orientation, and void size. Theoretical density of 10^15 bits/cm\u00b3 with \u03c6-spaced shell radii r_n = r\u2080\u00b7\u03c6\u207f.",
+  "description": "Silicon sp3 tetrahedral geometry at 109.47 degrees. 5D encoding via femtosecond laser: X, Y, Z, birefringence orientation, void size. Theoretical density 10^15 bits/cm3. Phi-spaced shell radii with super-exponential coherence decay.",
   "core_attributes": {
     "pattern": "tetrahedral sp3 hybridization, 5D femtosecond inscription, \u03c6-shell spacing",
     "structure": "diamond cubic",
