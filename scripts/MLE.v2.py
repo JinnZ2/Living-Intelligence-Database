@@ -231,3 +231,19 @@ def estimate_hysteresis(load_sequence, temp_sequence):
     # Efficiency Factor (Functional Epistemology)
     # If area increases while load is constant, failure is imminent.
     return round(area, 4)
+
+
+def check_cascading_risk(node_states, dependency_graph):
+    """
+    Simulates the 'Entropy Overflow' from one system to another.
+    node_states: { 'weather': 0.8, 'roads': 0.7, 'economy': 0.4 } (0-1 efficiency)
+    dependency_graph: Map of how one node 'heats up' another.
+    """
+    total_system_stress = 0
+    for node, efficiency in node_states.items():
+        if efficiency < 0.5: # The 'Thermal Limit'
+            # Trigger 'Heat Transfer' to connected systems
+            impact = (0.5 - efficiency) * 1.5 
+            total_system_stress += impact
+            
+    return "High Risk of Cascade" if total_system_stress > 1.0 else "Absorptive"
