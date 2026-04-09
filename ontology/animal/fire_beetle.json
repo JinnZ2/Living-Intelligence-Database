@@ -1,0 +1,48 @@
+{
+  "id": "FIRE_BT",
+  "name": "Fire Beetle",
+  "emoji": "🔥",
+  "ontology": "animal",
+  "symbolic_code": "[FIRE_BT_IR_DETECT_PYRO]",
+  "description": "Pyrophilic infrared detection intelligence. Pit organs on the metathorax contain mechanoreceptive sensilla that detect infrared radiation from forest fires at distances up to 80 km, functioning as biological IR sensors with single-photon sensitivity. Flies toward active fires to mate and lay eggs in freshly burned wood, exploiting a predator-free, competition-free niche. Represents a unique evolutionary strategy: thriving in destruction.",
+  "core_attributes": {
+    "neurology": "infrared mechanoreceptor pit organs",
+    "pattern": "long-range infrared detection, pyrophilic reproduction, fire-niche exploitation",
+    "efficiency_factor": 0.93
+  },
+  "patterns": [
+    {
+      "name": "infrared_detection",
+      "type": "sensory_processing",
+      "efficiency_factor": 0.95,
+      "geometry": "thermal_radiation_gradient",
+      "applications": ["fire_detection", "remote_sensing", "ir_sensor_design"]
+    },
+    {
+      "name": "pyrophilic_strategy",
+      "type": "niche_exploitation",
+      "efficiency_factor": 0.91,
+      "geometry": "disturbance_ecology",
+      "applications": ["post_disturbance_colonization", "competition_avoidance", "resource_monopolization"]
+    },
+    {
+      "name": "fire_navigation",
+      "type": "directed_flight",
+      "efficiency_factor": 0.88,
+      "geometry": "ir_gradient_following",
+      "applications": ["long_range_navigation", "hazard_approach", "signal_tracking"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "BT" },
+    { "relation": "resonance", "target": "THERMAL" },
+    { "relation": "resonance", "target": "RES_SENSOR" },
+    { "relation": "energy_coupling", "target": "LIGHT_BR" },
+    { "relation": "temporal_bridge", "target": "EMERGE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

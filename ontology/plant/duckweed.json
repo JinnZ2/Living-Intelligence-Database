@@ -1,0 +1,24 @@
+{
+  "id": "DUCKWEED",
+  "name": "Duckweed",
+  "emoji": "🟢",
+  "ontology": "plant",
+  "symbolic_code": "[DUCK_CLONE_FILTER_RAPID]",
+  "description": "The fastest-reproducing flowering plant on Earth, doubling biomass every 24-48 hours through clonal budding. Smallest known angiosperm (Wolffia: 0.6mm) achieves maximal surface-to-volume ratio for nutrient uptake. Phytoremediation powerhouse that absorbs nitrogen, phosphorus, and heavy metals from water. Protein-rich biomass (up to 45% dry weight) makes it a living bioreactor.",
+  "core_attributes": {
+    "pattern": "exponential clonal reproduction, phytoremediation, nutrient hyperaccumulation",
+    "efficiency_factor": 0.96
+  },
+  "links": [
+    { "relation": "synergy", "target": "CYANO" },
+    { "relation": "synergy", "target": "CURLY_DOCK" },
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "resonance", "target": "QUORUM" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

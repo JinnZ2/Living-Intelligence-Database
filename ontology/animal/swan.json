@@ -1,0 +1,48 @@
+{
+  "id": "SWAN",
+  "name": "Swan",
+  "emoji": "🦢",
+  "ontology": "animal",
+  "symbolic_code": "[SWAN_PAIR_FLIGHT_GRACE]",
+  "description": "Lifelong pair-bonding intelligence with sophisticated aerial coordination. V-formation flight reduces energy expenditure by 20-30% through vortex wake exploitation. Cygnets ride on parents' backs, learning navigation routes through direct embodied transmission. Territorial displays use synchronized head movements as conflict-resolution signaling, minimizing physical confrontation.",
+  "core_attributes": {
+    "neurology": "pair-bond memory, formation flight coordination",
+    "pattern": "lifelong pair-bonding, V-formation energy optimization, cultural route transmission",
+    "efficiency_factor": 0.89
+  },
+  "patterns": [
+    {
+      "name": "formation_flight",
+      "type": "energy_efficiency",
+      "efficiency_factor": 0.92,
+      "geometry": "v_formation_vortex",
+      "applications": ["drag_reduction", "long_range_migration", "group_coordination"]
+    },
+    {
+      "name": "pair_bond_coordination",
+      "type": "social_intelligence",
+      "efficiency_factor": 0.94,
+      "geometry": "dyadic_synchronization",
+      "applications": ["cooperative_parenting", "territory_defense", "conflict_resolution"]
+    },
+    {
+      "name": "cultural_route_learning",
+      "type": "knowledge_transmission",
+      "efficiency_factor": 0.85,
+      "geometry": "parent_offspring_transfer",
+      "applications": ["migration_navigation", "habitat_memory", "generational_continuity"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "WH" },
+    { "relation": "synergy", "target": "WOLF" },
+    { "relation": "geometry_link", "target": "SPIRAL" },
+    { "relation": "resonance", "target": "MAGNETIC_FIELD" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

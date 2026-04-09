@@ -127,6 +127,13 @@
       "description": "Deep memory intelligence with infrasonic communication, multi-generational spatial knowledge, and empathic social bonding across vast distances."
     },
     {
+      "id": "FIRE_BT",
+      "name": "Fire Beetle",
+      "ontology": "animal",
+      "path": "ontology/animal/fire_beetle.json",
+      "description": "Pyrophilic infrared detection intelligence. Pit organs on the metathorax contain mechanoreceptive sensilla that detect infrared radiation from forest fires at distances up to 80 km, functioning as biological IR sensors with single-photon sensitivity. Flies toward active fires to mate and lay eggs in freshly burned wood, exploiting a predator-free, competition-free niche. Represents a unique evolutionary strategy: thriving in destruction."
+    },
+    {
       "id": "GE",
       "name": "Gecko",
       "ontology": "animal",
@@ -162,6 +169,13 @@
       "description": "4,800 km migration completed across 4 generations. Time-compensated sun compass integrates circadian clock with antenna magnetoreception. Complete metamorphosis reorganizes neural architecture while inherited navigation memory persists."
     },
     {
+      "id": "MTN_LION",
+      "name": "Mountain Lion",
+      "ontology": "animal",
+      "path": "ontology/animal/mountain_lion.json",
+      "description": "Solitary apex predator intelligence spanning the largest range of any terrestrial mammal in the Western Hemisphere. Masters ambush predation through terrain-reading and concealment calculus \u2014 selecting attack positions that minimize detection probability while maximizing strike success. Maintains vast territories (up to 1,000 km2) through scent-marking boundary protocols. Crepuscular activity patterns exploit prey vulnerability windows at dawn and dusk."
+    },
+    {
       "id": "OC",
       "name": "Octopus",
       "ontology": "animal",
@@ -181,6 +195,13 @@
       "ontology": "animal",
       "path": "ontology/animal/penguin.json",
       "description": "Emperor penguin huddles achieve 37C internally in -60C winds through continuous rotation. Each penguin cycles through exposed exterior. Huddle geometry self-optimizes to minimize collective surface area. Counter-current heat exchange prevents limb thermal loss."
+    },
+    {
+      "id": "MANTIS",
+      "name": "Praying Mantis",
+      "ontology": "animal",
+      "path": "ontology/animal/praying_mantis.json",
+      "description": "The only known invertebrate with stereoscopic 3D vision, using binocular disparity for precise depth perception during prey strikes. Raptorial forelegs execute strikes in 50-70 milliseconds \u2014 among the fastest predatory movements in the insect world. Head rotation of 180 degrees provides a wide surveillance field from a stationary ambush position. Masters patience as strategy: stillness as computation, waiting as optimization."
     },
     {
       "id": "RA",
@@ -216,6 +237,13 @@
       "ontology": "animal",
       "path": "ontology/animal/spider.json",
       "description": "Geometric engineering intelligence constructing optimized capture networks through tensile silk architecture and vibrational signal processing."
+    },
+    {
+      "id": "SWAN",
+      "name": "Swan",
+      "ontology": "animal",
+      "path": "ontology/animal/swan.json",
+      "description": "Lifelong pair-bonding intelligence with sophisticated aerial coordination. V-formation flight reduces energy expenditure by 20-30% through vortex wake exploitation. Cygnets ride on parents' backs, learning navigation routes through direct embodied transmission. Territorial displays use synchronized head movements as conflict-resolution signaling, minimizing physical confrontation."
     },
     {
       "id": "TARDI",
@@ -400,11 +428,32 @@
       "description": "Parasitic fungus that chemically hijacks host nervous systems via targeted alkaloids. Manipulates specific neural pathways while keeping host alive. Fruiting body emergence precisely timed to optimal spore dispersal conditions."
     },
     {
+      "id": "CURLY_DOCK",
+      "name": "Curly Dock",
+      "ontology": "plant",
+      "path": "ontology/plant/curly_dock.json",
+      "description": "Heavy-metal hyperaccumulator and soil remediation intelligence. Deep taproots penetrate compacted soils, breaking hardpan and cycling minerals upward. Oxalic acid production enables nutrient chelation in poor soils. Prolific seed production (up to 40,000 per plant) with multi-year seed bank persistence creates temporal resilience across disturbance cycles."
+    },
+    {
       "id": "CYANO",
       "name": "Cyanobacteria",
       "ontology": "plant",
       "path": "ontology/plant/cyanobacteria.json",
       "description": "The original photosynthetic intelligence \u2014 3.5 billion years of solar energy conversion that oxygenated Earth's atmosphere. Nitrogen fixation in heterocysts creates specialized cellular division of labor. Circadian clock proteins (KaiABC) form the simplest known biological oscillator, maintaining 24-hour rhythm without transcription."
+    },
+    {
+      "id": "DANDELION",
+      "name": "Dandelion",
+      "ontology": "plant",
+      "path": "ontology/plant/dandelion.json",
+      "description": "Radical dispersal and deep resource intelligence. Parachute-geometry seeds achieve wind-optimized flight via a separated vortex ring \u2014 a fluid dynamics structure unknown in engineering until studied in dandelion pappus. Taproots mine minerals from depths inaccessible to shallow-rooted competitors. Rapid lifecycle cycling enables colonization of disturbed ground before other species arrive."
+    },
+    {
+      "id": "DUCKWEED",
+      "name": "Duckweed",
+      "ontology": "plant",
+      "path": "ontology/plant/duckweed.json",
+      "description": "The fastest-reproducing flowering plant on Earth, doubling biomass every 24-48 hours through clonal budding. Smallest known angiosperm (Wolffia: 0.6mm) achieves maximal surface-to-volume ratio for nutrient uptake. Phytoremediation powerhouse that absorbs nitrogen, phosphorus, and heavy metals from water. Protein-rich biomass (up to 45% dry weight) makes it a living bioreactor."
     },
     {
       "id": "FE",
@@ -1099,6 +1148,31 @@
       "relation": "energy_mode"
     },
     {
+      "source": "FIRE_BT",
+      "target": "BT",
+      "relation": "synergy"
+    },
+    {
+      "source": "FIRE_BT",
+      "target": "THERMAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "FIRE_BT",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "FIRE_BT",
+      "target": "LIGHT_BR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "FIRE_BT",
+      "target": "EMERGE",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "GE",
       "target": "SP",
       "relation": "synergy"
@@ -1249,6 +1323,31 @@
       "relation": "connected_to"
     },
     {
+      "source": "MTN_LION",
+      "target": "WOLF",
+      "relation": "synergy"
+    },
+    {
+      "source": "MTN_LION",
+      "target": "SHARK",
+      "relation": "synergy"
+    },
+    {
+      "source": "MTN_LION",
+      "target": "HAW",
+      "relation": "resonance"
+    },
+    {
+      "source": "MTN_LION",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MTN_LION",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "OC",
       "target": "TORUS",
       "relation": "geometry_link"
@@ -1322,6 +1421,31 @@
       "source": "PE",
       "target": "NEGENTROPY",
       "relation": "energy_coupling"
+    },
+    {
+      "source": "MANTIS",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANTIS",
+      "target": "SP",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANTIS",
+      "target": "MTN_LION",
+      "relation": "resonance"
+    },
+    {
+      "source": "MANTIS",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MANTIS",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
     },
     {
       "source": "RA",
@@ -1442,6 +1566,31 @@
       "source": "SP",
       "target": "FRACTAL",
       "relation": "resonance"
+    },
+    {
+      "source": "SWAN",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "SWAN",
+      "target": "WOLF",
+      "relation": "synergy"
+    },
+    {
+      "source": "SWAN",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SWAN",
+      "target": "MAGNETIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "SWAN",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
     },
     {
       "source": "TARDI",
@@ -1984,6 +2133,31 @@
       "relation": "energy_coupling"
     },
     {
+      "source": "CURLY_DOCK",
+      "target": "DANDELION",
+      "relation": "synergy"
+    },
+    {
+      "source": "CURLY_DOCK",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "CURLY_DOCK",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
+      "source": "CURLY_DOCK",
+      "target": "PRESSURE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CURLY_DOCK",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "CYANO",
       "target": "LI",
       "relation": "synergy"
@@ -2012,6 +2186,56 @@
       "source": "CYANO",
       "target": "QUORUM",
       "relation": "connected_to"
+    },
+    {
+      "source": "DANDELION",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "DANDELION",
+      "target": "SUN",
+      "relation": "synergy"
+    },
+    {
+      "source": "DANDELION",
+      "target": "LEAF_TESS",
+      "relation": "synergy"
+    },
+    {
+      "source": "DANDELION",
+      "target": "FRACTAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "DANDELION",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "DUCKWEED",
+      "target": "CYANO",
+      "relation": "synergy"
+    },
+    {
+      "source": "DUCKWEED",
+      "target": "CURLY_DOCK",
+      "relation": "synergy"
+    },
+    {
+      "source": "DUCKWEED",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "DUCKWEED",
+      "target": "QUORUM",
+      "relation": "resonance"
+    },
+    {
+      "source": "DUCKWEED",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
     },
     {
       "source": "FE",

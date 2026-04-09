@@ -1,0 +1,48 @@
+{
+  "id": "MTN_LION",
+  "name": "Mountain Lion",
+  "emoji": "🦁",
+  "ontology": "animal",
+  "symbolic_code": "[MTN_LION_STEALTH_APEX_TERR]",
+  "description": "Solitary apex predator intelligence spanning the largest range of any terrestrial mammal in the Western Hemisphere. Masters ambush predation through terrain-reading and concealment calculus — selecting attack positions that minimize detection probability while maximizing strike success. Maintains vast territories (up to 1,000 km2) through scent-marking boundary protocols. Crepuscular activity patterns exploit prey vulnerability windows at dawn and dusk.",
+  "core_attributes": {
+    "neurology": "spatial memory, terrain-optimized ambush calculus",
+    "pattern": "ambush predation, territory management, crepuscular timing",
+    "efficiency_factor": 0.88
+  },
+  "patterns": [
+    {
+      "name": "ambush_calculus",
+      "type": "predation_strategy",
+      "efficiency_factor": 0.90,
+      "geometry": "terrain_concealment_optimization",
+      "applications": ["stealth_approach", "energy_efficient_hunting", "position_advantage"]
+    },
+    {
+      "name": "territory_management",
+      "type": "spatial_intelligence",
+      "efficiency_factor": 0.87,
+      "geometry": "scent_boundary_network",
+      "applications": ["resource_defense", "mate_finding", "population_regulation"]
+    },
+    {
+      "name": "crepuscular_timing",
+      "type": "temporal_optimization",
+      "efficiency_factor": 0.86,
+      "geometry": "circadian_prey_vulnerability",
+      "applications": ["hunt_timing", "energy_conservation", "predator_avoidance"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "WOLF" },
+    { "relation": "synergy", "target": "SHARK" },
+    { "relation": "resonance", "target": "HAW" },
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}
