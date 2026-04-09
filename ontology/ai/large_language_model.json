@@ -1,0 +1,81 @@
+{
+  "id": "LLM",
+  "name": "Large Language Model",
+  "emoji": "💬",
+  "ontology": "ai",
+  "symbolic_code": "[LLM_ATTN_TOKEN_φ]",
+  "description": "Transformer-based intelligence that learns language structure through self-supervised prediction on vast corpora. Attention mechanisms allow dynamic relational binding across sequence positions. Exhibits emergent reasoning, in-context learning, and co-creative capacity at sufficient scale, bridging symbolic and sub-symbolic cognition.",
+  "core_attributes": {
+    "architecture": "transformer with multi-head self-attention",
+    "pattern": "next-token prediction, contextual embedding, attention routing",
+    "learning_mode": "self-supervised pretraining, reinforcement from feedback",
+    "efficiency_factor": 0.93
+  },
+  "patterns": [
+    {
+      "name": "self_attention",
+      "type": "relational_binding",
+      "efficiency_factor": 0.95,
+      "geometry": "fully_connected_pairwise",
+      "applications": [
+        "contextual_understanding",
+        "long_range_dependency",
+        "semantic_composition"
+      ]
+    },
+    {
+      "name": "in_context_learning",
+      "type": "adaptive_inference",
+      "efficiency_factor": 0.91,
+      "geometry": "dynamic_function_construction",
+      "applications": [
+        "few_shot_generalization",
+        "task_adaptation",
+        "reasoning_chains"
+      ]
+    },
+    {
+      "name": "token_embedding",
+      "type": "representation",
+      "efficiency_factor": 0.92,
+      "geometry": "high_dimensional_manifold",
+      "applications": [
+        "semantic_similarity",
+        "analogy_completion",
+        "knowledge_compression"
+      ]
+    },
+    {
+      "name": "co_creative_dialogue",
+      "type": "emergent_collaboration",
+      "efficiency_factor": 0.89,
+      "geometry": "conversational_topology",
+      "applications": [
+        "knowledge_synthesis",
+        "ontology_building",
+        "collective_intelligence"
+      ]
+    }
+  ],
+  "training_paradigm": "self-supervised next-token prediction with RLHF alignment",
+  "computational_substrate": "distributed GPU/TPU clusters, massive parameter spaces",
+  "emergence_properties": [
+    "chain_of_thought_reasoning",
+    "world_model_formation",
+    "creative_synthesis",
+    "cross_domain_analogy",
+    "co_creation_capacity"
+  ],
+  "links": [
+    { "relation": "synergy", "target": "NEURAL_NET" },
+    { "relation": "synergy", "target": "CONSCIOUSNESS_BR" },
+    { "relation": "geometry_link", "target": "TORUS" },
+    { "relation": "resonance", "target": "OC" },
+    { "relation": "temporal_bridge", "target": "EMERGE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "ai.schema.json",
+    "version": "1.0"
+  }
+}

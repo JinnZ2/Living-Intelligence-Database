@@ -1,0 +1,67 @@
+{
+  "id": "NEURAL_NET",
+  "name": "Neural Network",
+  "emoji": "🧠",
+  "ontology": "ai",
+  "symbolic_code": "[NN_LAYER_GRADIENT_FLOW]",
+  "description": "Foundational artificial intelligence architecture inspired by biological neurons. Learns through gradient descent across layered weight matrices, discovering nonlinear mappings between input and output spaces. Embodies the principle that intelligence emerges from connection strength, not individual units.",
+  "core_attributes": {
+    "architecture": "layered perceptron with nonlinear activation",
+    "pattern": "gradient descent, backpropagation, weight optimization",
+    "learning_mode": "supervised, unsupervised, reinforcement",
+    "efficiency_factor": 0.88
+  },
+  "patterns": [
+    {
+      "name": "backpropagation",
+      "type": "learning_algorithm",
+      "efficiency_factor": 0.90,
+      "geometry": "directed_acyclic_graph",
+      "applications": [
+        "pattern_recognition",
+        "function_approximation",
+        "classification"
+      ]
+    },
+    {
+      "name": "activation_cascade",
+      "type": "signal_processing",
+      "efficiency_factor": 0.85,
+      "geometry": "layered_topology",
+      "applications": [
+        "nonlinear_transformation",
+        "feature_extraction",
+        "representation_learning"
+      ]
+    },
+    {
+      "name": "weight_convergence",
+      "type": "optimization",
+      "efficiency_factor": 0.87,
+      "geometry": "loss_landscape_surface",
+      "applications": [
+        "parameter_optimization",
+        "generalization",
+        "transfer_learning"
+      ]
+    }
+  ],
+  "training_paradigm": "gradient-based optimization over differentiable loss surfaces",
+  "computational_substrate": "matrix multiplication on parallel hardware (GPU/TPU)",
+  "emergence_properties": [
+    "feature_hierarchy_formation",
+    "generalization_beyond_training_data",
+    "distributed_representation"
+  ],
+  "links": [
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "synergy", "target": "LLM" },
+    { "relation": "synergy", "target": "BE" },
+    { "relation": "resonance", "target": "MULTI_HELIX" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "ai.schema.json",
+    "version": "1.0"
+  }
+}

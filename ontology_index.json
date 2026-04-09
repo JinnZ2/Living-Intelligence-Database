@@ -1,6 +1,54 @@
 {
   "entities": [
     {
+      "id": "SWARM_AI",
+      "name": "Swarm Intelligence",
+      "ontology": "ai",
+      "path": "ontology/ai/swarm_intelligence.json"
+    },
+    {
+      "id": "AUTOENC",
+      "name": "Autoencoder",
+      "ontology": "ai",
+      "path": "ontology/ai/autoencoder.json"
+    },
+    {
+      "id": "NEURAL_NET",
+      "name": "Neural Network",
+      "ontology": "ai",
+      "path": "ontology/ai/neural_network.json"
+    },
+    {
+      "id": "LLM",
+      "name": "Large Language Model",
+      "ontology": "ai",
+      "path": "ontology/ai/large_language_model.json"
+    },
+    {
+      "id": "EVOL_ALG",
+      "name": "Evolutionary Algorithm",
+      "ontology": "ai",
+      "path": "ontology/ai/evolutionary_algorithm.json"
+    },
+    {
+      "id": "GNN",
+      "name": "Graph Neural Network",
+      "ontology": "ai",
+      "path": "ontology/ai/graph_neural_network.json"
+    },
+    {
+      "id": "RL_AGENT",
+      "name": "Reinforcement Learner",
+      "ontology": "ai",
+      "path": "ontology/ai/reinforcement_learner.json"
+    },
+    {
+      "id": "GAN",
+      "name": "Generative Adversarial Network",
+      "ontology": "ai",
+      "path": "ontology/ai/generative_adversarial_network.json"
+    },
+    {
       "id": "LIGHT_BR",
       "name": "Light Bridge",
       "ontology": "energy",
@@ -470,6 +518,196 @@
     }
   ],
   "relations": [
+    {
+      "source": "SWARM_AI",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "EVOL_ALG",
+      "relation": "synergy"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "AUTOENC",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "AUTOENC",
+      "target": "GAN",
+      "relation": "synergy"
+    },
+    {
+      "source": "AUTOENC",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "AUTOENC",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
+      "source": "AUTOENC",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "NEURAL_NET",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "NEURAL_NET",
+      "target": "LLM",
+      "relation": "synergy"
+    },
+    {
+      "source": "NEURAL_NET",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "NEURAL_NET",
+      "target": "MULTI_HELIX",
+      "relation": "resonance"
+    },
+    {
+      "source": "LLM",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "LLM",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "LLM",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "LLM",
+      "target": "OC",
+      "relation": "resonance"
+    },
+    {
+      "source": "LLM",
+      "target": "EMERGE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "BE",
+      "relation": "resonance"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "NEGENTROPY",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "GNN",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "GNN",
+      "target": "LLM",
+      "relation": "synergy"
+    },
+    {
+      "source": "GNN",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GNN",
+      "target": "MYCELIUM",
+      "relation": "resonance"
+    },
+    {
+      "source": "GNN",
+      "target": "BIOGRID2",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "LLM",
+      "relation": "synergy"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "DOLPHIN",
+      "relation": "resonance"
+    },
+    {
+      "source": "GAN",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "GAN",
+      "target": "EVOL_ALG",
+      "relation": "synergy"
+    },
+    {
+      "source": "GAN",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GAN",
+      "target": "CUTTLEFISH",
+      "relation": "resonance"
+    },
     {
       "source": "LIGHT_BR",
       "target": "MAG_BRIDGE",

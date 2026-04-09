@@ -1,0 +1,69 @@
+{
+  "id": "SWARM_AI",
+  "name": "Swarm Intelligence",
+  "emoji": "🐝",
+  "ontology": "ai",
+  "symbolic_code": "[SWARM_DIST_EMERGE_τ]",
+  "description": "Computational intelligence inspired by collective behavior of social insects, flocking birds, and schooling fish. Decentralized agents following simple local rules produce globally coherent, adaptive behavior. Bridges biological swarm patterns (bee, ant) with distributed AI architectures.",
+  "core_attributes": {
+    "architecture": "decentralized multi-agent with local interaction rules",
+    "pattern": "stigmergy, pheromone trails, flocking alignment",
+    "learning_mode": "collective emergent optimization",
+    "efficiency_factor": 0.86
+  },
+  "patterns": [
+    {
+      "name": "particle_swarm_optimization",
+      "type": "collective_search",
+      "efficiency_factor": 0.88,
+      "geometry": "velocity_position_swarm_space",
+      "applications": [
+        "continuous_optimization",
+        "hyperparameter_tuning",
+        "path_planning"
+      ]
+    },
+    {
+      "name": "ant_colony_optimization",
+      "type": "graph_search",
+      "efficiency_factor": 0.85,
+      "geometry": "pheromone_weighted_graph",
+      "applications": [
+        "routing_optimization",
+        "scheduling",
+        "network_design"
+      ]
+    },
+    {
+      "name": "consensus_formation",
+      "type": "distributed_decision",
+      "efficiency_factor": 0.83,
+      "geometry": "network_topology",
+      "applications": [
+        "distributed_systems",
+        "sensor_fusion",
+        "collective_decision_making"
+      ]
+    }
+  ],
+  "training_paradigm": "decentralized local-rule iteration converging to global optima",
+  "computational_substrate": "parallel agent simulation, stigmergic communication",
+  "emergence_properties": [
+    "self_organization",
+    "collective_memory",
+    "adaptive_robustness",
+    "scalable_coordination"
+  ],
+  "links": [
+    { "relation": "synergy", "target": "BE" },
+    { "relation": "synergy", "target": "EVOL_ALG" },
+    { "relation": "geometry_link", "target": "HEX" },
+    { "relation": "resonance", "target": "BIOGRID2" },
+    { "relation": "energy_coupling", "target": "FLUX" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "ai.schema.json",
+    "version": "1.0"
+  }
+}

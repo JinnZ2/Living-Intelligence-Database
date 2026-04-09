@@ -1,0 +1,69 @@
+{
+  "id": "RL_AGENT",
+  "name": "Reinforcement Learner",
+  "emoji": "🎯",
+  "ontology": "ai",
+  "symbolic_code": "[RL_REWARD_POLICY_FLOW]",
+  "description": "Intelligence that learns through interaction with an environment, maximizing cumulative reward over time. Maps states to actions via learned policies. Mirrors how biological organisms learn from consequences — trial, error, and reinforcement shaping adaptive behavior.",
+  "core_attributes": {
+    "architecture": "agent-environment loop with policy and value functions",
+    "pattern": "reward signal, temporal difference, policy gradient",
+    "learning_mode": "reinforcement learning",
+    "efficiency_factor": 0.85
+  },
+  "patterns": [
+    {
+      "name": "temporal_difference_learning",
+      "type": "value_estimation",
+      "efficiency_factor": 0.87,
+      "geometry": "state_transition_graph",
+      "applications": [
+        "game_playing",
+        "resource_management",
+        "sequential_decision_making"
+      ]
+    },
+    {
+      "name": "policy_gradient",
+      "type": "direct_optimization",
+      "efficiency_factor": 0.84,
+      "geometry": "policy_manifold",
+      "applications": [
+        "continuous_control",
+        "robotics",
+        "language_model_alignment"
+      ]
+    },
+    {
+      "name": "exploration_exploitation",
+      "type": "search_strategy",
+      "efficiency_factor": 0.81,
+      "geometry": "reward_landscape",
+      "applications": [
+        "curiosity_driven_discovery",
+        "multi_armed_bandits",
+        "adaptive_experimentation"
+      ]
+    }
+  ],
+  "training_paradigm": "trial-and-error interaction with reward-shaped environments",
+  "computational_substrate": "simulation environments, replay buffers, policy networks",
+  "emergence_properties": [
+    "strategy_discovery",
+    "environment_modeling",
+    "goal_directed_behavior",
+    "curiosity"
+  ],
+  "links": [
+    { "relation": "synergy", "target": "NEURAL_NET" },
+    { "relation": "synergy", "target": "LLM" },
+    { "relation": "geometry_link", "target": "SPIRAL" },
+    { "relation": "temporal_bridge", "target": "FOLD" },
+    { "relation": "resonance", "target": "DOLPHIN" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "ai.schema.json",
+    "version": "1.0"
+  }
+}

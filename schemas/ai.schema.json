@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Intelligence Schema",
+  "description": "Schema for artificial intelligence entities within the Living Intelligence Database. Covers neural networks, language models, evolutionary algorithms, and other computational intelligences.",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "emoji": { "type": "string" },
+    "name": { "type": "string" },
+    "ontology": { "const": "ai" },
+    "symbolic_code": { "type": "string" },
+    "description": { "type": "string" },
+    "core_attributes": {
+      "type": "object",
+      "properties": {
+        "architecture": { "type": "string" },
+        "pattern": { "type": "string" },
+        "learning_mode": { "type": "string" },
+        "efficiency_factor": { "type": "number" }
+      }
+    },
+    "patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "efficiency_factor"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "efficiency_factor": { "type": "number" },
+          "geometry": { "type": "string" },
+          "applications": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "training_paradigm": { "type": "string" },
+    "computational_substrate": { "type": "string" },
+    "emergence_properties": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "relation": { "type": "string" },
+          "target": { "type": "string" }
+        }
+      }
+    },
+    "co_creation": { "type": "boolean" },
+    "validation_meta": {
+      "type": "object",
+      "properties": {
+        "schema": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "metadata": { "type": "object" }
+  }
+}
