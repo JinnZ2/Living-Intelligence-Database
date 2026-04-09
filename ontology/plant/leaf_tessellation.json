@@ -1,0 +1,22 @@
+{
+  "id": "LEAF_TESS",
+  "name": "Leaf Tessellation",
+  "emoji": "🍃",
+  "ontology": "plant",
+  "symbolic_code": "[LEAF_TESS_HEX_SPIRAL_φ]",
+  "description": "Sunlight capture optimization through tessellated leaf arrangement. Venation networks act as flow systems distributing water and sugars. Phyllotaxis follows golden-angle spirals to minimize self-shading, embodying phi-driven packing efficiency.",
+  "core_attributes": {
+    "pattern": "sunlight capture optimization, venation flow networks, phyllotaxis",
+    "geometry": "HEX/SPIRAL"
+  },
+  "links": [
+    { "relation": "geometry_link", "target": "HEX" },
+    { "relation": "geometry_link", "target": "SPIRAL" },
+    { "relation": "synergy", "target": "SUN" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

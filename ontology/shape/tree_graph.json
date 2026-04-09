@@ -1,0 +1,26 @@
+{
+  "id": "TREE_GRAPH",
+  "name": "Tree Graph",
+  "emoji": "🌳",
+  "ontology": "shape",
+  "symbolic_code": "[TREE_BRANCH_MIN_PATH]",
+  "description": "Branching flow topology with minimal redundancy. Appears in vascular networks, river deltas, lightning paths, neural dendrites, and file systems. Optimizes distribution from source to many endpoints via minimum-path load balancing.",
+  "core_attributes": {
+    "pattern": "branching flow, minimal redundancy distribution",
+    "geometry_type": "Graph"
+  },
+  "geometry_class": "graph",
+  "dimension": 2,
+  "harmonic_ratios": [1.618, 1.414],
+  "applications": ["vascular_networks", "data_structures", "distribution_systems", "neural_dendrites"],
+  "links": [
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "synergy", "target": "ROOT_NET" },
+    { "relation": "resonance", "target": "MY" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "shape.schema.json",
+    "version": "1.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "EM_FIELD",
+  "name": "Electromagnetic Field",
+  "emoji": "📡",
+  "ontology": "energy",
+  "symbolic_code": "[EM_SIGNAL_RESONATE_τ]",
+  "description": "Universal signal carrier enabling resonance and coupling across scales. Mediates light, radio, and bioelectric communication. Governed by Maxwell's equations with tau (2pi) as the fundamental oscillation constant.",
+  "core_attributes": {
+    "pattern": "signal carrier, resonance coupling across scales",
+    "energy_mode": "electromagnetic radiation and induction"
+  },
+  "transmission_modes": ["radiation", "induction", "waveguide", "resonant_coupling"],
+  "conversion_efficiency": 0.95,
+  "pattern_couplings": ["magnetic_field", "electric_field", "light_bridge"],
+  "links": [
+    { "relation": "synergy", "target": "MAGNETIC_FIELD" },
+    { "relation": "synergy", "target": "ELECTRIC_FIELD" },
+    { "relation": "resonance", "target": "LIGHT_BR" },
+    { "relation": "energy_coupling", "target": "RES_SENSOR" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "energy.schema.json",
+    "version": "1.0"
+  }
+}

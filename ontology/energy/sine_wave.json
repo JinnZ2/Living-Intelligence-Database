@@ -1,0 +1,25 @@
+{
+  "id": "SINE_WAVE",
+  "name": "Sine Wave",
+  "emoji": "〰️",
+  "ontology": "energy",
+  "symbolic_code": "[SINE_OSC_τ_BASIS]",
+  "description": "Fundamental oscillation pattern and superposition basis for all periodic phenomena. Any complex signal can be decomposed into sine wave components via Fourier analysis. Governed by tau (2pi), the natural period constant.",
+  "core_attributes": {
+    "pattern": "fundamental oscillation, superposition basis",
+    "energy_mode": "periodic oscillation"
+  },
+  "transmission_modes": ["waveform_propagation", "standing_wave", "superposition"],
+  "conversion_efficiency": 1.0,
+  "pattern_couplings": ["electromagnetic_field", "resonance_sensor", "flux"],
+  "links": [
+    { "relation": "geometry_link", "target": "SPIRAL" },
+    { "relation": "resonance", "target": "RES_SENSOR" },
+    { "relation": "energy_coupling", "target": "EM_FIELD" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "energy.schema.json",
+    "version": "1.0"
+  }
+}
