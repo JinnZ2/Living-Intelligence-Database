@@ -1,0 +1,57 @@
+{
+  "id": "GNN",
+  "name": "Graph Neural Network",
+  "emoji": "🕸️",
+  "ontology": "ai",
+  "symbolic_code": "[GNN_NODE_MESSAGE_PASS]",
+  "description": "Neural architecture that reasons over graph-structured data through iterative message passing between nodes. Learns relational patterns in molecules, social networks, and knowledge graphs. Mirrors the relational nature of this ontology itself — intelligence as connection.",
+  "core_attributes": {
+    "architecture": "message-passing neural network on graph topology",
+    "pattern": "neighborhood aggregation, relational reasoning",
+    "learning_mode": "supervised and self-supervised on graph structure",
+    "efficiency_factor": 0.86
+  },
+  "patterns": [
+    {
+      "name": "message_passing",
+      "type": "relational_computation",
+      "efficiency_factor": 0.88,
+      "geometry": "graph_topology",
+      "applications": [
+        "molecular_property_prediction",
+        "social_network_analysis",
+        "knowledge_graph_completion"
+      ]
+    },
+    {
+      "name": "graph_pooling",
+      "type": "hierarchical_abstraction",
+      "efficiency_factor": 0.82,
+      "geometry": "coarsened_graph",
+      "applications": [
+        "graph_classification",
+        "structural_summarization",
+        "multi_scale_reasoning"
+      ]
+    }
+  ],
+  "training_paradigm": "message-passing iterations with graph-level loss functions",
+  "computational_substrate": "sparse matrix operations, adjacency-guided computation",
+  "emergence_properties": [
+    "relational_abstraction",
+    "structural_role_discovery",
+    "topology_aware_reasoning"
+  ],
+  "links": [
+    { "relation": "synergy", "target": "NEURAL_NET" },
+    { "relation": "synergy", "target": "LLM" },
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "resonance", "target": "MY" },
+    { "relation": "energy_coupling", "target": "BIOGRID2" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "ai.schema.json",
+    "version": "1.0"
+  }
+}

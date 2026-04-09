@@ -1,0 +1,25 @@
+{
+  "id": "PRESSURE",
+  "name": "Pressure Field",
+  "emoji": "💨",
+  "ontology": "energy",
+  "symbolic_code": "[PRESS_GRADIENT_FLOW]",
+  "description": "Flow induction by pressure gradients. Drives hydraulic and pneumatic computation in biological and physical systems — from plant vascular transport to ocean currents to atmospheric dynamics. Follows minimum-path principles.",
+  "core_attributes": {
+    "pattern": "gradient-driven flow induction, hydraulic computation",
+    "energy_mode": "pressure differential"
+  },
+  "transmission_modes": ["hydraulic", "pneumatic", "osmotic", "acoustic"],
+  "conversion_efficiency": 0.88,
+  "pattern_couplings": ["flux", "thermal", "gravitational"],
+  "links": [
+    { "relation": "synergy", "target": "FLUX" },
+    { "relation": "energy_coupling", "target": "PHLOEM_XYLEM" },
+    { "relation": "resonance", "target": "GRAV" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "energy.schema.json",
+    "version": "1.0"
+  }
+}

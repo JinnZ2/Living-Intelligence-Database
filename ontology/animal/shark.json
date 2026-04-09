@@ -1,0 +1,47 @@
+{
+  "id": "SHARK",
+  "name": "Shark",
+  "emoji": "🦈",
+  "ontology": "animal",
+  "symbolic_code": "[SHARK_PURSUE_EM_SENSE]",
+  "description": "Pursuit-optimized predator intelligence. Electromagnetic prey sensing via ampullae of Lorenzini enables detection of bioelectric fields. Hydrodynamic body form minimizes drag, embodying pursuit algorithms refined over 400 million years.",
+  "core_attributes": {
+    "neurology": "electroreceptive lateral line system",
+    "pattern": "pursuit algorithms, electromagnetic prey sensing",
+    "efficiency_factor": 0.91
+  },
+  "patterns": [
+    {
+      "name": "electroreception",
+      "type": "sensory_processing",
+      "efficiency_factor": 0.93,
+      "geometry": "field_gradient_detection",
+      "applications": [
+        "prey_detection",
+        "magnetic_navigation",
+        "signal_filtering"
+      ]
+    },
+    {
+      "name": "pursuit_predation",
+      "type": "pursuit_algorithm",
+      "efficiency_factor": 0.90,
+      "geometry": "torpedo_streamline",
+      "applications": [
+        "tracking_optimization",
+        "energy_efficient_locomotion",
+        "burst_speed_strategy"
+      ]
+    }
+  ],
+  "links": [
+    { "relation": "geometry_link", "target": "SPIRAL" },
+    { "relation": "resonance", "target": "ELECTRIC_FIELD" },
+    { "relation": "synergy", "target": "DOLPHIN" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

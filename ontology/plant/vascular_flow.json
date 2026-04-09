@@ -1,0 +1,21 @@
+{
+  "id": "PHLOEM_XYLEM",
+  "name": "Vascular Flow",
+  "emoji": "🌿",
+  "ontology": "plant",
+  "symbolic_code": "[PHLOEM_XYLEM_BIDIR_FLOW]",
+  "description": "Bidirectional transport intelligence in plant vasculature. Xylem carries water and minerals upward via transpiration pull; phloem distributes photosynthates downward via pressure-driven flow. Together they form a hydraulic computation network balancing supply and demand across the organism.",
+  "core_attributes": {
+    "pattern": "bidirectional transport, pressure-solute driven flow"
+  },
+  "links": [
+    { "relation": "energy_coupling", "target": "FLUX" },
+    { "relation": "synergy", "target": "ROOT_NET" },
+    { "relation": "synergy", "target": "MY" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

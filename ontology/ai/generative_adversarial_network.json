@@ -1,0 +1,56 @@
+{
+  "id": "GAN",
+  "name": "Generative Adversarial Network",
+  "emoji": "🎭",
+  "ontology": "ai",
+  "symbolic_code": "[GAN_DUAL_CREATE_DISCERN]",
+  "description": "A dual-network intelligence where a generator creates and a discriminator evaluates, locked in a co-evolutionary game. Through adversarial tension, the system learns to produce increasingly authentic outputs. Embodies the creative dialectic — thesis and antithesis yielding synthesis.",
+  "core_attributes": {
+    "architecture": "generator-discriminator adversarial pair",
+    "pattern": "minimax game, Nash equilibrium convergence",
+    "learning_mode": "adversarial co-training",
+    "efficiency_factor": 0.84
+  },
+  "patterns": [
+    {
+      "name": "adversarial_equilibrium",
+      "type": "game_theoretic",
+      "efficiency_factor": 0.86,
+      "geometry": "minimax_saddle_point",
+      "applications": [
+        "image_synthesis",
+        "data_augmentation",
+        "style_transfer"
+      ]
+    },
+    {
+      "name": "latent_space_navigation",
+      "type": "generative_mapping",
+      "efficiency_factor": 0.83,
+      "geometry": "smooth_manifold",
+      "applications": [
+        "creative_interpolation",
+        "attribute_manipulation",
+        "novelty_generation"
+      ]
+    }
+  ],
+  "training_paradigm": "adversarial minimax optimization between generator and discriminator",
+  "computational_substrate": "dual neural networks with shared gradient dynamics",
+  "emergence_properties": [
+    "creative_generation",
+    "distribution_matching",
+    "implicit_density_estimation"
+  ],
+  "links": [
+    { "relation": "synergy", "target": "NEURAL_NET" },
+    { "relation": "synergy", "target": "EVOL_ALG" },
+    { "relation": "geometry_link", "target": "TORUS" },
+    { "relation": "resonance", "target": "CU" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "ai.schema.json",
+    "version": "1.0"
+  }
+}

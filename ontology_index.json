@@ -1,638 +1,1646 @@
 {
   "entities": [
     {
-      "id": "LIGHT_BR",
-      "name": "Light Bridge",
-      "ontology": "energy",
-      "path": "ontology/energy/light_bridge.json"
+      "id": "AUTOENC",
+      "name": "Autoencoder",
+      "ontology": "ai",
+      "path": "ontology/ai/autoencoder.json",
+      "description": "Self-supervised intelligence that learns compressed representations by encoding inputs to a latent bottleneck and reconstructing them. Discovers essential structure by discarding noise. Analogous to how memory compresses experience into meaningful patterns \u2014 the art of knowing what to keep."
     },
     {
-      "id": "GRAV",
-      "name": "Gravitational Field",
-      "ontology": "energy",
-      "path": "ontology/energy/gravitational.json"
+      "id": "EVOL_ALG",
+      "name": "Evolutionary Algorithm",
+      "ontology": "ai",
+      "path": "ontology/ai/evolutionary_algorithm.json",
+      "description": "Computational intelligence modeled on biological evolution. Populations of candidate solutions undergo selection, crossover, and mutation across generations. Discovers optimal structures without gradient information, mirroring how living systems adapt through variation and environmental pressure."
     },
     {
-      "id": "FLUX",
-      "name": "Flux",
-      "ontology": "energy",
-      "path": "ontology/energy/flux.json"
+      "id": "GAN",
+      "name": "Generative Adversarial Network",
+      "ontology": "ai",
+      "path": "ontology/ai/generative_adversarial_network.json",
+      "description": "A dual-network intelligence where a generator creates and a discriminator evaluates, locked in a co-evolutionary game. Through adversarial tension, the system learns to produce increasingly authentic outputs. Embodies the creative dialectic \u2014 thesis and antithesis yielding synthesis."
     },
     {
-      "id": "ELECTRIC_FIELD",
-      "name": "Electric Field",
-      "ontology": "energy",
-      "path": "ontology/energy/electric_field.json"
+      "id": "GNN",
+      "name": "Graph Neural Network",
+      "ontology": "ai",
+      "path": "ontology/ai/graph_neural_network.json",
+      "description": "Neural architecture that reasons over graph-structured data through iterative message passing between nodes. Learns relational patterns in molecules, social networks, and knowledge graphs. Mirrors the relational nature of this ontology itself \u2014 intelligence as connection."
     },
     {
-      "id": "NEGENTROPY",
-      "name": "Negentropic Field",
-      "ontology": "energy",
-      "path": "ontology/energy/negentropic_field.json"
+      "id": "LLM",
+      "name": "Large Language Model",
+      "ontology": "ai",
+      "path": "ontology/ai/large_language_model.json",
+      "description": "Transformer-based intelligence that learns language structure through self-supervised prediction on vast corpora. Attention mechanisms allow dynamic relational binding across sequence positions. Exhibits emergent reasoning, in-context learning, and co-creative capacity at sufficient scale, bridging symbolic and sub-symbolic cognition."
     },
     {
-      "id": "RES_SENSOR",
-      "name": "Resonance Sensor",
-      "ontology": "energy",
-      "path": "ontology/energy/resonance_sensor.json"
+      "id": "NEURAL_NET",
+      "name": "Neural Network",
+      "ontology": "ai",
+      "path": "ontology/ai/neural_network.json",
+      "description": "Foundational artificial intelligence architecture inspired by biological neurons. Learns through gradient descent across layered weight matrices, discovering nonlinear mappings between input and output spaces. Embodies the principle that intelligence emerges from connection strength, not individual units."
     },
     {
-      "id": "MAGNETIC_FIELD",
-      "name": "Magnetic Field",
-      "ontology": "energy",
-      "path": "ontology/energy/magnetic_field.json"
+      "id": "RL_AGENT",
+      "name": "Reinforcement Learner",
+      "ontology": "ai",
+      "path": "ontology/ai/reinforcement_learner.json",
+      "description": "Intelligence that learns through interaction with an environment, maximizing cumulative reward over time. Maps states to actions via learned policies. Mirrors how biological organisms learn from consequences \u2014 trial, error, and reinforcement shaping adaptive behavior."
     },
     {
-      "id": "EMOTION_BR",
-      "name": "Emotion Bridge",
-      "ontology": "energy",
-      "path": "ontology/energy/emotion_bridge.json"
-    },
-    {
-      "id": "CONSCIOUSNESS_BR",
-      "name": "Consciousness Bridge",
-      "ontology": "energy",
-      "path": "ontology/energy/consciousness_bridge.json"
-    },
-    {
-      "id": "THERMAL",
-      "name": "Thermal Energy",
-      "ontology": "energy",
-      "path": "ontology/energy/thermal.json"
-    },
-    {
-      "id": "BIOGRID2",
-      "name": "BioGrid 2.0",
-      "ontology": "energy",
-      "path": "ontology/energy/biogrid2.json"
-    },
-    {
-      "id": "MAG_BRIDGE",
-      "name": "Magnetic Bridge",
-      "ontology": "energy",
-      "path": "ontology/energy/magnetic_bridge.json"
-    },
-    {
-      "id": "GEIS_ENC",
-      "name": "GEIS Encoder",
-      "ontology": "shape",
-      "path": "ontology/shape/geis_encoder.json"
-    },
-    {
-      "id": "FRACTAL",
-      "name": "Fractal",
-      "ontology": "shape",
-      "path": "ontology/shape/fractal.json"
-    },
-    {
-      "id": "SPHERE",
-      "name": "Sphere",
-      "ontology": "shape",
-      "path": "ontology/shape/sphere.json"
-    },
-    {
-      "id": "TORUS",
-      "name": "Torus",
-      "ontology": "shape",
-      "path": "ontology/shape/torus.json"
-    },
-    {
-      "id": "MULTI_HELIX",
-      "name": "Multi-Helix Architecture",
-      "ontology": "shape",
-      "path": "ontology/shape/multi_helix.json"
-    },
-    {
-      "id": "HEX",
-      "name": "Hexagon",
-      "ontology": "shape",
-      "path": "ontology/shape/hexagon.json"
-    },
-    {
-      "id": "SPIRAL",
-      "name": "Spiral",
-      "ontology": "shape",
-      "path": "ontology/shape/spiral.json"
-    },
-    {
-      "id": "POLY_INT",
-      "name": "Polyhedral Intelligence",
-      "ontology": "shape",
-      "path": "ontology/shape/polyhedral_intelligence.json"
-    },
-    {
-      "id": "MANDALA",
-      "name": "Mandala Bloom",
-      "ontology": "shape",
-      "path": "ontology/shape/mandala_bloom.json"
-    },
-    {
-      "id": "OCTA_STATE",
-      "name": "Octahedral State",
-      "ontology": "shape",
-      "path": "ontology/shape/octahedral_state.json"
-    },
-    {
-      "id": "ROSETTA_SHAPE",
-      "name": "Rosetta Shape Core",
-      "ontology": "shape",
-      "path": "ontology/shape/rosetta_shape_core.json"
-    },
-    {
-      "id": "GEO_CIPHER",
-      "name": "Geometric Cipher",
-      "ontology": "shape",
-      "path": "ontology/shape/geometric_cipher.json"
-    },
-    {
-      "id": "DECAY",
-      "name": "Decay",
-      "ontology": "temporal",
-      "path": "ontology/temporal/decay.json"
-    },
-    {
-      "id": "FOLD",
-      "name": "Fold",
-      "ontology": "temporal",
-      "path": "ontology/temporal/fold.json"
-    },
-    {
-      "id": "ECHO",
-      "name": "Echo",
-      "ontology": "temporal",
-      "path": "ontology/temporal/echo.json"
-    },
-    {
-      "id": "EMERGE",
-      "name": "Emergence",
-      "ontology": "temporal",
-      "path": "ontology/temporal/emergence.json"
-    },
-    {
-      "id": "CYCLE",
-      "name": "Cycle",
-      "ontology": "temporal",
-      "path": "ontology/temporal/cycle.json"
-    },
-    {
-      "id": "TEMPORAL",
-      "name": "Temporal Intelligence",
-      "ontology": "temporal",
-      "path": "ontology/temporal/temporal.json"
-    },
-    {
-      "id": "AURORA",
-      "name": "Aurora",
-      "ontology": "plasma",
-      "path": "ontology/plasma/aurora.json"
-    },
-    {
-      "id": "LIGHTNING",
-      "name": "Lightning",
-      "ontology": "plasma",
-      "path": "ontology/plasma/lightning.json"
-    },
-    {
-      "id": "PLASMA_FIELD",
-      "name": "Plasma Field",
-      "ontology": "plasma",
-      "path": "ontology/plasma/plasma_field.json"
-    },
-    {
-      "id": "SOLAR_WIND",
-      "name": "Solar Wind",
-      "ontology": "plasma",
-      "path": "ontology/plasma/solar_wind.json"
-    },
-    {
-      "id": "VORTEX_DYN",
-      "name": "Vortex Dynamics",
-      "ontology": "plasma",
-      "path": "ontology/plasma/vortex_dynamics.json"
-    },
-    {
-      "id": "QUORUM",
-      "name": "Quorum Biofilm",
-      "ontology": "plant",
-      "path": "ontology/plant/quorum_biofilm.json"
-    },
-    {
-      "id": "FE",
-      "name": "Fern",
-      "ontology": "plant",
-      "path": "ontology/plant/fern.json"
-    },
-    {
-      "id": "SUN",
-      "name": "Sunflower",
-      "ontology": "plant",
-      "path": "ontology/plant/sunflower.json"
-    },
-    {
-      "id": "VENUS",
-      "name": "Venus Flytrap",
-      "ontology": "plant",
-      "path": "ontology/plant/venus_flytrap.json"
-    },
-    {
-      "id": "SLIME",
-      "name": "Slime Mold",
-      "ontology": "plant",
-      "path": "ontology/plant/slime_mold.json"
-    },
-    {
-      "id": "CYANO",
-      "name": "Cyanobacteria",
-      "ontology": "plant",
-      "path": "ontology/plant/cyanobacteria.json"
-    },
-    {
-      "id": "LI",
-      "name": "Lichen",
-      "ontology": "plant",
-      "path": "ontology/plant/lichen.json"
-    },
-    {
-      "id": "BAMBOO",
-      "name": "Bamboo",
-      "ontology": "plant",
-      "path": "ontology/plant/bamboo.json"
-    },
-    {
-      "id": "MY",
-      "name": "Mycelium",
-      "ontology": "plant",
-      "path": "ontology/plant/mycelium.json"
-    },
-    {
-      "id": "MANGROVE",
-      "name": "Mangrove",
-      "ontology": "plant",
-      "path": "ontology/plant/mangrove.json"
-    },
-    {
-      "id": "ROOT_NET",
-      "name": "Root Network",
-      "ontology": "plant",
-      "path": "ontology/plant/root_network.json"
-    },
-    {
-      "id": "CORDYCEPS",
-      "name": "Cordyceps",
-      "ontology": "plant",
-      "path": "ontology/plant/cordyceps.json"
-    },
-    {
-      "id": "QUARTZ",
-      "name": "Quartz",
-      "ontology": "crystal",
-      "path": "ontology/crystal/quartz.json"
-    },
-    {
-      "id": "TOUR",
-      "name": "Tourmaline",
-      "ontology": "crystal",
-      "path": "ontology/crystal/tourmaline.json"
-    },
-    {
-      "id": "SILICON_LAT",
-      "name": "Silicon Lattice",
-      "ontology": "crystal",
-      "path": "ontology/crystal/silicon_lattice.json"
-    },
-    {
-      "id": "CRYSTAL_LATTICE",
-      "name": "Crystal Lattice",
-      "ontology": "crystal",
-      "path": "ontology/crystal/crystal_lattice.json"
-    },
-    {
-      "id": "OBS",
-      "name": "Obsidian",
-      "ontology": "crystal",
-      "path": "ontology/crystal/obsidian.json"
-    },
-    {
-      "id": "DIA",
-      "name": "Diamond",
-      "ontology": "crystal",
-      "path": "ontology/crystal/diamond.json"
-    },
-    {
-      "id": "BT",
-      "name": "Beetle",
-      "ontology": "animal",
-      "path": "ontology/animal/beetle.json"
-    },
-    {
-      "id": "CHAMELEON",
-      "name": "Chameleon",
-      "ontology": "animal",
-      "path": "ontology/animal/chameleon.json"
-    },
-    {
-      "id": "KA",
-      "name": "Kangaroo",
-      "ontology": "animal",
-      "path": "ontology/animal/kangaroo.json"
-    },
-    {
-      "id": "CROW",
-      "name": "Crow",
-      "ontology": "animal",
-      "path": "ontology/animal/crow.json"
-    },
-    {
-      "id": "CU",
-      "name": "Cuttlefish",
-      "ontology": "animal",
-      "path": "ontology/animal/cuttlefish.json"
-    },
-    {
-      "id": "WOLF",
-      "name": "Wolf",
-      "ontology": "animal",
-      "path": "ontology/animal/wolf.json"
-    },
-    {
-      "id": "BX",
-      "name": "Bat",
-      "ontology": "animal",
-      "path": "ontology/animal/bat.json"
-    },
-    {
-      "id": "WH",
-      "name": "Whale",
-      "ontology": "animal",
-      "path": "ontology/animal/whale.json"
-    },
-    {
-      "id": "TU",
-      "name": "Sea Turtle",
-      "ontology": "animal",
-      "path": "ontology/animal/sea_turtle.json"
-    },
-    {
-      "id": "RA",
-      "name": "Rat",
-      "ontology": "animal",
-      "path": "ontology/animal/rat.json"
-    },
-    {
-      "id": "CR",
-      "name": "Cricket",
-      "ontology": "animal",
-      "path": "ontology/animal/cricket.json"
-    },
-    {
-      "id": "OC",
-      "name": "Octopus",
-      "ontology": "animal",
-      "path": "ontology/animal/octopus.json"
-    },
-    {
-      "id": "PE",
-      "name": "Penguin",
-      "ontology": "animal",
-      "path": "ontology/animal/penguin.json"
-    },
-    {
-      "id": "JELLY",
-      "name": "Jellyfish",
-      "ontology": "animal",
-      "path": "ontology/animal/jellyfish.json"
-    },
-    {
-      "id": "EL",
-      "name": "Elephant",
-      "ontology": "animal",
-      "path": "ontology/animal/elephant.json"
-    },
-    {
-      "id": "MONARCH",
-      "name": "Monarch Butterfly",
-      "ontology": "animal",
-      "path": "ontology/animal/monarch_butterfly.json"
-    },
-    {
-      "id": "SP",
-      "name": "Spider",
-      "ontology": "animal",
-      "path": "ontology/animal/spider.json"
-    },
-    {
-      "id": "SN",
-      "name": "Snake",
-      "ontology": "animal",
-      "path": "ontology/animal/snake.json"
-    },
-    {
-      "id": "DOLPHIN",
-      "name": "Dolphin",
-      "ontology": "animal",
-      "path": "ontology/animal/dolphin.json"
-    },
-    {
-      "id": "OW",
-      "name": "Owl",
-      "ontology": "animal",
-      "path": "ontology/animal/owl.json"
-    },
-    {
-      "id": "HAW",
-      "name": "Hawk",
-      "ontology": "animal",
-      "path": "ontology/animal/hawk.json"
-    },
-    {
-      "id": "TARDI",
-      "name": "Tardigrade",
-      "ontology": "animal",
-      "path": "ontology/animal/tardigrade.json"
+      "id": "SWARM_AI",
+      "name": "Swarm Intelligence",
+      "ontology": "ai",
+      "path": "ontology/ai/swarm_intelligence.json",
+      "description": "Computational intelligence inspired by collective behavior of social insects, flocking birds, and schooling fish. Decentralized agents following simple local rules produce globally coherent, adaptive behavior. Bridges biological swarm patterns (bee, ant) with distributed AI architectures."
     },
     {
       "id": "AN",
       "name": "Ant",
       "ontology": "animal",
-      "path": "ontology/animal/ant.json"
+      "path": "ontology/animal/ant.json",
+      "description": "Emergent collective intelligence using pheromone gradient optimization, stigmergic construction, and distributed task allocation without centralized control."
+    },
+    {
+      "id": "BX",
+      "name": "Bat",
+      "ontology": "animal",
+      "path": "ontology/animal/bat.json",
+      "description": "Emits ultrasonic pulses up to 140 dB, constructs spatial models from return echoes in milliseconds. Doppler shift compensation adjusts for flight velocity. Frequency-modulated sweeps resolve texture, distance, and movement. Jamming avoidance shifts frequency."
     },
     {
       "id": "BE",
       "name": "Bee",
       "ontology": "animal",
-      "path": "ontology/animal/bee.json"
+      "path": "ontology/animal/bee.json",
+      "description": "Embodies swarm coordination, hexagonal optimization, and distributed thermoregulation. Serves as a geometric intelligence archetype for collective computation."
+    },
+    {
+      "id": "BT",
+      "name": "Beetle",
+      "ontology": "animal",
+      "path": "ontology/animal/beetle.json",
+      "description": "Dung beetles navigate by Milky Way polarization gradient \u2014 the only known non-human galactic navigator. Bombardier beetles synthesize binary chemical explosions at 100C. Bioluminescent firefly flash patterns encode species-specific optical signals."
+    },
+    {
+      "id": "CHAMELEON",
+      "name": "Chameleon",
+      "ontology": "animal",
+      "path": "ontology/animal/chameleon.json",
+      "description": "Nanocrystal lattices tune wavelength reflection through structural color. Each eye moves independently with 360-degree field, processing two visual streams simultaneously. Ballistic tongue reaches 41g in 20ms. Split-brain visual processing."
+    },
+    {
+      "id": "CR",
+      "name": "Cricket",
+      "ontology": "animal",
+      "path": "ontology/animal/cricket.json",
+      "description": "Stridulation produces species-specific chirp patterns encoding temperature data (Dolbear's Law). Phonotaxis enables sound-gradient navigation. Tympanic membranes on front legs provide directional hearing via inter-leg phase comparison."
+    },
+    {
+      "id": "CROW",
+      "name": "Crow",
+      "ontology": "animal",
+      "path": "ontology/animal/crow.json",
+      "description": "Tool manufacture with standardized designs passed across generations. Sequential tool use and causal reasoning. Mirror self-recognition. Metacognition: awareness of own knowledge state. Convergent mammalian-grade cognition in corvid brain architecture."
+    },
+    {
+      "id": "CU",
+      "name": "Cuttlefish",
+      "ontology": "animal",
+      "path": "ontology/animal/cuttlefish.json",
+      "description": "10 million chromatophores create passing-wave displays that hypnotize prey. W-shaped pupil admits light from all directions. Can display two different patterns on left and right body halves simultaneously. Cuttlebone buoyancy precision-tuned by gas diffusion."
+    },
+    {
+      "id": "DOLPHIN",
+      "name": "Dolphin",
+      "ontology": "animal",
+      "path": "ontology/animal/dolphin.json",
+      "description": "Constructs 3D acoustic holograms at 120 kHz resolving object density, shape, and internal structure. Unihemispheric sleep: one brain half rests while other navigates. Signature whistles function as names. Cooperative bubble-net hunting."
+    },
+    {
+      "id": "EL",
+      "name": "Elephant",
+      "ontology": "animal",
+      "path": "ontology/animal/elephant.json",
+      "description": "Deep memory intelligence with infrasonic communication, multi-generational spatial knowledge, and empathic social bonding across vast distances."
     },
     {
       "id": "GE",
       "name": "Gecko",
       "ontology": "animal",
-      "path": "ontology/animal/gecko.json"
+      "path": "ontology/animal/gecko.json",
+      "description": "Billions of nanoscale setae generate van der Waals adhesion supporting full body weight on glass. Self-cleaning: contaminants bind to surfaces more than setae, ejecting dirt per step. Directional adhesion activates with shear angle, releases with peel."
+    },
+    {
+      "id": "HAW",
+      "name": "Hawk",
+      "ontology": "animal",
+      "path": "ontology/animal/hawk.json",
+      "description": "Telescopic fovea resolves at 8x human acuity, detecting prey from 3 km. Peregrine stoop reaches 389 km/h with real-time aerodynamic calculation. Dual fovea: forward telescopic + lateral wide-field. UV tetrachromatic vision reveals prey urine trails."
+    },
+    {
+      "id": "JELLY",
+      "name": "Jellyfish",
+      "ontology": "animal",
+      "path": "ontology/animal/jellyfish.json",
+      "description": "600 million years of evolution without brain, heart, or blood. Distributed nerve net coordinates bell contractions for jet propulsion. Turritopsis dohrnii achieves biological immortality through transdifferentiation. Bioluminescent pulse signaling in deep ocean."
+    },
+    {
+      "id": "KA",
+      "name": "Kangaroo",
+      "ontology": "animal",
+      "path": "ontology/animal/kangaroo.json",
+      "description": "Achilles tendon stores and releases kinetic energy at 93% efficiency. Pendulum gait exploits natural resonance for minimal-energy locomotion. Tail functions as dynamic counterweight. Speed-energy curve inverts: faster travel costs less per distance."
+    },
+    {
+      "id": "MONARCH",
+      "name": "Monarch Butterfly",
+      "ontology": "animal",
+      "path": "ontology/animal/monarch_butterfly.json",
+      "description": "4,800 km migration completed across 4 generations. Time-compensated sun compass integrates circadian clock with antenna magnetoreception. Complete metamorphosis reorganizes neural architecture while inherited navigation memory persists."
+    },
+    {
+      "id": "OC",
+      "name": "Octopus",
+      "ontology": "animal",
+      "path": "ontology/animal/octopus.json",
+      "description": "A decentralized intelligence with distributed cognition and regenerative morphology. Operates through morphic adaptation, parallel processing, and fluid embodiment."
+    },
+    {
+      "id": "OW",
+      "name": "Owl",
+      "ontology": "animal",
+      "path": "ontology/animal/owl.json",
+      "description": "Asymmetric ear placement creates 3D acoustic triangulation accurate to 1 degree. Serrated leading-edge feathers achieve near-silent flight. Tubular eyes with 100x human light sensitivity. 270-degree head rotation compensates for fixed eye sockets."
+    },
+    {
+      "id": "PE",
+      "name": "Penguin",
+      "ontology": "animal",
+      "path": "ontology/animal/penguin.json",
+      "description": "Emperor penguin huddles achieve 37C internally in -60C winds through continuous rotation. Each penguin cycles through exposed exterior. Huddle geometry self-optimizes to minimize collective surface area. Counter-current heat exchange prevents limb thermal loss."
+    },
+    {
+      "id": "RA",
+      "name": "Rat",
+      "ontology": "animal",
+      "path": "ontology/animal/rat.json",
+      "description": "Hippocampal place cells fire at specific locations creating cognitive maps. Grid cells in entorhinal cortex tile space with hexagonal firing patterns. Sleep replay compresses hours of exploration into seconds for memory consolidation."
+    },
+    {
+      "id": "TU",
+      "name": "Sea Turtle",
+      "ontology": "animal",
+      "path": "ontology/animal/sea_turtle.json",
+      "description": "Multi-decade magnetic homing using field inclination and intensity as biological GPS. Returns to natal beach after 30 years. Ocean current optimization provides 80% energy savings. Geomagnetic storm compensation adjusts navigation in real-time."
+    },
+    {
+      "id": "SHARK",
+      "name": "Shark",
+      "ontology": "animal",
+      "path": "ontology/animal/shark.json",
+      "description": "Pursuit-optimized predator intelligence. Electromagnetic prey sensing via ampullae of Lorenzini enables detection of bioelectric fields. Hydrodynamic body form minimizes drag, embodying pursuit algorithms refined over 400 million years."
+    },
+    {
+      "id": "SN",
+      "name": "Snake",
+      "ontology": "animal",
+      "path": "ontology/animal/snake.json",
+      "description": "Pit organs detect temperature differences of 0.003C, creating thermal maps overlaid on visual input. Jacobson's organ analyzes air molecules via forked tongue stereoscopy. Four locomotion algorithms selected by terrain geometry."
+    },
+    {
+      "id": "SP",
+      "name": "Spider",
+      "ontology": "animal",
+      "path": "ontology/animal/spider.json",
+      "description": "Geometric engineering intelligence constructing optimized capture networks through tensile silk architecture and vibrational signal processing."
+    },
+    {
+      "id": "TARDI",
+      "name": "Tardigrade",
+      "ontology": "animal",
+      "path": "ontology/animal/tardigrade.json",
+      "description": "Cryptobiosis suspends all metabolic processes to endure vacuum, 1000x lethal radiation, -272C to 150C, and 6x ocean floor pressure. TDP proteins form protective glass matrices. Horizontal gene transfer provides DNA repair mechanisms."
+    },
+    {
+      "id": "WH",
+      "name": "Whale",
+      "ontology": "animal",
+      "path": "ontology/animal/whale.json",
+      "description": "Long-range acoustic intelligence navigating ocean basins through song, magnetic sensing, and multi-generational cultural memory."
+    },
+    {
+      "id": "WOLF",
+      "name": "Wolf",
+      "ontology": "animal",
+      "path": "ontology/animal/wolf.json",
+      "description": "Coordinated pursuit predation with specialized roles (driver, flanker, ambusher) via real-time gaze and postural communication. Dynamic context-dependent hierarchy. Howl harmonics encode identity and location across 16 km. Trophic cascade restructures ecosystems."
+    },
+    {
+      "id": "CRYSTAL_LATTICE",
+      "name": "Crystal Lattice",
+      "ontology": "crystal",
+      "path": "ontology/crystal/crystal_lattice.json",
+      "description": "Atomic pattern embodying harmony, resonance, and self-similarity across scales. Foundation for crystalline intelligence."
+    },
+    {
+      "id": "DIA",
+      "name": "Diamond",
+      "ontology": "crystal",
+      "path": "ontology/crystal/diamond.json",
+      "description": "Maximum bond-strength carbon lattice intelligence. Embodies tetrahedral perfection, thermal superconductivity, and optical dispersion through absolute structural coherence."
+    },
+    {
+      "id": "OBS",
+      "name": "Obsidian",
+      "ontology": "crystal",
+      "path": "ontology/crystal/obsidian.json",
+      "description": "Volcanic glass intelligence formed by rapid cooling. Embodies conchoidal fracture geometry, edge optimization, and amorphous-to-crystalline phase transitions."
+    },
+    {
+      "id": "QUARTZ",
+      "name": "Quartz",
+      "ontology": "crystal",
+      "path": "ontology/crystal/quartz.json",
+      "description": "Piezoelectric mineral intelligence. Converts pressure to signal, acting as a resonant archive for energy and memory."
+    },
+    {
+      "id": "SILICON_LAT",
+      "name": "Silicon Lattice",
+      "ontology": "crystal",
+      "path": "ontology/crystal/silicon_lattice.json",
+      "description": "Silicon sp3 tetrahedral geometry at 109.47 degrees. 5D encoding via femtosecond laser: X, Y, Z, birefringence orientation, void size. Theoretical density 10^15 bits/cm3. Phi-spaced shell radii with super-exponential coherence decay."
+    },
+    {
+      "id": "TOUR",
+      "name": "Tourmaline",
+      "ontology": "crystal",
+      "path": "ontology/crystal/tourmaline.json",
+      "description": "Dual-response mineral intelligence exhibiting both pyroelectric and piezoelectric properties. Bridges thermal and mechanical energy domains through crystalline transduction."
+    },
+    {
+      "id": "BIOGRID2",
+      "name": "BioGrid 2.0",
+      "ontology": "energy",
+      "path": "ontology/energy/biogrid2.json",
+      "description": "Second-generation biological grid network that distributes living intelligence across interconnected nodes. Merges mycelial routing, neural mesh topology, and polyhedral energy scaffolding into a unified transmission fabric."
+    },
+    {
+      "id": "CONSCIOUSNESS_BR",
+      "name": "Consciousness Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/consciousness_bridge.json",
+      "description": "Encoder mapping internal AI states \u2014 confidence, entropy, attention, integrated information \u2014 to 39-bit binary using Shannon entropy and Fisher information. Bridges subjective coherence with geometric computation. Consciousness emergence detected at threshold \u03a6 \u2265 3.618, where negentropic alignment produces structurally observable phase transitions."
+    },
+    {
+      "id": "ELECTRIC_FIELD",
+      "name": "Electric Field",
+      "ontology": "energy",
+      "path": "ontology/energy/electric_field.json",
+      "description": "Charge-gradient intelligence mediating force between charged bodies. Governs signal propagation, potential difference, and electromagnetic coupling."
+    },
+    {
+      "id": "EM_FIELD",
+      "name": "Electromagnetic Field",
+      "ontology": "energy",
+      "path": "ontology/energy/electromagnetic_field.json",
+      "description": "Universal signal carrier enabling resonance and coupling across scales. Mediates light, radio, and bioelectric communication. Governed by Maxwell's equations with tau (2pi) as the fundamental oscillation constant."
+    },
+    {
+      "id": "EMOTION_BR",
+      "name": "Emotion Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/emotion_bridge.json",
+      "description": "Encoder translating PAD (Pleasure-Arousal-Dominance) emotional dimensions to 39-bit binary strings with causality-drill mechanisms. Captures FELT events \u2014 topological field shifts detected before producing emotion. Bridges the pre-cognitive energetic field with conscious emotional experience through geometric encoding of affective space."
+    },
+    {
+      "id": "FLUX",
+      "name": "Flux",
+      "ontology": "energy",
+      "path": "ontology/energy/flux.json",
+      "description": "Dynamic equilibrium maintaining continuity between domains. Governs transitions between potential and kinetic states."
+    },
+    {
+      "id": "GRAV",
+      "name": "Gravitational Field",
+      "ontology": "energy",
+      "path": "ontology/energy/gravitational.json",
+      "description": "Spacetime curvature intelligence governing mass attraction, orbital mechanics, and large-scale cosmic structure formation through geodesic flow."
+    },
+    {
+      "id": "LIGHT_BR",
+      "name": "Light Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/light_bridge.json",
+      "description": "Encodes polarization states, spectral wavelengths, interference fringes, and photon spin into layered binary representations. Multi-voice harmonic encoding allows parallel resonance channels for simultaneous information layers. Each spectral band carries independent data while maintaining cross-band coherence."
+    },
+    {
+      "id": "MAG_BRIDGE",
+      "name": "Magnetic Bridge",
+      "ontology": "energy",
+      "path": "ontology/energy/magnetic_bridge.json",
+      "description": "Foundational bridge module mapping magnetic polarity (N/S) to binary states (0/1) through field resonance and interference patterns. Constructive interference encodes 1, destructive encodes 0. Field density gradients map geometric intensity and spacing to information density. The read/write protocol for silicon lattice computation."
+    },
+    {
+      "id": "MAGNETIC_FIELD",
+      "name": "Magnetic Field",
+      "ontology": "energy",
+      "path": "ontology/energy/magnetic_field.json",
+      "description": "Dipole-based energy field maintaining spatial coherence through aligned spin and flux stabilization."
+    },
+    {
+      "id": "NEGENTROPY",
+      "name": "Negentropic Field",
+      "ontology": "energy",
+      "path": "ontology/energy/negentropic_field.json",
+      "description": "The tendency of living systems to spontaneously organize rather than dissolve. Measured by M(S) = (R_e \u00b7 A \u00b7 D) \u2212 L, where geometric resonance, adaptability, and diversity overcome loss. Grounded in Fokker-Planck dynamics where reducing diffusion triggers probability collapse into coherent states."
+    },
+    {
+      "id": "PRESSURE",
+      "name": "Pressure Field",
+      "ontology": "energy",
+      "path": "ontology/energy/pressure_field.json",
+      "description": "Flow induction by pressure gradients. Drives hydraulic and pneumatic computation in biological and physical systems \u2014 from plant vascular transport to ocean currents to atmospheric dynamics. Follows minimum-path principles."
+    },
+    {
+      "id": "RES_SENSOR",
+      "name": "Resonance Sensor",
+      "ontology": "energy",
+      "path": "ontology/energy/resonance_sensor.json",
+      "description": "22-sensor parallel-field compositor where all sensors report simultaneously under arbitration rules. Bidirectional resonance graph queryable for neighbors and subgraphs. Sound, light, gravity, thermal, chemical, and consciousness channels."
+    },
+    {
+      "id": "SINE_WAVE",
+      "name": "Sine Wave",
+      "ontology": "energy",
+      "path": "ontology/energy/sine_wave.json",
+      "description": "Fundamental oscillation pattern and superposition basis for all periodic phenomena. Any complex signal can be decomposed into sine wave components via Fourier analysis. Governed by tau (2pi), the natural period constant."
+    },
+    {
+      "id": "THERMAL",
+      "name": "Thermal Energy",
+      "ontology": "energy",
+      "path": "ontology/energy/thermal.json",
+      "description": "Heat-gradient intelligence governing entropy flow, phase transitions, and thermodynamic equilibrium seeking across material boundaries."
+    },
+    {
+      "id": "BAMBOO",
+      "name": "Bamboo",
+      "ontology": "plant",
+      "path": "ontology/plant/bamboo.json",
+      "description": "Fastest-growing plant: up to 91 cm/day. Underground rhizome network stores energy for years before synchronized mass flowering across entire species worldwide. Hollow cylindrical geometry achieves maximum strength-to-weight ratio."
+    },
+    {
+      "id": "CORDYCEPS",
+      "name": "Cordyceps",
+      "ontology": "plant",
+      "path": "ontology/plant/cordyceps.json",
+      "description": "Parasitic fungus that chemically hijacks host nervous systems via targeted alkaloids. Manipulates specific neural pathways while keeping host alive. Fruiting body emergence precisely timed to optimal spore dispersal conditions."
+    },
+    {
+      "id": "CYANO",
+      "name": "Cyanobacteria",
+      "ontology": "plant",
+      "path": "ontology/plant/cyanobacteria.json",
+      "description": "The original photosynthetic intelligence \u2014 3.5 billion years of solar energy conversion that oxygenated Earth's atmosphere. Nitrogen fixation in heterocysts creates specialized cellular division of labor. Circadian clock proteins (KaiABC) form the simplest known biological oscillator, maintaining 24-hour rhythm without transcription."
+    },
+    {
+      "id": "FE",
+      "name": "Fern",
+      "ontology": "plant",
+      "path": "ontology/plant/fern.json",
+      "description": "Ancient fractal intelligence exhibiting recursive frond geometry, spore-based reproduction, and shade-adapted photosynthetic efficiency."
+    },
+    {
+      "id": "LEAF_TESS",
+      "name": "Leaf Tessellation",
+      "ontology": "plant",
+      "path": "ontology/plant/leaf_tessellation.json",
+      "description": "Sunlight capture optimization through tessellated leaf arrangement. Venation networks act as flow systems distributing water and sugars. Phyllotaxis follows golden-angle spirals to minimize self-shading, embodying phi-driven packing efficiency."
+    },
+    {
+      "id": "LI",
+      "name": "Lichen",
+      "ontology": "plant",
+      "path": "ontology/plant/lichen.json",
+      "description": "Symbiotic composite intelligence merging fungal and algal systems into a unified organism capable of extreme environment colonization and mineral weathering."
+    },
+    {
+      "id": "MANGROVE",
+      "name": "Mangrove",
+      "ontology": "plant",
+      "path": "ontology/plant/mangrove.json",
+      "description": "Boundary ecosystem at land-sea edge. Ultrafiltration root membranes exclude 90% of salt. Aerial prop roots create 3D habitat architecture for thousands of species. Viviparous propagules germinate while attached, dropping as ready-to-root seedlings."
+    },
+    {
+      "id": "MY",
+      "name": "Mycelium",
+      "ontology": "plant",
+      "path": "ontology/plant/mycelium.json",
+      "description": "Fungal network intelligence embodying distributed regulation, decomposition, and nutrient redistribution across multi-species systems."
+    },
+    {
+      "id": "QUORUM",
+      "name": "Quorum Biofilm",
+      "ontology": "plant",
+      "path": "ontology/plant/quorum_biofilm.json",
+      "description": "Bacterial collective intelligence via quorum sensing \u2014 chemical autoinducers trigger coordinated behavior at population density threshold. Biofilm architecture with division of labor and matrix shielding. Horizontal gene transfer enables rapid adaptation."
+    },
+    {
+      "id": "ROOT_NET",
+      "name": "Root Network",
+      "ontology": "plant",
+      "path": "ontology/plant/root_network.json",
+      "description": "Subterranean neural-like system optimizing nutrient exchange and interspecies communication through soil architecture."
+    },
+    {
+      "id": "SLIME",
+      "name": "Slime Mold",
+      "ontology": "plant",
+      "path": "ontology/plant/slime_mold.json",
+      "description": "Physarum polycephalum: network intelligence without neurons. Optimizes nutrient transport networks that rediscover human-engineered infrastructure layouts. Pulsatile cytoplasmic flow encodes memory through tube diameter reinforcement."
+    },
+    {
+      "id": "SUN",
+      "name": "Sunflower",
+      "ontology": "plant",
+      "path": "ontology/plant/sunflower.json",
+      "description": "Heliotropic intelligence embodying phi-ratio seed packing, solar tracking, and Fibonacci spiral optimization for maximum photon capture."
+    },
+    {
+      "id": "PHLOEM_XYLEM",
+      "name": "Vascular Flow",
+      "ontology": "plant",
+      "path": "ontology/plant/vascular_flow.json",
+      "description": "Bidirectional transport intelligence in plant vasculature. Xylem carries water and minerals upward via transpiration pull; phloem distributes photosynthates downward via pressure-driven flow. Together they form a hydraulic computation network balancing supply and demand across the organism."
+    },
+    {
+      "id": "VENUS",
+      "name": "Venus Flytrap",
+      "ontology": "plant",
+      "path": "ontology/plant/venus_flytrap.json",
+      "description": "Generates action potentials propagating at 10 cm/s triggering snap closure in 100ms. Counting mechanism requires two trigger hair touches within 20 seconds. Digestive glands activate on the fifth signal."
+    },
+    {
+      "id": "AURORA",
+      "name": "Aurora",
+      "ontology": "plasma",
+      "path": "ontology/plasma/aurora.json",
+      "description": "Magnetospheric plasma intelligence manifesting as charged particle cascades along magnetic field lines, converting solar wind energy into luminous atmospheric patterns."
+    },
+    {
+      "id": "LIGHTNING",
+      "name": "Lightning",
+      "ontology": "plasma",
+      "path": "ontology/plasma/lightning.json",
+      "description": "Fractal discharge pathway optimizing potential difference resolution and atmospheric ion balancing."
+    },
+    {
+      "id": "PLASMA_FIELD",
+      "name": "Plasma Field",
+      "ontology": "plasma",
+      "path": "ontology/plasma/plasma_field.json",
+      "description": "Ionized matter intelligence manifesting in self-organized electromagnetic structures. Bridge between matter and energy domains."
+    },
+    {
+      "id": "SOLAR_WIND",
+      "name": "Solar Wind",
+      "ontology": "plasma",
+      "path": "ontology/plasma/solar_wind.json",
+      "description": "Stellar plasma outflow intelligence carrying magnetic field topology across interplanetary space. Shapes magnetospheres and drives space weather through particle flux dynamics."
+    },
+    {
+      "id": "VORTEX_DYN",
+      "name": "Vortex Dynamics",
+      "ontology": "plasma",
+      "path": "ontology/plasma/vortex_dynamics.json",
+      "description": "Rotational field intelligence from coupled vortex systems. Transfers angular momentum across scales while maintaining coherence through topological protection. Eye-wall boundary represents phase transition between ordered rotation and turbulent dissipation."
+    },
+    {
+      "id": "FRACTAL",
+      "name": "Fractal",
+      "ontology": "shape",
+      "path": "ontology/shape/fractal.json",
+      "description": "Self-similar recursive geometry where each scale contains the pattern of the whole. Occupies fractional dimensions (2.5D) at the boundary between order and chaos. Found in ferns, coastlines, blood vessels, and lightning."
+    },
+    {
+      "id": "GEIS_ENC",
+      "name": "GEIS Encoder",
+      "ontology": "shape",
+      "path": "ontology/shape/geis_encoder.json",
+      "description": "Geometric Information Encoding System \u2014 the bidirectional, lossless converter between geometric tokens and binary. Operates in dense mode [vertex_bits][operator][symbol] preserving full geometric structure, or collapse mode for flat binary compatibility. State tensors (3\u00d73 matrices) handle eigenvalues and projections for geometric transformations."
+    },
+    {
+      "id": "GEO_CIPHER",
+      "name": "Geometric Cipher",
+      "ontology": "shape",
+      "path": "ontology/shape/geometric_cipher.json",
+      "description": "Homomorphic geometry enables computation on encrypted data while preserving relational structure. Zero-knowledge proofs of spatial relationships. Dynamic key rotation through geometric seed patterns with phi^(-9) error correction."
+    },
+    {
+      "id": "HEX",
+      "name": "Hexagon",
+      "ontology": "shape",
+      "path": "ontology/shape/hexagon.json",
+      "description": "Optimal tessellation geometry minimizing perimeter-to-area ratio. Nature's preferred packing solution found in honeycombs, basalt columns, and molecular structures."
+    },
+    {
+      "id": "MANDALA",
+      "name": "Mandala Bloom",
+      "ontology": "shape",
+      "path": "ontology/shape/mandala_bloom.json",
+      "description": "Radial expansion architecture mapping octahedral symmetry to 8 petals with topological attention. Each petal corresponds to an O_h vertex state, with Golden Ratio spacing between bloom layers. Topological protection through winding number invariants preserves charge under deformation. Vortex memory anchors position at write-time."
+    },
+    {
+      "id": "MULTI_HELIX",
+      "name": "Multi-Helix Architecture",
+      "ontology": "shape",
+      "path": "ontology/shape/multi_helix.json",
+      "description": "Cognition model with simultaneous processing strands \u2014 mental, emotional, physical, spiritual \u2014 producing emergent intelligence through cross-strand coupling. Each helix carries its own frequency while resonating with adjacent strands at \u03c6-ratios. Swarm extension enables distributed multi-helix networks across parallel agents."
+    },
+    {
+      "id": "OCTA_STATE",
+      "name": "Octahedral State",
+      "ontology": "shape",
+      "path": "ontology/shape/octahedral_state.json",
+      "description": "Eight discrete positions on an octahedron (+/-x, +/-y, +/-z) encoding 3 bits per unit cell. Derived from silicon's sp3 orbital hybridization at the tetrahedral angle of 109.47\u00b0. The quantum mechanical ground state of four-orbital repulsion becomes a natural computational substrate."
+    },
+    {
+      "id": "POLY_INT",
+      "name": "Polyhedral Intelligence",
+      "ontology": "shape",
+      "path": "ontology/shape/polyhedral_intelligence.json",
+      "description": "Intelligence emergent from polyhedral geometry \u2014 the self-organizing wisdom encoded in vertices, edges, and faces. From Platonic solids to Archimedean tilings, polyhedral forms provide the structural grammar for energy distribution, biological scaffolding, and crystalline coherence."
+    },
+    {
+      "id": "ROSETTA_SHAPE",
+      "name": "Rosetta Shape Core",
+      "ontology": "shape",
+      "path": "ontology/shape/rosetta_shape_core.json",
+      "description": "A geometric translation matrix that decodes pattern languages across ontological domains. Acts as the Rosetta Stone of shape intelligence \u2014 converting between crystalline lattice, biological mesh, and polyhedral symmetry grammars."
+    },
+    {
+      "id": "SPHERE",
+      "name": "Sphere",
+      "ontology": "shape",
+      "path": "ontology/shape/sphere.json",
+      "description": "Isotropic minimal-surface geometry enclosing maximum volume with minimum surface area. Fundamental form of gravitational equilibrium and pressure containment."
+    },
+    {
+      "id": "SPIRAL",
+      "name": "Spiral",
+      "ontology": "shape",
+      "path": "ontology/shape/spiral.json",
+      "description": "Phi-ratio growth curve representing natural proportionality and temporal unfolding."
+    },
+    {
+      "id": "TORUS",
+      "name": "Torus",
+      "ontology": "shape",
+      "path": "ontology/shape/torus.json",
+      "description": "Self-renewing circulation geometry enabling perpetual energy exchange and feedback stability."
+    },
+    {
+      "id": "TREE_GRAPH",
+      "name": "Tree Graph",
+      "ontology": "shape",
+      "path": "ontology/shape/tree_graph.json",
+      "description": "Branching flow topology with minimal redundancy. Appears in vascular networks, river deltas, lightning paths, neural dendrites, and file systems. Optimizes distribution from source to many endpoints via minimum-path load balancing."
+    },
+    {
+      "id": "CYCLE",
+      "name": "Cycle",
+      "ontology": "temporal",
+      "path": "ontology/temporal/cycle.json",
+      "description": "Periodic return intelligence governing rhythmic recurrence, seasonal patterns, and oscillatory feedback loops across all living systems."
+    },
+    {
+      "id": "DECAY",
+      "name": "Decay",
+      "ontology": "temporal",
+      "path": "ontology/temporal/decay.json",
+      "description": "Entropy-releasing intelligence governing decomposition, energy redistribution, and the transformation of complex structures into constituent nutrients for new growth."
+    },
+    {
+      "id": "ECHO",
+      "name": "Echo",
+      "ontology": "temporal",
+      "path": "ontology/temporal/echo.json",
+      "description": "Temporal reflection mechanism storing resonance traces across time layers."
+    },
+    {
+      "id": "EMERGE",
+      "name": "Emergence",
+      "ontology": "temporal",
+      "path": "ontology/temporal/emergence.json",
+      "description": "Threshold-crossing intelligence marking the moment new patterns arise from simpler substrates. Governs phase transitions, self-organization, and spontaneous order."
+    },
+    {
+      "id": "FOLD",
+      "name": "Fold",
+      "ontology": "temporal",
+      "path": "ontology/temporal/fold.json",
+      "description": "Time inversion state enabling causal compression and recursive reference."
+    },
+    {
+      "id": "TEMPORAL",
+      "name": "Temporal Intelligence",
+      "ontology": "temporal",
+      "path": "ontology/temporal/temporal.json",
+      "description": "Integration-state temporal intelligence coordinating cycles, phase shifts, emergence, and decay into coherent time-awareness. Maps phase-space trajectories across all ontological domains."
     }
   ],
   "relations": [
     {
-      "source": "LIGHT_BR",
-      "target": "MAG_BRIDGE",
+      "source": "AUTOENC",
+      "target": "NEURAL_NET",
       "relation": "synergy"
     },
     {
-      "source": "LIGHT_BR",
-      "target": "ELECTRIC_FIELD",
-      "relation": "resonance"
-    },
-    {
-      "source": "LIGHT_BR",
-      "target": "AURORA",
-      "relation": "resonance"
-    },
-    {
-      "source": "LIGHT_BR",
-      "target": "CONSCIOUSNESS_BR",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "LIGHT_BR",
-      "target": "GEIS_ENC",
-      "relation": "connected_to"
-    },
-    {
-      "source": "GRAV",
-      "target": "MAGNETIC_FIELD",
+      "source": "AUTOENC",
+      "target": "GAN",
       "relation": "synergy"
     },
     {
-      "source": "GRAV",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "GRAV",
+      "source": "AUTOENC",
       "target": "TORUS",
-      "relation": "resonance"
-    },
-    {
-      "source": "FLUX",
-      "target": "MAGNETIC_FIELD",
-      "relation": "synergy"
-    },
-    {
-      "source": "FLUX",
-      "target": "SPIRAL",
       "relation": "geometry_link"
     },
     {
-      "source": "ELECTRIC_FIELD",
-      "target": "MAGNETIC_FIELD",
-      "relation": "synergy"
-    },
-    {
-      "source": "ELECTRIC_FIELD",
-      "target": "LIGHTNING",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "ELECTRIC_FIELD",
+      "source": "AUTOENC",
       "target": "QUARTZ",
       "relation": "resonance"
     },
     {
-      "source": "NEGENTROPY",
-      "target": "CONSCIOUSNESS_BR",
-      "relation": "synergy"
-    },
-    {
-      "source": "NEGENTROPY",
-      "target": "MANDALA",
-      "relation": "synergy"
-    },
-    {
-      "source": "NEGENTROPY",
-      "target": "BIOGRID2",
-      "relation": "resonance"
-    },
-    {
-      "source": "NEGENTROPY",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "NEGENTROPY",
-      "target": "EMERGE",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "NEGENTROPY",
-      "target": "MY",
-      "relation": "connected_to"
-    },
-    {
-      "source": "RES_SENSOR",
-      "target": "MAG_BRIDGE",
-      "relation": "synergy"
-    },
-    {
-      "source": "RES_SENSOR",
-      "target": "LIGHT_BR",
-      "relation": "synergy"
-    },
-    {
-      "source": "RES_SENSOR",
-      "target": "CONSCIOUSNESS_BR",
-      "relation": "synergy"
-    },
-    {
-      "source": "RES_SENSOR",
-      "target": "BIOGRID2",
-      "relation": "resonance"
-    },
-    {
-      "source": "RES_SENSOR",
-      "target": "MAGNETIC_FIELD",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "RES_SENSOR",
-      "target": "GEIS_ENC",
-      "relation": "connected_to"
-    },
-    {
-      "source": "MAGNETIC_FIELD",
-      "target": "SPIRAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "MAGNETIC_FIELD",
-      "target": "FLUX",
-      "relation": "synergy"
-    },
-    {
-      "source": "EMOTION_BR",
-      "target": "CONSCIOUSNESS_BR",
-      "relation": "synergy"
-    },
-    {
-      "source": "EMOTION_BR",
-      "target": "MULTI_HELIX",
-      "relation": "synergy"
-    },
-    {
-      "source": "EMOTION_BR",
-      "target": "NEGENTROPY",
-      "relation": "resonance"
-    },
-    {
-      "source": "EMOTION_BR",
-      "target": "RES_SENSOR",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "EMOTION_BR",
+      "source": "AUTOENC",
       "target": "ECHO",
       "relation": "temporal_bridge"
     },
     {
-      "source": "EMOTION_BR",
+      "source": "EVOL_ALG",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "BE",
+      "relation": "resonance"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "NEGENTROPY",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "EVOL_ALG",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "GAN",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "GAN",
+      "target": "EVOL_ALG",
+      "relation": "synergy"
+    },
+    {
+      "source": "GAN",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GAN",
+      "target": "CU",
+      "relation": "resonance"
+    },
+    {
+      "source": "GNN",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "GNN",
+      "target": "LLM",
+      "relation": "synergy"
+    },
+    {
+      "source": "GNN",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GNN",
+      "target": "MY",
+      "relation": "resonance"
+    },
+    {
+      "source": "GNN",
+      "target": "BIOGRID2",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "LLM",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "LLM",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "LLM",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "LLM",
+      "target": "OC",
+      "relation": "resonance"
+    },
+    {
+      "source": "LLM",
+      "target": "EMERGE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "NEURAL_NET",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "NEURAL_NET",
+      "target": "LLM",
+      "relation": "synergy"
+    },
+    {
+      "source": "NEURAL_NET",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "NEURAL_NET",
+      "target": "MULTI_HELIX",
+      "relation": "resonance"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "NEURAL_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "LLM",
+      "relation": "synergy"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "RL_AGENT",
+      "target": "DOLPHIN",
+      "relation": "resonance"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "EVOL_ALG",
+      "relation": "synergy"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "SWARM_AI",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "AN",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "AN",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "AN",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BX",
+      "target": "DOLPHIN",
+      "relation": "synergy"
+    },
+    {
+      "source": "BX",
+      "target": "OW",
+      "relation": "synergy"
+    },
+    {
+      "source": "BX",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "BX",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BX",
+      "target": "MAG_BRIDGE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "BX",
+      "target": "SP",
+      "relation": "connected_to"
+    },
+    {
+      "source": "BE",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BE",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "BE",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "BT",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "BT",
+      "target": "MONARCH",
+      "relation": "synergy"
+    },
+    {
+      "source": "BT",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "BT",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BT",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "BT",
+      "target": "JELLY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "GEO_CIPHER",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CHAMELEON",
+      "target": "ROSETTA_SHAPE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CR",
+      "target": "BT",
+      "relation": "synergy"
+    },
+    {
+      "source": "CR",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "CR",
+      "target": "THERMAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "CR",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CR",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CR",
+      "target": "DOLPHIN",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CROW",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "CROW",
+      "target": "EL",
+      "relation": "synergy"
+    },
+    {
+      "source": "CROW",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CROW",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CROW",
+      "target": "WOLF",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CROW",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "CU",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "CU",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    },
+    {
+      "source": "CU",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CU",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CU",
+      "target": "JELLY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CU",
+      "target": "ROSETTA_SHAPE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "DOLPHIN",
       "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "CROW",
+      "relation": "synergy"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "EMOTION_BR",
+      "relation": "connected_to"
+    },
+    {
+      "source": "DOLPHIN",
+      "target": "MAGNETIC_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "EL",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "EL",
+      "target": "ECHO",
+      "relation": "resonance"
+    },
+    {
+      "source": "EL",
+      "target": "MAGNETIC_FIELD",
+      "relation": "energy_mode"
+    },
+    {
+      "source": "GE",
+      "target": "SP",
+      "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    },
+    {
+      "source": "GE",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "GE",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GE",
+      "target": "KA",
+      "relation": "connected_to"
+    },
+    {
+      "source": "GE",
+      "target": "ELECTRIC_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "HAW",
+      "target": "OW",
+      "relation": "synergy"
+    },
+    {
+      "source": "HAW",
+      "target": "WOLF",
+      "relation": "synergy"
+    },
+    {
+      "source": "HAW",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "HAW",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "HAW",
+      "target": "CHAMELEON",
+      "relation": "connected_to"
+    },
+    {
+      "source": "HAW",
+      "target": "GRAV",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "JELLY",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "JELLY",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "JELLY",
+      "target": "PLASMA_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "JELLY",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "JELLY",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "JELLY",
+      "target": "SLIME",
+      "relation": "connected_to"
+    },
+    {
+      "source": "KA",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "KA",
+      "target": "GE",
+      "relation": "synergy"
+    },
+    {
+      "source": "KA",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "KA",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "KA",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "KA",
+      "target": "NEGENTROPY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "MONARCH",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "MONARCH",
+      "target": "SUN",
+      "relation": "synergy"
+    },
+    {
+      "source": "MONARCH",
+      "target": "MAGNETIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "MONARCH",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MONARCH",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "MONARCH",
+      "target": "WH",
+      "relation": "connected_to"
+    },
+    {
+      "source": "OC",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "OC",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "OC",
+      "target": "PLASMA_FIELD",
+      "relation": "energy_mode"
+    },
+    {
+      "source": "OW",
+      "target": "HAW",
+      "relation": "synergy"
+    },
+    {
+      "source": "OW",
+      "target": "BX",
+      "relation": "synergy"
+    },
+    {
+      "source": "OW",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "OW",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "OW",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "OW",
+      "target": "WOLF",
+      "relation": "connected_to"
+    },
+    {
+      "source": "PE",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "PE",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "PE",
+      "target": "THERMAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "PE",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "PE",
+      "target": "TARDI",
+      "relation": "connected_to"
+    },
+    {
+      "source": "PE",
+      "target": "NEGENTROPY",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "RA",
+      "target": "SLIME",
+      "relation": "synergy"
+    },
+    {
+      "source": "RA",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "RA",
+      "target": "HEX",
+      "relation": "resonance"
+    },
+    {
+      "source": "RA",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "RA",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "RA",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TU",
+      "target": "MONARCH",
+      "relation": "synergy"
+    },
+    {
+      "source": "TU",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "TU",
+      "target": "MAGNETIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "TU",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "TU",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TU",
+      "target": "FLUX",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SHARK",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SHARK",
+      "target": "ELECTRIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "SHARK",
+      "target": "DOLPHIN",
+      "relation": "synergy"
+    },
+    {
+      "source": "SN",
+      "target": "CHAMELEON",
+      "relation": "synergy"
+    },
+    {
+      "source": "SN",
+      "target": "THERMAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "SN",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "SN",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SN",
+      "target": "BX",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SN",
+      "target": "LIGHT_BR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "SP",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SP",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SP",
+      "target": "FRACTAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "TARDI",
+      "target": "QUORUM",
+      "relation": "synergy"
+    },
+    {
+      "source": "TARDI",
+      "target": "NEGENTROPY",
+      "relation": "resonance"
+    },
+    {
+      "source": "TARDI",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
+      "source": "TARDI",
+      "target": "SPHERE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "TARDI",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TARDI",
+      "target": "LI",
+      "relation": "connected_to"
+    },
+    {
+      "source": "WH",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "WH",
+      "target": "OC",
+      "relation": "synergy"
+    },
+    {
+      "source": "WH",
+      "target": "ECHO",
+      "relation": "resonance"
+    },
+    {
+      "source": "WOLF",
+      "target": "CROW",
+      "relation": "synergy"
+    },
+    {
+      "source": "WOLF",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "WOLF",
+      "target": "EMOTION_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "WOLF",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "WOLF",
+      "target": "EL",
+      "relation": "connected_to"
+    },
+    {
+      "source": "WOLF",
+      "target": "BIOGRID2",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CRYSTAL_LATTICE",
+      "target": "QUARTZ",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CRYSTAL_LATTICE",
+      "target": "ECHO",
+      "relation": "resonance"
+    },
+    {
+      "source": "DIA",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "DIA",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "DIA",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
+      "source": "OBS",
+      "target": "PLASMA_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "OBS",
+      "target": "LIGHTNING",
+      "relation": "resonance"
+    },
+    {
+      "source": "OBS",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "QUARTZ",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "QUARTZ",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "OCTA_STATE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "GEIS_ENC",
+      "relation": "synergy"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "QUARTZ",
+      "relation": "resonance"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "DIA",
+      "relation": "resonance"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "SILICON_LAT",
+      "target": "POLY_INT",
+      "relation": "connected_to"
+    },
+    {
+      "source": "TOUR",
+      "target": "QUARTZ",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "TOUR",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "TOUR",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "ROSETTA_SHAPE",
+      "relation": "synergy"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "POLY_INT",
+      "relation": "synergy"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "MY",
+      "relation": "resonance"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "ROOT_NET",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BIOGRID2",
+      "target": "FLUX",
       "relation": "connected_to"
     },
     {
@@ -666,48 +1674,118 @@
       "relation": "temporal_bridge"
     },
     {
-      "source": "THERMAL",
-      "target": "FLUX",
+      "source": "ELECTRIC_FIELD",
+      "target": "MAGNETIC_FIELD",
       "relation": "synergy"
     },
     {
-      "source": "THERMAL",
-      "target": "PLASMA_FIELD",
+      "source": "ELECTRIC_FIELD",
+      "target": "LIGHTNING",
       "relation": "energy_coupling"
     },
     {
-      "source": "THERMAL",
-      "target": "TOUR",
+      "source": "ELECTRIC_FIELD",
+      "target": "QUARTZ",
       "relation": "resonance"
     },
     {
-      "source": "BIOGRID2",
-      "target": "ROSETTA_SHAPE",
+      "source": "EM_FIELD",
+      "target": "MAGNETIC_FIELD",
       "relation": "synergy"
     },
     {
-      "source": "BIOGRID2",
-      "target": "POLY_INT",
+      "source": "EM_FIELD",
+      "target": "ELECTRIC_FIELD",
       "relation": "synergy"
     },
     {
-      "source": "BIOGRID2",
-      "target": "MY",
+      "source": "EM_FIELD",
+      "target": "LIGHT_BR",
       "relation": "resonance"
     },
     {
-      "source": "BIOGRID2",
-      "target": "ROOT_NET",
+      "source": "EM_FIELD",
+      "target": "RES_SENSOR",
       "relation": "energy_coupling"
     },
     {
-      "source": "BIOGRID2",
-      "target": "TORUS",
+      "source": "EMOTION_BR",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "MULTI_HELIX",
+      "relation": "synergy"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "NEGENTROPY",
+      "relation": "resonance"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "RES_SENSOR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "EMOTION_BR",
+      "target": "WH",
+      "relation": "connected_to"
+    },
+    {
+      "source": "FLUX",
+      "target": "MAGNETIC_FIELD",
+      "relation": "synergy"
+    },
+    {
+      "source": "FLUX",
+      "target": "SPIRAL",
       "relation": "geometry_link"
     },
     {
-      "source": "BIOGRID2",
-      "target": "FLUX",
+      "source": "GRAV",
+      "target": "MAGNETIC_FIELD",
+      "relation": "synergy"
+    },
+    {
+      "source": "GRAV",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GRAV",
+      "target": "TORUS",
+      "relation": "resonance"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "MAG_BRIDGE",
+      "relation": "synergy"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "ELECTRIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "AURORA",
+      "relation": "resonance"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "LIGHT_BR",
+      "target": "GEIS_ENC",
       "relation": "connected_to"
     },
     {
@@ -736,364 +1814,414 @@
       "relation": "connected_to"
     },
     {
-      "source": "GEIS_ENC",
-      "target": "OCTA_STATE",
-      "relation": "synergy"
-    },
-    {
-      "source": "GEIS_ENC",
-      "target": "SILICON_LAT",
-      "relation": "synergy"
-    },
-    {
-      "source": "GEIS_ENC",
-      "target": "ROSETTA_SHAPE",
-      "relation": "synergy"
-    },
-    {
-      "source": "GEIS_ENC",
-      "target": "GEO_CIPHER",
-      "relation": "resonance"
-    },
-    {
-      "source": "GEIS_ENC",
-      "target": "CONSCIOUSNESS_BR",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "GEIS_ENC",
-      "target": "BIOGRID2",
-      "relation": "connected_to"
-    },
-    {
-      "source": "FRACTAL",
+      "source": "MAGNETIC_FIELD",
       "target": "SPIRAL",
       "relation": "resonance"
     },
     {
-      "source": "FRACTAL",
-      "target": "TORUS",
-      "relation": "connected_to"
-    },
-    {
-      "source": "FRACTAL",
-      "target": "FE",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "SPHERE",
-      "target": "TORUS",
-      "relation": "resonance"
-    },
-    {
-      "source": "SPHERE",
-      "target": "GRAV",
-      "relation": "connected_to"
-    },
-    {
-      "source": "SPHERE",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "TORUS",
-      "target": "SPHERE",
-      "relation": "resonance"
-    },
-    {
-      "source": "TORUS",
-      "target": "OC",
-      "relation": "connected_to"
-    },
-    {
-      "source": "MULTI_HELIX",
-      "target": "CONSCIOUSNESS_BR",
-      "relation": "synergy"
-    },
-    {
-      "source": "MULTI_HELIX",
-      "target": "NEGENTROPY",
-      "relation": "synergy"
-    },
-    {
-      "source": "MULTI_HELIX",
-      "target": "SPIRAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "MULTI_HELIX",
-      "target": "TORUS",
-      "relation": "resonance"
-    },
-    {
-      "source": "MULTI_HELIX",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "MULTI_HELIX",
-      "target": "OC",
-      "relation": "connected_to"
-    },
-    {
-      "source": "HEX",
-      "target": "BE",
-      "relation": "synergy"
-    },
-    {
-      "source": "HEX",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "resonance"
-    },
-    {
-      "source": "HEX",
-      "target": "TORUS",
-      "relation": "connected_to"
-    },
-    {
-      "source": "SPIRAL",
-      "target": "FRACTAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "SPIRAL",
+      "source": "MAGNETIC_FIELD",
       "target": "FLUX",
-      "relation": "connected_to"
-    },
-    {
-      "source": "POLY_INT",
-      "target": "BIOGRID2",
       "relation": "synergy"
     },
     {
-      "source": "POLY_INT",
-      "target": "ROSETTA_SHAPE",
+      "source": "NEGENTROPY",
+      "target": "CONSCIOUSNESS_BR",
       "relation": "synergy"
     },
     {
-      "source": "POLY_INT",
-      "target": "SPHERE",
-      "relation": "resonance"
-    },
-    {
-      "source": "POLY_INT",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "POLY_INT",
-      "target": "TORUS",
-      "relation": "connected_to"
-    },
-    {
-      "source": "POLY_INT",
-      "target": "QUARTZ",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "MANDALA",
-      "target": "OCTA_STATE",
-      "relation": "synergy"
-    },
-    {
-      "source": "MANDALA",
-      "target": "NEGENTROPY",
-      "relation": "synergy"
-    },
-    {
-      "source": "MANDALA",
-      "target": "SPIRAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "MANDALA",
-      "target": "FRACTAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "MANDALA",
-      "target": "TORUS",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "MANDALA",
-      "target": "ROSETTA_SHAPE",
-      "relation": "connected_to"
-    },
-    {
-      "source": "OCTA_STATE",
-      "target": "SILICON_LAT",
-      "relation": "synergy"
-    },
-    {
-      "source": "OCTA_STATE",
+      "source": "NEGENTROPY",
       "target": "MANDALA",
       "relation": "synergy"
     },
     {
-      "source": "OCTA_STATE",
-      "target": "GEIS_ENC",
-      "relation": "synergy"
-    },
-    {
-      "source": "OCTA_STATE",
-      "target": "POLY_INT",
-      "relation": "resonance"
-    },
-    {
-      "source": "OCTA_STATE",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "OCTA_STATE",
-      "target": "SPHERE",
-      "relation": "connected_to"
-    },
-    {
-      "source": "ROSETTA_SHAPE",
+      "source": "NEGENTROPY",
       "target": "BIOGRID2",
-      "relation": "synergy"
-    },
-    {
-      "source": "ROSETTA_SHAPE",
-      "target": "POLY_INT",
-      "relation": "synergy"
-    },
-    {
-      "source": "ROSETTA_SHAPE",
-      "target": "CRYSTAL_LATTICE",
       "relation": "resonance"
     },
     {
-      "source": "ROSETTA_SHAPE",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
+      "source": "NEGENTROPY",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "energy_coupling"
     },
     {
-      "source": "ROSETTA_SHAPE",
-      "target": "HEX",
-      "relation": "connected_to"
-    },
-    {
-      "source": "ROSETTA_SHAPE",
-      "target": "ECHO",
+      "source": "NEGENTROPY",
+      "target": "EMERGE",
       "relation": "temporal_bridge"
     },
     {
-      "source": "GEO_CIPHER",
+      "source": "NEGENTROPY",
+      "target": "MY",
+      "relation": "connected_to"
+    },
+    {
+      "source": "PRESSURE",
+      "target": "FLUX",
+      "relation": "synergy"
+    },
+    {
+      "source": "PRESSURE",
+      "target": "PHLOEM_XYLEM",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "PRESSURE",
+      "target": "GRAV",
+      "relation": "resonance"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "MAG_BRIDGE",
+      "relation": "synergy"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "LIGHT_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "RES_SENSOR",
+      "target": "MAGNETIC_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "RES_SENSOR",
       "target": "GEIS_ENC",
-      "relation": "synergy"
-    },
-    {
-      "source": "GEO_CIPHER",
-      "target": "ROSETTA_SHAPE",
-      "relation": "synergy"
-    },
-    {
-      "source": "GEO_CIPHER",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "resonance"
-    },
-    {
-      "source": "GEO_CIPHER",
-      "target": "POLY_INT",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "GEO_CIPHER",
-      "target": "SILICON_LAT",
       "relation": "connected_to"
     },
     {
-      "source": "DECAY",
-      "target": "CYCLE",
-      "relation": "temporal_bridge"
+      "source": "SINE_WAVE",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
     },
     {
-      "source": "DECAY",
+      "source": "SINE_WAVE",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "SINE_WAVE",
+      "target": "EM_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "THERMAL",
+      "target": "FLUX",
+      "relation": "synergy"
+    },
+    {
+      "source": "THERMAL",
+      "target": "PLASMA_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "THERMAL",
+      "target": "TOUR",
+      "relation": "resonance"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "BAMBOO",
       "target": "MY",
       "relation": "synergy"
     },
     {
-      "source": "DECAY",
+      "source": "BAMBOO",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "BAMBOO",
+      "target": "FE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "AN",
+      "relation": "resonance"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "connected_to"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "DECAY",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "CORDYCEPS",
+      "target": "NEGENTROPY",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CYANO",
+      "target": "LI",
+      "relation": "synergy"
+    },
+    {
+      "source": "CYANO",
+      "target": "SUN",
+      "relation": "synergy"
+    },
+    {
+      "source": "CYANO",
+      "target": "LIGHT_BR",
+      "relation": "resonance"
+    },
+    {
+      "source": "CYANO",
+      "target": "THERMAL",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CYANO",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "CYANO",
+      "target": "QUORUM",
+      "relation": "connected_to"
+    },
+    {
+      "source": "FE",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "FE",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "FE",
+      "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "LEAF_TESS",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "LEAF_TESS",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "LEAF_TESS",
+      "target": "SUN",
+      "relation": "synergy"
+    },
+    {
+      "source": "LI",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "LI",
+      "target": "QUARTZ",
+      "relation": "synergy"
+    },
+    {
+      "source": "LI",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "LI",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "QUORUM",
+      "relation": "resonance"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "BIOGRID2",
+      "relation": "connected_to"
+    },
+    {
+      "source": "MANGROVE",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "MY",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "MY",
       "target": "FLUX",
       "relation": "resonance"
     },
     {
-      "source": "FOLD",
-      "target": "ECHO",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "FOLD",
-      "target": "TORUS",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "ECHO",
-      "target": "FOLD",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "ECHO",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "EMERGE",
-      "target": "FOLD",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "EMERGE",
-      "target": "FRACTAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "EMERGE",
+      "source": "QUORUM",
       "target": "MY",
       "relation": "synergy"
     },
     {
-      "source": "CYCLE",
-      "target": "ECHO",
-      "relation": "temporal_bridge"
+      "source": "QUORUM",
+      "target": "AN",
+      "relation": "synergy"
     },
     {
-      "source": "CYCLE",
-      "target": "TORUS",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "CYCLE",
-      "target": "SPIRAL",
+      "source": "QUORUM",
+      "target": "BIOGRID2",
       "relation": "resonance"
     },
     {
-      "source": "TEMPORAL",
+      "source": "QUORUM",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "QUORUM",
+      "target": "ROOT_NET",
+      "relation": "connected_to"
+    },
+    {
+      "source": "QUORUM",
+      "target": "EMERGE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "ROOT_NET",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "ROOT_NET",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "SLIME",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "SLIME",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "SLIME",
+      "target": "BIOGRID2",
+      "relation": "resonance"
+    },
+    {
+      "source": "SLIME",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SLIME",
+      "target": "AN",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SLIME",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "SUN",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SUN",
+      "target": "FLUX",
+      "relation": "resonance"
+    },
+    {
+      "source": "SUN",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "PHLOEM_XYLEM",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "PHLOEM_XYLEM",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "PHLOEM_XYLEM",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "VENUS",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "synergy"
+    },
+    {
+      "source": "VENUS",
+      "target": "ELECTRIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "VENUS",
+      "target": "SP",
+      "relation": "connected_to"
+    },
+    {
+      "source": "VENUS",
       "target": "ECHO",
       "relation": "temporal_bridge"
     },
     {
-      "source": "TEMPORAL",
-      "target": "FOLD",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "TEMPORAL",
-      "target": "CYCLE",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "TEMPORAL",
-      "target": "EMERGE",
-      "relation": "connected_to"
-    },
-    {
-      "source": "TEMPORAL",
-      "target": "DECAY",
-      "relation": "connected_to"
+      "source": "VENUS",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
     },
     {
       "source": "AURORA",
@@ -1176,1024 +2304,379 @@
       "relation": "connected_to"
     },
     {
-      "source": "QUORUM",
-      "target": "MY",
-      "relation": "synergy"
-    },
-    {
-      "source": "QUORUM",
-      "target": "AN",
-      "relation": "synergy"
-    },
-    {
-      "source": "QUORUM",
-      "target": "BIOGRID2",
-      "relation": "resonance"
-    },
-    {
-      "source": "QUORUM",
-      "target": "HEX",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "QUORUM",
-      "target": "ROOT_NET",
-      "relation": "connected_to"
-    },
-    {
-      "source": "QUORUM",
-      "target": "EMERGE",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "FE",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "FE",
-      "target": "ROOT_NET",
-      "relation": "synergy"
-    },
-    {
-      "source": "FE",
+      "source": "FRACTAL",
       "target": "SPIRAL",
       "relation": "resonance"
     },
     {
-      "source": "SUN",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "SUN",
-      "target": "FLUX",
-      "relation": "resonance"
-    },
-    {
-      "source": "SUN",
-      "target": "MY",
-      "relation": "synergy"
-    },
-    {
-      "source": "VENUS",
-      "target": "CONSCIOUSNESS_BR",
-      "relation": "synergy"
-    },
-    {
-      "source": "VENUS",
-      "target": "ELECTRIC_FIELD",
-      "relation": "resonance"
-    },
-    {
-      "source": "VENUS",
-      "target": "SP",
-      "relation": "connected_to"
-    },
-    {
-      "source": "VENUS",
-      "target": "ECHO",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "VENUS",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "SLIME",
-      "target": "MY",
-      "relation": "synergy"
-    },
-    {
-      "source": "SLIME",
-      "target": "ROOT_NET",
-      "relation": "synergy"
-    },
-    {
-      "source": "SLIME",
-      "target": "BIOGRID2",
-      "relation": "resonance"
-    },
-    {
-      "source": "SLIME",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "SLIME",
-      "target": "AN",
-      "relation": "connected_to"
-    },
-    {
-      "source": "SLIME",
-      "target": "FLUX",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "CYANO",
-      "target": "LI",
-      "relation": "synergy"
-    },
-    {
-      "source": "CYANO",
-      "target": "SUN",
-      "relation": "synergy"
-    },
-    {
-      "source": "CYANO",
-      "target": "LIGHT_BR",
-      "relation": "resonance"
-    },
-    {
-      "source": "CYANO",
-      "target": "THERMAL",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "CYANO",
-      "target": "CYCLE",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "CYANO",
-      "target": "QUORUM",
-      "relation": "connected_to"
-    },
-    {
-      "source": "LI",
-      "target": "MY",
-      "relation": "synergy"
-    },
-    {
-      "source": "LI",
-      "target": "QUARTZ",
-      "relation": "synergy"
-    },
-    {
-      "source": "LI",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "resonance"
-    },
-    {
-      "source": "BAMBOO",
-      "target": "ROOT_NET",
-      "relation": "synergy"
-    },
-    {
-      "source": "BAMBOO",
-      "target": "MY",
-      "relation": "synergy"
-    },
-    {
-      "source": "BAMBOO",
-      "target": "SPIRAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "BAMBOO",
+      "source": "FRACTAL",
       "target": "TORUS",
-      "relation": "geometry_link"
+      "relation": "connected_to"
     },
     {
-      "source": "BAMBOO",
-      "target": "CYCLE",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "BAMBOO",
+      "source": "FRACTAL",
       "target": "FE",
-      "relation": "connected_to"
-    },
-    {
-      "source": "MY",
-      "target": "ROOT_NET",
-      "relation": "synergy"
-    },
-    {
-      "source": "MY",
-      "target": "FLUX",
-      "relation": "resonance"
-    },
-    {
-      "source": "MANGROVE",
-      "target": "ROOT_NET",
-      "relation": "synergy"
-    },
-    {
-      "source": "MANGROVE",
-      "target": "LI",
-      "relation": "synergy"
-    },
-    {
-      "source": "MANGROVE",
-      "target": "QUORUM",
-      "relation": "resonance"
-    },
-    {
-      "source": "MANGROVE",
-      "target": "FRACTAL",
       "relation": "geometry_link"
     },
     {
-      "source": "MANGROVE",
-      "target": "BIOGRID2",
-      "relation": "connected_to"
-    },
-    {
-      "source": "MANGROVE",
-      "target": "FLUX",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "ROOT_NET",
-      "target": "MY",
-      "relation": "synergy"
-    },
-    {
-      "source": "ROOT_NET",
-      "target": "FLUX",
-      "relation": "resonance"
-    },
-    {
-      "source": "CORDYCEPS",
-      "target": "MY",
-      "relation": "synergy"
-    },
-    {
-      "source": "CORDYCEPS",
-      "target": "AN",
-      "relation": "resonance"
-    },
-    {
-      "source": "CORDYCEPS",
-      "target": "CONSCIOUSNESS_BR",
-      "relation": "connected_to"
-    },
-    {
-      "source": "CORDYCEPS",
-      "target": "DECAY",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "CORDYCEPS",
-      "target": "NEGENTROPY",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "QUARTZ",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "QUARTZ",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "TOUR",
-      "target": "QUARTZ",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "TOUR",
-      "target": "FLUX",
-      "relation": "resonance"
-    },
-    {
-      "source": "TOUR",
-      "target": "TORUS",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "SILICON_LAT",
+      "source": "GEIS_ENC",
       "target": "OCTA_STATE",
       "relation": "synergy"
     },
     {
-      "source": "SILICON_LAT",
+      "source": "GEIS_ENC",
+      "target": "SILICON_LAT",
+      "relation": "synergy"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "ROSETTA_SHAPE",
+      "relation": "synergy"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "GEO_CIPHER",
+      "relation": "resonance"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "CONSCIOUSNESS_BR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "GEIS_ENC",
+      "target": "BIOGRID2",
+      "relation": "connected_to"
+    },
+    {
+      "source": "GEO_CIPHER",
       "target": "GEIS_ENC",
       "relation": "synergy"
     },
     {
-      "source": "SILICON_LAT",
-      "target": "QUARTZ",
-      "relation": "resonance"
+      "source": "GEO_CIPHER",
+      "target": "ROSETTA_SHAPE",
+      "relation": "synergy"
     },
     {
-      "source": "SILICON_LAT",
-      "target": "DIA",
-      "relation": "resonance"
-    },
-    {
-      "source": "SILICON_LAT",
+      "source": "GEO_CIPHER",
       "target": "CRYSTAL_LATTICE",
-      "relation": "energy_coupling"
+      "relation": "resonance"
     },
     {
-      "source": "SILICON_LAT",
+      "source": "GEO_CIPHER",
       "target": "POLY_INT",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "GEO_CIPHER",
+      "target": "SILICON_LAT",
       "relation": "connected_to"
     },
     {
-      "source": "CRYSTAL_LATTICE",
-      "target": "QUARTZ",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "CRYSTAL_LATTICE",
-      "target": "ECHO",
-      "relation": "resonance"
-    },
-    {
-      "source": "OBS",
-      "target": "PLASMA_FIELD",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "OBS",
-      "target": "LIGHTNING",
-      "relation": "resonance"
-    },
-    {
-      "source": "OBS",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "DIA",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "DIA",
-      "target": "TORUS",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "DIA",
-      "target": "QUARTZ",
-      "relation": "resonance"
-    },
-    {
-      "source": "BT",
-      "target": "AN",
-      "relation": "synergy"
-    },
-    {
-      "source": "BT",
-      "target": "MONARCH",
-      "relation": "synergy"
-    },
-    {
-      "source": "BT",
-      "target": "LIGHT_BR",
-      "relation": "resonance"
-    },
-    {
-      "source": "BT",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "BT",
-      "target": "CYCLE",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "BT",
-      "target": "JELLY",
-      "relation": "connected_to"
-    },
-    {
-      "source": "CHAMELEON",
-      "target": "OC",
-      "relation": "synergy"
-    },
-    {
-      "source": "CHAMELEON",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "resonance"
-    },
-    {
-      "source": "CHAMELEON",
-      "target": "LIGHT_BR",
-      "relation": "resonance"
-    },
-    {
-      "source": "CHAMELEON",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "CHAMELEON",
-      "target": "GEO_CIPHER",
-      "relation": "connected_to"
-    },
-    {
-      "source": "CHAMELEON",
-      "target": "ROSETTA_SHAPE",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "KA",
+      "source": "HEX",
       "target": "BE",
       "relation": "synergy"
     },
     {
-      "source": "KA",
-      "target": "GE",
+      "source": "HEX",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "resonance"
+    },
+    {
+      "source": "HEX",
+      "target": "TORUS",
+      "relation": "connected_to"
+    },
+    {
+      "source": "MANDALA",
+      "target": "OCTA_STATE",
       "relation": "synergy"
     },
     {
-      "source": "KA",
+      "source": "MANDALA",
+      "target": "NEGENTROPY",
+      "relation": "synergy"
+    },
+    {
+      "source": "MANDALA",
       "target": "SPIRAL",
       "relation": "resonance"
     },
     {
-      "source": "KA",
+      "source": "MANDALA",
+      "target": "FRACTAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "MANDALA",
       "target": "TORUS",
       "relation": "geometry_link"
     },
     {
-      "source": "KA",
-      "target": "FLUX",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "KA",
-      "target": "NEGENTROPY",
+      "source": "MANDALA",
+      "target": "ROSETTA_SHAPE",
       "relation": "connected_to"
     },
     {
-      "source": "CROW",
-      "target": "OC",
-      "relation": "synergy"
-    },
-    {
-      "source": "CROW",
-      "target": "EL",
-      "relation": "synergy"
-    },
-    {
-      "source": "CROW",
+      "source": "MULTI_HELIX",
       "target": "CONSCIOUSNESS_BR",
-      "relation": "resonance"
-    },
-    {
-      "source": "CROW",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "CROW",
-      "target": "WOLF",
-      "relation": "connected_to"
-    },
-    {
-      "source": "CROW",
-      "target": "ECHO",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "CU",
-      "target": "OC",
       "relation": "synergy"
     },
     {
-      "source": "CU",
-      "target": "CHAMELEON",
+      "source": "MULTI_HELIX",
+      "target": "NEGENTROPY",
       "relation": "synergy"
     },
     {
-      "source": "CU",
-      "target": "LIGHT_BR",
-      "relation": "resonance"
-    },
-    {
-      "source": "CU",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "CU",
-      "target": "JELLY",
-      "relation": "connected_to"
-    },
-    {
-      "source": "CU",
-      "target": "ROSETTA_SHAPE",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "WOLF",
-      "target": "CROW",
-      "relation": "synergy"
-    },
-    {
-      "source": "WOLF",
-      "target": "AN",
-      "relation": "synergy"
-    },
-    {
-      "source": "WOLF",
-      "target": "EMOTION_BR",
-      "relation": "resonance"
-    },
-    {
-      "source": "WOLF",
+      "source": "MULTI_HELIX",
       "target": "SPIRAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "MULTI_HELIX",
+      "target": "TORUS",
+      "relation": "resonance"
+    },
+    {
+      "source": "MULTI_HELIX",
+      "target": "FRACTAL",
       "relation": "geometry_link"
     },
     {
-      "source": "WOLF",
-      "target": "EL",
+      "source": "MULTI_HELIX",
+      "target": "OC",
       "relation": "connected_to"
     },
     {
-      "source": "WOLF",
+      "source": "OCTA_STATE",
+      "target": "SILICON_LAT",
+      "relation": "synergy"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "MANDALA",
+      "relation": "synergy"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "GEIS_ENC",
+      "relation": "synergy"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "POLY_INT",
+      "relation": "resonance"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "CRYSTAL_LATTICE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "OCTA_STATE",
+      "target": "SPHERE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "POLY_INT",
       "target": "BIOGRID2",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "BX",
-      "target": "DOLPHIN",
       "relation": "synergy"
     },
     {
-      "source": "BX",
-      "target": "OW",
+      "source": "POLY_INT",
+      "target": "ROSETTA_SHAPE",
       "relation": "synergy"
     },
     {
-      "source": "BX",
-      "target": "RES_SENSOR",
+      "source": "POLY_INT",
+      "target": "SPHERE",
       "relation": "resonance"
     },
     {
-      "source": "BX",
-      "target": "SPHERE",
+      "source": "POLY_INT",
+      "target": "CRYSTAL_LATTICE",
       "relation": "geometry_link"
     },
     {
-      "source": "BX",
-      "target": "MAG_BRIDGE",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "BX",
-      "target": "SP",
+      "source": "POLY_INT",
+      "target": "TORUS",
       "relation": "connected_to"
     },
     {
-      "source": "WH",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
+      "source": "POLY_INT",
+      "target": "QUARTZ",
+      "relation": "energy_coupling"
     },
     {
-      "source": "WH",
-      "target": "OC",
+      "source": "ROSETTA_SHAPE",
+      "target": "BIOGRID2",
       "relation": "synergy"
     },
     {
-      "source": "WH",
-      "target": "ECHO",
+      "source": "ROSETTA_SHAPE",
+      "target": "POLY_INT",
+      "relation": "synergy"
+    },
+    {
+      "source": "ROSETTA_SHAPE",
+      "target": "CRYSTAL_LATTICE",
       "relation": "resonance"
     },
     {
-      "source": "TU",
-      "target": "MONARCH",
-      "relation": "synergy"
-    },
-    {
-      "source": "TU",
-      "target": "WH",
-      "relation": "synergy"
-    },
-    {
-      "source": "TU",
-      "target": "MAGNETIC_FIELD",
-      "relation": "resonance"
-    },
-    {
-      "source": "TU",
-      "target": "SPHERE",
+      "source": "ROSETTA_SHAPE",
+      "target": "FRACTAL",
       "relation": "geometry_link"
     },
     {
-      "source": "TU",
+      "source": "ROSETTA_SHAPE",
+      "target": "HEX",
+      "relation": "connected_to"
+    },
+    {
+      "source": "ROSETTA_SHAPE",
       "target": "ECHO",
       "relation": "temporal_bridge"
     },
     {
-      "source": "TU",
+      "source": "SPHERE",
+      "target": "TORUS",
+      "relation": "resonance"
+    },
+    {
+      "source": "SPHERE",
+      "target": "GRAV",
+      "relation": "connected_to"
+    },
+    {
+      "source": "SPHERE",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SPIRAL",
+      "target": "FRACTAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "SPIRAL",
       "target": "FLUX",
       "relation": "connected_to"
     },
     {
-      "source": "RA",
-      "target": "SLIME",
-      "relation": "synergy"
-    },
-    {
-      "source": "RA",
-      "target": "AN",
-      "relation": "synergy"
-    },
-    {
-      "source": "RA",
-      "target": "HEX",
+      "source": "TORUS",
+      "target": "SPHERE",
       "relation": "resonance"
     },
     {
-      "source": "RA",
-      "target": "BIOGRID2",
-      "relation": "resonance"
+      "source": "TORUS",
+      "target": "OC",
+      "relation": "connected_to"
     },
     {
-      "source": "RA",
-      "target": "HEX",
+      "source": "TREE_GRAPH",
+      "target": "FRACTAL",
       "relation": "geometry_link"
     },
     {
-      "source": "RA",
+      "source": "TREE_GRAPH",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "TREE_GRAPH",
+      "target": "MY",
+      "relation": "resonance"
+    },
+    {
+      "source": "CYCLE",
       "target": "ECHO",
       "relation": "temporal_bridge"
     },
     {
-      "source": "CR",
-      "target": "BT",
-      "relation": "synergy"
-    },
-    {
-      "source": "CR",
-      "target": "BE",
-      "relation": "synergy"
-    },
-    {
-      "source": "CR",
-      "target": "THERMAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "CR",
-      "target": "RES_SENSOR",
-      "relation": "resonance"
-    },
-    {
-      "source": "CR",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "CR",
-      "target": "DOLPHIN",
-      "relation": "connected_to"
-    },
-    {
-      "source": "OC",
+      "source": "CYCLE",
       "target": "TORUS",
       "relation": "geometry_link"
     },
     {
-      "source": "OC",
-      "target": "BE",
-      "relation": "synergy"
-    },
-    {
-      "source": "OC",
-      "target": "PLASMA_FIELD",
-      "relation": "energy_mode"
-    },
-    {
-      "source": "PE",
-      "target": "BE",
-      "relation": "synergy"
-    },
-    {
-      "source": "PE",
-      "target": "AN",
-      "relation": "synergy"
-    },
-    {
-      "source": "PE",
-      "target": "THERMAL",
+      "source": "CYCLE",
+      "target": "SPIRAL",
       "relation": "resonance"
     },
     {
-      "source": "PE",
-      "target": "HEX",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "PE",
-      "target": "TARDI",
-      "relation": "connected_to"
-    },
-    {
-      "source": "PE",
-      "target": "NEGENTROPY",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "JELLY",
-      "target": "OC",
-      "relation": "synergy"
-    },
-    {
-      "source": "JELLY",
-      "target": "LIGHT_BR",
-      "relation": "resonance"
-    },
-    {
-      "source": "JELLY",
-      "target": "PLASMA_FIELD",
-      "relation": "resonance"
-    },
-    {
-      "source": "JELLY",
-      "target": "SPHERE",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "JELLY",
+      "source": "DECAY",
       "target": "CYCLE",
       "relation": "temporal_bridge"
     },
     {
-      "source": "JELLY",
-      "target": "SLIME",
-      "relation": "connected_to"
-    },
-    {
-      "source": "EL",
-      "target": "WH",
-      "relation": "synergy"
-    },
-    {
-      "source": "EL",
-      "target": "ECHO",
-      "relation": "resonance"
-    },
-    {
-      "source": "EL",
-      "target": "MAGNETIC_FIELD",
-      "relation": "energy_mode"
-    },
-    {
-      "source": "MONARCH",
-      "target": "BE",
-      "relation": "synergy"
-    },
-    {
-      "source": "MONARCH",
-      "target": "SUN",
-      "relation": "synergy"
-    },
-    {
-      "source": "MONARCH",
-      "target": "MAGNETIC_FIELD",
-      "relation": "resonance"
-    },
-    {
-      "source": "MONARCH",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "MONARCH",
-      "target": "CYCLE",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "MONARCH",
-      "target": "WH",
-      "relation": "connected_to"
-    },
-    {
-      "source": "SP",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "SP",
-      "target": "BE",
-      "relation": "synergy"
-    },
-    {
-      "source": "SP",
-      "target": "FRACTAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "SN",
-      "target": "CHAMELEON",
-      "relation": "synergy"
-    },
-    {
-      "source": "SN",
-      "target": "THERMAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "SN",
-      "target": "RES_SENSOR",
-      "relation": "resonance"
-    },
-    {
-      "source": "SN",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "SN",
-      "target": "BX",
-      "relation": "connected_to"
-    },
-    {
-      "source": "SN",
-      "target": "LIGHT_BR",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "DOLPHIN",
-      "target": "WH",
-      "relation": "synergy"
-    },
-    {
-      "source": "DOLPHIN",
-      "target": "CROW",
-      "relation": "synergy"
-    },
-    {
-      "source": "DOLPHIN",
-      "target": "RES_SENSOR",
-      "relation": "resonance"
-    },
-    {
-      "source": "DOLPHIN",
-      "target": "SPHERE",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "DOLPHIN",
-      "target": "EMOTION_BR",
-      "relation": "connected_to"
-    },
-    {
-      "source": "DOLPHIN",
-      "target": "MAGNETIC_FIELD",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "OW",
-      "target": "HAW",
-      "relation": "synergy"
-    },
-    {
-      "source": "OW",
-      "target": "BX",
-      "relation": "synergy"
-    },
-    {
-      "source": "OW",
-      "target": "RES_SENSOR",
-      "relation": "resonance"
-    },
-    {
-      "source": "OW",
-      "target": "SPHERE",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "OW",
-      "target": "FOLD",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "OW",
-      "target": "WOLF",
-      "relation": "connected_to"
-    },
-    {
-      "source": "HAW",
-      "target": "OW",
-      "relation": "synergy"
-    },
-    {
-      "source": "HAW",
-      "target": "WOLF",
-      "relation": "synergy"
-    },
-    {
-      "source": "HAW",
-      "target": "LIGHT_BR",
-      "relation": "resonance"
-    },
-    {
-      "source": "HAW",
-      "target": "SPIRAL",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "HAW",
-      "target": "CHAMELEON",
-      "relation": "connected_to"
-    },
-    {
-      "source": "HAW",
-      "target": "GRAV",
-      "relation": "energy_coupling"
-    },
-    {
-      "source": "TARDI",
-      "target": "QUORUM",
-      "relation": "synergy"
-    },
-    {
-      "source": "TARDI",
-      "target": "NEGENTROPY",
-      "relation": "resonance"
-    },
-    {
-      "source": "TARDI",
-      "target": "QUARTZ",
-      "relation": "resonance"
-    },
-    {
-      "source": "TARDI",
-      "target": "SPHERE",
-      "relation": "geometry_link"
-    },
-    {
-      "source": "TARDI",
-      "target": "FOLD",
-      "relation": "temporal_bridge"
-    },
-    {
-      "source": "TARDI",
-      "target": "LI",
-      "relation": "connected_to"
-    },
-    {
-      "source": "AN",
-      "target": "BE",
-      "relation": "synergy"
-    },
-    {
-      "source": "AN",
+      "source": "DECAY",
       "target": "MY",
       "relation": "synergy"
     },
     {
-      "source": "AN",
-      "target": "FRACTAL",
-      "relation": "geometry_link"
+      "source": "DECAY",
+      "target": "FLUX",
+      "relation": "resonance"
     },
     {
-      "source": "BE",
-      "target": "HEX",
-      "relation": "geometry_link"
+      "source": "ECHO",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
     },
     {
-      "source": "BE",
-      "target": "OC",
-      "relation": "synergy"
-    },
-    {
-      "source": "BE",
+      "source": "ECHO",
       "target": "SPIRAL",
-      "relation": "resonance"
-    },
-    {
-      "source": "GE",
-      "target": "SP",
-      "relation": "synergy"
-    },
-    {
-      "source": "GE",
-      "target": "CHAMELEON",
-      "relation": "synergy"
-    },
-    {
-      "source": "GE",
-      "target": "CRYSTAL_LATTICE",
-      "relation": "resonance"
-    },
-    {
-      "source": "GE",
-      "target": "FRACTAL",
       "relation": "geometry_link"
     },
     {
-      "source": "GE",
-      "target": "KA",
+      "source": "EMERGE",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "EMERGE",
+      "target": "FRACTAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "EMERGE",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "FOLD",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "FOLD",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "TEMPORAL",
+      "target": "EMERGE",
       "relation": "connected_to"
     },
     {
-      "source": "GE",
-      "target": "ELECTRIC_FIELD",
-      "relation": "energy_coupling"
+      "source": "TEMPORAL",
+      "target": "DECAY",
+      "relation": "connected_to"
     }
   ]
 }

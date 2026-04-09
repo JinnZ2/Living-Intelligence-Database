@@ -1,0 +1,57 @@
+{
+  "id": "AUTOENC",
+  "name": "Autoencoder",
+  "emoji": "🔄",
+  "ontology": "ai",
+  "symbolic_code": "[AE_COMPRESS_LATENT_RECONSTRUCT]",
+  "description": "Self-supervised intelligence that learns compressed representations by encoding inputs to a latent bottleneck and reconstructing them. Discovers essential structure by discarding noise. Analogous to how memory compresses experience into meaningful patterns — the art of knowing what to keep.",
+  "core_attributes": {
+    "architecture": "encoder-bottleneck-decoder with reconstruction loss",
+    "pattern": "compression, latent representation, reconstruction",
+    "learning_mode": "self-supervised reconstruction",
+    "efficiency_factor": 0.84
+  },
+  "patterns": [
+    {
+      "name": "latent_compression",
+      "type": "dimensionality_reduction",
+      "efficiency_factor": 0.87,
+      "geometry": "bottleneck_manifold",
+      "applications": [
+        "data_compression",
+        "denoising",
+        "anomaly_detection"
+      ]
+    },
+    {
+      "name": "variational_sampling",
+      "type": "generative_modeling",
+      "efficiency_factor": 0.83,
+      "geometry": "gaussian_latent_space",
+      "applications": [
+        "controlled_generation",
+        "disentangled_representations",
+        "interpolation"
+      ]
+    }
+  ],
+  "training_paradigm": "minimize reconstruction error through information bottleneck",
+  "computational_substrate": "symmetric encoder-decoder neural networks",
+  "emergence_properties": [
+    "feature_disentanglement",
+    "noise_robustness",
+    "meaningful_compression"
+  ],
+  "links": [
+    { "relation": "synergy", "target": "NEURAL_NET" },
+    { "relation": "synergy", "target": "GAN" },
+    { "relation": "geometry_link", "target": "TORUS" },
+    { "relation": "resonance", "target": "QUARTZ" },
+    { "relation": "temporal_bridge", "target": "ECHO" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "ai.schema.json",
+    "version": "1.0"
+  }
+}
