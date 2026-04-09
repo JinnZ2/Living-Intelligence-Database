@@ -655,7 +655,7 @@
     },
     {
       "source": "GNN",
-      "target": "MYCELIUM",
+      "target": "MY",
       "relation": "resonance"
     },
     {
@@ -705,7 +705,7 @@
     },
     {
       "source": "GAN",
-      "target": "CUTTLEFISH",
+      "target": "CU",
       "relation": "resonance"
     },
     {

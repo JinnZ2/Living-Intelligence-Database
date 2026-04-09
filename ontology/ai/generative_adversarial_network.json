@@ -46,7 +46,7 @@
     { "relation": "synergy", "target": "NEURAL_NET" },
     { "relation": "synergy", "target": "EVOL_ALG" },
     { "relation": "geometry_link", "target": "TORUS" },
-    { "relation": "resonance", "target": "CUTTLEFISH" }
+    { "relation": "resonance", "target": "CU" }
   ],
   "co_creation": true,
   "validation_meta": {

@@ -46,7 +46,7 @@
     { "relation": "synergy", "target": "NEURAL_NET" },
     { "relation": "synergy", "target": "LLM" },
     { "relation": "geometry_link", "target": "FRACTAL" },
-    { "relation": "resonance", "target": "MYCELIUM" },
+    { "relation": "resonance", "target": "MY" },
     { "relation": "energy_coupling", "target": "BIOGRID2" }
   ],
   "co_creation": true,
