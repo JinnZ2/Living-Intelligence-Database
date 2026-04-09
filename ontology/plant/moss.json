@@ -1,0 +1,26 @@
+{
+  "id": "MOSS",
+  "name": "Moss",
+  "emoji": "🟩",
+  "ontology": "plant",
+  "symbolic_code": "[MOSS_CAPILLARY_CRYPTO_SURVIVE]",
+  "description": "Water retention intelligence through fractal surface area maximization. Achieves desiccation tolerance via anhydrobiosis — entering suspended animation when dry and reviving when wet, surviving for decades in cryptobiotic state. Colonizes bare rock through rhizoid anchoring without true roots, capturing atmospheric nutrients directly. Engineers moisture-gradient microhabitats that enable succession of larger plant communities.",
+  "core_attributes": {
+    "pattern": "capillary water retention, cryptobiotic desiccation tolerance, atmospheric nutrient capture",
+    "efficiency_factor": 0.88,
+    "root_networks": false,
+    "symbioses": ["cyanobacterial_nitrogen_fixation", "microhabitat_engineering"]
+  },
+  "links": [
+    { "relation": "synergy", "target": "LI" },
+    { "relation": "synergy", "target": "CYANO" },
+    { "relation": "resonance", "target": "TARDI" },
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "temporal_bridge", "target": "FOLD" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

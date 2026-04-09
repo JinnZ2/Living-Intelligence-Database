@@ -1,0 +1,49 @@
+{
+  "id": "SALMON",
+  "name": "Salmon",
+  "emoji": "🐟",
+  "ontology": "animal",
+  "symbolic_code": "[SALMON_OLFACT_HOME_RETURN]",
+  "description": "Natal stream homing intelligence using hierarchical chemical gradient following. Juvenile olfactory imprinting creates a chemical signature memory of the birth stream, recalled years later during adult migration. Magnetic ocean navigation provides open-water orientation, then sequential tributary decision trees guide the final approach. Osmoregulatory transformation enables freshwater-saltwater transition. Die-off completes a nutrient cycle, depositing marine-derived nitrogen into forest ecosystems.",
+  "core_attributes": {
+    "neurology": "olfactory imprint memory, magnetic sense, osmoregulatory switching",
+    "pattern": "natal homing, hierarchical chemical navigation, nutrient cycle completion",
+    "efficiency_factor": 0.93
+  },
+  "patterns": [
+    {
+      "name": "olfactory_homing",
+      "type": "chemical_navigation",
+      "efficiency_factor": 0.95,
+      "geometry": "nested_decision_tree",
+      "applications": ["chemical_gradient_tracking", "memory_guided_navigation", "precision_return"]
+    },
+    {
+      "name": "osmoregulatory_switch",
+      "type": "physiological_transformation",
+      "efficiency_factor": 0.90,
+      "geometry": "phase_transition",
+      "applications": ["environment_switching", "adaptive_physiology", "state_management"]
+    },
+    {
+      "name": "nutrient_teleportation",
+      "type": "ecosystem_service",
+      "efficiency_factor": 0.88,
+      "geometry": "ocean_to_forest_pipeline",
+      "applications": ["marine_nutrient_transfer", "forest_fertilization", "cross_system_coupling"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "TU" },
+    { "relation": "synergy", "target": "WH" },
+    { "relation": "resonance", "target": "MAGNETIC_FIELD" },
+    { "relation": "geometry_link", "target": "TREE_GRAPH" },
+    { "relation": "temporal_bridge", "target": "CYCLE" },
+    { "relation": "energy_coupling", "target": "FLUX" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

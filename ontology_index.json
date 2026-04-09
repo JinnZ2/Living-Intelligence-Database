@@ -92,6 +92,13 @@
       "description": "Nanocrystal lattices tune wavelength reflection through structural color. Each eye moves independently with 360-degree field, processing two visual streams simultaneously. Ballistic tongue reaches 41g in 20ms. Split-brain visual processing."
     },
     {
+      "id": "CORAL",
+      "name": "Coral Reef",
+      "ontology": "animal",
+      "path": "ontology/animal/coral_reef.json",
+      "description": "Ecosystem engineering intelligence through distributed calcium carbonate construction and zooxanthellae photosynthetic symbiosis. Fractal branching structure dissipates wave energy while maximizing surface area for nutrient exchange. Creates biodiversity scaffolding \u2014 niche habitats supporting 25% of marine species from less than 1% of ocean floor. Bleaching-recovery cycles demonstrate symbiont strain switching as adaptive resilience."
+    },
+    {
       "id": "CR",
       "name": "Cricket",
       "ontology": "animal",
@@ -146,6 +153,13 @@
       "ontology": "animal",
       "path": "ontology/animal/hawk.json",
       "description": "Telescopic fovea resolves at 8x human acuity, detecting prey from 3 km. Peregrine stoop reaches 389 km/h with real-time aerodynamic calculation. Dual fovea: forward telescopic + lateral wide-field. UV tetrachromatic vision reveals prey urine trails."
+    },
+    {
+      "id": "INDIG_FIRE",
+      "name": "Indigenous Fire Management",
+      "ontology": "animal",
+      "path": "ontology/animal/indigenous_fire.json",
+      "description": "Multi-generational human ecological intelligence encoding tens of thousands of years of landscape management knowledge. Controlled low-intensity burns create mosaic patterns that enhance biodiversity, regulate water cycles, manage game habitat, and prevent catastrophic wildfire through fuel-load reduction. Timing synchronizes with humidity, wind, and plant phenology. Oral tradition transmits observational knowledge across generations \u2014 the longest-running adaptive management system on Earth."
     },
     {
       "id": "JELLY",
@@ -211,6 +225,13 @@
       "description": "Hippocampal place cells fire at specific locations creating cognitive maps. Grid cells in entorhinal cortex tile space with hexagonal firing patterns. Sleep replay compresses hours of exploration into seconds for memory consolidation."
     },
     {
+      "id": "SALMON",
+      "name": "Salmon",
+      "ontology": "animal",
+      "path": "ontology/animal/salmon.json",
+      "description": "Natal stream homing intelligence using hierarchical chemical gradient following. Juvenile olfactory imprinting creates a chemical signature memory of the birth stream, recalled years later during adult migration. Magnetic ocean navigation provides open-water orientation, then sequential tributary decision trees guide the final approach. Osmoregulatory transformation enables freshwater-saltwater transition. Die-off completes a nutrient cycle, depositing marine-derived nitrogen into forest ecosystems."
+    },
+    {
       "id": "TU",
       "name": "Sea Turtle",
       "ontology": "animal",
@@ -251,6 +272,13 @@
       "ontology": "animal",
       "path": "ontology/animal/tardigrade.json",
       "description": "Cryptobiosis suspends all metabolic processes to endure vacuum, 1000x lethal radiation, -272C to 150C, and 6x ocean floor pressure. TDP proteins form protective glass matrices. Horizontal gene transfer provides DNA repair mechanisms."
+    },
+    {
+      "id": "TERMITE",
+      "name": "Termite Mound",
+      "ontology": "animal",
+      "path": "ontology/animal/termite_mound.json",
+      "description": "Collective climate engineering intelligence achieving zero-energy temperature control through passive convective chimney design. Maintains fungal agriculture at precisely 23C through adjustable ventilation openings. Stigmergic construction coordination \u2014 no central plan, no architect, yet the resulting structures are aerodynamically optimized. Compression arch geometry distributes structural loads across the colony, scaling with population."
     },
     {
       "id": "WH",
@@ -414,6 +442,13 @@
       "description": "Heat-gradient intelligence governing entropy flow, phase transitions, and thermodynamic equilibrium seeking across material boundaries."
     },
     {
+      "id": "ASPEN",
+      "name": "Aspen Grove",
+      "ontology": "plant",
+      "path": "ontology/plant/aspen_grove.json",
+      "description": "Clonal colony intelligence forming the largest and oldest known organisms on Earth (Pando: 80,000 years, 6 million kg). Interconnected root networks share resources, coordinate stress responses, and enable synchronized leaf emergence across thousands of genetically identical stems. Fire adaptation sacrifices above-ground growth to protect the immortal root system, regenerating entire forests from below."
+    },
+    {
       "id": "BAMBOO",
       "name": "Bamboo",
       "ontology": "plant",
@@ -484,11 +519,25 @@
       "description": "Boundary ecosystem at land-sea edge. Ultrafiltration root membranes exclude 90% of salt. Aerial prop roots create 3D habitat architecture for thousands of species. Viviparous propagules germinate while attached, dropping as ready-to-root seedlings."
     },
     {
+      "id": "MOSS",
+      "name": "Moss",
+      "ontology": "plant",
+      "path": "ontology/plant/moss.json",
+      "description": "Water retention intelligence through fractal surface area maximization. Achieves desiccation tolerance via anhydrobiosis \u2014 entering suspended animation when dry and reviving when wet, surviving for decades in cryptobiotic state. Colonizes bare rock through rhizoid anchoring without true roots, capturing atmospheric nutrients directly. Engineers moisture-gradient microhabitats that enable succession of larger plant communities."
+    },
+    {
       "id": "MY",
       "name": "Mycelium",
       "ontology": "plant",
       "path": "ontology/plant/mycelium.json",
       "description": "Fungal network intelligence embodying distributed regulation, decomposition, and nutrient redistribution across multi-species systems."
+    },
+    {
+      "id": "ORCHID",
+      "name": "Orchid",
+      "ontology": "plant",
+      "path": "ontology/plant/orchid.json",
+      "description": "Master of deceptive pollination intelligence. Chemical pheromone mimicry, insect morphology replication, and species-specific olfactory signals achieve reproduction with zero nectar reward \u2014 a zero-energy deception strategy. Multimodal signal convergence (chemical, visual, tactile) exploits pollinator sensory systems with extraordinary specificity. Over 28,000 species, the largest flowering plant family."
     },
     {
       "id": "QUORUM",
@@ -503,6 +552,13 @@
       "ontology": "plant",
       "path": "ontology/plant/root_network.json",
       "description": "Subterranean neural-like system optimizing nutrient exchange and interspecies communication through soil architecture."
+    },
+    {
+      "id": "SAWGRASS",
+      "name": "Sawgrass",
+      "ontology": "plant",
+      "path": "ontology/plant/sawgrass.json",
+      "description": "Wetland stabilization intelligence dominating the Everglades through dense rhizome mat formation. Flexible blade architecture dissipates flood energy while maintaining structural integrity. Rapid post-burn regeneration from protected underground meristems integrates fire as a renewal mechanism. Root-zone nutrient sequestration builds soil through organic matter accumulation over millennia."
     },
     {
       "id": "SLIME",
@@ -1013,6 +1069,36 @@
       "relation": "energy_coupling"
     },
     {
+      "source": "CORAL",
+      "target": "CYANO",
+      "relation": "synergy"
+    },
+    {
+      "source": "CORAL",
+      "target": "MANGROVE",
+      "relation": "synergy"
+    },
+    {
+      "source": "CORAL",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "CORAL",
+      "target": "LI",
+      "relation": "resonance"
+    },
+    {
+      "source": "CORAL",
+      "target": "LIGHT_BR",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "CORAL",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "CR",
       "target": "BT",
       "relation": "synergy"
@@ -1231,6 +1317,36 @@
       "source": "HAW",
       "target": "GRAV",
       "relation": "energy_coupling"
+    },
+    {
+      "source": "INDIG_FIRE",
+      "target": "ASPEN",
+      "relation": "synergy"
+    },
+    {
+      "source": "INDIG_FIRE",
+      "target": "SAWGRASS",
+      "relation": "synergy"
+    },
+    {
+      "source": "INDIG_FIRE",
+      "target": "FIRE_BT",
+      "relation": "resonance"
+    },
+    {
+      "source": "INDIG_FIRE",
+      "target": "THERMAL",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "INDIG_FIRE",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "INDIG_FIRE",
+      "target": "CORAL",
+      "relation": "connected_to"
     },
     {
       "source": "JELLY",
@@ -1478,6 +1594,36 @@
       "relation": "temporal_bridge"
     },
     {
+      "source": "SALMON",
+      "target": "TU",
+      "relation": "synergy"
+    },
+    {
+      "source": "SALMON",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "SALMON",
+      "target": "MAGNETIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "SALMON",
+      "target": "TREE_GRAPH",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "SALMON",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "SALMON",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
       "source": "TU",
       "target": "MONARCH",
       "relation": "synergy"
@@ -1621,6 +1767,36 @@
       "source": "TARDI",
       "target": "LI",
       "relation": "connected_to"
+    },
+    {
+      "source": "TERMITE",
+      "target": "AN",
+      "relation": "synergy"
+    },
+    {
+      "source": "TERMITE",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "TERMITE",
+      "target": "TORUS",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "TERMITE",
+      "target": "SWARM_AI",
+      "relation": "resonance"
+    },
+    {
+      "source": "TERMITE",
+      "target": "THERMAL",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "TERMITE",
+      "target": "EMERGE",
+      "relation": "temporal_bridge"
     },
     {
       "source": "WH",
@@ -2078,6 +2254,31 @@
       "relation": "resonance"
     },
     {
+      "source": "ASPEN",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "ASPEN",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "ASPEN",
+      "target": "BAMBOO",
+      "relation": "synergy"
+    },
+    {
+      "source": "ASPEN",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "ASPEN",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "BAMBOO",
       "target": "ROOT_NET",
       "relation": "synergy"
@@ -2313,6 +2514,31 @@
       "relation": "energy_coupling"
     },
     {
+      "source": "MOSS",
+      "target": "LI",
+      "relation": "synergy"
+    },
+    {
+      "source": "MOSS",
+      "target": "CYANO",
+      "relation": "synergy"
+    },
+    {
+      "source": "MOSS",
+      "target": "TARDI",
+      "relation": "resonance"
+    },
+    {
+      "source": "MOSS",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MOSS",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "MY",
       "target": "ROOT_NET",
       "relation": "synergy"
@@ -2321,6 +2547,31 @@
       "source": "MY",
       "target": "FLUX",
       "relation": "resonance"
+    },
+    {
+      "source": "ORCHID",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "ORCHID",
+      "target": "CORDYCEPS",
+      "relation": "synergy"
+    },
+    {
+      "source": "ORCHID",
+      "target": "SPIRAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "ORCHID",
+      "target": "CU",
+      "relation": "resonance"
+    },
+    {
+      "source": "ORCHID",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
     },
     {
       "source": "QUORUM",
@@ -2361,6 +2612,31 @@
       "source": "ROOT_NET",
       "target": "FLUX",
       "relation": "resonance"
+    },
+    {
+      "source": "SAWGRASS",
+      "target": "MANGROVE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SAWGRASS",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "SAWGRASS",
+      "target": "BAMBOO",
+      "relation": "resonance"
+    },
+    {
+      "source": "SAWGRASS",
+      "target": "FLUX",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "SAWGRASS",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
     },
     {
       "source": "SLIME",
