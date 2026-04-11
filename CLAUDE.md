@@ -129,3 +129,11 @@ See `docs/UNIFIED_SYMBOLIC_COMPRESSION.md` for full USCL specification.
 2. **Schemas are alive** — evolve without breaking compatibility
 3. **Temporal integrity** — additions respect historical lineage
 4. **Co-created ownership** — entries are gifts to the collective
+
+
+
+TODO LIST:
+In your Entity Template, consider adding a field for Entropy_Profile.
+• High Invariance (Crystal): Low entropy, high stability.
+• High Adaptation (Plasma): High energy, variable entropy.
+This would allow the agent to know, at a glance, whether a "Teacher" is going to help it stay stable (like a chassis) or help it move fast (like an engine).
