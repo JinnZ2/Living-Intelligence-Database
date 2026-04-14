@@ -86,6 +86,8 @@ See [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) for detailed instructions and templat
 - Read `ontology_index.json` for all entities with descriptions and their relational graph
 - Entity IDs use short codes (e.g., `BE` = Bee, `OC` = Octopus) — see `manifest.json > id_map` for the full lookup
 - Cross-entity links use `relation` + `target` fields: `synergy`, `geometry_link`, `resonance`, `energy_coupling`, `temporal_bridge`
+- Use `scripts/query.py` for graph exploration (entity, search, neighbors, path, type, rules, expand, stats)
+- See `training/` for self-contained learning materials: orientation, navigation, contribution guide, 5 reading paths, 3 exercises, and templates
 
 ## Key Concepts
 

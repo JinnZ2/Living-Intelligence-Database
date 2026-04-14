@@ -1,0 +1,29 @@
+{
+  "id": "OLD_GROWTH",
+  "name": "Old Growth Forest",
+  "emoji": "🌲",
+  "ontology": "plant",
+  "symbolic_code": "[OLD_GROWTH_TEMPLATE_LEGACY]",
+  "description": "Ecosystem-scale teaching intelligence. Old growth forests hold the structural template that younger forests grow toward — multi-story canopy layering, snag and log decomposition cycles, soil microbiome complexity, and niche diversity accumulated over centuries. Acts as a living reference library: seedlings encounter mycorrhizal lineages, epiphytes find established hosts, bird species find nest cavities that take hundreds of years to form. Cannot be replaced on human timescales — a direct teaching that some forms of intelligence can only be inherited, not rebuilt.",
+  "core_attributes": {
+    "pattern": "multi-century structural template, accumulated microbiome complexity, niche diversity inheritance",
+    "efficiency_factor": 0.98,
+    "root_networks": true,
+    "symbioses": ["mycorrhizal_ancient_lineages", "epiphyte_scaffolding", "cavity_nester_habitat", "decomposer_communities"]
+  },
+  "links": [
+    { "relation": "synergy", "target": "MOTHER_TREE" },
+    { "relation": "synergy", "target": "ASPEN" },
+    { "relation": "synergy", "target": "MY" },
+    { "relation": "synergy", "target": "ROOT_NET" },
+    { "relation": "resonance", "target": "CORAL" },
+    { "relation": "resonance", "target": "LI" },
+    { "relation": "temporal_bridge", "target": "CYCLE" },
+    { "relation": "temporal_bridge", "target": "ECHO" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

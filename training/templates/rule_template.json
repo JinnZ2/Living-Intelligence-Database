@@ -1,0 +1,32 @@
+[
+  {
+    "_comment": "Rule template. Copy the object below and customize. Do not include the _comment field in actual rules.",
+    "if": ["EXISTING_ID_1", "EXISTING_ID_2", "EXISTING_ID_3"],
+    "then": "EMERGENT_CONCEPT_NAME"
+  },
+  {
+    "_example_good_1": "Three desiccation-tolerant symbionts combine into a real ecological phenomenon",
+    "if": ["MOSS", "LI", "CYANO"],
+    "then": "CRYPTOBIOTIC_SOIL_CRUST"
+  },
+  {
+    "_example_good_2": "Two cephalopods and a color-shifting reptile converge on a capability",
+    "if": ["CU", "OC", "CHAMELEON"],
+    "then": "CEPHALOPOD_CAMOUFLAGE_TRIAD"
+  },
+  {
+    "_example_good_3": "AI architecture meets its biological ancestor meets a geometric constant",
+    "if": ["NEURAL_NET", "MY", "FRACTAL"],
+    "then": "BIOLOGICAL_BACKPROPAGATION"
+  },
+  {
+    "_rules_for_good_rules": [
+      "2-3 inputs (rarely 4+)",
+      "Every input must be an existing entity ID or a constant (phi, tau, sqrt3)",
+      "The output should be genuinely emergent — not reducible to any single input",
+      "Use UPPERCASE_SNAKE_CASE for the output concept",
+      "The combination should be surprising but defensible",
+      "Avoid tautology: [BE] -> BEE_INTELLIGENCE is NOT a good rule"
+    ]
+  }
+]

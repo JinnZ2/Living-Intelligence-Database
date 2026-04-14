@@ -1,0 +1,50 @@
+{
+  "id": "STORYTELLER",
+  "name": "Storyteller",
+  "emoji": "📖",
+  "ontology": "animal",
+  "symbolic_code": "[STORY_ORAL_MNEMONIC_TRANSMIT]",
+  "description": "Oral tradition transmission intelligence. Human practice of encoding knowledge as narrative — using rhythm, rhyme, character, place, and repetition as mnemonic structures that survive across generations without writing. Aboriginal Australian songlines encode navigation routes spanning thousands of kilometers, accurate over tens of thousands of years. Homer's epics preserved bronze-age history through dactylic hexameter. Stories are not entertainment: they are mobile, distributed, error-correcting memory.",
+  "core_attributes": {
+    "neurology": "narrative memory encoding, rhythmic pattern learning, social memory",
+    "pattern": "mnemonic narrative structure, songline navigation, intergenerational error correction",
+    "efficiency_factor": 0.96
+  },
+  "patterns": [
+    {
+      "name": "mnemonic_encoding",
+      "type": "memory_compression",
+      "efficiency_factor": 0.97,
+      "geometry": "rhythmic_narrative_structure",
+      "applications": ["knowledge_preservation", "cultural_memory", "pre_literate_archives"]
+    },
+    {
+      "name": "songline_navigation",
+      "type": "spatial_encoding",
+      "efficiency_factor": 0.95,
+      "geometry": "narrative_path_mapping",
+      "applications": ["landscape_memory", "route_finding", "ecological_knowledge"]
+    },
+    {
+      "name": "error_correction_retelling",
+      "type": "collective_memory",
+      "efficiency_factor": 0.90,
+      "geometry": "distributed_consensus_narrative",
+      "applications": ["drift_prevention", "community_validation", "multi_generational_accuracy"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "INDIG_FIRE" },
+    { "relation": "synergy", "target": "GRANDMOTHER" },
+    { "relation": "synergy", "target": "SEED_KEEPER" },
+    { "relation": "resonance", "target": "HUMPBACK" },
+    { "relation": "temporal_bridge", "target": "ECHO" },
+    { "relation": "temporal_bridge", "target": "FOLD" },
+    { "relation": "energy_coupling", "target": "EMOTION_BR" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

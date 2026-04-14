@@ -1,0 +1,50 @@
+{
+  "id": "SEED_KEEPER",
+  "name": "Seed Keeper",
+  "emoji": "🌱",
+  "ontology": "animal",
+  "symbolic_code": "[SEED_KEEPER_BIODIV_PRESERVE]",
+  "description": "Intergenerational biodiversity preservation intelligence. Human practice of saving, sorting, and replanting seeds across generations encodes plant genetic knowledge that would otherwise be lost to commercial monoculture. Seed libraries and farmer networks maintain thousands of heirloom varieties adapted to specific microclimates, each representing millennia of co-evolution with local soils, weather, and cultural practices. The reverse of extinction: a deliberate act of memory.",
+  "core_attributes": {
+    "neurology": "intergenerational biodiversity memory, variety identification knowledge",
+    "pattern": "genetic library curation, heirloom preservation, climate-adapted variety maintenance",
+    "efficiency_factor": 0.95
+  },
+  "patterns": [
+    {
+      "name": "genetic_library_curation",
+      "type": "knowledge_preservation",
+      "efficiency_factor": 0.96,
+      "geometry": "biodiversity_archive",
+      "applications": ["crop_resilience", "climate_adaptation", "food_sovereignty"]
+    },
+    {
+      "name": "heirloom_selection",
+      "type": "variety_recognition",
+      "efficiency_factor": 0.93,
+      "geometry": "phenotypic_memory",
+      "applications": ["trait_preservation", "local_adaptation", "cultural_crop_identity"]
+    },
+    {
+      "name": "seed_exchange_network",
+      "type": "distributed_preservation",
+      "efficiency_factor": 0.94,
+      "geometry": "cooperative_redundancy",
+      "applications": ["disaster_insurance", "community_resilience", "living_genetic_backup"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "INDIG_FIRE" },
+    { "relation": "synergy", "target": "DANDELION" },
+    { "relation": "synergy", "target": "CURLY_DOCK" },
+    { "relation": "synergy", "target": "MOTHER_TREE" },
+    { "relation": "resonance", "target": "GRANDMOTHER" },
+    { "relation": "temporal_bridge", "target": "ECHO" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

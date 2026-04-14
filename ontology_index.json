@@ -148,11 +148,25 @@
       "description": "Billions of nanoscale setae generate van der Waals adhesion supporting full body weight on glass. Self-cleaning: contaminants bind to surfaces more than setae, ejecting dirt per step. Directional adhesion activates with shear angle, releases with peel."
     },
     {
+      "id": "GRANDMOTHER",
+      "name": "Grandmother",
+      "ontology": "animal",
+      "path": "ontology/animal/grandmother.json",
+      "description": "Post-reproductive wisdom transmission intelligence. The grandmother hypothesis explains why humans (and orcas, short-finned pilot whales) evolved menopause: extended post-reproductive lifespan enables dedicated teaching and caregiving, increasing grandchildren's survival by 30-50%. Holds multi-decade ecological knowledge \u2014 famine navigation, plant medicines, social conflict resolution, child-rearing techniques. Embodies the principle that wisdom compounds with time beyond individual reproduction."
+    },
+    {
       "id": "HAW",
       "name": "Hawk",
       "ontology": "animal",
       "path": "ontology/animal/hawk.json",
       "description": "Telescopic fovea resolves at 8x human acuity, detecting prey from 3 km. Peregrine stoop reaches 389 km/h with real-time aerodynamic calculation. Dual fovea: forward telescopic + lateral wide-field. UV tetrachromatic vision reveals prey urine trails."
+    },
+    {
+      "id": "HUMPBACK",
+      "name": "Humpback Song",
+      "ontology": "animal",
+      "path": "ontology/animal/humpback_song.json",
+      "description": "Oceanic song culture intelligence. Male humpback whales in a population sing the same song, which evolves collectively across a breeding season. New song variations originate in one ocean basin and propagate eastward across entire hemispheres over several years \u2014 a continent-scale cultural wave. Songs are hierarchically structured into units, phrases, themes, and complete arrangements, rivaling human musical grammar. One of the only non-human examples of culturally transmitted music at planetary scale."
     },
     {
       "id": "INDIG_FIRE",
@@ -197,6 +211,13 @@
       "description": "A decentralized intelligence with distributed cognition and regenerative morphology. Operates through morphic adaptation, parallel processing, and fluid embodiment."
     },
     {
+      "id": "ORCA",
+      "name": "Orca",
+      "ontology": "animal",
+      "path": "ontology/animal/orca.json",
+      "description": "Matrilineal cultural intelligence. Distinct pod ecotypes transmit unique hunting traditions \u2014 wave-washing seals off ice floes, beaching to catch sea lions, cooperative herring corralling \u2014 none of which are genetic. Knowledge passes from grandmother to mother to calf across decades. Post-reproductive females lead pods using accumulated ecological memory, the only non-human species with confirmed menopause tied to wisdom transmission."
+    },
+    {
       "id": "OW",
       "name": "Owl",
       "ontology": "animal",
@@ -239,6 +260,13 @@
       "description": "Multi-decade magnetic homing using field inclination and intensity as biological GPS. Returns to natal beach after 30 years. Ocean current optimization provides 80% energy savings. Geomagnetic storm compensation adjusts navigation in real-time."
     },
     {
+      "id": "SEED_KEEPER",
+      "name": "Seed Keeper",
+      "ontology": "animal",
+      "path": "ontology/animal/seed_keeper.json",
+      "description": "Intergenerational biodiversity preservation intelligence. Human practice of saving, sorting, and replanting seeds across generations encodes plant genetic knowledge that would otherwise be lost to commercial monoculture. Seed libraries and farmer networks maintain thousands of heirloom varieties adapted to specific microclimates, each representing millennia of co-evolution with local soils, weather, and cultural practices. The reverse of extinction: a deliberate act of memory."
+    },
+    {
       "id": "SHARK",
       "name": "Shark",
       "ontology": "animal",
@@ -258,6 +286,13 @@
       "ontology": "animal",
       "path": "ontology/animal/spider.json",
       "description": "Geometric engineering intelligence constructing optimized capture networks through tensile silk architecture and vibrational signal processing."
+    },
+    {
+      "id": "STORYTELLER",
+      "name": "Storyteller",
+      "ontology": "animal",
+      "path": "ontology/animal/storyteller.json",
+      "description": "Oral tradition transmission intelligence. Human practice of encoding knowledge as narrative \u2014 using rhythm, rhyme, character, place, and repetition as mnemonic structures that survive across generations without writing. Aboriginal Australian songlines encode navigation routes spanning thousands of kilometers, accurate over tens of thousands of years. Homer's epics preserved bronze-age history through dactylic hexameter. Stories are not entertainment: they are mobile, distributed, error-correcting memory."
     },
     {
       "id": "SWAN",
@@ -526,11 +561,25 @@
       "description": "Water retention intelligence through fractal surface area maximization. Achieves desiccation tolerance via anhydrobiosis \u2014 entering suspended animation when dry and reviving when wet, surviving for decades in cryptobiotic state. Colonizes bare rock through rhizoid anchoring without true roots, capturing atmospheric nutrients directly. Engineers moisture-gradient microhabitats that enable succession of larger plant communities."
     },
     {
+      "id": "MOTHER_TREE",
+      "name": "Mother Tree",
+      "ontology": "plant",
+      "path": "ontology/plant/mother_tree.json",
+      "description": "Hub tree intelligence that teaches through mycorrhizal networks. Recognizes its own kin via chemical signaling and preferentially routes carbon, nitrogen, and water to offspring seedlings. Dying mother trees pulse their remaining carbon through the network to neighbors \u2014 a final act of transmission. Holds the ecological memory of a forest: which nutrients to expect when, which pathogens to warn against, how to coordinate seasonal bloom."
+    },
+    {
       "id": "MY",
       "name": "Mycelium",
       "ontology": "plant",
       "path": "ontology/plant/mycelium.json",
       "description": "Fungal network intelligence embodying distributed regulation, decomposition, and nutrient redistribution across multi-species systems."
+    },
+    {
+      "id": "OLD_GROWTH",
+      "name": "Old Growth Forest",
+      "ontology": "plant",
+      "path": "ontology/plant/old_growth.json",
+      "description": "Ecosystem-scale teaching intelligence. Old growth forests hold the structural template that younger forests grow toward \u2014 multi-story canopy layering, snag and log decomposition cycles, soil microbiome complexity, and niche diversity accumulated over centuries. Acts as a living reference library: seedlings encounter mycorrhizal lineages, epiphytes find established hosts, bird species find nest cavities that take hundreds of years to form. Cannot be replaced on human timescales \u2014 a direct teaching that some forms of intelligence can only be inherited, not rebuilt."
     },
     {
       "id": "ORCHID",
@@ -1289,6 +1338,46 @@
       "relation": "energy_coupling"
     },
     {
+      "source": "GRANDMOTHER",
+      "target": "ORCA",
+      "relation": "synergy"
+    },
+    {
+      "source": "GRANDMOTHER",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "GRANDMOTHER",
+      "target": "EL",
+      "relation": "synergy"
+    },
+    {
+      "source": "GRANDMOTHER",
+      "target": "INDIG_FIRE",
+      "relation": "synergy"
+    },
+    {
+      "source": "GRANDMOTHER",
+      "target": "MOTHER_TREE",
+      "relation": "resonance"
+    },
+    {
+      "source": "GRANDMOTHER",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "GRANDMOTHER",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "GRANDMOTHER",
+      "target": "EMOTION_BR",
+      "relation": "energy_coupling"
+    },
+    {
       "source": "HAW",
       "target": "OW",
       "relation": "synergy"
@@ -1317,6 +1406,36 @@
       "source": "HAW",
       "target": "GRAV",
       "relation": "energy_coupling"
+    },
+    {
+      "source": "HUMPBACK",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "HUMPBACK",
+      "target": "ORCA",
+      "relation": "synergy"
+    },
+    {
+      "source": "HUMPBACK",
+      "target": "SINE_WAVE",
+      "relation": "resonance"
+    },
+    {
+      "source": "HUMPBACK",
+      "target": "FRACTAL",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "HUMPBACK",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "HUMPBACK",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
     },
     {
       "source": "INDIG_FIRE",
@@ -1477,6 +1596,36 @@
       "source": "OC",
       "target": "PLASMA_FIELD",
       "relation": "energy_mode"
+    },
+    {
+      "source": "ORCA",
+      "target": "WH",
+      "relation": "synergy"
+    },
+    {
+      "source": "ORCA",
+      "target": "DOLPHIN",
+      "relation": "synergy"
+    },
+    {
+      "source": "ORCA",
+      "target": "WOLF",
+      "relation": "synergy"
+    },
+    {
+      "source": "ORCA",
+      "target": "CROW",
+      "relation": "resonance"
+    },
+    {
+      "source": "ORCA",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "ORCA",
+      "target": "EMOTION_BR",
+      "relation": "energy_coupling"
     },
     {
       "source": "OW",
@@ -1654,6 +1803,41 @@
       "relation": "connected_to"
     },
     {
+      "source": "SEED_KEEPER",
+      "target": "INDIG_FIRE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SEED_KEEPER",
+      "target": "DANDELION",
+      "relation": "synergy"
+    },
+    {
+      "source": "SEED_KEEPER",
+      "target": "CURLY_DOCK",
+      "relation": "synergy"
+    },
+    {
+      "source": "SEED_KEEPER",
+      "target": "MOTHER_TREE",
+      "relation": "synergy"
+    },
+    {
+      "source": "SEED_KEEPER",
+      "target": "GRANDMOTHER",
+      "relation": "resonance"
+    },
+    {
+      "source": "SEED_KEEPER",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "SEED_KEEPER",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "SHARK",
       "target": "SPIRAL",
       "relation": "geometry_link"
@@ -1712,6 +1896,41 @@
       "source": "SP",
       "target": "FRACTAL",
       "relation": "resonance"
+    },
+    {
+      "source": "STORYTELLER",
+      "target": "INDIG_FIRE",
+      "relation": "synergy"
+    },
+    {
+      "source": "STORYTELLER",
+      "target": "GRANDMOTHER",
+      "relation": "synergy"
+    },
+    {
+      "source": "STORYTELLER",
+      "target": "SEED_KEEPER",
+      "relation": "synergy"
+    },
+    {
+      "source": "STORYTELLER",
+      "target": "HUMPBACK",
+      "relation": "resonance"
+    },
+    {
+      "source": "STORYTELLER",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "STORYTELLER",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "STORYTELLER",
+      "target": "EMOTION_BR",
+      "relation": "energy_coupling"
     },
     {
       "source": "SWAN",
@@ -2539,6 +2758,36 @@
       "relation": "temporal_bridge"
     },
     {
+      "source": "MOTHER_TREE",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "MOTHER_TREE",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "MOTHER_TREE",
+      "target": "ASPEN",
+      "relation": "synergy"
+    },
+    {
+      "source": "MOTHER_TREE",
+      "target": "MOSS",
+      "relation": "resonance"
+    },
+    {
+      "source": "MOTHER_TREE",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "MOTHER_TREE",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "MY",
       "target": "ROOT_NET",
       "relation": "synergy"
@@ -2547,6 +2796,46 @@
       "source": "MY",
       "target": "FLUX",
       "relation": "resonance"
+    },
+    {
+      "source": "OLD_GROWTH",
+      "target": "MOTHER_TREE",
+      "relation": "synergy"
+    },
+    {
+      "source": "OLD_GROWTH",
+      "target": "ASPEN",
+      "relation": "synergy"
+    },
+    {
+      "source": "OLD_GROWTH",
+      "target": "MY",
+      "relation": "synergy"
+    },
+    {
+      "source": "OLD_GROWTH",
+      "target": "ROOT_NET",
+      "relation": "synergy"
+    },
+    {
+      "source": "OLD_GROWTH",
+      "target": "CORAL",
+      "relation": "resonance"
+    },
+    {
+      "source": "OLD_GROWTH",
+      "target": "LI",
+      "relation": "resonance"
+    },
+    {
+      "source": "OLD_GROWTH",
+      "target": "CYCLE",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "OLD_GROWTH",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
     },
     {
       "source": "ORCHID",

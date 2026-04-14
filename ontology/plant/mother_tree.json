@@ -1,0 +1,27 @@
+{
+  "id": "MOTHER_TREE",
+  "name": "Mother Tree",
+  "emoji": "🌳",
+  "ontology": "plant",
+  "symbolic_code": "[MOTHER_TREE_HUB_KIN_SUBSIDY]",
+  "description": "Hub tree intelligence that teaches through mycorrhizal networks. Recognizes its own kin via chemical signaling and preferentially routes carbon, nitrogen, and water to offspring seedlings. Dying mother trees pulse their remaining carbon through the network to neighbors — a final act of transmission. Holds the ecological memory of a forest: which nutrients to expect when, which pathogens to warn against, how to coordinate seasonal bloom.",
+  "core_attributes": {
+    "pattern": "kin recognition, resource subsidy to offspring, chemical warning networks, terminal carbon pulse",
+    "efficiency_factor": 0.94,
+    "root_networks": true,
+    "symbioses": ["mycorrhizal_fungi", "offspring_subsidy", "cross_species_support"]
+  },
+  "links": [
+    { "relation": "synergy", "target": "MY" },
+    { "relation": "synergy", "target": "ROOT_NET" },
+    { "relation": "synergy", "target": "ASPEN" },
+    { "relation": "resonance", "target": "MOSS" },
+    { "relation": "temporal_bridge", "target": "ECHO" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}
