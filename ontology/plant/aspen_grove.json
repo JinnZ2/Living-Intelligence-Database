@@ -1,0 +1,26 @@
+{
+  "id": "ASPEN",
+  "name": "Aspen Grove",
+  "emoji": "🌲",
+  "ontology": "plant",
+  "symbolic_code": "[ASPEN_CLONE_ROOT_IMMORTAL]",
+  "description": "Clonal colony intelligence forming the largest and oldest known organisms on Earth (Pando: 80,000 years, 6 million kg). Interconnected root networks share resources, coordinate stress responses, and enable synchronized leaf emergence across thousands of genetically identical stems. Fire adaptation sacrifices above-ground growth to protect the immortal root system, regenerating entire forests from below.",
+  "core_attributes": {
+    "pattern": "clonal colony coordination, root resource sharing, fire-resilient regeneration",
+    "efficiency_factor": 0.93,
+    "root_networks": true,
+    "symbioses": ["mycorrhizal_fungi", "colony_wide_chemical_signaling"]
+  },
+  "links": [
+    { "relation": "synergy", "target": "ROOT_NET" },
+    { "relation": "synergy", "target": "MY" },
+    { "relation": "synergy", "target": "BAMBOO" },
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

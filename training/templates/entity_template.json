@@ -1,0 +1,44 @@
+{
+  "id": "YOUR_ID",
+  "name": "Human Readable Name",
+  "emoji": "🔮",
+  "ontology": "animal",
+  "symbolic_code": "[ID_CONCEPT_CONSTANT]",
+  "description": "One paragraph. Dense, pattern-focused, no filler. Say what this intelligence does, what pattern it expresses, and what it teaches other domains. Include specific facts (numbers, mechanisms, time scales) where possible.",
+  "core_attributes": {
+    "neurology": "optional — describe cognitive/sensory architecture",
+    "pattern": "the key pattern this intelligence expresses",
+    "efficiency_factor": 0.90
+  },
+  "patterns": [
+    {
+      "name": "pattern_name_snake_case",
+      "type": "category_of_pattern",
+      "efficiency_factor": 0.92,
+      "geometry": "the_geometric_form_it_uses",
+      "applications": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ]
+    },
+    {
+      "name": "second_pattern",
+      "type": "category",
+      "efficiency_factor": 0.88,
+      "geometry": "form",
+      "applications": ["app_1", "app_2"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "EXISTING_ENTITY_ID" },
+    { "relation": "geometry_link", "target": "EXISTING_SHAPE_ID" },
+    { "relation": "resonance", "target": "EXISTING_ENTITY_ID" },
+    { "relation": "temporal_bridge", "target": "EXISTING_TEMPORAL_ID" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

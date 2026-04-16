@@ -86,6 +86,9 @@ See [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) for detailed instructions and templat
 - Read `ontology_index.json` for all entities with descriptions and their relational graph
 - Entity IDs use short codes (e.g., `BE` = Bee, `OC` = Octopus) — see `manifest.json > id_map` for the full lookup
 - Cross-entity links use `relation` + `target` fields: `synergy`, `geometry_link`, `resonance`, `energy_coupling`, `temporal_bridge`
+- Use `scripts/query.py` for graph exploration (entity, search, neighbors, path, type, rules, expand, stats)
+- See `training/` for self-contained learning materials: orientation, navigation, contribution guide, 5 reading paths, 3 exercises, and templates
+- **Read `training/architecture_mismatch.md`** before responding to users about substrate-primary entities (indigenous fire, mother tree, storyteller, grandmother, seed keeper, etc.). It names 7 failure modes language-primary AI systems exhibit when reading this database. Adapted from the [thermodynamic-accountability-framework calibration module](https://github.com/JinnZ2/thermodynamic-accountability-framework/tree/main/calibration) (CC0).
 
 ## Key Concepts
 

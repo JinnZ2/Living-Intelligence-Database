@@ -1,0 +1,26 @@
+{
+  "id": "SAWGRASS",
+  "name": "Sawgrass",
+  "emoji": "🌾",
+  "ontology": "plant",
+  "symbolic_code": "[SAW_RHIZOME_WETLAND_STAB]",
+  "description": "Wetland stabilization intelligence dominating the Everglades through dense rhizome mat formation. Flexible blade architecture dissipates flood energy while maintaining structural integrity. Rapid post-burn regeneration from protected underground meristems integrates fire as a renewal mechanism. Root-zone nutrient sequestration builds soil through organic matter accumulation over millennia.",
+  "core_attributes": {
+    "pattern": "rhizome mat stabilization, flood resilience, fire-cycle integration, soil building",
+    "efficiency_factor": 0.89,
+    "root_networks": true,
+    "symbioses": ["microbial_decomposition", "wading_bird_nutrient_cycling"]
+  },
+  "links": [
+    { "relation": "synergy", "target": "MANGROVE" },
+    { "relation": "synergy", "target": "ROOT_NET" },
+    { "relation": "resonance", "target": "BAMBOO" },
+    { "relation": "energy_coupling", "target": "FLUX" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

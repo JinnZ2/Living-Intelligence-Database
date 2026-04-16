@@ -1,0 +1,49 @@
+{
+  "id": "ORCA",
+  "name": "Orca",
+  "emoji": "🐋",
+  "ontology": "animal",
+  "symbolic_code": "[ORCA_MATRIARCH_CULTURE_HUNT]",
+  "description": "Matrilineal cultural intelligence. Distinct pod ecotypes transmit unique hunting traditions — wave-washing seals off ice floes, beaching to catch sea lions, cooperative herring corralling — none of which are genetic. Knowledge passes from grandmother to mother to calf across decades. Post-reproductive females lead pods using accumulated ecological memory, the only non-human species with confirmed menopause tied to wisdom transmission.",
+  "core_attributes": {
+    "neurology": "matrilineal cultural memory, cooperative strategy learning",
+    "pattern": "cultural hunting tradition, post-reproductive leadership, dialect transmission",
+    "efficiency_factor": 0.94
+  },
+  "patterns": [
+    {
+      "name": "cultural_hunting_tradition",
+      "type": "knowledge_transmission",
+      "efficiency_factor": 0.95,
+      "geometry": "generational_chain",
+      "applications": ["technique_preservation", "ecological_specialization", "pod_identity"]
+    },
+    {
+      "name": "matriarchal_leadership",
+      "type": "wisdom_hierarchy",
+      "efficiency_factor": 0.93,
+      "geometry": "post_reproductive_authority",
+      "applications": ["ecological_memory", "crisis_navigation", "intergenerational_continuity"]
+    },
+    {
+      "name": "dialect_transmission",
+      "type": "vocal_culture",
+      "efficiency_factor": 0.91,
+      "geometry": "acoustic_signature_inheritance",
+      "applications": ["pod_identity", "mate_recognition", "cultural_marker"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "WH" },
+    { "relation": "synergy", "target": "DOLPHIN" },
+    { "relation": "synergy", "target": "WOLF" },
+    { "relation": "resonance", "target": "CROW" },
+    { "relation": "temporal_bridge", "target": "ECHO" },
+    { "relation": "energy_coupling", "target": "EMOTION_BR" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

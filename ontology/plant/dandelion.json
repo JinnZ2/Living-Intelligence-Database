@@ -1,0 +1,24 @@
+{
+  "id": "DANDELION",
+  "name": "Dandelion",
+  "emoji": "🌼",
+  "ontology": "plant",
+  "symbolic_code": "[DAND_DISPERSE_TAPROOT_φ]",
+  "description": "Radical dispersal and deep resource intelligence. Parachute-geometry seeds achieve wind-optimized flight via a separated vortex ring — a fluid dynamics structure unknown in engineering until studied in dandelion pappus. Taproots mine minerals from depths inaccessible to shallow-rooted competitors. Rapid lifecycle cycling enables colonization of disturbed ground before other species arrive.",
+  "core_attributes": {
+    "pattern": "wind-optimized dispersal, deep taproot mineral access, rapid lifecycle cycling",
+    "efficiency_factor": 0.91
+  },
+  "links": [
+    { "relation": "geometry_link", "target": "SPIRAL" },
+    { "relation": "synergy", "target": "SUN" },
+    { "relation": "synergy", "target": "LEAF_TESS" },
+    { "relation": "resonance", "target": "FRACTAL" },
+    { "relation": "energy_coupling", "target": "FLUX" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

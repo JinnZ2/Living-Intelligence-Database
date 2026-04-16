@@ -1,0 +1,24 @@
+{
+  "id": "CURLY_DOCK",
+  "name": "Curly Dock",
+  "emoji": "🌾",
+  "ontology": "plant",
+  "symbolic_code": "[DOCK_ACCUM_REMEDIATE_ROOT]",
+  "description": "Heavy-metal hyperaccumulator and soil remediation intelligence. Deep taproots penetrate compacted soils, breaking hardpan and cycling minerals upward. Oxalic acid production enables nutrient chelation in poor soils. Prolific seed production (up to 40,000 per plant) with multi-year seed bank persistence creates temporal resilience across disturbance cycles.",
+  "core_attributes": {
+    "pattern": "heavy-metal accumulation, soil remediation, hardpan penetration, seed bank persistence",
+    "efficiency_factor": 0.87
+  },
+  "links": [
+    { "relation": "synergy", "target": "DANDELION" },
+    { "relation": "synergy", "target": "ROOT_NET" },
+    { "relation": "resonance", "target": "QUARTZ" },
+    { "relation": "energy_coupling", "target": "PRESSURE" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

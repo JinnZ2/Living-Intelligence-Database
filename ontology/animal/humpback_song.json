@@ -1,0 +1,49 @@
+{
+  "id": "HUMPBACK",
+  "name": "Humpback Song",
+  "emoji": "🎵",
+  "ontology": "animal",
+  "symbolic_code": "[HUMP_SONG_CULTURE_PROPAGATE]",
+  "description": "Oceanic song culture intelligence. Male humpback whales in a population sing the same song, which evolves collectively across a breeding season. New song variations originate in one ocean basin and propagate eastward across entire hemispheres over several years — a continent-scale cultural wave. Songs are hierarchically structured into units, phrases, themes, and complete arrangements, rivaling human musical grammar. One of the only non-human examples of culturally transmitted music at planetary scale.",
+  "core_attributes": {
+    "neurology": "acoustic pattern learning, cultural memory",
+    "pattern": "global song propagation, hierarchical musical grammar, seasonal cultural evolution",
+    "efficiency_factor": 0.93
+  },
+  "patterns": [
+    {
+      "name": "cultural_wave_propagation",
+      "type": "knowledge_diffusion",
+      "efficiency_factor": 0.94,
+      "geometry": "trans_oceanic_spread",
+      "applications": ["cultural_transmission", "long_range_synchronization", "population_coordination"]
+    },
+    {
+      "name": "hierarchical_composition",
+      "type": "grammatical_structure",
+      "efficiency_factor": 0.92,
+      "geometry": "nested_pattern_units",
+      "applications": ["information_compression", "musical_grammar", "structured_communication"]
+    },
+    {
+      "name": "seasonal_evolution",
+      "type": "collective_innovation",
+      "efficiency_factor": 0.90,
+      "geometry": "temporal_variation_cycle",
+      "applications": ["cultural_change", "memetic_propagation", "collective_creativity"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "WH" },
+    { "relation": "synergy", "target": "ORCA" },
+    { "relation": "resonance", "target": "SINE_WAVE" },
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "temporal_bridge", "target": "ECHO" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

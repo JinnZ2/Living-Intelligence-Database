@@ -1,0 +1,24 @@
+{
+  "id": "ORCHID",
+  "name": "Orchid",
+  "emoji": "🌺",
+  "ontology": "plant",
+  "symbolic_code": "[ORCHID_MIMIC_DECEIVE_SPEC]",
+  "description": "Master of deceptive pollination intelligence. Chemical pheromone mimicry, insect morphology replication, and species-specific olfactory signals achieve reproduction with zero nectar reward — a zero-energy deception strategy. Multimodal signal convergence (chemical, visual, tactile) exploits pollinator sensory systems with extraordinary specificity. Over 28,000 species, the largest flowering plant family.",
+  "core_attributes": {
+    "pattern": "chemical pheromone mimicry, zero-reward deception, species-specific exploitation",
+    "efficiency_factor": 0.94
+  },
+  "links": [
+    { "relation": "synergy", "target": "BE" },
+    { "relation": "synergy", "target": "CORDYCEPS" },
+    { "relation": "geometry_link", "target": "SPIRAL" },
+    { "relation": "resonance", "target": "CU" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "plant.schema.json",
+    "version": "1.0"
+  }
+}

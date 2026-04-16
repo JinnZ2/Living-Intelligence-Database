@@ -1,0 +1,49 @@
+{
+  "id": "INDIG_FIRE",
+  "name": "Indigenous Fire Management",
+  "emoji": "🔥",
+  "ontology": "animal",
+  "symbolic_code": "[INDIG_FIRE_MOSAIC_WISDOM]",
+  "description": "Multi-generational human ecological intelligence encoding tens of thousands of years of landscape management knowledge. Controlled low-intensity burns create mosaic patterns that enhance biodiversity, regulate water cycles, manage game habitat, and prevent catastrophic wildfire through fuel-load reduction. Timing synchronizes with humidity, wind, and plant phenology. Oral tradition transmits observational knowledge across generations — the longest-running adaptive management system on Earth.",
+  "core_attributes": {
+    "neurology": "multi-generational ecological memory via oral tradition",
+    "pattern": "mosaic burning, landscape-scale optimization, fire-as-tool intelligence",
+    "efficiency_factor": 0.96
+  },
+  "patterns": [
+    {
+      "name": "mosaic_burn_pattern",
+      "type": "landscape_optimization",
+      "efficiency_factor": 0.95,
+      "geometry": "spatial_temporal_burn_matrix",
+      "applications": ["biodiversity_enhancement", "wildfire_prevention", "habitat_management"]
+    },
+    {
+      "name": "phenological_timing",
+      "type": "temporal_synchronization",
+      "efficiency_factor": 0.94,
+      "geometry": "seasonal_cycle_alignment",
+      "applications": ["optimal_burn_windows", "weather_pattern_reading", "species_lifecycle_coordination"]
+    },
+    {
+      "name": "oral_tradition_transfer",
+      "type": "knowledge_transmission",
+      "efficiency_factor": 0.92,
+      "geometry": "generational_chain",
+      "applications": ["long_term_ecological_memory", "adaptive_management", "cultural_continuity"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "ASPEN" },
+    { "relation": "synergy", "target": "SAWGRASS" },
+    { "relation": "resonance", "target": "FIRE_BT" },
+    { "relation": "energy_coupling", "target": "THERMAL" },
+    { "relation": "temporal_bridge", "target": "CYCLE" },
+    { "relation": "connected_to", "target": "CORAL" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

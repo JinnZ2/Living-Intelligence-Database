@@ -1,0 +1,48 @@
+{
+  "id": "MANTIS",
+  "name": "Praying Mantis",
+  "emoji": "🦗",
+  "ontology": "animal",
+  "symbolic_code": "[MANTIS_STEREO_STRIKE_AMBUSH]",
+  "description": "The only known invertebrate with stereoscopic 3D vision, using binocular disparity for precise depth perception during prey strikes. Raptorial forelegs execute strikes in 50-70 milliseconds — among the fastest predatory movements in the insect world. Head rotation of 180 degrees provides a wide surveillance field from a stationary ambush position. Masters patience as strategy: stillness as computation, waiting as optimization.",
+  "core_attributes": {
+    "neurology": "stereoscopic vision, rapid strike motor circuits",
+    "pattern": "3D binocular vision, ambush patience, ultra-fast raptorial strike",
+    "efficiency_factor": 0.91
+  },
+  "patterns": [
+    {
+      "name": "stereoscopic_vision",
+      "type": "depth_perception",
+      "efficiency_factor": 0.94,
+      "geometry": "binocular_disparity_field",
+      "applications": ["distance_calculation", "strike_timing", "3d_scene_reconstruction"]
+    },
+    {
+      "name": "raptorial_strike",
+      "type": "ballistic_movement",
+      "efficiency_factor": 0.92,
+      "geometry": "folding_arm_leverage",
+      "applications": ["rapid_capture", "mechanical_advantage", "precision_targeting"]
+    },
+    {
+      "name": "ambush_patience",
+      "type": "temporal_optimization",
+      "efficiency_factor": 0.88,
+      "geometry": "stationary_surveillance_cone",
+      "applications": ["energy_conservation", "camouflage_hunting", "opportunity_maximization"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "CHAMELEON" },
+    { "relation": "synergy", "target": "SP" },
+    { "relation": "resonance", "target": "MTN_LION" },
+    { "relation": "geometry_link", "target": "SPHERE" },
+    { "relation": "temporal_bridge", "target": "FOLD" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}

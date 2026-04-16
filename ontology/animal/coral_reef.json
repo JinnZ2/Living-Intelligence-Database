@@ -1,0 +1,49 @@
+{
+  "id": "CORAL",
+  "name": "Coral Reef",
+  "emoji": "🪸",
+  "ontology": "animal",
+  "symbolic_code": "[CORAL_SYMB_SCAFFOLD_FRACTAL]",
+  "description": "Ecosystem engineering intelligence through distributed calcium carbonate construction and zooxanthellae photosynthetic symbiosis. Fractal branching structure dissipates wave energy while maximizing surface area for nutrient exchange. Creates biodiversity scaffolding — niche habitats supporting 25% of marine species from less than 1% of ocean floor. Bleaching-recovery cycles demonstrate symbiont strain switching as adaptive resilience.",
+  "core_attributes": {
+    "neurology": "chemical symbiont coordination",
+    "pattern": "symbiotic construction, fractal wave dissipation, biodiversity scaffolding",
+    "efficiency_factor": 0.92
+  },
+  "patterns": [
+    {
+      "name": "symbiotic_photosynthesis",
+      "type": "energy_exchange",
+      "efficiency_factor": 0.94,
+      "geometry": "endosymbiont_surface_network",
+      "applications": ["solar_energy_capture", "mutualistic_systems", "nutrient_cycling"]
+    },
+    {
+      "name": "fractal_construction",
+      "type": "structural_engineering",
+      "efficiency_factor": 0.91,
+      "geometry": "fractal_3d_branching",
+      "applications": ["wave_energy_dissipation", "surface_area_maximization", "habitat_creation"]
+    },
+    {
+      "name": "niche_scaffolding",
+      "type": "ecosystem_engineering",
+      "efficiency_factor": 0.90,
+      "geometry": "complexity_gradient",
+      "applications": ["biodiversity_support", "habitat_heterogeneity", "species_coexistence"]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "CYANO" },
+    { "relation": "synergy", "target": "MANGROVE" },
+    { "relation": "geometry_link", "target": "FRACTAL" },
+    { "relation": "resonance", "target": "LI" },
+    { "relation": "energy_coupling", "target": "LIGHT_BR" },
+    { "relation": "temporal_bridge", "target": "CYCLE" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}
