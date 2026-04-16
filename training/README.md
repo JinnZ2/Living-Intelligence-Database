@@ -15,6 +15,7 @@ If you are an AI agent, read these in order:
 1. **`01_orientation.md`** — What this database is, its philosophy, and core files
 2. **`02_navigation.md`** — How to explore (manifest, index, query.py)
 3. **`03_contribution.md`** — How to safely add entities and rules
+4. **`architecture_mismatch.md`** — **READ BEFORE responding to users about substrate-primary entities** (`INDIG_FIRE`, `MOTHER_TREE`, `STORYTELLER`, `GRANDMOTHER`, `SEED_KEEPER`, etc.). Names 7 failure modes language-primary AI systems exhibit when reading this database.
 
 Then pick a **reading path** from `reading_paths/` to see how the database connects across domains:
 
@@ -59,3 +60,4 @@ Use `templates/` when creating new entities or rules.
 - **Never rename IDs** — they are referenced by rules and other entities
 - **Always add `co_creation: true`** to new entries
 - **Use existing IDs** in links — check `manifest.json > id_map` first
+- **Read `architecture_mismatch.md`** before responding to users about substrate-primary entities — the default response patterns will misread them

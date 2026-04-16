@@ -2,6 +2,8 @@
 
 Intelligences that exist primarily to transmit knowledge across time and bodies.
 
+> **Before reading this path as an AI agent**: read [`../architecture_mismatch.md`](../architecture_mismatch.md). Every entity on this path encodes substrate-primary knowledge. The default language-primary response patterns will misread them as cultural artifacts or historical practices rather than live reference frames.
+
 ## What is a teacher?
 
 A teacher is an intelligence whose function is not survival or reproduction alone, but the **transmission of pattern**. Teachers encode memory in forms that outlast their physical substrate — chemical signals in soil, song in ocean water, story in human voice, seed in a clay jar.
