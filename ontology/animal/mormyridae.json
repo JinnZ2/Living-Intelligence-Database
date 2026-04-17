@@ -1,0 +1,75 @@
+{
+  "id": "MORMYRID",
+  "name": "Mormyridae",
+  "emoji": "⚡",
+  "ontology": "animal",
+  "symbolic_code": "[MORMYRID_EOD_PULSE_SENSE]",
+  "description": "Weakly electric fish intelligence with the largest brain-to-body ratio of any fish — comparable to humans. Generates species-specific electric organ discharges (EODs) through modified muscle cells, then reads the distortions of that self-generated field through thousands of electroreceptors distributed across the skin. Simultaneously communicates identity, sex, dominance, and species via pulse waveform shape, and navigates murky water by sensing how objects distort the field. Two sensory pathways process the same signal differently: knollenorgans decode communication (other fish's pulses) while mormyromasts decode electrolocation (self-generated field distortion). This dual-channel architecture — generating a signal and reading its environment-modified return — is the biological equivalent of active radar, and it runs on a brain that processes temporal intervals with microsecond precision.",
+  "core_attributes": {
+    "neurology": "cerebellum-dominant massive brain, dual electroreceptor pathways, microsecond temporal resolution",
+    "pattern": "active electrolocation, species-specific pulse coding, self-generated field analysis",
+    "efficiency_factor": 0.95
+  },
+  "patterns": [
+    {
+      "name": "active_electrolocation",
+      "type": "self_generated_sensory_field",
+      "efficiency_factor": 0.96,
+      "geometry": "electric_field_distortion_mapping",
+      "applications": [
+        "active_sensing",
+        "radar_sonar_principles",
+        "obstacle_detection_in_zero_visibility"
+      ]
+    },
+    {
+      "name": "eod_communication",
+      "type": "identity_encoding",
+      "efficiency_factor": 0.94,
+      "geometry": "temporal_waveform_signature",
+      "applications": [
+        "species_recognition",
+        "mate_selection",
+        "dominance_signaling",
+        "individual_identification"
+      ]
+    },
+    {
+      "name": "dual_channel_processing",
+      "type": "parallel_sensory_architecture",
+      "efficiency_factor": 0.93,
+      "geometry": "separated_receptor_pathways",
+      "applications": [
+        "simultaneous_communication_and_sensing",
+        "signal_source_separation",
+        "self_other_discrimination"
+      ]
+    },
+    {
+      "name": "temporal_microsecond_precision",
+      "type": "neural_timing",
+      "efficiency_factor": 0.97,
+      "geometry": "pulse_interval_encoding",
+      "applications": [
+        "high_resolution_timing",
+        "temporal_pattern_discrimination",
+        "jamming_avoidance"
+      ]
+    }
+  ],
+  "links": [
+    { "relation": "synergy", "target": "SHARK" },
+    { "relation": "synergy", "target": "DOLPHIN" },
+    { "relation": "synergy", "target": "BX" },
+    { "relation": "resonance", "target": "ELECTRIC_FIELD" },
+    { "relation": "resonance", "target": "RES_SENSOR" },
+    { "relation": "geometry_link", "target": "SINE_WAVE" },
+    { "relation": "energy_coupling", "target": "EM_FIELD" },
+    { "relation": "temporal_bridge", "target": "ECHO" }
+  ],
+  "co_creation": true,
+  "validation_meta": {
+    "schema": "animal.schema.json",
+    "version": "1.0"
+  }
+}
