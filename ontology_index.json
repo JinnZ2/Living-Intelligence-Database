@@ -197,6 +197,13 @@
       "description": "4,800 km migration completed across 4 generations. Time-compensated sun compass integrates circadian clock with antenna magnetoreception. Complete metamorphosis reorganizes neural architecture while inherited navigation memory persists."
     },
     {
+      "id": "MORMYRID",
+      "name": "Mormyridae",
+      "ontology": "animal",
+      "path": "ontology/animal/mormyridae.json",
+      "description": "Weakly electric fish intelligence with the largest brain-to-body ratio of any fish \u2014 comparable to humans. Generates species-specific electric organ discharges (EODs) through modified muscle cells, then reads the distortions of that self-generated field through thousands of electroreceptors distributed across the skin. Simultaneously communicates identity, sex, dominance, and species via pulse waveform shape, and navigates murky water by sensing how objects distort the field. Two sensory pathways process the same signal differently: knollenorgans decode communication (other fish's pulses) while mormyromasts decode electrolocation (self-generated field distortion). This dual-channel architecture \u2014 generating a signal and reading its environment-modified return \u2014 is the biological equivalent of active radar, and it runs on a brain that processes temporal intervals with microsecond precision."
+    },
+    {
       "id": "MTN_LION",
       "name": "Mountain Lion",
       "ontology": "animal",
@@ -1556,6 +1563,46 @@
       "source": "MONARCH",
       "target": "WH",
       "relation": "connected_to"
+    },
+    {
+      "source": "MORMYRID",
+      "target": "SHARK",
+      "relation": "synergy"
+    },
+    {
+      "source": "MORMYRID",
+      "target": "DOLPHIN",
+      "relation": "synergy"
+    },
+    {
+      "source": "MORMYRID",
+      "target": "BX",
+      "relation": "synergy"
+    },
+    {
+      "source": "MORMYRID",
+      "target": "ELECTRIC_FIELD",
+      "relation": "resonance"
+    },
+    {
+      "source": "MORMYRID",
+      "target": "RES_SENSOR",
+      "relation": "resonance"
+    },
+    {
+      "source": "MORMYRID",
+      "target": "SINE_WAVE",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "MORMYRID",
+      "target": "EM_FIELD",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "MORMYRID",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
     },
     {
       "source": "MTN_LION",
