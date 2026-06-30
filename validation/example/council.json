@@ -1,0 +1,75 @@
+{
+  "_comment": "Example: Council of Elders — a social resilience entity. Demonstrates how human governance systems can be represented with scoped evidence.",
+  "id": "COUNCIL",
+  "name": "Council of Elders",
+  "ontology": "social",
+  "emoji": "🌀",
+  "symbolic_code": "[COUNCIL_RELATIONAL_CYCLE_DEEP]",
+  "description": "Multi-generational human governance system based on earned trust, long-view deliberation, and distributed authority. Found across unrelated cultures (Haudenosaunee, Māori, Igbo, Tibetan, Aboriginal Australian) — a cross-domain rhyme in human social organization.",
+  "co_creation": true,
+  "attributes": {
+    "intergenerational_decision_horizon": {
+      "value": 7,
+      "scope": {
+        "definition": "Number of future generations explicitly considered in council deliberations. Haudenosaunee (Iroquois) Great Law mandates seven-generation foresight in all decisions affecting land and community.",
+        "evidence": {
+          "source": "Haudenosaunee Great Law of Peace (~1450 CE, oral tradition documented 1900s); similar horizon found in Māori tikanga and Aboriginal Australian law.",
+          "evidence_type": "cross_domain_rhyme",
+          "reproducibility": "medium",
+          "cross_domain_count": 5,
+          "cross_domain_examples": [
+            "Māori seven-generation land stewardship (NZ)",
+            "Tibetan recognition of reincarnated teachers (30+ year horizon)",
+            "Igbo age-grade governance (generational succession)",
+            "Aboriginal Australian songline governance (multi-millennial horizon)",
+            "Welsh court of elders (500+ year land memory)"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.79
+        },
+        "condition": {
+          "environment": "intact cultural transmission, land-based community",
+          "constraints": [
+            "oral tradition must be maintained across generations",
+            "council must retain authority (not supplanted by centralized state)"
+          ]
+        },
+        "falsifiability": "If councils consistently make decisions that harm the third or fourth generation without course-correction, the seven-generation model fails. Long-run land health metrics can test this.",
+        "measurement_limits": "Horizon is symbolic in some traditions; literal in others. Operationalization varies.",
+        "dependencies": ["oral_tradition_integrity", "land_tenure_continuity", "ceremonial_succession"]
+      }
+    },
+    "decision_reversal_rate": {
+      "value": 0.07,
+      "scope": {
+        "definition": "Fraction of major council decisions reversed or significantly modified within one generation (25 years), as a proxy for deliberative quality under slower consensus-building.",
+        "evidence": {
+          "source": "Comparison of Haudenosaunee treaty adherence vs. colonial treaty reversal rates (Cornell Haudenosaunee studies); Māori Treaty jurisprudence analysis.",
+          "evidence_type": "relational_coherence",
+          "reproducibility": "low",
+          "cross_domain_count": 2,
+          "cross_domain_examples": [
+            "Māori customary governance decision persistence",
+            "Quaker meeting consensus decision durability"
+          ],
+          "relational_dependencies_verified": false,
+          "relational_confidence": 0.55
+        },
+        "condition": {
+          "environment": "council retains governing authority over decision domain",
+          "constraints": ["no external override by colonial/state authority"]
+        },
+        "falsifiability": "Reversal rate is meaningless if external authority overrides council decisions — this contaminates the measure.",
+        "measurement_limits": "Hard to measure pre-colonial; modern examples often operate under state constraints."
+      }
+    },
+    "consensus_protocol": "Decisions require broad agreement (not majority vote). Objection is a form of teaching, not obstruction. Deliberation continues until all voices are heard — the council does not close until the silence is comfortable.",
+    "legitimacy_source": "Earned through demonstrated long-view reasoning, memory of precedent, and willingness to absorb short-term cost for long-term coherence. Not granted by election alone.",
+    "pattern": "earned authority, long-view deliberation, distributed memory, ceremonial renewal"
+  },
+  "links": [
+    { "rel": "synergy", "to": "WOLF", "note": "Both demonstrate earned leadership structures based on demonstrated competence and social trust." },
+    { "rel": "temporal_bridge", "to": "ECHO", "note": "Council decisions encode intergenerational memory; echo is the mechanism." },
+    { "rel": "resonance", "to": "MYCELIUM", "note": "Council is the social analogue of mycelium: distributed, slow-to-update, resilient, memory-bearing." }
+  ]
+}

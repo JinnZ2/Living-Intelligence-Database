@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://living-intelligence-database/scope.schema.json",
+  "title": "Scope metadata — relational / cyclical evidence model",
+  "description": "Every quantifiable claim must define its scope: conditions, cycles, cross-domain rhymes, and relational dependencies. Evidence is a verb, not a noun.",
+  "type": "object",
+  "required": ["definition", "evidence"],
+  "properties": {
+    "definition": {
+      "type": "string",
+      "description": "Operational or mathematical definition of what is being claimed."
+    },
+    "domain": {
+      "type": "string",
+      "description": "Category of invariant (spatial_optimization, energy_efficiency, resonance, etc.)."
+    },
+    "condition": {
+      "type": "object",
+      "description": "Environmental and boundary conditions under which the pattern holds.",
+      "properties": {
+        "environment": { "type": "string" },
+        "constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "temporal_range": {
+      "type": "string",
+      "description": "Time window, cycle count, or 'timeless' for purely geometric constants."
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Entity IDs or physical constants this claim depends on.",
+      "items": { "type": "string" }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["type", "confidence"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "cyclic_observation",
+            "cross_domain_rhyme",
+            "relational_coherence",
+            "mathematical_proof",
+            "empirical_measurement",
+            "simulation",
+            "expert_consensus",
+            "unknown"
+          ],
+          "description": "Nature of the evidence. 'cyclic_observation' means the pattern repeats across cycles. 'cross_domain_rhyme' means it appears in unrelated substrates. 'relational_coherence' means it holds within a web of dependencies."
+        },
+        "reference": {
+          "type": "string",
+          "description": "Source, observer, or dataset."
+        },
+        "reproducibility": {
+          "type": "string",
+          "description": "Over how many cycles / seasons / independent observations has this pattern been observed?"
+        },
+        "cross_domain_count": {
+          "type": "integer",
+          "description": "Number of distinct ontologies or substrates where the same pattern appears.",
+          "minimum": 0
+        },
+        "cross_domain_examples": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Specific entities or systems showing the same pattern."
+        },
+        "relational_dependencies_verified": {
+          "type": "boolean",
+          "description": "Have the linked entities (in 'dependencies') themselves been observed to cohere?",
+          "default": false
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Overall confidence in this evidence. For relational evidence, this should be informed by cycle count, cross-domain breadth, and dependency coherence, not by source prestige."
+        }
+      }
+    },
+    "falsifiability": {
+      "type": "string",
+      "description": "What observation or relational failure would falsify this claim?"
+    },
+    "measurement_limits": {
+      "type": "string",
+      "description": "Known limits of observation or calculation."
+    },
+    "relational_confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Computed confidence based on cycle recurrence, cross-domain rhyme count, and dependency coherence. This is the engine's trust score, not a human-assigned number."
+    }
+  }
+}

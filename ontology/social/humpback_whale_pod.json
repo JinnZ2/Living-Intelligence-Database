@@ -1,0 +1,64 @@
+{
+  "id": "WHALE",
+  "name": "Humpback Whale Pod",
+  "ontology": "social",
+  "emoji": "🐋",
+  "symbolic_code": "[WHALE_SONG_PHI_OCEAN]",
+  "description": "Cetacean social group demonstrating long-range acoustic communication, cultural song transmission across ocean basins, and cooperative bubble-net feeding. Song patterns evolve year by year and propagate westward across the Pacific — a form of culture operating at oceanic scale.",
+  "co_creation": true,
+  "attributes": {
+    "song_coherence_across_pods": {
+      "value": 0.96,
+      "scope": {
+        "definition": "Proportion of song phrase matches between pods separated by 5,000km, measured annually. Songs change each season but maintain coherence across the population simultaneously.",
+        "evidence": {
+          "source": "Noad et al. (2000) Pacific Ocean song transmission study; Garland et al. (2011) cultural evolution of song; 20+ years of hydrophone data.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 4,
+          "cross_domain_examples": ["human musical tradition spread", "language dialect drift", "meme propagation across social networks", "bird song cultural transmission"],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.94
+        },
+        "condition": {
+          "environment": "open ocean, breeding season, males singing",
+          "constraints": ["acoustic channel intact (below thermocline)", "no major anthropogenic noise disruption"]
+        },
+        "falsifiability": "If pods in isolation (island populations) show divergent songs that do not resync when contact resumes, oceanic cultural transmission fails as model.",
+        "measurement_limits": "Coherence measured during breeding season. Feeding season vocalizations show lower cross-pod matching.",
+        "dependencies": ["acoustic_channel_integrity", "annual_breeding_aggregation"]
+      }
+    },
+    "bubble_net_coordination": {
+      "value": 0.88,
+      "scope": {
+        "definition": "Success rate of cooperative bubble-net feeding maneuvers requiring 3-15 whales to coordinate spiral ascent, exhalation timing, and surface lunge simultaneously.",
+        "evidence": {
+          "source": "Wiley et al. (2011) Gulf of Maine bubble-net studies; multi-year behavioral observation.",
+          "evidence_type": "cross_domain_rhyme",
+          "reproducibility": "medium",
+          "cross_domain_count": 2,
+          "cross_domain_examples": ["wolf pack encirclement hunting", "human synchronized net fishing"],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.82
+        },
+        "condition": {
+          "environment": "prey school (herring, krill) in shallow water, group of experienced individuals",
+          "constraints": ["requires learned coordination — naive whales cannot initiate", "prey must be schooling"]
+        },
+        "falsifiability": "Novel group of inexperienced whales fails to coordinate net; technique is culturally transmitted, not instinctive.",
+        "measurement_limits": "Observed primarily in North Atlantic feeding grounds."
+      }
+    },
+    "long_range_communication": "Song carries 1,000km+ through the deep sound channel (SOFAR). No other land-derived mammal communicates at this spatial scale.",
+    "cultural_transmission": "Song evolves each year via social learning. New phrases originate in one region and spread across the ocean basin within a single season — demonstrating rapid, basin-wide cultural updating.",
+    "migration_range": "20,000km round trip annually between tropical breeding grounds and polar feeding grounds.",
+    "pattern": "acoustic culture, basin-scale social coherence, intergenerational learning, seasonal cycle fidelity"
+  },
+  "links": [
+    { "rel": "resonance", "to": "ECHO", "note": "Both encode memory in acoustic/temporal patterns that persist across geography." },
+    { "rel": "synergy", "to": "ANT", "note": "Both demonstrate population-level coordination without central command, at vastly different scales." },
+    { "rel": "energy_coupling", "to": "SPIRAL", "note": "Bubble-net feeding traces a logarithmic spiral — the same geometry as galaxies and shells." },
+    { "rel": "temporal_bridge", "to": "FOLD", "note": "Humpback song encodes seasonal and generational time in acoustic structure." }
+  ]
+}

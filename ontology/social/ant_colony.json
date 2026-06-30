@@ -1,0 +1,83 @@
+{
+  "id": "ANT",
+  "name": "Ant Colony",
+  "ontology": "social",
+  "emoji": "🐜",
+  "symbolic_code": "[ANT_SWARM_PHI_CYCLE]",
+  "description": "Eusocial insect colony demonstrating decentralized intelligence through pheromone signaling, quorum sensing, and division of labor. No individual ant has a map of the colony's goals — coordination is entirely emergent.",
+  "co_creation": true,
+  "attributes": {
+    "foraging_efficiency": {
+      "value": 0.93,
+      "scope": {
+        "definition": "Ratio of food energy retrieved to forager energy expended, measured across Argentine ant trails under optimal conditions.",
+        "evidence": {
+          "source": "Deneubourg et al. (1990), self-reinforcing trail formation studies; multiple ant genera confirmed.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": ["bee foraging trails", "slime mold path optimization", "human desire paths"],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.91
+        },
+        "condition": {
+          "environment": "stable pheromone gradient, temperature 20-30°C",
+          "constraints": ["pheromone trails must remain viable", "no chemical disruption", "colony size > 1000"]
+        },
+        "falsifiability": "Foraging efficiency drops below 0.7 when pheromone gradients are disrupted or colony size falls below viable threshold.",
+        "measurement_limits": "Measured in laboratory corridors and semi-natural environments; extreme field conditions may vary.",
+        "dependencies": ["pheromone_coherence", "trail_reinforcement", "division_of_labor"]
+      }
+    },
+    "quorum_sensing_threshold": {
+      "value": 0.15,
+      "scope": {
+        "definition": "Fraction of colony that must agree before collective action initiates (nest relocation, bridge formation). Below this fraction, the signal dissipates.",
+        "evidence": {
+          "source": "Pratt et al. (2002) nest emigration studies; Temnothorax genus.",
+          "evidence_type": "cross_domain_rhyme",
+          "reproducibility": "medium",
+          "cross_domain_count": 4,
+          "cross_domain_examples": ["honey bee swarm quorum", "neuron firing threshold", "social tipping points", "lymphocyte activation"],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.83
+        },
+        "condition": {
+          "environment": "nest emigration scenario",
+          "constraints": ["scouts must reach threshold independently", "no central coordinator"]
+        },
+        "falsifiability": "If a colony can be shown to act on signals from fewer than 5% of scouts, quorum sensing fails as model.",
+        "measurement_limits": "Threshold varies by species and colony health."
+      }
+    },
+    "collective_resilience": {
+      "value": 0.89,
+      "scope": {
+        "definition": "Colony recovery rate after 30% worker loss, measured as return to foraging baseline within 2 weeks.",
+        "evidence": {
+          "source": "Gordon (1999) long-term Pogonomyrmex colony studies; 25 years of observation.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 2,
+          "cross_domain_examples": ["forest patch regeneration after disturbance", "market recovery after supply shock"],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.87
+        },
+        "condition": {
+          "environment": "established colony with queen intact",
+          "constraints": ["queen must survive", "brood must be retained"]
+        },
+        "falsifiability": "Colony fails to recover if queen is lost or brood is destroyed.",
+        "measurement_limits": "Resilience drops with repeated disturbances under 30-day intervals."
+      }
+    },
+    "division_of_labor": "Emergent role differentiation without central assignment: workers shift roles based on colony need and local pheromone density.",
+    "communication_mode": "Pheromone gradient + antennal contact. No vocalizations. Signal degrades in ~10 minutes, preventing false trails from persisting.",
+    "pattern": "decentralized emergence, positive feedback with natural decay"
+  },
+  "links": [
+    { "rel": "geometry_link", "to": "HEX", "note": "Colony tunnels often approximate hexagonal packing for structural efficiency." },
+    { "rel": "synergy", "to": "BE", "note": "Both use pheromone/waggle communication and quorum sensing for collective decision." },
+    { "rel": "resonance", "to": "MYCELIUM", "note": "Both distribute information without central nodes; both show self-repairing network topology." }
+  ]
+}
