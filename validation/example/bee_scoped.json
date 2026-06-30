@@ -1,0 +1,107 @@
+{
+  "_comment": "Example: Bee entity with full relational scope blocks. Use this as a template when adding scoped evidence to any entity.",
+  "id": "BE",
+  "name": "Bee",
+  "ontology": "animal",
+  "emoji": "🐝",
+  "symbolic_code": "[BE_HEX_PHI_CYCLE]",
+  "description": "Eusocial pollinator demonstrating hexagonal optimization, waggle-dance communication, and distributed decision-making. Each attribute below shows a fully-filled relational scope block.",
+  "attributes": {
+    "hexagonal_cell_efficiency": {
+      "value": 0.97,
+      "scope": {
+        "definition": "Ratio of wax used per unit of honey stored in hexagonal comb versus circular cells at same volume. Hexagonal packing minimizes perimeter for equal area — the honeycomb conjecture (proved 1999).",
+        "evidence": {
+          "source": "Hales (1999) mathematical proof of honeycomb conjecture; confirmed by engineering measurement of comb mass vs. storage capacity.",
+          "evidence_type": "mathematical_proof",
+          "reproducibility": "certain",
+          "cross_domain_count": 5,
+          "cross_domain_examples": [
+            "basalt columnar joints (Giant's Causeway)",
+            "soap bubble interfaces at equilibrium",
+            "graphene lattice structure",
+            "compound eye facet geometry",
+            "human-engineered cellular lightweight panels"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.98
+        },
+        "condition": {
+          "environment": "ambient temperature 32-35°C (maintained by worker bees inside hive)",
+          "constraints": [
+            "wax must be at working temperature",
+            "cells must be constructed by experienced workers",
+            "horizontal orientation required for cell construction"
+          ]
+        },
+        "falsifiability": "If bees can be shown to construct non-hexagonal cells that store equal honey with equal wax, the efficiency claim fails. No such observation exists.",
+        "measurement_limits": "Efficiency ratio is for honey storage. Cell shape for brood rearing varies slightly.",
+        "dependencies": ["golden_ratio", "pi", "temperature_regulation"]
+      }
+    },
+    "waggle_dance_accuracy": {
+      "value": 0.92,
+      "scope": {
+        "definition": "Angular accuracy of flower direction encoded in waggle dance (relative to sun azimuth), confirmed by observing scout bees and tracking recruits to destination.",
+        "evidence": {
+          "source": "von Frisch (1967) Nobel Prize research; replicated by Dyer (2002), Seeley (2010).",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 2,
+          "cross_domain_examples": [
+            "cetacean echolocation direction encoding",
+            "ant pheromone gradient directionality"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.90
+        },
+        "condition": {
+          "environment": "sunny conditions (sun visible as azimuth reference)",
+          "constraints": [
+            "scout must have visited flower within 2 hours",
+            "dance must be performed on vertical comb surface",
+            "distance > 100m for full dance encoding"
+          ]
+        },
+        "falsifiability": "In overcast conditions without UV penetration, dance accuracy drops significantly. Direction accuracy fails in zero-gravity (no gravity reference for dance orientation).",
+        "measurement_limits": "Accuracy degrades for sources > 12km. Dance duration (distance encoding) is approximate ± 15%.",
+        "dependencies": ["solar_azimuth_reference", "gravity_reference", "hive_vertical_surface"]
+      }
+    },
+    "swarm_quorum_threshold": {
+      "value": 0.15,
+      "scope": {
+        "definition": "Fraction of scout bees that must visit and report on a new nest site before swarm departure is initiated. Quorum sensing prevents premature commitment.",
+        "evidence": {
+          "source": "Seeley & Visscher (2004); Seeley (2010) 'Honeybee Democracy'; multi-year observation at Cornell.",
+          "evidence_type": "cross_domain_rhyme",
+          "reproducibility": "high",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "ant colony quorum sensing for nest relocation",
+            "neuron firing threshold in cortical columns",
+            "democratic tipping point models (Centola et al.)",
+            "T-cell activation threshold in immune response"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.88
+        },
+        "condition": {
+          "environment": "swarming season, cluster hanging from tree branch",
+          "constraints": [
+            "competing site reports must converge through dance attrition",
+            "piping signal must initiate from winning site advocates"
+          ]
+        },
+        "falsifiability": "If a swarm can be induced to depart with fewer than 5% of scouts committed, quorum sensing fails as a model. No such induction has succeeded.",
+        "measurement_limits": "Threshold is approximate — varies ±5% by colony size and season."
+      }
+    }
+  },
+  "links": [
+    { "rel": "geometry_link", "to": "HEX", "note": "Hexagonal comb geometry." },
+    { "rel": "geometry_link", "to": "SPIRAL", "note": "Flight paths show logarithmic spiral search patterns." },
+    { "rel": "synergy", "to": "ANT", "note": "Parallel quorum sensing architecture at 0.15 threshold." },
+    { "rel": "resonance", "to": "MYCELIUM", "note": "Both distribute intelligence without central nodes." }
+  ]
+}

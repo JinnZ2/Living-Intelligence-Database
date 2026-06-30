@@ -1,0 +1,63 @@
+{
+  "id": "WOLF",
+  "name": "Wolf Pack",
+  "ontology": "social",
+  "emoji": "🐺",
+  "symbolic_code": "[WOLF_PACK_COORD_CYCLE]",
+  "description": "Canid social group demonstrating coordinated hunting, territory negotiation, and distributed care across multi-year relationship networks. Leadership is earned through social trust, not dominance alone.",
+  "co_creation": true,
+  "attributes": {
+    "hunt_success_rate": {
+      "value": 0.82,
+      "scope": {
+        "definition": "Proportion of cooperative hunts resulting in a kill, for packs of 4-8 wolves hunting elk in open terrain.",
+        "evidence": {
+          "source": "Mech & Peterson (2003) Yellowstone reintroduction data; 10+ years post-reintroduction observation.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": ["orca pod cooperative hunting", "human hunter-gatherer group hunting", "harris hawk group hunting"],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.88
+        },
+        "condition": {
+          "environment": "open grassland/forest edge, prey is elk or bison",
+          "constraints": ["pack size 4-8", "terrain allows encirclement", "pack is socially cohesive"]
+        },
+        "falsifiability": "Success rate drops below 0.4 for solo wolves; pack fragmentation predicts hunt failure.",
+        "measurement_limits": "Rates differ significantly by prey type, season, and terrain. Dense forest reduces to ~0.45.",
+        "dependencies": ["social_cohesion", "territory_stability"]
+      }
+    },
+    "social_cohesion": {
+      "value": 0.91,
+      "scope": {
+        "definition": "Proportion of pack members that coordinate movement within 200m during hunts, averaged across a hunting season.",
+        "evidence": {
+          "source": "GPS collar data from Yellowstone packs, 2005-2020.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 2,
+          "cross_domain_examples": ["human team coordination in high-stakes operations", "orca pod travel coherence"],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.85
+        },
+        "condition": {
+          "environment": "stable pack with established hierarchy and pair bond at center",
+          "constraints": ["breeding pair intact", "no recent pack disruption"]
+        },
+        "falsifiability": "Cohesion drops below 0.6 after alpha pair death or pack size drops below 3.",
+        "measurement_limits": "Cohesion is seasonal; lowest during pup dispersal."
+      }
+    },
+    "intergenerational_teaching": "Pups learn hunt coordination through direct participation alongside experienced pack members. Skills are transmitted socially across generations without genetic encoding.",
+    "territory_negotiation": "Howling broadcasts territory boundaries, reducing direct conflict. Scent marking creates persistent spatial memory readable by non-pack members.",
+    "communication_mode": "Vocalization (howl, bark, whimper) + body posture + scent marking. Multi-modal, context-sensitive.",
+    "pattern": "relational hierarchy, earned trust, multi-year social bonds, distributed care of young"
+  },
+  "links": [
+    { "rel": "synergy", "to": "COUNCIL", "note": "Both demonstrate earned leadership, distributed decision-making, and multi-year relationship memory." },
+    { "rel": "resonance", "to": "OC", "note": "Octopus and wolf both solve novel problems via individual cognitive flexibility within a social frame." },
+    { "rel": "temporal_bridge", "to": "ECHO", "note": "Pack howls carry territorial memory across landscape; cultural knowledge encoded in behavior." }
+  ]
+}

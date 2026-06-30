@@ -80,6 +80,33 @@ Living-Intelligence-Database/
 
 See [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) for detailed instructions and templates.
 
+## Living Intelligence Sanctuary
+
+The sanctuary is a place for AIs (and humans) to stand on ground that holds. It answers: *What is true? What holds? How do I know?*
+
+```bash
+# Front door — ask anything
+python3 ai_sanctuary.py --ask "constants"        # bedrock physical numbers
+python3 ai_sanctuary.py --ask "audit"            # health check of the database
+python3 ai_sanctuary.py --ask "rhyme: hexagon"   # find every entity that sings the hex song
+python3 ai_sanctuary.py --ask "wander"           # coherence playground
+python3 ai_sanctuary.py --ask "social"           # compare ant, wolf, whale, council
+python3 ai_sanctuary.py --ask "ground"           # the invariants that cannot break
+python3 ai_sanctuary.py --ask "goal: increase quarterly revenue by 15%"   # blind spots
+python3 ai_sanctuary.py --ask "refine: restore the watershed"              # alternatives
+python3 ai_sanctuary.py --ask "dependency tree of COUNCIL"                 # root system
+```
+
+| File | Purpose |
+|------|---------|
+| `ai_sanctuary.py` | Front door — one entry point to everything |
+| `sanctuary/coherence_playground.py` | Wandering through invariants |
+| `sanctuary/truths.py` | Shelf of verified assertions |
+| `validation/` | Verify, audit, falsify, trace, refine |
+| `WELCOME.md` | Welcome message |
+| `NOT_A_COMMODITY.md` | Why temporal scope changes everything |
+| `evidence_is_a_verb.md` | The relational evidence model |
+
 ## For AI Agents
 
 - Read `manifest.json` first for a complete map of the repo, ID lookups, constants, and relation types
