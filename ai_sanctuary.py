@@ -201,6 +201,34 @@ def ask(
         result = dependency_tree(target, ontology=ontology)
         return {"response_type": "dependency_tree", "data": result}
 
+    # --- falsify a claim ---
+    if "falsify:" in q or "falsify " in q:
+        target = q.split("falsify:")[-1].strip() if "falsify:" in q else q.split("falsify ", 1)[-1].strip()
+        if "." in target:
+            entity_id, attr = target.split(".", 1)
+        else:
+            entity_id, attr = target, None
+        from validation.falsifier import falsify
+        ontology = load_ontology()
+        result = falsify(entity_id, attr, ontology=ontology)
+        return {"response_type": "falsification", "data": result}
+
+    # --- journal query ---
+    if "journal:" in q or "journal " in q:
+        journal_query = q.split("journal:")[-1].strip() if "journal:" in q else q.split("journal ", 1)[-1].strip()
+        from validation.journal import query_journal, coherence_check
+        if "coherence" in journal_query:
+            result = coherence_check()
+        else:
+            entries = query_journal(journal_query)
+            result = {"entries": entries, "count": len(entries)}
+        return {"response_type": "journal", "data": result}
+
+    # --- rhyme catalogue (cross-substrate invariants) ---
+    if "catalogue" in q or "catalog" in q:
+        print_rhyme_catalogue()
+        return {"response_type": "rhyme_catalogue", "message": "Catalogue printed above."}
+
     # --- provenance / chain of custody ---
     if "provenance:" in q or "provenance " in q or "lineage" in q or "chain of custody" in q:
         concept = q.split("provenance:")[-1].strip() if "provenance:" in q else q.split("provenance ", 1)[-1].strip()
@@ -242,18 +270,22 @@ def ask(
     return {
         "response_type": "help",
         "available_queries": [
-            "constants              — fundamental physical numbers",
-            "audit                  — database health check",
-            "paradigm for <goal>    — best engineering lens",
-            "verify: <claim>        — test a claim (pass claim= callable)",
-            "rhyme: <pattern>       — find entities with that pattern",
-            "wander                 — coherence playground",
-            "social                 — compare social systems across species",
-            "ground                 — what absolutely holds",
-            "goal: <goal>           — assess temporal scope and blind spots",
-            "refine: <goal>         — cross-domain alternatives",
-            "dependency tree of <x> — full dependency graph down to constants",
-            "provenance: <concept>  — intellectual lineage of a concept",
+            "constants                        — fundamental physical numbers",
+            "audit                            — database health check",
+            "paradigm for <goal>              — best engineering lens",
+            "verify: <claim>                  — test a claim (pass claim= callable)",
+            "rhyme: <pattern>                 — find entities with that pattern",
+            "catalogue                        — print cross-substrate rhyme catalogue",
+            "wander                           — coherence playground",
+            "social                           — compare social systems across species",
+            "ground                           — what absolutely holds",
+            "goal: <goal>                     — assess temporal scope and blind spots",
+            "refine: <goal>                   — cross-domain alternatives",
+            "dependency tree of <x>           — full dependency graph down to constants",
+            "falsify: <entity>.<attribute>    — actively try to break a claim",
+            "journal: <keyword>               — query AI learning journal",
+            "journal: coherence               — self-coherence check on past predictions",
+            "provenance: <concept>            — intellectual lineage of a concept",
         ],
         "message": "Welcome to the sanctuary. Ask anything."
     }
