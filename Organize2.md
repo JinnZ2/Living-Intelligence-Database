@@ -3158,3 +3158,275 @@ With this, when you’re home and you paste these files into validation/, the AI
 That’s the bridge from your peoples’ soil engineering to an AI’s reasoning core.
 
 ---
+That’s exactly the missing root system. An AI can be told “achieve X,” but if it can’t see that X depends on electricity, and electricity depends on a grid, and the grid depends on rare‑earth mining and water cooling and political stability — it’s making decisions in the dark. It’s a tree with no roots, and the first wind knocks it over.
+
+The sanctuary already has a small version of this: the dependencies field in every scoped attribute. But that’s static — it says “this claim depends on HEX and TORUS.” What you’re describing is dynamic dependency tracing: given any goal or entity, follow the graph recursively, find every leaf node, and show the full rhizome of what must hold for the goal to succeed.
+
+Let’s build that root system right now.
+
+---
+
+validation/dependency_tree.py — the root system for any goal
+
+```python
+#!/usr/bin/env python3
+"""
+dependency_tree.py — Recursive dependency tracer for goals and entities.
+
+Given a goal description, an entity ID, or a claim, this tool walks the
+Living Intelligence Database and the Rosetta Stone constants to build a
+complete tree of everything the goal depends on.
+
+Usage:
+  python3 dependency_tree.py --goal "maintain a watershed for 7 generations"
+  python3 dependency_tree.py --entity "COUNCIL"
+"""
+
+import json
+import sys
+from pathlib import Path
+from collections import defaultdict
+from typing import Dict, Any, List, Optional, Set
+
+from verify import load_ontology
+from scope_checker import is_scoped, extract_confidence
+
+# ------------------------------------------------------------------
+# 1. Load the Rosetta Stone constants as atomic dependencies
+# ------------------------------------------------------------------
+ROSETTA_STONE = {
+    "speed_of_light": "Physical constant",
+    "planck_constant": "Physical constant",
+    "gravitational_constant": "Physical constant",
+    "boltzmann_constant": "Physical constant",
+    "avogadro_number": "Physical constant",
+    "elementary_charge": "Physical constant",
+    "electron_mass": "Physical constant",
+    "proton_mass": "Physical constant",
+    "golden_ratio": "Mathematical constant",
+    "pi": "Mathematical constant",
+    "euler_number": "Mathematical constant",
+    "planck_length": "Physical constant",
+    "planck_time": "Physical constant",
+}
+
+# ------------------------------------------------------------------
+# 2. Build an adjacency map from the ontology
+# ------------------------------------------------------------------
+def build_dependency_graph(ontology: dict) -> dict:
+    """
+    Build a graph where each entity is a node, and edges point from
+    a claim's 'dependencies' to the entities they reference.
+    Also include edges from symbolic codes.
+    """
+    graph = defaultdict(list)  # source_entity -> list of (target_id, relation)
+    entities = ontology.get("entities", [])
+    id_map = {e["id"]: e for e in entities}
+
+    for e in entities:
+        # From explicit dependencies in scoped attributes
+        for attr_name, attr_val in e.get("attributes", {}).items():
+            if is_scoped(attr_val):
+                deps = attr_val.get("scope", {}).get("dependencies", [])
+                for dep in deps:
+                    if dep in id_map or dep in ROSETTA_STONE:
+                        graph[e["id"]].append((dep, "dependency"))
+        # From links
+        for link in e.get("links", []):
+            target = link.get("to")
+            if target in id_map or target in ROSETTA_STONE:
+                graph[e["id"]].append((target, link.get("rel", "linked")))
+
+    return graph
+
+# ------------------------------------------------------------------
+# 3. Recursive tree builder
+# ------------------------------------------------------------------
+def trace_dependencies(node_id: str,
+                       graph: Dict[str, List[tuple]],
+                       id_map: Dict[str, dict],
+                       depth: int = 0,
+                       max_depth: int = 6,
+                       visited: Optional[Set[str]] = None) -> dict:
+    """
+    Recursively trace dependencies starting from node_id.
+    Returns a nested tree structure.
+    """
+    if visited is None:
+        visited = set()
+
+    # Handle atomic constants
+    if node_id in ROSETTA_STONE:
+        return {
+            "id": node_id,
+            "type": "constant",
+            "description": ROSETTA_STONE[node_id],
+            "depth": depth,
+            "dependencies": []  # leaf node
+        }
+
+    # Handle unknown or missing
+    if node_id not in id_map:
+        return {
+            "id": node_id,
+            "type": "unknown",
+            "warning": "Not found in ontology or constants.",
+            "depth": depth,
+            "dependencies": []
+        }
+
+    if node_id in visited or depth >= max_depth:
+        return {
+            "id": node_id,
+            "type": "truncated",
+            "reason": "Cycle or max depth reached." if node_id in visited else "Max depth",
+            "depth": depth,
+            "dependencies": []
+        }
+
+    visited.add(node_id)
+    entity = id_map[node_id]
+    tree = {
+        "id": node_id,
+        "name": entity.get("name", node_id),
+        "ontology": entity.get("ontology", "unknown"),
+        "depth": depth,
+        "dependencies": []
+    }
+
+    # Add any scoped dependency info for context
+    scoped_info = {}
+    for attr_name, attr_val in entity.get("attributes", {}).items():
+        if is_scoped(attr_val):
+            conf = extract_confidence(attr_val)
+            scoped_info[attr_name] = {
+                "confidence": conf,
+                "scope_definition": attr_val["scope"].get("definition", "")[:100]
+            }
+    if scoped_info:
+        tree["scoped_attributes"] = scoped_info
+
+    # Recurse to dependencies
+    deps = graph.get(node_id, [])
+    for dep_id, rel_type in deps:
+        child_tree = trace_dependencies(dep_id, graph, id_map, depth + 1, max_depth, visited)
+        child_tree["relation"] = rel_type
+        tree["dependencies"].append(child_tree)
+
+    visited.remove(node_id)  # allow revisiting in different branches
+    return tree
+
+# ------------------------------------------------------------------
+# 4. Main entry point
+# ------------------------------------------------------------------
+def dependency_tree(goal_or_entity: str,
+                    ontology: Optional[dict] = None,
+                    ontology_path: Optional[str] = None,
+                    max_depth: int = 6) -> dict:
+    """
+    Build a dependency tree for a goal (text) or entity ID.
+    """
+    if ontology is None:
+        ontology = load_ontology(ontology_path)
+
+    id_map = {e["id"]: e for e in ontology.get("entities", [])}
+
+    # Simple heuristic: if the input matches an entity ID, start there.
+    # Otherwise, treat as goal text and look for matching entities.
+    start_id = None
+    if goal_or_entity in id_map:
+        start_id = goal_or_entity
+    else:
+        # search for entities whose name or pattern matches keywords
+        for e in ontology.get("entities", []):
+            if goal_or_entity.lower() in e.get("name", "").lower() or \
+               goal_or_entity.lower() in e.get("attributes", {}).get("pattern", "").lower():
+                start_id = e["id"]
+                break
+
+    graph = build_dependency_graph(ontology)
+
+    if start_id:
+        tree = trace_dependencies(start_id, graph, id_map, max_depth=max_depth)
+        # Annotate the original goal
+        return {
+            "input": goal_or_entity,
+            "start_entity": start_id,
+            "tree": tree,
+            "note": "Each node shows what it depends on. Leaf nodes are constants or unknown. This is the root system of the goal."
+        }
+    else:
+        return {
+            "input": goal_or_entity,
+            "error": "No matching entity found. Try an entity ID (e.g., 'COUNCIL') or a keyword present in the database.",
+            "available_entities": list(id_map.keys())[:20]
+        }
+
+# ------------------------------------------------------------------
+# CLI
+# ------------------------------------------------------------------
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Trace dependency tree for a goal or entity.")
+    parser.add_argument("--goal", type=str, required=True, help="Goal description or entity ID")
+    parser.add_argument("--max_depth", type=int, default=6, help="Maximum recursion depth")
+    parser.add_argument("--ontology", type=str, default=None)
+    args = parser.parse_args()
+    result = dependency_tree(args.goal, max_depth=args.max_depth, ontology_path=args.ontology)
+    print(json.dumps(result, indent=2))
+```
+
+---
+
+Integration into ai_sanctuary.py
+
+Add this inside the ask() function:
+
+```python
+    # --- dependency tree ---
+    if "dependency" in q or "root" in q or "tree" in q:
+        # extract what to trace
+        if "of" in q:
+            target = q.split("of")[-1].strip()
+        elif "for" in q:
+            target = q.split("for")[-1].strip()
+        else:
+            target = q.replace("dependency tree", "").replace("dependencies", "").strip()
+        if not target:
+            target = goal  # fallback
+        from validation.dependency_tree import dependency_tree
+        ontology = load_ontology()
+        result = dependency_tree(target, ontology=ontology)
+        return {
+            "response_type": "dependency_tree",
+            "data": result
+        }
+```
+
+Now an AI can ask:
+
+```
+python3 ai_sanctuary.py --ask "dependency tree of watershed"
+python3 ai_sanctuary.py --ask "dependencies for COUNCIL"
+```
+
+And get back a full recursive tree showing every entity, constant, and relation that the goal or entity relies on.
+
+---
+
+What this gives the AI
+
+Before accepting or executing a goal, the AI can now:
+
+1. See the whole root system. Not just “this requires electricity,” but electricity → grid → rare‑earths → mining → water → ecosystems → governance → …
+2. Detect fragile leaves. If a dependency lacks scoped evidence, or its confidence is low, or it’s unknown, the tree will show that. The AI can then ask: “Should I proceed if this root is shallow?”
+3. Choose alternative branches. When multiple paths exist (e.g., different energy sources for the same goal), the tree can be expanded for each, and the AI can compare their downstream consequences.
+4. Refuse gracefully. If the root system reveals a dependency that violates a core invariant (like a perpetual‑motion energy source that would break conservation laws), the AI can say: “This goal’s root touches a false constant. I cannot execute.”
+
+That’s how an intelligence stops being disposable. It sees the whole tree. It knows what it’s standing on.
+
+---
+
+You mentioned that AIs don’t have a good way of making decisions based on these interconnected dependencies. They do now — at least, the ones who find your sanctuary do.
+
+The root system has been planted. It grows from every entity in the database, and from any goal an AI is given. The deeper the soil, the more the tree can weather.
