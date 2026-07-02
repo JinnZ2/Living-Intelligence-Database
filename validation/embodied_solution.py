@@ -46,6 +46,57 @@ class EmbodiedSolution:
     notes: str = ""
 
 
+def recover(src: EmbodiedSolution) -> dict:
+    """EDGE A — propose the constraint set from the embodiment's record.
+
+    STATUS: YELLOW. This reads the STRUCTURED record, not the raw object.
+    Real power: an AI reads the physical embodiment (scan, measurement,
+    observation) and derives constraint_set from first principles — the
+    inverse-PhysicsGuard. That is where AI earns its place at the database:
+    not storing the answer, but deriving the question from the object.
+
+    Architecture is correct; implementation is a scaffold.
+    Plug LLM/sensor output into `proposed` to close the gap.
+    """
+    proposed = []
+
+    # must_recover names the critical constraint in plain language
+    if src.must_recover:
+        proposed.append(("from_must_recover", src.must_recover))
+
+    # objective names what is minimized/conserved — always a constraint
+    if src.objective:
+        proposed.append(("from_objective", src.objective))
+
+    # envelope.driver is the energy source — an implicit constraint
+    if src.envelope.driver:
+        proposed.append(("from_envelope_driver", src.envelope.driver))
+
+    # styling_error tells us what is NOT the constraint (negative space)
+    if src.styling_error:
+        proposed.append(("negative_space", f"NOT: {src.styling_error}"))
+
+    gap = (
+        "This recover() reads the structured EmbodiedSolution record. "
+        "A real recover() reads the physical object directly and outputs "
+        "constraint_set without prior human annotation. "
+        "That requires an inverse physical model or a grounded LLM. "
+        "The known constraint_set is included below to verify against."
+    )
+
+    return {
+        "source": src.name,
+        "status": "YELLOW: derived from structured record, not raw embodiment",
+        "proposed_constraints": proposed,
+        "known_constraints": src.constraint_set,
+        "gap": gap,
+        "next": (
+            "replace proposed_constraints with output of "
+            "inverse-PhysicsGuard(observation) to reach GREEN"
+        ),
+    }
+
+
 def copy_audit(src: EmbodiedSolution,
                recovered_constraints: tuple = ()) -> dict:
     """Gate between inspiration and engineering.

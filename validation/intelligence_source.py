@@ -130,6 +130,35 @@ SEEDS = [
                 "decision IS the flow. No control/data split.")),
     ),
     IntelligenceSource(
+        name="humanure N-cycling (traditional closed-loop composting)",
+        substrate=Substrate.IMMEDIATE,
+        sensing=("biological activity", "temperature", "carbon:nitrogen ratio",
+                 "moisture", "decomposition phase"),
+        transmission=Transmission(Encoding.BEHAVIORAL, 800,
+                                  "farmer practice, apprenticeship, seasonal ritual"),
+        conserved=("closed nitrogen loop", "soil microbial continuity",
+                   "energy cost near zero"),
+        blindspots=("scale beyond household/village without institutional support",
+                    "pathogen risk at industrial scale"),
+        reciprocity_R=0.85,
+        loss_vector=LossVector(
+            destroyed_dims=("closed-loop obligation", "biological timing",
+                            "system boundary — waste IS input"),
+            substitution_error=(
+                "reads as 'slow Haber-Bosch' — a less efficient "
+                "version of the same nitrogen supply problem"),
+            residue_hold=(
+                "it BYPASSES the Haber-Bosch constraint entirely. "
+                "not a substitute for synthetic N; a different system "
+                "that dissolves the institutional_bottleneck by refusing "
+                "to be inside it. comparison frame is the constraint, "
+                "not the molecule.")),
+        notes=(
+            "ties to soil_aggregate embodied constraint: shared problem space "
+            "of N-cycling + microbial continuity + closed pore network. "
+            "cross-class query on 'nitrogen' or 'microbial' pulls both."),
+    ),
+    IntelligenceSource(
         name="somatic/emotion-as-sensor",
         substrate=Substrate.IMMEDIATE,
         sensing=("interoception", "threat", "social field"),
