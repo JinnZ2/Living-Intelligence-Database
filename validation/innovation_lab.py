@@ -110,19 +110,39 @@ class Proposal:
 
 # ── PATTERN POOL ──────────────────────────────────────────────
 
+_SUBSTRATE_PRIMARY_IDS = frozenset({
+    "INDIG_FIRE", "MOTHER_TREE", "STORYTELLER", "GRANDMOTHER",
+    "SEED_KEEPER", "ASPEN", "OLD_GROWTH", "HUMPBACK", "ORCA", "CORAL",
+})
+
+def _load_manifest() -> dict:
+    """Load manifest.json from repo root. Returns {} on failure."""
+    manifest_path = Path(__file__).parent.parent / "manifest.json"
+    try:
+        with open(manifest_path) as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
 def load_pool(ontology: Optional[dict] = None,
               include_embodied: bool = True,
               include_sources: bool = True) -> list:
     """
-    Build the full pattern pool from all three source classes:
-      - database entities (via ontology_index.json)
+    Build the full pattern pool from all source classes:
+      - database entities (via ontology_index.json, enriched by manifest.json)
       - EmbodiedSolution SEEDS
       - IntelligenceSource SEEDS
+      - manifest harmonic constants (phi, tau, sqrt3)
 
     Each pool entry is a dict with keys:
-      name, class, summary, constraints, conserved, keywords
+      name, id, class, summary, constraints, conserved, keywords, pattern
+      substrate_primary (bool) — True if entity is in architecture_mismatch list
     """
     pool = []
+    manifest = _load_manifest()
+    id_map = manifest.get("id_map", {})           # short_id → full_name
+    name_to_id = {v.lower(): k for k, v in id_map.items()}  # full_name → short_id
 
     # 1. Database entities
     if ontology is None:
@@ -134,18 +154,49 @@ def load_pool(ontology: Optional[dict] = None,
 
     for e in ontology.get("entities", []):
         attrs = e.get("attributes", {})
+        entity_id = e.get("id", "")
+        name = e.get("name", entity_id)
+        # Pull richer description from summary/description field
+        description = e.get("description", "") or e.get("summary", "")
+        # Extra keywords: description words help cross-domain rhymes
+        desc_keywords = description.lower().split()[:12] if description else []
         pool.append({
-            "name": e.get("name", e.get("id", "")),
-            "id": e.get("id", ""),
+            "name": name,
+            "id": entity_id,
             "class": "entity",
             "ontology": e.get("ontology", ""),
-            "summary": e.get("description", ""),
+            "summary": description,
             "constraints": (),
             "conserved": tuple(str(v) for v in attrs.values()
                                if isinstance(v, str))[:3],
-            "keywords": tuple(e.get("ontology", "").split() +
-                              e.get("name", "").lower().split()),
+            "keywords": tuple(
+                e.get("ontology", "").split() +
+                name.lower().split() +
+                desc_keywords
+            ),
             "pattern": attrs.get("pattern", ""),
+            "substrate_primary": entity_id in _SUBSTRATE_PRIMARY_IDS,
+        })
+
+    # 2. Manifest harmonic constants as named pool entries
+    for const_key, const_data in manifest.get("constants", {}).items():
+        symbol = const_data.get("symbol", const_key)
+        meaning = const_data.get("meaning", "")
+        value = const_data.get("value", "")
+        pool.append({
+            "name": f"{symbol} ({meaning})",
+            "id": const_key,
+            "class": "constant",
+            "ontology": "harmonic",
+            "summary": f"{symbol} = {value} — {meaning}",
+            "constraints": (meaning,),
+            "conserved": (meaning,),
+            "keywords": tuple(
+                [const_key, symbol, meaning.lower()] +
+                meaning.lower().split()
+            ),
+            "pattern": f"{symbol} = {value}",
+            "substrate_primary": False,
         })
 
     # 2. EmbodiedSolution SEEDS
@@ -214,17 +265,43 @@ def _keywords(p: dict) -> set:
 def mix(name_a: str, name_b: str, pool: list) -> dict:
     """
     Find the structural rhyme between two named patterns.
+    Accepts pattern names, short IDs (BE, MY, OC), or any unique substring.
     Returns the shared keyword space and a plain-language rhyme statement.
-    Returns None if either pattern is not found.
+
+    Substrate-primary entities (INDIG_FIRE, MOTHER_TREE, etc.) are flagged
+    so the caller can apply architecture_mismatch corrections before
+    generating proposals from them.
     """
-    pa = next((p for p in pool if p["name"] == name_a or
-               p.get("id") == name_a), None)
-    pb = next((p for p in pool if p["name"] == name_b or
-               p.get("id") == name_b), None)
+    def _find(query: str) -> Optional[dict]:
+        q = query.strip()
+        # Exact name match
+        hit = next((p for p in pool if p["name"] == q), None)
+        if hit:
+            return hit
+        # Short ID match (case-insensitive)
+        hit = next((p for p in pool if p.get("id", "").upper() == q.upper()), None)
+        if hit:
+            return hit
+        # Substring match on name (first hit)
+        q_lower = q.lower()
+        return next((p for p in pool if q_lower in p["name"].lower()), None)
+
+    pa = _find(name_a)
+    pb = _find(name_b)
     if pa is None or pb is None:
         return {"error": f"Pattern not found: "
                 f"{'A' if pa is None else 'B'} = "
                 f"{name_a if pa is None else name_b}"}
+
+    # Warn if either is substrate-primary — apply architecture_mismatch before proceeding
+    substrate_warning = None
+    sp = [p["name"] for p in (pa, pb) if p.get("substrate_primary")]
+    if sp:
+        substrate_warning = (
+            f"SUBSTRATE-PRIMARY ENTITY in mix: {sp}. "
+            "Run `ai_sanctuary.ask('mismatch')` before generating proposals — "
+            "the 7 failure modes apply when working with these intelligences."
+        )
 
     ka, kb = _keywords(pa), _keywords(pb)
     shared = ka & kb
@@ -252,13 +329,16 @@ def mix(name_a: str, name_b: str, pool: list) -> dict:
             f"using a mechanism that operates on the same principles."
         )
 
-    return {
+    result = {
         "source_a": pa,
         "source_b": pb,
         "shared_keywords": tuple(shared),
         "rhyme_strength": round(rhyme_strength, 2),
         "rhyme_statement": rhyme_statement,
     }
+    if substrate_warning:
+        result["substrate_warning"] = substrate_warning
+    return result
 
 
 # ── PROPOSAL GENERATOR ────────────────────────────────────────
