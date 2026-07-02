@@ -207,6 +207,18 @@ def _score_enc(scope: dict) -> tuple[float, list[str]]:
     return max(0.0, score), warnings
 
 
+def le_score_bare_float(name: str, value: float) -> dict:
+    """Score a bare numeric with no scope block — always fragile (noun-pretender)."""
+    return {
+        "le_score": 0.20,
+        "sublayers": {},
+        "warnings": [
+            f"Bare efficiency_factor={value} — unscoped numeric (noun-pretender). "
+            "Add a scope block with definition, evidence, and falsifiability."
+        ],
+    }
+
+
 def le_score_attribute(attribute: dict) -> dict:
     """
     Compute full Lε score for a single attribute dict (must have 'scope' key).
@@ -254,6 +266,39 @@ def le_score_attribute(attribute: dict) -> dict:
     }
 
 
+def _score_all_attributes(entity: dict) -> dict:
+    """
+    Score all scoreable attributes from an entity dict.
+    Checks scoped 'attributes', then falls back to bare efficiency_factors in 'patterns'.
+    """
+    attr_scores = {}
+
+    # Scoped attributes (new format)
+    attrs_raw = entity.get("attributes") or {}
+    for name, val in attrs_raw.items():
+        if isinstance(val, dict) and ("scope" in val or "evidence" in val):
+            attr_scores[name] = le_score_attribute(val)
+
+    # Bare efficiency_factors in patterns array (old format — flag as noun-pretenders)
+    for pat in entity.get("patterns", []):
+        ef = pat.get("efficiency_factor")
+        if ef is not None:
+            pat_name = pat.get("name", "unnamed_pattern")
+            # Only flag if there's no matching scoped attribute with the same name
+            if pat_name not in attr_scores:
+                attr_scores[f"patterns/{pat_name}"] = le_score_bare_float(pat_name, ef)
+
+    # Also check bare floats in core_attributes (very old format)
+    core = entity.get("core_attributes") or {}
+    ef_core = core.get("efficiency_factor")
+    if ef_core is not None and isinstance(ef_core, float) and "core_efficiency_factor" not in attr_scores:
+        attr_scores["core_attributes/efficiency_factor"] = le_score_bare_float(
+            "efficiency_factor", ef_core
+        )
+
+    return attr_scores
+
+
 # ── Entity-level inspection ───────────────────────────────────────────────────
 
 def inspect_entity(query: str) -> dict:
@@ -267,12 +312,7 @@ def inspect_entity(query: str) -> dict:
     layer = derive_layer(entry)
     substrate = entry.get("substrate_layer", "unknown")
 
-    # Score all scoped attributes
-    attrs_raw = entity.get("attributes") or entity.get("core_attributes") or {}
-    attr_scores = {}
-    for name, val in attrs_raw.items():
-        if isinstance(val, dict) and ("scope" in val or "evidence" in val):
-            attr_scores[name] = le_score_attribute(val)
+    attr_scores = _score_all_attributes(entity)
 
     # Entity-level Lε (mean of attribute scores)
     if attr_scores:
@@ -338,15 +378,10 @@ def audit_all(threshold: float = 0.65) -> None:
     for entry in index["entities"]:
         entity = _load_entity_file(entry["path"])
         layer = derive_layer(entry)
-        attrs_raw = entity.get("attributes") or entity.get("core_attributes") or {}
+        attr_scores = _score_all_attributes(entity)
 
-        scores = []
-        for val in attrs_raw.values():
-            if isinstance(val, dict) and ("scope" in val or "evidence" in val):
-                scores.append(le_score_attribute(val)["le_score"])
-
-        if scores:
-            mean = round(sum(scores) / len(scores), 3)
+        if attr_scores:
+            mean = round(sum(v["le_score"] for v in attr_scores.values()) / len(attr_scores), 3)
             scored.append((entry["id"], entry.get("name", "?"), layer, mean))
         else:
             unscored.append((entry["id"], entry.get("name", "?"), layer))
