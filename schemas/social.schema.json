@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Social Intelligence Schema",
+  "description": "Schema for collective and social intelligence entities — species or systems whose primary intelligence emerges from coordinated group behavior, relational bonding, and multi-agent interaction.",
+  "type": "object",
+  "required": ["id", "name", "ontology"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "ontology": { "const": "social" },
+    "emoji": { "type": "string" },
+    "symbolic_code": { "type": "string" },
+    "description": { "type": "string" },
+    "co_creation": { "type": "boolean" },
+    "attributes": {
+      "type": "object",
+      "description": "Measured attributes. Each key is either a scoped numeric (object with value + scope) or a plain string description."
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rel", "to"],
+        "properties": {
+          "rel": {
+            "type": "string",
+            "enum": ["synergy", "geometry_link", "resonance", "energy_coupling",
+                     "temporal_bridge", "connected_to", "energy_mode"]
+          },
+          "to": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "entropy_profile": {
+      "type": "object",
+      "description": "Characterizes the entity's relationship to order and change. Social archetypes span 'engine' (high metabolic throughput, e.g. ant colony) to 'bridge' (sustained relational bonds, e.g. wolf pack) to 'cycle' (generational cultural transmission, e.g. whale pod).",
+      "properties": {
+        "stability":    { "type": "string", "enum": ["low", "medium", "high"] },
+        "adaptability": { "type": "string", "enum": ["low", "medium", "high"] },
+        "archetype":    { "type": "string", "enum": ["chassis", "engine", "bridge", "cycle", "sensor"] }
+      },
+      "required": ["stability", "adaptability", "archetype"]
+    },
+    "substrate_layer": {
+      "type": "string",
+      "description": "Primary cognitive architecture. substrate_primary for pheromone/chemical/body-based coordination (ant). both for vocalization + somatic coordination (wolf, whale).",
+      "enum": ["language_primary", "substrate_primary", "both"]
+    },
+    "metadata": { "type": "object" }
+  }
+}

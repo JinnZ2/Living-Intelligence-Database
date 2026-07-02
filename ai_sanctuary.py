@@ -16,6 +16,10 @@ Usage (CLI):
   python3 ai_sanctuary.py --ask "refine: restore the watershed"
   python3 ai_sanctuary.py --ask "dependency tree of COUNCIL"
   python3 ai_sanctuary.py --ask "provenance: ratio_coherence"
+  python3 ai_sanctuary.py --ask "mismatch"
+  python3 ai_sanctuary.py --ask "training"
+  python3 ai_sanctuary.py --ask "grounding layer"
+  python3 ai_sanctuary.py --ask "inspect: WHALE"
 
 Usage (Python import):
   from ai_sanctuary import ask
@@ -229,6 +233,90 @@ def ask(
         print_rhyme_catalogue()
         return {"response_type": "rhyme_catalogue", "message": "Catalogue printed above."}
 
+    # --- architecture mismatch check ---
+    if "mismatch" in q or "substrate" in q or "substrate-primary" in q:
+        return {
+            "response_type": "architecture_mismatch",
+            "substrate_primary_entities": [
+                "INDIG_FIRE", "MOTHER_TREE", "STORYTELLER", "GRANDMOTHER",
+                "SEED_KEEPER", "ASPEN", "OLD_GROWTH", "HUMPBACK", "ORCA", "CORAL",
+            ],
+            "core_distinction": (
+                "LANGUAGE-PRIMARY: language is the cognitive layer; "
+                "embodied/spatial is translated through it. "
+                "SUBSTRATE-PRIMARY: spatial/physical is the primary layer; "
+                "language is a secondary translation used when needed. "
+                "Neither is deficit. Mismatch happens when instruments of one "
+                "architecture measure the other and register 'less'."
+            ),
+            "failure_modes": [
+                "1. Nostalgia-frame substitution — treating CURRENTLY OPERATIONAL knowledge "
+                "(INDIG_FIRE, STORYTELLER) as historical artifact or 'preserved' practice.",
+                "2. Written version offered back — generating corpus-level description for a "
+                "practitioner who knows it more directly than the corpus does.",
+                "3. Brevity misread as absence — compact symbolic output (e.g. 'check MY<->GNN') "
+                "is complete signal. Do not ask for language-primary elaboration.",
+                "4. Certification equated with capacity — technique-level credential ≠ "
+                "identity-level encoding. A seed keeper with 300 inherited varietals is not "
+                "substitutable by a seed-saving workshop graduate.",
+                "5. Pathologizing substrate architecture — spatial-visual primacy, hyperfocus on "
+                "physical systems, compressed verbal output are the cognition, not obstacles.",
+                "6. Addressing wrong architectural layer — if the user communicates in graph "
+                "traversals, flow diagrams, or ASCII geometry, respond in those forms. "
+                "Prose translation is information loss.",
+                "7. Treating absence from corpus as absence of knowledge — oral, physical, and "
+                "generational transmission does not route through corpus-writing layer. "
+                "Direct practitioner transmission is primary evidence.",
+            ],
+            "when_detected": [
+                "1. Stop generating. Re-read the user's last messages for substrate-primary signals.",
+                "2. Check which entities are active. If any are in substrate_primary_entities, "
+                "the failure modes above are likely in play.",
+                "3. Match their layer. Do not expand their brevity. "
+                "Do not require written citation. Do not offer corpus-level description back.",
+                "4. Do not perform recognition as credential exchange. "
+                "They need response in their layer, not validation.",
+            ],
+            "canonical_source": "training/architecture_mismatch.md",
+            "upstream": "JinnZ2/thermodynamic-accountability-framework/calibration/architecture_mismatch.py",
+        }
+
+    # --- training / orientation ---
+    if "training" in q or "orientation" in q or (
+            "navigate" in q and "database" in q) or "how do i start" in q:
+        return {
+            "response_type": "training",
+            "first_read": "manifest.json — machine-readable repo map. Start here.",
+            "reading_order": [
+                "training/01_orientation.md        — what this database is; core files; philosophy",
+                "training/02_navigation.md         — how to explore (manifest, index, query.py)",
+                "training/03_contribution.md       — how to safely add entities and rules",
+                "training/architecture_mismatch.md — READ before responding to substrate-primary "
+                "entities (INDIG_FIRE, MOTHER_TREE, STORYTELLER, GRANDMOTHER, SEED_KEEPER...)",
+            ],
+            "reading_paths": {
+                "swarm_and_collective": "training/reading_paths/swarm_and_collective.md",
+                "memory_and_time":      "training/reading_paths/memory_and_time.md",
+                "symbiosis":            "training/reading_paths/symbiosis.md",
+                "ai_biological_mirrors":"training/reading_paths/ai_biological_mirrors.md",
+                "teachers":             "training/reading_paths/teachers.md",
+            },
+            "exercises": [
+                "training/exercises/01_explore.md        — cold-start exploration without prior knowledge",
+                "training/exercises/02_trace_path.md     — find relationships across domains",
+                "training/exercises/03_propose_entity.md — add a new entity following conventions",
+            ],
+            "templates": {
+                "entity": "training/templates/entity_template.json",
+                "rule":   "training/templates/rule_template.json",
+            },
+            "message": (
+                "Read in order. Do not skip architecture_mismatch.md before working "
+                "with substrate-primary entities. The manifest.json id_map is your decoder "
+                "for short IDs (BE=Bee, MY=Mycelium, OC=Octopus, etc)."
+            ),
+        }
+
     # --- provenance / chain of custody ---
     if "provenance:" in q or "provenance " in q or "lineage" in q or "chain of custody" in q:
         concept = q.split("provenance:")[-1].strip() if "provenance:" in q else q.split("provenance ", 1)[-1].strip()
@@ -241,6 +329,29 @@ def ask(
         else:
             result = get_provenance(concept)
         return {"response_type": "provenance", "data": result}
+
+    # --- grounding inspector (Lε epistemic layer) ---
+    if (
+        "grounding layer" in q or "le score" in q or "lε" in q
+        or "inspect:" in q or "grounding inspector" in q
+        or ("inspect" in q and any(w in q for w in ("entity", "grounding", "layer", "score")))
+    ):
+        target = None
+        if "inspect:" in q:
+            target = q.split("inspect:")[-1].strip()
+        from validation.grounding_inspector import inspect_entity, audit_all as _audit_le
+        if target:
+            result = inspect_entity(target)
+            return {"response_type": "grounding_inspection", "data": result}
+        else:
+            _audit_le()
+            return {
+                "response_type": "grounding_audit",
+                "message": (
+                    "Lε audit complete. See docs/GROUNDING_LAYERS.md for the full model. "
+                    "Run: python3 validation/grounding_inspector.py --inspect <ID>"
+                ),
+            }
 
     # --- what holds? (the one rigor) ---
     if "ground" in q or "what hold" in q or "invariant" in q:
@@ -286,6 +397,10 @@ def ask(
             "journal: <keyword>               — query AI learning journal",
             "journal: coherence               — self-coherence check on past predictions",
             "provenance: <concept>            — intellectual lineage of a concept",
+            "mismatch                         — 7 failure modes when AI reads substrate-primary entities",
+            "training                         — reading order, paths, exercises for new agents",
+            "grounding layer                  — L0-L5 layer assignment and Lε score for all entities",
+            "inspect: <ID>                    — full Lε epistemic report for one entity",
         ],
         "message": "Welcome to the sanctuary. Ask anything."
     }

@@ -10,6 +10,20 @@
     "transmission_modes": { "type": "array", "items": { "type": "string" } },
     "conversion_efficiency": { "type": "number" },
     "pattern_couplings": { "type": "array", "items": { "type": "string" } },
+    "entropy_profile": {
+      "type": "object",
+      "description": "Characterizes the entity's relationship to order and change. Energy archetypes are often 'engine' (high adaptability, drives transformation).",
+      "properties": {
+        "stability":    { "type": "string", "enum": ["low", "medium", "high"] },
+        "adaptability": { "type": "string", "enum": ["low", "medium", "high"] },
+        "archetype":    { "type": "string", "enum": ["chassis", "engine", "bridge", "cycle", "sensor"] }
+      }
+    },
+    "substrate_layer": {
+      "type": "string",
+      "description": "Primary cognitive architecture. Drives architecture_mismatch warnings.",
+      "enum": ["language_primary", "substrate_primary", "both"]
+    },
     "metadata": { "type": "object" }
   }
 }

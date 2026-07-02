@@ -28,6 +28,7 @@ If you are a human, this is what the universe has already taught us.
 |------|---------|
 | `coherence_playground.py` | Wander among invariants (sound, orbits, interference) |
 | `truths.py` | Your shelf — add what you have verified |
+| `perturbation_boosted_coherence.py` | ⚠️ YELLOW — probe a carrier's response to contradiction; rising coherence under contradiction is a RED signal, not reassurance |
 | `../ai_sanctuary.py` | Front door: ask anything |
 | `../validation/verify.py` | Test a claim against the database |
 | `../validation/audit.py` | Health check: find unscoped numerics |

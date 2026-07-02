@@ -19,7 +19,12 @@ This directory contains the verification, audit, and reasoning tools for the Liv
 | `meta_analyze.py` | Run a claim across multiple paradigms | See code |
 | `social_analysis.py` | Compare social intelligences across species | `python3 validation/social_analysis.py` |
 | `journal.py` | AI learning journal (write, query, coherence check) | `python3 validation/journal.py write --goal "..."` |
+| `intelligence_source.py` | Schema + overwrite audit for non-Western intelligence sources | `python3 validation/intelligence_source.py` |
+| `embodied_solution.py` | Schema + copy audit for physics-embodied solutions (no transmission, no fidelity decay) | `python3 validation/embodied_solution.py` |
 | `provenance.py` | Chain-of-custody for sanctuary concepts | See code |
+| `cross_class_query.py` | Query both source classes for a shared constraint keyword (EDGE B) | `python3 validation/cross_class_query.py` |
+| `innovation_lab.py` | Creative synthesis: mix patterns, generate testable proposals, promote results | `python3 validation/innovation_lab.py lab --n 3 --mode both` |
+| `grounding_inspector.py` | Score each entity's Lε epistemic grounding across 4 sublayers (obs/pat/xfr/enc); L0-L5 layer assignment; audit all or inspect one | `python3 validation/grounding_inspector.py --audit` or `--inspect WHALE` |
 
 ---
 

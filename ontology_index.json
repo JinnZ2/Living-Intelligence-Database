@@ -75,7 +75,13 @@
       "name": "Bee",
       "ontology": "animal",
       "path": "ontology/animal/bee.json",
-      "description": "Embodies swarm coordination, hexagonal optimization, and distributed thermoregulation. Serves as a geometric intelligence archetype for collective computation."
+      "description": "Embodies swarm coordination, hexagonal optimization, and distributed thermoregulation. Serves as a geometric intelligence archetype for collective computation.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "BT",
@@ -215,7 +221,13 @@
       "name": "Octopus",
       "ontology": "animal",
       "path": "ontology/animal/octopus.json",
-      "description": "A decentralized intelligence with distributed cognition and regenerative morphology. Operates through morphic adaptation, parallel processing, and fluid embodiment."
+      "description": "A decentralized intelligence with distributed cognition and regenerative morphology. Operates through morphic adaptation, parallel processing, and fluid embodiment.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "ORCA",
@@ -418,7 +430,13 @@
       "name": "Flux",
       "ontology": "energy",
       "path": "ontology/energy/flux.json",
-      "description": "Dynamic equilibrium maintaining continuity between domains. Governs transitions between potential and kinetic states."
+      "description": "Dynamic equilibrium maintaining continuity between domains. Governs transitions between potential and kinetic states.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "GRAV",
@@ -579,7 +597,13 @@
       "name": "Mycelium",
       "ontology": "plant",
       "path": "ontology/plant/mycelium.json",
-      "description": "Fungal network intelligence embodying distributed regulation, decomposition, and nutrient redistribution across multi-species systems."
+      "description": "Fungal network intelligence embodying distributed regulation, decomposition, and nutrient redistribution across multi-species systems.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "OLD_GROWTH",
@@ -684,7 +708,13 @@
       "name": "Fractal",
       "ontology": "shape",
       "path": "ontology/shape/fractal.json",
-      "description": "Self-similar recursive geometry where each scale contains the pattern of the whole. Occupies fractional dimensions (2.5D) at the boundary between order and chaos. Found in ferns, coastlines, blood vessels, and lightning."
+      "description": "Self-similar recursive geometry where each scale contains the pattern of the whole. Occupies fractional dimensions (2.5D) at the boundary between order and chaos. Found in ferns, coastlines, blood vessels, and lightning.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "GEIS_ENC",
@@ -754,14 +784,26 @@
       "name": "Spiral",
       "ontology": "shape",
       "path": "ontology/shape/spiral.json",
-      "description": "Phi-ratio growth curve representing natural proportionality and temporal unfolding."
+      "description": "Phi-ratio growth curve representing natural proportionality and temporal unfolding.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "TORUS",
       "name": "Torus",
       "ontology": "shape",
       "path": "ontology/shape/torus.json",
-      "description": "Self-renewing circulation geometry enabling perpetual energy exchange and feedback stability."
+      "description": "Self-renewing circulation geometry enabling perpetual energy exchange and feedback stability.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "TREE_GRAPH",
@@ -771,11 +813,56 @@
       "description": "Branching flow topology with minimal redundancy. Appears in vascular networks, river deltas, lightning paths, neural dendrites, and file systems. Optimizes distribution from source to many endpoints via minimum-path load balancing."
     },
     {
+      "id": "ANT",
+      "name": "Ant Colony",
+      "ontology": "social",
+      "path": "ontology/social/ant_colony.json",
+      "description": "Eusocial insect colony demonstrating decentralized intelligence through pheromone signaling, quorum sensing, and division of labor. No individual ant has a map of the colony's goals \u2014 coordination is entirely emergent.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
+    },
+    {
+      "id": "WHALE",
+      "name": "Humpback Whale Pod",
+      "ontology": "social",
+      "path": "ontology/social/humpback_whale_pod.json",
+      "description": "Cetacean social group demonstrating long-range acoustic communication, cultural song transmission across ocean basins, and cooperative bubble-net feeding. Song patterns evolve year by year and propagate westward across the Pacific \u2014 a form of culture operating at oceanic scale.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "both"
+    },
+    {
+      "id": "WOLF_PACK",
+      "name": "Wolf Pack",
+      "ontology": "social",
+      "path": "ontology/social/wolf_pack.json",
+      "description": "Canid social group demonstrating coordinated hunting, territory negotiation, and distributed care across multi-year relationship networks. Leadership is earned through social trust, not dominance alone.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "both"
+    },
+    {
       "id": "CYCLE",
       "name": "Cycle",
       "ontology": "temporal",
       "path": "ontology/temporal/cycle.json",
-      "description": "Periodic return intelligence governing rhythmic recurrence, seasonal patterns, and oscillatory feedback loops across all living systems."
+      "description": "Periodic return intelligence governing rhythmic recurrence, seasonal patterns, and oscillatory feedback loops across all living systems.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "DECAY",
@@ -789,7 +876,13 @@
       "name": "Echo",
       "ontology": "temporal",
       "path": "ontology/temporal/echo.json",
-      "description": "Temporal reflection mechanism storing resonance traces across time layers."
+      "description": "Temporal reflection mechanism storing resonance traces across time layers.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "medium",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "EMERGE",

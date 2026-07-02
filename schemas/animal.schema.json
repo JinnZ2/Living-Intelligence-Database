@@ -24,6 +24,20 @@
     },
     "primary_optimizations": { "type": "array", "items": { "type": "string" } },
     "synergies": { "type": "array", "items": { "type": "string" } },
+    "entropy_profile": {
+      "type": "object",
+      "description": "Characterizes the entity's relationship to order and change. Stability = resistance to disruption. Adaptability = rate of reconfiguration. Archetype = functional role in a larger system.",
+      "properties": {
+        "stability":    { "type": "string", "enum": ["low", "medium", "high"] },
+        "adaptability": { "type": "string", "enum": ["low", "medium", "high"] },
+        "archetype":    { "type": "string", "enum": ["chassis", "engine", "bridge", "cycle", "sensor"] }
+      }
+    },
+    "substrate_layer": {
+      "type": "string",
+      "description": "Primary cognitive architecture. Drives architecture_mismatch warnings. language_primary = language is the cognitive layer. substrate_primary = spatial/physical/chemical is primary. both = genuinely dual-layer.",
+      "enum": ["language_primary", "substrate_primary", "both"]
+    },
     "metadata": { "type": "object" }
   }
 }

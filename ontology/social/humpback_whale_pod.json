@@ -55,6 +55,12 @@
     "migration_range": "20,000km round trip annually between tropical breeding grounds and polar feeding grounds.",
     "pattern": "acoustic culture, basin-scale social coherence, intergenerational learning, seasonal cycle fidelity"
   },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "medium",
+    "archetype": "cycle"
+  },
+  "substrate_layer": "both",
   "links": [
     { "rel": "resonance", "to": "ECHO", "note": "Both encode memory in acoustic/temporal patterns that persist across geography." },
     { "rel": "synergy", "to": "ANT", "note": "Both demonstrate population-level coordination without central command, at vastly different scales." },

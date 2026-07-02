@@ -19,6 +19,58 @@
       "target": "FLUX"
     }
   ],
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "high",
+    "archetype": "bridge"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "phosphorus_transfer_efficiency": {
+      "value": 0.85,
+      "scope": {
+        "definition": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+        "evidence": {
+          "source": "Read et al. (2004) 'Mycorrhizas and nutrient cycling in ecosystems', New Phytologist 163:459-474; Simard et al. (1997) 'Net transfer of carbon between tree species with shared ectomycorrhizal fungi', Nature 388:579-582.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "circulatory system nutrient delivery to cells via capillary network",
+            "internet packet routing: store-and-forward with network redundancy",
+            "river delta distributary channel nutrient transport to estuary"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.87
+        },
+        "falsifiability": "If soil sterilization (removing mycorrhizal networks) shows equal phosphorus uptake by host plants, hyphal transport is not the mechanism. Sterilization studies show 30-60% phosphorus reduction, confirming the mechanism.",
+        "measurement_limits": "Efficiency varies strongly by soil type, host species, and fungal genus. Measured values range 0.6-0.95 depending on conditions. 0.85 represents ectomycorrhizal networks in temperate forest soils.",
+        "dependencies": ["hyphal_density", "soil_phosphorus_availability", "host_root_morphology"]
+      }
+    },
+    "network_fault_tolerance": {
+      "value": 0.78,
+      "scope": {
+        "definition": "Fraction of original network connectivity (measured as proportion of node pairs still connected via some path) retained after random removal of 20% of hyphal strands, in established Phanerochaete velutina mycelial networks.",
+        "evidence": {
+          "source": "Boddy et al. (2010) 'Mycelial foraging and network dynamics'; Tlalka et al. (2008) 'Quantitative fluorescence imaging of Phanerochaete velutina', ISME Journal; Fricker et al. (2017) network topology studies.",
+          "evidence_type": "field_observation",
+          "reproducibility": "medium",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "internet AS-level routing: 80% connectivity retained after 20% node removal (Barabasi 2001)",
+            "neural network dropout tolerance: 75-85% retention under 20% neuron removal",
+            "ant trail network: redundant path maintenance after trail disruption"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.82
+        },
+        "falsifiability": "If targeted removal of hub hyphal nodes causes disproportionately greater connectivity loss than random removal, the network does not exhibit uniform redundancy — it has a scale-free vulnerability.",
+        "measurement_limits": "Measured in wood-block microcosm experiments. Field network resilience varies with soil disturbance type, hyphal growth rate, and environmental stress. Resilience is lower under simultaneous multi-point disturbance.",
+        "dependencies": ["network_topology", "hyphal_growth_rate", "anastomosis_rate"]
+      }
+    }
+  },
   "validation_meta": {
     "schema": "plant_intelligence.schema.json",
     "version": "1.1"

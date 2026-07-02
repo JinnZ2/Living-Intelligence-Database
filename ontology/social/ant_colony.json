@@ -75,6 +75,12 @@
     "communication_mode": "Pheromone gradient + antennal contact. No vocalizations. Signal degrades in ~10 minutes, preventing false trails from persisting.",
     "pattern": "decentralized emergence, positive feedback with natural decay"
   },
+  "entropy_profile": {
+    "stability": "low",
+    "adaptability": "high",
+    "archetype": "engine"
+  },
+  "substrate_layer": "substrate_primary",
   "links": [
     { "rel": "geometry_link", "to": "HEX", "note": "Colony tunnels often approximate hexagonal packing for structural efficiency." },
     { "rel": "synergy", "to": "BE", "note": "Both use pheromone/waggle communication and quorum sensing for collective decision." },
