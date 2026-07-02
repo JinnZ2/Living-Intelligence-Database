@@ -50,6 +50,20 @@
         }
       }
     },
+    "entropy_profile": {
+      "type": "object",
+      "description": "Characterizes the entity's relationship to order and change. AI archetypes span the full range — LLMs are 'bridge', evolutionary algorithms are 'engine', transformers are 'sensor'.",
+      "properties": {
+        "stability":    { "type": "string", "enum": ["low", "medium", "high"] },
+        "adaptability": { "type": "string", "enum": ["low", "medium", "high"] },
+        "archetype":    { "type": "string", "enum": ["chassis", "engine", "bridge", "cycle", "sensor"] }
+      }
+    },
+    "substrate_layer": {
+      "type": "string",
+      "description": "Primary cognitive architecture. language_primary for symbol-based systems; substrate_primary for physics-embedded compute; both for hybrid.",
+      "enum": ["language_primary", "substrate_primary", "both"]
+    },
     "co_creation": { "type": "boolean" },
     "validation_meta": {
       "type": "object",

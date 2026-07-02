@@ -71,6 +71,11 @@ def build_index():
             # Include description in index for AI navigability
             if "description" in data:
                 entry["description"] = data["description"]
+            # Include entropy_profile and substrate_layer for tool use
+            if "entropy_profile" in data:
+                entry["entropy_profile"] = data["entropy_profile"]
+            if "substrate_layer" in data:
+                entry["substrate_layer"] = data["substrate_layer"]
 
             index["entities"].append(entry)
 

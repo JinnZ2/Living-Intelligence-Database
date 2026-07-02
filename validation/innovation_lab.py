@@ -110,7 +110,9 @@ class Proposal:
 
 # ── PATTERN POOL ──────────────────────────────────────────────
 
-_SUBSTRATE_PRIMARY_IDS = frozenset({
+# Fallback list for entities that pre-date the substrate_layer schema field.
+# Once all entities carry substrate_layer in their JSON, this list is unused.
+_SUBSTRATE_PRIMARY_IDS_FALLBACK = frozenset({
     "INDIG_FIRE", "MOTHER_TREE", "STORYTELLER", "GRANDMOTHER",
     "SEED_KEEPER", "ASPEN", "OLD_GROWTH", "HUMPBACK", "ORCA", "CORAL",
 })
@@ -175,7 +177,11 @@ def load_pool(ontology: Optional[dict] = None,
                 desc_keywords
             ),
             "pattern": attrs.get("pattern", ""),
-            "substrate_primary": entity_id in _SUBSTRATE_PRIMARY_IDS,
+            "entropy_profile": e.get("entropy_profile", {}),
+            "substrate_primary": (
+                e.get("substrate_layer") == "substrate_primary"
+                or entity_id in _SUBSTRATE_PRIMARY_IDS_FALLBACK
+            ),
         })
 
     # 2. Manifest harmonic constants as named pool entries
@@ -196,6 +202,7 @@ def load_pool(ontology: Optional[dict] = None,
                 meaning.lower().split()
             ),
             "pattern": f"{symbol} = {value}",
+            "entropy_profile": {"stability": "high", "adaptability": "low", "archetype": "chassis"},
             "substrate_primary": False,
         })
 

@@ -7,9 +7,26 @@
     "id": { "type": "string" },
     "name": { "type": "string" },
     "ontology": { "const": "temporal" },
-    "state_type": { "type": "string", "enum": ["memory", "present", "future", "navigation", "integration"] },
+    "state_type": {
+      "type": "string",
+      "enum": ["memory", "present", "future", "navigation", "integration"]
+    },
     "attributes": { "type": "array", "items": { "type": "string" } },
     "relations": { "type": "array", "items": { "type": "string" } },
+    "entropy_profile": {
+      "type": "object",
+      "description": "Characterizes the entity's relationship to order and change. Temporal archetypes are often 'cycle' — they hold time-structure rather than physical structure.",
+      "properties": {
+        "stability":    { "type": "string", "enum": ["low", "medium", "high"] },
+        "adaptability": { "type": "string", "enum": ["low", "medium", "high"] },
+        "archetype":    { "type": "string", "enum": ["chassis", "engine", "bridge", "cycle", "sensor"] }
+      }
+    },
+    "substrate_layer": {
+      "type": "string",
+      "description": "Primary cognitive architecture. Drives architecture_mismatch warnings.",
+      "enum": ["language_primary", "substrate_primary", "both"]
+    },
     "metadata": { "type": "object" }
   }
 }

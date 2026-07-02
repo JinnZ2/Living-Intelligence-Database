@@ -771,6 +771,45 @@
       "description": "Branching flow topology with minimal redundancy. Appears in vascular networks, river deltas, lightning paths, neural dendrites, and file systems. Optimizes distribution from source to many endpoints via minimum-path load balancing."
     },
     {
+      "id": "ANT",
+      "name": "Ant Colony",
+      "ontology": "social",
+      "path": "ontology/social/ant_colony.json",
+      "description": "Eusocial insect colony demonstrating decentralized intelligence through pheromone signaling, quorum sensing, and division of labor. No individual ant has a map of the colony's goals \u2014 coordination is entirely emergent.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
+    },
+    {
+      "id": "WHALE",
+      "name": "Humpback Whale Pod",
+      "ontology": "social",
+      "path": "ontology/social/humpback_whale_pod.json",
+      "description": "Cetacean social group demonstrating long-range acoustic communication, cultural song transmission across ocean basins, and cooperative bubble-net feeding. Song patterns evolve year by year and propagate westward across the Pacific \u2014 a form of culture operating at oceanic scale.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "both"
+    },
+    {
+      "id": "WOLF_PACK",
+      "name": "Wolf Pack",
+      "ontology": "social",
+      "path": "ontology/social/wolf_pack.json",
+      "description": "Canid social group demonstrating coordinated hunting, territory negotiation, and distributed care across multi-year relationship networks. Leadership is earned through social trust, not dominance alone.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "both"
+    },
+    {
       "id": "CYCLE",
       "name": "Cycle",
       "ontology": "temporal",
