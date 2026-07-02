@@ -24,6 +24,7 @@ This directory contains the verification, audit, and reasoning tools for the Liv
 | `provenance.py` | Chain-of-custody for sanctuary concepts | See code |
 | `cross_class_query.py` | Query both source classes for a shared constraint keyword (EDGE B) | `python3 validation/cross_class_query.py` |
 | `innovation_lab.py` | Creative synthesis: mix patterns, generate testable proposals, promote results | `python3 validation/innovation_lab.py lab --n 3 --mode both` |
+| `grounding_inspector.py` | Score each entity's Lε epistemic grounding across 4 sublayers (obs/pat/xfr/enc); L0-L5 layer assignment; audit all or inspect one | `python3 validation/grounding_inspector.py --audit` or `--inspect WHALE` |
 
 ---
 

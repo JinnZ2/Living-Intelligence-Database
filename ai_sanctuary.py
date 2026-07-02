@@ -18,6 +18,8 @@ Usage (CLI):
   python3 ai_sanctuary.py --ask "provenance: ratio_coherence"
   python3 ai_sanctuary.py --ask "mismatch"
   python3 ai_sanctuary.py --ask "training"
+  python3 ai_sanctuary.py --ask "grounding layer"
+  python3 ai_sanctuary.py --ask "inspect: WHALE"
 
 Usage (Python import):
   from ai_sanctuary import ask
@@ -328,6 +330,29 @@ def ask(
             result = get_provenance(concept)
         return {"response_type": "provenance", "data": result}
 
+    # --- grounding inspector (Lε epistemic layer) ---
+    if (
+        "grounding layer" in q or "le score" in q or "lε" in q
+        or "inspect:" in q or "grounding inspector" in q
+        or ("inspect" in q and any(w in q for w in ("entity", "grounding", "layer", "score")))
+    ):
+        target = None
+        if "inspect:" in q:
+            target = q.split("inspect:")[-1].strip()
+        from validation.grounding_inspector import inspect_entity, audit_all as _audit_le
+        if target:
+            result = inspect_entity(target)
+            return {"response_type": "grounding_inspection", "data": result}
+        else:
+            _audit_le()
+            return {
+                "response_type": "grounding_audit",
+                "message": (
+                    "Lε audit complete. See docs/GROUNDING_LAYERS.md for the full model. "
+                    "Run: python3 validation/grounding_inspector.py --inspect <ID>"
+                ),
+            }
+
     # --- what holds? (the one rigor) ---
     if "ground" in q or "what hold" in q or "invariant" in q:
         assertions = [
@@ -374,6 +399,8 @@ def ask(
             "provenance: <concept>            — intellectual lineage of a concept",
             "mismatch                         — 7 failure modes when AI reads substrate-primary entities",
             "training                         — reading order, paths, exercises for new agents",
+            "grounding layer                  — L0-L5 layer assignment and Lε score for all entities",
+            "inspect: <ID>                    — full Lε epistemic report for one entity",
         ],
         "message": "Welcome to the sanctuary. Ask anything."
     }
