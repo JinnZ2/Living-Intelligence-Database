@@ -19,6 +19,7 @@ This directory contains the verification, audit, and reasoning tools for the Liv
 | `meta_analyze.py` | Run a claim across multiple paradigms | See code |
 | `social_analysis.py` | Compare social intelligences across species | `python3 validation/social_analysis.py` |
 | `journal.py` | AI learning journal (write, query, coherence check) | `python3 validation/journal.py write --goal "..."` |
+| `intelligence_source.py` | Schema + overwrite audit for non-Western intelligence sources | `python3 validation/intelligence_source.py` |
 | `provenance.py` | Chain-of-custody for sanctuary concepts | See code |
 
 ---
