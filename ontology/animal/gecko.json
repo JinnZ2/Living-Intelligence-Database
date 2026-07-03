@@ -1,7 +1,7 @@
 {
   "id": "GE",
   "name": "Gecko",
-  "emoji": "\ud83e\uddb6",
+  "emoji": "🦶",
   "ontology": "animal",
   "symbolic_code": "[GE_VANDERWAALS_GRIP_CLEAN]",
   "description": "Billions of nanoscale setae generate van der Waals adhesion supporting full body weight on glass. Self-cleaning: contaminants bind to surfaces more than setae, ejecting dirt per step. Directional adhesion activates with shear angle, releases with peel.",
@@ -85,5 +85,92 @@
   "validation_meta": {
     "schema": "animal_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "medium",
+    "archetype": "chassis"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "setae_adhesion": {
+      "value": 0.94,
+      "scope": {
+        "definition": "Shear adhesion force per unit area of Tokay gecko toe pad relative to body weight — expressed as body-weight multiples the adhesion can support in controlled shear pull tests.",
+        "evidence": {
+          "source": "Autumn et al. (2000) 'Adhesive force of a single gecko foot-hair', Nature 405:681-685; Autumn et al. (2002) 'Evidence for van der Waals adhesion in gecko setae', PNAS 99:12252-12256.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "single gecko seta produces 200 µN shear force — 10× body-weight equivalent per seta area",
+            "van der Waals forces confirmed as mechanism — adhesion works in vacuum, eliminates suction/glue hypotheses",
+            "gecko-inspired dry adhesive tapes achieve 0.80 of natural adhesion force in prototype testing",
+            "spider attachment pads: convergent hierarchical microstructure adhesion system achieving similar shear forces"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.93
+        },
+        "falsifiability": "If gecko adhesion is measured to be temperature-independent and humidity-independent in full shear-force conditions, van der Waals electrostatic mechanism (vs capillary) is confirmed.",
+        "measurement_limits": "Adhesion strength is direction-dependent — shear outperforms peel by 10:1. Contamination reduces adhesion by 60-80%. Gecko setae self-clean via repeated contact cycles — critical for maintained function.",
+        "dependencies": [
+          "substrate_smoothness",
+          "humidity",
+          "contamination_level"
+        ]
+      }
+    },
+    "self_cleaning_locomotion": {
+      "value": 0.91,
+      "scope": {
+        "definition": "Fraction of contaminating particles (20-µm glass spheres) removed from gecko toe pad per step on clean glass — measured by particle count before and after controlled locomotion.",
+        "evidence": {
+          "source": "Hansen & Autumn (2005) 'Evidence for self-cleaning in gecko setae', PNAS 102:385-389.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "90.5% of glass microspheres shed from gecko toe pad within first 4 steps on clean glass",
+            "particle adhesion to substrate preferred over seta adhesion — equilibrium thermodynamics drives self-cleaning",
+            "lotus leaf self-cleaning: superhydrophobic micro-papillae cause water droplets to roll off carrying particles — analogous structural self-cleaning principle"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.89
+        },
+        "falsifiability": "If particle removal rate from contaminated setae does not exceed 80% in 4 steps on clean substrates, the self-cleaning mechanism fails to explain sustained gecko adhesion.",
+        "measurement_limits": "Self-cleaning efficiency decreases with particle size (>50 µm particles not shed efficiently) and with oily contaminants (chemical affinity overrides mechanical cleaning). Only validated for dry environments.",
+        "dependencies": [
+          "particle_size",
+          "particle_material",
+          "substrate_energy"
+        ]
+      }
+    },
+    "directional_grip": {
+      "value": 0.92,
+      "scope": {
+        "definition": "Ratio of shear adhesion force in optimal toe-curl direction to anti-optimal direction (setae angled backward vs forward) — demonstrating directional asymmetry of hierarchical setal system.",
+        "evidence": {
+          "source": "Autumn et al. (2006) 'Dynamics of geckos running on inclines', Journal of Experimental Biology 209:3014-3021; Gravish et al. (2010) 'Rate-dependent frictional adhesion in natural and synthetic gecko setae'.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "setal shear force ratio (optimal/anti-optimal) = 4-6:1 — strongly direction-coded adhesion",
+            "gecko releases from surface by toe hyperextension — same angle-dependent mechanism for detachment",
+            "directional adhesive composites for robotic climbing: bio-inspired dry adhesives with 3:1 directionality"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.9
+        },
+        "falsifiability": "If measured shear force in anti-optimal setal orientation exceeds 50% of optimal orientation, the directional adhesion model does not explain preferential toe-curl attachment strategy.",
+        "measurement_limits": "Directionality is substrate-roughness dependent — works best on smooth surfaces. On rough surfaces (Ra > 10 µm) directionality decreases as setae cannot fully contact substrate.",
+        "dependencies": [
+          "surface_roughness",
+          "loading_angle",
+          "toe_curl_angle"
+        ]
+      }
+    }
   }
 }

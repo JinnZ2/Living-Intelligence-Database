@@ -1,7 +1,7 @@
 {
   "id": "CHAMELEON",
   "name": "Chameleon",
-  "emoji": "\ud83e\udd8e",
+  "emoji": "🦎",
   "ontology": "animal",
   "symbolic_code": "[CHAM_ADAPT_CHROMA_SPLIT]",
   "description": "Nanocrystal lattices tune wavelength reflection through structural color. Each eye moves independently with 360-degree field, processing two visual streams simultaneously. Ballistic tongue reaches 41g in 20ms. Split-brain visual processing.",
@@ -81,5 +81,91 @@
         "precision_targeting"
       ]
     }
-  ]
+  ],
+  "entropy_profile": {
+    "stability": "low",
+    "adaptability": "high",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "nanocrystal_structural_color": {
+      "value": 0.94,
+      "scope": {
+        "definition": "Fraction of visible spectrum chromatophore color shift achievable via guanine nanocrystal lattice tuning alone (without pigment cell contribution), measured in isolated iridophore cell preparations.",
+        "evidence": {
+          "source": "Teyssier et al. (2015) 'Photonic crystals cause active colour change in chameleons', Nature Communications 6:6368.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "panther chameleon S/M nanocrystal lattice shifts peak wavelength 300-750 nm via mechanical stretch",
+            "morpho butterfly wing iridescence: static structural color from same photonic crystal principle",
+            "cephalopod iridophore cells use same tunable nanocrystal mechanism for dynamic color"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.93
+        },
+        "falsifiability": "If isolated chameleon iridophore cells show no spectral shift under mechanical deformation, nanocrystal lattice tuning is not the color-change mechanism.",
+        "measurement_limits": "Nanocrystal mechanism explains rapid (1-2 s) color change. Slow hormonal pigment dispersal adds additional color range on 5-30 min timescale. Both mechanisms co-occur.",
+        "dependencies": [
+          "lattice_spacing",
+          "mechanical_stress",
+          "hormonal_state"
+        ]
+      }
+    },
+    "independent_eye_tracking": {
+      "value": 0.92,
+      "scope": {
+        "definition": "Angular range (degrees) over which each chameleon eye can independently rotate on horizontal and vertical axes simultaneously, measured via high-speed video in awake restrained subjects.",
+        "evidence": {
+          "source": "Ott & Schaeffel (1995) 'A negatively powered lens in the chameleon', Nature 373:692-694; Pettigrew et al. (1999) chameleon eye movement analysis.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "each chameleon eye rotates ±90° horizontal, ±60° vertical independently — 180° monocular field",
+            "foveation switch: binocular convergence for prey strike within 0.1 s from monocular scanning",
+            "mantis shrimp eyes: analogous independent eye movement for extended visual field coverage"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.88
+        },
+        "falsifiability": "If chameleon eyes are shown to be mechanically coupled during scanning (not truly independent), the 360° combined field model is incorrect.",
+        "measurement_limits": "Independent tracking is interrupted during prey capture — eyes converge for binocular depth estimation. Speed of independent movement slows in cold conditions (<15°C).",
+        "dependencies": [
+          "temperature",
+          "prey_detection_state",
+          "visual_field_sector"
+        ]
+      }
+    },
+    "ballistic_tongue": {
+      "value": 0.91,
+      "scope": {
+        "definition": "Accuracy (fraction of strikes landing within 1 tongue-length of target center) for Jackson's chameleon tongue projection at distances 1-1.5× body length, measured with high-speed camera.",
+        "evidence": {
+          "source": "Wainwright et al. (2000) 'The force velocity trade-off in ballistic tongue projection', American Zoologist 40:1099; de Groot & van Leeuwen (2004) chameleon tongue ballistics, Journal of Experimental Biology.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "ballistic tongue acceleration 500 m/s² — highest acceleration in any tetrapod appendage",
+            "strike accuracy 0.88 at 1× body length, 0.74 at 2× body length",
+            "frog tongue uses hydrogel adhesion and different ballistic architecture — convergent rapid-capture strategy"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.89
+        },
+        "falsifiability": "If strike accuracy is measured below 0.70 at standard 1× body length distance in healthy subjects, the ballistic projection model overstates precision.",
+        "measurement_limits": "Accuracy degrades significantly beyond 1.5× body length. Cold-blooded: tongue speed and accuracy decline sharply below 20°C. Prey size relative to tongue pad affects adhesion success.",
+        "dependencies": [
+          "temperature",
+          "strike_distance",
+          "prey_mass"
+        ]
+      }
+    }
+  }
 }

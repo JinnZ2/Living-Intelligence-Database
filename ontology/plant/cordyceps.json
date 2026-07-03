@@ -1,7 +1,7 @@
 {
   "id": "CORDYCEPS",
   "name": "Cordyceps",
-  "emoji": "\ud83e\udddf",
+  "emoji": "🧟",
   "ontology": "plant",
   "symbolic_code": "[CORD_PARASIT_HIJACK_CTRL]",
   "description": "Parasitic fungus that chemically hijacks host nervous systems via targeted alkaloids. Manipulates specific neural pathways while keeping host alive. Fruiting body emergence precisely timed to optimal spore dispersal conditions.",
@@ -41,5 +41,39 @@
   "validation_meta": {
     "schema": "plant_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "low",
+    "adaptability": "high",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "core_efficiency_factor": {
+      "value": 0.88,
+      "scope": {
+        "definition": "Behavioral manipulation specificity of Ophiocordyceps unilateralis — proportion of infected carpenter ant hosts that perform species-specific 'summit disease' behavior (climbing then biting at optimal height/substrate) compared to random-location death.",
+        "evidence": {
+          "source": "Hughes et al. (2011) 'Behavioral mechanisms and morphological symptoms of zombie ants dying from a fungal infection', BMC Ecology 11:13; de Bekker et al. (2014) chemical ecology of Ophiocordyceps.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            ">85% of infected ants die biting at 25 cm height on NNW-facing leaves — species-specific optimal humidity",
+            "fungal alkaloids (guanidinobutyric acid, sphingosine) identified as behavioral manipulation compounds",
+            "Toxoplasma gondii: analogous targeted host behavior modification (rodent fear reduction toward cats)"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.86
+        },
+        "falsifiability": "If infected ants die in random locations (not consistently at 25 cm NNW-facing substrate), the specificity of behavioral manipulation is not operating and infection outcome is non-deterministic.",
+        "measurement_limits": "Specificity is species-pair-dependent — each Ophiocordyceps strain targets one host ant species. Manipulation fails at temperatures >30°C. Behavioral specificity is weaker in lab vs field conditions.",
+        "dependencies": [
+          "ambient_temperature",
+          "host_ant_species",
+          "infection_stage"
+        ]
+      }
+    }
   }
 }

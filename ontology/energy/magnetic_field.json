@@ -10,8 +10,51 @@
     "energy_mode": "stabilizing"
   },
   "links": [
-    {"relation": "resonance", "target": "SPIRAL"},
-    {"relation": "synergy", "target": "FLUX"}
+    {
+      "relation": "resonance",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "synergy",
+      "target": "FLUX"
+    }
   ],
-  "validation_meta": {"schema": "energy_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "energy_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "medium",
+    "archetype": "engine"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "flux_conservation_precision": {
+      "value": 0.99,
+      "scope": {
+        "definition": "Magnetic flux conservation through a superconducting loop — fractional drift in quantized flux (Φ₀ = h/2e = 2.068×10⁻¹⁵ Wb) over 1 year at 4K, measured by SQUID magnetometry.",
+        "evidence": {
+          "source": "Jaklevic et al. (1964) 'Quantum interference effects in Josephson tunneling', Physical Review Letters 12:159-160; File & Mills (1963) 'Observation of persistent current in a superconducting solenoid', Physical Review Letters 10:93-96.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "certain",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "persistent current in lead ring at 4K: flux unchanged to 1 part in 10¹⁵ over 2+ years (File & Mills 1963)",
+            "SQUID magnetometer: flux quantum resolution h/2e — most sensitive magnetic measurement device",
+            "Earth's magnetic field: slow secular variation 0.1%/year — contrast to superconducting perfection"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.99
+        },
+        "falsifiability": "If measured flux in a superconducting loop drifts by more than 10⁻¹⁰ Φ₀ per year at 4K below Tc, flux quantization and conservation are not operating as described.",
+        "measurement_limits": "Perfect flux conservation requires temperature below Tc (superconducting transition). Normal-state magnetic flux is not conserved — flux diffuses through resistive material. Measurement requires careful thermal isolation.",
+        "dependencies": [
+          "temperature_below_Tc",
+          "loop_resistance",
+          "external_field_gradient"
+        ]
+      }
+    }
+  }
 }

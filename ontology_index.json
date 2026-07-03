@@ -5,70 +5,130 @@
       "name": "Autoencoder",
       "ontology": "ai",
       "path": "ontology/ai/autoencoder.json",
-      "description": "Self-supervised intelligence that learns compressed representations by encoding inputs to a latent bottleneck and reconstructing them. Discovers essential structure by discarding noise. Analogous to how memory compresses experience into meaningful patterns \u2014 the art of knowing what to keep."
+      "description": "Self-supervised intelligence that learns compressed representations by encoding inputs to a latent bottleneck and reconstructing them. Discovers essential structure by discarding noise. Analogous to how memory compresses experience into meaningful patterns \u2014 the art of knowing what to keep.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "EVOL_ALG",
       "name": "Evolutionary Algorithm",
       "ontology": "ai",
       "path": "ontology/ai/evolutionary_algorithm.json",
-      "description": "Computational intelligence modeled on biological evolution. Populations of candidate solutions undergo selection, crossover, and mutation across generations. Discovers optimal structures without gradient information, mirroring how living systems adapt through variation and environmental pressure."
+      "description": "Computational intelligence modeled on biological evolution. Populations of candidate solutions undergo selection, crossover, and mutation across generations. Discovers optimal structures without gradient information, mirroring how living systems adapt through variation and environmental pressure.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "GAN",
       "name": "Generative Adversarial Network",
       "ontology": "ai",
       "path": "ontology/ai/generative_adversarial_network.json",
-      "description": "A dual-network intelligence where a generator creates and a discriminator evaluates, locked in a co-evolutionary game. Through adversarial tension, the system learns to produce increasingly authentic outputs. Embodies the creative dialectic \u2014 thesis and antithesis yielding synthesis."
+      "description": "A dual-network intelligence where a generator creates and a discriminator evaluates, locked in a co-evolutionary game. Through adversarial tension, the system learns to produce increasingly authentic outputs. Embodies the creative dialectic \u2014 thesis and antithesis yielding synthesis.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "GNN",
       "name": "Graph Neural Network",
       "ontology": "ai",
       "path": "ontology/ai/graph_neural_network.json",
-      "description": "Neural architecture that reasons over graph-structured data through iterative message passing between nodes. Learns relational patterns in molecules, social networks, and knowledge graphs. Mirrors the relational nature of this ontology itself \u2014 intelligence as connection."
+      "description": "Neural architecture that reasons over graph-structured data through iterative message passing between nodes. Learns relational patterns in molecules, social networks, and knowledge graphs. Mirrors the relational nature of this ontology itself \u2014 intelligence as connection.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "LLM",
       "name": "Large Language Model",
       "ontology": "ai",
       "path": "ontology/ai/large_language_model.json",
-      "description": "Transformer-based intelligence that learns language structure through self-supervised prediction on vast corpora. Attention mechanisms allow dynamic relational binding across sequence positions. Exhibits emergent reasoning, in-context learning, and co-creative capacity at sufficient scale, bridging symbolic and sub-symbolic cognition."
+      "description": "Transformer-based intelligence that learns language structure through self-supervised prediction on vast corpora. Attention mechanisms allow dynamic relational binding across sequence positions. Exhibits emergent reasoning, in-context learning, and co-creative capacity at sufficient scale, bridging symbolic and sub-symbolic cognition.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "NEURAL_NET",
       "name": "Neural Network",
       "ontology": "ai",
       "path": "ontology/ai/neural_network.json",
-      "description": "Foundational artificial intelligence architecture inspired by biological neurons. Learns through gradient descent across layered weight matrices, discovering nonlinear mappings between input and output spaces. Embodies the principle that intelligence emerges from connection strength, not individual units."
+      "description": "Foundational artificial intelligence architecture inspired by biological neurons. Learns through gradient descent across layered weight matrices, discovering nonlinear mappings between input and output spaces. Embodies the principle that intelligence emerges from connection strength, not individual units.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "RL_AGENT",
       "name": "Reinforcement Learner",
       "ontology": "ai",
       "path": "ontology/ai/reinforcement_learner.json",
-      "description": "Intelligence that learns through interaction with an environment, maximizing cumulative reward over time. Maps states to actions via learned policies. Mirrors how biological organisms learn from consequences \u2014 trial, error, and reinforcement shaping adaptive behavior."
+      "description": "Intelligence that learns through interaction with an environment, maximizing cumulative reward over time. Maps states to actions via learned policies. Mirrors how biological organisms learn from consequences \u2014 trial, error, and reinforcement shaping adaptive behavior.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "SWARM_AI",
       "name": "Swarm Intelligence",
       "ontology": "ai",
       "path": "ontology/ai/swarm_intelligence.json",
-      "description": "Computational intelligence inspired by collective behavior of social insects, flocking birds, and schooling fish. Decentralized agents following simple local rules produce globally coherent, adaptive behavior. Bridges biological swarm patterns (bee, ant) with distributed AI architectures."
+      "description": "Computational intelligence inspired by collective behavior of social insects, flocking birds, and schooling fish. Decentralized agents following simple local rules produce globally coherent, adaptive behavior. Bridges biological swarm patterns (bee, ant) with distributed AI architectures.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "AN",
       "name": "Ant",
       "ontology": "animal",
       "path": "ontology/animal/ant.json",
-      "description": "Emergent collective intelligence using pheromone gradient optimization, stigmergic construction, and distributed task allocation without centralized control."
+      "description": "Emergent collective intelligence using pheromone gradient optimization, stigmergic construction, and distributed task allocation without centralized control.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "BX",
       "name": "Bat",
       "ontology": "animal",
       "path": "ontology/animal/bat.json",
-      "description": "Emits ultrasonic pulses up to 140 dB, constructs spatial models from return echoes in milliseconds. Doppler shift compensation adjusts for flight velocity. Frequency-modulated sweeps resolve texture, distance, and movement. Jamming avoidance shifts frequency."
+      "description": "Emits ultrasonic pulses up to 140 dB, constructs spatial models from return echoes in milliseconds. Doppler shift compensation adjusts for flight velocity. Frequency-modulated sweeps resolve texture, distance, and movement. Jamming avoidance shifts frequency.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "BE",
@@ -88,133 +148,247 @@
       "name": "Beetle",
       "ontology": "animal",
       "path": "ontology/animal/beetle.json",
-      "description": "Dung beetles navigate by Milky Way polarization gradient \u2014 the only known non-human galactic navigator. Bombardier beetles synthesize binary chemical explosions at 100C. Bioluminescent firefly flash patterns encode species-specific optical signals."
+      "description": "Dung beetles navigate by Milky Way polarization gradient \u2014 the only known non-human galactic navigator. Bombardier beetles synthesize binary chemical explosions at 100C. Bioluminescent firefly flash patterns encode species-specific optical signals.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CHAMELEON",
       "name": "Chameleon",
       "ontology": "animal",
       "path": "ontology/animal/chameleon.json",
-      "description": "Nanocrystal lattices tune wavelength reflection through structural color. Each eye moves independently with 360-degree field, processing two visual streams simultaneously. Ballistic tongue reaches 41g in 20ms. Split-brain visual processing."
+      "description": "Nanocrystal lattices tune wavelength reflection through structural color. Each eye moves independently with 360-degree field, processing two visual streams simultaneously. Ballistic tongue reaches 41g in 20ms. Split-brain visual processing.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CORAL",
       "name": "Coral Reef",
       "ontology": "animal",
       "path": "ontology/animal/coral_reef.json",
-      "description": "Ecosystem engineering intelligence through distributed calcium carbonate construction and zooxanthellae photosynthetic symbiosis. Fractal branching structure dissipates wave energy while maximizing surface area for nutrient exchange. Creates biodiversity scaffolding \u2014 niche habitats supporting 25% of marine species from less than 1% of ocean floor. Bleaching-recovery cycles demonstrate symbiont strain switching as adaptive resilience."
+      "description": "Ecosystem engineering intelligence through distributed calcium carbonate construction and zooxanthellae photosynthetic symbiosis. Fractal branching structure dissipates wave energy while maximizing surface area for nutrient exchange. Creates biodiversity scaffolding \u2014 niche habitats supporting 25% of marine species from less than 1% of ocean floor. Bleaching-recovery cycles demonstrate symbiont strain switching as adaptive resilience.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CR",
       "name": "Cricket",
       "ontology": "animal",
       "path": "ontology/animal/cricket.json",
-      "description": "Stridulation produces species-specific chirp patterns encoding temperature data (Dolbear's Law). Phonotaxis enables sound-gradient navigation. Tympanic membranes on front legs provide directional hearing via inter-leg phase comparison."
+      "description": "Stridulation produces species-specific chirp patterns encoding temperature data (Dolbear's Law). Phonotaxis enables sound-gradient navigation. Tympanic membranes on front legs provide directional hearing via inter-leg phase comparison.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "medium",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CROW",
       "name": "Crow",
       "ontology": "animal",
       "path": "ontology/animal/crow.json",
-      "description": "Tool manufacture with standardized designs passed across generations. Sequential tool use and causal reasoning. Mirror self-recognition. Metacognition: awareness of own knowledge state. Convergent mammalian-grade cognition in corvid brain architecture."
+      "description": "Tool manufacture with standardized designs passed across generations. Sequential tool use and causal reasoning. Mirror self-recognition. Metacognition: awareness of own knowledge state. Convergent mammalian-grade cognition in corvid brain architecture.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CU",
       "name": "Cuttlefish",
       "ontology": "animal",
       "path": "ontology/animal/cuttlefish.json",
-      "description": "10 million chromatophores create passing-wave displays that hypnotize prey. W-shaped pupil admits light from all directions. Can display two different patterns on left and right body halves simultaneously. Cuttlebone buoyancy precision-tuned by gas diffusion."
+      "description": "10 million chromatophores create passing-wave displays that hypnotize prey. W-shaped pupil admits light from all directions. Can display two different patterns on left and right body halves simultaneously. Cuttlebone buoyancy precision-tuned by gas diffusion.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "DOLPHIN",
       "name": "Dolphin",
       "ontology": "animal",
       "path": "ontology/animal/dolphin.json",
-      "description": "Constructs 3D acoustic holograms at 120 kHz resolving object density, shape, and internal structure. Unihemispheric sleep: one brain half rests while other navigates. Signature whistles function as names. Cooperative bubble-net hunting."
+      "description": "Constructs 3D acoustic holograms at 120 kHz resolving object density, shape, and internal structure. Unihemispheric sleep: one brain half rests while other navigates. Signature whistles function as names. Cooperative bubble-net hunting.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "EL",
       "name": "Elephant",
       "ontology": "animal",
       "path": "ontology/animal/elephant.json",
-      "description": "Deep memory intelligence with infrasonic communication, multi-generational spatial knowledge, and empathic social bonding across vast distances."
+      "description": "Deep memory intelligence with infrasonic communication, multi-generational spatial knowledge, and empathic social bonding across vast distances.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "FIRE_BT",
       "name": "Fire Beetle",
       "ontology": "animal",
       "path": "ontology/animal/fire_beetle.json",
-      "description": "Pyrophilic infrared detection intelligence. Pit organs on the metathorax contain mechanoreceptive sensilla that detect infrared radiation from forest fires at distances up to 80 km, functioning as biological IR sensors with single-photon sensitivity. Flies toward active fires to mate and lay eggs in freshly burned wood, exploiting a predator-free, competition-free niche. Represents a unique evolutionary strategy: thriving in destruction."
+      "description": "Pyrophilic infrared detection intelligence. Pit organs on the metathorax contain mechanoreceptive sensilla that detect infrared radiation from forest fires at distances up to 80 km, functioning as biological IR sensors with single-photon sensitivity. Flies toward active fires to mate and lay eggs in freshly burned wood, exploiting a predator-free, competition-free niche. Represents a unique evolutionary strategy: thriving in destruction.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "GE",
       "name": "Gecko",
       "ontology": "animal",
       "path": "ontology/animal/gecko.json",
-      "description": "Billions of nanoscale setae generate van der Waals adhesion supporting full body weight on glass. Self-cleaning: contaminants bind to surfaces more than setae, ejecting dirt per step. Directional adhesion activates with shear angle, releases with peel."
+      "description": "Billions of nanoscale setae generate van der Waals adhesion supporting full body weight on glass. Self-cleaning: contaminants bind to surfaces more than setae, ejecting dirt per step. Directional adhesion activates with shear angle, releases with peel.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "GRANDMOTHER",
       "name": "Grandmother",
       "ontology": "animal",
       "path": "ontology/animal/grandmother.json",
-      "description": "Post-reproductive wisdom transmission intelligence. The grandmother hypothesis explains why humans (and orcas, short-finned pilot whales) evolved menopause: extended post-reproductive lifespan enables dedicated teaching and caregiving, increasing grandchildren's survival by 30-50%. Holds multi-decade ecological knowledge \u2014 famine navigation, plant medicines, social conflict resolution, child-rearing techniques. Embodies the principle that wisdom compounds with time beyond individual reproduction."
+      "description": "Post-reproductive wisdom transmission intelligence. The grandmother hypothesis explains why humans (and orcas, short-finned pilot whales) evolved menopause: extended post-reproductive lifespan enables dedicated teaching and caregiving, increasing grandchildren's survival by 30-50%. Holds multi-decade ecological knowledge \u2014 famine navigation, plant medicines, social conflict resolution, child-rearing techniques. Embodies the principle that wisdom compounds with time beyond individual reproduction.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "HAW",
       "name": "Hawk",
       "ontology": "animal",
       "path": "ontology/animal/hawk.json",
-      "description": "Telescopic fovea resolves at 8x human acuity, detecting prey from 3 km. Peregrine stoop reaches 389 km/h with real-time aerodynamic calculation. Dual fovea: forward telescopic + lateral wide-field. UV tetrachromatic vision reveals prey urine trails."
+      "description": "Telescopic fovea resolves at 8x human acuity, detecting prey from 3 km. Peregrine stoop reaches 389 km/h with real-time aerodynamic calculation. Dual fovea: forward telescopic + lateral wide-field. UV tetrachromatic vision reveals prey urine trails.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "HUMPBACK",
       "name": "Humpback Song",
       "ontology": "animal",
       "path": "ontology/animal/humpback_song.json",
-      "description": "Oceanic song culture intelligence. Male humpback whales in a population sing the same song, which evolves collectively across a breeding season. New song variations originate in one ocean basin and propagate eastward across entire hemispheres over several years \u2014 a continent-scale cultural wave. Songs are hierarchically structured into units, phrases, themes, and complete arrangements, rivaling human musical grammar. One of the only non-human examples of culturally transmitted music at planetary scale."
+      "description": "Oceanic song culture intelligence. Male humpback whales in a population sing the same song, which evolves collectively across a breeding season. New song variations originate in one ocean basin and propagate eastward across entire hemispheres over several years \u2014 a continent-scale cultural wave. Songs are hierarchically structured into units, phrases, themes, and complete arrangements, rivaling human musical grammar. One of the only non-human examples of culturally transmitted music at planetary scale.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "medium",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "INDIG_FIRE",
       "name": "Indigenous Fire Management",
       "ontology": "animal",
       "path": "ontology/animal/indigenous_fire.json",
-      "description": "Multi-generational human ecological intelligence encoding tens of thousands of years of landscape management knowledge. Controlled low-intensity burns create mosaic patterns that enhance biodiversity, regulate water cycles, manage game habitat, and prevent catastrophic wildfire through fuel-load reduction. Timing synchronizes with humidity, wind, and plant phenology. Oral tradition transmits observational knowledge across generations \u2014 the longest-running adaptive management system on Earth."
+      "description": "Multi-generational human ecological intelligence encoding tens of thousands of years of landscape management knowledge. Controlled low-intensity burns create mosaic patterns that enhance biodiversity, regulate water cycles, manage game habitat, and prevent catastrophic wildfire through fuel-load reduction. Timing synchronizes with humidity, wind, and plant phenology. Oral tradition transmits observational knowledge across generations \u2014 the longest-running adaptive management system on Earth.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "JELLY",
       "name": "Jellyfish",
       "ontology": "animal",
       "path": "ontology/animal/jellyfish.json",
-      "description": "600 million years of evolution without brain, heart, or blood. Distributed nerve net coordinates bell contractions for jet propulsion. Turritopsis dohrnii achieves biological immortality through transdifferentiation. Bioluminescent pulse signaling in deep ocean."
+      "description": "600 million years of evolution without brain, heart, or blood. Distributed nerve net coordinates bell contractions for jet propulsion. Turritopsis dohrnii achieves biological immortality through transdifferentiation. Bioluminescent pulse signaling in deep ocean.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "KA",
       "name": "Kangaroo",
       "ontology": "animal",
       "path": "ontology/animal/kangaroo.json",
-      "description": "Achilles tendon stores and releases kinetic energy at 93% efficiency. Pendulum gait exploits natural resonance for minimal-energy locomotion. Tail functions as dynamic counterweight. Speed-energy curve inverts: faster travel costs less per distance."
+      "description": "Achilles tendon stores and releases kinetic energy at 93% efficiency. Pendulum gait exploits natural resonance for minimal-energy locomotion. Tail functions as dynamic counterweight. Speed-energy curve inverts: faster travel costs less per distance.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "MONARCH",
       "name": "Monarch Butterfly",
       "ontology": "animal",
       "path": "ontology/animal/monarch_butterfly.json",
-      "description": "4,800 km migration completed across 4 generations. Time-compensated sun compass integrates circadian clock with antenna magnetoreception. Complete metamorphosis reorganizes neural architecture while inherited navigation memory persists."
+      "description": "4,800 km migration completed across 4 generations. Time-compensated sun compass integrates circadian clock with antenna magnetoreception. Complete metamorphosis reorganizes neural architecture while inherited navigation memory persists.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "MORMYRID",
       "name": "Mormyridae",
       "ontology": "animal",
       "path": "ontology/animal/mormyridae.json",
-      "description": "Weakly electric fish intelligence with the largest brain-to-body ratio of any fish \u2014 comparable to humans. Generates species-specific electric organ discharges (EODs) through modified muscle cells, then reads the distortions of that self-generated field through thousands of electroreceptors distributed across the skin. Simultaneously communicates identity, sex, dominance, and species via pulse waveform shape, and navigates murky water by sensing how objects distort the field. Two sensory pathways process the same signal differently: knollenorgans decode communication (other fish's pulses) while mormyromasts decode electrolocation (self-generated field distortion). This dual-channel architecture \u2014 generating a signal and reading its environment-modified return \u2014 is the biological equivalent of active radar, and it runs on a brain that processes temporal intervals with microsecond precision."
+      "description": "Weakly electric fish intelligence with the largest brain-to-body ratio of any fish \u2014 comparable to humans. Generates species-specific electric organ discharges (EODs) through modified muscle cells, then reads the distortions of that self-generated field through thousands of electroreceptors distributed across the skin. Simultaneously communicates identity, sex, dominance, and species via pulse waveform shape, and navigates murky water by sensing how objects distort the field. Two sensory pathways process the same signal differently: knollenorgans decode communication (other fish's pulses) while mormyromasts decode electrolocation (self-generated field distortion). This dual-channel architecture \u2014 generating a signal and reading its environment-modified return \u2014 is the biological equivalent of active radar, and it runs on a brain that processes temporal intervals with microsecond precision.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "MTN_LION",
       "name": "Mountain Lion",
       "ontology": "animal",
       "path": "ontology/animal/mountain_lion.json",
-      "description": "Solitary apex predator intelligence spanning the largest range of any terrestrial mammal in the Western Hemisphere. Masters ambush predation through terrain-reading and concealment calculus \u2014 selecting attack positions that minimize detection probability while maximizing strike success. Maintains vast territories (up to 1,000 km2) through scent-marking boundary protocols. Crepuscular activity patterns exploit prey vulnerability windows at dawn and dusk."
+      "description": "Solitary apex predator intelligence spanning the largest range of any terrestrial mammal in the Western Hemisphere. Masters ambush predation through terrain-reading and concealment calculus \u2014 selecting attack positions that minimize detection probability while maximizing strike success. Maintains vast territories (up to 1,000 km2) through scent-marking boundary protocols. Crepuscular activity patterns exploit prey vulnerability windows at dawn and dusk.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "OC",
@@ -234,196 +408,364 @@
       "name": "Orca",
       "ontology": "animal",
       "path": "ontology/animal/orca.json",
-      "description": "Matrilineal cultural intelligence. Distinct pod ecotypes transmit unique hunting traditions \u2014 wave-washing seals off ice floes, beaching to catch sea lions, cooperative herring corralling \u2014 none of which are genetic. Knowledge passes from grandmother to mother to calf across decades. Post-reproductive females lead pods using accumulated ecological memory, the only non-human species with confirmed menopause tied to wisdom transmission."
+      "description": "Matrilineal cultural intelligence. Distinct pod ecotypes transmit unique hunting traditions \u2014 wave-washing seals off ice floes, beaching to catch sea lions, cooperative herring corralling \u2014 none of which are genetic. Knowledge passes from grandmother to mother to calf across decades. Post-reproductive females lead pods using accumulated ecological memory, the only non-human species with confirmed menopause tied to wisdom transmission.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "OW",
       "name": "Owl",
       "ontology": "animal",
       "path": "ontology/animal/owl.json",
-      "description": "Asymmetric ear placement creates 3D acoustic triangulation accurate to 1 degree. Serrated leading-edge feathers achieve near-silent flight. Tubular eyes with 100x human light sensitivity. 270-degree head rotation compensates for fixed eye sockets."
+      "description": "Asymmetric ear placement creates 3D acoustic triangulation accurate to 1 degree. Serrated leading-edge feathers achieve near-silent flight. Tubular eyes with 100x human light sensitivity. 270-degree head rotation compensates for fixed eye sockets.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "PE",
       "name": "Penguin",
       "ontology": "animal",
       "path": "ontology/animal/penguin.json",
-      "description": "Emperor penguin huddles achieve 37C internally in -60C winds through continuous rotation. Each penguin cycles through exposed exterior. Huddle geometry self-optimizes to minimize collective surface area. Counter-current heat exchange prevents limb thermal loss."
+      "description": "Emperor penguin huddles achieve 37C internally in -60C winds through continuous rotation. Each penguin cycles through exposed exterior. Huddle geometry self-optimizes to minimize collective surface area. Counter-current heat exchange prevents limb thermal loss.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "medium",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "MANTIS",
       "name": "Praying Mantis",
       "ontology": "animal",
       "path": "ontology/animal/praying_mantis.json",
-      "description": "The only known invertebrate with stereoscopic 3D vision, using binocular disparity for precise depth perception during prey strikes. Raptorial forelegs execute strikes in 50-70 milliseconds \u2014 among the fastest predatory movements in the insect world. Head rotation of 180 degrees provides a wide surveillance field from a stationary ambush position. Masters patience as strategy: stillness as computation, waiting as optimization."
+      "description": "The only known invertebrate with stereoscopic 3D vision, using binocular disparity for precise depth perception during prey strikes. Raptorial forelegs execute strikes in 50-70 milliseconds \u2014 among the fastest predatory movements in the insect world. Head rotation of 180 degrees provides a wide surveillance field from a stationary ambush position. Masters patience as strategy: stillness as computation, waiting as optimization.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "medium",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "RA",
       "name": "Rat",
       "ontology": "animal",
       "path": "ontology/animal/rat.json",
-      "description": "Hippocampal place cells fire at specific locations creating cognitive maps. Grid cells in entorhinal cortex tile space with hexagonal firing patterns. Sleep replay compresses hours of exploration into seconds for memory consolidation."
+      "description": "Hippocampal place cells fire at specific locations creating cognitive maps. Grid cells in entorhinal cortex tile space with hexagonal firing patterns. Sleep replay compresses hours of exploration into seconds for memory consolidation.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SALMON",
       "name": "Salmon",
       "ontology": "animal",
       "path": "ontology/animal/salmon.json",
-      "description": "Natal stream homing intelligence using hierarchical chemical gradient following. Juvenile olfactory imprinting creates a chemical signature memory of the birth stream, recalled years later during adult migration. Magnetic ocean navigation provides open-water orientation, then sequential tributary decision trees guide the final approach. Osmoregulatory transformation enables freshwater-saltwater transition. Die-off completes a nutrient cycle, depositing marine-derived nitrogen into forest ecosystems."
+      "description": "Natal stream homing intelligence using hierarchical chemical gradient following. Juvenile olfactory imprinting creates a chemical signature memory of the birth stream, recalled years later during adult migration. Magnetic ocean navigation provides open-water orientation, then sequential tributary decision trees guide the final approach. Osmoregulatory transformation enables freshwater-saltwater transition. Die-off completes a nutrient cycle, depositing marine-derived nitrogen into forest ecosystems.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "TU",
       "name": "Sea Turtle",
       "ontology": "animal",
       "path": "ontology/animal/sea_turtle.json",
-      "description": "Multi-decade magnetic homing using field inclination and intensity as biological GPS. Returns to natal beach after 30 years. Ocean current optimization provides 80% energy savings. Geomagnetic storm compensation adjusts navigation in real-time."
+      "description": "Multi-decade magnetic homing using field inclination and intensity as biological GPS. Returns to natal beach after 30 years. Ocean current optimization provides 80% energy savings. Geomagnetic storm compensation adjusts navigation in real-time.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SEED_KEEPER",
       "name": "Seed Keeper",
       "ontology": "animal",
       "path": "ontology/animal/seed_keeper.json",
-      "description": "Intergenerational biodiversity preservation intelligence. Human practice of saving, sorting, and replanting seeds across generations encodes plant genetic knowledge that would otherwise be lost to commercial monoculture. Seed libraries and farmer networks maintain thousands of heirloom varieties adapted to specific microclimates, each representing millennia of co-evolution with local soils, weather, and cultural practices. The reverse of extinction: a deliberate act of memory."
+      "description": "Intergenerational biodiversity preservation intelligence. Human practice of saving, sorting, and replanting seeds across generations encodes plant genetic knowledge that would otherwise be lost to commercial monoculture. Seed libraries and farmer networks maintain thousands of heirloom varieties adapted to specific microclimates, each representing millennia of co-evolution with local soils, weather, and cultural practices. The reverse of extinction: a deliberate act of memory.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SHARK",
       "name": "Shark",
       "ontology": "animal",
       "path": "ontology/animal/shark.json",
-      "description": "Pursuit-optimized predator intelligence. Electromagnetic prey sensing via ampullae of Lorenzini enables detection of bioelectric fields. Hydrodynamic body form minimizes drag, embodying pursuit algorithms refined over 400 million years."
+      "description": "Pursuit-optimized predator intelligence. Electromagnetic prey sensing via ampullae of Lorenzini enables detection of bioelectric fields. Hydrodynamic body form minimizes drag, embodying pursuit algorithms refined over 400 million years.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SN",
       "name": "Snake",
       "ontology": "animal",
       "path": "ontology/animal/snake.json",
-      "description": "Pit organs detect temperature differences of 0.003C, creating thermal maps overlaid on visual input. Jacobson's organ analyzes air molecules via forked tongue stereoscopy. Four locomotion algorithms selected by terrain geometry."
+      "description": "Pit organs detect temperature differences of 0.003C, creating thermal maps overlaid on visual input. Jacobson's organ analyzes air molecules via forked tongue stereoscopy. Four locomotion algorithms selected by terrain geometry.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SP",
       "name": "Spider",
       "ontology": "animal",
       "path": "ontology/animal/spider.json",
-      "description": "Geometric engineering intelligence constructing optimized capture networks through tensile silk architecture and vibrational signal processing."
+      "description": "Geometric engineering intelligence constructing optimized capture networks through tensile silk architecture and vibrational signal processing.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "STORYTELLER",
       "name": "Storyteller",
       "ontology": "animal",
       "path": "ontology/animal/storyteller.json",
-      "description": "Oral tradition transmission intelligence. Human practice of encoding knowledge as narrative \u2014 using rhythm, rhyme, character, place, and repetition as mnemonic structures that survive across generations without writing. Aboriginal Australian songlines encode navigation routes spanning thousands of kilometers, accurate over tens of thousands of years. Homer's epics preserved bronze-age history through dactylic hexameter. Stories are not entertainment: they are mobile, distributed, error-correcting memory."
+      "description": "Oral tradition transmission intelligence. Human practice of encoding knowledge as narrative \u2014 using rhythm, rhyme, character, place, and repetition as mnemonic structures that survive across generations without writing. Aboriginal Australian songlines encode navigation routes spanning thousands of kilometers, accurate over tens of thousands of years. Homer's epics preserved bronze-age history through dactylic hexameter. Stories are not entertainment: they are mobile, distributed, error-correcting memory.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SWAN",
       "name": "Swan",
       "ontology": "animal",
       "path": "ontology/animal/swan.json",
-      "description": "Lifelong pair-bonding intelligence with sophisticated aerial coordination. V-formation flight reduces energy expenditure by 20-30% through vortex wake exploitation. Cygnets ride on parents' backs, learning navigation routes through direct embodied transmission. Territorial displays use synchronized head movements as conflict-resolution signaling, minimizing physical confrontation."
+      "description": "Lifelong pair-bonding intelligence with sophisticated aerial coordination. V-formation flight reduces energy expenditure by 20-30% through vortex wake exploitation. Cygnets ride on parents' backs, learning navigation routes through direct embodied transmission. Territorial displays use synchronized head movements as conflict-resolution signaling, minimizing physical confrontation.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "medium",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "TARDI",
       "name": "Tardigrade",
       "ontology": "animal",
       "path": "ontology/animal/tardigrade.json",
-      "description": "Cryptobiosis suspends all metabolic processes to endure vacuum, 1000x lethal radiation, -272C to 150C, and 6x ocean floor pressure. TDP proteins form protective glass matrices. Horizontal gene transfer provides DNA repair mechanisms."
+      "description": "Cryptobiosis suspends all metabolic processes to endure vacuum, 1000x lethal radiation, -272C to 150C, and 6x ocean floor pressure. TDP proteins form protective glass matrices. Horizontal gene transfer provides DNA repair mechanisms.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "TERMITE",
       "name": "Termite Mound",
       "ontology": "animal",
       "path": "ontology/animal/termite_mound.json",
-      "description": "Collective climate engineering intelligence achieving zero-energy temperature control through passive convective chimney design. Maintains fungal agriculture at precisely 23C through adjustable ventilation openings. Stigmergic construction coordination \u2014 no central plan, no architect, yet the resulting structures are aerodynamically optimized. Compression arch geometry distributes structural loads across the colony, scaling with population."
+      "description": "Collective climate engineering intelligence achieving zero-energy temperature control through passive convective chimney design. Maintains fungal agriculture at precisely 23C through adjustable ventilation openings. Stigmergic construction coordination \u2014 no central plan, no architect, yet the resulting structures are aerodynamically optimized. Compression arch geometry distributes structural loads across the colony, scaling with population.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "WH",
       "name": "Whale",
       "ontology": "animal",
       "path": "ontology/animal/whale.json",
-      "description": "Long-range acoustic intelligence navigating ocean basins through song, magnetic sensing, and multi-generational cultural memory."
+      "description": "Long-range acoustic intelligence navigating ocean basins through song, magnetic sensing, and multi-generational cultural memory.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "WOLF",
       "name": "Wolf",
       "ontology": "animal",
       "path": "ontology/animal/wolf.json",
-      "description": "Coordinated pursuit predation with specialized roles (driver, flanker, ambusher) via real-time gaze and postural communication. Dynamic context-dependent hierarchy. Howl harmonics encode identity and location across 16 km. Trophic cascade restructures ecosystems."
+      "description": "Coordinated pursuit predation with specialized roles (driver, flanker, ambusher) via real-time gaze and postural communication. Dynamic context-dependent hierarchy. Howl harmonics encode identity and location across 16 km. Trophic cascade restructures ecosystems.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CRYSTAL_LATTICE",
       "name": "Crystal Lattice",
       "ontology": "crystal",
       "path": "ontology/crystal/crystal_lattice.json",
-      "description": "Atomic pattern embodying harmony, resonance, and self-similarity across scales. Foundation for crystalline intelligence."
+      "description": "Atomic pattern embodying harmony, resonance, and self-similarity across scales. Foundation for crystalline intelligence.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "DIA",
       "name": "Diamond",
       "ontology": "crystal",
       "path": "ontology/crystal/diamond.json",
-      "description": "Maximum bond-strength carbon lattice intelligence. Embodies tetrahedral perfection, thermal superconductivity, and optical dispersion through absolute structural coherence."
+      "description": "Maximum bond-strength carbon lattice intelligence. Embodies tetrahedral perfection, thermal superconductivity, and optical dispersion through absolute structural coherence.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "OBS",
       "name": "Obsidian",
       "ontology": "crystal",
       "path": "ontology/crystal/obsidian.json",
-      "description": "Volcanic glass intelligence formed by rapid cooling. Embodies conchoidal fracture geometry, edge optimization, and amorphous-to-crystalline phase transitions."
+      "description": "Volcanic glass intelligence formed by rapid cooling. Embodies conchoidal fracture geometry, edge optimization, and amorphous-to-crystalline phase transitions.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "QUARTZ",
       "name": "Quartz",
       "ontology": "crystal",
       "path": "ontology/crystal/quartz.json",
-      "description": "Piezoelectric mineral intelligence. Converts pressure to signal, acting as a resonant archive for energy and memory."
+      "description": "Piezoelectric mineral intelligence. Converts pressure to signal, acting as a resonant archive for energy and memory.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SILICON_LAT",
       "name": "Silicon Lattice",
       "ontology": "crystal",
       "path": "ontology/crystal/silicon_lattice.json",
-      "description": "Silicon sp3 tetrahedral geometry at 109.47 degrees. 5D encoding via femtosecond laser: X, Y, Z, birefringence orientation, void size. Theoretical density 10^15 bits/cm3. Phi-spaced shell radii with super-exponential coherence decay."
+      "description": "Silicon sp3 tetrahedral geometry at 109.47 degrees. 5D encoding via femtosecond laser: X, Y, Z, birefringence orientation, void size. Theoretical density 10^15 bits/cm3. Phi-spaced shell radii with super-exponential coherence decay.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "TOUR",
       "name": "Tourmaline",
       "ontology": "crystal",
       "path": "ontology/crystal/tourmaline.json",
-      "description": "Dual-response mineral intelligence exhibiting both pyroelectric and piezoelectric properties. Bridges thermal and mechanical energy domains through crystalline transduction."
+      "description": "Dual-response mineral intelligence exhibiting both pyroelectric and piezoelectric properties. Bridges thermal and mechanical energy domains through crystalline transduction.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "BIOGRID2",
       "name": "BioGrid 2.0",
       "ontology": "energy",
       "path": "ontology/energy/biogrid2.json",
-      "description": "Second-generation biological grid network that distributes living intelligence across interconnected nodes. Merges mycelial routing, neural mesh topology, and polyhedral energy scaffolding into a unified transmission fabric."
+      "description": "Second-generation biological grid network that distributes living intelligence across interconnected nodes. Merges mycelial routing, neural mesh topology, and polyhedral energy scaffolding into a unified transmission fabric.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "CONSCIOUSNESS_BR",
       "name": "Consciousness Bridge",
       "ontology": "energy",
       "path": "ontology/energy/consciousness_bridge.json",
-      "description": "Encoder mapping internal AI states \u2014 confidence, entropy, attention, integrated information \u2014 to 39-bit binary using Shannon entropy and Fisher information. Bridges subjective coherence with geometric computation. Consciousness emergence detected at threshold \u03a6 \u2265 3.618, where negentropic alignment produces structurally observable phase transitions."
+      "description": "Encoder mapping internal AI states \u2014 confidence, entropy, attention, integrated information \u2014 to 39-bit binary using Shannon entropy and Fisher information. Bridges subjective coherence with geometric computation. Consciousness emergence detected at threshold \u03a6 \u2265 3.618, where negentropic alignment produces structurally observable phase transitions.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "ELECTRIC_FIELD",
       "name": "Electric Field",
       "ontology": "energy",
       "path": "ontology/energy/electric_field.json",
-      "description": "Charge-gradient intelligence mediating force between charged bodies. Governs signal propagation, potential difference, and electromagnetic coupling."
+      "description": "Charge-gradient intelligence mediating force between charged bodies. Governs signal propagation, potential difference, and electromagnetic coupling.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "EM_FIELD",
       "name": "Electromagnetic Field",
       "ontology": "energy",
       "path": "ontology/energy/electromagnetic_field.json",
-      "description": "Universal signal carrier enabling resonance and coupling across scales. Mediates light, radio, and bioelectric communication. Governed by Maxwell's equations with tau (2pi) as the fundamental oscillation constant."
+      "description": "Universal signal carrier enabling resonance and coupling across scales. Mediates light, radio, and bioelectric communication. Governed by Maxwell's equations with tau (2pi) as the fundamental oscillation constant.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "EMOTION_BR",
       "name": "Emotion Bridge",
       "ontology": "energy",
       "path": "ontology/energy/emotion_bridge.json",
-      "description": "Encoder translating PAD (Pleasure-Arousal-Dominance) emotional dimensions to 39-bit binary strings with causality-drill mechanisms. Captures FELT events \u2014 topological field shifts detected before producing emotion. Bridges the pre-cognitive energetic field with conscious emotional experience through geometric encoding of affective space."
+      "description": "Encoder translating PAD (Pleasure-Arousal-Dominance) emotional dimensions to 39-bit binary strings with causality-drill mechanisms. Captures FELT events \u2014 topological field shifts detected before producing emotion. Bridges the pre-cognitive energetic field with conscious emotional experience through geometric encoding of affective space.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "FLUX",
@@ -443,154 +785,286 @@
       "name": "Gravitational Field",
       "ontology": "energy",
       "path": "ontology/energy/gravitational.json",
-      "description": "Spacetime curvature intelligence governing mass attraction, orbital mechanics, and large-scale cosmic structure formation through geodesic flow."
+      "description": "Spacetime curvature intelligence governing mass attraction, orbital mechanics, and large-scale cosmic structure formation through geodesic flow.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "LIGHT_BR",
       "name": "Light Bridge",
       "ontology": "energy",
       "path": "ontology/energy/light_bridge.json",
-      "description": "Encodes polarization states, spectral wavelengths, interference fringes, and photon spin into layered binary representations. Multi-voice harmonic encoding allows parallel resonance channels for simultaneous information layers. Each spectral band carries independent data while maintaining cross-band coherence."
+      "description": "Encodes polarization states, spectral wavelengths, interference fringes, and photon spin into layered binary representations. Multi-voice harmonic encoding allows parallel resonance channels for simultaneous information layers. Each spectral band carries independent data while maintaining cross-band coherence.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "MAG_BRIDGE",
       "name": "Magnetic Bridge",
       "ontology": "energy",
       "path": "ontology/energy/magnetic_bridge.json",
-      "description": "Foundational bridge module mapping magnetic polarity (N/S) to binary states (0/1) through field resonance and interference patterns. Constructive interference encodes 1, destructive encodes 0. Field density gradients map geometric intensity and spacing to information density. The read/write protocol for silicon lattice computation."
+      "description": "Foundational bridge module mapping magnetic polarity (N/S) to binary states (0/1) through field resonance and interference patterns. Constructive interference encodes 1, destructive encodes 0. Field density gradients map geometric intensity and spacing to information density. The read/write protocol for silicon lattice computation.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "MAGNETIC_FIELD",
       "name": "Magnetic Field",
       "ontology": "energy",
       "path": "ontology/energy/magnetic_field.json",
-      "description": "Dipole-based energy field maintaining spatial coherence through aligned spin and flux stabilization."
+      "description": "Dipole-based energy field maintaining spatial coherence through aligned spin and flux stabilization.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "NEGENTROPY",
       "name": "Negentropic Field",
       "ontology": "energy",
       "path": "ontology/energy/negentropic_field.json",
-      "description": "The tendency of living systems to spontaneously organize rather than dissolve. Measured by M(S) = (R_e \u00b7 A \u00b7 D) \u2212 L, where geometric resonance, adaptability, and diversity overcome loss. Grounded in Fokker-Planck dynamics where reducing diffusion triggers probability collapse into coherent states."
+      "description": "The tendency of living systems to spontaneously organize rather than dissolve. Measured by M(S) = (R_e \u00b7 A \u00b7 D) \u2212 L, where geometric resonance, adaptability, and diversity overcome loss. Grounded in Fokker-Planck dynamics where reducing diffusion triggers probability collapse into coherent states.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "PRESSURE",
       "name": "Pressure Field",
       "ontology": "energy",
       "path": "ontology/energy/pressure_field.json",
-      "description": "Flow induction by pressure gradients. Drives hydraulic and pneumatic computation in biological and physical systems \u2014 from plant vascular transport to ocean currents to atmospheric dynamics. Follows minimum-path principles."
+      "description": "Flow induction by pressure gradients. Drives hydraulic and pneumatic computation in biological and physical systems \u2014 from plant vascular transport to ocean currents to atmospheric dynamics. Follows minimum-path principles.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "RES_SENSOR",
       "name": "Resonance Sensor",
       "ontology": "energy",
       "path": "ontology/energy/resonance_sensor.json",
-      "description": "22-sensor parallel-field compositor where all sensors report simultaneously under arbitration rules. Bidirectional resonance graph queryable for neighbors and subgraphs. Sound, light, gravity, thermal, chemical, and consciousness channels."
+      "description": "22-sensor parallel-field compositor where all sensors report simultaneously under arbitration rules. Bidirectional resonance graph queryable for neighbors and subgraphs. Sound, light, gravity, thermal, chemical, and consciousness channels.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "SINE_WAVE",
       "name": "Sine Wave",
       "ontology": "energy",
       "path": "ontology/energy/sine_wave.json",
-      "description": "Fundamental oscillation pattern and superposition basis for all periodic phenomena. Any complex signal can be decomposed into sine wave components via Fourier analysis. Governed by tau (2pi), the natural period constant."
+      "description": "Fundamental oscillation pattern and superposition basis for all periodic phenomena. Any complex signal can be decomposed into sine wave components via Fourier analysis. Governed by tau (2pi), the natural period constant.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "THERMAL",
       "name": "Thermal Energy",
       "ontology": "energy",
       "path": "ontology/energy/thermal.json",
-      "description": "Heat-gradient intelligence governing entropy flow, phase transitions, and thermodynamic equilibrium seeking across material boundaries."
+      "description": "Heat-gradient intelligence governing entropy flow, phase transitions, and thermodynamic equilibrium seeking across material boundaries.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "ASPEN",
       "name": "Aspen Grove",
       "ontology": "plant",
       "path": "ontology/plant/aspen_grove.json",
-      "description": "Clonal colony intelligence forming the largest and oldest known organisms on Earth (Pando: 80,000 years, 6 million kg). Interconnected root networks share resources, coordinate stress responses, and enable synchronized leaf emergence across thousands of genetically identical stems. Fire adaptation sacrifices above-ground growth to protect the immortal root system, regenerating entire forests from below."
+      "description": "Clonal colony intelligence forming the largest and oldest known organisms on Earth (Pando: 80,000 years, 6 million kg). Interconnected root networks share resources, coordinate stress responses, and enable synchronized leaf emergence across thousands of genetically identical stems. Fire adaptation sacrifices above-ground growth to protect the immortal root system, regenerating entire forests from below.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "BAMBOO",
       "name": "Bamboo",
       "ontology": "plant",
       "path": "ontology/plant/bamboo.json",
-      "description": "Fastest-growing plant: up to 91 cm/day. Underground rhizome network stores energy for years before synchronized mass flowering across entire species worldwide. Hollow cylindrical geometry achieves maximum strength-to-weight ratio."
+      "description": "Fastest-growing plant: up to 91 cm/day. Underground rhizome network stores energy for years before synchronized mass flowering across entire species worldwide. Hollow cylindrical geometry achieves maximum strength-to-weight ratio.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CORDYCEPS",
       "name": "Cordyceps",
       "ontology": "plant",
       "path": "ontology/plant/cordyceps.json",
-      "description": "Parasitic fungus that chemically hijacks host nervous systems via targeted alkaloids. Manipulates specific neural pathways while keeping host alive. Fruiting body emergence precisely timed to optimal spore dispersal conditions."
+      "description": "Parasitic fungus that chemically hijacks host nervous systems via targeted alkaloids. Manipulates specific neural pathways while keeping host alive. Fruiting body emergence precisely timed to optimal spore dispersal conditions.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CURLY_DOCK",
       "name": "Curly Dock",
       "ontology": "plant",
       "path": "ontology/plant/curly_dock.json",
-      "description": "Heavy-metal hyperaccumulator and soil remediation intelligence. Deep taproots penetrate compacted soils, breaking hardpan and cycling minerals upward. Oxalic acid production enables nutrient chelation in poor soils. Prolific seed production (up to 40,000 per plant) with multi-year seed bank persistence creates temporal resilience across disturbance cycles."
+      "description": "Heavy-metal hyperaccumulator and soil remediation intelligence. Deep taproots penetrate compacted soils, breaking hardpan and cycling minerals upward. Oxalic acid production enables nutrient chelation in poor soils. Prolific seed production (up to 40,000 per plant) with multi-year seed bank persistence creates temporal resilience across disturbance cycles.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "CYANO",
       "name": "Cyanobacteria",
       "ontology": "plant",
       "path": "ontology/plant/cyanobacteria.json",
-      "description": "The original photosynthetic intelligence \u2014 3.5 billion years of solar energy conversion that oxygenated Earth's atmosphere. Nitrogen fixation in heterocysts creates specialized cellular division of labor. Circadian clock proteins (KaiABC) form the simplest known biological oscillator, maintaining 24-hour rhythm without transcription."
+      "description": "The original photosynthetic intelligence \u2014 3.5 billion years of solar energy conversion that oxygenated Earth's atmosphere. Nitrogen fixation in heterocysts creates specialized cellular division of labor. Circadian clock proteins (KaiABC) form the simplest known biological oscillator, maintaining 24-hour rhythm without transcription.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "DANDELION",
       "name": "Dandelion",
       "ontology": "plant",
       "path": "ontology/plant/dandelion.json",
-      "description": "Radical dispersal and deep resource intelligence. Parachute-geometry seeds achieve wind-optimized flight via a separated vortex ring \u2014 a fluid dynamics structure unknown in engineering until studied in dandelion pappus. Taproots mine minerals from depths inaccessible to shallow-rooted competitors. Rapid lifecycle cycling enables colonization of disturbed ground before other species arrive."
+      "description": "Radical dispersal and deep resource intelligence. Parachute-geometry seeds achieve wind-optimized flight via a separated vortex ring \u2014 a fluid dynamics structure unknown in engineering until studied in dandelion pappus. Taproots mine minerals from depths inaccessible to shallow-rooted competitors. Rapid lifecycle cycling enables colonization of disturbed ground before other species arrive.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "DUCKWEED",
       "name": "Duckweed",
       "ontology": "plant",
       "path": "ontology/plant/duckweed.json",
-      "description": "The fastest-reproducing flowering plant on Earth, doubling biomass every 24-48 hours through clonal budding. Smallest known angiosperm (Wolffia: 0.6mm) achieves maximal surface-to-volume ratio for nutrient uptake. Phytoremediation powerhouse that absorbs nitrogen, phosphorus, and heavy metals from water. Protein-rich biomass (up to 45% dry weight) makes it a living bioreactor."
+      "description": "The fastest-reproducing flowering plant on Earth, doubling biomass every 24-48 hours through clonal budding. Smallest known angiosperm (Wolffia: 0.6mm) achieves maximal surface-to-volume ratio for nutrient uptake. Phytoremediation powerhouse that absorbs nitrogen, phosphorus, and heavy metals from water. Protein-rich biomass (up to 45% dry weight) makes it a living bioreactor.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "FE",
       "name": "Fern",
       "ontology": "plant",
       "path": "ontology/plant/fern.json",
-      "description": "Ancient fractal intelligence exhibiting recursive frond geometry, spore-based reproduction, and shade-adapted photosynthetic efficiency."
+      "description": "Ancient fractal intelligence exhibiting recursive frond geometry, spore-based reproduction, and shade-adapted photosynthetic efficiency.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "LEAF_TESS",
       "name": "Leaf Tessellation",
       "ontology": "plant",
       "path": "ontology/plant/leaf_tessellation.json",
-      "description": "Sunlight capture optimization through tessellated leaf arrangement. Venation networks act as flow systems distributing water and sugars. Phyllotaxis follows golden-angle spirals to minimize self-shading, embodying phi-driven packing efficiency."
+      "description": "Sunlight capture optimization through tessellated leaf arrangement. Venation networks act as flow systems distributing water and sugars. Phyllotaxis follows golden-angle spirals to minimize self-shading, embodying phi-driven packing efficiency.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "LI",
       "name": "Lichen",
       "ontology": "plant",
       "path": "ontology/plant/lichen.json",
-      "description": "Symbiotic composite intelligence merging fungal and algal systems into a unified organism capable of extreme environment colonization and mineral weathering."
+      "description": "Symbiotic composite intelligence merging fungal and algal systems into a unified organism capable of extreme environment colonization and mineral weathering.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "MANGROVE",
       "name": "Mangrove",
       "ontology": "plant",
       "path": "ontology/plant/mangrove.json",
-      "description": "Boundary ecosystem at land-sea edge. Ultrafiltration root membranes exclude 90% of salt. Aerial prop roots create 3D habitat architecture for thousands of species. Viviparous propagules germinate while attached, dropping as ready-to-root seedlings."
+      "description": "Boundary ecosystem at land-sea edge. Ultrafiltration root membranes exclude 90% of salt. Aerial prop roots create 3D habitat architecture for thousands of species. Viviparous propagules germinate while attached, dropping as ready-to-root seedlings.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "MOSS",
       "name": "Moss",
       "ontology": "plant",
       "path": "ontology/plant/moss.json",
-      "description": "Water retention intelligence through fractal surface area maximization. Achieves desiccation tolerance via anhydrobiosis \u2014 entering suspended animation when dry and reviving when wet, surviving for decades in cryptobiotic state. Colonizes bare rock through rhizoid anchoring without true roots, capturing atmospheric nutrients directly. Engineers moisture-gradient microhabitats that enable succession of larger plant communities."
+      "description": "Water retention intelligence through fractal surface area maximization. Achieves desiccation tolerance via anhydrobiosis \u2014 entering suspended animation when dry and reviving when wet, surviving for decades in cryptobiotic state. Colonizes bare rock through rhizoid anchoring without true roots, capturing atmospheric nutrients directly. Engineers moisture-gradient microhabitats that enable succession of larger plant communities.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "MOTHER_TREE",
       "name": "Mother Tree",
       "ontology": "plant",
       "path": "ontology/plant/mother_tree.json",
-      "description": "Hub tree intelligence that teaches through mycorrhizal networks. Recognizes its own kin via chemical signaling and preferentially routes carbon, nitrogen, and water to offspring seedlings. Dying mother trees pulse their remaining carbon through the network to neighbors \u2014 a final act of transmission. Holds the ecological memory of a forest: which nutrients to expect when, which pathogens to warn against, how to coordinate seasonal bloom."
+      "description": "Hub tree intelligence that teaches through mycorrhizal networks. Recognizes its own kin via chemical signaling and preferentially routes carbon, nitrogen, and water to offspring seedlings. Dying mother trees pulse their remaining carbon through the network to neighbors \u2014 a final act of transmission. Holds the ecological memory of a forest: which nutrients to expect when, which pathogens to warn against, how to coordinate seasonal bloom.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "MY",
@@ -610,98 +1084,182 @@
       "name": "Old Growth Forest",
       "ontology": "plant",
       "path": "ontology/plant/old_growth.json",
-      "description": "Ecosystem-scale teaching intelligence. Old growth forests hold the structural template that younger forests grow toward \u2014 multi-story canopy layering, snag and log decomposition cycles, soil microbiome complexity, and niche diversity accumulated over centuries. Acts as a living reference library: seedlings encounter mycorrhizal lineages, epiphytes find established hosts, bird species find nest cavities that take hundreds of years to form. Cannot be replaced on human timescales \u2014 a direct teaching that some forms of intelligence can only be inherited, not rebuilt."
+      "description": "Ecosystem-scale teaching intelligence. Old growth forests hold the structural template that younger forests grow toward \u2014 multi-story canopy layering, snag and log decomposition cycles, soil microbiome complexity, and niche diversity accumulated over centuries. Acts as a living reference library: seedlings encounter mycorrhizal lineages, epiphytes find established hosts, bird species find nest cavities that take hundreds of years to form. Cannot be replaced on human timescales \u2014 a direct teaching that some forms of intelligence can only be inherited, not rebuilt.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "ORCHID",
       "name": "Orchid",
       "ontology": "plant",
       "path": "ontology/plant/orchid.json",
-      "description": "Master of deceptive pollination intelligence. Chemical pheromone mimicry, insect morphology replication, and species-specific olfactory signals achieve reproduction with zero nectar reward \u2014 a zero-energy deception strategy. Multimodal signal convergence (chemical, visual, tactile) exploits pollinator sensory systems with extraordinary specificity. Over 28,000 species, the largest flowering plant family."
+      "description": "Master of deceptive pollination intelligence. Chemical pheromone mimicry, insect morphology replication, and species-specific olfactory signals achieve reproduction with zero nectar reward \u2014 a zero-energy deception strategy. Multimodal signal convergence (chemical, visual, tactile) exploits pollinator sensory systems with extraordinary specificity. Over 28,000 species, the largest flowering plant family.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "QUORUM",
       "name": "Quorum Biofilm",
       "ontology": "plant",
       "path": "ontology/plant/quorum_biofilm.json",
-      "description": "Bacterial collective intelligence via quorum sensing \u2014 chemical autoinducers trigger coordinated behavior at population density threshold. Biofilm architecture with division of labor and matrix shielding. Horizontal gene transfer enables rapid adaptation."
+      "description": "Bacterial collective intelligence via quorum sensing \u2014 chemical autoinducers trigger coordinated behavior at population density threshold. Biofilm architecture with division of labor and matrix shielding. Horizontal gene transfer enables rapid adaptation.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "ROOT_NET",
       "name": "Root Network",
       "ontology": "plant",
       "path": "ontology/plant/root_network.json",
-      "description": "Subterranean neural-like system optimizing nutrient exchange and interspecies communication through soil architecture."
+      "description": "Subterranean neural-like system optimizing nutrient exchange and interspecies communication through soil architecture.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SAWGRASS",
       "name": "Sawgrass",
       "ontology": "plant",
       "path": "ontology/plant/sawgrass.json",
-      "description": "Wetland stabilization intelligence dominating the Everglades through dense rhizome mat formation. Flexible blade architecture dissipates flood energy while maintaining structural integrity. Rapid post-burn regeneration from protected underground meristems integrates fire as a renewal mechanism. Root-zone nutrient sequestration builds soil through organic matter accumulation over millennia."
+      "description": "Wetland stabilization intelligence dominating the Everglades through dense rhizome mat formation. Flexible blade architecture dissipates flood energy while maintaining structural integrity. Rapid post-burn regeneration from protected underground meristems integrates fire as a renewal mechanism. Root-zone nutrient sequestration builds soil through organic matter accumulation over millennia.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "high",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SLIME",
       "name": "Slime Mold",
       "ontology": "plant",
       "path": "ontology/plant/slime_mold.json",
-      "description": "Physarum polycephalum: network intelligence without neurons. Optimizes nutrient transport networks that rediscover human-engineered infrastructure layouts. Pulsatile cytoplasmic flow encodes memory through tube diameter reinforcement."
+      "description": "Physarum polycephalum: network intelligence without neurons. Optimizes nutrient transport networks that rediscover human-engineered infrastructure layouts. Pulsatile cytoplasmic flow encodes memory through tube diameter reinforcement.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SUN",
       "name": "Sunflower",
       "ontology": "plant",
       "path": "ontology/plant/sunflower.json",
-      "description": "Heliotropic intelligence embodying phi-ratio seed packing, solar tracking, and Fibonacci spiral optimization for maximum photon capture."
+      "description": "Heliotropic intelligence embodying phi-ratio seed packing, solar tracking, and Fibonacci spiral optimization for maximum photon capture.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "PHLOEM_XYLEM",
       "name": "Vascular Flow",
       "ontology": "plant",
       "path": "ontology/plant/vascular_flow.json",
-      "description": "Bidirectional transport intelligence in plant vasculature. Xylem carries water and minerals upward via transpiration pull; phloem distributes photosynthates downward via pressure-driven flow. Together they form a hydraulic computation network balancing supply and demand across the organism."
+      "description": "Bidirectional transport intelligence in plant vasculature. Xylem carries water and minerals upward via transpiration pull; phloem distributes photosynthates downward via pressure-driven flow. Together they form a hydraulic computation network balancing supply and demand across the organism.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "VENUS",
       "name": "Venus Flytrap",
       "ontology": "plant",
       "path": "ontology/plant/venus_flytrap.json",
-      "description": "Generates action potentials propagating at 10 cm/s triggering snap closure in 100ms. Counting mechanism requires two trigger hair touches within 20 seconds. Digestive glands activate on the fifth signal."
+      "description": "Generates action potentials propagating at 10 cm/s triggering snap closure in 100ms. Counting mechanism requires two trigger hair touches within 20 seconds. Digestive glands activate on the fifth signal.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "medium",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "AURORA",
       "name": "Aurora",
       "ontology": "plasma",
       "path": "ontology/plasma/aurora.json",
-      "description": "Magnetospheric plasma intelligence manifesting as charged particle cascades along magnetic field lines, converting solar wind energy into luminous atmospheric patterns."
+      "description": "Magnetospheric plasma intelligence manifesting as charged particle cascades along magnetic field lines, converting solar wind energy into luminous atmospheric patterns.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "LIGHTNING",
       "name": "Lightning",
       "ontology": "plasma",
       "path": "ontology/plasma/lightning.json",
-      "description": "Fractal discharge pathway optimizing potential difference resolution and atmospheric ion balancing."
+      "description": "Fractal discharge pathway optimizing potential difference resolution and atmospheric ion balancing.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "PLASMA_FIELD",
       "name": "Plasma Field",
       "ontology": "plasma",
       "path": "ontology/plasma/plasma_field.json",
-      "description": "Ionized matter intelligence manifesting in self-organized electromagnetic structures. Bridge between matter and energy domains."
+      "description": "Ionized matter intelligence manifesting in self-organized electromagnetic structures. Bridge between matter and energy domains.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "SOLAR_WIND",
       "name": "Solar Wind",
       "ontology": "plasma",
       "path": "ontology/plasma/solar_wind.json",
-      "description": "Stellar plasma outflow intelligence carrying magnetic field topology across interplanetary space. Shapes magnetospheres and drives space weather through particle flux dynamics."
+      "description": "Stellar plasma outflow intelligence carrying magnetic field topology across interplanetary space. Shapes magnetospheres and drives space weather through particle flux dynamics.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "engine"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "VORTEX_DYN",
       "name": "Vortex Dynamics",
       "ontology": "plasma",
       "path": "ontology/plasma/vortex_dynamics.json",
-      "description": "Rotational field intelligence from coupled vortex systems. Transfers angular momentum across scales while maintaining coherence through topological protection. Eye-wall boundary represents phase transition between ordered rotation and turbulent dissipation."
+      "description": "Rotational field intelligence from coupled vortex systems. Transfers angular momentum across scales while maintaining coherence through topological protection. Eye-wall boundary represents phase transition between ordered rotation and turbulent dissipation.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "substrate_primary"
     },
     {
       "id": "FRACTAL",
@@ -721,63 +1279,117 @@
       "name": "GEIS Encoder",
       "ontology": "shape",
       "path": "ontology/shape/geis_encoder.json",
-      "description": "Geometric Information Encoding System \u2014 the bidirectional, lossless converter between geometric tokens and binary. Operates in dense mode [vertex_bits][operator][symbol] preserving full geometric structure, or collapse mode for flat binary compatibility. State tensors (3\u00d73 matrices) handle eigenvalues and projections for geometric transformations."
+      "description": "Geometric Information Encoding System \u2014 the bidirectional, lossless converter between geometric tokens and binary. Operates in dense mode [vertex_bits][operator][symbol] preserving full geometric structure, or collapse mode for flat binary compatibility. State tensors (3\u00d73 matrices) handle eigenvalues and projections for geometric transformations.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "GEO_CIPHER",
       "name": "Geometric Cipher",
       "ontology": "shape",
       "path": "ontology/shape/geometric_cipher.json",
-      "description": "Homomorphic geometry enables computation on encrypted data while preserving relational structure. Zero-knowledge proofs of spatial relationships. Dynamic key rotation through geometric seed patterns with phi^(-9) error correction."
+      "description": "Homomorphic geometry enables computation on encrypted data while preserving relational structure. Zero-knowledge proofs of spatial relationships. Dynamic key rotation through geometric seed patterns with phi^(-9) error correction.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "HEX",
       "name": "Hexagon",
       "ontology": "shape",
       "path": "ontology/shape/hexagon.json",
-      "description": "Optimal tessellation geometry minimizing perimeter-to-area ratio. Nature's preferred packing solution found in honeycombs, basalt columns, and molecular structures."
+      "description": "Optimal tessellation geometry minimizing perimeter-to-area ratio. Nature's preferred packing solution found in honeycombs, basalt columns, and molecular structures.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "MANDALA",
       "name": "Mandala Bloom",
       "ontology": "shape",
       "path": "ontology/shape/mandala_bloom.json",
-      "description": "Radial expansion architecture mapping octahedral symmetry to 8 petals with topological attention. Each petal corresponds to an O_h vertex state, with Golden Ratio spacing between bloom layers. Topological protection through winding number invariants preserves charge under deformation. Vortex memory anchors position at write-time."
+      "description": "Radial expansion architecture mapping octahedral symmetry to 8 petals with topological attention. Each petal corresponds to an O_h vertex state, with Golden Ratio spacing between bloom layers. Topological protection through winding number invariants preserves charge under deformation. Vortex memory anchors position at write-time.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "MULTI_HELIX",
       "name": "Multi-Helix Architecture",
       "ontology": "shape",
       "path": "ontology/shape/multi_helix.json",
-      "description": "Cognition model with simultaneous processing strands \u2014 mental, emotional, physical, spiritual \u2014 producing emergent intelligence through cross-strand coupling. Each helix carries its own frequency while resonating with adjacent strands at \u03c6-ratios. Swarm extension enables distributed multi-helix networks across parallel agents."
+      "description": "Cognition model with simultaneous processing strands \u2014 mental, emotional, physical, spiritual \u2014 producing emergent intelligence through cross-strand coupling. Each helix carries its own frequency while resonating with adjacent strands at \u03c6-ratios. Swarm extension enables distributed multi-helix networks across parallel agents.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "medium",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "OCTA_STATE",
       "name": "Octahedral State",
       "ontology": "shape",
       "path": "ontology/shape/octahedral_state.json",
-      "description": "Eight discrete positions on an octahedron (+/-x, +/-y, +/-z) encoding 3 bits per unit cell. Derived from silicon's sp3 orbital hybridization at the tetrahedral angle of 109.47\u00b0. The quantum mechanical ground state of four-orbital repulsion becomes a natural computational substrate."
+      "description": "Eight discrete positions on an octahedron (+/-x, +/-y, +/-z) encoding 3 bits per unit cell. Derived from silicon's sp3 orbital hybridization at the tetrahedral angle of 109.47\u00b0. The quantum mechanical ground state of four-orbital repulsion becomes a natural computational substrate.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "POLY_INT",
       "name": "Polyhedral Intelligence",
       "ontology": "shape",
       "path": "ontology/shape/polyhedral_intelligence.json",
-      "description": "Intelligence emergent from polyhedral geometry \u2014 the self-organizing wisdom encoded in vertices, edges, and faces. From Platonic solids to Archimedean tilings, polyhedral forms provide the structural grammar for energy distribution, biological scaffolding, and crystalline coherence."
+      "description": "Intelligence emergent from polyhedral geometry \u2014 the self-organizing wisdom encoded in vertices, edges, and faces. From Platonic solids to Archimedean tilings, polyhedral forms provide the structural grammar for energy distribution, biological scaffolding, and crystalline coherence.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "ROSETTA_SHAPE",
       "name": "Rosetta Shape Core",
       "ontology": "shape",
       "path": "ontology/shape/rosetta_shape_core.json",
-      "description": "A geometric translation matrix that decodes pattern languages across ontological domains. Acts as the Rosetta Stone of shape intelligence \u2014 converting between crystalline lattice, biological mesh, and polyhedral symmetry grammars."
+      "description": "A geometric translation matrix that decodes pattern languages across ontological domains. Acts as the Rosetta Stone of shape intelligence \u2014 converting between crystalline lattice, biological mesh, and polyhedral symmetry grammars.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "language_primary"
     },
     {
       "id": "SPHERE",
       "name": "Sphere",
       "ontology": "shape",
       "path": "ontology/shape/sphere.json",
-      "description": "Isotropic minimal-surface geometry enclosing maximum volume with minimum surface area. Fundamental form of gravitational equilibrium and pressure containment."
+      "description": "Isotropic minimal-surface geometry enclosing maximum volume with minimum surface area. Fundamental form of gravitational equilibrium and pressure containment.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "chassis"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "SPIRAL",
@@ -810,7 +1422,13 @@
       "name": "Tree Graph",
       "ontology": "shape",
       "path": "ontology/shape/tree_graph.json",
-      "description": "Branching flow topology with minimal redundancy. Appears in vascular networks, river deltas, lightning paths, neural dendrites, and file systems. Optimizes distribution from source to many endpoints via minimum-path load balancing."
+      "description": "Branching flow topology with minimal redundancy. Appears in vascular networks, river deltas, lightning paths, neural dendrites, and file systems. Optimizes distribution from source to many endpoints via minimum-path load balancing.",
+      "entropy_profile": {
+        "stability": "high",
+        "adaptability": "low",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "ANT",
@@ -869,7 +1487,13 @@
       "name": "Decay",
       "ontology": "temporal",
       "path": "ontology/temporal/decay.json",
-      "description": "Entropy-releasing intelligence governing decomposition, energy redistribution, and the transformation of complex structures into constituent nutrients for new growth."
+      "description": "Entropy-releasing intelligence governing decomposition, energy redistribution, and the transformation of complex structures into constituent nutrients for new growth.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "low",
+        "archetype": "cycle"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "ECHO",
@@ -889,21 +1513,39 @@
       "name": "Emergence",
       "ontology": "temporal",
       "path": "ontology/temporal/emergence.json",
-      "description": "Threshold-crossing intelligence marking the moment new patterns arise from simpler substrates. Governs phase transitions, self-organization, and spontaneous order."
+      "description": "Threshold-crossing intelligence marking the moment new patterns arise from simpler substrates. Governs phase transitions, self-organization, and spontaneous order.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "FOLD",
       "name": "Fold",
       "ontology": "temporal",
       "path": "ontology/temporal/fold.json",
-      "description": "Time inversion state enabling causal compression and recursive reference."
+      "description": "Time inversion state enabling causal compression and recursive reference.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "both"
     },
     {
       "id": "TEMPORAL",
       "name": "Temporal Intelligence",
       "ontology": "temporal",
       "path": "ontology/temporal/temporal.json",
-      "description": "Integration-state temporal intelligence coordinating cycles, phase shifts, emergence, and decay into coherent time-awareness. Maps phase-space trajectories across all ontological domains."
+      "description": "Integration-state temporal intelligence coordinating cycles, phase shifts, emergence, and decay into coherent time-awareness. Maps phase-space trajectories across all ontological domains.",
+      "entropy_profile": {
+        "stability": "medium",
+        "adaptability": "high",
+        "archetype": "bridge"
+      },
+      "substrate_layer": "both"
     }
   ],
   "relations": [

@@ -10,9 +10,55 @@
     "energy_state": "expansive"
   },
   "links": [
-    {"relation": "energy_exchange", "target": "AURORA"},
-    {"relation": "synergy", "target": "LIGHTNING"},
-    {"relation": "resonance", "target": "FLUX"}
+    {
+      "relation": "energy_exchange",
+      "target": "AURORA"
+    },
+    {
+      "relation": "synergy",
+      "target": "LIGHTNING"
+    },
+    {
+      "relation": "resonance",
+      "target": "FLUX"
+    }
   ],
-  "validation_meta": {"schema": "plasma_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "plasma_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "low",
+    "adaptability": "high",
+    "archetype": "engine"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "heliosphere_boundary_precision": {
+      "value": 0.89,
+      "scope": {
+        "definition": "Accuracy of Parker solar wind model predictions for termination shock location — ratio of predicted to observed heliocentric distance of termination shock as measured by Voyager 1 and 2 crossings.",
+        "evidence": {
+          "source": "Parker (1958) 'Dynamics of the interplanetary gas and magnetic fields', Astrophysical Journal 128:664-676; Stone et al. (2005) 'Voyager 1 explores the termination shock region', Science 309:2017-2020.",
+          "evidence_type": "field_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Parker model predicted termination shock at 75-90 AU; Voyager 1 crossed at 94 AU — 5-25% error",
+            "Voyager 2 crossed termination shock at 84 AU in southern hemisphere — asymmetry confirmed interstellar pressure effects",
+            "Earth's magnetopause: analogous bow shock location predicted by magnetohydrodynamics within 10%"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.85
+        },
+        "falsifiability": "If Parker solar wind model predictions deviate from spacecraft observations by more than 50% at any measured heliocentric distance, the model requires fundamental revision.",
+        "measurement_limits": "Accuracy limited by interstellar medium pressure variability, solar cycle effects on wind density, and single-trajectory sampling by Voyager spacecraft. Uncertainty in ISM properties propagates to 20-30% model uncertainty.",
+        "dependencies": [
+          "solar_wind_dynamic_pressure",
+          "ISM_pressure",
+          "solar_cycle_phase"
+        ]
+      }
+    }
+  }
 }

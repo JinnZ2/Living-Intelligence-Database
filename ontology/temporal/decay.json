@@ -10,9 +10,55 @@
     "temporal_mode": "dissolution"
   },
   "links": [
-    {"relation": "temporal_bridge", "target": "CYCLE"},
-    {"relation": "synergy", "target": "MY"},
-    {"relation": "resonance", "target": "FLUX"}
+    {
+      "relation": "temporal_bridge",
+      "target": "CYCLE"
+    },
+    {
+      "relation": "synergy",
+      "target": "MY"
+    },
+    {
+      "relation": "resonance",
+      "target": "FLUX"
+    }
   ],
-  "validation_meta": {"schema": "temporal_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "temporal_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "low",
+    "adaptability": "low",
+    "archetype": "cycle"
+  },
+  "substrate_layer": "both",
+  "attributes": {
+    "radioactive_decay_precision": {
+      "value": 0.99,
+      "scope": {
+        "definition": "Agreement between measured and theoretically predicted decay constants for radioactive isotopes — fractional deviation of measured half-life from quantum-mechanical barrier tunneling model.",
+        "evidence": {
+          "source": "Geiger & Nuttall (1911) empirical decay law; Gamow (1928) quantum tunneling model of alpha decay; NUBASE2020 nuclear data evaluation.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "certain",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Gamow's tunneling model predicts alpha decay half-lives from 10⁻⁷ s to 10¹⁷ s — 24 orders of magnitude covered",
+            "radiocarbon dating: C-14 half-life 5730±40 years — measured to 0.7% precision across 20 independent methods",
+            "cosmic-ray exposure dating: Be-10 half-life uncertainty <1% — enables 10⁶-year geological chronology"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.99
+        },
+        "falsifiability": "If any radioactive isotope's measured decay constant deviates from Gamow's tunneling model by more than 1%, the quantum mechanical decay model is incomplete.",
+        "measurement_limits": "Decay constants are among the most reproducible measurements in physics. Small variations in extreme conditions (stellar core pressures, nuclear shells) are predicted and observed. Chemical environment cannot alter nuclear decay rates.",
+        "dependencies": [
+          "isotope_identity",
+          "environmental_pressure",
+          "measurement_precision"
+        ]
+      }
+    }
+  }
 }

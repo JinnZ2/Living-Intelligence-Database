@@ -10,9 +10,55 @@
     "resonance_field": "carbon coherence"
   },
   "links": [
-    {"relation": "energy_coupling", "target": "CRYSTAL_LATTICE"},
-    {"relation": "geometry_link", "target": "TORUS"},
-    {"relation": "resonance", "target": "QUARTZ"}
+    {
+      "relation": "energy_coupling",
+      "target": "CRYSTAL_LATTICE"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "TORUS"
+    },
+    {
+      "relation": "resonance",
+      "target": "QUARTZ"
+    }
   ],
-  "validation_meta": {"schema": "crystal_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "crystal_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "low",
+    "archetype": "chassis"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "thermal_conductivity_ratio": {
+      "value": 0.97,
+      "scope": {
+        "definition": "Thermal conductivity of type IIa natural diamond relative to the next highest natural material (cubic boron nitride) — expressed as conductivity ratio at 300 K.",
+        "evidence": {
+          "source": "Slack (1973) 'Nonmetallic crystals with high thermal conductivity', Journal of Physics and Chemistry of Solids 34:321-335; Wei et al. (1993) 'Thermal conductivity of isotopically modified single crystal diamond', Physical Review Letters 70:3764.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "certain",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "diamond thermal conductivity 2200 W/m·K vs copper 385 W/m·K — 5.7× better heat conductor",
+            "isotopically pure ¹²C diamond achieves 3320 W/m·K — highest thermal conductivity of any material",
+            "boron arsenide: 1300 W/m·K — closest semiconductor challenger, still 40% below natural diamond"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.98
+        },
+        "falsifiability": "If any natural crystal at room temperature is measured at thermal conductivity >2500 W/m·K, diamond no longer holds the single-crystal conductivity record.",
+        "measurement_limits": "Thermal conductivity is temperature and purity dependent — at 80 K diamond peaks near 10,000 W/m·K. Measurement requires single-crystal samples; polycrystalline diamond shows 500-1000 W/m·K.",
+        "dependencies": [
+          "temperature",
+          "isotopic_purity",
+          "nitrogen_content"
+        ]
+      }
+    }
+  }
 }

@@ -10,15 +10,64 @@
     "efficiency_factor": 0.96
   },
   "links": [
-    { "relation": "synergy", "target": "CYANO" },
-    { "relation": "synergy", "target": "CURLY_DOCK" },
-    { "relation": "geometry_link", "target": "FRACTAL" },
-    { "relation": "resonance", "target": "QUORUM" },
-    { "relation": "temporal_bridge", "target": "CYCLE" }
+    {
+      "relation": "synergy",
+      "target": "CYANO"
+    },
+    {
+      "relation": "synergy",
+      "target": "CURLY_DOCK"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "FRACTAL"
+    },
+    {
+      "relation": "resonance",
+      "target": "QUORUM"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "CYCLE"
+    }
   ],
   "co_creation": true,
   "validation_meta": {
     "schema": "plant.schema.json",
     "version": "1.0"
+  },
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "high",
+    "archetype": "engine"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "core_efficiency_factor": {
+      "value": 0.96,
+      "scope": {
+        "definition": "Biomass doubling rate of Lemna minor under optimal nutrient and light conditions — ratio of achieved doubling time (24-48h) to theoretical minimum for C3 aquatic photosynthesis.",
+        "evidence": {
+          "source": "Landolt & Kandeler (1987) 'The Family of Lemnaceae', Geobotanischen Instituts; Ziegler et al. (2015) duckweed bioremediation and growth studies.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Lemna minor doubles biomass every 24-48h under optimal conditions — fastest flowering plant growth rate",
+            "protein content 25-45% dry weight — higher than soy, with comparable essential amino acid profile",
+            "microalgae (Spirulina): equivalent rapid doubling time for single-celled photosynthesizer — multi-cell analogue"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.91
+        },
+        "falsifiability": "If Lemna minor growth rate under optimal conditions is statistically indistinguishable from other aquatic plants at equivalent biomass density, the exceptional growth rate is a size effect, not metabolic efficiency.",
+        "measurement_limits": "Doubling time is nutrient-concentration dependent — phosphorus is typically limiting in natural systems. Overcrowding causes light self-shading that reduces growth to 4-7 day doubling time.",
+        "dependencies": [
+          "nutrient_concentration",
+          "light_intensity",
+          "crowding_density"
+        ]
+      }
+    }
   }
 }

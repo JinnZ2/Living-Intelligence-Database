@@ -1,7 +1,7 @@
 {
   "id": "VENUS",
   "name": "Venus Flytrap",
-  "emoji": "\ud83e\udeb4",
+  "emoji": "🪴",
   "ontology": "plant",
   "symbolic_code": "[VENUS_TRAP_ACTION_POTENTIAL]",
   "description": "Generates action potentials propagating at 10 cm/s triggering snap closure in 100ms. Counting mechanism requires two trigger hair touches within 20 seconds. Digestive glands activate on the fifth signal.",
@@ -40,5 +40,39 @@
   "validation_meta": {
     "schema": "plant_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "medium",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "core_efficiency_factor": {
+      "value": 0.91,
+      "scope": {
+        "definition": "Prey capture success rate of Dionaea muscipula — fraction of trap trigger events (two trigger hair stimulations within 30 seconds) that result in complete prey capture and digestion initiation.",
+        "evidence": {
+          "source": "Forterre et al. (2005) 'How the Venus flytrap snaps', Nature 433:421-425; Böhm et al. (2016) 'The Venus flytrap Dionaea muscipula counts prey-induced action potentials to induce sodium uptake', Current Biology 26:286-295.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Venus flytrap snaps in 100-300 ms using elastic stored energy — fastest plant movement known",
+            "two-trigger requirement reduces false closures by 75% — action potential counting prevents wasted energy",
+            "snap trap mechanism confirmed as elastic energy release (buckling) not actomyosin — unique plant motor"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.91
+        },
+        "falsifiability": "If single-trigger stimulation results in snap closure at equal rates to two-trigger stimulation, the two-event counting mechanism is not operating.",
+        "measurement_limits": "Capture efficiency decreases with trap age — each trap closes 7-10 times before senescence. Non-prey captures (rain drops, debris) open spontaneously within hours — counting mechanism reduces but doesn't eliminate false positives.",
+        "dependencies": [
+          "trap_age",
+          "prey_mass",
+          "action_potential_count"
+        ]
+      }
+    }
   }
 }

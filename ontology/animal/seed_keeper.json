@@ -16,35 +16,154 @@
       "type": "knowledge_preservation",
       "efficiency_factor": 0.96,
       "geometry": "biodiversity_archive",
-      "applications": ["crop_resilience", "climate_adaptation", "food_sovereignty"]
+      "applications": [
+        "crop_resilience",
+        "climate_adaptation",
+        "food_sovereignty"
+      ]
     },
     {
       "name": "heirloom_selection",
       "type": "variety_recognition",
       "efficiency_factor": 0.93,
       "geometry": "phenotypic_memory",
-      "applications": ["trait_preservation", "local_adaptation", "cultural_crop_identity"]
+      "applications": [
+        "trait_preservation",
+        "local_adaptation",
+        "cultural_crop_identity"
+      ]
     },
     {
       "name": "seed_exchange_network",
       "type": "distributed_preservation",
       "efficiency_factor": 0.94,
       "geometry": "cooperative_redundancy",
-      "applications": ["disaster_insurance", "community_resilience", "living_genetic_backup"]
+      "applications": [
+        "disaster_insurance",
+        "community_resilience",
+        "living_genetic_backup"
+      ]
     }
   ],
   "links": [
-    { "relation": "synergy", "target": "INDIG_FIRE" },
-    { "relation": "synergy", "target": "DANDELION" },
-    { "relation": "synergy", "target": "CURLY_DOCK" },
-    { "relation": "synergy", "target": "MOTHER_TREE" },
-    { "relation": "resonance", "target": "GRANDMOTHER" },
-    { "relation": "temporal_bridge", "target": "ECHO" },
-    { "relation": "temporal_bridge", "target": "CYCLE" }
+    {
+      "relation": "synergy",
+      "target": "INDIG_FIRE"
+    },
+    {
+      "relation": "synergy",
+      "target": "DANDELION"
+    },
+    {
+      "relation": "synergy",
+      "target": "CURLY_DOCK"
+    },
+    {
+      "relation": "synergy",
+      "target": "MOTHER_TREE"
+    },
+    {
+      "relation": "resonance",
+      "target": "GRANDMOTHER"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "ECHO"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "CYCLE"
+    }
   ],
   "co_creation": true,
   "validation_meta": {
     "schema": "animal.schema.json",
     "version": "1.0"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "medium",
+    "archetype": "bridge"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "genetic_library_curation": {
+      "value": 0.96,
+      "scope": {
+        "definition": "Number of distinct cultivar varieties maintained per seed keeper household relative to formal gene bank equivalent, measured in comparative surveys of traditional seed systems.",
+        "evidence": {
+          "source": "Brush (2004) 'Farmers' Bounty: Locating Crop Diversity in the Contemporary World', Yale UP; Zeven (1999) traditional varieties maintained across European regions.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "medium",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Andean potato seed keepers maintain 40-400 varieties per household vs CGIAR ex-situ bank 7000 total varieties",
+            "Oaxacan maize seed keepers preserve 80+ local landraces — 6× more diversity than commercial seed market",
+            "traditional rice farmers in Jharkhand maintain 110 varieties vs 5 in commercial market — 22× diversity"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.79
+        },
+        "falsifiability": "If seed diversity surveys show no significant difference between traditional keeper households and commercial seed sources in the same region, formal markets have replaced the traditional curation function.",
+        "measurement_limits": "REDUCTIVITY NOTE: Seed keeping is not cataloguing. Each variety held by a keeper carries cultural memory, ceremonial function, and relational history with the land and community. Measuring variety count reduces living knowledge to inventory. The 0.96 cannot capture what is lost when a seed keeper dies without an apprentice — not just a genetic sequence, but a relationship.",
+        "dependencies": [
+          "region",
+          "years_of_keeper_experience",
+          "market_penetration"
+        ]
+      }
+    },
+    "heirloom_selection": {
+      "value": 0.93,
+      "scope": {
+        "definition": "Adaptation advantage of locally selected heirloom varieties versus commercial varieties on the same traditional farmland — measured as yield stability (coefficient of variation) across 5+ year climate variation.",
+        "evidence": {
+          "source": "Ceccarelli (1994) 'Specific adaptation and breeding for marginal conditions', Euphytica 77:205-219; Cleveland et al. (2000) 'Farmer selection vs formal breeding', Economic Botany 54:73-91.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "medium",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "ICARDA barley trials: locally selected varieties showed 0.67 CV vs 1.24 for commercial under drought stress",
+            "Andean potato local landraces: 0.89 yield stability across altitude and frost variability vs 0.62 for commercial",
+            "Ethiopian sorghum landraces maintained yield within 15% of maximum across 7 drought years vs 45% commercial loss"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.8
+        },
+        "falsifiability": "If yield stability of traditional varieties is statistically equal to commercial varieties on traditional farms across 10+ year trials, traditional selection provides no adaptive advantage in that context.",
+        "measurement_limits": "REDUCTIVITY NOTE: Traditional seed selection is not crop improvement by another name. It is inseparable from ecological observation, seasonal ceremony, and the keeper's long-term relationship with specific soil and water. Yield trials measure the productive output of a practice whose social and spiritual dimensions are not on trial.",
+        "dependencies": [
+          "soil_type",
+          "climate_variability_index",
+          "traditional_practice_continuity"
+        ]
+      }
+    },
+    "seed_exchange_network": {
+      "value": 0.94,
+      "scope": {
+        "definition": "Effective diversity radius of seed exchange networks — number of distinct micro-climate origins represented in a single traditional seed festival or exchange event, measured by provenance tracking.",
+        "evidence": {
+          "source": "Kloppenburg (2004) 'First the Seed', 2nd ed., University of Wisconsin Press; Sthapit et al. (2013) 'Diversity at farmers' disposal', Bioversity International.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "medium",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Andean potato festivals (tinkuy): 200-500 variety exchanges from 50+ communities within one event",
+            "Navdanya seed networks (India): 500 000+ seed keepers exchange across 22 states — distributed living library",
+            "pre-Columbian trade networks: squash seeds found 1500 km from origin varieties — ancient exchange range"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.77
+        },
+        "falsifiability": "If DNA fingerprinting shows varieties exchanged in seed networks are genetically identical to commercial varieties from the same region, traditional exchange networks are no longer maintaining distinct diversity.",
+        "measurement_limits": "REDUCTIVITY NOTE: Seed exchange is not information transfer — it is relationship. The seeds carry stories, obligations, and prayers. The network is held together by reciprocity, not logistics. A metric of variety count cannot capture what seeds mean to those who keep them alive.",
+        "dependencies": [
+          "exchange_event_scale",
+          "community_language_diversity",
+          "market_seed_availability"
+        ]
+      }
+    }
   }
 }
