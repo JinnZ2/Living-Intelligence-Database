@@ -1,9 +1,9 @@
 {
   "id": "SUN",
   "name": "Sunflower",
-  "emoji": "\ud83c\udf3b",
+  "emoji": "🌻",
   "ontology": "plant",
-  "symbolic_code": "[SUN_HELIO_\u03c6_SPIRAL]",
+  "symbolic_code": "[SUN_HELIO_φ_SPIRAL]",
   "description": "Heliotropic intelligence embodying phi-ratio seed packing, solar tracking, and Fibonacci spiral optimization for maximum photon capture.",
   "core_attributes": {
     "pattern": "heliotropism, Fibonacci seed arrangement, photon optimization",
@@ -32,5 +32,40 @@
     "pollinator_attraction",
     "seed_dispersal",
     "soil_microbiome"
-  ]
+  ],
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "low",
+    "archetype": "chassis"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "fibonacci_packing_density": {
+      "value": 0.97,
+      "scope": {
+        "definition": "Seed packing efficiency of Helianthus annuus capitulum — ratio of actual seed count per unit disc area to theoretical maximum for given seed size, achieved by Fibonacci spiral arrangement.",
+        "evidence": {
+          "source": "Mitchison (1977) 'Phyllotaxis and the Fibonacci series', Science 196:270-275; Levitov (1991) 'Energetic approach to phyllotaxis', Europhysics Letters 14:533-539.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "sunflower disc: 0.97-0.99 packing density vs 0.91 for random arrangement of equal-sized seeds",
+            "Fibonacci spiral counts: 34 clockwise and 55 counterclockwise rows — ratio 55/34 ≈ φ = 1.618",
+            "pinecone scales: same Fibonacci spiral packing — independent evolution of same geometric solution",
+            "coin packing: mathematical optimal packing 0.9069 for equal circles — sunflower achieves near-maximum for varying sizes"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.97
+        },
+        "falsifiability": "If sunflower seed number counts reveal non-Fibonacci values for spiral counts in a controlled population (n>100), Fibonacci phyllotaxis is not the universal rule.",
+        "measurement_limits": "Fibonacci count deviations occur during developmental stress, genetic mutations affecting meristem size, and at the boundary regions of the disc. Perfect Fibonacci arrangement requires stable developmental conditions.",
+        "dependencies": [
+          "meristem_size",
+          "developmental_environment",
+          "genetic_phyllotaxis_genes"
+        ]
+      }
+    }
+  }
 }

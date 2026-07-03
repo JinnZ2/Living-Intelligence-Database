@@ -1,7 +1,7 @@
 {
   "id": "SN",
   "name": "Snake",
-  "emoji": "\ud83d\udc0d",
+  "emoji": "🐍",
   "ontology": "animal",
   "symbolic_code": "[SN_THERMAL_PIT_INFRARED]",
   "description": "Pit organs detect temperature differences of 0.003C, creating thermal maps overlaid on visual input. Jacobson's organ analyzes air molecules via forked tongue stereoscopy. Four locomotion algorithms selected by terrain geometry.",
@@ -85,5 +85,92 @@
   "validation_meta": {
     "schema": "animal_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "high",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "infrared_thermal_imaging": {
+      "value": 0.95,
+      "scope": {
+        "definition": "Minimum detectable temperature differential of pit viper pit organ — smallest prey-background temperature difference (°C) eliciting directed strike behavior in controlled dark-room experiments.",
+        "evidence": {
+          "source": "Goris (2011) 'Infrared organs of snakes: an integral part of vision', Journal of Herpetology 45:2-14; Newman & Hartline (1982) 'The infrared vision of snakes', Scientific American 246:116-127.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "rattlesnake pit organ detects 0.003°C temperature differential — sensitivity exceeding most engineered IR sensors",
+            "pit membrane radiates >20 nm IR wavelengths with single-receptor quantum-limit sensitivity",
+            "FLIR thermal cameras: engineered equivalent achieves 0.050°C NETD — snake achieves 15× better"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.93
+        },
+        "falsifiability": "If rattlesnakes fail to accurately strike at objects with temperature differentials below 0.03°C in complete darkness, the 0.003°C sensitivity claim overstates functional threshold.",
+        "measurement_limits": "Sensitivity measured for stationary warm objects against cool backgrounds. Moving prey detection threshold is higher (0.01-0.02°C). Resolution (spatial acuity) is poor — 1 pixel per degree.",
+        "dependencies": [
+          "background_temperature",
+          "prey_motion",
+          "pit_organ_temperature"
+        ]
+      }
+    },
+    "chemical_stereoscopy": {
+      "value": 0.93,
+      "scope": {
+        "definition": "Angular resolution of snake tongue-flicking chemical imaging — minimum angular separation of two odor sources distinguishable by bifurcated tongue-to-Jacobson's-organ signal comparison.",
+        "evidence": {
+          "source": "Schwenk (1994) 'Why snakes have forked tongues', Science 263:1573-1577; Kubie & Halpern (1975) forked tongue chemoreception studies.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "king snake resolves two scent trails 3 cm apart at 30 cm — 5.7° angular resolution",
+            "bifurcation creates stereo gradient comparison: same principle as binaural sound localization",
+            "crayfish paired antennules: convergent bilateral chemoreceptor stereo for plume source localization"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.9
+        },
+        "falsifiability": "If snakes with surgically fused tongue tips show no impairment in trail-following accuracy compared to intact snakes, the bifurcated-tongue stereo hypothesis is unsupported.",
+        "measurement_limits": "Stereo resolution depends on inter-fork spacing relative to odor gradient width. Most effective in continuous odor trails; point-source localization in still air is more variable.",
+        "dependencies": [
+          "tongue_fork_spacing",
+          "odor_gradient_width",
+          "substrate_type"
+        ]
+      }
+    },
+    "terrain_adaptive_locomotion": {
+      "value": 0.9,
+      "scope": {
+        "definition": "Fraction of terrestrial locomotion modes (lateral undulation, sidewinding, rectilinear, concertina) available to a generalist snake species on substrates ranging from loose sand to rough rock.",
+        "evidence": {
+          "source": "Jayne (1986) 'Kinematics of terrestrial snake locomotion', Copeia 1986:915-927; Gray (1953) 'Undulatory propulsion', Quarterly Journal of Microscopical Science 94:551-578.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "sidewinding rattlesnake: static friction approach achieving zero slippage on loose sand — engineered robots can't replicate fully",
+            "concertina mode in narrow tubes: 0.25× normal speed but 100% passage success in tunnel-width gaps",
+            "rectilinear locomotion via ventral scale ratcheting: the only undulatory locomotion mode without lateral body contact",
+            "snake robot locomotion: 4-mode switching replicating biological locomotion across 8 substrate types"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.87
+        },
+        "falsifiability": "If a snake species is found that uses only one locomotion mode across all substrate types, the adaptive multi-mode model does not apply to that species.",
+        "measurement_limits": "Mode switching responsiveness varies by species. Highly specialized sidewinders (Crotalus cerastes) show poor performance in forest-litter concertina contexts. Generalist species (ratsnakes) show widest mode flexibility.",
+        "dependencies": [
+          "substrate_type",
+          "snake_species_specialization",
+          "body_temperature"
+        ]
+      }
+    }
   }
 }

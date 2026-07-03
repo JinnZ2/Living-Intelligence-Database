@@ -10,9 +10,56 @@
     "energy_mode": "directive"
   },
   "links": [
-    {"relation": "synergy", "target": "MAGNETIC_FIELD"},
-    {"relation": "energy_coupling", "target": "LIGHTNING"},
-    {"relation": "resonance", "target": "QUARTZ"}
+    {
+      "relation": "synergy",
+      "target": "MAGNETIC_FIELD"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "LIGHTNING"
+    },
+    {
+      "relation": "resonance",
+      "target": "QUARTZ"
+    }
   ],
-  "validation_meta": {"schema": "energy_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "energy_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "medium",
+    "archetype": "engine"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "coulomb_force_precision": {
+      "value": 0.99,
+      "scope": {
+        "definition": "Fractional accuracy of Coulomb's law in describing electrostatic force between point charges — deviation of measured force from F=kq₁q₂/r² across 15 orders of magnitude in charge separation.",
+        "evidence": {
+          "source": "Cavendish (1773) original verification; Williams et al. (1971) 'New experimental test of Coulomb's inverse-square law', Physical Review Letters 26:721-724.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "certain",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "Coulomb's law verified to 1 part in 10¹⁶ — most precisely confirmed inverse-square law in physics",
+            "photon mass upper bound < 10⁻⁵⁴ kg confirmed by galactic magnetic field observations — explains why Coulomb's law is exact",
+            "gravitational inverse-square law: same mathematical form verified to 1 part in 10⁴ at human scales",
+            "atomic orbital energy levels: Coulomb's law predicts H atom spectrum to 10⁻¹² accuracy (quantum corrections)"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.99
+        },
+        "falsifiability": "If measured electrostatic force deviates from F=kq₁q₂/r² by more than 1 part in 10⁶ at any accessible scale, Coulomb's law requires modification.",
+        "measurement_limits": "Near-perfect precision applies only to point charges in vacuum — in dielectric media, effective permittivity modifies the force constant. Quantum corrections become significant below 10⁻¹⁵ m.",
+        "dependencies": [
+          "medium_permittivity",
+          "charge_separation",
+          "quantum_correction_regime"
+        ]
+      }
+    }
+  }
 }

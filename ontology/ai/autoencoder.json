@@ -43,15 +43,90 @@
     "meaningful_compression"
   ],
   "links": [
-    { "relation": "synergy", "target": "NEURAL_NET" },
-    { "relation": "synergy", "target": "GAN" },
-    { "relation": "geometry_link", "target": "TORUS" },
-    { "relation": "resonance", "target": "QUARTZ" },
-    { "relation": "temporal_bridge", "target": "ECHO" }
+    {
+      "relation": "synergy",
+      "target": "NEURAL_NET"
+    },
+    {
+      "relation": "synergy",
+      "target": "GAN"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "TORUS"
+    },
+    {
+      "relation": "resonance",
+      "target": "QUARTZ"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "ECHO"
+    }
   ],
   "co_creation": true,
   "validation_meta": {
     "schema": "ai.schema.json",
     "version": "1.0"
+  },
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "high",
+    "archetype": "bridge"
+  },
+  "substrate_layer": "language_primary",
+  "attributes": {
+    "latent_compression": {
+      "value": 0.87,
+      "scope": {
+        "definition": "Compression ratio achievable by trained autoencoder (ratio of input dimension to latent dimension) while maintaining <10% reconstruction MSE on held-out test data, normalized to principal component analysis baseline.",
+        "evidence": {
+          "source": "Hinton & Salakhutdinov (2006) 'Reducing the dimensionality of data with neural networks', Science 313:504-507; Bank et al. (2023) 'Autoencoders', arXiv 2003.05991.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "deep autoencoder achieves 30:1 compression on MNIST with 0.87 reconstruction fidelity vs 0.65 for PCA",
+            "variational autoencoder: disentangled latent dimensions allow interpolation — compression + generation",
+            "JPEG image compression: DCT-based 20:1 compression achieving 0.88 SSIM — engineered analogue baseline"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.88
+        },
+        "falsifiability": "If autoencoder reconstruction quality (SSIM or MSE) is statistically indistinguishable from linear PCA at equal compression ratios, deep nonlinear encoding provides no advantage.",
+        "measurement_limits": "Compression quality is dataset-specific — natural images compress better than random data. Reconstruction fidelity measured on in-distribution data; out-of-distribution samples show degraded reconstruction.",
+        "dependencies": [
+          "compression_ratio",
+          "dataset_complexity",
+          "architecture_depth"
+        ]
+      }
+    },
+    "variational_sampling": {
+      "value": 0.83,
+      "scope": {
+        "definition": "Diversity-fidelity tradeoff of VAE generative samples — FID (Fréchet Inception Distance) score of generated samples relative to training distribution, averaged across standard benchmark datasets.",
+        "evidence": {
+          "source": "Kingma & Welling (2013) 'Auto-encoding variational Bayes', ICLR 2014; Razavi et al. (2019) 'Generating diverse high-fidelity images with VQ-VAE-2', NeurIPS.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "VAE on CelebA faces: FID 25-40 vs GAN FID 5-15 — VAE diversity is higher, fidelity is lower",
+            "VAE latent interpolation produces semantically smooth transitions — continuous structure vs GAN mode collapse",
+            "diffusion models: FID 2-8 on ImageNet — state-of-art baseline VAE must overcome"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.82
+        },
+        "falsifiability": "If VAE samples are judged by human raters as indistinguishable from real data at >90% accuracy, the FID-based quality gap between VAE and GAN closes.",
+        "measurement_limits": "FID is sensitive to architecture and training duration. VAE and GAN occupy different quality-diversity tradeoff points; comparing FID alone misses the diversity advantage of VAEs.",
+        "dependencies": [
+          "latent_dimension",
+          "dataset",
+          "architecture"
+        ]
+      }
+    }
   }
 }

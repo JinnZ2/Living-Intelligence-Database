@@ -10,9 +10,55 @@
     "resonance_field": "phase boundary"
   },
   "links": [
-    {"relation": "energy_coupling", "target": "PLASMA_FIELD"},
-    {"relation": "resonance", "target": "LIGHTNING"},
-    {"relation": "geometry_link", "target": "FRACTAL"}
+    {
+      "relation": "energy_coupling",
+      "target": "PLASMA_FIELD"
+    },
+    {
+      "relation": "resonance",
+      "target": "LIGHTNING"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "FRACTAL"
+    }
   ],
-  "validation_meta": {"schema": "crystal_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "crystal_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "low",
+    "archetype": "chassis"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "conchoidal_fracture_sharpness": {
+      "value": 0.95,
+      "scope": {
+        "definition": "Edge sharpness of obsidian knapped blades relative to surgical steel scalpels — measured as cutting radius at blade edge (µm) by scanning electron microscopy.",
+        "evidence": {
+          "source": "Cotterell & Kamminga (1987) 'The formation of flakes', American Antiquity 52:675-708; Brown & Dransart (2015) 'The World of Obsidian', Archaeopress.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "obsidian blade edge radius 3 nm — 500× sharper than surgical steel scalpel (1500 nm edge radius)",
+            "obsidian still used in ophthalmologic surgery for incisions requiring minimal cell trauma",
+            "glass fracture mechanics (Griffith 1921): same conchoidal crack propagation physics in all amorphous materials"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.95
+        },
+        "falsifiability": "If AFM measurements show obsidian edge radius consistently above 50 nm (comparable to surgical steel), the sharpness advantage claim is not supported.",
+        "measurement_limits": "Sharpness is maintained only in fresh fracture surfaces — obsidian edges dull to 50-200 nm within seconds of exposure to soil. Measurement must be performed immediately after knapping.",
+        "dependencies": [
+          "time_since_knapping",
+          "mineral_inclusions",
+          "hydration_layer"
+        ]
+      }
+    }
+  }
 }

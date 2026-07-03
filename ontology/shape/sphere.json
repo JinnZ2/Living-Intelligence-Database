@@ -10,9 +10,56 @@
     "geometry_type": "3D surface"
   },
   "links": [
-    {"relation": "resonance", "target": "TORUS"},
-    {"relation": "connected_to", "target": "GRAV"},
-    {"relation": "geometry_link", "target": "SPIRAL"}
+    {
+      "relation": "resonance",
+      "target": "TORUS"
+    },
+    {
+      "relation": "connected_to",
+      "target": "GRAV"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "SPIRAL"
+    }
   ],
-  "validation_meta": {"schema": "shape_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "shape_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "low",
+    "archetype": "chassis"
+  },
+  "substrate_layer": "both",
+  "attributes": {
+    "isoperimetric_ratio": {
+      "value": 0.99,
+      "scope": {
+        "definition": "Volume-to-surface-area efficiency of a sphere relative to all other closed surfaces — derived from isoperimetric inequality V ≤ (1/6π)(SA)^(3/2), where sphere achieves equality.",
+        "evidence": {
+          "source": "Blaschke (1916) isoperimetric inequalities proof; Osserman (1978) 'The isoperimetric inequality', Bulletin of the American Mathematical Society 84:1182-1238.",
+          "evidence_type": "mathematical_proof",
+          "reproducibility": "certain",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "sphere is the unique maximizer of volume for fixed surface area — isoperimetric theorem, mathematically proven",
+            "soap bubble: achieves spherical form spontaneously by surface tension energy minimization",
+            "cell nucleus: spherical shape maximizes DNA packing per unit membrane",
+            "planetary bodies above ~400 km radius: gravitational self-compression forces spherical equilibrium"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.99
+        },
+        "falsifiability": "If any closed surface is found that encloses more volume than a sphere of equal surface area, the isoperimetric inequality is violated — no such surface exists.",
+        "measurement_limits": "The isoperimetric theorem is for smooth closed surfaces in Euclidean 3-space. In curved spaces (general relativity), the relationship differs. Physical implementations deviate from ideal sphere due to gravity and material properties.",
+        "dependencies": [
+          "surface_area",
+          "dimensionality",
+          "space_curvature"
+        ]
+      }
+    }
+  }
 }

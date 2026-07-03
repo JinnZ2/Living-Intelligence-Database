@@ -1,7 +1,7 @@
 {
   "id": "ROOT_NET",
   "name": "Root Network",
-  "emoji": "\ud83c\udf33",
+  "emoji": "🌳",
   "ontology": "plant",
   "symbolic_code": "[ROOT_NET_TREE_GRAPH_FLUX]",
   "description": "Subterranean neural-like system optimizing nutrient exchange and interspecies communication through soil architecture.",
@@ -28,5 +28,39 @@
     "mycorrhizal_partnership",
     "nutrient_exchange",
     "chemical_defense_signaling"
-  ]
+  ],
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "medium",
+    "archetype": "bridge"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "water_uptake_efficiency": {
+      "value": 0.93,
+      "scope": {
+        "definition": "Hydraulic efficiency of root architecture — fraction of available soil water extracted per unit root length per day at field capacity, relative to theoretical maximum given soil hydraulic conductivity.",
+        "evidence": {
+          "source": "Doussan et al. (1998) 'Modelling of the hydraulic architecture of root systems', Plant and Soil 206:75-88; Lynch (1995) 'Root architecture and plant productivity', Plant Physiology 109:7-13.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "maize root architecture: 0.89-0.95 of plant available water extracted during vegetative growth phase",
+            "root hair zone extends effective root radius 5-10× — increases soil volume per root length dramatically",
+            "mycorrhizal hyphae: extend effective uptake radius beyond root hair limit — 100× more soil volume accessible"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.9
+        },
+        "falsifiability": "If root systems with equivalent total length but random branching architecture show identical water uptake rates to optimized architectures, geometric branching pattern provides no hydraulic advantage.",
+        "measurement_limits": "Efficiency drops to 0.50-0.70 as soil water potential falls below -0.3 MPa (field capacity) — soil conductivity becomes limiting. Root architecture efficiency is species-specific and deeply linked to soil type.",
+        "dependencies": [
+          "soil_water_potential",
+          "root_architecture_type",
+          "mycorrhizal_colonization"
+        ]
+      }
+    }
+  }
 }

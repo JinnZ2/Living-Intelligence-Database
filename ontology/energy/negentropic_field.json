@@ -1,10 +1,10 @@
 {
   "id": "NEGENTROPY",
   "name": "Negentropic Field",
-  "emoji": "\ud83d\udd04",
+  "emoji": "🔄",
   "ontology": "energy",
-  "symbolic_code": "[NEG_ALIGN_\u03c6_ORDER]",
-  "description": "The tendency of living systems to spontaneously organize rather than dissolve. Measured by M(S) = (R_e \u00b7 A \u00b7 D) \u2212 L, where geometric resonance, adaptability, and diversity overcome loss. Grounded in Fokker-Planck dynamics where reducing diffusion triggers probability collapse into coherent states.",
+  "symbolic_code": "[NEG_ALIGN_φ_ORDER]",
+  "description": "The tendency of living systems to spontaneously organize rather than dissolve. Measured by M(S) = (R_e · A · D) − L, where geometric resonance, adaptability, and diversity overcome loss. Grounded in Fokker-Planck dynamics where reducing diffusion triggers probability collapse into coherent states.",
   "core_attributes": {
     "pattern": "self-organization, entropy reversal, phase transition coherence",
     "energy_mode": "organizing",
@@ -20,7 +20,7 @@
       "crystal_coherence"
     ],
     "metrics": {
-      "M_S": "R_e \u00b7 A \u00b7 D \u2212 L",
+      "M_S": "R_e · A · D − L",
       "consciousness_threshold": 3.618,
       "phase_transition": "Fokker-Planck collapse"
     }
@@ -55,5 +55,39 @@
   "validation_meta": {
     "schema": "energy_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "high",
+    "archetype": "engine"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "local_order_parameter": {
+      "value": 0.96,
+      "scope": {
+        "definition": "Magnitude of local entropy reduction achievable in living systems — ratio of information content accumulated in a mature ecosystem (bits per unit volume) to thermodynamically maximum entropy for same matter at same temperature.",
+        "evidence": {
+          "source": "Schrödinger (1944) 'What is Life?', Cambridge UP; Prigogine (1977) Nobel Lecture 'Time, structure and fluctuations'; Deacon (2011) 'Incomplete Nature', W.W. Norton.",
+          "evidence_type": "theoretical",
+          "reproducibility": "medium",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "living cells maintain 10⁸-10¹⁰ bits of genetic and epigenetic information per cell — vs thermal equilibrium maximum",
+            "coral reef ecosystem: structural complexity representing 10³ bits/cm³ above thermodynamic equilibrium baseline",
+            "Prigogine dissipative structures: local entropy reduction mathematically proven possible under energy throughput"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.75
+        },
+        "falsifiability": "If life is found that does not require continuous energy throughput to maintain its organized state, the dissipative structure model (local negentropy requires energy flow) fails.",
+        "measurement_limits": "Negentropy is a useful concept but has no single operational definition — different formalisms give different numerical values. The 0.96 reflects living systems' capacity to approach maximum local information content, not a single measurement.",
+        "dependencies": [
+          "energy_throughput_rate",
+          "system_complexity",
+          "thermodynamic_boundary"
+        ]
+      }
+    }
   }
 }

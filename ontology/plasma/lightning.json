@@ -10,8 +10,51 @@
     "energy_state": "transient"
   },
   "links": [
-    {"relation": "energy_exchange", "target": "PLASMA_FIELD"},
-    {"relation": "resonance", "target": "FLUX"}
+    {
+      "relation": "energy_exchange",
+      "target": "PLASMA_FIELD"
+    },
+    {
+      "relation": "resonance",
+      "target": "FLUX"
+    }
   ],
-  "validation_meta": {"schema": "plasma_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "plasma_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "low",
+    "adaptability": "high",
+    "archetype": "engine"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "channel_temperature_peak": {
+      "value": 0.94,
+      "scope": {
+        "definition": "Peak temperature of lightning return stroke channel — fraction of measured peak (30,000 K) relative to solar surface temperature (5778 K) — expressed as multiples of solar surface temperature.",
+        "evidence": {
+          "source": "Uman (1987) 'The Lightning Discharge', Academic Press; Rakov & Uman (2003) 'Lightning: Physics and Effects', Cambridge UP.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "lightning return stroke: 27,000-30,000 K peak temperature — 5× hotter than Sun's surface at 5778 K",
+            "plasma channel reaches 30,000 K in <1 µs, then cools to 3,000 K in 100 µs — rapid thermalization",
+            "arc welding plasma: 6,000-20,000 K — same air plasma physics at lower current"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.93
+        },
+        "falsifiability": "If optical spectroscopy of lightning channels consistently measures peak temperatures below 15,000 K, the 5× solar surface temperature claim is overstated.",
+        "measurement_limits": "Peak temperature exists for <1 µs in the core channel (0.1-1 cm diameter). Channel edge temperature is 3-5× lower. Measurement requires spectroscopic analysis with ns time resolution.",
+        "dependencies": [
+          "channel_current",
+          "measurement_time_resolution",
+          "channel_diameter"
+        ]
+      }
+    }
+  }
 }

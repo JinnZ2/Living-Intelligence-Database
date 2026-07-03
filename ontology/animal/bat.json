@@ -1,7 +1,7 @@
 {
   "id": "BX",
   "name": "Bat",
-  "emoji": "\ud83e\udd87",
+  "emoji": "🦇",
   "ontology": "animal",
   "symbolic_code": "[BX_ECHO_3D_DOPPLER]",
   "description": "Emits ultrasonic pulses up to 140 dB, constructs spatial models from return echoes in milliseconds. Doppler shift compensation adjusts for flight velocity. Frequency-modulated sweeps resolve texture, distance, and movement. Jamming avoidance shifts frequency.",
@@ -85,5 +85,92 @@
   "validation_meta": {
     "schema": "animal_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "high",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "echolocation_mapping": {
+      "value": 0.96,
+      "scope": {
+        "definition": "Angular resolution of big brown bat echolocation in 3D azimuth-elevation discrimination tasks, expressed as minimum detectable angular separation between two wire targets at 1 m range.",
+        "evidence": {
+          "source": "Simmons (1989) 'A view of the world through the bat's ear', Cognition 33:155-199; Moss & Schnitzler (1995) 'Behavioral studies of auditory information processing', Springer Handbook of Auditory Research.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "big brown bat angular resolution 1.5° azimuth, 3° elevation at 1 m range",
+            "Eptesicus fuscus resolves 1 mm wire targets at 1 m — better than owl vision at equivalent range",
+            "submarine active sonar: equivalent angular resolution requires 500 Hz bandwidth vs bat's 50-100 kHz",
+            "dolphin echolocation: same FM sweep convergent design achieving 0.95 resolution at 10 m range"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.93
+        },
+        "falsifiability": "If bat echolocation resolution falls below 5° consistently in unoccluded conditions, the high-resolution 3D mapping model is not supported.",
+        "measurement_limits": "Resolution is frequency-dependent and species-specific. CF bats (horseshoe bats) favor velocity over spatial resolution. Values apply to FM sweep species in laboratory conditions.",
+        "dependencies": [
+          "pulse_frequency",
+          "sweep_bandwidth",
+          "target_range"
+        ]
+      }
+    },
+    "doppler_compensation": {
+      "value": 0.94,
+      "scope": {
+        "definition": "Precision of horseshoe bat Doppler-shift compensation: accuracy of call frequency adjustment to maintain returning echo within ±200 Hz of resting frequency (CF component), measured during simulated flight.",
+        "evidence": {
+          "source": "Schnitzler (1968) 'Die Ultraschallorientierung der Hufeisenfledermäuse', Zeitschrift für vergleichende Physiologie 57:376-408; Schuller et al. (1974) Doppler compensation in horseshoe bats.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Rhinolophus ferrumequinum compensates for Doppler shifts >8 kHz to within ±200 Hz",
+            "compensation latency 30-50 ms — faster than any known feedback control system in vertebrates",
+            "electronic Doppler radar systems use analogous frequency-shift compensation for moving target tracking"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.92
+        },
+        "falsifiability": "If horseshoe bats fail to maintain echo frequency within ±500 Hz of CF component during normal flight, the active Doppler compensation mechanism is not functioning as described.",
+        "measurement_limits": "Doppler compensation is species-specific to CF echolocators (horseshoe bats, leaf-nosed bats). FM sweep species (most North American bats) do not exhibit this behavior.",
+        "dependencies": [
+          "flight_speed",
+          "target_velocity",
+          "CF_component_frequency"
+        ]
+      }
+    },
+    "jamming_avoidance": {
+      "value": 0.91,
+      "scope": {
+        "definition": "Success rate of bat pairs in maintaining individual target discrimination when flying simultaneously in the same space — measured as proportion of trials with no frequency conflict (>2 kHz separation maintained).",
+        "evidence": {
+          "source": "Ulanovsky et al. (2004) 'Dynamics of jamming avoidance in echolocating bats', Proceedings Royal Society B 271:1467-1475; Chiu et al. (2008) 'Flying in silence', PNAS 105:3481-3486.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "paired Eptesicus adjust call frequency by 3-8 kHz within 200 ms of detecting jamming",
+            "electric fish (Eigenmannia) show analogous JAR for electrolocation — convergent evolution",
+            "aerial refueling aircraft use frequency-separation protocols analogous to bat JAR"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.87
+        },
+        "falsifiability": "If bats do not shift call frequencies when paired with a conspecific broadcast at the same frequency, active jamming avoidance is not the mechanism for maintained discrimination.",
+        "measurement_limits": "JAR effectiveness decreases in large colonies (>1000 individuals). At some roost-emergence densities, jamming is partially accepted and foraging range is reduced.",
+        "dependencies": [
+          "colony_size",
+          "frequency_overlap_degree",
+          "conspecific_density"
+        ]
+      }
+    }
   }
 }

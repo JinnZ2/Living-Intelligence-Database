@@ -10,15 +10,64 @@
     "efficiency_factor": 0.94
   },
   "links": [
-    { "relation": "synergy", "target": "BE" },
-    { "relation": "synergy", "target": "CORDYCEPS" },
-    { "relation": "geometry_link", "target": "SPIRAL" },
-    { "relation": "resonance", "target": "CU" },
-    { "relation": "temporal_bridge", "target": "CYCLE" }
+    {
+      "relation": "synergy",
+      "target": "BE"
+    },
+    {
+      "relation": "synergy",
+      "target": "CORDYCEPS"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "resonance",
+      "target": "CU"
+    },
+    {
+      "relation": "temporal_bridge",
+      "target": "CYCLE"
+    }
   ],
   "co_creation": true,
   "validation_meta": {
     "schema": "plant.schema.json",
     "version": "1.0"
+  },
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "high",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "core_efficiency_factor": {
+      "value": 0.94,
+      "scope": {
+        "definition": "Pollinator specificity of orchid deceptive mimicry strategies — fraction of orchid visits made by the single target pollinator species (vs non-target visitors), measured in population-level pollination studies.",
+        "evidence": {
+          "source": "Cozzolino & Widmer (2005) 'Orchid diversity: an evolutionary consequence of deception?', Trends in Ecology & Evolution 20:487-494; Gaskett (2011) orchid mimicry review.",
+          "evidence_type": "field_observation",
+          "reproducibility": "medium",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Ophrys (bee orchid): 0.92 of visits by target bee species Andrena nigroaenea despite providing no nectar reward",
+            "Dracula orchid mimics mushroom gills and emits fungal volatiles — 0.95 specificity for fungus gnats",
+            "fig-fig wasp mutualism: extreme pollinator specificity (0.98 one-to-one pairing) as evolved baseline for comparison"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.83
+        },
+        "falsifiability": "If pollinator trapping studies show orchid visits distributed across 5+ insect species with no dominant target species, the mimicry-driven specificity model is not operating.",
+        "measurement_limits": "Specificity varies enormously by mimicry type — food-source mimics (rewardless) achieve 0.85-0.96; pseudocopulation mimics achieve 0.95-0.99 due to species-specific pheromone matching.",
+        "dependencies": [
+          "mimicry_type",
+          "target_pollinator_abundance",
+          "geographic_location"
+        ]
+      }
+    }
   }
 }

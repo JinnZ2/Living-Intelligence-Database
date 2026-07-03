@@ -10,9 +10,56 @@
     "geometry_type": "2D regular polygon"
   },
   "links": [
-    {"relation": "synergy", "target": "BE"},
-    {"relation": "resonance", "target": "CRYSTAL_LATTICE"},
-    {"relation": "connected_to", "target": "TORUS"}
+    {
+      "relation": "synergy",
+      "target": "BE"
+    },
+    {
+      "relation": "resonance",
+      "target": "CRYSTAL_LATTICE"
+    },
+    {
+      "relation": "connected_to",
+      "target": "TORUS"
+    }
   ],
-  "validation_meta": {"schema": "shape_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "shape_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "low",
+    "archetype": "chassis"
+  },
+  "substrate_layer": "both",
+  "attributes": {
+    "isoperimetric_packing_efficiency": {
+      "value": 0.91,
+      "scope": {
+        "definition": "Area coverage fraction achieved by hexagonal close-packing relative to maximum possible 2D area coverage — compared to square (0.785) and random packing (0.64) for equal circles.",
+        "evidence": {
+          "source": "Hales (1999) 'The honeycomb conjecture', Discrete and Computational Geometry 25:1-22; Kepler (1611) 'Strena Seu de Nive Sexangula' (on hexagonal snow crystal geometry).",
+          "evidence_type": "mathematical_proof",
+          "reproducibility": "certain",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "hexagonal packing achieves π/(2√3) = 0.9069 area coverage — mathematically proven maximum for equal circles",
+            "honeybee comb uses hexagonal cells: 0.9069 wax area efficiency vs 0.785 for square cells",
+            "graphite basal plane: hexagonal carbon bonding achieves maximum electron delocalization per atom",
+            "columnar basalt: hexagonal fracture pattern minimizes surface energy during thermal contraction"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.99
+        },
+        "falsifiability": "If any regular polygon tiling of equal-diameter circles achieves coverage above 0.9069, the hexagonal maximum is disproven.",
+        "measurement_limits": "The 0.9069 applies to perfect hexagonal packing of equal circles. Honeybee cells deviate slightly (cylindrical larvae require rounded corners) — real efficiency is 0.88-0.91.",
+        "dependencies": [
+          "circle_size_distribution",
+          "boundary_effects",
+          "deformation_from_ideal"
+        ]
+      }
+    }
+  }
 }

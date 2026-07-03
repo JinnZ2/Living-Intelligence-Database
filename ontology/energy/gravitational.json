@@ -10,9 +10,55 @@
     "energy_mode": "binding"
   },
   "links": [
-    {"relation": "synergy", "target": "MAGNETIC_FIELD"},
-    {"relation": "geometry_link", "target": "SPIRAL"},
-    {"relation": "resonance", "target": "TORUS"}
+    {
+      "relation": "synergy",
+      "target": "MAGNETIC_FIELD"
+    },
+    {
+      "relation": "geometry_link",
+      "target": "SPIRAL"
+    },
+    {
+      "relation": "resonance",
+      "target": "TORUS"
+    }
   ],
-  "validation_meta": {"schema": "energy_intelligence.schema.json", "version": "1.1"}
+  "validation_meta": {
+    "schema": "energy_intelligence.schema.json",
+    "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "low",
+    "archetype": "chassis"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "equivalence_principle_precision": {
+      "value": 0.99,
+      "scope": {
+        "definition": "Precision of the weak equivalence principle — fractional difference in free-fall acceleration between test masses of different compositions (η = |a₁-a₂|/(a₁+a₂)/2), measured by torsion balance experiments.",
+        "evidence": {
+          "source": "Eötvös et al. (1922) 'Beiträge zum Gesetze der Proportionalität von Trägheit und Gravität', Annalen der Physik 68:11-66; Schlamminger et al. (2008) 'Test of the equivalence principle using a rotating torsion balance', Physical Review Letters 100:041101.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "certain",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Eöt-Wash torsion balance: η < 10⁻¹³ between beryllium and titanium test masses",
+            "lunar laser ranging: η < 10⁻¹³ between Earth-Moon system (includes quantum binding energy contribution)",
+            "STE-QUEST space mission: targeting η < 10⁻¹⁵ for matter-wave interferometry — next precision frontier"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.99
+        },
+        "falsifiability": "If torsion balance experiments detect η > 10⁻¹¹ between standard composition test masses in vacuum, the equivalence principle requires extension.",
+        "measurement_limits": "Precision limited by thermal noise in torsion fiber, seismic vibration, and electrostatic patch potentials. Space measurements eliminate seismic noise; atom interferometry tests equivalence for quantum matter.",
+        "dependencies": [
+          "test_mass_composition",
+          "environmental_vibration",
+          "measurement_duration"
+        ]
+      }
+    }
+  }
 }

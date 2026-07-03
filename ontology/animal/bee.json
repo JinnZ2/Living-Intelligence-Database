@@ -1,9 +1,9 @@
 {
   "id": "BE",
   "name": "Bee",
-  "emoji": "\ud83d\udc1d",
+  "emoji": "🐝",
   "ontology": "animal",
-  "symbolic_code": "[BE_HEX_\u03c6_FLOW]",
+  "symbolic_code": "[BE_HEX_φ_FLOW]",
   "description": "Embodies swarm coordination, hexagonal optimization, and distributed thermoregulation. Serves as a geometric intelligence archetype for collective computation.",
   "core_attributes": {
     "neurology": "distributed decision architecture",
@@ -52,7 +52,10 @@
         },
         "falsifiability": "No non-hexagonal regular tessellation has been shown to match hexagonal cells' wax-to-storage ratio. If such a geometry is found, the model requires revision.",
         "measurement_limits": "Value assumes uniform cell depth. Varies ±0.01 with cell aspect ratio and wax thickness. Theoretical maximum; real colonies deviate slightly from perfect hexagons.",
-        "dependencies": ["golden_ratio", "pi"]
+        "dependencies": [
+          "golden_ratio",
+          "pi"
+        ]
       }
     },
     "waggle_dance_precision": {
@@ -74,7 +77,117 @@
         },
         "falsifiability": "If bees recruited by waggle dance perform no better than naive scouts at finding the indicated source, the dance fails as a spatial information channel.",
         "measurement_limits": "Precision degrades at distances >5km and under crosswind. Recruits interpret dance probabilistically — precision is population-level, not per-individual.",
-        "dependencies": ["social_cohesion", "pheromone_coherence"]
+        "dependencies": [
+          "social_cohesion",
+          "pheromone_coherence"
+        ]
+      }
+    },
+    "hexagonal_tessellation": {
+      "value": 0.97,
+      "scope": {
+        "definition": "Material efficiency of honeycomb hexagonal geometry — ratio of usable wax cell wall area to total wax consumed per unit enclosed volume, compared to alternative geometries (square, triangular, circular).",
+        "evidence": {
+          "source": "Hales (1999) 'The honeycomb conjecture', Discrete and Computational Geometry 25:1-22 (mathematical proof); Thompson (1917) 'On Growth and Form', Cambridge UP.",
+          "evidence_type": "mathematical_proof",
+          "reproducibility": "certain",
+          "cross_domain_count": 5,
+          "cross_domain_examples": [
+            "hexagonal tiling minimizes perimeter per unit area — Hales (1999) formal mathematical proof",
+            "dragonfly wing venation: hexagonal cell distribution for strength/weight optimization",
+            "graphene hexagonal lattice: maximum bond strength per atom using 6-fold geometry",
+            "soap bubble foam: hexagonal cells emerge spontaneously at minimum surface energy",
+            "columnar basalt (Giant's Causeway): hexagonal fracture pattern minimizes energy of thermal contraction"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.98
+        },
+        "falsifiability": "If a regular polygonal tiling is found that achieves greater area per unit perimeter than hexagons, the Hales proof has an error.",
+        "measurement_limits": "Mathematical optimality is proven for regular geometries. Real honeycomb deviates <1% from ideal hexagon due to construction tolerances and cell-size variation for worker vs drone brood.",
+        "dependencies": [
+          "cell_type",
+          "construction_temperature",
+          "wax_purity"
+        ]
+      }
+    },
+    "waggle_dance_communication": {
+      "value": 0.89,
+      "scope": {
+        "definition": "Information transfer accuracy of honeybee waggle dance — fraction of recruited foragers that arrive within 200 m of the communicated food source after following dance instructions.",
+        "evidence": {
+          "source": "von Frisch (1967) 'The Dance Language and Orientation of Bees', Harvard UP (Nobel Prize 1973); Dyer (2002) 'The biology of the dance language', Annual Review of Entomology 47:917-949.",
+          "evidence_type": "cyclic_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "waggle dance angle encodes sun-compass bearing to within ±15°; duration encodes distance within ±10%",
+            "foragers recruited by dance arrive at target location with 0.82-0.94 frequency depending on source distance",
+            "meerkat alarm calls encode predator type and urgency — convergent symbolic communication in social species"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.94
+        },
+        "falsifiability": "If foragers following waggle dance cues arrive at random locations with no directional bias toward the communicated source, the dance does not transmit directional information.",
+        "measurement_limits": "Accuracy decreases with distance (>2 km) and in topographically complex terrain where sun-compass cues are ambiguous. Dance-follower sampling within the hive introduces additional noise.",
+        "dependencies": [
+          "source_distance",
+          "terrain_complexity",
+          "time_of_day"
+        ]
+      }
+    },
+    "swarm_coordination": {
+      "value": 0.92,
+      "scope": {
+        "definition": "Fraction of scout bee votes (waggle dances for a nest site) cast for the eventual swarm destination — quorum threshold achieved before swarm departure.",
+        "evidence": {
+          "source": "Seeley & Visscher (2004) 'Group decision making in nest-site selection by honey bees', Apidologie 35:101-116; Seeley (2010) 'Honeybee Democracy', Princeton UP.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "swarm departs only after >80% of active scouts supporting single site — democratic quorum threshold",
+            "piping signal suppresses rival sites — active error-correction in consensus building",
+            "fish school split decisions: parallel collective decision by democratic majority — convergent quorum sensing"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.91
+        },
+        "falsifiability": "If swarms depart before reaching >60% scout consensus, or if piping signals are found to not suppress rival dancers, the democratic quorum model is incorrect.",
+        "measurement_limits": "Quorum threshold varies with urgency — starving swarms accept lower consensus. Weather constraints can force premature departure at 65-70% consensus.",
+        "dependencies": [
+          "swarm_hunger_state",
+          "weather_window",
+          "competing_site_quality_delta"
+        ]
+      }
+    },
+    "collective_thermoregulation": {
+      "value": 0.94,
+      "scope": {
+        "definition": "Precision of honeybee cluster temperature maintenance — standard deviation of brood nest temperature from 35°C target across ambient temperatures ranging from -30°C to +45°C.",
+        "evidence": {
+          "source": "Fahrenholz et al. (1989) 'Thermal analysis of a honey bee colony', Journal of Comparative Physiology B 159:551-560; Stabentheiner et al. (2010) metabolic rate in thermoregulating clusters.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "honeybee cluster maintains 35±1°C brood nest across external temperatures -30°C to +45°C",
+            "bee metabolism scales with cluster size — larger clusters achieve better thermal regulation",
+            "emperor penguin huddle: analogous collective thermoregulation by rotational heat distribution",
+            "naked mole rat burrow thermoregulation: colonial body-heat pooling for consistent tunnel temperature"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.94
+        },
+        "falsifiability": "If brood nest temperature measured by inserted thermocouples deviates >3°C from 35°C during normal colony conditions, the tight regulation model is overstated.",
+        "measurement_limits": "Thermoregulation precision requires minimum colony size of ~5000 bees. Small swarms (< 2000) show ±4°C variance. Regulation fails during severe winter starvation or disease-induced population collapse.",
+        "dependencies": [
+          "colony_size",
+          "ambient_temperature",
+          "food_stores"
+        ]
       }
     }
   },

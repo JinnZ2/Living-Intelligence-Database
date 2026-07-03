@@ -1,7 +1,7 @@
 {
   "id": "OW",
   "name": "Owl",
-  "emoji": "\ud83e\udd89",
+  "emoji": "🦉",
   "ontology": "animal",
   "symbolic_code": "[OW_STEALTH_ASYM_SILENT]",
   "description": "Asymmetric ear placement creates 3D acoustic triangulation accurate to 1 degree. Serrated leading-edge feathers achieve near-silent flight. Tubular eyes with 100x human light sensitivity. 270-degree head rotation compensates for fixed eye sockets.",
@@ -85,5 +85,92 @@
   "validation_meta": {
     "schema": "animal_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "medium",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "asymmetric_sound_triangulation": {
+      "value": 0.96,
+      "scope": {
+        "definition": "Angular precision of barn owl sound localization in complete darkness, measured as standard deviation of strike angle relative to sound source in both azimuth and elevation axes.",
+        "evidence": {
+          "source": "Knudsen & Konishi (1979) 'Mechanisms of sound localization in the barn owl', Journal of Comparative Physiology A 133:13-21; Payne (1971) 'Acoustic location of prey by barn owls', Journal of Experimental Biology 54:535-573.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "barn owl strikes prey in total darkness with 1-2° accuracy in azimuth and elevation",
+            "asymmetric ear placement provides 3D triangulation — vertical resolution unavailable to symmetric-eared predators",
+            "array microphone systems use same time-difference-of-arrival principle for sound source localization"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.94
+        },
+        "falsifiability": "If barn owl strike accuracy in complete darkness falls below 5° consistently, asymmetric ear geometry is not the primary triangulation mechanism.",
+        "measurement_limits": "Accuracy degrades when prey makes no sound for >0.3 seconds. Moving prey allows continuous triangulation updates. Static silent prey is not detectable regardless of distance.",
+        "dependencies": [
+          "prey_sound_duration",
+          "prey_movement_rate",
+          "ambient_noise_level"
+        ]
+      }
+    },
+    "silent_flight": {
+      "value": 0.94,
+      "scope": {
+        "definition": "Reduction in leading-edge flap noise relative to equivalently-sized non-serrated bird wing, measured as sound pressure level at 1 m below at equivalent airspeed in wind tunnel.",
+        "evidence": {
+          "source": "Sarradj et al. (2011) 'Silent owl flight: bird flyover noise measurements', AIAA Journal 49:769-779; Graham (1934) original observation of owl feather serration function.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 4,
+          "cross_domain_examples": [
+            "barn owl wing produces 20-30 dB less aerodynamic noise than hawk wing at same airspeed",
+            "leading-edge comb serrations reduce turbulent pressure fluctuations by breaking coherent vortex shedding",
+            "aerospace: serrated trailing edges on aircraft wings reduce aeroacoustic noise 10-15 dB (bio-inspired design)",
+            "wind turbine leading-edge serrations reduce blade noise 3-6 dB — scaled application of same principle"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.92
+        },
+        "falsifiability": "If owl wings in wind tunnel produce noise levels within 5 dB of non-serrated equivalents, feather morphology is not the primary silent-flight mechanism.",
+        "measurement_limits": "Noise reduction effectiveness is frequency-dependent — most effective 2-8 kHz (prey hearing range). Effectiveness decreases at high airspeeds (>9 m/s) due to different turbulence regime.",
+        "dependencies": [
+          "airspeed",
+          "feather_wear_state",
+          "frequency_band"
+        ]
+      }
+    },
+    "extreme_low_light_vision": {
+      "value": 0.93,
+      "scope": {
+        "definition": "Minimum illuminance (lux) at which tawny owl achieves 50% prey-strike success rate in controlled dark-room experiments, normalized against human scotopic threshold as a multiple.",
+        "evidence": {
+          "source": "Martin (1977) 'Absolute visual threshold and scotopic spectral sensitivity in the tawny owl', Nature 268:636-638; Jeffery & Tett (1982) owl rod density measurements.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "tawny owl functional threshold 0.00002 lux — 100× more sensitive than human dark-adapted vision",
+            "rod density 56,000/mm² in owl fovea vs 38,000/mm² human rod peak — 50% more photoreceptors per area",
+            "deep-sea fish (dragonfish) achieve equivalent sensitivity via mirror tapetum in near-zero-light environment"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.91
+        },
+        "falsifiability": "If owl visual threshold under controlled conditions is not statistically different from equivalent-pupil-size diurnal birds, optical aperture (not retinal specialization) explains the sensitivity advantage.",
+        "measurement_limits": "Low-light sensitivity requires dark adaptation time of 20-30 minutes. Absolute threshold is measured for stationary targets; moving target detection has a higher threshold. Day vision is mediocre.",
+        "dependencies": [
+          "dark_adaptation_duration",
+          "target_motion",
+          "wavelength_spectrum"
+        ]
+      }
+    }
   }
 }

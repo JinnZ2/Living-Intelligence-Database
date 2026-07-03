@@ -1,17 +1,17 @@
 {
   "id": "SILICON_LAT",
   "name": "Silicon Lattice",
-  "emoji": "\ud83d\udd2c",
+  "emoji": "🔬",
   "ontology": "crystal",
-  "symbolic_code": "[SI_5D_TETRA_\u03c6_ENCODE]",
+  "symbolic_code": "[SI_5D_TETRA_φ_ENCODE]",
   "description": "Silicon sp3 tetrahedral geometry at 109.47 degrees. 5D encoding via femtosecond laser: X, Y, Z, birefringence orientation, void size. Theoretical density 10^15 bits/cm3. Phi-spaced shell radii with super-exponential coherence decay.",
   "core_attributes": {
-    "pattern": "tetrahedral sp3 hybridization, 5D femtosecond inscription, \u03c6-shell spacing",
+    "pattern": "tetrahedral sp3 hybridization, 5D femtosecond inscription, φ-shell spacing",
     "structure": "diamond cubic",
     "lattice_type": "tetrahedral sp3",
     "resonance_properties": {
       "tetrahedral_angle": 109.47,
-      "shell_spacing": "\u03c6^n",
+      "shell_spacing": "φ^n",
       "coherence_decay": "super-exponential",
       "bits_per_unit": 3
     },
@@ -52,5 +52,39 @@
   "validation_meta": {
     "schema": "crystal_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "high",
+    "adaptability": "low",
+    "archetype": "chassis"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "electron_mobility": {
+      "value": 0.93,
+      "scope": {
+        "definition": "Electron drift mobility in high-purity silicon at 300 K as fraction of theoretical phonon-scattering limit — measured by Hall effect in float-zone silicon with dopant density < 10¹²/cm³.",
+        "evidence": {
+          "source": "Sze & Ng (2006) 'Physics of Semiconductor Devices', 3rd ed., Wiley; Canali et al. (1975) 'Electron and hole drift velocity measurements in silicon', IEEE Transactions on Electron Devices.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "certain",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "silicon electron mobility 1400 cm²/Vs at 300 K — within 7% of theoretical phonon-limited maximum",
+            "gallium arsenide: 8500 cm²/Vs — 6× higher mobility enabling GHz-range transistors",
+            "graphene: 200,000 cm²/Vs on hBN substrate — 140× silicon — 2D electron gas removes phonon scattering"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.92
+        },
+        "falsifiability": "If measured silicon Hall mobility consistently exceeds 1600 cm²/Vs at 300 K in multiple independent labs, the phonon scattering limit needs revision.",
+        "measurement_limits": "Mobility is strongly temperature and dopant-concentration dependent — drops 50% for dopant density >10¹⁵/cm³. Values apply to bulk silicon; thin films show reduced mobility from surface scattering.",
+        "dependencies": [
+          "temperature",
+          "dopant_concentration",
+          "crystal_orientation"
+        ]
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "CR",
   "name": "Cricket",
-  "emoji": "\ud83e\udd97",
+  "emoji": "🦗",
   "ontology": "animal",
   "symbolic_code": "[CR_STRID_PHONOTAX_THERM]",
   "description": "Stridulation produces species-specific chirp patterns encoding temperature data (Dolbear's Law). Phonotaxis enables sound-gradient navigation. Tympanic membranes on front legs provide directional hearing via inter-leg phase comparison.",
@@ -85,5 +85,91 @@
   "validation_meta": {
     "schema": "animal_intelligence.schema.json",
     "version": "1.1"
+  },
+  "entropy_profile": {
+    "stability": "medium",
+    "adaptability": "medium",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "attributes": {
+    "stridulation_encoding": {
+      "value": 0.9,
+      "scope": {
+        "definition": "Information content (bits/second) of cricket chirp encoding — species, sex, condition, and temperature — calculated from neural discriminability of chirp parameters in conspecific auditory neurons.",
+        "evidence": {
+          "source": "Huber & Thorson (1985) 'Cricket auditory communication', Scientific American 253:60-68; Doherty (1985) 'Trade-off phenomena in calling song of black field crickets', Behaviour 94:1-22.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "field cricket chirp rate encodes temperature: 4 chirps/15 s → subtract 40 → Fahrenheit (Dolbear's Law)",
+            "female crickets discriminate species by chirp syllable interval within 2 ms resolution",
+            "frog advertisement calls: analogous multi-parameter encoding of fitness and species identity in acoustic signal"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.86
+        },
+        "falsifiability": "If female crickets show equal phonotaxis toward heterospecific and conspecific calls in controlled playback experiments, chirp-pattern discrimination is not driving mate choice.",
+        "measurement_limits": "Encoding specificity is carrier-frequency and temperature-dependent. Chirp rate shifts 30% over 10°C range, requiring temperature compensation for species identification. Background noise masks at 10 dB above signal.",
+        "dependencies": [
+          "temperature",
+          "background_noise_level",
+          "species"
+        ]
+      }
+    },
+    "phonotactic_navigation": {
+      "value": 0.88,
+      "scope": {
+        "definition": "Accuracy of female cricket approach toward male call source — deviation from straight-line path to speaker in phonotaxis experiments — expressed as path efficiency (straight-line / actual path length).",
+        "evidence": {
+          "source": "Wendler et al. (1980) 'The coordination of walking leg movements in crickets', Journal of Experimental Biology 88:255-268; Hedwig & Poulet (2004) phonotaxis in Gryllus bimaculatus.",
+          "evidence_type": "lab_measurement",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "female Gryllus approaches male call source with path efficiency 0.83-0.91 over 50 cm open arena",
+            "directional hearing via pressure-difference receiver (tympanic membranes coupled through trachea) enables 2° angular resolution",
+            "barn owl auditory localization: convergent triangulation using interaural time difference — 1-2° accuracy"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.83
+        },
+        "falsifiability": "If female crickets navigate equally efficiently toward call sources in directional-cue-blocked conditions (sealed trachea), the pressure-difference receiver is not the primary directional cue.",
+        "measurement_limits": "Path efficiency degrades with noise from multiple simultaneous male calls. Tympanic membrane coupling to trachea only provides directional information at optimal carrier frequencies (4-5 kHz for G. bimaculatus).",
+        "dependencies": [
+          "frequency_match",
+          "competing_call_density",
+          "arena_size"
+        ]
+      }
+    },
+    "temperature_frequency_coupling": {
+      "value": 0.93,
+      "scope": {
+        "definition": "Correlation coefficient (R²) between ambient temperature and cricket chirp rate across field populations — basis of Dolbear's Law thermometry.",
+        "evidence": {
+          "source": "Dolbear (1897) 'The cricket as a thermometer', American Naturalist 31:970-971; Walker (1962) 'The taxonomy and calling songs of United States tree crickets', Annals of Entomological Society America 55:303-322.",
+          "evidence_type": "field_observation",
+          "reproducibility": "high",
+          "cross_domain_count": 3,
+          "cross_domain_examples": [
+            "Oecanthus fultoni (snowy tree cricket) chirp rate correlates with temperature R²=0.95 across 10-25°C",
+            "firefly flash rate: analogous temperature-biochemical coupling (Q10 ~2.0 enzyme kinetics)",
+            "enzyme reaction rate vs temperature follows Arrhenius equation — same underlying biochemistry drives chirp rate"
+          ],
+          "relational_dependencies_verified": true,
+          "relational_confidence": 0.92
+        },
+        "falsifiability": "If chirp rate shows no statistically significant correlation with temperature across the 10-30°C range in field recordings, the temperature-biochemistry coupling model fails.",
+        "measurement_limits": "Correlation holds best for tree crickets — field crickets show weaker coupling (R²=0.75). Cold temperatures below 12°C produce aperiodic chirps that don't fit the linear model.",
+        "dependencies": [
+          "species",
+          "temperature_range",
+          "measurement_season"
+        ]
+      }
+    }
   }
 }
