@@ -266,3 +266,72 @@
     }
   }
 }
+{
+  "meta": { "...": "same as before, version 1.2" },
+
+  "entities": [
+    // ... existing 14 entities unchanged ...
+
+    {
+      "id": "QPROC",
+      "emoji": "🖥️",
+      "name": "Quantum Processor",
+      "ontology": "computation",
+      "symbolic_code": "[QPROC_SUPERPOSITION_ENTANGLE]",
+      "attributes": {
+        "pattern": "qubit entanglement, noise‑immune paths, amplitude encoding",
+        "efficiency_factor": 0.92
+      },
+      "links": [
+        { "rel": "resonance", "to": "PLASMA_FIELD" },
+        { "rel": "geometry_link", "to": "TORUS" },
+        { "rel": "computational_mirror", "to": "TLP" },
+        { "rel": "synergy", "to": "OC" }
+      ]
+    },
+    {
+      "id": "TLP",
+      "emoji": "🧮",
+      "name": "Ternary Logic Processor",
+      "ontology": "computation",
+      "symbolic_code": "[TLP_BALANCED_TRIT_φ]",
+      "attributes": {
+        "pattern": "balanced ternary, symmetric error handling, φ‑weighted gates",
+        "efficiency_factor": 0.89
+      },
+      "links": [
+        { "rel": "geometry_link", "to": "SPIRAL" },
+        { "rel": "energy_coupling", "to": "CRYSTAL_LATTICE" },
+        { "rel": "computational_mirror", "to": "QPROC" },
+        { "rel": "synergy", "to": "BE" }
+      ]
+    }
+  ],
+
+  "relations": [
+    // ... existing 7 relations unchanged ...
+    { "source": "QPROC", "target": "TLP", "relation": "computational_mirror" },
+    { "source": "QPROC", "target": "PLASMA_FIELD", "relation": "resonance" },
+    { "source": "TLP", "target": "CRYSTAL_LATTICE", "relation": "energy_coupling" },
+    { "source": "QPROC", "target": "OC", "relation": "synergy" },
+    { "source": "TLP", "target": "BE", "relation": "synergy" },
+    { "source": "QPROC", "target": "TORUS", "relation": "geometry_link" },
+    { "source": "TLP", "target": "SPIRAL", "relation": "geometry_link" }
+  ],
+
+  "statistics": {
+    "total_entities": 16,
+    "total_relations": 14,
+    "by_ontology": {
+      "animal": 2,
+      "plant": 2,
+      "crystal": 2,
+      "plasma": 2,
+      "energy": 2,
+      "shape": 2,
+      "temporal": 2,
+      "computation": 2
+    }
+  }
+}
+
