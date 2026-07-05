@@ -335,3 +335,255 @@
   }
 }
 
+{
+  "id": "VORTEX",
+  "emoji": "🌪️",
+  "name": "Vortex",
+  "ontology": "fluid",
+  "symbolic_code": "[VORTEX_φ_SPIN]",
+  "attributes": {
+    "pattern": "coherent rotation, angular momentum conservation, energy funnel",
+    "efficiency_factor": 0.88
+  },
+  "links": [
+    {"rel": "geometry_link", "to": "SPIRAL"},
+    {"rel": "resonance", "to": "FLUX"},
+    {"rel": "synergy", "to": "TURBULENCE"}
+  ]
+},
+{
+  "id": "TURBULENCE",
+  "emoji": "🌊",
+  "name": "Turbulence",
+  "ontology": "fluid",
+  "symbolic_code": "[TURB_ENERGY_DISSIPATION]",
+  "attributes": {
+    "pattern": "chaotic mixing, energy cascade, multi-scale eddies",
+    "efficiency_factor": 0.65
+  },
+  "links": [
+    {"rel": "geometry_link", "to": "FRACTAL_BRANCH"},
+    {"rel": "resonance", "to": "LIGHTNING"},
+    {"rel": "synergy", "to": "VORTEX"}
+  ]
+},
+{
+  "id": "AGENT_SWARM",
+  "emoji": "🕊️",
+  "name": "Agent Swarm",
+  "ontology": "social",
+  "symbolic_code": "[AGENT_SWARM_STIGMERGY]",
+  "attributes": {
+    "pattern": "decentralised decision, stigmergic coordination, emergent consensus",
+    "efficiency_factor": 0.91
+  },
+  "links": [
+    {"rel": "synergy", "to": "CONSENSUS"},
+    {"rel": "resonance", "to": "BE"},
+    {"rel": "geometry_link", "to": "TREE_GRAPH"}
+  ]
+},
+{
+  "id": "CONSENSUS",
+  "emoji": "🤝",
+  "name": "Consensus Field",
+  "ontology": "social",
+  "symbolic_code": "[CONSENSUS_φ_CONVERGENCE]",
+  "attributes": {
+    "pattern": "iterative agreement, belief propagation, symmetry breaking",
+    "efficiency_factor": 0.86
+  },
+  "links": [
+    {"rel": "synergy", "to": "AGENT_SWARM"},
+    {"rel": "resonance", "to": "PHI"},
+    {"rel": "energy_coupling", "to": "MAGNETIC_FIELD"}
+  ]
+},
+{
+  "id": "GRAVITY_WELL",
+  "emoji": "🕳️",
+  "name": "Gravity Well",
+  "ontology": "gravitational",
+  "symbolic_code": "[GRAVITY_WELL_CURVATURE]",
+  "attributes": {
+    "pattern": "attractive potential, geodesic convergence, time dilation",
+    "efficiency_factor": 1.0
+  },
+  "links": [
+    {"rel": "geometry_link", "to": "TORUS"},
+    {"rel": "resonance", "to": "FOLD"},
+    {"rel": "synergy", "to": "SPACETIME_CURVE"}
+  ]
+},
+{
+  "id": "SPACETIME_CURVE",
+  "emoji": "〰️",
+  "name": "Spacetime Curve",
+  "ontology": "gravitational",
+  "symbolic_code": "[SPACETIME_CURVE_GEODESIC]",
+  "attributes": {
+    "pattern": "metric deformation, gravitational lensing, causal structure",
+    "efficiency_factor": 0.99
+  },
+  "links": [
+    {"rel": "geometry_link", "to": "SPIRAL"},
+    {"rel": "resonance", "to": "ECHO"},
+    {"rel": "synergy", "to": "GRAVITY_WELL"}
+  ]
+}
+
+{ "source": "VORTEX", "target": "TURBULENCE", "relation": "synergy" },
+{ "source": "AGENT_SWARM", "target": "CONSENSUS", "relation": "synergy" },
+{ "source": "GRAVITY_WELL", "target": "SPACETIME_CURVE", "relation": "synergy" },
+{ "source": "VORTEX", "target": "SPIRAL", "relation": "geometry_link" },
+{ "source": "TURBULENCE", "target": "FRACTAL_BRANCH", "relation": "geometry_link" },
+{ "source": "AGENT_SWARM", "target": "TREE_GRAPH", "relation": "geometry_link" },
+{ "source": "CONSENSUS", "target": "MAGNETIC_FIELD", "relation": "energy_coupling" },
+{ "source": "GRAVITY_WELL", "target": "TORUS", "relation": "geometry_link" },
+{ "source": "SPACETIME_CURVE", "target": "SPIRAL", "relation": "geometry_link" }
+
+from resilience_lab import (
+    Topology, GridTopology, HexagonalGrid, RandomGraph,
+    Dynamics, ThermalDiffusion,
+    Constraint, EnergyConservation,
+    Perturbation, LocalizedHeat,
+    Metric, SignalIntegrity, Coherence, EntropyProduction,
+    FailureModel, PhaseTransition,
+    Experiment
+)
+import math
+
+# New dynamics / constraints / metrics / failure models to match the ring
+
+class WavePropagation(Dynamics):
+    """Simplified wave equation on graph."""
+    def step(self, state, topology, constraints, dt):
+        # state is dict: node -> (displacement, velocity)
+        # but we'll keep it simple: just a placeholder
+        return state
+
+class CascadingFailure(FailureModel):
+    def assess(self, metric_history):
+        # triggers when a sharp drop occurs after a plateau
+        return {"failed": False}
+
+class HysteresisFailure(FailureModel):
+    def assess(self, metric_history):
+        return {"failed": False}
+
+class PiezoelectricResonance(Metric):
+    def measure(self, state, topology):
+        return 0.5
+
+class VortexDynamics(Dynamics):
+    # etc.
+    pass
+
+
+import json
+from typing import Dict, List
+from resilience_lab import Experiment, SweepEngine
+from gb_explorer import (  # if you want to reuse the bridge components
+    BandEnvironment, QuantumBridge, TernaryBridge, LatticeSimulator
+)
+
+# Registry: symbolic_code -> (component_type, class_or_factory)
+COMPONENT_REGISTRY = {
+    "[QPROC_SUPERPOSITION_ENTANGLE]": ("paradigm", QuantumBridge),
+    "[TLP_BALANCED_TRIT_φ]": ("paradigm", TernaryBridge),
+    "[BE_HEX_φ_FLOW]": ("topology", lambda: HexagonalGrid(radius=4)),
+    "[OC_TORUS_φ_PHASE]": ("topology", lambda: RandomGraph(20, 0.2)),
+    "[MY_NETWORK_SYMBIOSIS]": ("topology", lambda: GridTopology(10,10)),
+    "[ROOT_NET_TREE_GRAPH_FLUX]": ("topology", lambda: GridTopology(10,10)),
+    "[CRY_HEX_RESONANCE]": ("chip_arch", lambda: ChipArchitecture("hexagonal")),
+    "[QUARTZ_PIEZO_HARMONY]": ("metric", PiezoelectricResonance),
+    "[PLASMA_TORUS_FIELD]": ("dynamics", ThermalDiffusion),
+    "[LIGHTNING_DISCHARGE_PATH]": ("failure_model", CascadingFailure),
+    "[MAG_FIELD_LINE_LOOP]": ("constraint", EnergyConservation),
+    "[FLUX_FIELD_FLOW]": ("metric", EntropyProduction),
+    "[TORUS_FLOW_CIRCULATION]": ("topology", lambda: TorusTopology()),   # assume we define it
+    "[SPIRAL_GROWTH_SEQUENCE]": ("topology", lambda: LatticeSimulator("fibonacci_spiral")),
+    "[ECHO_HARMONIC_MEMORY]": ("failure_model", HysteresisFailure),
+    "[FOLD_TIME_LOOP]": ("dynamics", TimeReversalDynamics),  # placeholder
+    "[VORTEX_φ_SPIN]": ("dynamics", VortexDynamics),
+    "[TURB_ENERGY_DISSIPATION]": ("dynamics", TurbulenceDynamics),
+    "[AGENT_SWARM_STIGMERGY]": ("topology", lambda: AgentSwarmTopology(50)),
+    "[CONSENSUS_φ_CONVERGENCE]": ("dynamics", ConsensusDynamics),
+    "[GRAVITY_WELL_CURVATURE]": ("constraint", GravityWellConstraint),
+    "[SPACETIME_CURVE_GEODESIC]": ("topology", lambda: SpacetimeTopology())
+}
+
+def build_explorer_from_ring(json_path: str) -> List[Experiment]:
+    with open(json_path) as f:
+        ring = json.load(f)
+
+    entities = {e["id"]: e for e in ring["entities"]}
+    experiments = []
+
+    # For each synergy pair, build a comparative experiment
+    for rel in ring["relations"]:
+        if rel["relation"] != "synergy":
+            continue
+        src_id = rel["source"]
+        tgt_id = rel["target"]
+        src = entities[src_id]
+        tgt = entities[tgt_id]
+
+        # Attempt to build an experiment for each.
+        # Each experiment will use a common perturbation and metrics.
+        # We need to instantiate topology, dynamics, etc. from the entities.
+        # For simplicity, assume each entity provides a "topology" and optionally
+        # a "dynamics" and "failure_model". If missing, use defaults.
+
+        def get_component(entity, type_tag):
+            code = entity["symbolic_code"]
+            if code in COMPONENT_REGISTRY and COMPONENT_REGISTRY[code][0] == type_tag:
+                factory = COMPONENT_REGISTRY[code][1]
+                return factory() if callable(factory) else factory
+            return None
+
+        topo_src = get_component(src, "topology") or GridTopology(10,10)
+        topo_tgt = get_component(tgt, "topology") or GridTopology(10,10)
+
+        dyn_src = get_component(src, "dynamics") or ThermalDiffusion()
+        dyn_tgt = get_component(tgt, "dynamics") or ThermalDiffusion()
+
+        # Common perturbation: a localized heat at a central node
+        perturbation_src = LocalizedHeat(node=list(topo_src.nodes())[0], energy=100, time=2.0)
+        perturbation_tgt = LocalizedHeat(node=list(topo_tgt.nodes())[0], energy=100, time=2.0)
+
+        # Common metrics
+        metrics = {"integrity": SignalIntegrity(), "coherence": Coherence()}
+
+        # Failure model: use PhaseTransition by default
+        fail_model = PhaseTransition(metric_name="integrity", threshold=0.4)
+
+        # Build two experiments
+        exp_src = Experiment(
+            topology=topo_src,
+            dynamics=dyn_src,
+            perturbations=[perturbation_src],
+            metrics=metrics,
+            failure_model=fail_model,
+            constraints=[],
+            total_time=50.0
+        )
+        exp_tgt = Experiment(
+            topology=topo_tgt,
+            dynamics=dyn_tgt,
+            perturbations=[perturbation_tgt],
+            metrics=metrics,
+            failure_model=fail_model,
+            constraints=[],
+            total_time=50.0
+        )
+
+        experiments.extend([exp_src, exp_tgt])
+
+    return experiments
+
+if __name__ == "__main__":
+    experiments = build_explorer_from_ring("symmetry_ring.json")
+    sweeper = SweepEngine()
+    results = sweeper.run_sweep(lambda: experiments)   # pass them as a list
+    sweeper.summary()
