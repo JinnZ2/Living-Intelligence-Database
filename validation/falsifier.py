@@ -128,14 +128,27 @@ def falsify(entity_id: str,
     if ontology is None:
         ontology = load_ontology(ontology_path)
 
-    entity = None
+    index_entry = None
     for e in ontology.get("entities", []):
         if e["id"] == entity_id:
-            entity = e
+            index_entry = e
             break
 
-    if entity is None:
+    if index_entry is None:
         return {"error": f"Entity {entity_id} not found."}
+
+    # Load the full entity file so attributes/scope blocks are available
+    entity_path = index_entry.get("path")
+    if entity_path:
+        repo_root = Path(__file__).parent.parent
+        full_path = repo_root / entity_path
+        try:
+            with open(full_path, "r") as f:
+                entity = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            entity = index_entry
+    else:
+        entity = index_entry
 
     if attribute_name is None:
         for attr_name, attr_val in entity.get("attributes", {}).items():

@@ -20,8 +20,25 @@ def load_ontology(path):
     with open(path, "r") as f:
         return json.load(f)
 
-def audit(ontology: dict) -> dict:
-    entities = ontology.get("entities", [])
+def _load_full_entities(ontology: dict, repo_root: Path) -> list:
+    """Replace thin index entries with full entity files that carry attributes."""
+    full = []
+    for e in ontology.get("entities", []):
+        entity_path = e.get("path")
+        if entity_path:
+            try:
+                with open(repo_root / entity_path, "r") as f:
+                    full.append(json.load(f))
+                continue
+            except (OSError, json.JSONDecodeError):
+                pass
+        full.append(e)
+    return full
+
+def audit(ontology: dict, repo_root: Path = None) -> dict:
+    if repo_root is None:
+        repo_root = Path(__file__).parent.parent
+    entities = _load_full_entities(ontology, repo_root)
     report = {
         "total_entities": len(entities),
         "unscoped_numerics": [],
@@ -52,7 +69,9 @@ def audit(ontology: dict) -> dict:
                     "note": "Has value but no scope block."
                 })
             elif is_scoped(attr_val):
-                conf = attr_val["scope"]["evidence"]["confidence"]
+                evidence = attr_val["scope"].get("evidence", {})
+                conf = evidence.get("relational_confidence",
+                       attr_val["scope"].get("relational_confidence", 0.5))
                 report["confidence_distribution"][round(conf, 2)] += 1
 
         # Noun pretenders
@@ -104,10 +123,11 @@ def audit(ontology: dict) -> dict:
     return report
 
 if __name__ == "__main__":
+    repo_root = Path(__file__).parent.parent
     if len(sys.argv) > 1:
         path = sys.argv[1]
     else:
-        path = Path(__file__).parent.parent / "ontology_index.json"
+        path = repo_root / "ontology_index.json"
     ontology = load_ontology(path)
-    report = audit(ontology)
+    report = audit(ontology, repo_root=repo_root)
     print(json.dumps(report, indent=2))
