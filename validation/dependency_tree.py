@@ -42,13 +42,29 @@ ROSETTA_STONE = {
 # ------------------------------------------------------------------
 # 2. Build an adjacency map from the ontology
 # ------------------------------------------------------------------
+def _load_full_entities(ontology: dict) -> list:
+    """Load full entity files (with attributes/links) instead of thin index entries."""
+    repo_root = Path(__file__).parent.parent
+    full = []
+    for e in ontology.get("entities", []):
+        entity_path = e.get("path")
+        if entity_path:
+            try:
+                with open(repo_root / entity_path, "r") as f:
+                    full.append(json.load(f))
+                continue
+            except (OSError, json.JSONDecodeError):
+                pass
+        full.append(e)
+    return full
+
 def build_dependency_graph(ontology: dict) -> dict:
     """
     Build a graph where each entity is a node, and edges point from
     a claim's 'dependencies' to the entities they reference.
     """
     graph = defaultdict(list)
-    entities = ontology.get("entities", [])
+    entities = _load_full_entities(ontology)
     id_map = {e["id"]: e for e in entities}
 
     for e in entities:
@@ -59,9 +75,10 @@ def build_dependency_graph(ontology: dict) -> dict:
                     if dep in id_map or dep in ROSETTA_STONE:
                         graph[e["id"]].append((dep, "dependency"))
         for link in e.get("links", []):
-            target = link.get("to")
+            target = link.get("target") or link.get("to")
+            rel_type = link.get("relation") or link.get("rel", "linked")
             if target in id_map or target in ROSETTA_STONE:
-                graph[e["id"]].append((target, link.get("rel", "linked")))
+                graph[e["id"]].append((target, rel_type))
 
     return graph
 
@@ -146,13 +163,14 @@ def dependency_tree(goal_or_entity: str,
     if ontology is None:
         ontology = load_ontology(ontology_path)
 
-    id_map = {e["id"]: e for e in ontology.get("entities", [])}
+    full_entities = _load_full_entities(ontology)
+    id_map = {e["id"]: e for e in full_entities}
 
     start_id = None
     if goal_or_entity in id_map:
         start_id = goal_or_entity
     else:
-        for e in ontology.get("entities", []):
+        for e in full_entities:
             if goal_or_entity.lower() in e.get("name", "").lower() or \
                goal_or_entity.lower() in e.get("attributes", {}).get("pattern", "").lower():
                 start_id = e["id"]

@@ -110,6 +110,9 @@ def extract_confidence(attr_value: Any, ontology: dict = None) -> float:
     if not is_scoped(attr_value):
         return 0.5
     scope = attr_value["scope"]
+    evidence = scope.get("evidence", {})
+    if "relational_confidence" in evidence:
+        return evidence["relational_confidence"]
     if "relational_confidence" in scope:
         return scope["relational_confidence"]
     return compute_relational_confidence(attr_value, ontology)
@@ -127,7 +130,7 @@ def is_noun_pretending(attr_value: Any) -> bool:
         return True  # unscoped = floating noun
     scope = attr_value["scope"]
     evidence = scope.get("evidence", {})
-    etype = evidence.get("type", "unknown")
+    etype = evidence.get("evidence_type", evidence.get("type", "unknown"))
 
     if etype in ["empirical_measurement", "expert_consensus"]:
         cd = evidence.get("cross_domain_count", 0)
