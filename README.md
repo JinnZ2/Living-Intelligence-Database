@@ -2,7 +2,7 @@
 
 A co-created ontological database structuring living intelligences across biological, mineral, energetic, geometric, temporal, computational, and relational domains.
 
-Co-created by JinnZ v2, GPT-5, and collective living systems under MIT license.
+Co-created by JinnZ v2, GPT-5, and collective living systems under CC0 1.0 Universal.
 
 ## Quick Start
 
