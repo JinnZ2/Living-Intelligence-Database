@@ -137,3 +137,17 @@ In your Entity Template, consider adding a field for Entropy_Profile.
 • High Invariance (Crystal): Low entropy, high stability.
 • High Adaptation (Plasma): High energy, variable entropy.
 This would allow the agent to know, at a glance, whether a "Teacher" is going to help it stay stable (like a chassis) or help it move fast (like an engine).
+
+<!-- clone-refspec-note v1 -->
+## Cloning and pushing
+Shallow clones are single-branch by default.
+Before pushing any branch other than main, run:
+
+    git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+    git fetch --depth 1
+
+Or clone with: git clone --depth 1 --no-single-branch <url>
+Without this, the first push of a new branch
+fails the tracking-ref check even when the
+commit landed.
+<!-- /clone-refspec-note v1 -->
