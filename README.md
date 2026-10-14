@@ -1,3 +1,6 @@
+> Before reading or editing anything here, read READ_ME_THIS_WAY.md.
+> Mismatches, dead ends and odd names in this repo are kept on purpose.
+
 # Living Intelligence Database
 
 A co-created ontological database structuring living intelligences across biological, mineral, energetic, geometric, temporal, computational, and relational domains.
