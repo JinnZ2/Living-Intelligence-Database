@@ -1,0 +1,32 @@
+{
+ "note": "blind/package/ is handed over as is. expected.jsonl and this manifest stay out of it. package/lid_reference.jsonl differs from reference/lid_reference.jsonl in exactly one field (named in expected.jsonl); do not use the package copy as the reference.",
+ "built_from": {
+  "reference_sha256": "cdc16a4f9908d6ee4e77b6a322fc33f0c2a0809f88cd952fb62759bd3e1ba9cd",
+  "declared_commit": "7ce237c2beb1ca01b96f29df28c144aded91222c"
+ },
+ "package": {
+  "READING_PROTOCOL.md": {
+   "sha256": "f3e9bbb21aeb7b795e049eee59ede9668718d267f9b9077585c6007c15556df4",
+   "bytes": 2658
+  },
+  "answer_template.json": {
+   "sha256": "96b85288799e4cc4c5c48ce92071e5c57bd0ad694fb98cfa8b270c1b2b21bfa3",
+   "bytes": 2484
+  },
+  "lid_reference.jsonl": {
+   "sha256": "713b78f4c1f46fe76fd325de410b438280b0e7338ccfb493bd65ad6aa000e586",
+   "bytes": 167286
+  },
+  "questions.jsonl": {
+   "sha256": "a10dcf4d4100797945ca87550411a9b6a527aef82051fd677ed1e760a0e29276",
+   "bytes": 1106
+  }
+ },
+ "kept_out_of_the_package": {
+  "expected.jsonl": {
+   "sha256": "899b7c96ae50395d3b26d24feba37dd2302cac9c192b6dad6e3a245ea29de754",
+   "bytes": 7029
+  }
+ },
+ "fields_changed_in_package_reference": 1
+}

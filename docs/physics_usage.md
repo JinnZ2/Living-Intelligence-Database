@@ -52,6 +52,9 @@ One planted wrong record (a copy of ANT `coordination.carrier` with the
 status raised to OBSERVED and the value changed) is refused: its value and
 status differ from the step it cites.
 
+An outside-reader version of this test is packaged under `blind/` (see
+`blind/README.md`); it has not been given to any reader.
+
 Limits of the test: the questions and the expected readings were written by
 the same hand that wrote the answering function, and the function is a
 lookup, not a model. The test shows the reference carries what the protocol
@@ -131,3 +134,9 @@ What the counts show:
 
 No model was trained. Whether these examples change a model is not tested
 here and needs a separate run.
+
+## Source-opening pass
+
+`docs/source_opening_plan.md` (written by `scripts/source_plan.py`) ranks the
+231 unopened sources. It is a plan: nothing was fetched. Status comes from
+reading the source, not from its evidence_type.
