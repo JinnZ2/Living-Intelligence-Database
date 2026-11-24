@@ -1,0 +1,84 @@
+{
+ "snapshot_class": "SUMMARY_ONLY",
+ "note": "Counts and the hold-out list for examples/lid_examples.jsonl. No model was trained. A derivation_path is an ordering of record fields by declared role; it does not claim that one field was derived from another.",
+ "declared": "registry/DECLARED.json, amendment 'physics usage: example export'",
+ "declared_commit": "f8feae990b494c39e9493b92956f14bd7ae83cd5",
+ "sha256": "0ce6016a5a5d2e77e8a219046cf0aab243455ac2569150f502395ac22c90eb4c",
+ "examples": 60,
+ "entities_with_examples": [
+  "ANT",
+  "BEE_NEST_SITE",
+  "MIMOSA",
+  "MY",
+  "QUORUM",
+  "SLIME",
+  "STONE_LEDGER",
+  "VENUS"
+ ],
+ "holdout_entities": [
+  "BEE_NEST_SITE",
+  "MY"
+ ],
+ "holdout_fraction": 0.2,
+ "by_split": {
+  "train": 43,
+  "holdout": 17
+ },
+ "by_kind": {
+  "CONTESTED_LABEL": {
+   "train": 2,
+   "holdout": 0
+  },
+  "DERIVED": {
+   "train": 1,
+   "holdout": 0
+  },
+  "OBSERVED": {
+   "train": 11,
+   "holdout": 0
+  },
+  "PROPOSED": {
+   "train": 6,
+   "holdout": 0
+  },
+  "UNMEASURED": {
+   "train": 23,
+   "holdout": 17
+  }
+ },
+ "by_status": {
+  "DERIVED (basis: OBSERVED)": {
+   "train": 1,
+   "holdout": 0
+  },
+  "OBSERVED": {
+   "train": 11,
+   "holdout": 0
+  },
+  "PROPOSED": {
+   "train": 6,
+   "holdout": 0
+  },
+  "null": {
+   "train": 25,
+   "holdout": 17
+  }
+ },
+ "by_ontology": {
+  "plant": {
+   "train": 30,
+   "holdout": 7
+  },
+  "social": {
+   "train": 13,
+   "holdout": 10
+  }
+ },
+ "excluded_fields": {
+  "NOT_ASSESSED": 225,
+  "UNSOURCED": 12,
+  "assumption_trace": 6
+ },
+ "entities_in_chain": 122,
+ "entities_without_examples": 114
+}

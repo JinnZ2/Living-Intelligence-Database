@@ -57,3 +57,63 @@ the same hand that wrote the answering function, and the function is a
 lookup, not a model. The test shows the reference carries what the protocol
 needs and that a changed field is caught. It does not show that a model
 reading the file follows the protocol.
+
+## Track B
+
+`export_examples.py` writes one example per field that passes the filters
+declared in `registry/DECLARED.json` (amendment "physics usage: example
+export", committed before the script existed). It refuses to run when the
+reference fails its own check, and refuses to write when its own check fails.
+
+An example holds `question`, `derivation_path`, `answer` (claim, status,
+scope) and `provenance` (step ids, source ids). The path lists the entity's
+included fields in the declared order observation, mechanism, physics, ending
+with the target and a status element. It is an ordering of record fields by
+declared role. No stored step names another field as its input, so the path
+does not claim one field was derived from another. The role mapping is
+PROPOSED and was written here.
+
+| kind | rule | train | hold-out |
+|---|---|---|---|
+| OBSERVED | status OBSERVED, with a source | 11 | 0 |
+| DERIVED | status DERIVED, with a source; basis stated | 1 | 0 |
+| PROPOSED | labeled "PROPOSED, not established" | 6 | 0 |
+| UNMEASURED | the field is null; the claim is "unmeasured" | 23 | 17 |
+| CONTESTED_LABEL | the label does not decide; function fields given | 2 | 0 |
+| total | | 43 | 17 |
+
+| answer status | train | hold-out |
+|---|---|---|
+| OBSERVED | 11 | 0 |
+| DERIVED (basis: OBSERVED) | 1 | 0 |
+| PROPOSED | 6 | 0 |
+| null | 25 | 17 |
+
+| ontology type | train | hold-out |
+|---|---|---|
+| plant | 30 | 7 |
+| social | 13 | 10 |
+
+Hold-out, by entity (first ceil(0.2 × 8) = 2 entities by sha256 of the
+entity id): BEE_NEST_SITE, MY. Train: ANT, MIMOSA, QUORUM, SLIME,
+STONE_LEDGER, VENUS.
+
+Excluded fields: 225 NOT_ASSESSED (values with a source and no status tag),
+12 UNSOURCED, 6 `assumption_trace`.
+
+What the counts show:
+
+- 8 of 122 entities give any example, in 2 of 9 ontology types. The other
+  114 entities have attribute values only, and those carry no status tag.
+- 40 of 60 examples are UNMEASURED. The set mostly teaches the void.
+- Both hold-out entities have only null fields, so the hold-out has no
+  OBSERVED, DERIVED or PROPOSED example. It can test whether "unmeasured"
+  is kept on an unseen entity. It cannot test anything about values. The
+  split rule was declared before the split was computed and was not changed
+  after.
+- 5 of the 12 PROPOSED fields and 1 of the 2 DERIVED fields are not targets:
+  the 6 `assumption_trace` fields are PROPOSED and excluded by rule, and one
+  DERIVED field has no source.
+
+No model was trained. Whether these examples change a model is not tested
+here and needs a separate run.
