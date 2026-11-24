@@ -1,0 +1,65 @@
+{
+  "what": "Declarations for the provenance chain, written and committed BEFORE scripts/provenance.py existed or any step was built. The commit that adds this file is the pre-run commit; every step carries it as declared_pre_run. A later change is a new dated entry under 'amendments', never an edit.",
+  "declared": "2026-11-24",
+  "status": "PROPOSED",
+  "co_authored": true,
+  "conventions_copied_from": {
+    "repository": "JinnZ2/Geometric-to-Binary-Computational-Bridge",
+    "note": "Conventions only; no code imported.",
+    "paths": {
+      "declared_pre_run": "experiments/experiment_bridge/eqsearch/DECLARED.json and eqsearch/README.md at main e8b7d12fa3a1d59c9ce25da1d573d5e6f17e58dc",
+      "as_received": "experiments/experiment_bridge/evidence/kimi_round2_as_received/MANIFEST.json, evidence/equation_search_as_received/MANIFEST.json, raw/manifest.json at main e8b7d12",
+      "claim_table": "experiments/experiment_bridge/CLAIM_TABLE.md at main e8b7d12",
+      "void_states": "experiments/experiment_bridge/v1/README.md lines 16-20, v1/semantics.py, eqsearch/exact.py at main e8b7d12",
+      "snapshot_classes": "experiments/experiment_bridge/snapshot/README.md and snapshot/snapshot_class.py on branch claude/snapshot-class at baa114e2eecec3c8e8a30c388039f6cc2f4ec5d6 (not on main at e8b7d12)"
+    }
+  },
+  "hash": {
+    "algorithm": "sha256, lowercase hex, full length",
+    "canonical_json": "UTF-8; keys sorted; separators ',' and ':' with no spaces; non-ASCII characters written as themselves; no trailing newline",
+    "step_id": "sha256 of the canonical JSON of {inputs, method, params, value}",
+    "source_id": "'S-' + first 12 hex of sha256 of the source string as UTF-8",
+    "assumption_id": "'A-' + first 12 hex of sha256 of the statement as UTF-8",
+    "not_in_step_id": ["assumptions", "scope", "status", "supersedes", "declared_pre_run", "claim", "void", "snapshot_class"]
+  },
+  "backfill": {
+    "method": {"name": "manual_entry", "version": "1"},
+    "one_step_per": "attributes.<name>; coordination.<field>; gate_sensing.<field>; functional_intelligence.<capability>; functional_intelligence.contested_label[i]",
+    "params": "entity id and field path always; for attributes also evidence_type and reproducibility as found",
+    "inputs": "the source ids of the field's source strings, in the order found; [] when the field has none",
+    "status": "the field's existing status tag, or null when it has none; no tag is assigned by the backfill",
+    "assumptions": "the ids of the entity's assumption_trace on the coordination.assumption_trace step only; [] elsewhere",
+    "no_new_claims": "claim is null on every backfilled step"
+  },
+  "stale_rules": {
+    "HASH_MISMATCH": "a stored step id differs from the id recomputed from the stored step",
+    "SOURCE_CHANGED": "an input source id is missing from registry/sources.json, or its text no longer hashes to its id",
+    "ASSUMPTION_CHANGED": "an assumption id on the step is missing from registry/assumptions.json, is superseded by a later entry, or its statement no longer hashes to its id",
+    "FIELD_CHANGED": "the head step of a field differs from the step computed now from the entity file",
+    "INPUT_CHANGED": "a parent step named in inputs is flagged by any rule above or has been superseded; applied transitively"
+  },
+  "revision_rule": "Nothing is deleted or edited. A revision appends a new step whose supersedes is the prior step id. A superseded step stays in the file. An appended step whose id already exists in the file is refused.",
+  "claim": {
+    "fields": ["statement", "evidence", "refuter", "state"],
+    "states": ["SUPPORTED", "UNVERIFIED"],
+    "separate_from": "status (OBSERVED / DERIVED (basis: ...) / PROPOSED)"
+  },
+  "void_states": {
+    "keep_all_four": ["REJECTED", "UNMAPPED", "LEXICAL_VOID", "VOID"],
+    "mapping_status": "PROPOSED",
+    "mapping": {
+      "LEXICAL_VOID": "the field is null and the record states the gap in words (a note such as 'unmeasured', or a notes entry for the field)",
+      "VOID": "the field is null and no reason is recorded",
+      "UNMAPPED": "the field has a value and no source at all",
+      "REJECTED": "a value was offered and refused by a gate; none is produced by the backfill"
+    },
+    "shape": "void is null, or {state, reason}; a step with a void state for a null field has value null"
+  },
+  "snapshot_classes": {
+    "values": ["CONTEXT_FREE_EXACT", "STABLE_LOSSY", "CHAOTIC_REFRESH", "SUMMARY_ONLY"],
+    "use": "a field on any summarized or coarse record; null on a record that is not a summary",
+    "provenance/INDEX.json": "SUMMARY_ONLY (per-entity counts; the steps cannot be rebuilt from it)"
+  },
+  "thresholds": "none: the chain has no numeric gate",
+  "amendments": []
+}
