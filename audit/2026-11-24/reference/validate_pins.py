@@ -6,7 +6,8 @@
 
 Rule (registry/DECLARED.json, 'trace v0.4: severity assignment; schema pinning; ...'):
 v0.1-v0.3 are pinned to the schema as received (0.1.0, Kimi); v0.4 and later to the adopted
-0.3.0. A trace that fails its pin is reported as failing. It is never moved to another pin.
+0.3.0. Amended the same day ('schema 0.2.0 and 0.4.0; ...'): v0.3 -> 0.2.0 (as received plus
+status_history); v0.4 -> the frozen 0.3.0 copy; v0.5 -> 0.4.0. A trace that fails its pin is reported as failing. It is never moved to another pin.
 Needs jsonschema (as scripts/build_index.py does); without it the result is NOT_RUN, exit 2.
 """
 import hashlib
@@ -18,11 +19,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, "..", "..", ".."))
 AS_RECEIVED = "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json"
 ADOPTED = "schemas/reference_trace.schema.json"
+S020 = "schemas/pinned/reference_trace.0.2.0.schema.json"
+S030 = "schemas/pinned/reference_trace.0.3.0.schema.json"
 PINS = [
     ("reference_trace_BE_hex.json", "0.1", "0.1.0", "as received (Kimi)", AS_RECEIVED),
     ("reference_trace_BE_hex_v0.2.json", "0.2", "0.1.0", "as received (Kimi)", AS_RECEIVED),
-    ("reference_trace_BE_hex_v0.3.json", "0.3", "0.1.0", "as received (Kimi)", AS_RECEIVED),
-    ("reference_trace_BE_hex_v0.4.json", "0.4", "0.3.0", "adopted", ADOPTED),
+    ("reference_trace_BE_hex_v0.3.json", "0.3", "0.2.0", "as received + status_history", S020),
+    ("reference_trace_BE_hex_v0.4.json", "0.4", "0.3.0", "adopted, frozen copy", S030),
+    ("reference_trace_BE_hex_v0.5.json", "0.5", "0.4.0", "adopted", ADOPTED),
 ]
 
 
@@ -35,7 +39,9 @@ def pins_doc():
             "rule": "each trace file is validated against the one schema version named here; v0.1-v0.3 are not "
                     "edited, so their pin is written in this file only",
             "note": "the as-received schema file carries no version field; 0.1.0 is the name the owner's order "
-                    "gives it. The adopted schema's version is read from its x-lid block.",
+                    "gives it. The other schemas' versions are read from their x-lid blocks. A pin names its "
+                    "schema by file and sha256; the number 0.2.0 is also used, for a different change, in the "
+                    "adopted schema's change list.",
             "pins": [{"trace": t, "trace_version": v, "schema_version": sv, "schema_kind": kind, "schema": s,
                       "schema_sha256": sha(s)} for t, v, sv, kind, s in PINS]}
 

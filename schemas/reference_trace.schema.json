@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "x-lid": {
     "status": "PROPOSED",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "version_rule": "MINOR: additive; no existing schema or entity file is changed",
     "adopted": "2026-11-24",
     "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
@@ -13,7 +13,8 @@
       "node field unsourced added",
       "traces v0.1 and v0.2 carry the retired status and validate against the as-received schema, not this copy",
       "0.2.0: cycle field phases added (ordered list, optional)",
-      "0.3.0: optional status_history on nodes and cycles (list of {version, status, date?, note?}); the v0.3 trace's status_history is now accepted"
+      "0.3.0: optional status_history on nodes and cycles (list of {version, status, date?, note?}); the v0.3 trace's status_history is now accepted",
+      "0.4.0: a depends_on item is a string or an object {id, status, note} (MINOR, additive). The 0.3.0 state is kept, byte-identical, at schemas/pinned/reference_trace.0.3.0.schema.json"
     ]
   },
   "$id": "reference_trace.schema.json",
@@ -408,10 +409,34 @@
           "depends_on": {
             "type": "array",
             "items": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "Id of the node depended on."
+                    },
+                    "status": {
+                      "$ref": "#/definitions/node_status",
+                      "description": "Status of this edge, when it differs from the nodes it joins (for example PROPOSED for an edge added on a reading)."
+                    },
+                    "note": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
             },
             "uniqueItems": true,
-            "description": "Ids of nodes this node depends on. Every id must exist in nodes (trace_check.py DANGLING_DEP). Untyped strings today; the typed dependency record {target, layer, role, required_in_regime, equation_ref, status, source} proposed in the ledger is the v0.3 upgrade path."
+            "description": "Ids of nodes this node depends on. Every id must exist in nodes (trace_check.py DANGLING_DEP). Untyped strings today; the typed dependency record {target, layer, role, required_in_regime, equation_ref, status, source} proposed in the ledger is the v0.3 upgrade path. 0.4.0: an item is the node id as a string, or an object {id, status, note} when the edge itself carries a status or a note. trace_check.py reads both forms; DANGLING_DEP applies to the id in either."
           },
           "repo_entity": {
             "type": "string",

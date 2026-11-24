@@ -43,6 +43,21 @@ if len(sys.argv) > 1 and sys.argv[1] == "--selftest":
                 good = good and sorted(set(got)) == ["CYCLE_NO_PERIOD", "CYCLE_TOP_LEVEL", "GAP"]
             ok.append(good)
             print("%s  %s  (exit %d, findings %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
+        # 2026-11-24 (schema 0.4.0): edges written as objects
+        e_ok = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", [{"id": "L", "status": "PROPOSED", "note": "n"}]), node("L", "D0_law", [])], "cycles": []}
+        e_dang = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L", {"id": "MISSING", "status": "PROPOSED"}]), node("L", "D0_law", [])], "cycles": []}
+        e_bad = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", [{"id": "L", "status": "SURE"}]), node("L", "D0_law", [])], "cycles": []}
+        for name, rec_, want, must in (("edge object to an existing node: clean, exits 0", e_ok, 0, None),
+                                       ("edge object to a missing node: DANGLING_DEP, exits 1", e_dang, 1, "DANGLING_DEP"),
+                                       ("edge object with an unknown status: BAD_STATUS, exits 1", e_bad, 1, "BAD_STATUS")):
+            src, dst = os.path.join(t, "in.json"), os.path.join(t, "out.json")
+            json.dump(rec_, open(src, "w"))
+            r = subprocess.run([sys.executable, os.path.abspath(__file__), src, dst], capture_output=True, text=True,
+                               env={k: v for k, v in os.environ.items() if k != "LID_STRICT"})
+            got = [f[0] for f in json.load(open(dst))["findings"]]
+            good = r.returncode == want and (got == [] if must is None else must in got)
+            ok.append(good)
+            print("%s  %s  (exit %d, findings %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
         # 2026-11-24 (order 'pins + entity correction'): ENTITY_TRACE_DIVERGENCE, against a constructed entity file
         hist = [{"version": "0", "status": "TRACED", "note": "record cites x -> CITATION_MISMATCH"}]
         div = {"record": "SELFTEST", "subject": {"entity": "E", "attribute": "a"},
@@ -65,11 +80,16 @@ rec = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "reference_trace_BE_h
 N = {n["id"]: n for n in rec["nodes"]}; C = {c["id"]: c for c in rec["cycles"]}
 out = {"record": rec["record"], "findings": [], "summary": {}}
 F = out["findings"].append
+# 2026-11-24 (schema 0.4.0): a depends_on item is a node id, or an object {id, status, note}.
+def DEPS(n):
+    return [e["id"] if isinstance(e, dict) else e for e in n.get("depends_on", [])]
 STAT = {"TRACED", "DERIVED", "PROPOSED", "UNKNOWN", "CONTESTED", "RECORDED_UNVERIFIED"}
 for n in N.values():
     if n["status"] not in STAT: F(["BAD_STATUS", n["id"], n["status"]])
     if n["status"] in {"TRACED", "DERIVED", "CONTESTED"} and not n.get("source"): F(["NO_SOURCE", n["id"]])
-    for d in n.get("depends_on", []):
+    for e in n.get("depends_on", []):
+        if isinstance(e, dict) and e.get("status") is not None and e["status"] not in STAT: F(["BAD_STATUS", n["id"], "edge to %s: %s" % (e.get("id"), e["status"])])
+    for d in DEPS(n):
         if d not in N: F(["DANGLING_DEP", n["id"], d])
     import re
     for m in re.findall(r"[A-Z_]+_MISMATCH", n.get("note", "")): F(["NOTED_MISMATCH", n["id"], m])
@@ -77,7 +97,7 @@ for n in N.values():
 # paths from root pattern
 root = [n for n in N.values() if n["layer"] == "D5_pattern"][0]["id"]
 def paths(i, seen=()):
-    deps = [d for d in N[i].get("depends_on", []) if d in N and d not in seen]
+    deps = [d for d in DEPS(N[i]) if d in N and d not in seen]
     if not deps: return [[i]]
     return [[i] + p for d in deps for p in paths(d, seen + (i,))]
 P = paths(root)
@@ -115,7 +135,7 @@ out["summary"]["cycle_span_log10_s"] = [round(math.log10(min(spans)), 2), round(
 # --- optional v0.2 sections -------------------------------------------------
 def reaches_D0(i, seen=()):
     if N[i]["layer"] == "D0_law": return True
-    return any(reaches_D0(d, seen + (i,)) for d in N[i].get("depends_on", []) if d in N and d not in seen)
+    return any(reaches_D0(d, seen + (i,)) for d in DEPS(N[i]) if d in N and d not in seen)
 ED = rec.get("environment_differential")
 if ED:
     for k in list(ED.get("invariant_nodes", {})) + list(ED.get("unknown_dependence", {})):
