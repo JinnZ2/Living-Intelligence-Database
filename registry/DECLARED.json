@@ -652,6 +652,56 @@
       "trace_v0_5": "reference_trace_BE_hex_v0.5.json is a new file built from v0.4 (v0.1-v0.4 untouched): the status and note of the edges added in v0.4 move from the root's note onto the edges; the root's note gains a dated line saying the entity file now carries the correction. The pilot record stays built from v0.4; this order does not ask for a rebuild.",
       "renames": "none",
       "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "close-out: pinned label 0.1.0+status_history; divergence by identity; historical mode; schema 0.5.0; trace v0.6",
+      "after": "branch process-form-kimi-schemas at 9fcd25c; by the owner's order 'close-out'. Declared before the file rename, the checker change, the schema file, the v0.6 trace, the pilot rebuild and the full run.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "pinned_label": {
+        "change": "the pinned schema labelled 0.2.0 in the entry 'schema 0.2.0 and 0.4.0; ...' is labelled '0.1.0+status_history'. File: schemas/pinned/reference_trace.0.1.0+status_history.schema.json (moved from reference_trace.0.2.0.schema.json). The bytes are not changed, so its sha256 is unchanged.",
+        "former_label": "0.2.0. The file's own x-lid block still reads version 0.2.0, because the bytes are kept; the pin entry carries former_label and the pin check accepts the file's inner version when it equals the label or the former label.",
+        "effect": "the number 0.2.0 again names one thing only: the superseded 'cycle phases' state in the adopted schema's change list."
+      },
+      "ENTITY_TRACE_DIVERGENCE": {
+        "replaces": "the presence rule ('entity_carries_it_when', 'what_it_does_not_check') of the entry 'schema 0.2.0 and 0.4.0; ...'",
+        "rule": "identity, not presence. For each trace node that records the correction (a *_MISMATCH word in its note or in a status_history note): (1) the source id of the entity's correction.source (sha256 of the string, the registry's id) must be in registry/sources.json and must equal the source id of one of the node's source strings; (2) the entity's correction.scope must equal the node's scope string, compared after stripping outer whitespace, nothing else. Any miss is one ENTITY_TRACE_DIVERGENCE finding naming what missed: NO_CORRECTION, SOURCE_NOT_IN_REGISTRY, SOURCE_ID_DIFFERS, NODE_HAS_NO_SCOPE, SCOPE_DIFFERS.",
+        "severity": "ERROR"
+      },
+      "historical_mode": {
+        "which": "a trace that has a successor. The trace files are frozen and the schemas they are pinned to have no such field, so superseded_by is written on the trace's entry in audit/2026-11-24/reference/schema_pins.json.",
+        "pass": "a historical trace passes if and only if rerunning the checker gives exactly the findings list stored in its result file. Its exit code is not the test; v0.1-v0.3 keep their two NOTED_MISMATCH errors and pass by reproducing them.",
+        "entity_check": "ENTITY_TRACE_DIVERGENCE is not applied in historical mode: it compares the trace with the entity file as it is today, and a superseded trace is not held against today's entity; its successor is. The stored result files were written without it.",
+        "current": "the one trace with no successor must read 0 ERROR.",
+        "runner": "audit/2026-11-24/reference/run_all.py runs pins, every trace in its mode, and reports one line each."
+      },
+      "schema_0_5_0": {
+        "why": "the order needs two things schema 0.4.0 cannot hold; both are additive (MINOR).",
+        "changes": [
+          "optional node field scope (string): what the node's claim covers. The divergence rule compares it with the entity's correction.scope.",
+          "an edge status (depends_on item object) may be a node status, or a string of the form 'DERIVED (basis: ...)' as in the provenance vocabulary. The order asks for 'DERIVED (basis: OBSERVED)', which is not in the node status list."
+        ],
+        "files": "schemas/reference_trace.schema.json becomes 0.5.0; the 0.4.0 state is kept byte-identical at schemas/pinned/reference_trace.0.4.0.schema.json so trace v0.5 keeps its pin."
+      },
+      "trace_v0_6": {
+        "rule": "new file built from v0.5; v0.1-v0.5 untouched. v0.6 is the current trace; v0.5 becomes historical.",
+        "changes": [
+          "root edge to G3D_BASE_NOT_OPTIMAL: status 'DERIVED (basis: OBSERVED)' (owner's order)",
+          "G2D_HALES: scope '2D cross-section perimeter' as a field (it was prose in the note), and the reference string 'Hales (2001) Discrete Comput Geom 25:1-22' added to its source list beside the two URLs. Not in the order's list: without these two the identity rule cannot be met by any trace, since the node's sources were URLs only and it had no scope field."
+        ],
+        "pins": {
+          "v0.1": "0.1.0",
+          "v0.2": "0.1.0",
+          "v0.3": "0.1.0+status_history",
+          "v0.4": "0.3.0",
+          "v0.5": "0.4.0 (frozen copy)",
+          "v0.6": "0.5.0"
+        }
+      },
+      "pilot_process_form": "registry/process_forms.json: the pilot record is rebuilt from v0.6. The v0.4 build is kept in registry/process_forms_pilot_v0.4.json, beside the v0.3 build. A direct dependency written as an edge object carries its edge status into the record.",
+      "renames": "schemas/pinned/reference_trace.0.2.0.schema.json -> schemas/pinned/reference_trace.0.1.0+status_history.schema.json (content unchanged)",
+      "observer_slots": null
     }
   ]
 }
