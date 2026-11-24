@@ -1,6 +1,6 @@
 {
   "_comment": "Example: Council of Elders — a social resilience entity. Demonstrates how human governance systems can be represented with scoped evidence.",
-  "_audit_note": "Attributions to named living peoples are unsourced; not consented; not promoted to ontology/. Audit 2026-11-24.",
+  "_audit_note": "Attributions to named living peoples are unsourced; not consented; not promoted to ontology/. Audit 2026-11-24. Latent read paths if indexed: see docs/coordination_layer.md, Known broken links table.",
   "id": "COUNCIL",
   "name": "Council of Elders",
   "ontology": "social",
