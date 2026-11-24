@@ -3,7 +3,7 @@
   "$id": "functional_intelligence.schema.json",
   "title": "Functional intelligence block",
   "description": "What an entity is observed to do, recorded without requiring a label such as 'intelligent' or 'conscious'. Each capability is yes / no / unmeasured with its own status and source. Null means no information.",
-  "type": "object",
+  "type": ["object", "null"],
   "required": [
     "adapts",
     "signals",

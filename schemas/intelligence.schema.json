@@ -51,7 +51,7 @@
     "coordination": {
       "title": "Coordination block",
       "description": "How an entity coordinates exchange without assuming money, language or a central planner. Every field is nullable. Null means no information: keep the key, never drop it. See docs/coordination_layer.md.",
-      "type": "object",
+      "type": ["object", "null"],
       "required": [
         "carrier",
         "signal",
@@ -432,7 +432,7 @@
     "gate_sensing": {
       "title": "Gate sensing block",
       "description": "How an entity senses an approaching limit and responds before it arrives. Every field is nullable. Null means no information: keep the key, never drop it.",
-      "type": "object",
+      "type": ["object", "null"],
       "required": [
         "limit_sensed",
         "early_signal",
@@ -626,7 +626,7 @@
     "functional_intelligence": {
       "title": "Functional intelligence block",
       "description": "What an entity is observed to do, recorded without requiring a label such as 'intelligent' or 'conscious'. Each capability is yes / no / unmeasured with its own status and source. Null means no information.",
-      "type": "object",
+      "type": ["object", "null"],
       "required": [
         "adapts",
         "signals",

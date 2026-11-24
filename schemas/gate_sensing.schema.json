@@ -3,7 +3,7 @@
   "$id": "gate_sensing.schema.json",
   "title": "Gate sensing block",
   "description": "How an entity senses an approaching limit and responds before it arrives. Every field is nullable. Null means no information: keep the key, never drop it.",
-  "type": "object",
+  "type": ["object", "null"],
   "required": [
     "limit_sensed",
     "early_signal",

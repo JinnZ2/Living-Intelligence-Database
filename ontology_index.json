@@ -4242,6 +4242,11 @@
       "relation": "temporal_bridge"
     },
     {
+      "source": "STONE_LEDGER",
+      "target": "ANT",
+      "relation": "synergy"
+    },
+    {
       "source": "WOLF_PACK",
       "target": "COUNCIL",
       "relation": "synergy"

@@ -3,7 +3,7 @@
   "$id": "coordination.schema.json",
   "title": "Coordination block",
   "description": "How an entity coordinates exchange without assuming money, language or a central planner. Every field is nullable. Null means no information: keep the key, never drop it. See docs/coordination_layer.md.",
-  "type": "object",
+  "type": ["object", "null"],
   "required": [
     "carrier",
     "signal",

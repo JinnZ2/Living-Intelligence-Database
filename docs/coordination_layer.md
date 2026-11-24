@@ -47,6 +47,9 @@ A citation that was not opened is written with `[NOT OPENED]`.
 ## Null policy
 
 - All ten keys are always present. A missing key is a validation failure.
+- A whole block (`coordination`, `gate_sensing`, `functional_intelligence`,
+  `observation_context`) may itself be `null`: the slot is present and holds
+  no information. Leaving the block key out is also legal.
 - `null` means no information. It is kept, never dropped, and never read as
   zero, "none" or "does not apply".
 - A field with no value has no status tag. A field with a value must have one.

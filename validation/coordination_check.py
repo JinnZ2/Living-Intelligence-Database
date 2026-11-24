@@ -61,6 +61,8 @@ def has_value(c, k):
 def check_block(c):
     """Return a list of failure strings for one coordination block."""
     out = []
+    if c is None:  # null block: slot present, no information
+        return out
     if not isinstance(c, dict):
         return ["block is not an object"]
     for k in KEYS:
@@ -166,6 +168,8 @@ def _notes_ok(no):
 def check_gate(g):
     """Failures for one gate_sensing block."""
     out = []
+    if g is None:  # null block: slot present, no information
+        return out
     if not isinstance(g, dict):
         return ["gate_sensing is not an object"]
     for k in GATE_FIELDS + ("status", "sources"):
@@ -224,6 +228,8 @@ def check_gate(g):
 def check_functional(f):
     """Failures for one functional_intelligence block."""
     out = []
+    if f is None:  # null block: slot present, no information
+        return out
     if not isinstance(f, dict):
         return ["functional_intelligence is not an object"]
     keys = CAPS + ("coupling_note", "contested_label")
@@ -437,6 +443,11 @@ def selftest():
         ("assumption_trace as text fires", lambda: bad(lambda c: c.update(assumption_trace="x"))),
         ("sources under a non-field key fires", lambda: bad(lambda c: c["sources"].update(price=["x"]))),
         ("number in a text field fires", lambda: bad(lambda c: c.update(carrier=3))),
+        ("null block passes (all four blocks)", lambda: not any(
+            fn(None) for fn in (check_block, check_gate, check_functional, check_context))),
+        ("non-object non-null block fires (all four blocks)", lambda: all(
+            fn(v) for fn in (check_block, check_gate, check_functional, check_context)
+            for v in ("x", 0, [], False))),
     ]
     failed = 0
     for name, fn in cases:

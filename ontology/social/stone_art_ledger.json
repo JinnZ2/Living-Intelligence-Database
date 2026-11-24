@@ -83,6 +83,15 @@
       "_channels": "One object carries multiple channels: trust record, art, and knowledge transfer between makers. Value persists after closure."
     }
   },
+  "functional_intelligence": null,
+  "links": [
+    {
+      "rel": "synergy",
+      "to": "ANT",
+      "note": "state held outside individuals: shared object vs environment trail",
+      "status": "PROPOSED"
+    }
+  ],
   "metadata": {
     "scope_note": "Name no specific tribe, nation or person in this record.",
     "related_literature": {
@@ -92,6 +101,6 @@
         "engraved shell exchange, e.g. Spiro [NOT OPENED: no source fetched]"
       ]
     },
-    "functional_intelligence_note": "Block not attached (human practice; the block is optional). Absent = no information."
+    "functional_intelligence_note": "Block present, null: no information (human practice)."
   }
 }
