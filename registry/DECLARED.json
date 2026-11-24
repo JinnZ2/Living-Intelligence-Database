@@ -288,6 +288,34 @@
       "registry": "registry/sources.json gains 'existence' on every entry: null when not checked, else {state, matched_record, checked, works}. matched_record lists the identified records (pmid, doi, title, first_author, year, journal, volume, pages). No source string is edited and no id changes; a difference is recorded under the work's 'differs', never in place. same_as, opened and fetched are not touched.",
       "as_received": "search responses are not committed; their sha256 are listed in provenance/as_received/existence_MANIFEST.json",
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "existence states: identification amended after the first run",
+      "after": "the first run of scripts/existence_check.py under 81ae5f2 (166 requests). Its results were seen before this entry was written; this is a post-run change and is recorded as one.",
+      "changes_a_declared_value": true,
+      "first_run_under_the_original_rule": {
+        "strings": {
+          "FOUND_AS_CITED": 1,
+          "FOUND_DIFFERS": 2,
+          "NOT_FOUND_INDEXED": 22,
+          "NOT_INDEXED": 12
+        },
+        "works": {
+          "FOUND_AS_CITED": 8,
+          "FOUND_DIFFERS": 7,
+          "NOT_FOUND_INDEXED": 31,
+          "NOT_INDEXED": 19
+        }
+      },
+      "why": "The title-only search (step 3) returned records by other authors that the original rule counted as the cited work: 'Brown et al. (2020) Language models are few-shot learners' was matched to Zhang C (2026) 'Making Large Vision-Language Models Better Few-Shot Learners', and 'Hanlon & Messenger (2018) Cephalopod Behaviour' (a book) to Gutnick T (2023) 'Cephalopod behaviour' in Current Biology. Listing those as FOUND_DIFFERS would say a work was found when a different work was.",
+      "changes": {
+        "identified": "in addition to the title thresholds, a record is the cited work only when its first-author surname agrees with the string, or its title token set equals the cited one and its year agrees. A record that passes the title thresholds and fails this is kept on the work as 'candidate' and the work is treated as a miss.",
+        "compared_items": "volume or pages that the record does not give are listed under not_compared ('record gives none'), not as a difference.",
+        "miss_label": "the book / non-biomedical markers are read in the work's text after its '(year)', not in the author names. (The first run read 'Wiley et al.' as the publisher Wiley; that was an implementation error against the declared rule.)"
+      },
+      "not_changed": "states, scope, search steps, title thresholds, string_state, registry shape. A record by the same first author with a similar but different title still counts as identified and is listed with its differences; it may be a different work by that author, and the difference list is what shows it.",
+      "renames": "none"
     }
   ]
 }
