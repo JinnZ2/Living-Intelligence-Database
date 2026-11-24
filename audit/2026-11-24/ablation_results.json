@@ -1,0 +1,222 @@
+{
+ "baseline_directed": 27.4,
+ "ablation": {
+  "connected_to": {
+   "edges_removed": 50,
+   "directed_pct": 23.2,
+   "undirected_pct": 98.4,
+   "weak_components": 2,
+   "largest_wcc": 121
+  },
+  "energy_coupling": {
+   "edges_removed": 53,
+   "directed_pct": 25.7,
+   "undirected_pct": 100.0,
+   "weak_components": 1,
+   "largest_wcc": 122
+  },
+  "energy_exchange": {
+   "edges_removed": 4,
+   "directed_pct": 27.0,
+   "undirected_pct": 100.0,
+   "weak_components": 1,
+   "largest_wcc": 122
+  },
+  "energy_mode": {
+   "edges_removed": 2,
+   "directed_pct": 26.7,
+   "undirected_pct": 100.0,
+   "weak_components": 1,
+   "largest_wcc": 122
+  },
+  "geometry_link": {
+   "edges_removed": 78,
+   "directed_pct": 24.4,
+   "undirected_pct": 100.0,
+   "weak_components": 1,
+   "largest_wcc": 122
+  },
+  "resonance": {
+   "edges_removed": 124,
+   "directed_pct": 19.8,
+   "undirected_pct": 100.0,
+   "weak_components": 1,
+   "largest_wcc": 122
+  },
+  "synergy": {
+   "edges_removed": 184,
+   "directed_pct": 15.8,
+   "undirected_pct": 98.4,
+   "weak_components": 2,
+   "largest_wcc": 121
+  },
+  "temporal_bridge": {
+   "edges_removed": 59,
+   "directed_pct": 25.9,
+   "undirected_pct": 100.0,
+   "weak_components": 1,
+   "largest_wcc": 122
+  }
+ },
+ "T06.4_reciprocity_control": {
+  "k": 78,
+  "trials": 500,
+  "seed": 20261124,
+  "observed_geometry_pct": 88.6,
+  "null_mean_pct": 86.6,
+  "null_sd_pct": 3.37,
+  "null_p2.5": 78.1,
+  "null_p97.5": 91.8,
+  "null_max": 94.3,
+  "empirical_p_ge_observed": 0.25349301397205587
+ },
+ "reciprocate_one_type_vs_random_same_k": {
+  "connected_to": {
+   "k": 50,
+   "observed": 65.4,
+   "null_mean": 80.0,
+   "null_max": 89.4,
+   "p": 1.0
+  },
+  "energy_coupling": {
+   "k": 53,
+   "observed": 84.5,
+   "null_mean": 80.7,
+   "null_max": 91.8,
+   "p": 0.208955223880597
+  },
+  "energy_exchange": {
+   "k": 4,
+   "observed": 28.6,
+   "null_mean": 40.9,
+   "null_max": 71.6,
+   "p": 0.9601990049751243
+  },
+  "energy_mode": {
+   "k": 2,
+   "observed": 28.5,
+   "null_mean": 34.0,
+   "null_max": 64.5,
+   "p": 0.8009950248756219
+  },
+  "geometry_link": {
+   "k": 78,
+   "observed": 88.6,
+   "null_mean": 86.8,
+   "null_max": 93.4,
+   "p": 0.23880597014925373
+  },
+  "resonance": {
+   "k": 124,
+   "observed": 97.5,
+   "null_mean": 92.5,
+   "null_max": 96.7,
+   "p": 0.004975124378109453
+  },
+  "synergy": {
+   "k": 184,
+   "observed": 95.9,
+   "null_mean": 95.7,
+   "null_max": 100.0,
+   "p": 0.572139303482587
+  },
+  "temporal_bridge": {
+   "k": 59,
+   "observed": 90.2,
+   "null_mean": 83.2,
+   "null_max": 91.8,
+   "p": 0.029850746268656716
+  }
+ },
+ "T06.2_degree_preserving": {
+  "trials": 100,
+  "directed_null_mean": 74.2,
+  "directed_null_range": [
+   68.3,
+   79.5
+  ],
+  "geometry_recip_null_mean": 92.7,
+  "geometry_recip_null_range": [
+   89.4,
+   93.4
+  ],
+  "observed_directed": 27.4,
+  "observed_geometry_recip": 88.6
+ },
+ "edge_structure": {
+  "connected_to": {
+   "edges": 50,
+   "entities_touched": 66,
+   "cross_ontology_frac": 0.46
+  },
+  "energy_coupling": {
+   "edges": 53,
+   "entities_touched": 63,
+   "cross_ontology_frac": 0.77
+  },
+  "energy_exchange": {
+   "edges": 4,
+   "entities_touched": 4,
+   "cross_ontology_frac": 0.0
+  },
+  "energy_mode": {
+   "edges": 2,
+   "entities_touched": 4,
+   "cross_ontology_frac": 1.0
+  },
+  "geometry_link": {
+   "edges": 78,
+   "entities_touched": 81,
+   "cross_ontology_frac": 0.92
+  },
+  "resonance": {
+   "edges": 124,
+   "entities_touched": 115,
+   "cross_ontology_frac": 0.72
+  },
+  "synergy": {
+   "edges": 184,
+   "entities_touched": 105,
+   "cross_ontology_frac": 0.21
+  },
+  "temporal_bridge": {
+   "edges": 59,
+   "entities_touched": 51,
+   "cross_ontology_frac": 0.86
+  }
+ },
+ "geometry_targets": [
+  [
+   "SPIRAL",
+   22
+  ],
+  [
+   "FRACTAL",
+   21
+  ],
+  [
+   "TORUS",
+   14
+  ],
+  [
+   "HEX",
+   7
+  ],
+  [
+   "SPHERE",
+   7
+  ],
+  [
+   "CRYSTAL_LATTICE",
+   2
+  ],
+  [
+   "SINE_WAVE",
+   1
+  ],
+  [
+   "TREE_GRAPH",
+   1
+  ]
+ ]
+}

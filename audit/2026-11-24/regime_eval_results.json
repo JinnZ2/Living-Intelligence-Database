@@ -1,0 +1,54 @@
+{
+ "cases": {
+  "inside_low": {
+   "outcome": "IN_REGIME",
+   "regime": "low_e",
+   "rate": 0.6,
+   "direction": "source->target"
+  },
+  "inside_high": {
+   "outcome": "IN_REGIME",
+   "regime": "high_e",
+   "rate": -0.8,
+   "direction": "target->source"
+  },
+  "threshold": {
+   "outcome": "IN_REGIME",
+   "regime": "low_e",
+   "rate": 0.0,
+   "direction": "inactive"
+  },
+  "outside_scope": {
+   "outcome": "NOT_IN_SCOPE",
+   "missing": []
+  },
+  "condition_missing": {
+   "outcome": "CONDITION_UNKNOWN",
+   "missing": [
+    "e"
+   ]
+  },
+  "no_form_declared": {
+   "outcome": "UNRESOLVED_FORM",
+   "regime": "edge_known_no_form"
+  }
+ },
+ "known_answer_pass": true,
+ "drift_run": {
+  "final_y": -0.0,
+  "regime_transitions": [
+   {
+    "t": 0.0,
+    "enters": "low_e"
+   },
+   {
+    "t": 1.26,
+    "enters": "high_e"
+   },
+   {
+    "t": 2.51,
+    "enters": "NOT_IN_SCOPE"
+   }
+  ]
+ }
+}
