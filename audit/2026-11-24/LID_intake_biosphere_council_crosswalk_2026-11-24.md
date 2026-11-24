@@ -188,6 +188,27 @@ The KNOWN_HELD link WOLF_PACK → COUNCIL (`registry/known_held_links.json`) is 
 
 This follows AI-arena's own CI pattern: siblings pinned by commit, with sha256 checks. The owner decides whether COUNCIL lives in LID, in AI-arena, or in both with a pin.
 
+### Addendum, 2026-11-24: the pattern, not the people
+
+The owner wrote: "Thé pattern of the council is what’s important, not the people." Then: "It would be similar to an Oracle in AI terms i guess." And: "Ones who looks to things at the Root dependancy, Long cycles, wisdom Accounting, or whatever other English terms dont quite fit."
+
+`council/council_pattern.json` (id COUNCIL_PATTERN, PROPOSED) holds the pattern and names no tribe, nation or person. It follows the convention of `ontology/social/stone_art_ledger.json`.
+
+- **Words first.** The owner's three phrases are the primary text, verbatim, with `english_fit: APPROXIMATE`. The three functions (root dependency, long cycles, wisdom accounting) are readings of those phrases, each pointing to where the repository already carries it:
+  - dependency chain and BIOSPHERE;
+  - the seven-generation horizon and CYCLE;
+  - the reversal count and STONE_LEDGER.
+  
+  If a reading and the words differ, the words hold.
+- **Coordination block in the repository's shape:**
+  - three cycles: decision, scope widening on a zero-sum outcome, and the horizon;
+  - three observer cuts. The first cut is a one-shot oracle reading. It keeps no cycle, which is why a plain oracle reading loses the pattern.
+  
+  It passes `validation/coordination_check.py` `check_block`. Planted defects (missing key, bad status tag, unknown cycle) fail as expected.
+- **Oracle analogy.** It is recorded as the owner's tentative word. Where it fits and where it differs is PROPOSED: the record reads it as an accountable oracle.
+- **Held file not edited.** `validation/example/council.json` is unchanged. Its names and cross-domain examples stay held there. The build fails if any of them appears in the pattern record, and a planted "Māori" made it fail as intended.
+- **Placement.** The record sits in the audit folder. Moving it into `ontology/social/` is the owner's decision.
+
 ### A mismatch in AI-arena (OBSERVED, not fixed)
 
 `CLAUDE.md` says "v2 is currently documented but not yet implemented". Yet `arena/coordinator.py`, `arena/admission.py` and their neighbours exist, and `protocol/arena_protocol.md` says it governs v2.

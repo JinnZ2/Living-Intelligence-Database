@@ -51,5 +51,6 @@ All scripts are Python 3 standard library only and need no network. `jsonschema`
 | `biosphere/biosphere_candidates.py <repo> <out>` (`--selftest`: 5 cases) | `biosphere/biosphere_candidates_results.json` |
 | `intake/weekly_intake.py fetch / offline` (`--selftest`: 9 cases) | `intake/live_2026-11-24/` (snapshots with sha256, `intake.json`, `intake.md`) |
 | `crosswalk/build_crosswalk.py` | `crosswalk/crosswalk_D_L.json` |
+| `council/build_council_pattern.py <repo>` | `council/council_pattern.json`: the pattern-only COUNCIL record, checked with the repo's `coordination_check.check_block` and a no-names guard |
 
 `intake/weekly_science_intake.yml` is a PROPOSED workflow. GitHub does not run it from this folder. Adopting it means copying it to `.github/workflows/`, which is the owner's decision.
