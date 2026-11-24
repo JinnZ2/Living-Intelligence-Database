@@ -394,6 +394,20 @@
       "holdout": "the stratified rule is re-applied unchanged. An OBSERVED_CLAIM example carries an OBSERVED status tag, so its entity counts as has_statused_field = yes, the same as kinds OBSERVED, DERIVED and PROPOSED. This is stated here because the earlier entry listed three kinds and this kind did not exist then.",
       "limits": "one reader, abstracts only, no second reading. STATED means stated in the abstract, not shown in the paper's data.",
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "NOT_ADDRESSED + reading queue",
+      "after": "the claim/number split at bb0b4d0; by the owner's order. No reading has been recorded.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "claim_support_added": {
+        "NOT_ADDRESSED": "the source does not address the field's claim -> the value is kept, status 'PROPOSED', note 'citation does not address claim'"
+      },
+      "several_works": "per field over the works read: CONTRADICTED when any contradicts, else STATED when any states the claim, else RELATED when any is related, else NOT_ADDRESSED.",
+      "reader": "replaces the 'reader' line of the abstract_pass entry: readings arrive as registry/attribute_readings.json from an outside reader. scripts in this repository build the steps and re-export from that file; they make no judgment.",
+      "reading_queue": "docs/reading_queue.md, written by scripts/reading_queue.py: one row per field and found work (12 rows, 11 fields): entity, field, value, the field's definition text, PMID, DOI. It holds no abstract text and no judgment.",
+      "renames": "none"
     }
   ]
 }
