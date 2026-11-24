@@ -316,6 +316,50 @@
       },
       "not_changed": "states, scope, search steps, title thresholds, string_state, registry shape. A record by the same first author with a similar but different title still counts as identified and is listed with its differences; it may be a different work by that author, and the difference list is what shows it.",
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "UNDERSPECIFIED + MATCH_SUSPECT; second index; abstract pass (stage 1b + stage 2)",
+      "after": "the existence check at 1cd1cc8, whose results were seen; by the owner's order. Declared before any second-index search was sent and before any abstract was fetched. Reachability was probed first with one known paper: Europe PMC answered; api.openalex.org was refused by this environment's egress proxy (HTTP 403 on CONNECT).",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "existence_states_added": {
+        "UNDERSPECIFIED": "the work's text gives no quoted title and no venue, or the string names no work with an author and a year. Not searchable; it is not searched and it is not a miss. Distinct from NOT_FOUND_INDEXED, which now means a titled work was searched and no record identified. An untitled work whose description query returned exactly one record keeps the earlier rule (none occurred).",
+        "MATCH_SUSPECT": "a record was identified by first author, but the cited title's tokens (3+ letters, in order) are not a contiguous run inside the record's title and the year or the venue differs: plausibly a different work by the same author. The record and its differences are kept; the work is not counted as found. Written after the Dorigo & Gambardella (1997) row was seen, at the owner's direction.",
+        "string_state_order": "weakest first: UNDERSPECIFIED, NOT_FOUND_INDEXED, NOT_INDEXED, MATCH_SUSPECT, FOUND_DIFFERS, FOUND_AS_CITED",
+        "lead": "a work may carry 'lead': a hand-entered note from registry/existence_leads.json, marked as recall and unverified. Entered for Dorigo & Gambardella (1997): '1997 IEEE TEC 1:53-66 may exist as cited outside PubMed (recall, unverified)'."
+      },
+      "second_index": {
+        "scope": "works in state NOT_FOUND_INDEXED, NOT_INDEXED or MATCH_SUSPECT after the re-sort. UNDERSPECIFIED works are not searched.",
+        "order": "Europe PMC REST search (ebi.ac.uk/europepmc/webservices/rest/search, resultType lite); then OpenAlex for what is still not found. OpenAlex is unreachable here, so it is recorded as NOT_REACHED for each such work, never as a miss.",
+        "search": "the same three steps as PubMed: AUTH + PUB_YEAR + TITLE words; AUTH + TITLE words; TITLE words. Same title words, at most 5 records.",
+        "identified": "the same rule as PubMed after its amendment (title thresholds 0.8 / 0.5; first author agrees, or equal title with agreeing year), then the MATCH_SUSPECT test. No rule is changed after the run; an error found in the adapter is recorded as an error, not folded in silently.",
+        "control": "one known paper (Sumbre 2001, PMID 11546877) is used to confirm the adapter reads the response shape. It is already FOUND_AS_CITED and is not in scope.",
+        "recorded": "each searched work gains second_index {index, queries, state, matched_record, differs, not_compared, candidate}. When the second index identifies the work as FOUND_AS_CITED or FOUND_DIFFERS, the work's state becomes that state and matched_record names the index; the PubMed outcome is kept under 'pubmed'. Otherwise the work's state does not change."
+      },
+      "abstract_pass": {
+        "scope": "works identified in PubMed and not suspect: 8 FOUND_AS_CITED and 4 FOUND_DIFFERS (12 works, 11 attribute fields). Works found only in the second index are not in this pass.",
+        "fetch": "NCBI efetch, db=pubmed, rettype=abstract. Abstract only; no full text. Abstract text is not committed; its sha256 is listed in provenance/as_received/abstracts_MANIFEST.json.",
+        "reader": "the abstracts are read by the model writing this entry; each judgment is entered by hand in registry/attribute_readings.json with a verbatim quote of at most 25 words. One reader, no second reading.",
+        "judgment": {
+          "STATES": "the abstract states the field's value or the claim in the field's definition -> status 'OBSERVED (basis: abstract)'",
+          "RELATED": "the abstract is on the subject and does not state the value -> status 'PROPOSED', with a note",
+          "CONTRADICTS": "the abstract contradicts the value or claim -> the value is kept, status 'PROPOSED', note 'contradicted by abstract'",
+          "NO_ABSTRACT": "the record has no abstract -> no status change"
+        },
+        "what_is_judged": "the field's value together with its scope.definition in the entity file. A numeric value is 'stated' only when the abstract gives that number or one that rounds to it for the defined quantity.",
+        "several_works": "a field backed by more than one read work takes OBSERVED only when at least one abstract STATES it and none CONTRADICTS; a CONTRADICTS from any read abstract gives PROPOSED with the note. Works of the same string that were not read are named in the note.",
+        "mechanism": "entity files are not edited. registry/attribute_readings.json is an overlay read by scripts/provenance_chain.py: an attribute field with a reading gets that status, a status_note, and params.status_basis {read, source_id, pmids}. Status is in the step id, so build appends a new step that supersedes the old one; the old step stays.",
+        "registry": "a source string with at least one work read gets opened = 'abstract', fetched = the date, and opened_note = how many of its works were read. Strings are not edited.",
+        "evidence_type_table": "still NOT APPLIED. These statuses come from reading."
+      },
+      "exports": {
+        "reference": "re-exported; no rule change. Status 'OBSERVED (basis: abstract)' reads OBSERVED.",
+        "examples": "attribute fields with a status are example targets with role observation (the earlier entry listed null attributes only). An OBSERVED example's status starts with 'OBSERVED'. Filters otherwise unchanged.",
+        "holdout": "the stratified rule is re-applied unchanged, not re-chosen",
+        "blind": "blind/ is left as built at 4221e16; it is a frozen package and is not rebuilt when the reference moves"
+      },
+      "renames": "none"
     }
   ]
 }

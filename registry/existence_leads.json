@@ -1,0 +1,13 @@
+{
+ "note": "Hand-entered leads for existence works. A lead is recall, unverified, and changes no state.",
+ "leads": [
+  {
+   "surname": "Dorigo",
+   "year": "1997",
+   "title": "Ant colony system",
+   "lead": "1997 IEEE TEC 1:53-66 may exist as cited outside PubMed (recall, unverified)",
+   "entered": "2026-11-24",
+   "by": "owner's work order"
+  }
+ ]
+}
