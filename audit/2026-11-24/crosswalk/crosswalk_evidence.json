@@ -1,0 +1,413 @@
+{
+ "record": "CROSSWALK_EVIDENCE",
+ "status": "DERIVED",
+ "date": "2026-11-24",
+ "source": {
+  "path": "crosswalk_D_L.json",
+  "sha256": "460b27a3bcf4ab99e51c073e8082f942eea07989de03059bd1aaec507fd3eddc"
+ },
+ "seed": 20261124,
+ "permutations": 10000,
+ "D_spans_L": {
+  "D0_law": [
+   "L0",
+   "L1"
+  ],
+  "D1_energy": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ],
+  "D2_condition": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ],
+  "D3_material": [
+   "L1",
+   "L4"
+  ],
+  "D4_entity": [
+   "L3",
+   "L4"
+  ],
+  "D5_pattern": [
+   "L4",
+   "Lε.enc",
+   "Lε.obs"
+  ]
+ },
+ "D_roles_spanning_2plus_L": 6,
+ "D_roles": 6,
+ "same_D_disjoint_L_pairs": 29,
+ "same_D_disjoint_L_examples": [
+  [
+   "D0_law",
+   "G2D_HALES",
+   [
+    "L0"
+   ],
+   "F_FLOW",
+   [
+    "L1"
+   ]
+  ],
+  [
+   "D0_law",
+   "G2D_HALES",
+   [
+    "L0"
+   ],
+   "L_CONSERVE",
+   [
+    "L1"
+   ]
+  ],
+  [
+   "D0_law",
+   "G3D_FEJES",
+   [
+    "L0"
+   ],
+   "F_FLOW",
+   [
+    "L1"
+   ]
+  ],
+  [
+   "D0_law",
+   "G3D_FEJES",
+   [
+    "L0"
+   ],
+   "L_CONSERVE",
+   [
+    "L1"
+   ]
+  ],
+  [
+   "D0_law",
+   "F_FLOW",
+   [
+    "L1"
+   ],
+   "L_SCATTER",
+   [
+    "L0"
+   ]
+  ],
+  [
+   "D0_law",
+   "F_FLOW",
+   [
+    "L1"
+   ],
+   "G3D_DAUTER",
+   [
+    "L0"
+   ]
+  ],
+  [
+   "D0_law",
+   "L_CONSERVE",
+   [
+    "L1"
+   ],
+   "L_SCATTER",
+   [
+    "L0"
+   ]
+  ],
+  [
+   "D0_law",
+   "L_CONSERVE",
+   [
+    "L1"
+   ],
+   "G3D_DAUTER",
+   [
+    "L0"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_WAX_COST",
+   [
+    "L4"
+   ],
+   "E_SUN",
+   [
+    "L2"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_WAX_COST",
+   [
+    "L4"
+   ],
+   "E_SURFACE",
+   [
+    "L2"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_BODY_HEAT",
+   [
+    "L4"
+   ],
+   "E_SUN",
+   [
+    "L2"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_BODY_HEAT",
+   [
+    "L4"
+   ],
+   "E_SURFACE",
+   [
+    "L2"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_NECTAR",
+   [
+    "L4",
+    "L3"
+   ],
+   "E_SUN",
+   [
+    "L2"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_NECTAR",
+   [
+    "L4",
+    "L3"
+   ],
+   "E_SURFACE",
+   [
+    "L2"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_SUN",
+   [
+    "L2"
+   ],
+   "E_PHOTO_MAX",
+   [
+    "L4",
+    "L1"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_SUN",
+   [
+    "L2"
+   ],
+   "E_NECTARY_PHOTO",
+   [
+    "L4"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_SURFACE",
+   [
+    "L2"
+   ],
+   "E_PHOTO_MAX",
+   [
+    "L4",
+    "L1"
+   ]
+  ],
+  [
+   "D1_energy",
+   "E_SURFACE",
+   [
+    "L2"
+   ],
+   "E_NECTARY_PHOTO",
+   [
+    "L4"
+   ]
+  ],
+  [
+   "D2_condition",
+   "C_WALL",
+   [
+    "L4"
+   ],
+   "C_FLOW_T",
+   [
+    "L1"
+   ]
+  ],
+  [
+   "D2_condition",
+   "C_WALL",
+   [
+    "L4"
+   ],
+   "C_MELT",
+   [
+    "L1"
+   ]
+  ],
+  [
+   "D2_condition",
+   "C_FLOW_T",
+   [
+    "L1"
+   ],
+   "C_BROOD_T",
+   [
+    "L4",
+    "L3"
+   ]
+  ],
+  [
+   "D2_condition",
+   "C_FLOW_T",
+   [
+    "L1"
+   ],
+   "I_SUNCOMPASS",
+   [
+    "L4",
+    "L2"
+   ]
+  ],
+  [
+   "D2_condition",
+   "C_MELT",
+   [
+    "L1"
+   ],
+   "C_BROOD_T",
+   [
+    "L4",
+    "L3"
+   ]
+  ],
+  [
+   "D2_condition",
+   "C_MELT",
+   [
+    "L1"
+   ],
+   "I_SUNCOMPASS",
+   [
+    "L4",
+    "L2"
+   ]
+  ],
+  [
+   "D3_material",
+   "M_WAX",
+   [
+    "L4"
+   ],
+   "H_DHA_MGO",
+   [
+    "L1"
+   ]
+  ],
+  [
+   "D3_material",
+   "M_GLANDS",
+   [
+    "L4"
+   ],
+   "H_DHA_MGO",
+   [
+    "L1"
+   ]
+  ],
+  [
+   "D4_entity",
+   "D4_FLOWERS",
+   [
+    "L3"
+   ],
+   "D4_HOT_WORKERS",
+   [
+    "L4"
+   ]
+  ],
+  [
+   "D4_entity",
+   "D4_HOT_WORKERS",
+   [
+    "L4"
+   ],
+   "D4_WILDFLOWER",
+   [
+    "L3"
+   ]
+  ],
+  [
+   "D5_pattern",
+   "P_HEX_CELL",
+   [
+    "Lε.enc"
+   ],
+   "P_BUILT_MEASURED",
+   [
+    "Lε.obs",
+    "L4"
+   ]
+  ]
+ ],
+ "stats": [
+  {
+   "L_tag_used": "first",
+   "H_L": 2.288,
+   "H_L_given_D": 0.94,
+   "H_D": 2.471,
+   "H_D_given_L": 1.122,
+   "predict_L_from_D_majority": "17/28",
+   "baseline_most_common_L": "12/28 (L4)",
+   "spearman_D_vs_L": 0.502,
+   "perm_p_two_sided": 0.0104,
+   "n_spearman": 26,
+   "excluded_from_spearman": [
+    "P_BUILT_MEASURED",
+    "P_HEX_CELL"
+   ]
+  },
+  {
+   "L_tag_used": "last",
+   "H_L": 2.364,
+   "H_L_given_D": 1.354,
+   "H_D": 2.471,
+   "H_D_given_L": 1.46,
+   "predict_L_from_D_majority": "15/28",
+   "baseline_most_common_L": "9/28 (L4)",
+   "spearman_D_vs_L": 0.587,
+   "perm_p_two_sided": 0.0016,
+   "n_spearman": 27,
+   "excluded_from_spearman": [
+    "P_HEX_CELL"
+   ]
+  }
+ ],
+ "reading": {
+  "against_aliases": "H(L|D) and H(D|L) are well above 0, and same-D pairs with disjoint L exist; one stack would erase those distinctions.",
+  "for_relation": "D and L are positively rank-correlated: the chain runs from fundamental to emergent on both. They are related, not independent.",
+  "limits": "one trace, 28 non-independent nodes, one L tagger; D tags written before L tags by the same audit."
+ }
+}

@@ -83,6 +83,17 @@ def build_index(legacy=False):
             if not isinstance(data, dict):
                 print(f"⚠️  Skipping {file}: root is not an object")
                 continue
+            # relational/ graph files ({nodes, edges}, no id) are validated against the
+            # graph branch of relational.schema.json and reported; they are not entities.
+            if layer_dir.name == "relational" and "id" not in data and "nodes" in data and "edges" in data:
+                valid, err = validate_entity(data, schema)
+                if not valid:
+                    print(f"❌ Validation error in {file}: {err}")
+                    errors += 1
+                else:
+                    print(f"ℹ️  {file.relative_to(ROOT)}: graph file validated "
+                          f"({len(data['nodes'])} nodes, {len(data['edges'])} edges); not an entity, not indexed")
+                continue
             if "id" not in data or "name" not in data:
                 print(f"⚠️  Skipping {file}: missing required 'id' or 'name' field")
                 continue

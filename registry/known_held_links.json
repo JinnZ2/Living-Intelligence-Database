@@ -10,6 +10,14 @@
       "relation": "synergy",
       "state": "KNOWN_HELD",
       "reason": "COUNCIL exists only at validation/example/council.json, outside ontology/, so the build does not index it. Whether COUNCIL moves into ontology/ or the link is recorded as pointing to an example is the owner's decision (audit/2026-11-24/LID_execution_results_2026-11-24.md, N03 and R10). Held until then; the link is not removed."
+    },
+    {
+      "source": "BIOSPHERE",
+      "target": "COUNCIL",
+      "relation": "connected_to",
+      "state": "KNOWN_HELD",
+      "added": "2026-11-24",
+      "reason": "Added when relational/ was indexed on the owner's yes of 2026-11-24 (PR #30). BIOSPHERE's link to COUNCIL was recorded on the owner's order; COUNCIL exists only at validation/example/council.json and is not indexed. The pattern-only record COUNCIL_PATTERN is indexed, but it is a different id and the link is not retargeted. Held until the owner decides; the link is not removed."
     }
   ]
 }

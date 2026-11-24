@@ -1,0 +1,115 @@
+# PROPOSED workflow. Inert while it sits in audit/2026-11-24/intake/.
+# To adopt: the owner copies it to .github/workflows/weekly_science_intake.yml
+# (pushing a workflow file needs a token with the `workflow` scope).
+#
+# What it does, weekly: fetch newly indexed works from Europe PMC for the queries in
+# intake_queries.json, save the raw bytes with sha256, filter and list candidates offline,
+# generate rule-based hypothesis stubs, and open a pull request for a person to review.
+# It never merges, never writes ontology/ or registry/, and fails loudly on any NOT_RUN.
+name: weekly-science-intake
+
+on:
+  schedule:
+    - cron: "17 11 * * 1"   # Mondays 11:17 UTC
+  workflow_dispatch:
+    inputs:
+      since: { description: "YYYY-MM-DD (default: until minus 7 days)", required: false }
+      until: { description: "YYYY-MM-DD (default: today)", required: false }
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: weekly-science-intake
+  cancel-in-progress: false
+
+env:
+  INTAKE_DIR: audit/2026-11-24/intake
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  intake:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with: { fetch-depth: 0 }
+
+      - uses: actions/setup-python@v7
+        with: { python-version: "3.12" }
+
+      # Offline instruments first. Any failure stops the run before the network is used.
+      - name: Self-tests (offline)
+        run: |
+          set -euo pipefail
+          python3 audit/2026-11-24/deviation/deviation_extract.py --selftest
+          python3 audit/2026-11-24/biosphere/biosphere_candidates.py --selftest
+          python3 "$INTAKE_DIR/weekly_intake.py" --selftest
+          python3 validation/fixtures/run_fixtures.py
+
+      # The one networked stage. Exit 3 means a query was NOT_RUN: the job fails after the
+      # snapshots are uploaded, and no pull request is opened from an incomplete run.
+      - name: Fetch, filter, list candidates, generate hypothesis stubs
+        id: run
+        run: |
+          set -uo pipefail
+          UNTIL="${{ inputs.until }}"; UNTIL="${UNTIL:-$(date -u +%F)}"
+          SINCE="${{ inputs.since }}"
+          OUT="intake/weekly/$UNTIL"
+          echo "out=$OUT" >> "$GITHUB_OUTPUT"
+          echo "until=$UNTIL" >> "$GITHUB_OUTPUT"
+          ARGS=(fetch --repo . --queries "$INTAKE_DIR/intake_queries.json" --out "$OUT" --until "$UNTIL")
+          [ -n "$SINCE" ] && ARGS+=(--since "$SINCE")
+          python3 "$INTAKE_DIR/weekly_intake.py" "${ARGS[@]}"
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+
+      # Replay: the offline stages must reproduce the same bytes from the saved snapshots.
+      - name: Replay from snapshots
+        run: |
+          set -euo pipefail
+          OUT="${{ steps.run.outputs.out }}"
+          python3 "$INTAKE_DIR/weekly_intake.py" offline --repo . --queries "$INTAKE_DIR/intake_queries.json" \
+            --snapshots "$OUT/snapshots" --out /tmp/replay || true
+          cmp "$OUT/intake.json" /tmp/replay/intake.json
+          cmp "$OUT/intake.md" /tmp/replay/intake.md
+
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: intake-${{ steps.run.outputs.until }}
+          path: ${{ steps.run.outputs.out }}
+
+      - name: Fail on NOT_RUN or error
+        if: steps.run.outputs.code != '0'
+        run: |
+          echo "intake exited ${{ steps.run.outputs.code }}; see intake.md NOT_RUN list"; exit 1
+
+      # Optional reading slot. Declared, not implemented. Runs only if the owner sets the
+      # repository variable INTAKE_LLM_ENABLED=true and a secret. Whatever fills it must
+      # write model name, prompt sha256 and reading_state MACHINE_READ_NOT_REVIEWED, and
+      # must not write claim_support.
+      - name: Optional machine reading (off by default)
+        if: vars.INTAKE_LLM_ENABLED == 'true'
+        run: |
+          echo "NOT_IMPLEMENTED: no reader is wired in this proposal"; exit 1
+
+      - name: Open a pull request for review (never merged by this workflow)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          OUT="${{ steps.run.outputs.out }}"; UNTIL="${{ steps.run.outputs.until }}"
+          BR="intake/weekly-$UNTIL"
+          git config user.name  "lid-intake-bot"
+          git config user.email "lid-intake-bot@users.noreply.github.com"
+          git switch -c "$BR"
+          git add "$OUT"
+          git commit -m "intake: weekly candidates to $UNTIL (PROPOSED, unreviewed)"
+          git push origin "$BR"
+          gh pr create --base main --head "$BR" \
+            --title "Weekly science intake to $UNTIL (PROPOSED, unreviewed)" \
+            --body-file "$OUT/intake.md" --label intake || \
+          gh pr create --base main --head "$BR" \
+            --title "Weekly science intake to $UNTIL (PROPOSED, unreviewed)" \
+            --body-file "$OUT/intake.md"

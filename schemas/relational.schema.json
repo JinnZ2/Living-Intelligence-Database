@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "relational.schema.json",
+  "title": "Relational Schema",
+  "description": "Records in ontology/relational/. Relational is meant in the physical sense: couplings, flows, boundaries, dependencies and closures between systems (for example sunlight in, heat out, matter recycled), of which social relationship is one case and not the whole. Owner, 2026-11-24: 'relational as in physics terms not social relational only'. Two shapes are accepted and told apart by their keys: a graph file ({nodes, edges}, no id; validated, not indexed as an entity) and a reference record (an entity with id and record_kind, indexed). Status: PROPOSED.",
+  "oneOf": [
+    {
+      "title": "graph",
+      "type": "object",
+      "required": ["nodes", "edges"],
+      "not": {"required": ["id"]},
+      "additionalProperties": false,
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {"type": "object", "required": ["id", "label"], "additionalProperties": false,
+                    "properties": {"id": {"type": "string"}, "label": {"type": "string"}}}
+        },
+        "edges": {
+          "type": "array",
+          "items": {"type": "object", "required": ["source", "target", "relation"], "additionalProperties": false,
+                    "properties": {"source": {"type": "string"}, "target": {"type": "string"},
+                                   "relation": {"type": "string"}, "weight": {"type": ["number", "null"]}}}
+        }
+      }
+    },
+    {
+      "title": "reference record",
+      "type": "object",
+      "required": ["id", "name", "ontology", "record_kind", "status", "sources"],
+      "properties": {
+        "id": {"type": "string"},
+        "name": {"type": "string"},
+        "ontology": {"const": "relational"},
+        "record_kind": {"type": "string", "description": "What kind of relational record this is, e.g. earth_scale_reference."},
+        "status": {"enum": ["OBSERVED", "DERIVED", "PROPOSED", "UNKNOWN", "NOT_TESTED"]},
+        "description": {"type": "string"},
+        "sources": {"type": "object", "description": "Source id -> source entry. Each entry that was fetched carries the sha256 of the fetched bytes."},
+        "links": {
+          "type": "array",
+          "items": {"type": "object", "required": ["rel", "to"],
+                    "properties": {"rel": {"type": "string", "enum": ["synergy", "geometry_link", "resonance", "energy_coupling", "temporal_bridge", "connected_to", "energy_mode"]},
+                                   "to": {"type": "string"}, "direction": {"enum": ["to", "from", "both"]},
+                                   "status": {"type": "string"}, "note": {"type": "string"}}}
+        }
+      }
+    }
+  ]
+}

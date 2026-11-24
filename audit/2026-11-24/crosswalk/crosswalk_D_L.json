@@ -1,0 +1,750 @@
+{
+ "record": "CROSSWALK_D_L",
+ "status": "PROPOSED",
+ "date": "2026-11-24",
+ "option": "OPEN_QUESTIONS #3 option (b): two axes, declared crosswalk; D and L are not aliases",
+ "option_status_2026-11-24": "under evidence review: the owner asked for evidence for and against (answer 3 on PR #30). Not approved. The per-node L tags are approved (answer 4) and stand whichever option is chosen.",
+ "axes": {
+  "D": "role in the dependency chain",
+  "L": "substrate layer (docs/GROUNDING_LAYERS.md)"
+ },
+ "membrane_reading": "Lε is where a measured node becomes a recorded D5 attribute (P_HEX_CELL is Lε.enc; P_BUILT_MEASURED carries Lε.obs).",
+ "trace": {
+  "path": "reference/reference_trace_BE_hex_v0.3.json",
+  "sha256": "0839cc3ef9926e7259e21b0a5023b00be54aec634cda2d63ba9ed4328785edb4",
+  "nodes": 28
+ },
+ "existing_field_note": "120 entity files carry substrate_layer with values substrate_primary / language_primary / both (OBSERVED). That is a third, coarser axis (substrate L0-L4 vs language L5) and is not changed here.",
+ "biosphere_placement": {
+  "id": "BIOSPHERE",
+  "source": "ontology/relational/biosphere_reference.json (PROPOSED, unindexed)",
+  "source_note_2026-11-24": "indexed on the owner's yes (answer 2 on PR #30) under schemas/relational.schema.json; the record file is unchanged.",
+  "D": "D4_entity at earth scale; its state (temperature, water, oxygen, carbon, soil, season) acts as D2 conditions for every contained entity",
+  "L": [
+   "L3",
+   "L2"
+  ],
+  "L_reason": "the record's scope is 'life-sustaining zone, not planetary energy balance' (owner's order): ecological (L3), bounded by planetary constraints (L2)",
+  "status": "PROPOSED",
+  "note": "In the bee trace, E_SUN, E_SURFACE and L_SCATTER sit outside or at the edge of the biosphere and the D4 forage nodes sit inside it. A BIOSPHERE node would sit between them: the sun feeds it, and it holds the conditions the bee depends on."
+ },
+ "layer_document_note": "GROUNDING_LAYERS.md files BE at L3 as an entity. The node-level tags here put colony physiology at L4. Both can hold, the entity in its web and its body as carrier, but the two placements differ and the owner should know.",
+ "flags": {
+  "MATH_NOT_SUBSTRATE": "a theorem holds whatever the physical conditions are. GROUNDING_LAYERS.md puts geometric invariants at L0, so the tag follows the document, but a theorem is not a substrate that can change. Owner decides whether mathematics gets its own marker outside L.",
+  "D0_HOLDS_A_MECHANISM": "the trace tags F_FLOW as D0_law, but it is a mechanism (wax flows when heated) that depends on D2 conditions. D0 then holds both laws and mechanisms.",
+  "SPANS_LAYERS": "a derived regime draws on more than one layer; one L tag would hide that.",
+  "NO_ASTRONOMICAL_LAYER": "the stack starts at L0 physics and has no layer for the star; the solar input is filed at L2, where it meets the planet."
+ },
+ "D_by_L_counts": {
+  "D5_pattern": {
+   "Lε.enc": 1,
+   "Lε.obs": 1,
+   "L4": 1
+  },
+  "D0_law": {
+   "L0": 4,
+   "L1": 2
+  },
+  "D2_condition": {
+   "L4": 4,
+   "L1": 3,
+   "L3": 1,
+   "L2": 1
+  },
+  "D3_material": {
+   "L4": 2,
+   "L1": 1
+  },
+  "D1_energy": {
+   "L4": 5,
+   "L3": 1,
+   "L2": 2,
+   "L1": 1
+  },
+  "D4_entity": {
+   "L3": 3,
+   "L4": 2
+  }
+ },
+ "nodes": [
+  {
+   "id": "P_HEX_CELL",
+   "D": "D5_pattern",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "Lε.enc"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "the recorded attribute value: the point where a measured pattern becomes a database number",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "G2D_HALES",
+   "D": "D0_law",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L0"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "GROUNDING_LAYERS.md places geometric invariants and HEX at L0",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": "MATH_NOT_SUBSTRATE",
+   "flag_status": "OPEN (owner decides)"
+  },
+  {
+   "id": "G3D_FEJES",
+   "D": "D0_law",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L0"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "geometric optimum of the 3D cell; same placement as G2D_HALES",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": "MATH_NOT_SUBSTRATE",
+   "flag_status": "OPEN (owner decides)"
+  },
+  {
+   "id": "C_WALL",
+   "D": "D2_condition",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "real wall thickness is a property of what workers build",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "F_FLOW",
+   "D": "D0_law",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L1"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "visco-elastic flow and surface-energy minimisation are thermodynamic mechanisms",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": "D0_HOLDS_A_MECHANISM",
+   "flag_status": "OPEN (owner decides)"
+  },
+  {
+   "id": "C_FLOW_T",
+   "D": "D2_condition",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L1"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "a material temperature at which wax flows",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "C_MELT",
+   "D": "D2_condition",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L1"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "a phase transition of a material",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "C_BROOD_T",
+   "D": "D2_condition",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4",
+    "L3"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "temperature held by colony physiology (L4) across ambient conditions (L3)",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "REGIME_HEX",
+   "D": "D2_condition",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L1",
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "derived from wax temperatures (L1) and colony-held nest temperature (L4)",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": "SPANS_LAYERS",
+   "flag_status": "OPEN (owner decides)"
+  },
+  {
+   "id": "M_WAX",
+   "D": "D3_material",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "a biosynthesised material; its chemistry is set by the organism",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "M_GLANDS",
+   "D": "D3_material",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "worker anatomy and age",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "E_WAX_COST",
+   "D": "D1_energy",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "metabolic conversion of sugar to wax",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "E_BODY_HEAT",
+   "D": "D1_energy",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "thoracic muscle metabolism",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "E_NECTAR",
+   "D": "D1_energy",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4",
+    "L3"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "plant photosynthesis (L4) supplying a pollinator (L3 relation)",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "E_SUN",
+   "D": "D1_energy",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L2"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "irradiance at 1 AU: the planetary energy input; L2 is the nearest layer in the stack",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": "NO_ASTRONOMICAL_LAYER",
+   "flag_status": "OPEN (owner decides)"
+  },
+  {
+   "id": "L_CONSERVE",
+   "D": "D0_law",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L1"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "open far-from-equilibrium systems: thermodynamics",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "D4_FLOWERS",
+   "D": "D4_entity",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L3"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "flowering plants as forage: an ecological relation",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "D4_HOT_WORKERS",
+   "D": "D4_entity",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "workers' bodies as the heat source",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "E_SURFACE",
+   "D": "D1_energy",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L2"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "atmospheric attenuation: a planetary constraint",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "E_PHOTO_MAX",
+   "D": "D1_energy",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4",
+    "L1"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "photosynthetic conversion limit: biological, bounded thermodynamically",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "I_SUNCOMPASS",
+   "D": "D2_condition",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4",
+    "L2"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "a sensing behaviour (L4) that reads a sky pattern made by the atmosphere (L2)",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "L_SCATTER",
+   "D": "D0_law",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L0"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "scattering optics: classical physics",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "D4_MANUKA",
+   "D": "D4_entity",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4",
+    "L3"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "a plant species (L4) whose nectar is the forage (L3)",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "E_NECTARY_PHOTO",
+   "D": "D1_energy",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "photosynthesis inside the nectary",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "D4_WILDFLOWER",
+   "D": "D4_entity",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L3"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "a multi-species forage community",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "H_DHA_MGO",
+   "D": "D3_material",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L1"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "non-enzymatic first-order chemical kinetics in stored honey",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  },
+  {
+   "id": "G3D_DAUTER",
+   "D": "D0_law",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "L0"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "improved geometric optimum; same placement as G2D_HALES",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": "MATH_NOT_SUBSTRATE",
+   "flag_status": "OPEN (owner decides)"
+  },
+  {
+   "id": "P_BUILT_MEASURED",
+   "D": "D5_pattern",
+   "D_status": "OBSERVED (in trace v0.3)",
+   "L": [
+    "Lε.obs",
+    "L4"
+   ],
+   "L_status": "OWNER_APPROVED",
+   "L_reason": "a measurement (Lε.obs) of what bees built (L4)",
+   "L_status_history": [
+    {
+     "date": "2026-11-24",
+     "status": "PROPOSED",
+     "by": "auditor"
+    },
+    {
+     "date": "2026-11-24",
+     "status": "OWNER_APPROVED",
+     "by": "owner, answer 4 on PR #30"
+    }
+   ],
+   "flag": null,
+   "flag_status": null
+  }
+ ]
+}

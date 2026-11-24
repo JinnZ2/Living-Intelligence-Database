@@ -1269,6 +1269,13 @@
       "substrate_layer": "substrate_primary"
     },
     {
+      "id": "BIOSPHERE",
+      "name": "Earth biosphere (reference record)",
+      "ontology": "relational",
+      "path": "ontology/relational/biosphere_reference.json",
+      "description": "The life-sustaining zone of Earth, held as one reference case for waste-cycling and gradient use. Every evidence line below is either a quote from a source fetched on 2026-11-24 or is marked NOT OPENED. The framing lines are the owner's, from the work order 'Earth-scale reference record', and are marked as such."
+    },
+    {
       "id": "FRACTAL",
       "name": "Fractal",
       "ontology": "shape",
@@ -1449,6 +1456,13 @@
         "archetype": "engine"
       },
       "substrate_layer": "substrate_primary"
+    },
+    {
+      "id": "COUNCIL_PATTERN",
+      "name": "Council pattern (no people named)",
+      "ontology": "social",
+      "path": "ontology/social/council_pattern.json",
+      "description": "The council as a pattern: those who look to the root dependency, the long cycle, and the accounting of wisdom, in the owner's words, which the owner says English does not quite fit. No specific tribe, nation or person is named in this record."
     },
     {
       "id": "BEE_NEST_SITE",
@@ -3912,6 +3926,21 @@
       "relation": "connected_to"
     },
     {
+      "source": "BIOSPHERE",
+      "target": "COUNCIL",
+      "relation": "connected_to"
+    },
+    {
+      "source": "BIOSPHERE",
+      "target": "STONE_LEDGER",
+      "relation": "connected_to"
+    },
+    {
+      "source": "BIOSPHERE",
+      "target": "ANT",
+      "relation": "connected_to"
+    },
+    {
       "source": "FRACTAL",
       "target": "SPIRAL",
       "relation": "resonance"
@@ -4210,6 +4239,21 @@
       "source": "ANT",
       "target": "MY",
       "relation": "resonance"
+    },
+    {
+      "source": "COUNCIL_PATTERN",
+      "target": "STONE_LEDGER",
+      "relation": "connected_to"
+    },
+    {
+      "source": "COUNCIL_PATTERN",
+      "target": "CYCLE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "COUNCIL_PATTERN",
+      "target": "BIOSPHERE",
+      "relation": "connected_to"
     },
     {
       "source": "BEE_NEST_SITE",
