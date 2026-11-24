@@ -1,0 +1,1330 @@
+{
+ "record": "WEEKLY_INTAKE",
+ "status": "PROPOSED; nothing here is reviewed",
+ "window": {
+  "since": "2026-11-17",
+  "until": "2026-11-24"
+ },
+ "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+ "queries_sha256": "2fca2a4068225146788428cb95cbe8820e3d4dfbc609e9a281c4635adee7aa5d",
+ "snapshots": [
+  {
+   "query_id": "be_comb_geometry",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28honeycomb+OR+%22comb+building%22+OR+%22comb+cell%22%29+AND+%28bee+OR+Apis%29%29+AND+FIRST_IDATE%3A%5B2026-11-17+TO+2026-11-24%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "be_comb_geometry.json",
+   "bytes": 16011,
+   "sha256": "8bc17b6929e0f771ed456026fe6d139e8c48b8d20649dabbbe483cc24157ae69",
+   "hit_count": 2
+  },
+  {
+   "query_id": "be_thermoregulation",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28thermoregulation+OR+%22brood+temperature%22+OR+%22nest+temperature%22%29+AND+%28Apis+OR+honeybee%29%29+AND+FIRST_IDATE%3A%5B2026-11-17+TO+2026-11-24%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "be_thermoregulation.json",
+   "bytes": 20594,
+   "sha256": "ac3ea072c7b7a57d11a53c333068e726497fde64c343a91a2fb16035bb9e8ef2",
+   "hit_count": 4
+  },
+  {
+   "query_id": "my_phosphorus",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28mycorrhiz%2A+AND+phosphorus+AND+transfer%29+AND+FIRST_IDATE%3A%5B2026-11-17+TO+2026-11-24%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "my_phosphorus.json",
+   "bytes": 65696,
+   "sha256": "af8f97eef2e9923fb249c97cadbe3b65aad311f1c27cf0dfb233b775435523fc",
+   "hit_count": 10
+  },
+  {
+   "query_id": "root_water_uptake",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22root+water+uptake%22+AND+%28%22soil+water+potential%22+OR+drought%29%29+AND+FIRST_IDATE%3A%5B2026-11-17+TO+2026-11-24%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "root_water_uptake.json",
+   "bytes": 22725,
+   "sha256": "f536c35b928c760af8edc3528cdac91d49a61c97ed45b89f9b18de2267efa9ed",
+   "hit_count": 3
+  },
+  {
+   "query_id": "biosphere_recycling",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28biosphere+AND+%28%22nutrient+recycling%22+OR+%22biogeochemical+cycl%2A%22%29+AND+%28planetary+OR+Earth%29%29+AND+FIRST_IDATE%3A%5B2026-11-17+TO+2026-11-24%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "biosphere_recycling.json",
+   "bytes": 300,
+   "sha256": "d9c4f457e4b9414153be0511761f9c4ed654f379fc29337ea8c015620f782a7b",
+   "hit_count": 0
+  }
+ ],
+ "not_run": [],
+ "counts": {
+  "kept": 15,
+  "removed": 4,
+  "candidates": 15,
+  "hypotheses": 15,
+  "hypotheses_by_rule": {
+   "HX1": 2,
+   "HX2": 0,
+   "HX3": 0,
+   "HX4": 13
+  },
+  "removed_by_reason": {
+   "F1 NO_ABSTRACT": 4
+  }
+ },
+ "removed": [
+  {
+   "query_id": "be_comb_geometry",
+   "pmid": null,
+   "doi": null,
+   "title": "Beyond chemical miticides: new frontiers against emerging genetic resistance in Varroa destructor mites in Australia",
+   "reason": "F1 NO_ABSTRACT"
+  },
+  {
+   "query_id": "be_thermoregulation",
+   "pmid": null,
+   "doi": null,
+   "title": "Effects of heat stress on honey bee physiology and gut microbiome under laboratory conditions",
+   "reason": "F1 NO_ABSTRACT"
+  },
+  {
+   "query_id": "my_phosphorus",
+   "pmid": null,
+   "doi": null,
+   "title": "Arbuscular mycorrhizal fungi enhance growth, mineral nutrition, metabolic traits and essential oil bioactivity in Thymus satureioides Coss.",
+   "reason": "F1 NO_ABSTRACT"
+  },
+  {
+   "query_id": "my_phosphorus",
+   "pmid": null,
+   "doi": null,
+   "title": "The T2T genome of Butyriboletusroseoflavus confirms genomic adaptations to ectomycorrhizal symbiosis",
+   "reason": "F1 NO_ABSTRACT"
+  }
+ ],
+ "candidates": [
+  {
+   "id": "C:43058457:BE:hexagonal_cell_efficiency",
+   "query_id": "be_comb_geometry",
+   "work": {
+    "pmid": "43058457",
+    "doi": "10.1186/s12864-026-13462-8",
+    "title": "RNA sequencing of antennae and comparative analysis of key gene families in Apis mellifera workers exhibiting drastic differences in propolis yield.",
+    "first_index_date": "2026-11-20",
+    "first_publication_date": "2026-10-16",
+    "pub_types": [
+     "Comparative Study",
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "f74a7178bdcfb787382cd1874e667822cfc1de7053fef55339f69ac1c7877bfa"
+   },
+   "touches": {
+    "entity": "BE",
+    "field": "hexagonal_cell_efficiency",
+    "claim": "Ratio of honey volume stored per unit wax mass in hexagonal cells compared to the next-best regular tessellation. Derives from the honeycomb conjecture: hexagons minimize total perimeter for equal-area tiling of a plane.",
+    "claim_sha256": "3c83177222a1a6ab9eb2edf4f951b50bc4f4dc574b49fd6fc31ab7408ce7913c",
+    "value": 0.97
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [
+    {
+     "span": "7",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "10",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43056305:BE:collective_thermoregulation",
+   "query_id": "be_thermoregulation",
+   "work": {
+    "pmid": "43056305",
+    "doi": "10.1371/journal.pbio.3004091",
+    "title": "Altitude-induced hypoxia suppresses Varroa mite reproduction in Tibetan honey bees.",
+    "first_index_date": "2026-11-20",
+    "first_publication_date": "2026-11-19",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "cd7511faa5a619e87b801612f30b2e84fb0ef35bc1a6f77f78137f9321509dba"
+   },
+   "touches": {
+    "entity": "BE",
+    "field": "collective_thermoregulation",
+    "claim": "Precision of honeybee cluster temperature maintenance — standard deviation of brood nest temperature from 35°C target across ambient temperatures ranging from -30°C to +45°C.",
+    "claim_sha256": "3610498d6ed3bf0f1885b67c253be41333c7d57f8249d2789b7ca331455b4c94",
+    "value": 0.94
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43048754:BE:collective_thermoregulation",
+   "query_id": "be_thermoregulation",
+   "work": {
+    "pmid": "43048754",
+    "doi": "10.1098/rsos.261826",
+    "title": "Male bumblebees are capable of providing brood care and impacting nest development in incipient nests.",
+    "first_index_date": "2026-11-19",
+    "first_publication_date": "2026-11-18",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "e58a898e75ccd06d7eeda10f54b733c09f623bf0a41ebf8e0c50febefb9b4383"
+   },
+   "touches": {
+    "entity": "BE",
+    "field": "collective_thermoregulation",
+    "claim": "Precision of honeybee cluster temperature maintenance — standard deviation of brood nest temperature from 35°C target across ambient temperatures ranging from -30°C to +45°C.",
+    "claim_sha256": "3610498d6ed3bf0f1885b67c253be41333c7d57f8249d2789b7ca331455b4c94",
+    "value": 0.94
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "Brood care is a core component of some social systems and a defining feature of eusocial insects.",
+     "truncated": false
+    },
+    {
+     "quote": "Here, we show that in the bumblebee Bombus impatiens, males incubate developing brood in lab-reared nests, and the presence of males positively contributes to nest",
+     "truncated": true
+    }
+   ],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43050400:BE:collective_thermoregulation",
+   "query_id": "be_thermoregulation",
+   "work": {
+    "pmid": "43050400",
+    "doi": "10.1371/journal.pone.0361582",
+    "title": "Caste-specific dynamics of brain biogenic amine levels and physiological states through the life cycle in the giant hornet Vespa mandarinia.",
+    "first_index_date": "2026-11-20",
+    "first_publication_date": "2026-11-18",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "f40df2ac997b240d06a76487c8475d7333d5295ba813dd69e3631a82adda2cf1"
+   },
+   "touches": {
+    "entity": "BE",
+    "field": "collective_thermoregulation",
+    "claim": "Precision of honeybee cluster temperature maintenance — standard deviation of brood nest temperature from 35°C target across ambient temperatures ranging from -30°C to +45°C.",
+    "claim_sha256": "3610498d6ed3bf0f1885b67c253be41333c7d57f8249d2789b7ca331455b4c94",
+    "value": 0.94
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43041999:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "43041999",
+    "doi": "10.3389/fpls.2026.1955423",
+    "title": "Crop-adapted arbuscular mycorrhizal fungi in maize: from symbiotic function to field reliability.",
+    "first_index_date": "2026-11-18",
+    "first_publication_date": "2026-11-02",
+    "pub_types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "b9e05ee271c9f6953666893b6f4310723c6db30f986cd7aca73d451d9f9296bc"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "Arbuscular mycorrhizal fungi (AMF) can improve nutrient acquisition and stress responses in maize, yet inoculation benefits remain inconsistent across fields.",
+     "truncated": false
+    },
+    {
+     "quote": "Root colonization alone does not establish effective nutrient transfer or net crop benefit.",
+     "truncated": false
+    },
+    {
+     "quote": "This critical narrative review examines maize-associated AMF diversity, arbuscule-mediated exchange, host genotype effects, phosphorus availability, stress responses, rhizosphere and hyphosphere interactions, inoculant quality, and field",
+     "truncated": true
+    }
+   ],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43041303:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "43041303",
+    "doi": "10.3389/fpls.2026.1960400",
+    "title": "Nutritional content of the African horned cucumber (&lt;i&gt;Cucumis metuliferus&lt;/i&gt; E. May. Ex Naudin) fruit grown under varying fertiliser types and growing environments, and its potential role in human nutrition.",
+    "first_index_date": "2026-11-18",
+    "first_publication_date": "2026-11-02",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "1a1ccac774ade2038f208569b8896620de959ea116beab127ceafbbcbc77bfd9"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "The results showed that a treatment combination of shade net and chemical fertilisers increased phosphorus (577.7 mg/100g DW) and potassium (1074 mg/100g DW) compared to",
+     "truncated": true
+    },
+    {
+     "quote": "As a result, growers are encouraged to consider the greenhouse environment combined with chemical fertilisers for maximising phytochemicals such as total phenols and vitamin C,",
+     "truncated": true
+    }
+   ],
+   "numbers": [
+    {
+     "span": "577.7 mg",
+     "role": "CONDITION_NUMBER",
+     "rule": "R4: unit-bearing number, no spread language",
+     "unit": "mg",
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "100g",
+     "role": "CONDITION_NUMBER",
+     "rule": "R4: unit-bearing number, no spread language",
+     "unit": "g",
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1074 mg",
+     "role": "CONDITION_NUMBER",
+     "rule": "R4: unit-bearing number, no spread language",
+     "unit": "mg",
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "100g",
+     "role": "CONDITION_NUMBER",
+     "rule": "R4: unit-bearing number, no spread language",
+     "unit": "g",
+     "pm": false,
+     "pct": false
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43062778:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "43062778",
+    "doi": "10.1007/s11250-026-05494-9",
+    "title": "Nutritional composition and feeding potential of tomato (Solanum lycopersicum L.) plants and by-products in sheep nutrition: a review.",
+    "first_index_date": "2026-11-21",
+    "first_publication_date": "2026-11-20",
+    "pub_types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "83fe3e59dc5a8c052d8903f820fe51f16b81b72a4d903d841e5ccc0f3d8d8dd6"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43061600:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "43061600",
+    "doi": "10.3389/fpls.2026.1945261",
+    "title": "Ectomycorrhizal fungi in deep soils: current knowledge, functional roles, and future directions.",
+    "first_index_date": "2026-11-21",
+    "first_publication_date": "2026-11-05",
+    "pub_types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "2aebb9292ffaff3d1c73077d7d00ac24763b53b05dfeb7db65a77fe6f90ea680"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "Ectomycorrhizal (ECM) fungi are key regulators of nutrient acquisition, plant performance, and carbon cycling in forest ecosystems, yet their ecological roles have been investigated predominantly",
+     "truncated": true
+    },
+    {
+     "quote": "Functionally, deep-soil ECM fungi might contribute to the vertical translocation of plant-derived carbon, the formation of mineral-associated organic matter, and the mobilization of nitrogen and",
+     "truncated": true
+    },
+    {
+     "quote": "Incorporating deep mycorrhizal processes into ecological and Earth system frameworks is essential for improving predictions of forest responses to future environmental change.",
+     "truncated": false
+    }
+   ],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43043610:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "43043610",
+    "doi": "10.1186/s12284-026-00946-0",
+    "title": "Fragrant Rice Gains Enhanced 2-Acetyl-1-Pyrroline and Multi-stress Resistance Through a JA-Proline Module Induced by a Rhizopus Fungus.",
+    "first_index_date": "2026-11-18",
+    "first_publication_date": "2026-08-22",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "1eec00ec8eae9131a30f8034cb79bd92e124ab71300af96aa5e7d7249cb1d89b"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "Through field trials, pot experiments, hydroponics, and plate assays combined with transcriptomics, qRT-PCR, metabolite quantification, and enzyme activity analysis, we demonstrate that TYR1 specifically colonizes",
+     "truncated": true
+    }
+   ],
+   "numbers": [
+    {
+     "span": "1-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2023",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2024",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1000-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "5",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "5",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2.1-fold",
+     "role": "CONDITIONAL_CHANGE",
+     "rule": "R6: change verb with a percent or fold: a change under a condition, not a spread",
+     "unit": "fold",
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43047453:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "43047453",
+    "doi": "10.1007/s11104-026-08589-2",
+    "title": "Yield benefit of tropical grass-legume compared to grass-alone pastures enhanced by biological nitrification inhibition.",
+    "first_index_date": "2026-11-19",
+    "first_publication_date": "2026-05-16",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "d6bcc900c253a21829503607371363a3ae394e038d017cf9f47916d9a4ea5be3"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [
+    {
+     "span": "2-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "15",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "0-0.1 m",
+     "role": "CONDITION_NUMBER",
+     "rule": "R4: unit-bearing number, no spread language",
+     "unit": "m",
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "15",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43061529:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "43061529",
+    "doi": "10.3389/fnut.2026.2006560",
+    "title": "Beyond nutrient density: linking rapid food composition assessment to human nutritional adequacy and bioavailability.",
+    "first_index_date": "2026-11-21",
+    "first_publication_date": "2026-11-05",
+    "pub_types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "a586fdee260a057194c88c4c7d4c9702bcf2893e513980f1993faeb7c50a926a"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43041360:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "43041360",
+    "doi": "10.3389/fpls.2026.1953935",
+    "title": "Disentangling environmental, irrigation, and clone effects on the cacao soil microbiome in a multi-location trial.",
+    "first_index_date": "2026-11-18",
+    "first_publication_date": "2026-11-02",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "027b91d0ebd69d2ca439d6afa35db792eb3d9f73c72fd62750545f7c055288a8"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43061155:ROOT_NET:water_uptake_efficiency",
+   "query_id": "root_water_uptake",
+   "work": {
+    "pmid": "43061155",
+    "doi": "10.48130/forres-0026-0028",
+    "title": "Conserved ERF54-mediated activation of &lt;i&gt;ERD7&lt;/i&gt; enhances drought resilience in &lt;i&gt;Populus&lt;/i&gt;.",
+    "first_index_date": "2026-11-21",
+    "first_publication_date": "2026-09-29",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "eb19b1f4d64a3dfda90ebee94b23d943bb66863364d1703c08ce833cbfca4240"
+   },
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "claim": "Hydraulic efficiency of root architecture — fraction of available soil water extracted per unit root length per day at field capacity, relative to theoretical maximum given soil hydraulic conductivity.",
+    "claim_sha256": "bf826957475f393c27fd29d993c79747719193660ff172f5be1ff881592052f3",
+    "value": 0.93
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "Understanding the conserved transcriptional regulatory mechanisms underlying drought stress responses across diverse Populus species is critical for enhancing the drought resilience of woody plants.",
+     "truncated": false
+    },
+    {
+     "quote": "In this study, we conducted a comparative transcriptomic analysis of five Populus taxa, which revealed PtrERF54, an ethylene response factor (ERF), as a core drought-inducible",
+     "truncated": true
+    },
+    {
+     "quote": "Both PtrERF54- and PtrERD7-overexpressing (OE) plants (PtrERF54-OE and PtrERD7-OE, respectively) exhibited significantly enhanced drought tolerance, as evidenced by reduced leaf wilting, lower relative electrical conductivity,",
+     "truncated": true
+    },
+    {
+     "quote": "Collectively, our results establish a conserved PtrERF54-PtrERD7 transcriptional module that modulates drought responses in Populus, providing novel insights into the genetic basis of water deficit",
+     "truncated": true
+    }
+   ],
+   "numbers": [
+    {
+     "span": "54",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "7",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "7",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "84K",
+     "role": "CONDITION_NUMBER",
+     "rule": "R4: unit-bearing number, no spread language",
+     "unit": "K",
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "7-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "7-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "7",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "7",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "54-",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "7",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43047459:ROOT_NET:water_uptake_efficiency",
+   "query_id": "root_water_uptake",
+   "work": {
+    "pmid": "43047459",
+    "doi": "10.1007/s11104-026-08471-1",
+    "title": "Drought and warming enhance the risk of nitrogen losses in intensively managed grasslands.",
+    "first_index_date": "2026-11-19",
+    "first_publication_date": "2026-03-20",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "574256778068b03a9849f582e1ea524e3edd524281b102b9ec78729f0c9c8621"
+   },
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "claim": "Hydraulic efficiency of root architecture — fraction of available soil water extracted per unit root length per day at field capacity, relative to theoretical maximum given soil hydraulic conductivity.",
+    "claim_sha256": "bf826957475f393c27fd29d993c79747719193660ff172f5be1ff881592052f3",
+    "value": 0.93
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "Background and aimsClimate change is expected to intensify drought and heatwaves, with major consequences for nutrient cycling in grasslands.",
+     "truncated": false
+    },
+    {
+     "quote": "Plant-soil-microbe interactions regulate nitrogen (N) dynamics, yet their responses to simultaneous warming and drought remain unclear, especially across plant species and land management histories.MethodsWe conducted",
+     "truncated": true
+    },
+    {
+     "quote": "We inferred fungi:bacteria by microbial C:N, not by direct soil community determination.Results Under control and warming conditions, Int soils supported up to 50% higher plant",
+     "truncated": true
+    },
+    {
+     "quote": "In contrast, drought decreased microbial biomass in Int soils but increased it by ~ 20% in Ext soils, likely reflecting their more drought-resistant fungal communities.",
+     "truncated": false
+    },
+    {
+     "quote": "These changes altered N flows: extractable soil N was up to three times higher in Int soils under warming and drought, indicating greater vulnerability to",
+     "truncated": true
+    }
+   ],
+   "numbers": [
+    {
+     "span": "~ 40%",
+     "role": "CONDITIONAL_CHANGE",
+     "rule": "R6: change verb with a percent or fold: a change under a condition, not a spread",
+     "unit": null,
+     "pm": false,
+     "pct": true
+    },
+    {
+     "span": "~ 20%",
+     "role": "CONDITIONAL_CHANGE",
+     "rule": "R6: change verb with a percent or fold: a change under a condition, not a spread",
+     "unit": null,
+     "pm": false,
+     "pct": true
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:43045997:ROOT_NET:water_uptake_efficiency",
+   "query_id": "root_water_uptake",
+   "work": {
+    "pmid": "43045997",
+    "doi": "10.1186/s12870-026-09693-2",
+    "title": "Ion homeostasis and redox stability are associated with cultivar-dependent preservation of essential oil quality in salt-stressed Pelargonium graveolens.",
+    "first_index_date": "2026-11-18",
+    "first_publication_date": "2026-08-21",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "5fb1e8239c97d0180743f17c1cbfabe33aee0906a9934b8a4c4ef69d332fb4e6"
+   },
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "claim": "Hydraulic efficiency of root architecture — fraction of available soil water extracted per unit root length per day at field capacity, relative to theoretical maximum given soil hydraulic conductivity.",
+    "claim_sha256": "bf826957475f393c27fd29d993c79747719193660ff172f5be1ff881592052f3",
+    "value": 0.93
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [
+    {
+     "span": "171",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "171",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "0.68",
+     "role": "DEVIATION_CANDIDATE",
+     "rule": "R2: spread language with a percent, or a unitless decimal",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "171",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "0.56",
+     "role": "DEVIATION_CANDIDATE",
+     "rule": "R2: spread language with a percent, or a unitless decimal",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "0.38",
+     "role": "DEVIATION_CANDIDATE",
+     "rule": "R2: spread language with a percent, or a unitless decimal",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "171",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "50",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H:HX4:C:43056305:BE:collective_thermoregulation",
+   "rule": "HX4",
+   "touches": {
+    "entity": "BE",
+    "field": "collective_thermoregulation",
+    "candidate": "C:43056305:BE:collective_thermoregulation"
+   },
+   "statement": "The abstract names biosphere-carried conditions (oxygen) for BE, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "oxygen"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43048754:BE:collective_thermoregulation",
+   "rule": "HX4",
+   "touches": {
+    "entity": "BE",
+    "field": "collective_thermoregulation",
+    "candidate": "C:43048754:BE:collective_thermoregulation"
+   },
+   "statement": "The abstract names biosphere-carried conditions (temperature) for BE, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "temperature"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43041999:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:43041999:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient, soil) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient",
+    "soil"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43041303:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:43041303:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43062778:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:43062778:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43061600:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:43061600:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (carbon, nutrient, oxygen, soil, water) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "carbon",
+    "nutrient",
+    "oxygen",
+    "soil",
+    "water"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43043610:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:43043610:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient, water) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient",
+    "water"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43047453:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:43047453:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient, soil) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient",
+    "soil"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43061529:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:43061529:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43041360:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:43041360:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient, soil, water) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient",
+    "soil",
+    "water"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:43061155:ROOT_NET:water_uptake_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "candidate": "C:43061155:ROOT_NET:water_uptake_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (carbon, sunlight, water) for ROOT_NET, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "carbon",
+    "sunlight",
+    "water"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX1:C:43047459:ROOT_NET:water_uptake_efficiency",
+   "rule": "HX1",
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "candidate": "C:43047459:ROOT_NET:water_uptake_efficiency"
+   },
+   "statement": "The abstract gives numbers on a value-like scale; one may bear on ROOT_NET.water_uptake_efficiency = 0.93.",
+   "falsifier": "A reader finds each number measures a different quantity from the field's scope.definition.",
+   "evidence_spans": [
+    "~ 40%",
+    "~ 20%"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX1"
+  },
+  {
+   "id": "H:HX4:C:43047459:ROOT_NET:water_uptake_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "candidate": "C:43047459:ROOT_NET:water_uptake_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient, soil, water) for ROOT_NET, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient",
+    "soil",
+    "water"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX1:C:43045997:ROOT_NET:water_uptake_efficiency",
+   "rule": "HX1",
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "candidate": "C:43045997:ROOT_NET:water_uptake_efficiency"
+   },
+   "statement": "The abstract gives numbers on a value-like scale; one may bear on ROOT_NET.water_uptake_efficiency = 0.93.",
+   "falsifier": "A reader finds each number measures a different quantity from the field's scope.definition.",
+   "evidence_spans": [
+    "0.68",
+    "0.56",
+    "0.38"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX1"
+  },
+  {
+   "id": "H:HX4:C:43045997:ROOT_NET:water_uptake_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "candidate": "C:43045997:ROOT_NET:water_uptake_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (sunlight) for ROOT_NET, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "sunlight"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  }
+ ]
+}

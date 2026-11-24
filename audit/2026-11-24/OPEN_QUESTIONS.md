@@ -52,6 +52,8 @@ Context: the audit built a D0–D5 dependency stack from the owner's answer with
 
 **If you run it:** the audit's D-labels either become aliases of L-labels or stay a separate stack with a declared crosswalk. Either way, W08 closes.
 
+> **Note, 2026-11-24 (added; the entry above is unchanged).** The owner wrote: "I liked your previous suggestions on mapping those." I read that as permission to draft a mapping, not as a statement of which branch holds. Branch (b) is drafted in `crosswalk/crosswalk_D_L.json`, with its rationale in `LID_intake_biosphere_council_crosswalk_2026-11-24.md`. On the 28 bee-trace nodes, every D role (D0 through D5) falls across two or more L layers under the proposed tags. That is why the two cannot be aliases (DERIVED from tags that are themselves PROPOSED). Lε is placed where a measured node becomes a recorded D5 attribute. The tags were read from each node's claim, not from the layer names. The question stays open until the owner confirms (b) and where Lε sits; the per-node tags stay PROPOSED after that.
+
 ---
 
 ### 4. SCHEMA — a process stored as a static noun

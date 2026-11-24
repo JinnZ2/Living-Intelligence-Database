@@ -1,0 +1,23 @@
+{
+ "record": "INTAKE_QUERIES",
+ "status": "PROPOSED; seed list written by the auditor from fields already traced. The owner edits, adds or removes queries; the script reads this file and nothing else to decide what to ask for.",
+ "date": "2026-11-24",
+ "query_language": "Europe PMC search syntax. The script adds the window clause FIRST_IDATE:[since TO until].",
+ "queries": [
+  {"id": "be_comb_geometry", "query": "(honeycomb OR \"comb building\" OR \"comb cell\") AND (bee OR Apis)",
+   "terms": ["honeycomb", "comb", "hexagon", "cell"],
+   "touches": [{"entity": "BE", "field": "hexagonal_cell_efficiency"}]},
+  {"id": "be_thermoregulation", "query": "(thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND (Apis OR honeybee)",
+   "terms": ["thermoregulation", "temperature", "brood"],
+   "touches": [{"entity": "BE", "field": "collective_thermoregulation"}]},
+  {"id": "my_phosphorus", "query": "mycorrhiz* AND phosphorus AND transfer",
+   "terms": ["phosphorus", "mycorrhiz", "transfer"],
+   "touches": [{"entity": "MY", "field": "phosphorus_transfer_efficiency"}]},
+  {"id": "root_water_uptake", "query": "\"root water uptake\" AND (\"soil water potential\" OR drought)",
+   "terms": ["water uptake", "water potential", "drought"],
+   "touches": [{"entity": "ROOT_NET", "field": "water_uptake_efficiency"}]},
+  {"id": "biosphere_recycling", "query": "biosphere AND (\"nutrient recycling\" OR \"biogeochemical cycl*\") AND (planetary OR Earth)",
+   "terms": ["biosphere", "recycl", "biogeochemical", "cycle"],
+   "touches": [{"entity": "BIOSPHERE", "field": null}]}
+ ]
+}

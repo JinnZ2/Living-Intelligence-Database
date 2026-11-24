@@ -1,0 +1,1753 @@
+{
+ "record": "BIOSPHERE_DEPENDENCY_CANDIDATES",
+ "status": "PROPOSED; every row UNCHECKED",
+ "rules": "biosphere_candidates.py -- rule-based list of LID records that may depend on BIOSPHERE.\nPython standard library only. No network. Deterministic. Reads, never writes, the repository.\n\n  python3 biosphere_candidates.py <repo_root> <out.json>\n  python3 biosphere_candidates.py --selftest\n\nThe owner stated that the biosphere is a dependency of many entities. This script does\nnot decide which ones. It lists candidates by two declared rules, and every candidate\nis UNCHECKED until the owner reads it:\n\n  B1  ORGANISM_RECORD   the record's ontology is 'animal' or 'plant' (a living organism\n                        that exists inside the biosphere's material and energy boundary).\n  B2  CONDITION_TERM    an attribute's scope text (definition, measurement_limits,\n                        dependencies) names a biosphere-carried condition: one of TERMS.",
+ "terms": {
+  "sunlight": "\\bsun(?:light|shine)?\\b|\\bsolar\\b|\\birradiance\\b|\\bphotosynth\\w*",
+  "water": "\\bwater\\b|\\bhumidity\\b|\\bmoisture\\b|\\brain\\w*\\b|\\bdrought\\b",
+  "temperature": "\\btemperature\\w*\\b|°C|\\bthermal\\b|\\bheat\\b|\\bcold\\b",
+  "carbon": "\\bcarbon\\b|\\bCO2\\b|\\bCO₂\\b",
+  "oxygen": "\\boxygen\\b|\\bhypoxi\\w*|\\bO2\\b|\\bO₂\\b",
+  "soil": "\\bsoil\\w*\\b|\\bsubstrate\\b",
+  "nutrient": "\\bnutrient\\w*\\b|\\bnitrogen\\b|\\bphosph\\w*",
+  "season": "\\bseason\\w*\\b|\\bwinter\\b|\\bsummer\\b|\\bspring\\b|\\bphotoperiod\\b|\\bday length\\b"
+ },
+ "records": 122,
+ "load_failures": [],
+ "rule_counts": {
+  "B1": 12,
+  "B1+B2": 52,
+  "B2": 22,
+  "NONE": 36
+ },
+ "records_per_term": {
+  "carbon": 7,
+  "nutrient": 8,
+  "oxygen": 2,
+  "season": 13,
+  "soil": 17,
+  "sunlight": 15,
+  "temperature": 34,
+  "water": 23
+ },
+ "rows": [
+  {
+   "id": "AUTOENC",
+   "path": "ontology/ai/autoencoder.json",
+   "ontology": "ai",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "EVOL_ALG",
+   "path": "ontology/ai/evolutionary_algorithm.json",
+   "ontology": "ai",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "GAN",
+   "path": "ontology/ai/generative_adversarial_network.json",
+   "ontology": "ai",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "GNN",
+   "path": "ontology/ai/graph_neural_network.json",
+   "ontology": "ai",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "LLM",
+   "path": "ontology/ai/large_language_model.json",
+   "ontology": "ai",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "NEURAL_NET",
+   "path": "ontology/ai/neural_network.json",
+   "ontology": "ai",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "RL_AGENT",
+   "path": "ontology/ai/reinforcement_learner.json",
+   "ontology": "ai",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SWARM_AI",
+   "path": "ontology/ai/swarm_intelligence.json",
+   "ontology": "ai",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "AN",
+   "path": "ontology/animal/ant.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "stigmergic_construction": [
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "BX",
+   "path": "ontology/animal/bat.json",
+   "ontology": "animal",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "BE",
+   "path": "ontology/animal/bee.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "waggle_dance_communication": [
+     "sunlight"
+    ],
+    "collective_thermoregulation": [
+     "season",
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "BT",
+   "path": "ontology/animal/beetle.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "milky_way_navigation": [
+     "sunlight"
+    ],
+    "bioluminescent_signaling": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CHAMELEON",
+   "path": "ontology/animal/chameleon.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "independent_eye_tracking": [
+     "temperature"
+    ],
+    "ballistic_tongue": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CORAL",
+   "path": "ontology/animal/coral_reef.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "symbiotic_photosynthesis": [
+     "carbon",
+     "sunlight",
+     "temperature",
+     "water"
+    ],
+    "niche_scaffolding": [
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CR",
+   "path": "ontology/animal/cricket.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "stridulation_encoding": [
+     "temperature"
+    ],
+    "temperature_frequency_coupling": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CROW",
+   "path": "ontology/animal/crow.json",
+   "ontology": "animal",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CU",
+   "path": "ontology/animal/cuttlefish.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "instant_camouflage": [
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "DOLPHIN",
+   "path": "ontology/animal/dolphin.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "cooperative_hunting": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "EL",
+   "path": "ontology/animal/elephant.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "infrasonic_communication": [
+     "temperature"
+    ],
+    "spatial_memory_mapping": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "FIRE_BT",
+   "path": "ontology/animal/fire_beetle.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "pyrophilic_strategy": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "GE",
+   "path": "ontology/animal/gecko.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "setae_adhesion": [
+     "water"
+    ],
+    "directional_grip": [
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "GRANDMOTHER",
+   "path": "ontology/animal/grandmother.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "wisdom_compounding": [
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "HAW",
+   "path": "ontology/animal/hawk.json",
+   "ontology": "animal",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "HUMPBACK",
+   "path": "ontology/animal/humpback_song.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "hierarchical_composition": [
+     "season"
+    ],
+    "seasonal_evolution": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "INDIG_FIRE",
+   "path": "ontology/animal/indigenous_fire.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "oral_tradition_transfer": [
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "JELLY",
+   "path": "ontology/animal/jellyfish.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "jet_propulsion_rhythm": [
+     "temperature",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "KA",
+   "path": "ontology/animal/kangaroo.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "elastic_energy_storage": [
+     "oxygen"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MONARCH",
+   "path": "ontology/animal/monarch_butterfly.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "time_compensated_compass": [
+     "sunlight"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MORMYRID",
+   "path": "ontology/animal/mormyridae.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "active_electrolocation": [
+     "water"
+    ],
+    "temporal_microsecond_precision": [
+     "temperature",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MTN_LION",
+   "path": "ontology/animal/mountain_lion.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "territory_management": [
+     "season"
+    ],
+    "crepuscular_timing": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "OC",
+   "path": "ontology/animal/octopus.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "chromatophore_response_latency": [
+     "temperature"
+    ],
+    "chromatophore_camouflage": [
+     "soil"
+    ],
+    "arm_regeneration": [
+     "temperature",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "ORCA",
+   "path": "ontology/animal/orca.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "cultural_hunting_tradition": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "OW",
+   "path": "ontology/animal/owl.json",
+   "ontology": "animal",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "PE",
+   "path": "ontology/animal/penguin.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "thermal_huddle_rotation": [
+     "temperature"
+    ],
+    "counter_current_exchange": [
+     "temperature",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MANTIS",
+   "path": "ontology/animal/praying_mantis.json",
+   "ontology": "animal",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "RA",
+   "path": "ontology/animal/rat.json",
+   "ontology": "animal",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SALMON",
+   "path": "ontology/animal/salmon.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "osmoregulatory_switch": [
+     "season"
+    ],
+    "nutrient_teleportation": [
+     "nutrient"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "TU",
+   "path": "ontology/animal/sea_turtle.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "magnetic_field_navigation": [
+     "sunlight"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SEED_KEEPER",
+   "path": "ontology/animal/seed_keeper.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "heirloom_selection": [
+     "season",
+     "soil",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SHARK",
+   "path": "ontology/animal/shark.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "electroreception": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SN",
+   "path": "ontology/animal/snake.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "infrared_thermal_imaging": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SP",
+   "path": "ontology/animal/spider.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "web_architecture": [
+     "soil"
+    ],
+    "vibration_analysis": [
+     "water"
+    ],
+    "silk_tensile_engineering": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "STORYTELLER",
+   "path": "ontology/animal/storyteller.json",
+   "ontology": "animal",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SWAN",
+   "path": "ontology/animal/swan.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "pair_bond_coordination": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "TARDI",
+   "path": "ontology/animal/tardigrade.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "cryptobiosis": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "TERMITE",
+   "path": "ontology/animal/termite_mound.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "convective_ventilation": [
+     "carbon"
+    ],
+    "stigmergic_construction": [
+     "soil",
+     "water"
+    ],
+    "fungal_agriculture": [
+     "nutrient",
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "WH",
+   "path": "ontology/animal/whale.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "long_range_acoustic": [
+     "temperature"
+    ],
+    "magnetic_navigation": [
+     "sunlight"
+    ],
+    "cultural_song_transmission": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "WOLF",
+   "path": "ontology/animal/wolf.json",
+   "ontology": "animal",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "acoustic_identity_encoding": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CRYSTAL_LATTICE",
+   "path": "ontology/crystal/crystal_lattice.json",
+   "ontology": "crystal",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "lattice_coherence_length": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "DIA",
+   "path": "ontology/crystal/diamond.json",
+   "ontology": "crystal",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "thermal_conductivity_ratio": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "OBS",
+   "path": "ontology/crystal/obsidian.json",
+   "ontology": "crystal",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "conchoidal_fracture_sharpness": [
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "QUARTZ",
+   "path": "ontology/crystal/quartz.json",
+   "ontology": "crystal",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "piezoelectric_coefficient": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SILICON_LAT",
+   "path": "ontology/crystal/silicon_lattice.json",
+   "ontology": "crystal",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "electron_mobility": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "TOUR",
+   "path": "ontology/crystal/tourmaline.json",
+   "ontology": "crystal",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "pyroelectric_sensitivity": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "BIOGRID2",
+   "path": "ontology/energy/biogrid2.json",
+   "ontology": "energy",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CONSCIOUSNESS_BR",
+   "path": "ontology/energy/consciousness_bridge.json",
+   "ontology": "energy",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "ELECTRIC_FIELD",
+   "path": "ontology/energy/electric_field.json",
+   "ontology": "energy",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "EM_FIELD",
+   "path": "ontology/energy/electromagnetic_field.json",
+   "ontology": "energy",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "EMOTION_BR",
+   "path": "ontology/energy/emotion_bridge.json",
+   "ontology": "energy",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "FLUX",
+   "path": "ontology/energy/flux.json",
+   "ontology": "energy",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "energy_continuity_across_boundary": [
+     "nutrient",
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "GRAV",
+   "path": "ontology/energy/gravitational.json",
+   "ontology": "energy",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "equivalence_principle_precision": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "LIGHT_BR",
+   "path": "ontology/energy/light_bridge.json",
+   "ontology": "energy",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MAG_BRIDGE",
+   "path": "ontology/energy/magnetic_bridge.json",
+   "ontology": "energy",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "polarity_encoding_fidelity": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MAGNETIC_FIELD",
+   "path": "ontology/energy/magnetic_field.json",
+   "ontology": "energy",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "flux_conservation_precision": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "NEGENTROPY",
+   "path": "ontology/energy/negentropic_field.json",
+   "ontology": "energy",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "local_order_parameter": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "PRESSURE",
+   "path": "ontology/energy/pressure_field.json",
+   "ontology": "energy",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "pascal_principle_precision": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "RES_SENSOR",
+   "path": "ontology/energy/resonance_sensor.json",
+   "ontology": "energy",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SINE_WAVE",
+   "path": "ontology/energy/sine_wave.json",
+   "ontology": "energy",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "THERMAL",
+   "path": "ontology/energy/thermal.json",
+   "ontology": "energy",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "carnot_efficiency_bound": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "ASPEN",
+   "path": "ontology/plant/aspen_grove.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "carbon",
+     "sunlight",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "BAMBOO",
+   "path": "ontology/plant/bamboo.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "nutrient",
+     "season",
+     "sunlight"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CORDYCEPS",
+   "path": "ontology/plant/cordyceps.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "soil",
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CURLY_DOCK",
+   "path": "ontology/plant/curly_dock.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "soil",
+     "temperature",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CYANO",
+   "path": "ontology/plant/cyanobacteria.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "nutrient",
+     "oxygen",
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "DANDELION",
+   "path": "ontology/plant/dandelion.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "DUCKWEED",
+   "path": "ontology/plant/duckweed.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "nutrient",
+     "sunlight"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "FE",
+   "path": "ontology/plant/fern.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "shade_photosynthetic_efficiency": [
+     "sunlight",
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "LEAF_TESS",
+   "path": "ontology/plant/leaf_tessellation.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "light_interception_efficiency": [
+     "sunlight"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "LI",
+   "path": "ontology/plant/lichen.json",
+   "ontology": "plant",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MANGROVE",
+   "path": "ontology/plant/mangrove.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "carbon",
+     "soil",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MIMOSA",
+   "path": "ontology/plant/mimosa.json",
+   "ontology": "plant",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MOSS",
+   "path": "ontology/plant/moss.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MOTHER_TREE",
+   "path": "ontology/plant/mother_tree.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "carbon",
+     "nutrient"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MY",
+   "path": "ontology/plant/mycelium.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "phosphorus_transfer_efficiency": [
+     "nutrient",
+     "soil"
+    ],
+    "network_fault_tolerance": [
+     "soil"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "OLD_GROWTH",
+   "path": "ontology/plant/old_growth.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "carbon",
+     "soil",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "ORCHID",
+   "path": "ontology/plant/orchid.json",
+   "ontology": "plant",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "QUORUM",
+   "path": "ontology/plant/quorum_biofilm.json",
+   "ontology": "plant",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "ROOT_NET",
+   "path": "ontology/plant/root_network.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "water_uptake_efficiency": [
+     "soil",
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SAWGRASS",
+   "path": "ontology/plant/sawgrass.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SLIME",
+   "path": "ontology/plant/slime_mold.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SUN",
+   "path": "ontology/plant/sunflower.json",
+   "ontology": "plant",
+   "rules": [
+    "B1"
+   ],
+   "terms_by_attribute": {},
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "PHLOEM_XYLEM",
+   "path": "ontology/plant/vascular_flow.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "phloem_transport_efficiency": [
+     "carbon",
+     "sunlight",
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "VENUS",
+   "path": "ontology/plant/venus_flytrap.json",
+   "ontology": "plant",
+   "rules": [
+    "B1",
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "core_efficiency_factor": [
+     "water"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "AURORA",
+   "path": "ontology/plasma/aurora.json",
+   "ontology": "plasma",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "particle_energy_dissipation": [
+     "sunlight"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "LIGHTNING",
+   "path": "ontology/plasma/lightning.json",
+   "ontology": "plasma",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "channel_temperature_peak": [
+     "sunlight",
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "PLASMA_FIELD",
+   "path": "ontology/plasma/plasma_field.json",
+   "ontology": "plasma",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "debye_shielding_efficiency": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SOLAR_WIND",
+   "path": "ontology/plasma/solar_wind.json",
+   "ontology": "plasma",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "heliosphere_boundary_precision": [
+     "sunlight"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "VORTEX_DYN",
+   "path": "ontology/plasma/vortex_dynamics.json",
+   "ontology": "plasma",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "FRACTAL",
+   "path": "ontology/shape/fractal.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "GEIS_ENC",
+   "path": "ontology/shape/geis_encoder.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "GEO_CIPHER",
+   "path": "ontology/shape/geometric_cipher.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "HEX",
+   "path": "ontology/shape/hexagon.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MANDALA",
+   "path": "ontology/shape/mandala_bloom.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "MULTI_HELIX",
+   "path": "ontology/shape/multi_helix.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "OCTA_STATE",
+   "path": "ontology/shape/octahedral_state.json",
+   "ontology": "shape",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "octahedral_ligand_field_stabilization": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "POLY_INT",
+   "path": "ontology/shape/polyhedral_intelligence.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "ROSETTA_SHAPE",
+   "path": "ontology/shape/rosetta_shape_core.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SPHERE",
+   "path": "ontology/shape/sphere.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "SPIRAL",
+   "path": "ontology/shape/spiral.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "TORUS",
+   "path": "ontology/shape/torus.json",
+   "ontology": "shape",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "toroidal_confinement_advantage": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "TREE_GRAPH",
+   "path": "ontology/shape/tree_graph.json",
+   "ontology": "shape",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "ANT",
+   "path": "ontology/social/ant_colony.json",
+   "ontology": "social",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "BEE_NEST_SITE",
+   "path": "ontology/social/honeybee_nest_site_selection.json",
+   "ontology": "social",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "WHALE",
+   "path": "ontology/social/humpback_whale_pod.json",
+   "ontology": "social",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "song_coherence_across_pods": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "STONE_LEDGER",
+   "path": "ontology/social/stone_art_ledger.json",
+   "ontology": "social",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "WOLF_PACK",
+   "path": "ontology/social/wolf_pack.json",
+   "ontology": "social",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "hunt_success_rate": [
+     "season"
+    ],
+    "social_cohesion": [
+     "season"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "CYCLE",
+   "path": "ontology/temporal/cycle.json",
+   "ontology": "temporal",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "DECAY",
+   "path": "ontology/temporal/decay.json",
+   "ontology": "temporal",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "ECHO",
+   "path": "ontology/temporal/echo.json",
+   "ontology": "temporal",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "EMERGE",
+   "path": "ontology/temporal/emergence.json",
+   "ontology": "temporal",
+   "rules": [
+    "B2"
+   ],
+   "terms_by_attribute": {
+    "critical_threshold_universality": [
+     "temperature"
+    ]
+   },
+   "result": "CANDIDATE",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "FOLD",
+   "path": "ontology/temporal/fold.json",
+   "ontology": "temporal",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  },
+  {
+   "id": "TEMPORAL",
+   "path": "ontology/temporal/temporal.json",
+   "ontology": "temporal",
+   "rules": [],
+   "terms_by_attribute": {},
+   "result": "NO_RULE_MATCHED",
+   "status": "UNCHECKED"
+  }
+ ]
+}
