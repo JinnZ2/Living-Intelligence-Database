@@ -8,6 +8,8 @@ Rule (registry/DECLARED.json, amendment 'process form + Kimi schemas'): an attri
 process form when it carries process_form = {form {kind rate|state, quantity}, driver,
 timescale {cycle_ref or text}, regime_bounds, scope_ref}. Anything else is LEGACY_SCALAR.
 A process_form block with a missing part is INCOMPLETE and names the part.
+A record in registry/process_forms.json counts for its attribute, provided the stored scalar
+is kept beside it as legacy_scalar; the entity file is not edited.
 Reads entity files; writes nothing. Stdlib only.
 """
 import glob
@@ -33,12 +35,27 @@ def classify(attr):
     return ("INCOMPLETE", sorted(set(missing))) if missing else ("PROCESS_FORM", [])
 
 
+def registry_forms():
+    """entity.attribute -> process_forms record in registry/process_forms.json (the entity file keeps its scalar)."""
+    try:
+        doc = json.load(open(os.path.join(ROOT, "registry", "process_forms.json"), encoding="utf-8"))
+    except (IOError, OSError):
+        return {}
+    return {r["attribute"]: r for r in doc.get("process_forms", [])}
+
+
 def survey():
+    reg = registry_forms()
     rows = []
     for path in sorted(glob.glob(os.path.join(ROOT, "ontology", "*", "*.json"))):
         ent = json.load(open(path, encoding="utf-8"))
         for name, a in (ent.get("attributes") or {}).items():
             state, missing = classify(a)
+            r = reg.get("%s.%s" % (ent.get("id"), name))
+            if state == "LEGACY_SCALAR" and r is not None:
+                state, missing = classify({"process_form": r})
+                if state == "PROCESS_FORM" and not (r.get("legacy_scalar") or {}).get("flag") == "LEGACY_SCALAR":
+                    state, missing = "INCOMPLETE", ["legacy_scalar (the stored scalar must be kept beside the form)"]
             rows.append((os.path.relpath(path, ROOT), ent.get("id"), name, state, missing))
     return rows
 
@@ -67,6 +84,9 @@ if __name__ == "__main__":
     rows = survey()
     for state in ("PROCESS_FORM", "INCOMPLETE", "LEGACY_SCALAR"):
         print("%-14s %d of %d attributes" % (state, sum(r[3] == state for r in rows), len(rows)))
+    for r in rows:
+        if r[3] == "PROCESS_FORM":
+            print("  %s.%s  (record in registry/process_forms.json; legacy scalar kept beside it)" % (r[1], r[2]))
     for r in rows:
         if r[3] == "INCOMPLETE":
             print("  %s.%s missing %s" % (r[1], r[2], ", ".join(r[4])))

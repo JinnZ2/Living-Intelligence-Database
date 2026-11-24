@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "x-lid": {
     "status": "PROPOSED",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "version_rule": "MINOR: additive; no existing schema or entity file is changed",
     "adopted": "2026-11-24",
     "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/translation_loss_blocks.schema.json",
@@ -11,7 +11,8 @@
     "changes_from_as_received": [
       "confidence record: certainty and recurrence may be null (not recorded); deviation.value may be null; deviation gains quote and expressions; kind gains plus_minus_unspecified, varies_unquantified, mixed; fields attribute and source_field added",
       "process_forms block added",
-      "0.2.0: being_tense, phase_now, carried_from_phase added to process_forms items; phase_records block added"
+      "0.2.0: being_tense, phase_now, carried_from_phase added to process_forms items; phase_records block added",
+      "0.3.0: process_forms items gain driver_nodes, regime, dependencies, deviation, legacy_scalar, open_findings, trace, note; timescale gains nested_in and note"
     ]
   },
   "id": "translation_loss_blocks.schema.json",
@@ -574,6 +575,17 @@
                   "string",
                   "null"
                 ]
+              },
+              "nested_in": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^CY_[A-Z0-9_]+$"
+                },
+                "description": "Enclosing cycles, nearest first, read from the parent chain in registry/cycles.json."
+              },
+              "note": {
+                "type": "string"
               }
             },
             "description": "A named cycle in registry/cycles.json, or the timescale as recorded."
@@ -723,6 +735,182 @@
                 }
               }
             }
+          },
+          "driver_nodes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "node",
+                "layer",
+                "status"
+              ],
+              "properties": {
+                "node": {
+                  "type": "string"
+                },
+                "layer": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "claim": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "regime": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "description": "Where regime_bounds come from.",
+            "properties": {
+              "node": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "outside": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          },
+          "dependencies": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "D-layer dependencies read from a reference trace.",
+            "properties": {
+              "root_node": {
+                "type": "string"
+              },
+              "direct": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "node",
+                    "layer",
+                    "status"
+                  ],
+                  "properties": {
+                    "node": {
+                      "type": "string"
+                    },
+                    "layer": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "reachable_by_layer": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "not_reached": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "deviation": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "node": {
+                "type": "string"
+              },
+              "confidence_record": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          },
+          "legacy_scalar": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "value",
+              "source_field",
+              "flag"
+            ],
+            "description": "The bare scalar as stored in the entity file. Kept beside the process form, never deleted.",
+            "properties": {
+              "value": {},
+              "source_field": {
+                "type": "string"
+              },
+              "flag": {
+                "const": "LEGACY_SCALAR"
+              },
+              "kept": {
+                "const": true
+              }
+            }
+          },
+          "open_findings": {
+            "type": "array",
+            "items": {
+              "type": "array"
+            },
+            "description": "ERROR findings of trace_check on the trace this record was built from."
+          },
+          "trace": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "file": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            }
+          },
+          "note": {
+            "type": "string"
           }
         }
       }
