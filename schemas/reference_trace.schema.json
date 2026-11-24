@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "x-lid": {
     "status": "PROPOSED",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "version_rule": "MINOR: additive; no existing schema or entity file is changed",
     "adopted": "2026-11-24",
     "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
@@ -14,7 +14,8 @@
       "traces v0.1 and v0.2 carry the retired status and validate against the as-received schema, not this copy",
       "0.2.0: cycle field phases added (ordered list, optional)",
       "0.3.0: optional status_history on nodes and cycles (list of {version, status, date?, note?}); the v0.3 trace's status_history is now accepted",
-      "0.4.0: a depends_on item is a string or an object {id, status, note} (MINOR, additive). The 0.3.0 state is kept, byte-identical, at schemas/pinned/reference_trace.0.3.0.schema.json"
+      "0.4.0: a depends_on item is a string or an object {id, status, note} (MINOR, additive). The 0.3.0 state is kept, byte-identical, at schemas/pinned/reference_trace.0.3.0.schema.json",
+      "0.5.0: optional node field scope (string); an edge status may be 'DERIVED (basis: ...)' (MINOR, additive). The 0.4.0 state is kept, byte-identical, at schemas/pinned/reference_trace.0.4.0.schema.json"
     ]
   },
   "$id": "reference_trace.schema.json",
@@ -425,8 +426,16 @@
                       "description": "Id of the node depended on."
                     },
                     "status": {
-                      "$ref": "#/definitions/node_status",
-                      "description": "Status of this edge, when it differs from the nodes it joins (for example PROPOSED for an edge added on a reading)."
+                      "anyOf": [
+                        {
+                          "$ref": "#/definitions/node_status"
+                        },
+                        {
+                          "type": "string",
+                          "pattern": "^DERIVED \\(basis: [^)]+\\)$"
+                        }
+                      ],
+                      "description": "Status of this edge. A node status, or (0.5.0) 'DERIVED (basis: ...)' as in the provenance vocabulary, for example 'DERIVED (basis: OBSERVED)'."
                     },
                     "note": {
                       "type": "string"
@@ -480,6 +489,10 @@
                 }
               }
             }
+          },
+          "scope": {
+            "type": "string",
+            "description": "0.5.0: what the node's claim covers, as one string (for example '2D cross-section perimeter'). trace_check.py compares it with the entity's evidence.correction.scope (ENTITY_TRACE_DIVERGENCE)."
           }
         },
         "allOf": [

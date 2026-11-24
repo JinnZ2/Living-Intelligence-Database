@@ -58,22 +58,37 @@ if len(sys.argv) > 1 and sys.argv[1] == "--selftest":
             good = r.returncode == want and (got == [] if must is None else must in got)
             ok.append(good)
             print("%s  %s  (exit %d, findings %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
-        # 2026-11-24 (order 'pins + entity correction'): ENTITY_TRACE_DIVERGENCE, against a constructed entity file
+        # ENTITY_TRACE_DIVERGENCE by identity (order 'close-out'), against a constructed entity file and registry
+        import hashlib
         hist = [{"version": "0", "status": "TRACED", "note": "record cites x -> CITATION_MISMATCH"}]
         div = {"record": "SELFTEST", "subject": {"entity": "E", "attribute": "a"},
-               "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), status_history=hist)], "cycles": []}
+               "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), status_history=hist, source=["https://x", "Ref A"], scope="2D")], "cycles": []}
         ent = lambda ev: {"id": "E", "attributes": {"a": {"value": 1, "scope": {"evidence": ev}}}}
-        for name, entity, want, has in (("correction in the trace, none on the entity: ENTITY_TRACE_DIVERGENCE, exits 1", ent({"source": "s"}), 1, True),
-                                        ("entity carries the correction: no divergence, exits 0", ent({"source": "s", "correction": {"source": "c", "scope": "2D"}}), 0, False),
-                                        ("correction without a scope does not count as carried, exits 1", ent({"source": "s", "correction": {"source": "c", "scope": ""}}), 1, True)):
-            src, dst, ef = os.path.join(t, "in.json"), os.path.join(t, "out.json"), os.path.join(t, "entity.json")
-            json.dump(div, open(src, "w")); json.dump(entity, open(ef, "w"))
-            r = subprocess.run([sys.executable, os.path.abspath(__file__), src, dst], capture_output=True, text=True,
-                               env=dict({k: v for k, v in os.environ.items() if k != "LID_STRICT"}, LID_ENTITY_FILE=ef))
-            got = [f[0] for f in json.load(open(dst))["findings"]]
-            good = r.returncode == want and (("ENTITY_TRACE_DIVERGENCE" in got) == has)
+        reg = lambda *ss: {"sources": [{"id": hashlib.sha256(x.encode()).hexdigest(), "string": x} for x in ss]}
+        for name, entity, registry, hmode, want, miss in (
+                ("no correction on the entity: NO_CORRECTION, exits 1", ent({"source": "s"}), reg("Ref A"), False, 1, "NO_CORRECTION"),
+                ("same source id and same scope: no divergence, exits 0", ent({"correction": {"source": "Ref A", "scope": " 2D "}}), reg("Ref A"), False, 0, None),
+                ("correction present but another source string: SOURCE_ID_DIFFERS, exits 1", ent({"correction": {"source": "Ref B", "scope": "2D"}}), reg("Ref A", "Ref B"), False, 1, "SOURCE_ID_DIFFERS"),
+                ("correction present but another scope: SCOPE_DIFFERS, exits 1", ent({"correction": {"source": "Ref A", "scope": "3D"}}), reg("Ref A"), False, 1, "SCOPE_DIFFERS"),
+                ("correction source missing from the registry: SOURCE_NOT_IN_REGISTRY, exits 1", ent({"correction": {"source": "Ref A", "scope": "2D"}}), reg(), False, 1, "SOURCE_NOT_IN_REGISTRY"),
+                ("historical mode: the entity check is not applied, exits 0", ent({"source": "s"}), reg(), True, 0, None)):
+            src, dst, ef, rf = (os.path.join(t, x) for x in ("in.json", "out.json", "entity.json", "sources.json"))
+            json.dump(div, open(src, "w")); json.dump(entity, open(ef, "w")); json.dump(registry, open(rf, "w"))
+            env = dict({k: v for k, v in os.environ.items() if k not in ("LID_STRICT", "LID_HISTORICAL")}, LID_ENTITY_FILE=ef, LID_SOURCE_REGISTRY=rf)
+            if hmode: env["LID_HISTORICAL"] = "1"
+            r = subprocess.run([sys.executable, os.path.abspath(__file__), src, dst], capture_output=True, text=True, env=env)
+            got = [f[2].split(": ")[-1] for f in json.load(open(dst))["findings"] if f[0] == "ENTITY_TRACE_DIVERGENCE"]
+            good = r.returncode == want and (got == [] if miss is None else miss in got)
             ok.append(good)
-            print("%s  %s  (exit %d, findings %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
+            print("%s  %s  (exit %d, divergence %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
+        e_der = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", [{"id": "L", "status": "DERIVED (basis: OBSERVED)"}]), node("L", "D0_law", [])], "cycles": []}
+        src, dst = os.path.join(t, "in.json"), os.path.join(t, "out.json")
+        json.dump(e_der, open(src, "w"))
+        r = subprocess.run([sys.executable, os.path.abspath(__file__), src, dst], capture_output=True, text=True,
+                           env={k: v for k, v in os.environ.items() if k != "LID_STRICT"})
+        good = r.returncode == 0 and json.load(open(dst))["findings"] == []
+        ok.append(good)
+        print("%s  edge status 'DERIVED (basis: OBSERVED)' is accepted, exits 0  (exit %d)" % ("PASS" if good else "FAIL", r.returncode))
     print("checks: %d   failed: %d" % (len(ok), ok.count(False)))
     sys.exit(0 if all(ok) else 1)
 rec = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "reference_trace_BE_hex.json"))
@@ -83,12 +98,14 @@ F = out["findings"].append
 # 2026-11-24 (schema 0.4.0): a depends_on item is a node id, or an object {id, status, note}.
 def DEPS(n):
     return [e["id"] if isinstance(e, dict) else e for e in n.get("depends_on", [])]
+import re as _re0
+EDGE_DERIVED = _re0.compile(r"^DERIVED \(basis: [^)]+\)$")   # schema 0.5.0: also allowed on an edge
 STAT = {"TRACED", "DERIVED", "PROPOSED", "UNKNOWN", "CONTESTED", "RECORDED_UNVERIFIED"}
 for n in N.values():
     if n["status"] not in STAT: F(["BAD_STATUS", n["id"], n["status"]])
     if n["status"] in {"TRACED", "DERIVED", "CONTESTED"} and not n.get("source"): F(["NO_SOURCE", n["id"]])
     for e in n.get("depends_on", []):
-        if isinstance(e, dict) and e.get("status") is not None and e["status"] not in STAT: F(["BAD_STATUS", n["id"], "edge to %s: %s" % (e.get("id"), e["status"])])
+        if isinstance(e, dict) and e.get("status") is not None and e["status"] not in STAT and not EDGE_DERIVED.match(str(e["status"])): F(["BAD_STATUS", n["id"], "edge to %s: %s" % (e.get("id"), e["status"])])
     for d in DEPS(n):
         if d not in N: F(["DANGLING_DEP", n["id"], d])
     import re
@@ -172,13 +189,20 @@ if RB:
             if b["repo_dependency"] not in deps: F(["BINDING_STRING_NOT_IN_REPO", b["attribute"], b["repo_dependency"]])
         bound += bool(b["binds_to"]); unbound += not b["binds_to"]
     out["summary"]["repo_bindings"] = {"checked_against": bee if attrs is not None else "NOT_AVAILABLE", "bound": bound, "unbound": unbound}
-# --- ENTITY_TRACE_DIVERGENCE (2026-11-24, registry/DECLARED.json, 'schema 0.2.0 and 0.4.0; ...') ---
-# The trace records a correction (a *_MISMATCH word in a node's note or in a status_history note)
-# that the entity's attribute does not carry (scope.evidence.correction with source and scope).
-# Presence only: the text of the correction is not compared. Runs when the trace names a subject.
+# --- ENTITY_TRACE_DIVERGENCE (2026-11-24) ---------------------------------------------------
+# registry/DECLARED.json, 'close-out: ...': identity, not presence. A node records a correction when
+# its note or a status_history note holds a *_MISMATCH word. For each such node:
+#   (1) sha256 of the entity's evidence.correction.source (the registry's source id) must be in
+#       registry/sources.json and must equal the source id of one of the node's source strings;
+#   (2) the entity's correction.scope must equal the node's scope string (outer whitespace stripped).
+# Not applied in historical mode (LID_HISTORICAL=1): a superseded trace is not held against the entity
+# as it is today. The earlier rule (same day) asked only for presence of source and scope.
 SUBJ = rec.get("subject")
-if SUBJ:
-    import re as _re
+if SUBJ and os.environ.get("LID_HISTORICAL") == "1":
+    out["summary"]["entity_trace_divergence"] = {"state": "NOT_APPLIED_HISTORICAL"}
+elif SUBJ:
+    import re as _re, hashlib as _hl
+    _sid = lambda s: _hl.sha256(s.encode("utf-8")).hexdigest()
     _root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..")
     _ef = os.environ.get("LID_ENTITY_FILE")
     if not _ef:
@@ -187,18 +211,30 @@ if SUBJ:
             _ef = next((os.path.join(_root, e["path"]) for e in _ix["entities"] if e["id"] == SUBJ["entity"]), None)
         except (OSError, ValueError):
             _ef = None
+    _rf = os.environ.get("LID_SOURCE_REGISTRY") or os.path.join(_root, "registry", "sources.json")
     recorded = [n["id"] for n in N.values()
                 if _re.search(r"[A-Z_]+_MISMATCH", " ".join([n.get("note", "")] + [h.get("note", "") for h in n.get("status_history", [])]))]
-    if _ef and os.path.exists(_ef):
+    if _ef and os.path.exists(_ef) and os.path.exists(_rf):
+        _reg = {e["id"] for e in json.load(open(_rf))["sources"]}
         _ev = json.load(open(_ef)).get("attributes", {}).get(SUBJ["attribute"], {})
         _ev = (_ev.get("scope", {}) if isinstance(_ev, dict) else {}).get("evidence", {}) or {}
         _c = _ev.get("correction") or {}
-        carried = bool(_c.get("source")) and bool(_c.get("scope"))
-        if not carried:
-            for i in recorded: F(["ENTITY_TRACE_DIVERGENCE", i, "%s.%s" % (SUBJ["entity"], SUBJ["attribute"])])
-        out["summary"]["entity_trace_divergence"] = {"state": "CHECKED", "correction_recorded_by": recorded, "entity_carries_correction": carried}
+        _cs, _cscope = _c.get("source"), _c.get("scope")
+        rows = []
+        for i in recorded:
+            n = N[i]; miss = []
+            if not (isinstance(_cs, str) and _cs and isinstance(_cscope, str) and _cscope.strip()):
+                miss.append("NO_CORRECTION")
+            else:
+                if _sid(_cs) not in _reg: miss.append("SOURCE_NOT_IN_REGISTRY")
+                if _sid(_cs) not in {_sid(x) for x in (n.get("source") or []) if isinstance(x, str)}: miss.append("SOURCE_ID_DIFFERS")
+                if not isinstance(n.get("scope"), str) or not n["scope"].strip(): miss.append("NODE_HAS_NO_SCOPE")
+                elif n["scope"].strip() != _cscope.strip(): miss.append("SCOPE_DIFFERS")
+            for m in miss: F(["ENTITY_TRACE_DIVERGENCE", i, "%s.%s: %s" % (SUBJ["entity"], SUBJ["attribute"], m)])
+            rows.append({"node": i, "missed": miss, "correction_source_id": _sid(_cs) if isinstance(_cs, str) else None})
+        out["summary"]["entity_trace_divergence"] = {"state": "CHECKED", "rule": "identity", "nodes": rows}
     else:
-        out["summary"]["entity_trace_divergence"] = {"state": "NOT_RUN", "reason": "entity file not available", "correction_recorded_by": recorded}
+        out["summary"]["entity_trace_divergence"] = {"state": "NOT_RUN", "reason": "entity file or source registry not available", "correction_recorded_by": recorded}
 json.dump(out, open(sys.argv[2] if len(sys.argv) > 2 else "trace_check_results.json", "w"), indent=1, ensure_ascii=False)
 print(json.dumps(out, indent=1, ensure_ascii=False))
 

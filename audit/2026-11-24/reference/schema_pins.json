@@ -3,7 +3,8 @@
  "date": "2026-11-24",
  "status": "PROPOSED",
  "rule": "each trace file is validated against the one schema version named here; v0.1-v0.3 are not edited, so their pin is written in this file only",
- "note": "the as-received schema file carries no version field; 0.1.0 is the name the owner's order gives it. The other schemas' versions are read from their x-lid blocks. A pin names its schema by file and sha256; the number 0.2.0 is also used, for a different change, in the adopted schema's change list.",
+ "note": "the as-received schema file carries no version field; 0.1.0 is the name the owner's order gives it. The other schemas' versions are read from their x-lid blocks. A pin names its schema by file and sha256. The schema labelled 0.1.0+status_history was first labelled 0.2.0 and its file still says so inside (bytes unchanged).",
+ "modes": "a trace with superseded_by is historical: it passes iff rerunning the checker reproduces its stored findings exactly. The one trace with superseded_by null is current: 0 ERROR.",
  "pins": [
   {
    "trace": "reference_trace_BE_hex.json",
@@ -11,7 +12,9 @@
    "schema_version": "0.1.0",
    "schema_kind": "as received (Kimi)",
    "schema": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
-   "schema_sha256": "da46a1203305181eeab3bc5272ba7ae30e35bfaf2646fe01c8002958803e26db"
+   "schema_sha256": "da46a1203305181eeab3bc5272ba7ae30e35bfaf2646fe01c8002958803e26db",
+   "results": "trace_check_results.json",
+   "superseded_by": "0.2"
   },
   {
    "trace": "reference_trace_BE_hex_v0.2.json",
@@ -19,15 +22,20 @@
    "schema_version": "0.1.0",
    "schema_kind": "as received (Kimi)",
    "schema": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
-   "schema_sha256": "da46a1203305181eeab3bc5272ba7ae30e35bfaf2646fe01c8002958803e26db"
+   "schema_sha256": "da46a1203305181eeab3bc5272ba7ae30e35bfaf2646fe01c8002958803e26db",
+   "results": "trace_check_results_v0.2.json",
+   "superseded_by": "0.3"
   },
   {
    "trace": "reference_trace_BE_hex_v0.3.json",
    "trace_version": "0.3",
-   "schema_version": "0.2.0",
+   "schema_version": "0.1.0+status_history",
    "schema_kind": "as received + status_history",
-   "schema": "schemas/pinned/reference_trace.0.2.0.schema.json",
-   "schema_sha256": "301013dc22a452f5ea834cb2362412984d82211c21c24edc006dddc007f1eb8e"
+   "schema": "schemas/pinned/reference_trace.0.1.0+status_history.schema.json",
+   "schema_sha256": "301013dc22a452f5ea834cb2362412984d82211c21c24edc006dddc007f1eb8e",
+   "results": "trace_check_results_v0.3.json",
+   "superseded_by": "0.4",
+   "former_label": "0.2.0"
   },
   {
    "trace": "reference_trace_BE_hex_v0.4.json",
@@ -35,15 +43,29 @@
    "schema_version": "0.3.0",
    "schema_kind": "adopted, frozen copy",
    "schema": "schemas/pinned/reference_trace.0.3.0.schema.json",
-   "schema_sha256": "7f378ab892f92d12e16e39e5cb4c138467796f84a37567f44ea4d0c5fe0c5c84"
+   "schema_sha256": "7f378ab892f92d12e16e39e5cb4c138467796f84a37567f44ea4d0c5fe0c5c84",
+   "results": "trace_check_results_v0.4.json",
+   "superseded_by": "0.5"
   },
   {
    "trace": "reference_trace_BE_hex_v0.5.json",
    "trace_version": "0.5",
    "schema_version": "0.4.0",
+   "schema_kind": "adopted, frozen copy",
+   "schema": "schemas/pinned/reference_trace.0.4.0.schema.json",
+   "schema_sha256": "f9d58ec2907a1f48d6b2d640e4d09f65b823caa41d83402542c2efc35f1dbc90",
+   "results": "trace_check_results_v0.5.json",
+   "superseded_by": "0.6"
+  },
+  {
+   "trace": "reference_trace_BE_hex_v0.6.json",
+   "trace_version": "0.6",
+   "schema_version": "0.5.0",
    "schema_kind": "adopted",
    "schema": "schemas/reference_trace.schema.json",
-   "schema_sha256": "f9d58ec2907a1f48d6b2d640e4d09f65b823caa41d83402542c2efc35f1dbc90"
+   "schema_sha256": "06cf0c3edee77f09100eef512f6b54da5f2412d7717428fee66235b67a4906bc",
+   "results": "trace_check_results_v0.6.json",
+   "superseded_by": null
   }
  ]
 }
