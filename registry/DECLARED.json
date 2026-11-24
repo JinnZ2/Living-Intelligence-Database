@@ -560,6 +560,61 @@
       },
       "renames": "none",
       "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "trace v0.4: severity assignment; schema pinning; pilot rebuilt from v0.4",
+      "after": "branch process-form-kimi-schemas at 084aebd; by the owner's order 'trace v0.4'. Declared before the checker change, the pin file, the v0.4 trace and the rebuilt pilot record.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "trace_check_severities": {
+        "replaces": "the block codes_the_order_does_not_name of the entry 'trace_check severities; status_history; reviewer slots; pilot process form'. The owner has now assigned those codes.",
+        "ERROR": {
+          "exit": 1,
+          "codes": [
+            "DANGLING_DEP",
+            "NESTING_VIOLATION",
+            "NO_SOURCE",
+            "BINDING_TARGET_MISSING",
+            "BINDING_STRING_NOT_IN_REPO",
+            "BAD_STATUS",
+            "CYCLE_UNNAMED",
+            "CYCLE_DANGLING_PARENT",
+            "DIFF_UNKNOWN_NODE",
+            "DIFF_NO_SOURCE",
+            "DIFF_REGIME_MISSING",
+            "SENSITIVITY_INCOMPLETE",
+            "NOTED_MISMATCH naming any *_MISMATCH",
+            "CYCLE_NO_SOURCE when the cycle is TRACED"
+          ]
+        },
+        "INFO": {
+          "exit": 0,
+          "codes": [
+            "CYCLE_NO_PERIOD",
+            "CYCLE_TOP_LEVEL",
+            "GAP",
+            "CYCLE_NO_SOURCE when the cycle is PROPOSED"
+          ]
+        },
+        "CYCLE_NO_SOURCE": "before this entry the checker raised it only for a TRACED cycle. It is now also raised for a PROPOSED cycle with no source, as INFO, written [CYCLE_NO_SOURCE, id, PROPOSED]. The TRACED form [CYCLE_NO_SOURCE, id] is unchanged. Traces v0.1-v0.3 hold no cycle with status PROPOSED (theirs is PROPOSED_UNSOURCED), so their result files reproduce unchanged. A cycle with status UNKNOWN is not asked for a source.",
+        "any_other_code": "ERROR. A code with no declared severity is never treated as INFO."
+      },
+      "schema_pinning": {
+        "rule": "every trace file is validated against one named schema version, and that pin is written down.",
+        "pins": {
+          "reference_trace_BE_hex.json (v0.1)": "as received 0.1.0 (Kimi): audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
+          "reference_trace_BE_hex_v0.2.json": "as received 0.1.0 (Kimi), same file",
+          "reference_trace_BE_hex_v0.3.json": "as received 0.1.0 (Kimi), same file",
+          "v0.4 and later": "adopted 0.3.0: schemas/reference_trace.schema.json"
+        },
+        "where_the_pin_is_written": "audit/2026-11-24/reference/schema_pins.json holds the pin of every trace file, with the sha256 of the schema file. v0.1-v0.3 are not edited, so their pin can only be written there. The adopted 0.3.0 schema is closed at the top level and has no field for a schema name; v0.4 therefore names its schema in its supersedes_note text and in the pin file. No schema is changed by this entry.",
+        "check": "audit/2026-11-24/reference/validate_pins.py validates each trace against its pin and reports the result per pin. A trace that fails its pin is reported as failing; it is not moved to another pin to make it pass."
+      },
+      "trace_v0_4": "reference_trace_BE_hex_v0.4.json is a new file built from v0.3 by build_reference_v04.py; v0.1-v0.3 are read, never written. Each change carries a status_history entry on the node or cycle it touches. The 0.3.0 schema holds depends_on as plain ids with no per-edge record, so the status of an added edge (PROPOSED) and its note are written in the status_history entry and the note of the node that gains the edge.",
+      "pilot_process_form": "registry/process_forms.json: the BE.hexagonal_cell_efficiency record is rebuilt from the v0.4 trace by the same script and the same rule (every value copied from a named trace node, a cycle or the entity file). The record built from v0.3 is kept unchanged in registry/process_forms_pilot_v0.3.json. This replaces 'built only from ...v0.3.json' in the earlier entry.",
+      "renames": "none",
+      "observer_slots": null
     }
   ]
 }
