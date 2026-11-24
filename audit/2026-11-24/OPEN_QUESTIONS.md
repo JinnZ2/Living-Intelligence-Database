@@ -97,3 +97,17 @@ Context: the audit built a D0–D5 dependency stack from the owner's answer with
 **Falsifier:** if a history field can be added to the proposed schema and all 28 of Kimi's checks still pass, the second half of this gap closes.
 
 **Dated note, 2026-11-24 (#6, second half):** Kimi submitted a revised `reference_trace.schema.json`, stored unedited in `kimi_2026-11-25_rev1/`; the original is unchanged. The only change is an optional `status_history` on nodes (OBSERVED by diff). The falsifier was met: v0.1, v0.2 and v0.3 all validate, and Kimi's suite, run with the revised schema, still passes 28/28 (OBSERVED). The schema half of this gap is therefore closed. The ingest half stays open: nothing reads the readings file yet.
+
+### 7. INSTRUMENT — the falsifier searches records that carry no attributes
+
+**Gap:** After the 2026-11-24 repair, all 601 counterexamples read NOT_TESTED. The label is honest, but `check_counterexample` still searches the thin index entries, and those carry no attributes. When the same counterexamples are searched against the full records, 360 come back RISK_FLAGGED and 241 NOT_TESTED, identically on `63d93c0` and `906e86a`. So the NOT_TESTED reading comes from where the instrument looks, not from the database having nothing to say.
+
+**Knowledge state:** OBSERVED (`recheck_results_906e86a.json`, F1 and F1b); whether the 360 text matches bear on the claims is NOT_TESTED
+
+**Research question:** Should the falsifier search the full records? If so, how should a RISK_FLAGGED text match be read by a person, so that a match is not taken as a refutation?
+
+**Disciplines:** Method design, falsification practice
+
+**Data sources:** `validation/falsifier.py`; `recheck_main.py`; `recheck_results_906e86a.json`
+
+**Falsifier:** if a reading of the 360 matches finds none relevant to its claim, then searching the full records adds nothing beyond the thin search, and the gap closes as harmless.
