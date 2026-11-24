@@ -92,3 +92,10 @@ if RB:
     out["summary"]["repo_bindings"] = {"checked_against": bee if attrs is not None else "NOT_AVAILABLE", "bound": bound, "unbound": unbound}
 json.dump(out, open(sys.argv[2] if len(sys.argv) > 2 else "trace_check_results.json", "w"), indent=1, ensure_ascii=False)
 print(json.dumps(out, indent=1, ensure_ascii=False))
+
+# 2026-11-24 note: opt-in loud exit. LID_STRICT=1 exits 1 if there are any findings.
+# The default exit (0) and the output file are unchanged, so earlier results stay reproducible.
+# Raised by an outside reader (Kimi, 2026-11-25): findings were silent to CI.
+if os.environ.get("LID_STRICT") == "1" and out["findings"]:
+    print(f"STRICT: {len(out['findings'])} findings", file=sys.stderr)
+    sys.exit(1)
