@@ -156,9 +156,41 @@ difference, not corrections applied.
 - NOT_INDEXED AN `bb2a3794dfe4` Tschinkel (2003) 'Subterranean ant nests: trace fossils past and future' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_INDEXED AN `eefbde78a762` Gordon (2010) 'Ant Encounters: Interaction Networks and Colony Behavior' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 
+## Second index (Europe PMC)
+
+Scope of this run: the titled works in NOT_FOUND_INDEXED only (by order; the
+declared scope also allows NOT_INDEXED and MATCH_SUSPECT, not run). Same three
+search steps and the same identification rule as PubMed; nothing was changed
+after the run. OpenAlex could not be reached from this environment, so it is
+recorded as not reached for each work, never as a miss.
+
+| work | hits per step | Europe PMC | OpenAlex |
+|---|---|---|---|
+| BE von Frisch (1967) 'The Dance Language and Orientation of Bees' | 0 / 0 / 0 | miss | not reached |
+| BE Seeley (1995) 'The Wisdom of the Hive' | 0 / 0 / 0 | miss | not reached |
+| BE Seeley (2010) 'Honeybee Democracy' | 0 / 0 / 0 | miss | not reached |
+| BE Seeley & Visscher (2004) 'Group decision making in nest-site selection by honey bees' | 0 / 0 / 0 | miss | not reached |
+| BE Fahrenholz et al. (1989) 'Thermal analysis of a honey bee colony' | 0 / 0 / 0 | miss | not reached |
+| OC Hochner et al. (2006) 'A Unified View of Animal Body Movements' | 0 / 0 / 0 | miss | not reached |
+| OC Packard & Sanders (1971) 'Body patterns of Octopus vulgaris' | 0 / 0 / 1 | miss | not reached |
+| OC Sumbre et al. (2001) 'Octopus shows controlled arm coordination despite decentralized neural design' | 0 / 0 / 0 | miss | not reached |
+| OC Hochner (2012) 'An almost infinite behavioral repertoire' | 0 / 0 / 0 | miss | not reached |
+| OC Fossati et al. (2011) 'Neural regeneration in the arm of Octopus vulgaris' | 0 / 0 / 0 | miss | not reached |
+| OC Rohrbach & Schmidtberg (2006) 'Arm regeneration in Octopus vulgaris' | 0 / 0 / 8 | miss | not reached |
+| KA Alexander & Vernon (1975) 'The mechanics of hopping by kangaroos' | 0 / 0 / 0 | miss | not reached |
+| KA Baudinette et al. (1992) 'Cost of locomotion in wild tammar wallabies' | 0 / 0 / 0 | miss | not reached |
+| KA Dawson & Taylor (1973) 'Energetic cost of locomotion in kangaroos' | 0 / 0 / 0 | miss | not reached |
+| TU Bowen et al. (1993) 'Population structure of loggerhead turtles in the northwestern Atlantic Ocean and Mediterranean Sea' | 0 / 0 / 0 | miss | not reached |
+| AN Goss et al. (1989) 'Self-organized shortcuts in the Argentine ant' | 0 / 0 / 0 | miss | not reached |
+
+Searched: 16. found 0, differs 0, miss 16.
+A non-zero hit count on the title-only step with a miss means records were
+returned and none passed the title thresholds.
+
 ## Limits
 
-- One index. A work absent from PubMed may be in another index; nothing else was searched.
+- Two indexes that overlap heavily (Europe PMC includes the PubMed records). A work absent
+  from both may be in another index; OpenAlex was not reached and nothing else was searched.
 - The match rule is mechanical (declared before the run). A work whose cited title is
   paraphrased, or whose first author is cited differently, can be missed.
 - UNDERSPECIFIED says the string gives too little to search on. It says nothing about

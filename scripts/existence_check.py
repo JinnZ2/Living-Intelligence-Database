@@ -642,8 +642,33 @@ def report():
                 w["state"], ent, sid[:12], w["cited"]["author"], w["cited"]["year"],
                 " '%s'" % w["cited"]["title"] if w["cited"]["title"] else "",
                 " [%s]" % w["note"] if w["note"] else ""))
+    sec = [(ent, sid, w) for ent, _, src in top_entities() for sid in dict.fromkeys(src)
+           for w in reg[sid]["existence"]["works"] if w.get("second_index")]
+    done = set()
+    L += ["", "## Second index (Europe PMC)", "",
+          "Scope of this run: the titled works in NOT_FOUND_INDEXED only (by order; the",
+          "declared scope also allows NOT_INDEXED and MATCH_SUSPECT, not run). Same three",
+          "search steps and the same identification rule as PubMed; nothing was changed",
+          "after the run. OpenAlex could not be reached from this environment, so it is",
+          "recorded as not reached for each work, never as a miss.", "",
+          "| work | hits per step | Europe PMC | OpenAlex |", "|---|---|---|---|"]
+    tally = {}
+    for ent, sid, w in sec:
+        if (sid, w["text"]) in done:
+            continue
+        done.add((sid, w["text"]))
+        b = w["second_index"]
+        res = {"FOUND_AS_CITED": "found", "FOUND_DIFFERS": "differs"}.get(b["state"], "miss")
+        tally[res] = tally.get(res, 0) + 1
+        L.append("| %s %s (%s) '%s' | %s | %s | %s |" % (
+            ent, w["cited"]["author"], w["cited"]["year"], w["cited"]["title"],
+            " / ".join(str(q["count"]) for q in b["queries"]), res, b["openalex"].replace("_", " ").lower()))
+    L += ["", "Searched: %d. %s." % (len(done), ", ".join("%s %d" % (k, tally.get(k, 0)) for k in ("found", "differs", "miss"))),
+          "A non-zero hit count on the title-only step with a miss means records were",
+          "returned and none passed the title thresholds."]
     L += ["", "## Limits", "",
-          "- One index. A work absent from PubMed may be in another index; nothing else was searched.",
+          "- Two indexes that overlap heavily (Europe PMC includes the PubMed records). A work absent",
+          "  from both may be in another index; OpenAlex was not reached and nothing else was searched.",
           "- The match rule is mechanical (declared before the run). A work whose cited title is",
           "  paraphrased, or whose first author is cited differently, can be missed.",
           "- UNDERSPECIFIED says the string gives too little to search on. It says nothing about",

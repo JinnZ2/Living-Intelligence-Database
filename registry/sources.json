@@ -276,7 +276,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Goss\" AND PUB_YEAR:1989 AND TITLE:(self AND organized AND shortcuts AND argentine)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Goss\" AND TITLE:(self AND organized AND shortcuts AND argentine)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(self AND organized AND shortcuts AND argentine)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      }
     ]
    }
@@ -468,7 +492,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Seeley\" AND PUB_YEAR:2004 AND TITLE:(group AND decision AND making AND nest AND site AND selection AND honey AND bees)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Seeley\" AND TITLE:(group AND decision AND making AND nest AND site AND selection AND honey AND bees)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(group AND decision AND making AND nest AND site AND selection AND honey AND bees)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -664,7 +712,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Frisch\" AND PUB_YEAR:1967 AND TITLE:(dance AND language AND orientation AND bees)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Frisch\" AND TITLE:(dance AND language AND orientation AND bees)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(dance AND language AND orientation AND bees)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -695,7 +767,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Seeley\" AND PUB_YEAR:1995 AND TITLE:(wisdom AND hive)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Seeley\" AND TITLE:(wisdom AND hive)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(wisdom AND hive)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -726,7 +822,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Seeley\" AND PUB_YEAR:2010 AND TITLE:(honeybee AND democracy)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Seeley\" AND TITLE:(honeybee AND democracy)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(honeybee AND democracy)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      }
     ]
    }
@@ -1390,7 +1510,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Alexander\" AND PUB_YEAR:1975 AND TITLE:(mechanics AND hopping AND kangaroos)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Alexander\" AND TITLE:(mechanics AND hopping AND kangaroos)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(mechanics AND hopping AND kangaroos)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -2038,7 +2182,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Hochner\" AND PUB_YEAR:2006 AND TITLE:(unified AND view AND animal AND body AND movements)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Hochner\" AND TITLE:(unified AND view AND animal AND body AND movements)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(unified AND view AND animal AND body AND movements)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      }
     ]
    }
@@ -2724,7 +2892,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Fahrenholz\" AND PUB_YEAR:1989 AND TITLE:(thermal AND analysis AND honey AND colony)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Fahrenholz\" AND TITLE:(thermal AND analysis AND honey AND colony)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(thermal AND analysis AND honey AND colony)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -2812,7 +3004,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Baudinette\" AND PUB_YEAR:1992 AND TITLE:(cost AND locomotion AND wild AND tammar AND wallabies)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Baudinette\" AND TITLE:(cost AND locomotion AND wild AND tammar AND wallabies)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(cost AND locomotion AND wild AND tammar AND wallabies)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      }
     ]
    }
@@ -2972,7 +3188,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Packard\" AND PUB_YEAR:1971 AND TITLE:(body AND patterns AND octopus AND vulgaris)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Packard\" AND TITLE:(body AND patterns AND octopus AND vulgaris)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(body AND patterns AND octopus AND vulgaris)",
+         "count": 1
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -3090,7 +3330,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Sumbre\" AND PUB_YEAR:2001 AND TITLE:(octopus AND shows AND controlled AND coordination AND despite AND decentralized AND neural AND design)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Sumbre\" AND TITLE:(octopus AND shows AND controlled AND coordination AND despite AND decentralized AND neural AND design)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(octopus AND shows AND controlled AND coordination AND despite AND decentralized AND neural AND design)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -3121,7 +3385,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Hochner\" AND PUB_YEAR:2012 AND TITLE:(almost AND infinite AND behavioral AND repertoire)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Hochner\" AND TITLE:(almost AND infinite AND behavioral AND repertoire)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(almost AND infinite AND behavioral AND repertoire)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      }
     ]
    }
@@ -3298,7 +3586,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Fossati\" AND PUB_YEAR:2011 AND TITLE:(neural AND regeneration AND octopus AND vulgaris)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Fossati\" AND TITLE:(neural AND regeneration AND octopus AND vulgaris)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(neural AND regeneration AND octopus AND vulgaris)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -3329,7 +3641,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Rohrbach\" AND PUB_YEAR:2006 AND TITLE:(regeneration AND octopus AND vulgaris)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Rohrbach\" AND TITLE:(regeneration AND octopus AND vulgaris)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(regeneration AND octopus AND vulgaris)",
+         "count": 8
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      }
     ]
    }
@@ -3861,7 +4197,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Dawson\" AND PUB_YEAR:1973 AND TITLE:(energetic AND cost AND locomotion AND kangaroos)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Dawson\" AND TITLE:(energetic AND cost AND locomotion AND kangaroos)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(energetic AND cost AND locomotion AND kangaroos)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
@@ -4196,7 +4556,31 @@
       "not_compared": [],
       "candidate": null,
       "note": null,
-      "state": "NOT_FOUND_INDEXED"
+      "state": "NOT_FOUND_INDEXED",
+      "second_index": {
+       "index": "Europe PMC",
+       "queries": [
+        {
+         "term": "AUTH:\"Bowen\" AND PUB_YEAR:1993 AND TITLE:(population AND structure AND loggerhead AND turtles AND northwestern AND atlantic AND ocean AND mediterranean)",
+         "count": 0
+        },
+        {
+         "term": "AUTH:\"Bowen\" AND TITLE:(population AND structure AND loggerhead AND turtles AND northwestern AND atlantic AND ocean AND mediterranean)",
+         "count": 0
+        },
+        {
+         "term": "TITLE:(population AND structure AND loggerhead AND turtles AND northwestern AND atlantic AND ocean AND mediterranean)",
+         "count": 0
+        }
+       ],
+       "state": "NOT_FOUND_INDEXED",
+       "matched_record": null,
+       "differs": [],
+       "not_compared": [],
+       "candidate": null,
+       "openalex": "NOT_REACHED",
+       "checked": "2026-11-24"
+      }
      },
      {
       "cited": {
