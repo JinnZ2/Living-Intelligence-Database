@@ -82,7 +82,7 @@ The mapping is PROPOSED; it was written here, not taken from the bridge.
 |---|---|---|---|
 | VOID | the field is null; `reason` holds the record's words for the gap when it has any | 31 | 40 (9 with a reason) |
 | UNMAPPED | the field has a value and no source | 12 | 12 |
-| LEXICAL_VOID | no term exists: an open label slot only. In the backfill, a `contested_label` entry whose label is null | 9 | 0; no record has an open label slot |
+| LEXICAL_VOID | a value for which no term exists in the record's language ("not interpretable at the moment"). The one case the backfill can detect is a `contested_label` entry whose label is null | 9 | 0; no record has one |
 | REJECTED | a value failed a declared gate | 0 | 0; the chain declares no gate |
 
 The 9 steps that read LEXICAL_VOID before are the null fields with a note

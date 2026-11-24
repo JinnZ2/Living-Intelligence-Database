@@ -144,6 +144,31 @@
         "selftest_added": "change one field of an entity file: only that field's step reads FIELD_CHANGED, and build appends one step",
         "renames": "none"
       }
+    },
+    {
+      "date": "2026-11-24",
+      "name": "physics usage: runtime reference",
+      "after": "fixes v2 (cc3d4ee) and the owner's work order 'physics-provenance usage, two tracks'",
+      "changes_a_declared_value": true,
+      "what": "LEXICAL_VOID wording changed by order; rules for the runtime reference export, declared before scripts/export_reference.py existed. No step is rebuilt by this entry.",
+      "changes": {
+        "void_states": {
+          "LEXICAL_VOID": "a value for which no term exists in the record's language ('not interpretable at the moment'). The backfill rule is unchanged (a contested_label entry whose label is null) and is the only case it can detect. Count stays 0.",
+          "mapping_status": "PROPOSED"
+        },
+        "reference_export": {
+          "tool": "scripts/export_reference.py",
+          "output": "reference/lid_reference.jsonl, one line per entity that has steps",
+          "source": "head steps under provenance/ only (a step nobody supersedes). Entity files are not read for values.",
+          "per_field": "field, value, status, status_note, evidence_type, reproducibility, scope, assumptions, step_id, source_ids, void {state, reason}; copied from the head step, nothing recomputed",
+          "reading": "a derived label per field, from the step alone, in this order: void VOID or LEXICAL_VOID -> NO_INFORMATION; void UNMAPPED -> UNSOURCED; status OBSERVED -> OBSERVED; status DERIVED -> DERIVED; status PROPOSED -> PROPOSED; status null with sources -> NOT_ASSESSED",
+          "nothing_promoted": "no status is assigned or raised. The evidence_type -> status table in docs/provenance_chain.md stays not applied. An UNSOURCED value is exported with that label, never as a finding.",
+          "snapshot_class": "SUMMARY_ONLY on every line: superseded steps, method, claim and declared_pre_run are not in it",
+          "verify": "a reference field is refused when its step_id is not a head step under provenance/, or its value, status, void or source_ids differ from that step, or a source id is not in registry/sources.json",
+          "test": "reference/planted_questions.json: 10 questions with the expected reading, written by hand from the records before the test ran; answers are produced from reference/lid_reference.jsonl alone and each cites its step id. One planted wrong record (a copy of a real field with status raised and value changed) must be refused by verify."
+        },
+        "renames": "none"
+      }
     }
   ]
 }
