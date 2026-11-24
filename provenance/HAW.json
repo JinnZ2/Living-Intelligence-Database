@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "68e7c787d2b2305533ec93bd54b1f90acda4ffed162fac1631fc682f4f1d4cd3",
+   "id": "b444830f5d615666f7e4feb5eb4e559e05d8771566552f3d486c86f27e3b4a15",
    "inputs": [
-    "S-7f3085818b58"
+    "7f3085818b58c9b3920fffff33206b5440c898d78cfb4465b624d949392eb4fa"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "HAW",
     "field": "attributes.precision_targeting",
+    "entity_file_sha256": "eca834f2ac00287e10fe86e4a41e30f797c4a5d2a1e1e53c206eacb7533833de",
     "evidence_type": "field_observation",
     "reproducibility": "high"
    },
    "value": 0.97,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "1d3c4db8b12cac5851677b069656695440e4a56c9f1ea3e0b0d22706717793d9",
+   "id": "42acd4abf8395a23a7ef80b91f170cecc577e948e463e5a1ee5ed34e1f446343",
    "inputs": [
-    "S-416a75cabc79"
+    "416a75cabc791cabc2ff30592c41c1a0898a6883683bac285d6283575412c927"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "HAW",
     "field": "attributes.ballistic_dive",
+    "entity_file_sha256": "eca834f2ac00287e10fe86e4a41e30f797c4a5d2a1e1e53c206eacb7533833de",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.95,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "e1e8b9e4b443b64fc5c90597e3356a131c1c0e3e4af2d213f2afe53a2430cb4f",
+   "id": "878e3df2213956b7581108c808f15fce17c99656389f97f4def5fd54796651f8",
    "inputs": [
-    "S-99095756ce94"
+    "99095756ce942bbd512aafa7245289dc21b9309b795474af4f78dccb9d19ae2c"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "HAW",
     "field": "attributes.dual_fovea_scanning",
+    "entity_file_sha256": "eca834f2ac00287e10fe86e4a41e30f797c4a5d2a1e1e53c206eacb7533833de",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.93,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

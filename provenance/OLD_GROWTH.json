@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "e34e6369e92d4d4a13023a7ef90b6894de7a1f16e3d032b55d96753f82c3f974",
+   "id": "56ed9fc87860bad1f734169a2d472d08a0d55456f5efa6630c4c5a4715565d94",
    "inputs": [
-    "S-7981860b9f67"
+    "7981860b9f67378afdd45cf064bfea7b711e8722b63117b8f1701d15ab4160bd"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "OLD_GROWTH",
     "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "5abf7f17456f078a3a48d16c19be60c4735ffbac2d6d9f3308f91ec467e7296b",
     "evidence_type": "field_observation",
     "reproducibility": "high"
    },
    "value": 0.98,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

@@ -1,0 +1,132 @@
+{
+ "entity": "OC",
+ "path": "ontology/animal/octopus.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "89b49c937291a17bf39a56d9066fed47ca3579faa96823aaf1450dc9557ed5a9",
+   "inputs": [
+    "S-7cc6491b4502"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.arm_autonomy_fraction",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.64,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "dad614fa8d51295efebf6466060a417230ada1dc9fd783de666e0724419b9d5f",
+   "inputs": [
+    "S-b6365f159a5b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.chromatophore_response_latency",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.2,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c807920a4d6ecda30784568bee02cecc795609a75156bfd0b78dcc9f003d97d2",
+   "inputs": [
+    "S-b77eade4b5c4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.distributed_neural_processing",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.64,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1e4a2db00aa50aa3a8f061c76b5e0582f7cabc8d8b1b6419c88bc2d9afda77e9",
+   "inputs": [
+    "S-8ae2d41bffc9"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.chromatophore_camouflage",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "6165df6c69fc9e8d4ba0fc0229d6a88f8b8a7edc710042cf69892885583763c9",
+   "inputs": [
+    "S-bc73fb7c6187"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.arm_regeneration",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.78,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

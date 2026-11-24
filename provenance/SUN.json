@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "74cb4df2d1d1bbae2dc47b0a911d3bd72206c0f6cd732437d1cbacca382f3425",
+   "id": "dc5b62be3c332ab34ae1d8d5303ae44af3feb618c7a91ddf9d4fba5079256fb8",
    "inputs": [
-    "S-c12c9e5deb97"
+    "c12c9e5deb97bbc148577dc4865318426f458b606afa5308dddd8eb703e3a0e2"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "SUN",
     "field": "attributes.fibonacci_packing_density",
+    "entity_file_sha256": "2cab5032bec4f39592fe6725848f9d6f893bb2a6cf6d17d9aa8f94a1d384a21a",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.97,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

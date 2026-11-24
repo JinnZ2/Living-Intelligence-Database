@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "a26ea3f27da306453b8bc95f3808d66ba2880311de9e0f760d327100c9374212",
+   "id": "5dad0208b0688cef3918d7a3a407caa78471505de6cff0a6fbe455d25934299a",
    "inputs": [
-    "S-2d9b53db9394"
+    "2d9b53db939429198fdf10856f6d413eaa378eaf339333f235804530faecf79c"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "THERMAL",
     "field": "attributes.carnot_efficiency_bound",
+    "entity_file_sha256": "48b5c0ff0bee6930fa67f95e69808e9c803ef2e243b3e8bdced8fdf1435cac0b",
     "evidence_type": "lab_measurement",
     "reproducibility": "certain"
    },
    "value": 0.98,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

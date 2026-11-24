@@ -1,0 +1,82 @@
+{
+ "entity": "OW",
+ "path": "ontology/animal/owl.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "1bd800e1258923f12a8059b262de3210abb6a8427dc6184e28d88d6e45be0b7c",
+   "inputs": [
+    "S-17929f9f8133"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OW",
+    "field": "attributes.asymmetric_sound_triangulation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "870b1583dd8032b9322f5768279d450b2e694d7f5b1a77fdd27ff606a2525aa7",
+   "inputs": [
+    "S-658edee416da"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OW",
+    "field": "attributes.silent_flight",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "4e50d9454cbb840475588840e7929378bad83976f7f19d9eccc9172643986204",
+   "inputs": [
+    "S-d050c0e07ed5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OW",
+    "field": "attributes.extreme_low_light_vision",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

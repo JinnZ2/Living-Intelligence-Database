@@ -1,0 +1,32 @@
+{
+ "entity": "LEAF_TESS",
+ "path": "ontology/plant/leaf_tessellation.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "92870d9c9c7247f1bdb0f34a5cbe2e9bae1c9b8418b72d71c1a0c2414ca5fb42",
+   "inputs": [
+    "S-e82708e33866"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LEAF_TESS",
+    "field": "attributes.light_interception_efficiency",
+    "evidence_type": "simulation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "entity": "PLASMA_FIELD",
+ "path": "ontology/plasma/plasma_field.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "cb1e3fd79dc76d7a34e60e08b3d82cd6d248b5b602250a7b451195731ff1b072",
+   "inputs": [
+    "S-454cd6309a0b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PLASMA_FIELD",
+    "field": "attributes.debye_shielding_efficiency",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

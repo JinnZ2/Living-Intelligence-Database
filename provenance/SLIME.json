@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "971af2088abfbf89ef49270a6203877019b5c54ae2d7f407debc2ad4c3b233ae",
+   "id": "6b2220a82bb7abb061b4f27a277aede623b0342e49618fea14ff320656a2b72e",
    "inputs": [
-    "S-e9d681f7ad5f"
+    "e9d681f7ad5fae863fbac0675957ba5886b0174da92c61908e306684383b5075"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,21 +15,23 @@
    "params": {
     "entity": "SLIME",
     "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.94,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "86ccb44fbe63d20e9a5d7acc287744f65faf2d78988b8cc217e35ff5bd4d09b7",
+   "id": "c56938d61265e863b329d8c7c4049ae9792abaa9bd62392840397406e3f512e4",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -37,14 +39,16 @@
    },
    "params": {
     "entity": "SLIME",
-    "field": "coordination.carrier"
+    "field": "coordination.carrier",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -53,7 +57,7 @@
    "snapshot_class": null
   },
   {
-   "id": "0defeba185e84222b2f70a175d0b87d536c2d703fc5ab7d00f01553a50410ede",
+   "id": "642aa97492791a80aaa7b1350e0cf6f53185833f06e29abdcef0609b233cb210",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -61,14 +65,16 @@
    },
    "params": {
     "entity": "SLIME",
-    "field": "coordination.signal"
+    "field": "coordination.signal",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -77,7 +83,7 @@
    "snapshot_class": null
   },
   {
-   "id": "4c6a8913ea93338a3bfa9783b06861f2b6854ca699bac99484da02c4501680bb",
+   "id": "68eb188ff0437c401e6b42ef73ebabf5965168a775ad408999b19a583958d165",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -85,14 +91,16 @@
    },
    "params": {
     "entity": "SLIME",
-    "field": "coordination.record"
+    "field": "coordination.record",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -101,7 +109,7 @@
    "snapshot_class": null
   },
   {
-   "id": "059430ce897a10c5ca09bbdaaaa668f1fa3d13dab3e3e7c23f07a45074e4227a",
+   "id": "395de9bcaec828a5bb40e84a691478e80bed1b0d49228be03213e54216ce48ac",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -109,14 +117,16 @@
    },
    "params": {
     "entity": "SLIME",
-    "field": "coordination.closure"
+    "field": "coordination.closure",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -125,7 +135,7 @@
    "snapshot_class": null
   },
   {
-   "id": "892aef0bf723bdda79ab2e170799213e1001618ce83dffae8ddd3937283b76aa",
+   "id": "98f3614a554a3014e1975a91b9dd586bc419a9c5ece147310e5643bebecd4114",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -133,14 +143,16 @@
    },
    "params": {
     "entity": "SLIME",
-    "field": "coordination.trust_basis"
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -149,7 +161,7 @@
    "snapshot_class": null
   },
   {
-   "id": "37cae3dc77463cba44d6633e8981b5c872905477726a1e9543e889c206ba1a94",
+   "id": "ec8c316bc0e6c1f6fe0552b40227b1ee5ba6b438f0a20b41e08a1b62c374380f",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -157,14 +169,16 @@
    },
    "params": {
     "entity": "SLIME",
-    "field": "coordination.energy_cost"
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -173,7 +187,7 @@
    "snapshot_class": null
   },
   {
-   "id": "889904076a463dcdaf5c3124f6b9f1d752bc2d47842c8add0c15ebe70553e9b3",
+   "id": "652bc8acdc9173416ca6f0f252bd6329b3e7b49e39afa77ac9ffa1a46ce44223",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -181,14 +195,16 @@
    },
    "params": {
     "entity": "SLIME",
-    "field": "coordination.loop_topology"
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -197,9 +213,9 @@
    "snapshot_class": null
   },
   {
-   "id": "61aaa6f3d9b2d11f44f6d03543c92daa8480e0aba81a7709218eb3e09c438f7d",
+   "id": "96c848619dac53dce206d822a3c860facc34e1215efef905a0393f77d0e49d85",
    "inputs": [
-    "S-0123fa592deb"
+    "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
    ],
    "method": {
     "name": "manual_entry",
@@ -207,7 +223,8 @@
    },
    "params": {
     "entity": "SLIME",
-    "field": "coordination.assumption_trace"
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
    },
    "value": [
     "optimization requires an optimizer",
@@ -223,8 +240,9 @@
    ],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

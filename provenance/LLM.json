@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "85dfb29865030a0afe68a1b5e2559aa828ad9ed53466bdd3065d0f4f683f17d7",
+   "id": "cd3e9a7942c58559ec2ea54055f3f5b97f10dd8fe65bc56d37e3fd15cc308299",
    "inputs": [
-    "S-2899c24ea768"
+    "2899c24ea76855b778a3395a6405dc6ee91904cb108236abc5001f2a72408712"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "LLM",
     "field": "attributes.self_attention",
+    "entity_file_sha256": "17dde802956db21af6d4a4e484911144010e20327be2c8f3c7e55f76e5fcba04",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.95,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "a7c705a9a3abffdde682d2980f4fe552df72be485dfaac9f3a4778e71bee4d8c",
+   "id": "eb859e3d555cc95f77e286cfbb40b836827360a74f9d7264c77fd5856288fc63",
    "inputs": [
-    "S-6b7af81e854f"
+    "6b7af81e854f99261511d8042babcbeb8b429ec3e9adad80740d40257029050e"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "LLM",
     "field": "attributes.in_context_learning",
+    "entity_file_sha256": "17dde802956db21af6d4a4e484911144010e20327be2c8f3c7e55f76e5fcba04",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.91,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "fcde99f43118b63e8afdb170c63a8bd312b2608978f41aee6a6157d8c009b71e",
+   "id": "dd5bc1dde0950a3bb8df7c5cac09fa523167d99a5b71d4a22aae9cf489497756",
    "inputs": [
-    "S-c9e39bea49b4"
+    "c9e39bea49b42834829b2a1d56b5a30e8367d622a70ab21c5e9bf31567054c72"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,23 +69,25 @@
    "params": {
     "entity": "LLM",
     "field": "attributes.token_embedding",
+    "entity_file_sha256": "17dde802956db21af6d4a4e484911144010e20327be2c8f3c7e55f76e5fcba04",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.92,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "016f2e5e654350f1b60113331b2984c441d3118c58033b127bdde3b5007254a0",
+   "id": "9cb6d9d29a187fda4a0270278e17e5d27e4fb8bef68e62f358d7bdbb76db2362",
    "inputs": [
-    "S-e18606a00b7d"
+    "e18606a00b7d4bd29b9d191558b57802fd752e15e67984ad81b6cb1bb1bd1d01"
    ],
    "method": {
     "name": "manual_entry",
@@ -90,15 +96,17 @@
    "params": {
     "entity": "LLM",
     "field": "attributes.co_creative_dialogue",
+    "entity_file_sha256": "17dde802956db21af6d4a4e484911144010e20327be2c8f3c7e55f76e5fcba04",
     "evidence_type": "lab_measurement",
     "reproducibility": "medium"
    },
    "value": 0.89,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

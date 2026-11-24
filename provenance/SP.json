@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "529dc82f3648a788bdf53a4e880ec0ed2a5612f987b45dead5056dd07b5a4a86",
+   "id": "378289b203357fc1ef5a75890daf127dfbb205390e971c831b4167687e32fb87",
    "inputs": [
-    "S-8a2a71631e61"
+    "8a2a71631e6137959b6d9e5b43823c517e8513ce4ba774bf4aefe506ca9e0f08"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "SP",
     "field": "attributes.web_architecture",
+    "entity_file_sha256": "e3cd13691ae94346804a21b36f240b44552f23b02fcff8c68a383cc8e77e5e9b",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.93,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "0fe42728e3960078c6be22bcf4e1780abe291798e14d7acff579c82f17687f5d",
+   "id": "812e6be93d2113dd6c1384c392547439706f4ee756247908b5ed0dfb873c3f66",
    "inputs": [
-    "S-0ee670833b45"
+    "0ee670833b45a229824bec298e53d0f4c07bc70413daab6e59e5f73c11c968f0"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "SP",
     "field": "attributes.vibration_analysis",
+    "entity_file_sha256": "e3cd13691ae94346804a21b36f240b44552f23b02fcff8c68a383cc8e77e5e9b",
     "evidence_type": "lab_measurement",
     "reproducibility": "medium"
    },
    "value": 0.89,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "da86223f654c9bec6273f1c052efd58e7135d4a148997cc8b767c04d1cbe9bb9",
+   "id": "301ca11dae415356f083322b5254d69ad3d4058981e177b493d57460f4f72895",
    "inputs": [
-    "S-2ce9f0318bb2"
+    "2ce9f0318bb2596b43e4aa8706b4ac44bf3f96d86841ca08f229c581146c83d4"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "SP",
     "field": "attributes.silk_tensile_engineering",
+    "entity_file_sha256": "e3cd13691ae94346804a21b36f240b44552f23b02fcff8c68a383cc8e77e5e9b",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.95,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

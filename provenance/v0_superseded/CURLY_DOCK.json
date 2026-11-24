@@ -1,0 +1,32 @@
+{
+ "entity": "CURLY_DOCK",
+ "path": "ontology/plant/curly_dock.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "0174af96639df4af454bc1990f58b90aca14a19b8969a669f6770b59cb139aec",
+   "inputs": [
+    "S-5cbbc741cd39"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CURLY_DOCK",
+    "field": "attributes.core_efficiency_factor",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

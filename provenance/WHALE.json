@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "b5c01c660aee33df514e6035ff513adb20250f64e202fad61ff6cef10c4baaef",
+   "id": "c595db1147b3f9feab787c87cecf150de58cb4eb1a452314e7bc6c8284f54297",
    "inputs": [
-    "S-024bf6ae22e8"
+    "024bf6ae22e886fbed8d301e1feec965a163fcf6b0d0f715c5a3f1946484b711"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,11 +15,12 @@
    "params": {
     "entity": "WHALE",
     "field": "attributes.song_coherence_across_pods",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c",
     "evidence_type": "cyclic_observation",
     "reproducibility": "high"
    },
    "value": 0.96,
-   "assumptions": [],
+   "assumptions": null,
    "scope": {
     "condition": {
      "environment": "open ocean, breeding season, males singing",
@@ -30,16 +31,17 @@
     }
    },
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "84dd046a9d9ef0278d011496c0054a5d16cb5c12881a9925e69e0d80be369874",
+   "id": "81f380bfb8bc100b6fb6a70b1c134ab7e16e5b1499fb3f5d6522f43b347ccd54",
    "inputs": [
-    "S-4bbe1c474bd2"
+    "4bbe1c474bd2894ce12f2d031285e07bff2546475ad0838e4f80d7fa39d89ffa"
    ],
    "method": {
     "name": "manual_entry",
@@ -48,11 +50,12 @@
    "params": {
     "entity": "WHALE",
     "field": "attributes.bubble_net_coordination",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c",
     "evidence_type": "cross_domain_rhyme",
     "reproducibility": "medium"
    },
    "value": 0.88,
-   "assumptions": [],
+   "assumptions": null,
    "scope": {
     "condition": {
      "environment": "prey school (herring, krill) in shallow water, group of experienced individuals",
@@ -63,14 +66,15 @@
     }
    },
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "804cd450084eb187a1cb4b0a47fda8663eee633be536471df9ff343dbaf726df",
+   "id": "c3e87990f28d8294067e8819eef015f16ffb858e2b281778dd4f60fb71a4756b",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -78,14 +82,16 @@
    },
    "params": {
     "entity": "WHALE",
-    "field": "attributes.long_range_communication"
+    "field": "attributes.long_range_communication",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c"
    },
    "value": "Song carries 1,000km+ through the deep sound channel (SOFAR). No other land-derived mammal communicates at this spatial scale.",
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -94,7 +100,7 @@
    "snapshot_class": null
   },
   {
-   "id": "8882f72782f09aa9d93c63ab988ffbff871ad309734ebf8c4796cb176c8733c5",
+   "id": "d9312fefc846497e285965de882960b9ebb91cd61bc1231d0daf2e7132f3e1bd",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -102,14 +108,16 @@
    },
    "params": {
     "entity": "WHALE",
-    "field": "attributes.cultural_transmission"
+    "field": "attributes.cultural_transmission",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c"
    },
    "value": "Song evolves each year via social learning. New phrases originate in one region and spread across the ocean basin within a single season — demonstrating rapid, basin-wide cultural updating.",
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -118,7 +126,7 @@
    "snapshot_class": null
   },
   {
-   "id": "737b0b8eac017b60f1e5805f76f6e5d20da07130d757241f97f977f7aeb14811",
+   "id": "da35a89d4be1611d32ccc569827857352259cb5c2959b26d0e323d295c728f6e",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -126,14 +134,16 @@
    },
    "params": {
     "entity": "WHALE",
-    "field": "attributes.migration_range"
+    "field": "attributes.migration_range",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c"
    },
    "value": "20,000km round trip annually between tropical breeding grounds and polar feeding grounds.",
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -142,7 +152,7 @@
    "snapshot_class": null
   },
   {
-   "id": "e56699ee50261f6a277eceaef6fceecd02b5ad802be16eb40a7d9d9fa360dd95",
+   "id": "ecf7dd3716700401592c2077c97a22c4d38c6b7a8d14abbc75d948447c40c09d",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -150,14 +160,16 @@
    },
    "params": {
     "entity": "WHALE",
-    "field": "attributes.pattern"
+    "field": "attributes.pattern",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c"
    },
    "value": "acoustic culture, basin-scale social coherence, intergenerational learning, seasonal cycle fidelity",
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "UNMAPPED",

@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "2b248a7f2fd1705a89d6059958f542b10bed735d6e56e80a35119341a64fb407",
+   "id": "6b785b0e86e781412c638deb5cf6cfd0d7568b912c81010eebf29daded9c576c",
    "inputs": [
-    "S-a40e1b33eccb"
+    "a40e1b33eccb1520c702e5ff6cada592023cc2095a1fb90ae75ef7b71bba6ec8"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "CR",
     "field": "attributes.stridulation_encoding",
+    "entity_file_sha256": "96703bf6c632c68ad52db5355facc9835b73e5a1c532250a2cac07aa36593c2b",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.9,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "6f1d0bedc7a61538d2a7a6aa75673d17dda22d600b353cd88fffa869276583bc",
+   "id": "3f62497827186c3c500670da0688b2e1d39d3c6d8f4f0de546143755b6fceba8",
    "inputs": [
-    "S-ca3c91657f58"
+    "ca3c91657f583695d31d604ccefa2d774d9eec118f71691eba50488ddb7c31c4"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "CR",
     "field": "attributes.phonotactic_navigation",
+    "entity_file_sha256": "96703bf6c632c68ad52db5355facc9835b73e5a1c532250a2cac07aa36593c2b",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.88,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "1ab218a9668ba9429c36a9e2ceb079049534015baa3aab8e5bf35b678c24e25c",
+   "id": "21058dde72f7cfbdc37d9b13501eedf30f5aca76d3debe2ab4db2a87cbda0833",
    "inputs": [
-    "S-0b188b60a7f8"
+    "0b188b60a7f822b34fa80b2c2f325b4b24a715e312de1e7c0179d27116c361cc"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "CR",
     "field": "attributes.temperature_frequency_coupling",
+    "entity_file_sha256": "96703bf6c632c68ad52db5355facc9835b73e5a1c532250a2cac07aa36593c2b",
     "evidence_type": "field_observation",
     "reproducibility": "high"
    },
    "value": 0.93,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

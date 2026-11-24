@@ -1,0 +1,82 @@
+{
+ "entity": "HUMPBACK",
+ "path": "ontology/animal/humpback_song.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "c4773316bddb20ffd29006d31977e97e9dcae658c8c728f7e595affe01ab2f34",
+   "inputs": [
+    "S-40b59501ee54"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HUMPBACK",
+    "field": "attributes.cultural_wave_propagation",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0db191f11e0a368848cbbaa2cc1653aaf1a47afa6e938996aa3a09626c441dab",
+   "inputs": [
+    "S-aac1e2efe74b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HUMPBACK",
+    "field": "attributes.hierarchical_composition",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "771011b9dc78a629bcfa72481dc336f6f3bec62142697951d086aeab120b50cf",
+   "inputs": [
+    "S-7ef3bf63a979"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HUMPBACK",
+    "field": "attributes.seasonal_evolution",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

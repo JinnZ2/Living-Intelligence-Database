@@ -1,0 +1,82 @@
+{
+ "entity": "GRANDMOTHER",
+ "path": "ontology/animal/grandmother.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "6d4cb057bf29951ba0d0a970bed0eb723f3a97eb51562ae96b32439220f75689",
+   "inputs": [
+    "S-0f1ad1250f9d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GRANDMOTHER",
+    "field": "attributes.wisdom_compounding",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "2804cf69cdb7ab7d1e79b146e272b77c522a68806a3dcf96126c0ff36ba4d190",
+   "inputs": [
+    "S-b39ddbd8751a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GRANDMOTHER",
+    "field": "attributes.caregiving_transmission",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "2d301f646a8e405bb6d58263eed56bf483213faf7390243b4ebeb49d7bdfccd9",
+   "inputs": [
+    "S-6c7bce780224"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GRANDMOTHER",
+    "field": "attributes.social_mediation",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

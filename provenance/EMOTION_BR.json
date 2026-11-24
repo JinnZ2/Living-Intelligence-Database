@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "7a59f7802361523a0afc00151a0204af8a093d4dc5b103746b88eb7e824d3f56",
+   "id": "ab3c4d30abe6f9c81f959abafda27ccaec6d99980fc415ae8c364ce2ea5f5d39",
    "inputs": [
-    "S-a3f844f5adaa"
+    "a3f844f5adaae368821fbd15df29b09929b0739ff812b871b316643189868061"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "EMOTION_BR",
     "field": "attributes.PAD_encoding_coverage",
+    "entity_file_sha256": "6426678bc031b4072c7140df90c4666511eda7bbc455b457d4c77235d020b9f2",
     "evidence_type": "lab_measurement",
     "reproducibility": "medium"
    },
    "value": 0.89,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

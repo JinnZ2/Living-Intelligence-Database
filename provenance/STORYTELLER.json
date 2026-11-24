@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "6423461df647e166496a82a3e712ba9bd6834103137e80ac9e776a7eec430d6c",
+   "id": "bfed8fa07b5c9882c75260e5990cbe68b7831d0a3e4bd697f0eb6b46e46937c0",
    "inputs": [
-    "S-867b4b70d950"
+    "867b4b70d95026605f8c0662b09db099e8058b3175334935852dc4e3c9f8a036"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "STORYTELLER",
     "field": "attributes.mnemonic_encoding",
+    "entity_file_sha256": "3130c149bc1c3d58ce937334964eb5a8d445fcb74a18a602ad889352c18ea875",
     "evidence_type": "cyclic_observation",
     "reproducibility": "medium"
    },
    "value": 0.97,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "dcb8ebc5905a6c7e4d5b9fcb21a83d6f50eb6c7cffff9f0b7009e336d3784684",
+   "id": "4a7d3622a840cd3cd6f2fba5f46058375f2bd5a90180f4df2422284358ed03ad",
    "inputs": [
-    "S-5ed14ead4075"
+    "5ed14ead407517d343328dce6a0b6aa6681ffb146e7df51a59fdfc766811492d"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "STORYTELLER",
     "field": "attributes.songline_navigation",
+    "entity_file_sha256": "3130c149bc1c3d58ce937334964eb5a8d445fcb74a18a602ad889352c18ea875",
     "evidence_type": "cyclic_observation",
     "reproducibility": "medium"
    },
    "value": 0.95,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "ab0efb4208a9d7415ce4c14ff45e920c2f0e409dff5b36a345e8abd3b89160ea",
+   "id": "e480377e910e2a112aef1c6fdc0aeb3fa0d4682ee2bfe422d181ca133be1791d",
    "inputs": [
-    "S-226b708ada7b"
+    "226b708ada7b34e227ba6e3c8624124bcb1903e6b0bef993cf7c6826808cf3ab"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "STORYTELLER",
     "field": "attributes.error_correction_retelling",
+    "entity_file_sha256": "3130c149bc1c3d58ce937334964eb5a8d445fcb74a18a602ad889352c18ea875",
     "evidence_type": "cyclic_observation",
     "reproducibility": "medium"
    },
    "value": 0.9,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

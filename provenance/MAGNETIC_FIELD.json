@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "44bcd890e57cb29e7f53be4fb2099c19de9fa7f4d02ff190d5b4bcf485edc784",
+   "id": "2d4fb209cd59c2582f69705355225816f948f09a8924cdb0c16a90e7a9f8a406",
    "inputs": [
-    "S-c4eaa7fae25d"
+    "c4eaa7fae25d17d62d95a7a5d569ac585c72997591622b6ec165e70b8bb0cb56"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "MAGNETIC_FIELD",
     "field": "attributes.flux_conservation_precision",
+    "entity_file_sha256": "4f8140ce33782372331d4069ea19be25f2d1332f179a73693506c5ef414d1849",
     "evidence_type": "lab_measurement",
     "reproducibility": "certain"
    },
    "value": 0.99,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

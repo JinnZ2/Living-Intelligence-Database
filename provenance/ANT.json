@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "ce398e3430f6f120d556f0e5a8e53730a1e5bb51011b33493ed2e7e3bc3032e7",
+   "id": "caf9adb5cef1967477036ca5b2fe4755198181551ae3ad187ef5a31c3934ff14",
    "inputs": [
-    "S-ad120380ae74"
+    "ad120380ae747de138505b7a75449038e34ecb2bab970d50e8410fef87d180cf"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,11 +15,12 @@
    "params": {
     "entity": "ANT",
     "field": "attributes.foraging_efficiency",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8",
     "evidence_type": "cyclic_observation",
     "reproducibility": "high"
    },
    "value": 0.93,
-   "assumptions": [],
+   "assumptions": null,
    "scope": {
     "condition": {
      "environment": "stable pheromone gradient, temperature 20-30°C",
@@ -31,16 +32,17 @@
     }
    },
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "e7bce9d847a9a31922abce10c66f950c0df39e2cddd63edfeaa7e68045387095",
+   "id": "b282e259c70e05ba7312e8b4e6147fdb09a5e52e1ecbf72982d08dd954b92732",
    "inputs": [
-    "S-3786c807f671"
+    "3786c807f671a546c956faf4c77483deac7803a5838f4f07dfed7776b918f0f1"
    ],
    "method": {
     "name": "manual_entry",
@@ -49,11 +51,12 @@
    "params": {
     "entity": "ANT",
     "field": "attributes.quorum_sensing_threshold",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8",
     "evidence_type": "cross_domain_rhyme",
     "reproducibility": "medium"
    },
    "value": 0.15,
-   "assumptions": [],
+   "assumptions": null,
    "scope": {
     "condition": {
      "environment": "nest emigration scenario",
@@ -64,16 +67,17 @@
     }
    },
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "bf25f88696b1870fe051d5013dea3ee43b47a840ad773db6e0533efadd4ddf95",
+   "id": "2801c7fec24cd2132c6fc554f540b78498cefa4174766652c1565d3d181d567c",
    "inputs": [
-    "S-cf5d62eb0710"
+    "cf5d62eb0710c42d1f0d130f6cdc80a40ff987437f6704a970bdcd5732be6a58"
    ],
    "method": {
     "name": "manual_entry",
@@ -82,11 +86,12 @@
    "params": {
     "entity": "ANT",
     "field": "attributes.collective_resilience",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8",
     "evidence_type": "cyclic_observation",
     "reproducibility": "high"
    },
    "value": 0.89,
-   "assumptions": [],
+   "assumptions": null,
    "scope": {
     "condition": {
      "environment": "established colony with queen intact",
@@ -97,14 +102,15 @@
     }
    },
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "0e1a81c4485b416c3d65ce86ecf961556f0392b79bbcae12d94cdbf6387cacf0",
+   "id": "13189b739d54d7cb940286baac040f7a43123db73bfb9359ba1c614616ae6b21",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -112,14 +118,16 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "attributes.division_of_labor"
+    "field": "attributes.division_of_labor",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": "Emergent role differentiation without central assignment: workers shift roles based on colony need and local pheromone density.",
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -128,7 +136,7 @@
    "snapshot_class": null
   },
   {
-   "id": "7b73618b95a4081a21167b61f283fe3ba4a1a526fb86c51608c1e566441b1f85",
+   "id": "9314434e072a208625d98d900e87b8468e36604c2c807566f9264305b3892099",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -136,14 +144,16 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "attributes.communication_mode"
+    "field": "attributes.communication_mode",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": "Pheromone gradient + antennal contact. No vocalizations. Signal degrades in ~10 minutes, preventing false trails from persisting.",
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -152,7 +162,7 @@
    "snapshot_class": null
   },
   {
-   "id": "2f2c897773fb18630bc2ffa8368f2f4e8cc8844129e3dcbff55f8332714ba2fb",
+   "id": "77a9ec81ef97bfb558b668d67e3bff6c4f5f28bd585c7c7229cb53b26c233db2",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -160,14 +170,16 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "attributes.pattern"
+    "field": "attributes.pattern",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": "decentralized emergence, positive feedback with natural decay",
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -176,11 +188,11 @@
    "snapshot_class": null
   },
   {
-   "id": "b3cbc2e35eb5386a0562384b3dd9711d6c759920e4d70f99fd383479bc018178",
+   "id": "b2a4ca85e579d8a4d37862b0d40c5b1bce5ddf71393694c5fe186d9ba0d61bd3",
    "inputs": [
-    "S-acd95308766f",
-    "S-257b48ea9528",
-    "S-47f669017c02"
+    "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
+    "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226",
+    "47f669017c021df9b3ffc3f3a06d2d07b09fceb87811a5b301035ed0a4c9a461"
    ],
    "method": {
     "name": "manual_entry",
@@ -188,24 +200,26 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "coordination.carrier"
+    "field": "coordination.carrier",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": "Trail pheromone deposited on the substrate by walking foragers.",
    "assumptions": [],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "2e1b12acebc01f020335b32da63f9d8cc34a1a70e8ae8e8a08366bbdc39a68f4",
+   "id": "6b6554ef482efb55c3a6d1036e723ea6361f1a98ba1935ca0cd875e56c9205fd",
    "inputs": [
-    "S-acd95308766f",
-    "S-257b48ea9528",
-    "S-47f669017c02"
+    "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
+    "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226",
+    "47f669017c021df9b3ffc3f3a06d2d07b09fceb87811a5b301035ed0a4c9a461"
    ],
    "method": {
     "name": "manual_entry",
@@ -213,22 +227,24 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "coordination.signal"
+    "field": "coordination.signal",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": "Local pheromone concentration on the ground at a branch point; a forager's branch choice is biased toward the stronger trail.",
    "assumptions": [],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "01b67f699c2e172b1c52fce288b3f4dfee505176fe4ebcfe07954c80ae56bba6",
+   "id": "f5b22b002adbfb88e4649659a14d10c672d955196b9a34327c6c6dfa6bbd509a",
    "inputs": [
-    "S-47f669017c02"
+    "47f669017c021df9b3ffc3f3a06d2d07b09fceb87811a5b301035ed0a4c9a461"
    ],
    "method": {
     "name": "manual_entry",
@@ -236,22 +252,24 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "coordination.record"
+    "field": "coordination.record",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": "The environment: the trail on the ground. No individual ant holds the map; the state is outside the bodies.",
    "assumptions": [],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "ae3b22da0e8380328e8a788a2239ff201d5808b2ef43f9d022649b0f3d897fc0",
+   "id": "0400e463fb9f1103a3443b0f7871f1dde93d472cd5d7ef2944fafe382fa3acea",
    "inputs": [
-    "S-acd95308766f"
+    "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0"
    ],
    "method": {
     "name": "manual_entry",
@@ -259,23 +277,25 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "coordination.closure"
+    "field": "coordination.closure",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": "A round trip nest -> food -> nest. A completed trip is visible to others only as added pheromone on the path walked.",
    "assumptions": [],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "22395cbd50ce44cc65fb7c2cc0db2f8e8dda3665f02ce8d0bbde902c68e5ffb3",
+   "id": "1b5b8a9aa0876433e661c2f50abdc26d2c759587925391c03614b9a29a0312ad",
    "inputs": [
-    "S-acd95308766f",
-    "S-257b48ea9528"
+    "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
+    "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226"
    ],
    "method": {
     "name": "manual_entry",
@@ -283,20 +303,22 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "coordination.trust_basis"
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": "Reinforcement: pheromone accumulated from completed trips, set against loss of the mark over time. A shorter path is completed more often per unit time and so accumulates faster.",
    "assumptions": [],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "659be2c9173f04d50891ae9017f415eb659e297fd968e6edff90457d5c7bac3c",
+   "id": "1c2da56c48695062f449cee7f10a89e3d15d397ded9c80f33716c6cadb243c69",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -304,14 +326,16 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "coordination.energy_cost"
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",
@@ -320,7 +344,7 @@
    "snapshot_class": null
   },
   {
-   "id": "4d93310c59c749895eb9db4cf76db67e1258d6dbfed4e1b7dc2521269b7c514f",
+   "id": "e683d9fd91154fe300ce07860611d40003f7c74d89b9b4d952e8b1874fdff380",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -328,7 +352,8 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "coordination.loop_topology"
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": {
     "cycles": [
@@ -377,8 +402,9 @@
    "assumptions": [],
    "scope": null,
    "status": "DERIVED (basis: PROPOSED)",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -387,9 +413,9 @@
    "snapshot_class": null
   },
   {
-   "id": "72588eb3ed9fee323954bbe1de9c16ab843d457c5a1f61bf0a450913a2b10d24",
+   "id": "38b165f28d34da4dcd0bf6dbb096e84885070280ec8a17225047ddbddb19cc38",
    "inputs": [
-    "S-0123fa592deb"
+    "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
    ],
    "method": {
     "name": "manual_entry",
@@ -397,7 +423,8 @@
    },
    "params": {
     "entity": "ANT",
-    "field": "coordination.assumption_trace"
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
    },
    "value": [
     "coordination requires money",
@@ -415,8 +442,9 @@
    ],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

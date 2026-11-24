@@ -1,0 +1,82 @@
+{
+ "entity": "AN",
+ "path": "ontology/animal/ant.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "b791c7a3a81c0c0e24b254a992c1093a72906ec5fd6a4c2b6b43e8ab0f61e99d",
+   "inputs": [
+    "S-0f5c97bb9388"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AN",
+    "field": "attributes.pheromone_trail_optimization",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "4750cc5d6ebb951235efd4173e38627bafe4ce9f729d1465813a58a8db63c665",
+   "inputs": [
+    "S-bb2a3794dfe4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AN",
+    "field": "attributes.stigmergic_construction",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "78068e7b1a5e2054b8d4ccd8cd4f2a3825e7e9f3c014acf73526f7fcf46063bb",
+   "inputs": [
+    "S-eefbde78a762"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AN",
+    "field": "attributes.distributed_task_allocation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "282d1fa01a86e9ca3bbd71225012959da4852c09dac592b1f30bb86348fa579b",
+   "id": "38c376aa8b5054ba14706c533ac49a31235c15217b5d88a1947b9b8a9a6e0416",
    "inputs": [
-    "S-ea473bccaa83"
+    "ea473bccaa835f73587d51f81c3b3d95e62376ba138432b710a08a46cb371650"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "MTN_LION",
     "field": "attributes.ambush_calculus",
+    "entity_file_sha256": "a3eef9cbd906b238c1fb34a26df3449ae4073f7a225404968c8934b1769d181f",
     "evidence_type": "field_observation",
     "reproducibility": "medium"
    },
    "value": 0.9,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "da2204a92aa133070871749655fb34cb0d7f4f8d57fc473f1aefd60c274b61a6",
+   "id": "4f4702d7887707f36a4014bc023bc9de0e4247918f651fd2e5816a45e6bc7a42",
    "inputs": [
-    "S-9a2825bfb772"
+    "9a2825bfb772a997b805f4f1c5954a1552aec37765fc05e335e2ba44fa95052d"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "MTN_LION",
     "field": "attributes.territory_management",
+    "entity_file_sha256": "a3eef9cbd906b238c1fb34a26df3449ae4073f7a225404968c8934b1769d181f",
     "evidence_type": "field_observation",
     "reproducibility": "high"
    },
    "value": 0.87,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "cfc007d2ca2f4757ddd7299483afbcd15ac50f246ec31b624bf6dc2c01d5ed4d",
+   "id": "8430735e5efbca2e85dfa6c4b2e85b9be590ceed34b5ae1d9a26fd9f6eb7016e",
    "inputs": [
-    "S-6018a21225e4"
+    "6018a21225e4b7a2abf434540b6daf7678d0f55d833e7359de9f6a756ee18603"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "MTN_LION",
     "field": "attributes.crepuscular_timing",
+    "entity_file_sha256": "a3eef9cbd906b238c1fb34a26df3449ae4073f7a225404968c8934b1769d181f",
     "evidence_type": "field_observation",
     "reproducibility": "high"
    },
    "value": 0.86,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

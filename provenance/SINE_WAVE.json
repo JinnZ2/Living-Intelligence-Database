@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "681db04d77add8935f9f4dd493ddc3971c39b5f3f09e4603cb5bea9d4d15e55c",
+   "id": "94ebf82e68fa08e99f4e65111cb06d28266bbf613d9d94912b8936a1d6749ec2",
    "inputs": [
-    "S-979fd13973e7"
+    "979fd13973e702777698e8493c5660aa2dfcb71cf7792cc34ba97d3f157f8864"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "SINE_WAVE",
     "field": "attributes.fourier_decomposition_universality",
+    "entity_file_sha256": "3a9988b379340b2bc4c2a37e681410b75afc386de9fa4c96e8a30591f720774f",
     "evidence_type": "mathematical_proof",
     "reproducibility": "certain"
    },
    "value": 0.99,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

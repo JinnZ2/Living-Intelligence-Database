@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "32b3c1ef375db246aee116750ad2f030e60508abf982a2e6da9166e909322798",
+   "id": "32d50d98c893df88e12e8a9cf2dcf7d71f34d0e6515795e5d5357447cb798273",
    "inputs": [
-    "S-80dbe6e08543"
+    "80dbe6e08543269f94f31dff82d5e339df23b3a354ebb1aca5aa8b419cba8d3f"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "VENUS",
     "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.91,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "51a535c99282513a04e0622c56984f470598f429fac878fa680498fe14ee0631",
+   "id": "d920a768d7ea12f21818ee50a254fced91f53ee4ce8c98ade3593de655a80432",
    "inputs": [
-    "S-e6e40c0963c3"
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
    "method": {
     "name": "manual_entry",
@@ -39,22 +41,24 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "gate_sensing.limit_sensed"
+    "field": "gate_sensing.limit_sensed",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": "Spending the digestive secretion on a trapped object that is not prey.",
    "assumptions": [],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "0f0c0b423bc261af7af2c967b1440e8c088e3418d0726f1013fd390301df9a58",
+   "id": "26660ef6550cbc872eae853e370f9466e6785bcca79a376678ce7efff1a0584f",
    "inputs": [
-    "S-e6e40c0963c3"
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
    "method": {
     "name": "manual_entry",
@@ -62,7 +66,8 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "gate_sensing.early_signal"
+    "field": "gate_sensing.early_signal",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": "The number of action potentials fired as trigger hairs are touched: a running count of mechanical stimulations.",
    "assumptions": [],
@@ -70,16 +75,17 @@
     "observation_context": "lab"
    },
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "16d278c0d3d68f416fd9ed816c242fd43e90b685a1b4022739c7edf317f5da0a",
+   "id": "babf7ad7e758fc7bb10fd9a18115a09178610af5a09e69efeaf93a605b10c6e2",
    "inputs": [
-    "S-e6e40c0963c3"
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
    "method": {
     "name": "manual_entry",
@@ -87,7 +93,8 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "gate_sensing.response"
+    "field": "gate_sensing.response",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": "Staged by the count. Two action potentials: the trap snaps shut. After the second stimulus: the jasmonic acid signalling pathway is activated. More than three: genes for prey-degrading hydrolases are expressed, in proportion to the number of stimulations. Transcripts of the sodium channel DmHKT1 also depend on the number of stimulations.",
    "assumptions": [],
@@ -95,14 +102,15 @@
     "observation_context": "lab"
    },
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "2e46dc92766e1520fa701f757ca6f4a6832f5e4380f1f070c0478a2f4906604f",
+   "id": "5fa9329d395da67ac54d2bfef12d64e2b9c7e27494bef71751d5b6888303eaf9",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -110,14 +118,16 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "gate_sensing.lead_time"
+    "field": "gate_sensing.lead_time",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",
@@ -126,9 +136,9 @@
    "snapshot_class": null
   },
   {
-   "id": "c27f588733d7d73d10ca096c9fbcc5b3e64665517c1d96c107ccab6c26e89214",
+   "id": "2585ee07ad8bfb5da74f714f59eef29283c4ca294fbc1bcf66d632681fdfd66e",
    "inputs": [
-    "S-e6e40c0963c3"
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
    "method": {
     "name": "manual_entry",
@@ -136,7 +146,8 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "functional_intelligence.adapts"
+    "field": "functional_intelligence.adapts",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": "yes",
    "assumptions": [],
@@ -144,16 +155,17 @@
     "observation_context": "lab"
    },
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "fbc765adef8a58bb52d5b18edeb61365637e7332e0b45a7c300ec71bf2e4d353",
+   "id": "a81a43c2535278d148e2efa595fcdfa0c3886fd4089b4873aa7f3b5890ab5375",
    "inputs": [
-    "S-e6e40c0963c3"
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
    "method": {
     "name": "manual_entry",
@@ -161,7 +173,8 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "functional_intelligence.signals"
+    "field": "functional_intelligence.signals",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": "yes",
    "assumptions": [],
@@ -169,16 +182,17 @@
     "observation_context": "lab"
    },
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "4f150661ffd8808f3768558c08b3d6e72e8966884aa393405a3f1ecb9031683c",
+   "id": "170c22c5509c2177709b79a10b080d5c60e3b687873f58e90e32cc3fbf8924a5",
    "inputs": [
-    "S-e6e40c0963c3"
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
    "method": {
     "name": "manual_entry",
@@ -186,7 +200,8 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "functional_intelligence.responds_to_other"
+    "field": "functional_intelligence.responds_to_other",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": "yes",
    "assumptions": [],
@@ -194,16 +209,17 @@
     "observation_context": "lab"
    },
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "88b0f8e5f0b51bc944cf52276f74d71904ae48a303dfb407bd267a05f060aa41",
+   "id": "fa263d2ef22765c0cd912135a0ca4795a5e1fb8fac4b857d3df30e9ac50d52ee",
    "inputs": [
-    "S-e6e40c0963c3"
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
    "method": {
     "name": "manual_entry",
@@ -211,20 +227,22 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "functional_intelligence.changes_environment"
+    "field": "functional_intelligence.changes_environment",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": "yes",
    "assumptions": [],
    "scope": null,
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "c00a4cc0f8f690302dec5bb8e95566244ea710011d17d981a97f42cc4467a9bf",
+   "id": "7c5a81cf30a8bdac37a84bd26f1db621e4218242c17e26dcac7769cd78153d04",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -232,14 +250,16 @@
    },
    "params": {
     "entity": "VENUS",
-    "field": "functional_intelligence.co_adapts"
+    "field": "functional_intelligence.co_adapts",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",

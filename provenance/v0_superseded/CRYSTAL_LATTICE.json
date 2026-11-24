@@ -1,0 +1,32 @@
+{
+ "entity": "CRYSTAL_LATTICE",
+ "path": "ontology/crystal/crystal_lattice.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "845318b040309934399a7d870e76e1c2fbd90c391d61100fb09f95b117a781b9",
+   "inputs": [
+    "S-c10fa1bb4a6b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CRYSTAL_LATTICE",
+    "field": "attributes.lattice_coherence_length",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.98,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

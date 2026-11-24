@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "922ec6c8864ef95e8109af3a24c00a41eb62543ba448400d78394988ff327ff3",
+   "id": "8e5b4ef26b357ff8ec9cdf06f2d65bab49281280551ff7111d840f62b08520ea",
    "inputs": [
-    "S-60703e1d04e7"
+    "60703e1d04e75c1471b3b22d04014e17b666d2038c830bbd4a1b457dfb458c57"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "KA",
     "field": "attributes.elastic_energy_storage",
+    "entity_file_sha256": "6fabc40333c8f25bffa89e37a731f2427ae71d181ea1b756c28a47f7ebd03aa8",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.93,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "22653816dbefe252f84d61f6d9be4e4d9a9cb10b425736ea4247935ba361df28",
+   "id": "a21f5a0015bf0a74475f2bb79153a49ad415c6bc3de1b56391a9bbefc1af678d",
    "inputs": [
-    "S-abee7a95cd88"
+    "abee7a95cd886b0ed7528fa1a465bd8b402ba508b60ff0bbf01cc3d114766c93"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "KA",
     "field": "attributes.ballistic_locomotion",
+    "entity_file_sha256": "6fabc40333c8f25bffa89e37a731f2427ae71d181ea1b756c28a47f7ebd03aa8",
     "evidence_type": "lab_measurement",
     "reproducibility": "medium"
    },
    "value": 0.89,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "3f67897ed6ece09adec9535fffee104f92b0d1bed2391006c70840769d13b1d0",
+   "id": "37231af433f54e9adec037cda2f381495c1d9abb7457cbe3bb34dec2bc907439",
    "inputs": [
-    "S-dd03a167489c"
+    "dd03a167489cf1847f7aa6134bc576dc86f54d7530f9741b9c5fb8cbac824c5c"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,23 +69,25 @@
    "params": {
     "entity": "KA",
     "field": "attributes.pendulum_gait",
+    "entity_file_sha256": "6fabc40333c8f25bffa89e37a731f2427ae71d181ea1b756c28a47f7ebd03aa8",
     "evidence_type": "lab_measurement",
     "reproducibility": "medium"
    },
    "value": 0.91,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "a9cd9a3c74198e8de0b55a88c9ea9156d2808f011045f366a8f70f89c12b072c",
+   "id": "c84c7002e566c0c8029b6d490eed177c81b83922de4a0651aba10608f0dd5d55",
    "inputs": [
-    "S-6bc5a082a849"
+    "6bc5a082a849fb666bdaa1911b150a24e51687d4b79632ae3664f70ed96a1378"
    ],
    "method": {
     "name": "manual_entry",
@@ -90,15 +96,17 @@
    "params": {
     "entity": "KA",
     "field": "attributes.dynamic_counterbalance",
+    "entity_file_sha256": "6fabc40333c8f25bffa89e37a731f2427ae71d181ea1b756c28a47f7ebd03aa8",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.92,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

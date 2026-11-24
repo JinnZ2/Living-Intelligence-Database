@@ -1,0 +1,82 @@
+{
+ "entity": "BT",
+ "path": "ontology/animal/beetle.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "fa75e79a625355de6a81ce0a53ae66faec582db9a6acdbd788e1ef6fc1f0cec2",
+   "inputs": [
+    "S-2a89338cf18c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BT",
+    "field": "attributes.milky_way_navigation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "cf6e4687e4b17747b07022cb5717abc37c8ca02975e3d03ad9786b3487357045",
+   "inputs": [
+    "S-a3a5015de0ef"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BT",
+    "field": "attributes.chemical_trail_encoding",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c724aab2a39bc747c346d00ebc9ec5844bc36d87ba62d40944d641e8fda39f73",
+   "inputs": [
+    "S-b559ca258b7a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BT",
+    "field": "attributes.bioluminescent_signaling",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "entity": "GNN",
+ "path": "ontology/ai/graph_neural_network.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "aad82155a5e7f9ae118dbef6136dd7419174341b4a159dc210e5b201c06903b6",
+   "inputs": [
+    "S-3fa7545d4def"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GNN",
+    "field": "attributes.message_passing",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "9004bb7a3388e932c0a6d101faefc21d09dfc8c7708d7e0d01b046d203809498",
+   "inputs": [
+    "S-b6553f8f3a47"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GNN",
+    "field": "attributes.graph_pooling",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.82,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

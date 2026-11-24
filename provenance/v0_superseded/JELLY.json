@@ -1,0 +1,82 @@
+{
+ "entity": "JELLY",
+ "path": "ontology/animal/jellyfish.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "59197751c35907ac485430b37e494fa32c0299f99e216f9c306f3da7826e8397",
+   "inputs": [
+    "S-6d748af344bd"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "JELLY",
+    "field": "attributes.bioluminescent_signaling",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "67adce3495dc72cef6c8b92275bd34e4b455af2d5d937ba86c14e0b049735ad5",
+   "inputs": [
+    "S-f52ac56679c9"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "JELLY",
+    "field": "attributes.transdifferentiation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "b71b1053da1ea93b613d7a679aa0ef0cc650ae0d672f15e1c1ac3e51a682c8d6",
+   "inputs": [
+    "S-762707bd4ddf"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "JELLY",
+    "field": "attributes.jet_propulsion_rhythm",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

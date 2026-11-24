@@ -1,0 +1,107 @@
+{
+ "entity": "MORMYRID",
+ "path": "ontology/animal/mormyridae.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "cf78c6ac5e8e963b24e1e8a779f6719124098168f9c8f6df6f6609c729a2a0e4",
+   "inputs": [
+    "S-5bea5baaff13"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MORMYRID",
+    "field": "attributes.active_electrolocation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "03e0aa9c816ca34549a7c7636e507ca971fffd639ec2e6c8d444118aec0d6fc6",
+   "inputs": [
+    "S-89472de72cbd"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MORMYRID",
+    "field": "attributes.eod_communication",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "2b7d5dc161c96f43b68e742b6459af3728be4cc6fa81cd1bf658475ba5bed53e",
+   "inputs": [
+    "S-ffdbcf284aff"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MORMYRID",
+    "field": "attributes.dual_channel_processing",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "f50655ca18f44d06c86bcc83170cd727c6d5997a4ddff332516fa03b937582c2",
+   "inputs": [
+    "S-6ef3d475b788"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MORMYRID",
+    "field": "attributes.temporal_microsecond_precision",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.97,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

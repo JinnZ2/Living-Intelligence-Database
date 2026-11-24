@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-provenance.py -- repo-wide provenance chain. Stdlib only.
+provenance_chain.py -- repo-wide provenance chain. Stdlib only.
 
-  python3 scripts/provenance.py build              # backfill / append steps
-  python3 scripts/provenance.py trace <id>         # assumption id, source id or step id
-  python3 scripts/provenance.py stale              # recompute hashes, flag changed inputs
-  python3 scripts/provenance.py --selftest
+  python3 scripts/provenance_chain.py build        # backfill / append steps
+  python3 scripts/provenance_chain.py trace <id>   # assumption id, source id or step id
+  python3 scripts/provenance_chain.py stale        # recompute hashes, flag changed inputs
+  python3 scripts/provenance_chain.py dups         # near-duplicate source candidates
+  python3 scripts/provenance_chain.py --selftest
 
-Rules are declared in registry/DECLARED.json, committed before this file
-existed. This script never deletes and never edits a stored step: a revision
+Rules are declared in registry/DECLARED.json (with its amendments), committed
+before this file existed. This script never deletes and never edits a stored step: a revision
 appends a new step whose `supersedes` names the prior one.
 
 Not the same thing as validation/provenance.py, which is a hand-written
@@ -17,6 +18,7 @@ lineage table for concepts and carries no hashes.
 
 import hashlib
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -28,7 +30,9 @@ VOID_STATES = ("REJECTED", "UNMAPPED", "LEXICAL_VOID", "VOID")
 SNAPSHOT_CLASSES = ("CONTEXT_FREE_EXACT", "STABLE_LOSSY", "CHAOTIC_REFRESH", "SUMMARY_ONLY")
 CLAIM_STATES = ("SUPPORTED", "UNVERIFIED")
 STEP_KEYS = ("id", "inputs", "method", "params", "value", "assumptions", "scope",
-             "status", "supersedes", "declared_pre_run", "claim", "void", "snapshot_class")
+             "status", "status_note", "supersedes", "declared_pre_run", "claim", "void",
+             "snapshot_class")
+ATTR_STATUS_NOTE = "not assessed in this vocabulary"
 COORD_FIELDS = ("carrier", "signal", "record", "closure", "trust_basis",
                 "energy_cost", "loop_topology", "assumption_trace")
 GATE_FIELDS = ("limit_sensed", "early_signal", "response", "lead_time")
@@ -49,7 +53,7 @@ def step_id(step):
 
 
 def source_id(text):
-    return "S-" + sha(text)[:12]
+    return sha(text)
 
 
 def assumption_id(statement):
@@ -58,10 +62,12 @@ def assumption_id(statement):
 
 def make_step(inputs, params, value, assumptions=(), scope=None, status=None,
               supersedes=None, declared=None, claim=None, void=None,
-              snapshot_class=None, method=None):
+              snapshot_class=None, method=None, status_note=None):
     st = {"inputs": list(inputs), "method": dict(method or METHOD), "params": params,
-          "value": value, "assumptions": list(assumptions), "scope": scope,
-          "status": status, "supersedes": supersedes, "declared_pre_run": declared,
+          "value": value,
+          "assumptions": None if assumptions is None else list(assumptions), "scope": scope,
+          "status": status, "status_note": status_note,
+          "supersedes": supersedes, "declared_pre_run": declared,
           "claim": claim, "void": void, "snapshot_class": snapshot_class}
     st["id"] = step_id(st)
     return {k: st[k] for k in STEP_KEYS}
@@ -82,27 +88,40 @@ def dump(path, obj):
 
 
 def declared_commit(root):
-    """Commit that added registry/DECLARED.json, or None when git cannot say."""
+    """Latest commit that changed registry/DECLARED.json, or None when git cannot say."""
     try:
         out = subprocess.run(
-            ["git", "-C", str(root), "log", "--diff-filter=A", "--format=%H", "--",
+            ["git", "-C", str(root), "log", "-1", "--format=%H", "--",
              "registry/DECLARED.json"], capture_output=True, text=True, timeout=30).stdout.split()
-        return out[-1] if out else None
+        return out[0] if out else None
     except Exception:
         return None
 
 
 # ------------------------------------------------------- reading entities
-def source_form(s):
-    if "doi:" in s or "PMID" in s:
-        return "citation with DOI/PMID"
-    if "NOT OPENED" in s:
-        return "citation marked NOT OPENED"
-    if "repository text" in s:
-        return "repo-internal pointer"
-    if "ontributor" in s:
-        return "contributor-held"
-    return "free text"
+_READ = re.compile(r"\[(abstract) read via NCBI efetch (\d{4}-\d{2}-\d{2})")
+
+
+def source_entry(s):
+    """Registry entry for one exact source string. `opened` and `fetched` are
+    read from the string's own bracket note; absent a note, false and null."""
+    m = _READ.search(s)
+    return {"id": source_id(s), "string": s, "same_as": None,
+            "opened": m.group(1) if m else False, "fetched": m.group(2) if m else None}
+
+
+_KEY = re.compile(r"^\W*([^\W\d_]+)[^()]*?\(?((?:1[5-9]|20)\d{2})\b")
+
+
+def near_duplicates(sources):
+    """Groups of distinct strings sharing first word + first year. Candidates
+    only: nothing is merged and same_as is not set."""
+    groups = {}
+    for e in sources:
+        m = _KEY.search(e["string"])
+        if m:
+            groups.setdefault((m.group(1).lower(), m.group(2)), []).append(e)
+    return {k: v for k, v in sorted(groups.items()) if len(v) > 1}
 
 
 def _void(value, has_source, reason):
@@ -135,9 +154,9 @@ def entity_fields(d):
                          "reproducibility": ev.get("reproducibility")}
                 cond = sc.get("condition")
                 yield ("attributes." + name, v.get("value"), src, None,
-                       {"condition": cond} if cond is not None else None, extra, None, [])
+                       {"condition": cond} if cond is not None else None, extra, None, None)
             else:
-                yield ("attributes." + name, v, [], None, None, {}, None, [])
+                yield ("attributes." + name, v, [], None, None, {}, None, None)
 
     c = d.get("coordination")
     if isinstance(c, dict):
@@ -190,8 +209,9 @@ def entity_fields(d):
     _ = eid
 
 
-def compute_steps(d, declared):
-    """One step per field of one entity. Returns (steps, sources, assumptions)."""
+def compute_steps(d, declared, file_sha=None):
+    """One step per field of one entity. Returns (steps, sources, assumptions).
+    file_sha (sha256 of the entity file's bytes) goes into params, so into the id."""
     steps, sources, assumptions = [], {}, {}
     eid = d.get("id")
     for field, value, srcs, status, scope, extra, reason, ass in entity_fields(d):
@@ -200,21 +220,24 @@ def compute_steps(d, declared):
         if field == "coordination.assumption_trace" and isinstance(value, list):
             for s in value:
                 assumptions[assumption_id(s)] = (s, status)
-        params = {"entity": eid, "field": field}
+        params = {"entity": eid, "field": field, "entity_file_sha256": file_sha}
         params.update(extra)
+        note = ATTR_STATUS_NOTE if field.startswith("attributes.") else None
         steps.append(make_step([source_id(s) for s in srcs], params, value, ass, scope, status,
-                               None, declared, None, _void(value, bool(srcs), reason), None))
+                               None, declared, None, _void(value, bool(srcs), reason), None,
+                               status_note=note))
     return steps, sources, assumptions
 
 
 def entity_files(root):
     for p in sorted((root / "ontology").glob("*/*.json")):
         try:
-            d = json.loads(p.read_text(encoding="utf-8"))
+            raw = p.read_bytes()
+            d = json.loads(raw.decode("utf-8"))
         except Exception:
             continue
         if isinstance(d, dict) and isinstance(d.get("id"), str):
-            yield p, d
+            yield p, d, hashlib.sha256(raw).hexdigest()
 
 
 # -------------------------------------------------------------- the chain
@@ -255,13 +278,11 @@ def build(root=ROOT, quiet=False):
     ass_ids = {e["id"] for e in ass_reg}
     counts = {"entities": 0, "steps_total": 0, "appended": 0, "superseding": 0}
     index = []
-    for p, d in entity_files(root):
+    for p, d, fsha in entity_files(root):
         rel = str(p.relative_to(root))
-        steps, sources, assumptions = compute_steps(d, declared)
+        steps, sources, assumptions = compute_steps(d, declared, fsha)
         for sid, text in sources.items():
-            e = src_reg.setdefault(sid, {"id": sid, "text": text, "form": source_form(text), "used_by": []})
-            if d["id"] not in e["used_by"]:
-                e["used_by"].append(d["id"])
+            src_reg.setdefault(sid, source_entry(text))
         for aid, (statement, status) in assumptions.items():
             if aid not in ass_ids:
                 ass_reg.append({"id": aid, "statement": statement, "domain": "coordination",
@@ -293,8 +314,9 @@ def build(root=ROOT, quiet=False):
             index.append({"entity": d["id"], "path": rel, "steps": len(doc["steps"]),
                           "head_steps": len(heads(doc["steps"]))})
     dump(root / "registry" / "sources.json",
-         {"note": "One entry per distinct source string. id = 'S-' + first 12 hex of sha256(text). "
-                  "Two spellings of one work are two entries; nothing is merged.",
+         {"note": "One entry per exact source string. id = sha256 of the string as UTF-8. "
+                  "Two spellings of one work are two entries; nothing is merged and same_as is null. "
+                  "opened and fetched are read from the string's own bracket note.",
           "sources": sorted(src_reg.values(), key=lambda e: e["id"])})
     ass_file["note"] = ("One entry per assumption. id = 'A-' + first 12 hex of sha256(statement). "
                         "A revision is a new entry with supersedes; old entries stay.")
@@ -340,7 +362,7 @@ def downstream(steps, seeds):
 def trace(steps, ident):
     """Steps that use ident (assumption, source or step id), then everything downstream."""
     direct = {sid for sid, (_, s) in steps.items()
-              if ident in s["inputs"] or ident in s["assumptions"] or sid == ident}
+              if ident in s["inputs"] or ident in (s["assumptions"] or []) or sid == ident}
     allof = downstream(steps, direct)
     return [(sid, steps[sid][0], steps[sid][1]["params"].get("field"),
              "direct" if sid in direct else "downstream") for sid in sorted(
@@ -356,7 +378,7 @@ def stale(steps, srcs, ass, current=None):
         if why not in flags[sid]:
             flags[sid].append(why)
 
-    src_ok = {e["id"] for e in srcs if source_id(e["text"]) == e["id"]}
+    src_ok = {e["id"] for e in srcs if source_id(e["string"]) == e["id"]}
     ass_ok = {e["id"] for e in ass if assumption_id(e["statement"]) == e["id"]}
     ass_superseded = {e.get("supersedes") for e in ass if e.get("supersedes")}
     superseded = {s["supersedes"] for _, s in steps.values() if s.get("supersedes")}
@@ -364,9 +386,9 @@ def stale(steps, srcs, ass, current=None):
         if step_id(s) != sid:
             flag(sid, "HASH_MISMATCH")
         for i in s["inputs"]:
-            if i.startswith("S-") and i not in src_ok:
+            if i not in steps and i not in src_ok:   # not a parent step: must be a good source
                 flag(sid, "SOURCE_CHANGED")
-        for a in s["assumptions"]:
+        for a in s["assumptions"] or []:
             if a not in ass_ok or a in ass_superseded:
                 flag(sid, "ASSUMPTION_CHANGED")
         if current is not None and sid not in superseded:
@@ -386,8 +408,8 @@ def stale(steps, srcs, ass, current=None):
 def current_ids(root=ROOT):
     declared = declared_commit(root)
     out = {}
-    for _, d in entity_files(root):
-        for st in compute_steps(d, declared)[0]:
+    for _, d, fsha in entity_files(root):
+        for st in compute_steps(d, declared, fsha)[0]:
             out[(d["id"], st["params"]["field"])] = st["id"]
     return out
 
@@ -421,7 +443,7 @@ def selftest():
     ass = [{"id": assumption_id(a1), "statement": a1, "domain": "t", "status": "PROPOSED",
             "sources": [], "supersedes": None}]
     src_text = "Planted source (0000)"
-    srcs = [{"id": source_id(src_text), "text": src_text}]
+    srcs = [source_entry(src_text)]
     A = make_step([source_id(src_text)], {"entity": "T", "field": "a"}, 1, [assumption_id(a1)])
     B = make_step([A["id"]], {"entity": "T", "field": "b"}, 2)
     C = make_step([B["id"]], {"entity": "T", "field": "c"}, 3)
@@ -473,7 +495,7 @@ def selftest():
     case("edited step value fires HASH_MISMATCH",
          "HASH_MISMATCH" in stale({B["id"]: ("T", bad)}, srcs, ass).get(B["id"], []))
     case("edited source text fires SOURCE_CHANGED",
-         "SOURCE_CHANGED" in stale({A["id"]: ("T", A)}, [{"id": srcs[0]["id"], "text": "edited"}], before).get(A["id"], []))
+         "SOURCE_CHANGED" in stale({A["id"]: ("T", A)}, [dict(srcs[0], string="edited")], before).get(A["id"], []))
     case("missing source fires SOURCE_CHANGED",
          "SOURCE_CHANGED" in stale({A["id"]: ("T", A)}, [], before).get(A["id"], []))
     case("field drift fires FIELD_CHANGED",
@@ -482,6 +504,21 @@ def selftest():
     case("void mapping: null, no reason -> VOID", _void(None, False, None)["state"] == "VOID")
     case("void mapping: value, no source -> UNMAPPED", _void(1, False, None)["state"] == "UNMAPPED")
     case("void mapping: value + source -> null", _void(1, True, None) is None)
+    attr = compute_steps({"id": "T", "attributes": {"k": 1}}, None, "0" * 64)[0][0]
+    case("attribute step: assumptions null, status null with a note",
+         attr["assumptions"] is None and attr["status"] is None and attr["status_note"] == ATTR_STATUS_NOTE)
+    case("id covers the entity file hash",
+         compute_steps({"id": "T", "attributes": {"k": 1}}, None, "1" * 64)[0][0]["id"] != attr["id"])
+    case("source id is the full sha256 of the exact string",
+         srcs[0]["id"] == hashlib.sha256(src_text.encode("utf-8")).hexdigest() and len(srcs[0]["id"]) == 64)
+    se = source_entry("X Y (2016) T. PMID 1 [abstract read via NCBI efetch 2026-11-24; full text not read]")
+    case("source entry reads opened and fetched from the string",
+         se["opened"] == "abstract" and se["fetched"] == "2026-11-24" and se["same_as"] is None
+         and srcs[0]["opened"] is False and srcs[0]["fetched"] is None)
+    nd = near_duplicates([source_entry("Smith A (2001) One."), source_entry("Smith, A. 2001. One, again."),
+                          source_entry("Jones B (2001) Two.")])
+    case("near-duplicate candidates: same first word + year, nothing merged",
+         list(nd) == [("smith", "2001")] and len(nd[("smith", "2001")]) == 2)
     case("bad void state fails the shape check",
          check_shape({"x": ("T", dict(D, void={"state": "EMPTY", "reason": None}))}))
     case("bad snapshot_class fails the shape check",
@@ -500,6 +537,8 @@ def selftest():
         c2 = build(root, quiet=True)
         case("build: one step per field", c1["appended"] == 2 and c1["steps_total"] == 2)
         case("build twice: nothing appended", c2["appended"] == 0 and c2["steps_total"] == 2)
+        case("build leaves the entity file untouched",
+             json.loads((root / "ontology" / "x" / "t1.json").read_text(encoding="utf-8")) == ent)
         ent["attributes"]["k"]["value"] = 2
         (root / "ontology" / "x" / "t1.json").write_text(json.dumps(ent), encoding="utf-8")
         st, sr, asr = load_chain(root)
@@ -507,12 +546,13 @@ def selftest():
              any("FIELD_CHANGED" in v for v in stale(st, sr, asr, current_ids(root)).values()))
         c3 = build(root, quiet=True)
         doc = json.loads((root / "provenance" / "T1.json").read_text(encoding="utf-8"))
-        case("rebuild appends one superseding step, keeps the old",
-             c3["appended"] == 1 and c3["superseding"] == 1 and len(doc["steps"]) == 3
-             and doc["steps"][2]["supersedes"] == doc["steps"][0]["id"])
+        case("rebuild appends a superseding step per field, keeps the old",
+             c3["appended"] == 2 and c3["superseding"] == 2 and len(doc["steps"]) == 4
+             and doc["steps"][2]["supersedes"] == doc["steps"][0]["id"]
+             and doc["steps"][3]["supersedes"] == doc["steps"][1]["id"])
         st, sr, asr = load_chain(root)
         case("unsourced value carries UNMAPPED",
-             [s["void"]["state"] for _, s in st.values() if s["params"]["field"] == "attributes.u"] == ["UNMAPPED"])
+             {s["void"]["state"] for _, s in st.values() if s["params"]["field"] == "attributes.u"} == {"UNMAPPED"})
         case("stored steps pass the shape check", check_shape(st) == [])
 
     failed = 0
@@ -526,24 +566,39 @@ def selftest():
 def main(argv):
     if "--selftest" in argv:
         return selftest()
-    if not argv or argv[0] not in ("build", "trace", "stale"):
+    if not argv or argv[0] not in ("build", "trace", "stale", "dups"):
         print(__doc__.strip())
         return 2
     if argv[0] == "build":
         build()
         return 0
     steps, srcs, ass = load_chain()
+    if argv[0] == "dups":
+        nd = near_duplicates(srcs)
+        for (who, year), grp in nd.items():
+            print("%s %s" % (who, year))
+            for e in grp:
+                print("   %s  %s" % (e["id"][:12], e["string"][:150]))
+        print("candidate groups: %d   strings in them: %d   merged: 0" % (len(nd), sum(len(g) for g in nd.values())))
+        return 0
     if argv[0] == "trace":
         if len(argv) < 2:
-            print("usage: provenance.py trace <assumption_id | source_id | step_id>")
+            print("usage: provenance_chain.py trace <assumption_id | source_id | step_id>")
             return 2
+        ident = argv[1]
+        pool = sorted({e["id"] for e in srcs} | {e["id"] for e in ass} | set(steps))
+        hits = [i for i in pool if i.startswith(ident)]
+        if len(hits) != 1:
+            print("id %r matches %d known ids (a unique prefix is accepted)" % (ident, len(hits)))
+            return 2
+        argv = [argv[0], hits[0]]
         rows = trace(steps, argv[1])
         for e in ass:
             if e["id"] == argv[1]:
                 print("assumption %s: %s" % (e["id"], e["statement"]))
         for e in srcs:
             if e["id"] == argv[1]:
-                print("source %s: %s" % (e["id"], e["text"]))
+                print("source %s: %s" % (e["id"][:12], e["string"]))
         for sid, ent, field, how in rows:
             print("%s  %-10s  %-12s  %s" % (sid[:12], how, ent, field))
         print("steps: %d   entities: %d" % (len(rows), len({r[1] for r in rows})))

@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "11faa5b3c5baa5c3301a1d13977bc809565f18ea392c728ae33056b7af57695f",
+   "id": "894096f6acb944d4b7672aa91ecca4de3ec5e462426324001552368153579287",
    "inputs": [
-    "S-e178271d748a"
+    "e178271d748af6519fba402c965ee74ed811d5697c731d09d81e1663903acc05"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "SWAN",
     "field": "attributes.formation_flight",
+    "entity_file_sha256": "89021908c85ad5f1c168c808681efb63ebfafcc3fd776668a03e411321dfd8f0",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.92,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "652945b765f1a0f07c88fe1dbedb4b320551d39bd941cae8d3acae044e9f6ceb",
+   "id": "7d3ea632c3054790f6b4c2423c22a259968f0125e87e4102b3457bab2b1faf13",
    "inputs": [
-    "S-23dfceca8293"
+    "23dfceca82939fee140e08b466fec693110764a86d25e814c1a1f78890c3c260"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "SWAN",
     "field": "attributes.pair_bond_coordination",
+    "entity_file_sha256": "89021908c85ad5f1c168c808681efb63ebfafcc3fd776668a03e411321dfd8f0",
     "evidence_type": "field_observation",
     "reproducibility": "high"
    },
    "value": 0.94,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "a8fad7eb800479e88604c09df0efcd1bab48d72c86bf48bee1db829fa23ee6ca",
+   "id": "0dbae1edd62f85d69816c33be61702f3b9a9f27dec3f9757c1beb8b20d7faed3",
    "inputs": [
-    "S-992db7be0cce"
+    "992db7be0cce5dc8ef3d334a8bf0245074bded0829d4018dd2d1edb97f4ef9ba"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "SWAN",
     "field": "attributes.cultural_route_learning",
+    "entity_file_sha256": "89021908c85ad5f1c168c808681efb63ebfafcc3fd776668a03e411321dfd8f0",
     "evidence_type": "field_observation",
     "reproducibility": "medium"
    },
    "value": 0.85,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

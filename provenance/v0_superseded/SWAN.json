@@ -1,0 +1,82 @@
+{
+ "entity": "SWAN",
+ "path": "ontology/animal/swan.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "11faa5b3c5baa5c3301a1d13977bc809565f18ea392c728ae33056b7af57695f",
+   "inputs": [
+    "S-e178271d748a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWAN",
+    "field": "attributes.formation_flight",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "652945b765f1a0f07c88fe1dbedb4b320551d39bd941cae8d3acae044e9f6ceb",
+   "inputs": [
+    "S-23dfceca8293"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWAN",
+    "field": "attributes.pair_bond_coordination",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a8fad7eb800479e88604c09df0efcd1bab48d72c86bf48bee1db829fa23ee6ca",
+   "inputs": [
+    "S-992db7be0cce"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWAN",
+    "field": "attributes.cultural_route_learning",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.85,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

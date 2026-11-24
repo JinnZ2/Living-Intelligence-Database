@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "cb1e3fd79dc76d7a34e60e08b3d82cd6d248b5b602250a7b451195731ff1b072",
+   "id": "38829248ccff5dacf51171cdfc1f2f87fb43b163ab902fb07c129bed5f41ca92",
    "inputs": [
-    "S-454cd6309a0b"
+    "454cd6309a0b37c8c1280960d6000b47d26e9afa3b549e4b70e1a1158c5224e0"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "PLASMA_FIELD",
     "field": "attributes.debye_shielding_efficiency",
+    "entity_file_sha256": "9ef04b4ee5f645670b2170403c00a9b420e4030f59584d1d36282c802e16328e",
     "evidence_type": "lab_measurement",
     "reproducibility": "certain"
    },
    "value": 0.96,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

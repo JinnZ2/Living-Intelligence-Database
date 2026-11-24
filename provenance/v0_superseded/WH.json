@@ -1,0 +1,82 @@
+{
+ "entity": "WH",
+ "path": "ontology/animal/whale.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "61cb6918e938c0d02d43d0650c0775791a8f3a3815915371fef9c04ca4f52d88",
+   "inputs": [
+    "S-3f4549e1a138"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WH",
+    "field": "attributes.long_range_acoustic",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "72da744a671f30b3546a19ac31db0a120d9901387ba675d97b802cf204ffa304",
+   "inputs": [
+    "S-165a941ddc7f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WH",
+    "field": "attributes.magnetic_navigation",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a60d734aa1c359f6b5c337c8bce12d76b877329e2860248c28f2a3061e2f0735",
+   "inputs": [
+    "S-8c71dac0dd49"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WH",
+    "field": "attributes.cultural_song_transmission",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "ac80ba15344ee2e3bab0e9ae52f29eda3e13ce6d91a820544352a13b23eaeeae",
+   "id": "2f03e999fceaca350f84c075e8ae6833c4bb619e67b91ea5cd1c9d5b5aff15ee",
    "inputs": [
-    "S-50e42dd6583b"
+    "50e42dd6583bb82d70655c9c49a012e47e4b08d693b87e681413e720375b6897"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "INDIG_FIRE",
     "field": "attributes.mosaic_burn_pattern",
+    "entity_file_sha256": "a01c0845a9b563768ad58449e2f6243c0dd7d78ea4d22e1ce368c25ae7ac6bd2",
     "evidence_type": "cyclic_observation",
     "reproducibility": "medium"
    },
    "value": 0.95,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "d2cff65c40b97ae92acbe9e08bd62b0503c42c0fdc485b68558f779adf32d668",
+   "id": "e70ff3f16ae6879683be8fd0c6e60d3e44b15b8cc71403d6afa367e4e038e873",
    "inputs": [
-    "S-89e60d88b841"
+    "89e60d88b841d99313cf7ab98db99839085e82790cdb7900ca1ea085a5012c3f"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "INDIG_FIRE",
     "field": "attributes.phenological_timing",
+    "entity_file_sha256": "a01c0845a9b563768ad58449e2f6243c0dd7d78ea4d22e1ce368c25ae7ac6bd2",
     "evidence_type": "cyclic_observation",
     "reproducibility": "medium"
    },
    "value": 0.94,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "b97aaf3ee9ccf7e8e03e64d70678033f8b694706e8f108f86057ef7c1ed6ce76",
+   "id": "91ef13311e4ea33250760181c91f671494f2f38cfd271c708ffae37c1a76fdfe",
    "inputs": [
-    "S-cf0ec22b078c"
+    "cf0ec22b078c61fc811adaeac26133b1322036a5bc599abf363bd14882b11361"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "INDIG_FIRE",
     "field": "attributes.oral_tradition_transfer",
+    "entity_file_sha256": "a01c0845a9b563768ad58449e2f6243c0dd7d78ea4d22e1ce368c25ae7ac6bd2",
     "evidence_type": "cyclic_observation",
     "reproducibility": "medium"
    },
    "value": 0.92,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

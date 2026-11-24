@@ -9,8 +9,7 @@ OUTPUT_FILE = ROOT / "ontology_index.json"
 
 # Schemas referenced by file name from the per-type schemas ($ref: "<name>").
 SHARED_SCHEMAS = ("coordination.schema.json", "gate_sensing.schema.json",
-                  "functional_intelligence.schema.json", "observation_context.schema.json",
-                  "provenance.schema.json")
+                  "functional_intelligence.schema.json", "observation_context.schema.json")
 
 def load_schema(schema_name):
     schema_path = SCHEMA_DIR / schema_name

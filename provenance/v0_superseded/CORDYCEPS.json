@@ -1,0 +1,32 @@
+{
+ "entity": "CORDYCEPS",
+ "path": "ontology/plant/cordyceps.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f7ae0d7e2692dd2efb5898dc0bc3ee9068c296d10690b7ed5402de12f13fa350",
+   "inputs": [
+    "S-563d9e8c1906"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CORDYCEPS",
+    "field": "attributes.core_efficiency_factor",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

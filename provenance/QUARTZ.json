@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "2d9fb9c91bfa0a719df0af5c3267fc7a00ca3a7d3d1e4954fbe73d84296cd429",
+   "id": "ba56b69157894f333ae93fa59b5007f0e7e5c60c305b302d49c693c314dc33cd",
    "inputs": [
-    "S-173b0830c034"
+    "173b0830c0343561db9c3601dd2949c60695c1ed7a1ab7cb72f50e1bc1b8135d"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "QUARTZ",
     "field": "attributes.piezoelectric_coefficient",
+    "entity_file_sha256": "b6c20aaa32408d9363f274cf870adb5e107c884d371f33931c3cbfc28a92b487",
     "evidence_type": "lab_measurement",
     "reproducibility": "certain"
    },
    "value": 0.94,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

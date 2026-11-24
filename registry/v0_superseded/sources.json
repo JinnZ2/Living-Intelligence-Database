@@ -1,0 +1,1881 @@
+{
+ "note": "One entry per distinct source string. id = 'S-' + first 12 hex of sha256(text). Two spellings of one work are two entries; nothing is merged.",
+ "sources": [
+  {
+   "id": "S-0123fa592deb",
+   "text": "work order, 2026-11-24 (Kavik + Claude)",
+   "form": "free text",
+   "used_by": [
+    "MY",
+    "QUORUM",
+    "SLIME",
+    "ANT",
+    "BEE_NEST_SITE"
+   ]
+  },
+  {
+   "id": "S-0207e08374d8",
+   "text": "Boddy et al. (2010) 'Mycelial foraging and network dynamics'; Tlalka et al. (2008) 'Quantitative fluorescence imaging of Phanerochaete velutina', ISME Journal; Fricker et al. (2017) network topology studies.",
+   "form": "free text",
+   "used_by": [
+    "MY"
+   ]
+  },
+  {
+   "id": "S-024bf6ae22e8",
+   "text": "Noad et al. (2000) Pacific Ocean song transmission study; Garland et al. (2011) cultural evolution of song; 20+ years of hydrophone data.",
+   "form": "free text",
+   "used_by": [
+    "WHALE"
+   ]
+  },
+  {
+   "id": "S-028f1c310383",
+   "text": "Lefebvre & Palameta (1988) crow social learning review; Aplin et al. (2015) 'Experimentally induced innovations lead to varying levels of spread in wild birds', Nature 518:538-541.",
+   "form": "free text",
+   "used_by": [
+    "CROW"
+   ]
+  },
+  {
+   "id": "S-02a7bfbdcba4",
+   "text": "Vogelmann & Martin (1993) 'The functional significance of palisade tissue and spongy mesophyll in leaves', Plant, Cell & Environment 16:65-72; Chazdon & Pearcy (1991) shade plant physiology.",
+   "form": "free text",
+   "used_by": [
+    "FE"
+   ]
+  },
+  {
+   "id": "S-035c320d8927",
+   "text": "Hunt (1996) 'Manufacture and use of hook-tools by New Caledonian crows', Nature 379:249-251; Weir et al. (2002) 'Shaping of hooks in New Caledonian crows', Science 297:981.",
+   "form": "free text",
+   "used_by": [
+    "CROW"
+   ]
+  },
+  {
+   "id": "S-037c0fb19bb1",
+   "text": "Crowe (1975) 'The physiology of cryptobiosis in tardigrades', Memorie dell'Istituto Italiano di Idrobiologia 32:37-59; Jönsson (2001) 'The nature of progress in our understanding of tardigrade biology', Zoologischer Anzeiger.",
+   "form": "free text",
+   "used_by": [
+    "TARDI"
+   ]
+  },
+  {
+   "id": "S-03ee807f6d4d",
+   "text": "Landolt & Kandeler (1987) 'The Family of Lemnaceae', Geobotanischen Instituts; Ziegler et al. (2015) duckweed bioremediation and growth studies.",
+   "form": "free text",
+   "used_by": [
+    "DUCKWEED"
+   ]
+  },
+  {
+   "id": "S-03f72ab952de",
+   "text": "Blaschke (1916) isoperimetric inequalities proof; Osserman (1978) 'The isoperimetric inequality', Bulletin of the American Mathematical Society 84:1182-1238.",
+   "form": "free text",
+   "used_by": [
+    "SPHERE"
+   ]
+  },
+  {
+   "id": "S-08ab67e2393b",
+   "text": "Jönsson et al. (2008) 'Tardigrades survive exposure to space in low Earth orbit', Current Biology 18:R729-R731; Horikawa et al. (2006) radiation tolerance studies.",
+   "form": "free text",
+   "used_by": [
+    "TARDI"
+   ]
+  },
+  {
+   "id": "S-0b188b60a7f8",
+   "text": "Dolbear (1897) 'The cricket as a thermometer', American Naturalist 31:970-971; Walker (1962) 'The taxonomy and calling songs of United States tree crickets', Annals of Entomological Society America 55:303-322.",
+   "form": "free text",
+   "used_by": [
+    "CR"
+   ]
+  },
+  {
+   "id": "S-0ba0efc5a77d",
+   "text": "Ulanovsky et al. (2004) 'Dynamics of jamming avoidance in echolocating bats', Proceedings Royal Society B 271:1467-1475; Chiu et al. (2008) 'Flying in silence', PNAS 105:3481-3486.",
+   "form": "free text",
+   "used_by": [
+    "BX"
+   ]
+  },
+  {
+   "id": "S-0ee670833b45",
+   "text": "Barth (2002) 'A Spider's World: Senses and Behavior', Springer; Mortimer et al. (2016) 'Decoding web vibrations', Journal of Experimental Biology 219:3574-3583.",
+   "form": "free text",
+   "used_by": [
+    "SP"
+   ]
+  },
+  {
+   "id": "S-0f1ad1250f9d",
+   "text": "Hawkes et al. (1998) 'Grandmothering, menopause, and the evolution of human life histories', PNAS 95:1336-1339; Lahdenpera et al. (2004) 'Fitness benefits of prolonged post-reproductive lifespan in women', Nature 428:178-181.",
+   "form": "free text",
+   "used_by": [
+    "GRANDMOTHER"
+   ]
+  },
+  {
+   "id": "S-0f5c97bb9388",
+   "text": "Dorigo & Gambardella (1997) 'Ant colony system', IEEE Transactions on Evolutionary Computation 1:53-66; Goss et al. (1989) 'Self-organized shortcuts in the Argentine ant', Naturwissenschaften 76:579-581.",
+   "form": "free text",
+   "used_by": [
+    "AN"
+   ]
+  },
+  {
+   "id": "S-0f8ebbefb324",
+   "text": "Huheey et al. (1993) 'Inorganic Chemistry', 4th ed., Harper Collins; Burns (1993) 'Mineralogical Applications of Crystal Field Theory', 2nd ed., Cambridge UP.",
+   "form": "free text",
+   "used_by": [
+    "OCTA_STATE"
+   ]
+  },
+  {
+   "id": "S-0fddb3058191",
+   "text": "Zeiler & Fergus (2013) 'Visualizing and understanding convolutional networks', ECCV; Alain & Bengio (2016) 'Understanding intermediate layers', ICLR workshop.",
+   "form": "free text",
+   "used_by": [
+    "NEURAL_NET"
+   ]
+  },
+  {
+   "id": "S-105f0407624a",
+   "text": "Dorigo & Gambardella (1997) 'Ant colony system', IEEE Transactions on Evolutionary Computation 1:53-66; Stützle & Hoos (2000) 'MAX-MIN ant system', Future Generation Computer Systems.",
+   "form": "free text",
+   "used_by": [
+    "SWARM_AI"
+   ]
+  },
+  {
+   "id": "S-13435911442f",
+   "text": "Schwenk (1994) 'Why snakes have forked tongues', Science 263:1573-1577; Kubie & Halpern (1975) forked tongue chemoreception studies.",
+   "form": "free text",
+   "used_by": [
+    "SN"
+   ]
+  },
+  {
+   "id": "S-1435cc4389f2",
+   "text": "Cavendish (1773) original verification; Williams et al. (1971) 'New experimental test of Coulomb's inverse-square law', Physical Review Letters 26:721-724.",
+   "form": "free text",
+   "used_by": [
+    "ELECTRIC_FIELD"
+   ]
+  },
+  {
+   "id": "S-165a941ddc7f",
+   "text": "Klinowska (1985) 'Cetacean stranding sites relate to geomagnetic topography', Aquatic Mammals 11:27-32; Zoeger et al. (1981) magnetite in cetacean tissue, Science 213:892-894.",
+   "form": "free text",
+   "used_by": [
+    "WH"
+   ]
+  },
+  {
+   "id": "S-173b0830c034",
+   "text": "Cady (1946) 'Piezoelectricity', McGraw-Hill; Vig (1992) 'Quartz crystal resonators and oscillators', IEEE UFFC-S Tutorial.",
+   "form": "free text",
+   "used_by": [
+    "QUARTZ"
+   ]
+  },
+  {
+   "id": "S-17929f9f8133",
+   "text": "Knudsen & Konishi (1979) 'Mechanisms of sound localization in the barn owl', Journal of Comparative Physiology A 133:13-21; Payne (1971) 'Acoustic location of prey by barn owls', Journal of Experimental Biology 54:535-573.",
+   "form": "free text",
+   "used_by": [
+    "OW"
+   ]
+  },
+  {
+   "id": "S-19e955b454a0",
+   "text": "Mech & Peterson (2003) Yellowstone reintroduction data; 10+ years post-reintroduction observation.",
+   "form": "free text",
+   "used_by": [
+    "WOLF_PACK"
+   ]
+  },
+  {
+   "id": "S-1ce463c85a49",
+   "text": "Urquhart & Urquhart (1978) monarch migration tagging studies; Brower (1995) 'Understanding and misunderstanding the migration of the monarch butterfly', Journal of the Lepidopterist Society 49:304-385.",
+   "form": "free text",
+   "used_by": [
+    "MONARCH"
+   ]
+  },
+  {
+   "id": "S-1cfdfc7b890b",
+   "text": "Auer et al. (2002) 'Finite-time analysis of the multiarmed bandit problem', Machine Learning 47:235-256; Lai & Robbins (1985) asymptotically efficient adaptive allocation.",
+   "form": "free text",
+   "used_by": [
+    "RL_AGENT"
+   ]
+  },
+  {
+   "id": "S-2251d48921b4",
+   "text": "Gentry (2009) 'A fully homomorphic encryption scheme', Stanford PhD thesis; TFHE library benchmarks (2019).",
+   "form": "free text",
+   "used_by": [
+    "GEO_CIPHER"
+   ]
+  },
+  {
+   "id": "S-226b708ada7b",
+   "text": "Rubin (1995) 'Memory in Oral Traditions', Oxford UP — structural constraint analysis; Bartlett (1932) 'Remembering', Cambridge UP serial reproduction studies.",
+   "form": "free text",
+   "used_by": [
+    "STORYTELLER"
+   ]
+  },
+  {
+   "id": "S-233badf7ffec",
+   "text": "Reppert et al. (2010) 'Navigational mechanisms of migrating monarch butterflies', Trends in Neurosciences 33:399-406; Froy et al. (2003) 'Illuminating the circadian clock in monarch butterfly migration', Science 300:1303.",
+   "form": "free text",
+   "used_by": [
+    "MONARCH"
+   ]
+  },
+  {
+   "id": "S-23dd81e2d056",
+   "text": "Seeley & Visscher (2004) 'Group decision making in nest-site selection by honey bees', Apidologie 35:101-116; Seeley (2010) 'Honeybee Democracy', Princeton UP.",
+   "form": "free text",
+   "used_by": [
+    "BE"
+   ]
+  },
+  {
+   "id": "S-23dfceca8293",
+   "text": "Birkhead & Møller (1992) 'Sperm Competition in Birds', Academic Press; Devlin & Rosenfeld (2002) Bewick swan pair coordination studies.",
+   "form": "free text",
+   "used_by": [
+    "SWAN"
+   ]
+  },
+  {
+   "id": "S-24569092f9eb",
+   "text": "Bates et al. (2008) 'Do elephants show empathy?', Journal of Consciousness Studies 15:204-225; Plotnik et al. (2011) 'Elephants know when they need a helping trunk in a cooperative task', PNAS 108:5116-5121.",
+   "form": "free text",
+   "used_by": [
+    "EL"
+   ]
+  },
+  {
+   "id": "S-257b48ea9528",
+   "text": "Deneubourg JL, Aron S, Goss S, Pasteels JM (1990) The self-organizing exploratory pattern of the Argentine ant. Journal of Insect Behavior 3:159-168 [NOT OPENED]",
+   "form": "citation marked NOT OPENED",
+   "used_by": [
+    "ANT"
+   ]
+  },
+  {
+   "id": "S-2772ad8badeb",
+   "text": "Geiger & Nuttall (1911) empirical decay law; Gamow (1928) quantum tunneling model of alpha decay; NUBASE2020 nuclear data evaluation.",
+   "form": "free text",
+   "used_by": [
+    "DECAY"
+   ]
+  },
+  {
+   "id": "S-27ce2a36eeea",
+   "text": "Donato et al. (2011) 'Mangroves among the most carbon-rich forests in the tropics', Nature Geoscience 4:293-297; McLeod et al. (2011) 'A blueprint for blue carbon', Frontiers in Ecology.",
+   "form": "free text",
+   "used_by": [
+    "MANGROVE"
+   ]
+  },
+  {
+   "id": "S-2899c24ea768",
+   "text": "Vaswani et al. (2017) 'Attention is all you need', NeurIPS; Dai et al. (2019) 'Transformer-XL', ACL.",
+   "form": "free text",
+   "used_by": [
+    "LLM"
+   ]
+  },
+  {
+   "id": "S-2915902723ac",
+   "text": "von Frisch (1967) 'The Dance Language and Orientation of Bees' (Nobel Prize, 1973); replicated by Seeley (1995) 'The Wisdom of the Hive' and Seeley (2010) 'Honeybee Democracy'; 50+ independent replications.",
+   "form": "free text",
+   "used_by": [
+    "BE"
+   ]
+  },
+  {
+   "id": "S-2a89338cf18c",
+   "text": "Dacke et al. (2013) 'Dung beetles use the Milky Way for orientation', Current Biology 23:298-300.",
+   "form": "free text",
+   "used_by": [
+    "BT"
+   ]
+  },
+  {
+   "id": "S-2c4692317d09",
+   "text": "Pittendrigh (1960) 'Circadian rhythms and the circadian organization of living systems', Cold Spring Harbor Symposia 25:159-184; Strogatz (2003) 'Sync: The Emerging Science of Spontaneous Order', Hyperion; Glass (2001) 'Synchronization and rhythmic processes in physiology', Nature 410:277-284.",
+   "form": "free text",
+   "used_by": [
+    "CYCLE"
+   ]
+  },
+  {
+   "id": "S-2c582e268cfe",
+   "text": "Schrödinger (1944) 'What is Life?', Cambridge UP; Prigogine (1977) Nobel Lecture 'Time, structure and fluctuations'; Deacon (2011) 'Incomplete Nature', W.W. Norton.",
+   "form": "free text",
+   "used_by": [
+    "NEGENTROPY"
+   ]
+  },
+  {
+   "id": "S-2ce9f0318bb2",
+   "text": "Gosline et al. (1999) 'The mechanical design of spider silks', Journal of Experimental Biology 202:3295-3303; Blackledge & Hayashi (2006) silk mechanical properties across species.",
+   "form": "free text",
+   "used_by": [
+    "SP"
+   ]
+  },
+  {
+   "id": "S-2d9b53db9394",
+   "text": "Carnot (1824) 'Réflexions sur la Puissance Motrice du Feu'; Callen (1985) 'Thermodynamics and an Introduction to Thermostatistics', 2nd ed., Wiley.",
+   "form": "free text",
+   "used_by": [
+    "THERMAL"
+   ]
+  },
+  {
+   "id": "S-2db5724365e8",
+   "text": "von Frisch (1967) 'The Dance Language and Orientation of Bees', Harvard UP (Nobel Prize 1973); Dyer (2002) 'The biology of the dance language', Annual Review of Entomology 47:917-949.",
+   "form": "free text",
+   "used_by": [
+    "BE"
+   ]
+  },
+  {
+   "id": "S-3082d6adcd12",
+   "text": "Schmitz & Bleckmann (1997) 'Fine structure and physiology of the infrared receptor of beetles', Journal of Comparative Physiology A 181:169-184.",
+   "form": "free text",
+   "used_by": [
+    "FIRE_BT"
+   ]
+  },
+  {
+   "id": "S-334649ebe3c6",
+   "text": "Foote & Crystal (2007) 'Metacognition in the rat', Current Biology 17:551-555; Boeckle et al. (2020) 'New Caledonian crows plan for specific future tool use', eLife — uncertainty monitoring tasks.",
+   "form": "free text",
+   "used_by": [
+    "CROW"
+   ]
+  },
+  {
+   "id": "S-36d0f9243aee",
+   "text": "Charap & Lu (1997) 'Thermal stability of recorded information at high densities', IEEE Transactions on Magnetics 33:978-983; NIST magnetic recording reliability studies.",
+   "form": "free text",
+   "used_by": [
+    "MAG_BRIDGE"
+   ]
+  },
+  {
+   "id": "S-3786c807f671",
+   "text": "Pratt et al. (2002) nest emigration studies; Temnothorax genus.",
+   "form": "free text",
+   "used_by": [
+    "ANT"
+   ]
+  },
+  {
+   "id": "S-3939413c31e7",
+   "text": "Coxeter (1961) 'Introduction to Geometry', Wiley; Weyl (1952) 'Symmetry', Princeton UP — symmetry in nature.",
+   "form": "free text",
+   "used_by": [
+    "MANDALA"
+   ]
+  },
+  {
+   "id": "S-3b2e979f7c9d",
+   "text": "Kingma & Welling (2013) 'Auto-encoding variational Bayes', ICLR 2014; Razavi et al. (2019) 'Generating diverse high-fidelity images with VQ-VAE-2', NeurIPS.",
+   "form": "free text",
+   "used_by": [
+    "AUTOENC"
+   ]
+  },
+  {
+   "id": "S-3f4549e1a138",
+   "text": "Payne & McVay (1971) 'Songs of Humpback Whales', Science 173:585-597; Watkins et al. (2000) 'Twentieth-century records of 20-Hz signals', Deep-Sea Research 47:1543-1562.",
+   "form": "free text",
+   "used_by": [
+    "WH"
+   ]
+  },
+  {
+   "id": "S-3fa7545d4def",
+   "text": "Kipf & Welling (2017) 'Semi-supervised classification with graph convolutional networks', ICLR; Gilmer et al. (2017) 'Neural message passing for quantum chemistry', ICML.",
+   "form": "free text",
+   "used_by": [
+    "GNN"
+   ]
+  },
+  {
+   "id": "S-3fdd07b2093e",
+   "text": "Taiz L, Alkon D, Draguhn A, et al. (2019) Plants Neither Possess nor Require Consciousness. Trends Plant Sci 24(8):677-687. doi:10.1016/j.tplants.2019.05.008. PMID 31279732 [abstract read via NCBI efetch 2026-11-24]",
+   "form": "citation with DOI/PMID",
+   "used_by": [
+    "MIMOSA"
+   ]
+  },
+  {
+   "id": "S-40a999084e83",
+   "text": "Mandelbrot (1982) 'The Fractal Geometry of Nature', Freeman; West, Brown & Enquist (1997) 'A General Model for the Origin of Allometric Scaling Laws in Biology', Science 276:122-126; Bassingthwaighte et al. (1994) 'Fractal Physiology', Oxford.",
+   "form": "free text",
+   "used_by": [
+    "FRACTAL"
+   ]
+  },
+  {
+   "id": "S-40b59501ee54",
+   "text": "Garland et al. (2011) 'Dynamic horizontal cultural transmission of humpback whale song at the ocean-basin scale', Current Biology 21:687-691.",
+   "form": "free text",
+   "used_by": [
+    "HUMPBACK"
+   ]
+  },
+  {
+   "id": "S-416a75cabc79",
+   "text": "Tucker et al. (1998) 'Curved flight paths and sideways vision in peregrine falcons', Journal of Experimental Biology 201:681-692; Ponitz et al. (2014) peregrine aerodynamics.",
+   "form": "free text",
+   "used_by": [
+    "HAW"
+   ]
+  },
+  {
+   "id": "S-42029b61e65c",
+   "text": "Postgate (1998) 'Nitrogen Fixation', 3rd ed., Cambridge UP; Rubio & Ludden (2008) 'Biosynthesis of the iron-molybdenum cofactor of nitrogenase', Annual Review of Microbiology 62:93-111.",
+   "form": "free text",
+   "used_by": [
+    "CYANO"
+   ]
+  },
+  {
+   "id": "S-436ae551a61c",
+   "text": "Wilson & Kogut (1974) 'The renormalization group and the epsilon expansion', Physics Reports 12:75-200; Peliti (2011) 'Statistical Mechanics in a Nutshell', Princeton UP.",
+   "form": "free text",
+   "used_by": [
+    "EMERGE"
+   ]
+  },
+  {
+   "id": "S-43f94cb01925",
+   "text": "Ripple & Beschta (2012) 'Trophic cascades in Yellowstone', Biological Conservation 150:70-79; Fortin et al. (2005) 'Wolves influence elk movements', Ecology 86:1320-1330.",
+   "form": "free text",
+   "used_by": [
+    "WOLF"
+   ]
+  },
+  {
+   "id": "S-454cd6309a0b",
+   "text": "Debye & Hückel (1923) 'Zur Theorie der Elektrolyte', Physikalische Zeitschrift 24:185-206; Chen (1984) 'Introduction to Plasma Physics and Controlled Fusion', 2nd ed., Plenum.",
+   "form": "free text",
+   "used_by": [
+    "PLASMA_FIELD"
+   ]
+  },
+  {
+   "id": "S-474f32750b96",
+   "text": "Sze & Ng (2006) 'Physics of Semiconductor Devices', 3rd ed., Wiley; Canali et al. (1975) 'Electron and hole drift velocity measurements in silicon', IEEE Transactions on Electron Devices.",
+   "form": "free text",
+   "used_by": [
+    "SILICON_LAT"
+   ]
+  },
+  {
+   "id": "S-47f669017c02",
+   "text": "ontology/social/ant_colony.json and ontology/animal/ant.json at a11feb1 (repository text, not a primary source)",
+   "form": "repo-internal pointer",
+   "used_by": [
+    "ANT"
+   ]
+  },
+  {
+   "id": "S-4bbe1c474bd2",
+   "text": "Wiley et al. (2011) Gulf of Maine bubble-net studies; multi-year behavioral observation.",
+   "form": "free text",
+   "used_by": [
+    "WHALE"
+   ]
+  },
+  {
+   "id": "S-4d63460b8ede",
+   "text": "Gagliano M, Renton M, Depczynski M, Mancuso S (2014) Experience teaches plants to learn faster and forget slower in environments where it matters. Oecologia 175(1):63-72. doi:10.1007/s00442-013-2873-7. PMID 24390479 [abstract read via NCBI efetch 2026-11-24]",
+   "form": "citation with DOI/PMID",
+   "used_by": [
+    "MIMOSA"
+   ]
+  },
+  {
+   "id": "S-4e0a54b9c953",
+   "text": "Fuqua & Greenberg (2002) 'Listening in on bacteria: acyl-homoserine lactone signalling', Nature Reviews Molecular Cell Biology 3:685-695; Waters & Bassler (2005) 'Quorum sensing', Annual Review of Cell and Developmental Biology 21:319-346.",
+   "form": "free text",
+   "used_by": [
+    "QUORUM"
+   ]
+  },
+  {
+   "id": "S-50e42dd6583b",
+   "text": "Gammage (2011) 'The Biggest Estate on Earth', Allen & Unwin; Mooney et al. (2011) 'Fossil charcoal evidence for pre-European fire regimes in Eastern Australia', Journal of Biogeography 38:1771-1783.",
+   "form": "free text",
+   "used_by": [
+    "INDIG_FIRE"
+   ]
+  },
+  {
+   "id": "S-5166977eec90",
+   "text": "Schnitzler (1968) 'Die Ultraschallorientierung der Hufeisenfledermäuse', Zeitschrift für vergleichende Physiologie 57:376-408; Schuller et al. (1974) Doppler compensation in horseshoe bats.",
+   "form": "free text",
+   "used_by": [
+    "BX"
+   ]
+  },
+  {
+   "id": "S-5189d45dd39c",
+   "text": "Autumn et al. (2006) 'Dynamics of geckos running on inclines', Journal of Experimental Biology 209:3014-3021; Gravish et al. (2010) 'Rate-dependent frictional adhesion in natural and synthetic gecko setae'.",
+   "form": "free text",
+   "used_by": [
+    "GE"
+   ]
+  },
+  {
+   "id": "S-52f7918068f8",
+   "text": "Kolmogorov (1965) 'Three approaches to the definition of the concept of information quantity'; Lempel & Ziv (1977) 'A universal algorithm for sequential data compression', IEEE Transactions on Information Theory.",
+   "form": "free text",
+   "used_by": [
+    "FOLD"
+   ]
+  },
+  {
+   "id": "S-53ac81dce99e",
+   "text": "Ehrmann (2002) 'Mantodea: Gottesanbeterinnen der Welt', Natur und Tier Verlag; Caraco & Chasin (1984) foraging preferences in ambush vs pursuit strategies.",
+   "form": "free text",
+   "used_by": [
+    "MANTIS"
+   ]
+  },
+  {
+   "id": "S-563d9e8c1906",
+   "text": "Hughes et al. (2011) 'Behavioral mechanisms and morphological symptoms of zombie ants dying from a fungal infection', BMC Ecology 11:13; de Bekker et al. (2014) chemical ecology of Ophiocordyceps.",
+   "form": "free text",
+   "used_by": [
+    "CORDYCEPS"
+   ]
+  },
+  {
+   "id": "S-5765499ac3e3",
+   "text": "Hashimoto et al. (2016) 'Extremotolerant tardigrade genome and improved radiotolerance of human cultured cells by tardigrade-unique protein', Nature Communications 7:12808.",
+   "form": "free text",
+   "used_by": [
+    "TARDI"
+   ]
+  },
+  {
+   "id": "S-583b179e1ada",
+   "text": "Jayne (1986) 'Kinematics of terrestrial snake locomotion', Copeia 1986:915-927; Gray (1953) 'Undulatory propulsion', Quarterly Journal of Microscopical Science 94:551-578.",
+   "form": "free text",
+   "used_by": [
+    "SN"
+   ]
+  },
+  {
+   "id": "S-58ff0c8055f4",
+   "text": "Williams (1992) 'Simple statistical gradient-following algorithms', Machine Learning 8:229-256; Schulman et al. (2017) 'Proximal policy optimization algorithms', arXiv 1707.06347.",
+   "form": "free text",
+   "used_by": [
+    "RL_AGENT"
+   ]
+  },
+  {
+   "id": "S-5958170d9ad5",
+   "text": "Contributor oral knowledge and lived practice (contributor-held; not a published citation)",
+   "form": "contributor-held",
+   "used_by": [
+    "STONE_LEDGER"
+   ]
+  },
+  {
+   "id": "S-5a05783f1663",
+   "text": "Frommolt et al. (2003) 'Acoustic monitoring of wolves', Bioacoustics 13:255-270; Theberge & Falls (1967) 'Howling as a means of communication in timber wolves', American Zoologist 7:331-338.",
+   "form": "free text",
+   "used_by": [
+    "WOLF"
+   ]
+  },
+  {
+   "id": "S-5bea5baaff13",
+   "text": "Heiligenberg (1991) 'Neural Nets in Electric Fish', MIT Press; von der Emde (1999) 'Active electrolocation of objects in weakly electric fish', Journal of Experimental Biology 202:1205-1215.",
+   "form": "free text",
+   "used_by": [
+    "MORMYRID"
+   ]
+  },
+  {
+   "id": "S-5cbbc741cd39",
+   "text": "Beal (1884-2021) buried seed viability experiment series; Toole & Brown (1946) 'Final results of the Duvel buried seed experiment', Journal of Agricultural Research 72:201-210.",
+   "form": "free text",
+   "used_by": [
+    "CURLY_DOCK"
+   ]
+  },
+  {
+   "id": "S-5d462bed7f32",
+   "text": "Cozzolino & Widmer (2005) 'Orchid diversity: an evolutionary consequence of deception?', Trends in Ecology & Evolution 20:487-494; Gaskett (2011) orchid mimicry review.",
+   "form": "free text",
+   "used_by": [
+    "ORCHID"
+   ]
+  },
+  {
+   "id": "S-5e61e7667ca7",
+   "text": "Brent et al. (2015) 'Ecological knowledge, leadership, and the evolution of menopause in killer whales', Current Biology 25:746-750; Foster et al. (2012) orca matriarch salmon knowledge study.",
+   "form": "free text",
+   "used_by": [
+    "ORCA"
+   ]
+  },
+  {
+   "id": "S-5ed14ead4075",
+   "text": "Chatwin (1987) 'The Songlines', Viking; Watson (2003) 'Country: A Journey Through the Heart of Australia', Pluto Press; Norris & Norris (2009) 'Emu Dreaming' star pattern analysis.",
+   "form": "free text",
+   "used_by": [
+    "STORYTELLER"
+   ]
+  },
+  {
+   "id": "S-5eddbedf5e24",
+   "text": "Corrette (1990) 'Prey capture in the praying mantis', Journal of Experimental Biology 148:287-306; Loxton & Nicholls (1979) mechanics of mantis prey capture.",
+   "form": "free text",
+   "used_by": [
+    "MANTIS"
+   ]
+  },
+  {
+   "id": "S-5f78020093f7",
+   "text": "Teyssier et al. (2015) 'Photonic crystals cause active colour change in chameleons', Nature Communications 6:6368.",
+   "form": "free text",
+   "used_by": [
+    "CHAMELEON"
+   ]
+  },
+  {
+   "id": "S-6018a21225e4",
+   "text": "Boydston et al. (2003) 'Sex differences in cougar use of and vulnerability of mule deer', Behavioral Ecology 14:698-704; Laundré (2010) 'Behavioral response races: stealth versus flesh', Oecologia.",
+   "form": "free text",
+   "used_by": [
+    "MTN_LION"
+   ]
+  },
+  {
+   "id": "S-60703e1d04e7",
+   "text": "Alexander & Vernon (1975) 'The mechanics of hopping by kangaroos', Journal of Zoology 177:265-303; Biewener & Baudinette (1995) 'In vivo muscle force and elastic energy storage during steady-speed hopping', Journal of Experimental Biology 198:1829-1841.",
+   "form": "free text",
+   "used_by": [
+    "KA"
+   ]
+  },
+  {
+   "id": "S-620d5880fde1",
+   "text": "GPS collar data from Yellowstone packs, 2005-2020.",
+   "form": "free text",
+   "used_by": [
+    "WOLF_PACK"
+   ]
+  },
+  {
+   "id": "S-64cfb52551a8",
+   "text": "Brush (2004) 'Farmers' Bounty: Locating Crop Diversity in the Contemporary World', Yale UP; Zeven (1999) traditional varieties maintained across European regions.",
+   "form": "free text",
+   "used_by": [
+    "SEED_KEEPER"
+   ]
+  },
+  {
+   "id": "S-64d22f3898f4",
+   "text": "Goodfellow et al. (2014) 'Generative adversarial nets', NeurIPS; Arjovsky et al. (2017) 'Wasserstein GAN', ICML — training stability improvements.",
+   "form": "free text",
+   "used_by": [
+    "GAN"
+   ]
+  },
+  {
+   "id": "S-658edee416da",
+   "text": "Sarradj et al. (2011) 'Silent owl flight: bird flyover noise measurements', AIAA Journal 49:769-779; Graham (1934) original observation of owl feather serration function.",
+   "form": "free text",
+   "used_by": [
+    "OW"
+   ]
+  },
+  {
+   "id": "S-65925f7a1c18",
+   "text": "Turner (2000) 'Architecture and morphogenesis in the mound of Macrotermes michaelseni', Cimbebasia 16:143-175; Korb & Linsenmair (1999) 'The architecture of termite mounds', Behavioral Ecology.",
+   "form": "free text",
+   "used_by": [
+    "TERMITE"
+   ]
+  },
+  {
+   "id": "S-659cd7133ca2",
+   "text": "Doussan et al. (1998) 'Modelling of the hydraulic architecture of root systems', Plant and Soil 206:75-88; Lynch (1995) 'Root architecture and plant productivity', Plant Physiology 109:7-13.",
+   "form": "free text",
+   "used_by": [
+    "ROOT_NET"
+   ]
+  },
+  {
+   "id": "S-6786b1fddb8f",
+   "text": "Lamb (1932) 'Hydrodynamics', 6th ed., Cambridge UP; Shariff & Leonard (1992) 'Vortex rings', Annual Review of Fluid Mechanics 24:235-279.",
+   "form": "free text",
+   "used_by": [
+    "VORTEX_DYN"
+   ]
+  },
+  {
+   "id": "S-6a5e0e322bca",
+   "text": "Barabási & Albert (1999) 'Emergence of scaling in random networks', Science 286:509-512; Albert et al. (2000) 'Error and attack tolerance of complex networks', Nature 406:378-382.",
+   "form": "free text",
+   "used_by": [
+    "BIOGRID2"
+   ]
+  },
+  {
+   "id": "S-6b7af81e854f",
+   "text": "Brown et al. (2020) 'Language models are few-shot learners', NeurIPS (GPT-3); Min et al. (2022) 'Rethinking the role of demonstrations', EMNLP.",
+   "form": "free text",
+   "used_by": [
+    "LLM"
+   ]
+  },
+  {
+   "id": "S-6b966ad0cb7c",
+   "text": "Connell (1978) 'Diversity in tropical rain forests and coral reefs', Science 199:1302-1310; Bellwood & Hughes (2001) 'Regional-scale assembly rules and biodiversity of coral reefs', Science 292:1532-1535.",
+   "form": "free text",
+   "used_by": [
+    "CORAL"
+   ]
+  },
+  {
+   "id": "S-6bc5a082a849",
+   "text": "Askew et al. (2014) 'The kangaroo's tail propels and powers pentapedal locomotion', Biology Letters 10:20140381.",
+   "form": "free text",
+   "used_by": [
+    "KA"
+   ]
+  },
+  {
+   "id": "S-6c7bce780224",
+   "text": "Carstensen (1992) 'Social and emotional patterns in adulthood: support for socioemotional selectivity theory', Psychology and Aging 7:331-338; Coall & Hertwig (2010) grandmother investment surveys.",
+   "form": "free text",
+   "used_by": [
+    "GRANDMOTHER"
+   ]
+  },
+  {
+   "id": "S-6d748af344bd",
+   "text": "Haddock et al. (2010) 'Bioluminescence in the Sea', Annual Review of Marine Science 2:443-493; Widder (2010) 'Bioluminescence in the ocean: origins of biological, chemical, and ecological diversity', Science 328:704-708.",
+   "form": "free text",
+   "used_by": [
+    "JELLY"
+   ]
+  },
+  {
+   "id": "S-6d7faebf98d3",
+   "text": "Dibner et al. (2010) 'The mammalian circadian timing system', Annual Review of Physiology 72:517-549; Bass & Takahashi (2010) 'Circadian integration of metabolism and energetics', Science 330:1349-1354.",
+   "form": "free text",
+   "used_by": [
+    "TEMPORAL"
+   ]
+  },
+  {
+   "id": "S-6ef3d475b788",
+   "text": "Moller (1995) 'Electric Fishes: History and Behavior', Chapman & Hall; Brienomyrus brachyistius timing studies in Bell (2001).",
+   "form": "free text",
+   "used_by": [
+    "MORMYRID"
+   ]
+  },
+  {
+   "id": "S-708f09aaaacd",
+   "text": "Rendell & Whitehead (2001) 'Culture in whales and dolphins', Behavioral and Brain Sciences 24:309-324; Ford et al. (2000) 'Killer Whales', UBC Press — pod-specific hunting culture documentation.",
+   "form": "free text",
+   "used_by": [
+    "ORCA"
+   ]
+  },
+  {
+   "id": "S-723e048e40e8",
+   "text": "Ford (1991) 'Vocal traditions among resident killer whales in coastal waters of British Columbia', Canadian Journal of Zoology 69:1454-1483; Yurk et al. (2002) cultural transmission of calls.",
+   "form": "free text",
+   "used_by": [
+    "ORCA"
+   ]
+  },
+  {
+   "id": "S-74af786b56b1",
+   "text": "Valentini et al. (2016) 'Collective decision with 100 kilobots', Swarm Intelligence 10:99-112; Reina et al. (2018) 'Psychophysical laws and the superorganism', Scientific Reports 8:4387.",
+   "form": "free text",
+   "used_by": [
+    "SWARM_AI"
+   ]
+  },
+  {
+   "id": "S-74e0d1572dbf",
+   "text": "Proctor (2008) 'Physiological ecology: water relations, light and temperature responses, carbon balance', in 'Bryophyte Biology', 2nd ed., Cambridge UP; Bewley (1979) 'Physiological aspects of desiccation tolerance' Annual Review Plant Physiology.",
+   "form": "free text",
+   "used_by": [
+    "MOSS"
+   ]
+  },
+  {
+   "id": "S-762707bd4ddf",
+   "text": "Dabiri et al. (2005) 'Flow patterns generated by oblate medusan jellyfish', Journal of Experimental Biology 208:1257-1265; Colin & Costello (2002) hydrodynamic analysis.",
+   "form": "free text",
+   "used_by": [
+    "JELLY"
+   ]
+  },
+  {
+   "id": "S-76bfed4e7422",
+   "text": "Hanlon & Messenger (2018) 'Cephalopod Behaviour', 3rd ed., Cambridge UP; Langridge (2009) 'Cuttlefish use startle displays but not against large predators', Animal Behaviour 77:847-856.",
+   "form": "free text",
+   "used_by": [
+    "CU"
+   ]
+  },
+  {
+   "id": "S-77b6d3fd4b52",
+   "text": "Livio (2002) 'The Golden Ratio', Broadway Books — survey of 200+ biological and physical cases; Mitchison (1977) 'Phyllotaxis and the Fibonacci Series', Science 196:270-275; D'Arcy Thompson (1917) 'On Growth and Form', Cambridge.",
+   "form": "free text",
+   "used_by": [
+    "SPIRAL"
+   ]
+  },
+  {
+   "id": "S-7828b8676f04",
+   "text": "Lohmann & Lohmann (1994) 'Detection of magnetic inclination angle by sea turtles: a possible mechanism for determining latitude', Journal of Experimental Biology 190:69-78; Lohmann et al. (2001) 'Regional magnetic fields as navigational markers for sea turtles', Science 294:364-366.",
+   "form": "free text",
+   "used_by": [
+    "TU"
+   ]
+  },
+  {
+   "id": "S-7981860b9f67",
+   "text": "Harmon et al. (1990) 'Effects of carbon storage of conversion of old-growth forests to young forests', Science 247:699-702; Keith et al. (2009) 'Re-evaluation of forest biomass carbon stocks', PNAS 106:11635-11640.",
+   "form": "free text",
+   "used_by": [
+    "OLD_GROWTH"
+   ]
+  },
+  {
+   "id": "S-7c73c7dbe20e",
+   "text": "Cotterell & Kamminga (1987) 'The formation of flakes', American Antiquity 52:675-708; Brown & Dransart (2015) 'The World of Obsidian', Archaeopress.",
+   "form": "free text",
+   "used_by": [
+    "OBS"
+   ]
+  },
+  {
+   "id": "S-7cc6491b4502",
+   "text": "Sumbre et al. (2001) 'Control of Octopus Arm Extension by a Peripheral Motor Program', Science 293:1845-1848; Hochner et al. (2006) 'A Unified View of Animal Body Movements', Science.",
+   "form": "free text",
+   "used_by": [
+    "OC"
+   ]
+  },
+  {
+   "id": "S-7cefae50f32f",
+   "text": "Uman (1987) 'The Lightning Discharge', Academic Press; Rakov & Uman (2003) 'Lightning: Physics and Effects', Cambridge UP.",
+   "form": "free text",
+   "used_by": [
+    "LIGHTNING"
+   ]
+  },
+  {
+   "id": "S-7dcbe7a5ebb0",
+   "text": "Helfield & Naiman (2001) 'Effects of salmon-derived nitrogen on riparian forest growth and implications for stream productivity', Ecology 82:2403-2409; Gende et al. (2002) 'Pacific salmon in aquatic and terrestrial ecosystems', BioScience 52:917-928.",
+   "form": "free text",
+   "used_by": [
+    "SALMON"
+   ]
+  },
+  {
+   "id": "S-7ef3bf63a979",
+   "text": "Noad et al. (2000) 'Cultural revolution in whale songs', Nature 408:537-538; Cerchio et al. (2001) 'Interannual variation in songs of humpback whales', Animal Behaviour 62:943-956.",
+   "form": "free text",
+   "used_by": [
+    "HUMPBACK"
+   ]
+  },
+  {
+   "id": "S-7f3085818b58",
+   "text": "Tucker (2000) 'The deep fovea, sideways vision, and spiral flight paths in raptors', Journal of Experimental Biology 203:3745-3754; Frost (2010) raptor predation accuracy surveys.",
+   "form": "free text",
+   "used_by": [
+    "HAW"
+   ]
+  },
+  {
+   "id": "S-7f666d3dd14b",
+   "text": "O'Keefe & Nadel (1978) 'The Hippocampus as a Cognitive Map', Oxford UP; Morris et al. (1982) 'Place navigation impaired in rats with hippocampal lesions', Nature 297:681-683.",
+   "form": "free text",
+   "used_by": [
+    "RA"
+   ]
+  },
+  {
+   "id": "S-80b33359f094",
+   "text": "Tononi (2004) 'An information integration theory of consciousness', BMC Neuroscience 5:42; Oizumi et al. (2014) 'From the phenomenology to the mechanisms of consciousness', PLOS Computational Biology 10:e1003588.",
+   "form": "free text",
+   "used_by": [
+    "CONSCIOUSNESS_BR"
+   ]
+  },
+  {
+   "id": "S-80dbe6e08543",
+   "text": "Forterre et al. (2005) 'How the Venus flytrap snaps', Nature 433:421-425; Böhm et al. (2016) 'The Venus flytrap Dionaea muscipula counts prey-induced action potentials to induce sodium uptake', Current Biology 26:286-295.",
+   "form": "free text",
+   "used_by": [
+    "VENUS"
+   ]
+  },
+  {
+   "id": "S-81c160ca5b1e",
+   "text": "Kalmijn (1971) 'The electric sense of sharks and rays', Journal of Experimental Biology 55:371-383; Kajiura & Holland (2002) electroreception in juvenile sharks.",
+   "form": "free text",
+   "used_by": [
+    "SHARK"
+   ]
+  },
+  {
+   "id": "S-82644c1097c7",
+   "text": "Radford et al. (2015) 'Unsupervised representation learning with DCGANs', ICLR 2016; Brock et al. (2018) 'Large scale GAN training', ICLR 2019 (BigGAN).",
+   "form": "free text",
+   "used_by": [
+    "GAN"
+   ]
+  },
+  {
+   "id": "S-82b3eb8372a3",
+   "text": "Hales (1999) 'Proof of the Honeycomb Conjecture', Discrete & Computational Geometry 36:5-69; engineering measurements confirm wax economy vs. circular and square cells.",
+   "form": "free text",
+   "used_by": [
+    "BE"
+   ]
+  },
+  {
+   "id": "S-854511faa302",
+   "text": "Simmons (1989) 'A view of the world through the bat's ear', Cognition 33:155-199; Moss & Schnitzler (1995) 'Behavioral studies of auditory information processing', Springer Handbook of Auditory Research.",
+   "form": "free text",
+   "used_by": [
+    "BX"
+   ]
+  },
+  {
+   "id": "S-860b94f1c3db",
+   "text": "Hafting et al. (2005) 'Microstructure of a spatial map in the entorhinal cortex', Nature 436:801-806; Moser et al. (2008) 'Place cells, grid cells, and the brain's spatial representation system', Annual Review of Neuroscience.",
+   "form": "free text",
+   "used_by": [
+    "RA"
+   ]
+  },
+  {
+   "id": "S-867b4b70d950",
+   "text": "Lord (1960) 'The Singer of Tales', Harvard UP; Rubin (1995) 'Memory in Oral Traditions', Oxford UP — oral formula and mnemonic analysis.",
+   "form": "free text",
+   "used_by": [
+    "STORYTELLER"
+   ]
+  },
+  {
+   "id": "S-89472de72cbd",
+   "text": "Hopkins (1988) 'Social communication in the aquatic environment', in Sensory Biology of Aquatic Animals; Terleph & Moller (2003) EOD communication specificity.",
+   "form": "free text",
+   "used_by": [
+    "MORMYRID"
+   ]
+  },
+  {
+   "id": "S-89e60d88b841",
+   "text": "Cahir et al. (2018) 'Aboriginal fire management in south-eastern Australia', Environment and History 24:1-26; Kimmerer (2013) 'Braiding Sweetgrass', Milkweed Editions — phenological knowledge documentation.",
+   "form": "free text",
+   "used_by": [
+    "INDIG_FIRE"
+   ]
+  },
+  {
+   "id": "S-8a2a71631e61",
+   "text": "Denny (1976) 'The physical properties of spider's silk', Journal of Experimental Biology 65:483-506; Vollrath & Selden (2007) 'The role of behavior in the evolution of spiders, silks, and webs', Annual Review Ecology Evolution.",
+   "form": "free text",
+   "used_by": [
+    "SP"
+   ]
+  },
+  {
+   "id": "S-8ae2d41bffc9",
+   "text": "Mäthger et al. (2008) 'Evidence for distributed light-sensing in the skin of cuttlefish', Journal of Experimental Biology 211:2203-2212; Hanlon et al. (2009) dynamic camouflage.",
+   "form": "free text",
+   "used_by": [
+    "OC"
+   ]
+  },
+  {
+   "id": "S-8c71dac0dd49",
+   "text": "Noad et al. (2000) 'Cultural revolution in whale songs', Nature 408:537; Garland et al. (2011) 'Dynamic horizontal cultural transmission of humpback whale song', Current Biology 21:687-691.",
+   "form": "free text",
+   "used_by": [
+    "WH"
+   ]
+  },
+  {
+   "id": "S-8cd464f242bf",
+   "text": "Slack (1973) 'Nonmetallic crystals with high thermal conductivity', Journal of Physics and Chemistry of Solids 34:321-335; Wei et al. (1993) 'Thermal conductivity of isotopically modified single crystal diamond', Physical Review Letters 70:3764.",
+   "form": "free text",
+   "used_by": [
+    "DIA"
+   ]
+  },
+  {
+   "id": "S-8d939a7fd8f6",
+   "text": "Wilson & McNaughton (1994) 'Reactivation of hippocampal ensemble memories during sleep', Science 265:676-679; Nádasdy et al. (1999) 'Replay and time compression of recurring spike sequences in the hippocampus', Journal of Neuroscience 19:9497.",
+   "form": "free text",
+   "used_by": [
+    "RA"
+   ]
+  },
+  {
+   "id": "S-8e1800d5b5b6",
+   "text": "Hansen & Autumn (2005) 'Evidence for self-cleaning in gecko setae', PNAS 102:385-389.",
+   "form": "free text",
+   "used_by": [
+    "GE"
+   ]
+  },
+  {
+   "id": "S-8f79c301ea0d",
+   "text": "Murray (1926) 'The physiological principle of minimum work', PNAS 12:207-214; Sherman (1981) 'On connecting large vessels to small', Journal of General Physiology 78:431-453.",
+   "form": "free text",
+   "used_by": [
+    "TREE_GRAPH"
+   ]
+  },
+  {
+   "id": "S-90cde95c171b",
+   "text": "Autumn et al. (2000) 'Adhesive force of a single gecko foot-hair', Nature 405:681-685; Autumn et al. (2002) 'Evidence for van der Waals adhesion in gecko setae', PNAS 99:12252-12256.",
+   "form": "free text",
+   "used_by": [
+    "GE"
+   ]
+  },
+  {
+   "id": "S-920942d917bf",
+   "text": "Thayer & Semeter (2004) 'The convergence of magnetospheric energy flux in the polar thermosphere', Journal of Atmospheric and Solar-Terrestrial Physics 66:807-824.",
+   "form": "free text",
+   "used_by": [
+    "AURORA"
+   ]
+  },
+  {
+   "id": "S-93859cb378d3",
+   "text": "Seeley TD, Visscher PK (2004) Quorum sensing during nest-site selection by honeybee swarms. Behav Ecol Sociobiol 56:594-601 [NOT OPENED]; Seeley TD (2010) Honeybee Democracy. Princeton University Press [NOT OPENED]",
+   "form": "citation marked NOT OPENED",
+   "used_by": [
+    "BEE_NEST_SITE"
+   ]
+  },
+  {
+   "id": "S-95421f11f4eb",
+   "text": "Mitton & Grant (1996) 'Genetic variation and the natural history of quaking aspen', BioScience 46:25-31; Rogers et al. (2014) Pando aspen genetics and physiology study.",
+   "form": "free text",
+   "used_by": [
+    "ASPEN"
+   ]
+  },
+  {
+   "id": "S-95b726e29a3e",
+   "text": "Holland (1975) 'Adaptation in Natural and Artificial Systems', Univ. Michigan Press; Spears & De Jong (1991) 'An analysis of multi-point crossover', Foundations of Genetic Algorithms 1:301-315.",
+   "form": "free text",
+   "used_by": [
+    "EVOL_ALG"
+   ]
+  },
+  {
+   "id": "S-968ba3d97c48",
+   "text": "Scholander & Schevill (1955) 'Counter-current vascular heat exchange in the fins of whales', Journal of Applied Physiology 8:279-282; Midtgård (1989) avian countercurrent heat exchange systems.",
+   "form": "free text",
+   "used_by": [
+    "PE"
+   ]
+  },
+  {
+   "id": "S-970252a7da9b",
+   "text": "Sabine (1900) room acoustics reverberation studies (physical echo baseline); Bhattacharya et al. (2005) 'Neural synchrony mediates temporal echo memory', NeuroReport; Vansina (1985) 'Oral Tradition as History', University of Wisconsin Press — information retention analysis across generations.",
+   "form": "free text",
+   "used_by": [
+    "ECHO"
+   ]
+  },
+  {
+   "id": "S-976613239a8b",
+   "text": "Brady et al. (1999) 'Rates and mechanisms of biotite dissolution under conditions relevant to pedogenesis', Chemical Geology 158:141-164; Banfield & Nealson (1997) 'Geomicrobiology', Mineralogical Society of America.",
+   "form": "free text",
+   "used_by": [
+    "LI"
+   ]
+  },
+  {
+   "id": "S-979fd13973e7",
+   "text": "Fourier (1822) 'Théorie Analytique de la Chaleur'; Dirichlet (1829) convergence conditions proof; modern treatment in Stein & Shakarchi (2003) 'Fourier Analysis', Princeton UP.",
+   "form": "free text",
+   "used_by": [
+    "SINE_WAVE"
+   ]
+  },
+  {
+   "id": "S-99095756ce94",
+   "text": "Inzunza et al. (1991) 'Morphology and optics of the tubular eye of the nightjar', Journal of Comparative Neurology; Reymond (1985) 'Spatial visual acuity of the eagle', Vision Research 25:1477-1491.",
+   "form": "free text",
+   "used_by": [
+    "HAW"
+   ]
+  },
+  {
+   "id": "S-992db7be0cce",
+   "text": "Rees (1987) 'Conflict of choice within pairs of Bewick's swans regarding their migratory movement', Animal Behaviour 35:1050-1059; Nolet & Drent (1998) migratory learning studies.",
+   "form": "free text",
+   "used_by": [
+    "SWAN"
+   ]
+  },
+  {
+   "id": "S-9a2825bfb772",
+   "text": "Beier et al. (1995) 'Mountain lion predation in southern California', Ecological Monographs 65:367-385; Robinson et al. (2014) 'Sink populations in carnivore management', Ecological Applications.",
+   "form": "free text",
+   "used_by": [
+    "MTN_LION"
+   ]
+  },
+  {
+   "id": "S-9b63fbc72b20",
+   "text": "Bannasch (1995) 'Hydrodynamics of penguins', in The Penguins, eds. Dann et al., Surrey Beatty; Hui (1988) 'Penguin swimming: hydrodynamics', Physiological Zoology 61:542-554.",
+   "form": "free text",
+   "used_by": [
+    "PE"
+   ]
+  },
+  {
+   "id": "S-9bf9ea6a4373",
+   "text": "Au (1993) 'The Sonar of Dolphins', Springer; Nachtigall & Moore eds. (1988) 'Animal Sonar', Plenum; Herman et al. (1998) echolocation shape discrimination studies.",
+   "form": "free text",
+   "used_by": [
+    "DOLPHIN"
+   ]
+  },
+  {
+   "id": "S-a03c28583d8b",
+   "text": "Fishler & Blum (1981) 'Random sample consensus', Communications of ACM 24:381-395; Kay (1993) 'Fundamentals of Statistical Signal Processing', Prentice Hall.",
+   "form": "free text",
+   "used_by": [
+    "RES_SENSOR"
+   ]
+  },
+  {
+   "id": "S-a04bc6fa3e69",
+   "text": "Hales (1999) 'The honeycomb conjecture', Discrete and Computational Geometry 25:1-22 (mathematical proof); Thompson (1917) 'On Growth and Form', Cambridge UP.",
+   "form": "free text",
+   "used_by": [
+    "BE"
+   ]
+  },
+  {
+   "id": "S-a2695dffd5dd",
+   "text": "Sutton (1988) 'Learning to predict by the methods of temporal differences', Machine Learning 3:9-44; Mnih et al. (2015) 'Human-level control through deep reinforcement learning', Nature 518:529-533.",
+   "form": "free text",
+   "used_by": [
+    "RL_AGENT"
+   ]
+  },
+  {
+   "id": "S-a28940c2bf7c",
+   "text": "Evenson et al. (1972) 'Speed of light from direct frequency and wavelength measurements', Physical Review Letters 29:1346; BIPM (2019) SI redefinition documents.",
+   "form": "free text",
+   "used_by": [
+    "EM_FIELD"
+   ]
+  },
+  {
+   "id": "S-a3a5015de0ef",
+   "text": "Eisner & Aneshansley (1982) 'Spray aiming in bombardier beetles', Science 215:83-85; Dean et al. (1990) 'Defensive spray of the pygmy grasshopper', Journal of Insect Physiology.",
+   "form": "free text",
+   "used_by": [
+    "BT"
+   ]
+  },
+  {
+   "id": "S-a3f844f5adaa",
+   "text": "Russell & Mehrabian (1977) 'Evidence for a three-component theory of emotion', Journal of Research in Personality 11:273-294; Watson & Tellegen (1985) 'Toward a consensual structure of mood', Psychological Bulletin 98:219-235.",
+   "form": "free text",
+   "used_by": [
+    "EMOTION_BR"
+   ]
+  },
+  {
+   "id": "S-a40e1b33eccb",
+   "text": "Huber & Thorson (1985) 'Cricket auditory communication', Scientific American 253:60-68; Doherty (1985) 'Trade-off phenomena in calling song of black field crickets', Behaviour 94:1-22.",
+   "form": "free text",
+   "used_by": [
+    "CR"
+   ]
+  },
+  {
+   "id": "S-a5313e37d610",
+   "text": "Bozinovic et al. (2013) 'Terabit-scale orbital angular momentum mode division multiplexing in fibers', Science 340:1545-1548; Gibson et al. (2004) 'Free-space information transfer using light beams carrying orbital angular momentum'.",
+   "form": "free text",
+   "used_by": [
+    "LIGHT_BR"
+   ]
+  },
+  {
+   "id": "S-a562f44b661f",
+   "text": "Rumelhart et al. (1986) 'Learning representations by back-propagating errors', Nature 323:533-536; LeCun et al. (2015) 'Deep learning', Nature 521:436-444.",
+   "form": "free text",
+   "used_by": [
+    "NEURAL_NET"
+   ]
+  },
+  {
+   "id": "S-a67ce7406a52",
+   "text": "Fahrenholz et al. (1989) 'Thermal analysis of a honey bee colony', Journal of Comparative Physiology B 159:551-560; Stabentheiner et al. (2010) metabolic rate in thermoregulating clusters.",
+   "form": "free text",
+   "used_by": [
+    "BE"
+   ]
+  },
+  {
+   "id": "S-a716552f5642",
+   "text": "Poole (1994) 'Sex differences in the behavior and social organization of African elephants', Advances in the Study of Behavior; Foley et al. (2008) elephant spatial memory study, Biology Letters.",
+   "form": "free text",
+   "used_by": [
+    "EL"
+   ]
+  },
+  {
+   "id": "S-aac1e2efe74b",
+   "text": "Payne & McVay (1971) 'Songs of Humpback Whales', Science 173:585-597; Suzuki et al. (2006) 'Information entropy of humpback whale songs', Journal of the Acoustical Society of America 119:1849-1866.",
+   "form": "free text",
+   "used_by": [
+    "HUMPBACK"
+   ]
+  },
+  {
+   "id": "S-abee7a95cd88",
+   "text": "Baudinette et al. (1992) 'Cost of locomotion in wild tammar wallabies', Journal of Experimental Biology 171:245-255.",
+   "form": "free text",
+   "used_by": [
+    "KA"
+   ]
+  },
+  {
+   "id": "S-acd95308766f",
+   "text": "Goss S, Aron S, Deneubourg JL, Pasteels JM (1989) Self-organized shortcuts in the Argentine ant. Naturwissenschaften 76:579-581 [NOT OPENED]",
+   "form": "citation marked NOT OPENED",
+   "used_by": [
+    "ANT"
+   ]
+  },
+  {
+   "id": "S-ad120380ae74",
+   "text": "Deneubourg et al. (1990), self-reinforcing trail formation studies; multiple ant genera confirmed.",
+   "form": "free text",
+   "used_by": [
+    "ANT"
+   ]
+  },
+  {
+   "id": "S-ad88a8d13a06",
+   "text": "Nobre et al. (2010) 'Farming termites determine the genetic make-up of the fungal comb', Journal of Evolutionary Biology 23:1789-1796; Poulsen et al. (2014) termite-fungus mutualism efficiency.",
+   "form": "free text",
+   "used_by": [
+    "TERMITE"
+   ]
+  },
+  {
+   "id": "S-ad935ea66aa5",
+   "text": "Euler (1758) 'Elementa Doctrinae Solidorum', Novi Commentarii Academiae Petropolitanae 4:109-140; Lakatos (1976) 'Proofs and Refutations', Cambridge UP.",
+   "form": "free text",
+   "used_by": [
+    "POLY_INT"
+   ]
+  },
+  {
+   "id": "S-af3f51b37cb9",
+   "text": "Hasler & Scholz (1983) 'Olfactory Imprinting and Homing in Salmon', Springer; Quinn (2005) 'The Behavior and Ecology of Pacific Salmon and Trout', University of Washington Press.",
+   "form": "free text",
+   "used_by": [
+    "SALMON"
+   ]
+  },
+  {
+   "id": "S-afb236f9abcf",
+   "text": "Sutskever et al. (2013) 'On the importance of initialization and momentum in deep learning', ICML; He et al. (2016) 'Deep residual learning', CVPR.",
+   "form": "free text",
+   "used_by": [
+    "NEURAL_NET"
+   ]
+  },
+  {
+   "id": "S-b246dd6085bb",
+   "text": "Bonabeau et al. (1997) 'Self-organization in social insects', Trends in Ecology & Evolution 12:188-193; Theraulaz & Bonabeau (1995) 'Modelling the collective building of complex architectures by social insects',",
+   "form": "free text",
+   "used_by": [
+    "TERMITE"
+   ]
+  },
+  {
+   "id": "S-b2f391d4bd7c",
+   "text": "Evans (1966) 'Reception of infrared radiation by Melanophila', Annals of the Entomological Society of America 59:873-875; Schmitz et al. (2001) 'Infrared detection in a beetle', Nature 386:773-774.",
+   "form": "free text",
+   "used_by": [
+    "FIRE_BT"
+   ]
+  },
+  {
+   "id": "S-b39ddbd8751a",
+   "text": "van IJzendoorn (1995) 'Adult attachment representations, parental responsiveness, and infant attachment', Psychological Bulletin 117:387-403; Bowlby (1969) 'Attachment and Loss vol 1', Basic Books.",
+   "form": "free text",
+   "used_by": [
+    "GRANDMOTHER"
+   ]
+  },
+  {
+   "id": "S-b559ca258b7a",
+   "text": "Lloyd (1966) 'Studies on the flash communication system in Photinus fireflies', Miscellaneous Publications of the University of Michigan Museum of Zoology 130:1-95; Lewis & Cronin (2018) bioluminescence review.",
+   "form": "free text",
+   "used_by": [
+    "BT"
+   ]
+  },
+  {
+   "id": "S-b6365f159a5b",
+   "text": "Packard & Sanders (1971) 'Body patterns of Octopus vulgaris', Animal Behaviour; Langridge (2009) chromatophore response timing studies; Hanlon & Messenger (2018) 'Cephalopod Behaviour', 3rd ed.",
+   "form": "free text",
+   "used_by": [
+    "OC"
+   ]
+  },
+  {
+   "id": "S-b6553f8f3a47",
+   "text": "Ying et al. (2018) 'Hierarchical graph representation learning with differentiable pooling', NeurIPS; Bianchi et al. (2020) 'Spectral clustering with graph neural networks', NeurIPS.",
+   "form": "free text",
+   "used_by": [
+    "GNN"
+   ]
+  },
+  {
+   "id": "S-b77eade4b5c4",
+   "text": "Sumbre et al. (2001) 'Octopus shows controlled arm coordination despite decentralized neural design', Nature 411:595-598; Hochner (2012) 'An almost infinite behavioral repertoire', Current Biology.",
+   "form": "free text",
+   "used_by": [
+    "OC"
+   ]
+  },
+  {
+   "id": "S-b809bfd1e9cb",
+   "text": "Goldberg (1989) 'Genetic Algorithms in Search, Optimization, and Machine Learning', Addison-Wesley; De Jong (2006) 'Evolutionary Computation: A Unified Approach', MIT Press.",
+   "form": "free text",
+   "used_by": [
+    "EVOL_ALG"
+   ]
+  },
+  {
+   "id": "S-b8dbe31df7bd",
+   "text": "Wainwright et al. (2000) 'The force velocity trade-off in ballistic tongue projection', American Zoologist 40:1099; de Groot & van Leeuwen (2004) chameleon tongue ballistics, Journal of Experimental Biology.",
+   "form": "free text",
+   "used_by": [
+    "CHAMELEON"
+   ]
+  },
+  {
+   "id": "S-b8eb2615e34d",
+   "text": "Kloppenburg (2004) 'First the Seed', 2nd ed., University of Wisconsin Press; Sthapit et al. (2013) 'Diversity at farmers' disposal', Bioversity International.",
+   "form": "free text",
+   "used_by": [
+    "SEED_KEEPER"
+   ]
+  },
+  {
+   "id": "S-bb2a3794dfe4",
+   "text": "Theraulaz & Bonabeau (1999) 'A brief history of stigmergy', Artificial Life 5:97-116; Tschinkel (2003) 'Subterranean ant nests: trace fossils past and future', Palaeogeography 192:321-333.",
+   "form": "free text",
+   "used_by": [
+    "AN"
+   ]
+  },
+  {
+   "id": "S-bc1cf1c96001",
+   "text": "Münch (1930) 'Die Stoffbewegungen in der Pflanze', Gustav Fischer; van Bel (2003) 'The phloem, a miracle of ingenuity', Plant, Cell & Environment 26:125-149.",
+   "form": "free text",
+   "used_by": [
+    "PHLOEM_XYLEM"
+   ]
+  },
+  {
+   "id": "S-bc3cf88740e3",
+   "text": "Hinton & Salakhutdinov (2006) 'Reducing the dimensionality of data with neural networks', Science 313:504-507; Bank et al. (2023) 'Autoencoders', arXiv 2003.05991.",
+   "form": "free text",
+   "used_by": [
+    "AUTOENC"
+   ]
+  },
+  {
+   "id": "S-bc73fb7c6187",
+   "text": "Fossati et al. (2011) 'Neural regeneration in the arm of Octopus vulgaris', Canadian Journal of Zoology 89:750-760; Rohrbach & Schmidtberg (2006) 'Arm regeneration in Octopus vulgaris'.",
+   "form": "free text",
+   "used_by": [
+    "OC"
+   ]
+  },
+  {
+   "id": "S-bca0d1caa4e9",
+   "text": "Lohmann et al. (2008) 'Geomagnetic imprinting: a unifying hypothesis of long-distance natal homing in salmon and sea turtles', PNAS 105:19096-19101.",
+   "form": "free text",
+   "used_by": [
+    "TU"
+   ]
+  },
+  {
+   "id": "S-be07fab1f920",
+   "text": "Hales (1999) 'The honeycomb conjecture', Discrete and Computational Geometry 25:1-22; Kepler (1611) 'Strena Seu de Nive Sexangula' (on hexagonal snow crystal geometry).",
+   "form": "free text",
+   "used_by": [
+    "HEX"
+   ]
+  },
+  {
+   "id": "S-bf5f3033e1fe",
+   "text": "Kleinhenz & Midmore (2001) 'Aspects of bamboo agronomy', Advances in Agronomy 74:99-153; Yen (2016) bamboo carbon sequestration studies.",
+   "form": "free text",
+   "used_by": [
+    "BAMBOO"
+   ]
+  },
+  {
+   "id": "S-c0ad2d4c1f1e",
+   "text": "Gazda et al. (2005) 'A division of labour with role specialization in group-hunting bottlenose dolphins', Proceedings Royal Society B 272:135-140; Smolker & Pepper (1999) behavioural ecology of cooperative foraging.",
+   "form": "free text",
+   "used_by": [
+    "DOLPHIN"
+   ]
+  },
+  {
+   "id": "S-c10fa1bb4a6b",
+   "text": "Kittel (2004) 'Introduction to Solid State Physics', 8th ed., Wiley; Authier (2001) 'Dynamical Theory of X-ray Diffraction', Oxford UP.",
+   "form": "free text",
+   "used_by": [
+    "CRYSTAL_LATTICE"
+   ]
+  },
+  {
+   "id": "S-c12c9e5deb97",
+   "text": "Mitchison (1977) 'Phyllotaxis and the Fibonacci series', Science 196:270-275; Levitov (1991) 'Energetic approach to phyllotaxis', Europhysics Letters 14:533-539.",
+   "form": "free text",
+   "used_by": [
+    "SUN"
+   ]
+  },
+  {
+   "id": "S-c1802bfa9177",
+   "text": "formal concept analysis: Ganter & Wille (1999) 'Formal Concept Analysis', Springer; cross-modal retrieval: CLIP (Radford 2021) as computational analogue.",
+   "form": "free text",
+   "used_by": [
+    "ROSETTA_SHAPE"
+   ]
+  },
+  {
+   "id": "S-c4eaa7fae25d",
+   "text": "Jaklevic et al. (1964) 'Quantum interference effects in Josephson tunneling', Physical Review Letters 12:159-160; File & Mills (1963) 'Observation of persistent current in a superconducting solenoid', Physical Review Letters 10:93-96.",
+   "form": "free text",
+   "used_by": [
+    "MAGNETIC_FIELD"
+   ]
+  },
+  {
+   "id": "S-c5d18562c667",
+   "text": "Cummins et al. (2018) 'A separated vortex ring underlies the flight of the dandelion', Nature 562:414-418.",
+   "form": "free text",
+   "used_by": [
+    "DANDELION"
+   ]
+  },
+  {
+   "id": "S-c67492bd56a8",
+   "text": "Pascal (1663) 'Traité de l'Equilibre des Liqueurs' (posthumous 1663); modern validation in ISO 4413:2010 hydraulic standard.",
+   "form": "free text",
+   "used_by": [
+    "PRESSURE"
+   ]
+  },
+  {
+   "id": "S-c70ab41a0506",
+   "text": "Watson & Crick (1953) 'A structure for deoxyribose nucleic acid', Nature 171:737-738; Pauling (1951) alpha-helix structure.",
+   "form": "free text",
+   "used_by": [
+    "MULTI_HELIX"
+   ]
+  },
+  {
+   "id": "S-c9c97ade85cf",
+   "text": "Faraday (1831) electromagnetic induction; Maxwell (1865) 'A Dynamical Theory of the Electromagnetic Field', Philosophical Transactions; Lindeman (1942) trophic efficiency studies; Odum (1957) Silver Springs energy budget, Ecological Monographs 27:55-112.",
+   "form": "free text",
+   "used_by": [
+    "FLUX"
+   ]
+  },
+  {
+   "id": "S-c9e39bea49b4",
+   "text": "Mikolov et al. (2013) 'Distributed representations of words', NeurIPS (Word2Vec); Devlin et al. (2018) 'BERT', NAACL 2019.",
+   "form": "free text",
+   "used_by": [
+    "LLM"
+   ]
+  },
+  {
+   "id": "S-ca3c91657f58",
+   "text": "Wendler et al. (1980) 'The coordination of walking leg movements in crickets', Journal of Experimental Biology 88:255-268; Hedwig & Poulet (2004) phonotaxis in Gryllus bimaculatus.",
+   "form": "free text",
+   "used_by": [
+    "CR"
+   ]
+  },
+  {
+   "id": "S-ca8251b3d59e",
+   "text": "Bäck (1996) 'Evolutionary Algorithms in Theory and Practice', Oxford UP; Fogel (2006) 'Evolutionary Computation: Toward a New Philosophy of Machine Intelligence'.",
+   "form": "free text",
+   "used_by": [
+    "EVOL_ALG"
+   ]
+  },
+  {
+   "id": "S-ca989883fbb0",
+   "text": "Bolten (2003) 'Variation in sea turtle life history patterns', in 'The Biology of Sea Turtles vol 2'; Gaspar et al. (2006) loggerhead gyre-riding behavior.",
+   "form": "free text",
+   "used_by": [
+    "TU"
+   ]
+  },
+  {
+   "id": "S-cae502f67799",
+   "text": "Linsley (1943) 'Attraction of Melanophila beetles by fire', Journal of Economic Entomology 36:341-342; Karr et al. (2004) fire-adapted beetle community ecology.",
+   "form": "free text",
+   "used_by": [
+    "FIRE_BT"
+   ]
+  },
+  {
+   "id": "S-cc9c874d8c2c",
+   "text": "Rossel (1983) 'Binocular stereopsis in an insect', Nature 302:821-822; Nityananda et al. (2016) 'Insect stereopsis demonstrated using a 3D insect cinema', Scientific Reports 6:18718.",
+   "form": "free text",
+   "used_by": [
+    "MANTIS"
+   ]
+  },
+  {
+   "id": "S-ce3e63b3fd0c",
+   "text": "Denton & Gilpin-Brown (1961) 'The buoyancy of the cuttlefish', Journal of the Marine Biological Association UK 41:319-342; Ward & Boletzky (1984) shell buoyancy studies.",
+   "form": "free text",
+   "used_by": [
+    "CU"
+   ]
+  },
+  {
+   "id": "S-cf0ec22b078c",
+   "text": "Vansina (1985) 'Oral Tradition as History', University of Wisconsin Press; Morphy (1991) 'Ancestral Connections', University of Chicago Press — knowledge transmission analysis.",
+   "form": "free text",
+   "used_by": [
+    "INDIG_FIRE"
+   ]
+  },
+  {
+   "id": "S-cf5d62eb0710",
+   "text": "Gordon (1999) long-term Pogonomyrmex colony studies; 25 years of observation.",
+   "form": "free text",
+   "used_by": [
+    "ANT"
+   ]
+  },
+  {
+   "id": "S-cfb1b28184d3",
+   "text": "Bhaskara et al. (2009) neural reorganization during metamorphosis; Truman & Reiss (1988) 'Hormonal regulation of the shape of identified motoneurons', Journal of Neuroscience 8:765-775.",
+   "form": "free text",
+   "used_by": [
+    "MONARCH"
+   ]
+  },
+  {
+   "id": "S-d050c0e07ed5",
+   "text": "Martin (1977) 'Absolute visual threshold and scotopic spectral sensitivity in the tawny owl', Nature 268:636-638; Jeffery & Tett (1982) owl rod density measurements.",
+   "form": "free text",
+   "used_by": [
+    "OW"
+   ]
+  },
+  {
+   "id": "S-d0f46f64923d",
+   "text": "Lorenzen et al. (2001) 'Physiological responses of sawgrass to flooding and drought', Estuarine, Coastal and Shelf Science 52:265-279; Davis & Ogden (1994) 'Everglades: The Ecosystem and Its Restoration', St. Lucie Press.",
+   "form": "free text",
+   "used_by": [
+    "SAWGRASS"
+   ]
+  },
+  {
+   "id": "S-d1ac7cf2c205",
+   "text": "Goris (2011) 'Infrared organs of snakes: an integral part of vision', Journal of Herpetology 45:2-14; Newman & Hartline (1982) 'The infrared vision of snakes', Scientific American 246:116-127.",
+   "form": "free text",
+   "used_by": [
+    "SN"
+   ]
+  },
+  {
+   "id": "S-d413229066c7",
+   "text": "Kennedy & Eberhart (1995) 'Particle swarm optimization', ICNN; Zhan et al. (2009) 'Adaptive particle swarm optimization', IEEE Transactions on Systems.",
+   "form": "free text",
+   "used_by": [
+    "SWARM_AI"
+   ]
+  },
+  {
+   "id": "S-d45d9ca80914",
+   "text": "Wesson (2011) 'Tokamaks', 4th ed., Oxford; JET experimental data 1983-2020 (European Fusion Development Agreement); historical comparison with linear pinch experiments (1950s-1960s) which achieved <0.01s confinement.",
+   "form": "free text",
+   "used_by": [
+    "TORUS"
+   ]
+  },
+  {
+   "id": "S-d6b8d8ef1e66",
+   "text": "Parker (1958) 'Dynamics of the interplanetary gas and magnetic fields', Astrophysical Journal 128:664-676; Stone et al. (2005) 'Voyager 1 explores the termination shock region', Science 309:2017-2020.",
+   "form": "free text",
+   "used_by": [
+    "SOLAR_WIND"
+   ]
+  },
+  {
+   "id": "S-d79784a651d1",
+   "text": "Payne et al. (1986) 'Infrasonic calls of the Asian elephant', Behavioral Ecology and Sociobiology 18:297-301; McComb et al. (2003) 'Long-distance communication of acoustic cues to social identity', Animal Behaviour.",
+   "form": "free text",
+   "used_by": [
+    "EL"
+   ]
+  },
+  {
+   "id": "S-d7cdf4176b6a",
+   "text": "Eötvös et al. (1922) 'Beiträge zum Gesetze der Proportionalität von Trägheit und Gravität', Annalen der Physik 68:11-66; Schlamminger et al. (2008) 'Test of the equivalence principle using a rotating torsion balance', Physical Review Letters 100:041101.",
+   "form": "free text",
+   "used_by": [
+    "GRAV"
+   ]
+  },
+  {
+   "id": "S-dc47204c5a2a",
+   "text": "Packard & Sanders (1971) 'Body patterns of Octopus vulgaris and maturation of the response', Animal Behaviour 19:780-790; Hanlon et al. (2009) dynamic camouflage in cephalopods.",
+   "form": "free text",
+   "used_by": [
+    "CU"
+   ]
+  },
+  {
+   "id": "S-dcbc41322a79",
+   "text": "Coolidge (1940) 'A History of Geometrical Methods', Oxford UP; algebraic geometry encoding in Griffiths & Harris (1978) 'Principles of Algebraic Geometry', Wiley.",
+   "form": "free text",
+   "used_by": [
+    "GEIS_ENC"
+   ]
+  },
+  {
+   "id": "S-dd03a167489c",
+   "text": "Dawson & Taylor (1973) 'Energetic cost of locomotion in kangaroos', Nature 246:313-314; Griffin & Kram (2000) 'Penguin waddling is not wasteful', Nature 408:929.",
+   "form": "free text",
+   "used_by": [
+    "KA"
+   ]
+  },
+  {
+   "id": "S-dfc17c17abdc",
+   "text": "Klimley et al. (2001) 'The hunting strategy of white sharks at the Farallon Islands', Marine Biology 138:25-37; Weng et al. (2007) white shark energy budget estimates.",
+   "form": "free text",
+   "used_by": [
+    "SHARK"
+   ]
+  },
+  {
+   "id": "S-e178271d748a",
+   "text": "Weimerskirch et al. (2001) 'Energy saving in flight formation', Nature 413:697-698; Portugal et al. (2014) 'Upwash exploitation and downwash avoidance by flap phasing in ibis formation flight', Nature 505:399-402.",
+   "form": "free text",
+   "used_by": [
+    "SWAN"
+   ]
+  },
+  {
+   "id": "S-e18606a00b7d",
+   "text": "Ippolito et al. (2022) 'Creative writing with an AI collaborator', EMNLP; Chakrabarty et al. (2023) 'Art or artifice? Large language models and the false promise of creativity', CHI.",
+   "form": "free text",
+   "used_by": [
+    "LLM"
+   ]
+  },
+  {
+   "id": "S-e6d93ac29a15",
+   "text": "Bradbury & Reichelt (1983) 'Fractal dimension of a coral reef at ecological scales', Marine Ecology Progress Series 10:169-171; Zawada et al. (2019) 3D structure-function relationships in coral reefs.",
+   "form": "free text",
+   "used_by": [
+    "CORAL"
+   ]
+  },
+  {
+   "id": "S-e6e40c0963c3",
+   "text": "Böhm J, Scherzer S, Krol E, et al. (2016) The Venus Flytrap Dionaea muscipula Counts Prey-Induced Action Potentials to Induce Sodium Uptake. Curr Biol 26(3):286-295. doi:10.1016/j.cub.2015.11.057. PMID 26804557 [abstract read via NCBI efetch 2026-11-24; full text not read]",
+   "form": "citation with DOI/PMID",
+   "used_by": [
+    "VENUS"
+   ]
+  },
+  {
+   "id": "S-e82708e33866",
+   "text": "Honda & Fisher (1978) 'Tree branch angle: maximizing effective leaf area', Science 199:888-890; Valladares & Niinemets (2008) 'Shade tolerance, a key plant feature of complex nature', Annual Review of Ecology Evolution.",
+   "form": "free text",
+   "used_by": [
+    "LEAF_TESS"
+   ]
+  },
+  {
+   "id": "S-e9d681f7ad5f",
+   "text": "Tero et al. (2010) 'Rules for biologically inspired adaptive network design', Science 327:439-442.",
+   "form": "free text",
+   "used_by": [
+    "SLIME"
+   ]
+  },
+  {
+   "id": "S-ea473bccaa83",
+   "text": "Elbroch & Wittmer (2012) 'Puma predatory behaviour in the Greater Yellowstone Ecosystem', Journal of Zoology 286:264-270; Laundré et al. (2001) 'Wolves, elk, and bison' Oikos 95:297-310.",
+   "form": "free text",
+   "used_by": [
+    "MTN_LION"
+   ]
+  },
+  {
+   "id": "S-eebf5e42d9c4",
+   "text": "Ott & Schaeffel (1995) 'A negatively powered lens in the chameleon', Nature 373:692-694; Pettigrew et al. (1999) chameleon eye movement analysis.",
+   "form": "free text",
+   "used_by": [
+    "CHAMELEON"
+   ]
+  },
+  {
+   "id": "S-eefbde78a762",
+   "text": "Gordon (2010) 'Ant Encounters: Interaction Networks and Colony Behavior', Princeton UP; Beshers & Fewell (2001) 'Models of division of labor in social insects', Annual Review of Entomology 46:413-440.",
+   "form": "free text",
+   "used_by": [
+    "AN"
+   ]
+  },
+  {
+   "id": "S-ef567179407c",
+   "text": "Cady (1946) 'Piezoelectricity', McGraw-Hill; Lang (2004) 'A history of pyroelectricity', Ferroelectrics 302:207-218.",
+   "form": "free text",
+   "used_by": [
+    "TOUR"
+   ]
+  },
+  {
+   "id": "S-f015a7520427",
+   "text": "Gilbert et al. (2006) 'Huddling behavior in emperor penguins', Animal Behaviour 71:521-529; Ancel et al. (2015) 'New insights into the huddling dynamics of emperor penguins', Animal Behaviour 110:91-98.",
+   "form": "free text",
+   "used_by": [
+    "PE"
+   ]
+  },
+  {
+   "id": "S-f22b317e726e",
+   "text": "Lyamin et al. (2008) 'Cetacean sleep: an unusual form of mammalian sleep', Neuroscience & Biobehavioral Reviews 32:1451-1484; Mukhametov (1984) 'Sleep in marine mammals', Experimental Brain Research suppl.",
+   "form": "free text",
+   "used_by": [
+    "DOLPHIN"
+   ]
+  },
+  {
+   "id": "S-f302e91023b2",
+   "text": "Bowen et al. (1993) 'Population structure of loggerhead turtles in the northwestern Atlantic Ocean and Mediterranean Sea', Conservation Biology 7:834-844; Luschi et al. (1998) natal homing tracking.",
+   "form": "free text",
+   "used_by": [
+    "TU"
+   ]
+  },
+  {
+   "id": "S-f3b98e31c42f",
+   "text": "Mech & Boitani (2003) 'Wolves: Behavior, Ecology, and Conservation', Univ. Chicago Press; Peterson & Ciucci (2003) predation success analysis across 3 pack studies.",
+   "form": "free text",
+   "used_by": [
+    "WOLF"
+   ]
+  },
+  {
+   "id": "S-f52ac56679c9",
+   "text": "Piraino et al. (1996) 'Reversing the life cycle', Biological Bulletin 190:302-312; De Rosa et al. (2019) transdifferentiation mechanism in Turritopsis.",
+   "form": "free text",
+   "used_by": [
+    "JELLY"
+   ]
+  },
+  {
+   "id": "S-f821bd6806aa",
+   "text": "McCormick (2001) 'Endocrine control of osmoregulation in teleost fish', American Zoologist 41:781-794; Hoar (1988) 'The physiology of smolting salmonids', in Fish Physiology vol 11.",
+   "form": "free text",
+   "used_by": [
+    "SALMON"
+   ]
+  },
+  {
+   "id": "S-f8b9258d0446",
+   "text": "Simard et al. (1997) 'Net transfer of carbon between ectomycorrhizal tree species in the field', Nature 388:579-582; Simard (2018) 'Mycorrhizal networks facilitate tree communication', Nature Plants 4:383-384.",
+   "form": "free text",
+   "used_by": [
+    "MOTHER_TREE"
+   ]
+  },
+  {
+   "id": "S-f9ae6f7e5534",
+   "text": "Read et al. (2004) 'Mycorrhizas and nutrient cycling in ecosystems', New Phytologist 163:459-474; Simard et al. (1997) 'Net transfer of carbon between tree species with shared ectomycorrhizal fungi', Nature 388:579-582.",
+   "form": "free text",
+   "used_by": [
+    "MY"
+   ]
+  },
+  {
+   "id": "S-fdf08f28d583",
+   "text": "Muscatine & Porter (1977) 'Reef corals: mutualistic symbioses adapted to nutrient-poor environments', BioScience 27:454-460; Yellowlees et al. (2008) nutrient exchange review.",
+   "form": "free text",
+   "used_by": [
+    "CORAL"
+   ]
+  },
+  {
+   "id": "S-ffdbcf284aff",
+   "text": "Bodznick & Boord (1986) mormyrid electrosensory processing; Engelmann et al. (2002) electrosensory vs mechanosensory task separation.",
+   "form": "free text",
+   "used_by": [
+    "MORMYRID"
+   ]
+  },
+  {
+   "id": "S-fff47b4b215e",
+   "text": "Ceccarelli (1994) 'Specific adaptation and breeding for marginal conditions', Euphytica 77:205-219; Cleveland et al. (2000) 'Farmer selection vs formal breeding', Economic Botany 54:73-91.",
+   "form": "free text",
+   "used_by": [
+    "SEED_KEEPER"
+   ]
+  }
+ ]
+}

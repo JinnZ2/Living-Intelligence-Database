@@ -1,0 +1,82 @@
+{
+ "entity": "EVOL_ALG",
+ "path": "ontology/ai/evolutionary_algorithm.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "8f2890504c02206b6f5517506120cd672e65b15181bb36d5d34f334fce9cb4fb",
+   "inputs": [
+    "S-b809bfd1e9cb"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EVOL_ALG",
+    "field": "attributes.fitness_selection",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.84,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8008df857b1181b1bf09b0b210efa81a30baf00f162615bb577e87beb4737b05",
+   "inputs": [
+    "S-95b726e29a3e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EVOL_ALG",
+    "field": "attributes.crossover_recombination",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.8,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "acc91c0d3399f4565f8fa259d76780f7b4ae00b0757d7cf75acc7fbc90a2cae8",
+   "inputs": [
+    "S-ca8251b3d59e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EVOL_ALG",
+    "field": "attributes.mutation_exploration",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.78,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

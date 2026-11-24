@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "92870d9c9c7247f1bdb0f34a5cbe2e9bae1c9b8418b72d71c1a0c2414ca5fb42",
+   "id": "b91d72a441140fd02535a37c4bef9e5e287578e919d95eac3191f4d8862f888e",
    "inputs": [
-    "S-e82708e33866"
+    "e82708e338662b6e7f321d0e1021b0f32e1e96dc812e6be2b8766547ea5e13a3"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "LEAF_TESS",
     "field": "attributes.light_interception_efficiency",
+    "entity_file_sha256": "79c4d1ddfcda0fa5e39d32d6647295c5885003771d118869388b8737c918c83d",
     "evidence_type": "simulation",
     "reproducibility": "high"
    },
    "value": 0.94,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

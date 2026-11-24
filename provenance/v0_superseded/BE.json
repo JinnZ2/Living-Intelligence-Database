@@ -1,0 +1,157 @@
+{
+ "entity": "BE",
+ "path": "ontology/animal/bee.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "c33930f72ff4191b49356b6eaf39eafb040f0c4ab984658d5c4a0f4e04a2627a",
+   "inputs": [
+    "S-82b3eb8372a3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.hexagonal_cell_efficiency",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.97,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "2bf1fa5ed96e48cc9082961b93a4f3c678c4f11f86e3e4d0d20309f11af705c9",
+   "inputs": [
+    "S-2915902723ac"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.waggle_dance_precision",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "338f87fe259e11710d99c21bb3d7cdda2b3fdbbed83d9514fcdcc9ca9ea0c65f",
+   "inputs": [
+    "S-a04bc6fa3e69"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.hexagonal_tessellation",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.97,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8a1f9de9f3b37dd18e4b2f4f90e7bd7c904fc1213ad0a6081c9f81139c0d17e4",
+   "inputs": [
+    "S-2db5724365e8"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.waggle_dance_communication",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "6b2b096af0a1fa1088fa0b27ca823459d2ddf89febc2a06ae5935444519bcb9b",
+   "inputs": [
+    "S-23dd81e2d056"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.swarm_coordination",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8125ac0e69e0ac59c3380570a32189c32e902fb9865a7740820390a165f1204e",
+   "inputs": [
+    "S-a67ce7406a52"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.collective_thermoregulation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

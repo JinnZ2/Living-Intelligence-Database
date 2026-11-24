@@ -4,7 +4,7 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "87ca87b80a5add5b9d31a1f5ad74b2bfe6a4dfa838927279867810c5e30a1854",
+   "id": "eb1cb1eacd63808dd2451692847e2e5b2c6365ea6a77faaf48f4eb3a5e13acbe",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -12,14 +12,16 @@
    },
    "params": {
     "entity": "MIMOSA",
-    "field": "functional_intelligence.adapts"
+    "field": "functional_intelligence.adapts",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",
@@ -28,7 +30,7 @@
    "snapshot_class": null
   },
   {
-   "id": "ca6322e31945dabc94d8640a55a514232408973e24f4e0cfa8be3541708a00f8",
+   "id": "342fe46ebd4b6a0ad97c4359bce20c1324422918b12d79ded0df0c678b122cbc",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -36,14 +38,16 @@
    },
    "params": {
     "entity": "MIMOSA",
-    "field": "functional_intelligence.signals"
+    "field": "functional_intelligence.signals",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",
@@ -52,7 +56,7 @@
    "snapshot_class": null
   },
   {
-   "id": "b629cd34480fe7a7ccea98c587edc02c43a8006243b6ef1ff4cfb9c4f44c479b",
+   "id": "d670845f7d06cf2301ad16b1c5bd498dfe3672041e3ddc51963751ed0ec0fb8b",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -60,14 +64,16 @@
    },
    "params": {
     "entity": "MIMOSA",
-    "field": "functional_intelligence.responds_to_other"
+    "field": "functional_intelligence.responds_to_other",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",
@@ -76,7 +82,7 @@
    "snapshot_class": null
   },
   {
-   "id": "8d774a226c3d541bc6567a4866c443e6b48be7e408378a709765d84da2ab3c31",
+   "id": "611a404d9e3473dd4bdfd677b2e46612645d13d6d74dfda51b192cdd83076774",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -84,14 +90,16 @@
    },
    "params": {
     "entity": "MIMOSA",
-    "field": "functional_intelligence.changes_environment"
+    "field": "functional_intelligence.changes_environment",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",
@@ -100,7 +108,7 @@
    "snapshot_class": null
   },
   {
-   "id": "3e74ddd9a7ee27a902d62c9bd78a1fc5c3575c7816624808a64945ebec7ffcbe",
+   "id": "f01379d99f00111c80d53e4a9119071c23045b8a397dda14187737cf0b831205",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -108,14 +116,16 @@
    },
    "params": {
     "entity": "MIMOSA",
-    "field": "functional_intelligence.co_adapts"
+    "field": "functional_intelligence.co_adapts",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",
@@ -124,9 +134,9 @@
    "snapshot_class": null
   },
   {
-   "id": "eba10fd2478e7efac5d7cc804207c64ab6ce3559c2df5e91eb9a27f2b38a992f",
+   "id": "b5ead323a73d1cd448fcb63c8c49b60bf5cd2a993ecae6dbe2c7e1feda017a2b",
    "inputs": [
-    "S-4d63460b8ede"
+    "4d63460b8ede30e6dcee6dc370c5c22bb2069d615d55c963f5a6df9c148b3665"
    ],
    "method": {
     "name": "manual_entry",
@@ -135,8 +145,9 @@
    "params": {
     "entity": "MIMOSA",
     "field": "functional_intelligence.contested_label[0]",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985",
     "claimed_by": [
-     "S-4d63460b8ede"
+     "4d63460b8ede30e6dcee6dc370c5c22bb2069d615d55c963f5a6df9c148b3665"
     ],
     "disputed_by": []
    },
@@ -144,16 +155,17 @@
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "20f6b4ff937b0788dd813294ffb86189524d249fe1c19d33e094a3cd990584be",
+   "id": "516a5fcc8760ecb748dd518a0b75f2e4cc0639ca47f79308fa66c510e82ad99d",
    "inputs": [
-    "S-3fdd07b2093e"
+    "3fdd07b2093e3a9cf8080e59bdc4ab1d21dd7eb177cba050db66efe9aa6d206b"
    ],
    "method": {
     "name": "manual_entry",
@@ -162,17 +174,19 @@
    "params": {
     "entity": "MIMOSA",
     "field": "functional_intelligence.contested_label[1]",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985",
     "claimed_by": [],
     "disputed_by": [
-     "S-3fdd07b2093e"
+     "3fdd07b2093e3a9cf8080e59bdc4ab1d21dd7eb177cba050db66efe9aa6d206b"
     ]
    },
    "value": "consciousness (plants in general)",
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

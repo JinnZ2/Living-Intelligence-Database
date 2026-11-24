@@ -1,0 +1,82 @@
+{
+ "entity": "CROW",
+ "path": "ontology/animal/crow.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f252864c3403232ddd69b55d93f588e8540e862a5ca4be58cd0072e62486256a",
+   "inputs": [
+    "S-035c320d8927"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CROW",
+    "field": "attributes.tool_manufacture",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "40b7e5259ccd1963805d19f6fa243edf148c377d2140307df874702154f48572",
+   "inputs": [
+    "S-334649ebe3c6"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CROW",
+    "field": "attributes.metacognition",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ca14fcf80c1acca2408febf46fe0511179640698ef6bd2ad4f25290c2c567e16",
+   "inputs": [
+    "S-028f1c310383"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CROW",
+    "field": "attributes.cultural_transmission",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

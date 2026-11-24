@@ -1,12 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "provenance.schema.json",
-  "title": "provenance",
-  "description": "Provenance chain for one entity: a list of hashed steps, append-only. The chain is stored in provenance/<entity_id>.json; an entity file may carry the same block, or null, or leave the key out. Null means no information. See docs/provenance.md.",
-  "type": [
-    "object",
-    "null"
-  ],
+  "$id": "provenance_step.schema.json",
+  "title": "provenance step file",
+  "description": "One file under provenance/: the append-only list of hashed steps for one entity. Validates provenance/<entity_id>.json only. No entity schema references this file and no entity carries a provenance key. See docs/provenance_chain.md.",
+  "type": "object",
   "additionalProperties": false,
   "required": [
     "entity",
@@ -44,6 +41,7 @@
           "assumptions",
           "scope",
           "status",
+          "status_note",
           "supersedes",
           "declared_pre_run",
           "claim",
@@ -54,14 +52,15 @@
           "id": {
             "type": "string",
             "pattern": "^[0-9a-f]{64}$",
-            "description": "sha256 of the canonical JSON of {inputs, method, params, value}."
+            "description": "sha256 of the canonical JSON of {inputs, method, params, value}. params holds the entity file sha256 and the field path, so the id covers entity file hash + field path + value."
           },
           "inputs": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
             },
-            "description": "Parent step ids or source ids (S-...). Empty when the field has no source."
+            "description": "Parent step ids or source ids (registry/sources.json). Empty when the field has no source."
           },
           "method": {
             "type": "object",
@@ -81,18 +80,39 @@
           },
           "params": {
             "type": "object",
-            "description": "Always holds entity and field."
+            "required": [
+              "entity",
+              "field",
+              "entity_file_sha256"
+            ],
+            "properties": {
+              "entity": {
+                "type": "string"
+              },
+              "field": {
+                "type": "string"
+              },
+              "entity_file_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
           },
           "value": {
             "description": "The field's value as found. Null when the field is null."
           },
           "assumptions": {
-            "type": "array",
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "type": "string",
               "pattern": "^A-[0-9a-f]{12}$"
             },
-            "description": "Ids in registry/assumptions.json."
+            "description": "Ids in registry/assumptions.json. Null = not assessed. [] = read, none named."
           },
           "scope": {
             "type": [
@@ -109,6 +129,12 @@
             "pattern": "^(OBSERVED|PROPOSED|DERIVED|DERIVED \\(basis: (OBSERVED|PROPOSED|DERIVED)\\))$",
             "description": "The field's existing tag. Null = the field carries none."
           },
+          "status_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "supersedes": {
             "type": [
               "string",
@@ -121,7 +147,7 @@
               "string",
               "null"
             ],
-            "description": "Commit that added registry/DECLARED.json."
+            "description": "Latest commit that changed registry/DECLARED.json before the build."
           },
           "claim": {
             "type": [
@@ -188,8 +214,7 @@
               "CHAOTIC_REFRESH",
               "SUMMARY_ONLY",
               null
-            ],
-            "description": "Set on a summarized or coarse record; null otherwise."
+            ]
           }
         }
       }

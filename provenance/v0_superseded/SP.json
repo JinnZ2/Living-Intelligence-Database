@@ -1,0 +1,82 @@
+{
+ "entity": "SP",
+ "path": "ontology/animal/spider.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "529dc82f3648a788bdf53a4e880ec0ed2a5612f987b45dead5056dd07b5a4a86",
+   "inputs": [
+    "S-8a2a71631e61"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SP",
+    "field": "attributes.web_architecture",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0fe42728e3960078c6be22bcf4e1780abe291798e14d7acff579c82f17687f5d",
+   "inputs": [
+    "S-0ee670833b45"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SP",
+    "field": "attributes.vibration_analysis",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "da86223f654c9bec6273f1c052efd58e7135d4a148997cc8b767c04d1cbe9bb9",
+   "inputs": [
+    "S-2ce9f0318bb2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SP",
+    "field": "attributes.silk_tensile_engineering",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

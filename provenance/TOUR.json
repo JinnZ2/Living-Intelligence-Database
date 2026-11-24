@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "67c71ccd4c642b62d5ff108faf167d822b12b70cac9f91524ccf3da796f33ade",
+   "id": "f9e125a38ba63b14525f20b148a599c244b642b75df20b98a6e2e2093d2d4b59",
    "inputs": [
-    "S-ef567179407c"
+    "ef567179407cc4258aaa42dc26992c1d524a9d745acff0773a291a003d51ddb8"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "TOUR",
     "field": "attributes.pyroelectric_sensitivity",
+    "entity_file_sha256": "720f363a47299d9ab43c556632ec3fa6c5e472d380b1798ff0cfcb28891954f0",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.89,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

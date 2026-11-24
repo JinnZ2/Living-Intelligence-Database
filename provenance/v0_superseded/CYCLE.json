@@ -1,0 +1,32 @@
+{
+ "entity": "CYCLE",
+ "path": "ontology/temporal/cycle.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "c9ba941c04fba65501d6ce287d3a393e26d6f7b59a874f5b51f09a92c473842a",
+   "inputs": [
+    "S-2c4692317d09"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CYCLE",
+    "field": "attributes.phase_lock_fidelity",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "fb1282a9fb21efff5a4a0cbd0ec1fc98513d0aaaadb915f643f455079ffbe59d",
+   "id": "907a652c560b986a30a43fcf5750318eddb740dc881d28115463eaab3861ad2e",
    "inputs": [
-    "S-52f7918068f8"
+    "52f7918068f8771e55f8784b820c5e0a0b05ddc22386df5fce6393e152e38a96"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "FOLD",
     "field": "attributes.causal_compression_ratio",
+    "entity_file_sha256": "d4f38950259431cfff2665b0498e7f063ae8dc7610ca8a8eab14a3f9a73d65e3",
     "evidence_type": "mathematical_proof",
     "reproducibility": "high"
    },
    "value": 0.87,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

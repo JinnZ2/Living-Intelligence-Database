@@ -1,0 +1,32 @@
+{
+ "entity": "FE",
+ "path": "ontology/plant/fern.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "74e7e5eb4ad1a058d227ab51e92b78d74e909f7ff47972cd34bcf519df1d21bb",
+   "inputs": [
+    "S-02a7bfbdcba4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FE",
+    "field": "attributes.shade_photosynthetic_efficiency",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

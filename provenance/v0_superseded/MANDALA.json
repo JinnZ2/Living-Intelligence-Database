@@ -1,0 +1,32 @@
+{
+ "entity": "MANDALA",
+ "path": "ontology/shape/mandala_bloom.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f9c7e4fb52e10315e7fe71d7654854e6f7f90a37927f38d0c6c0fc9551ac9525",
+   "inputs": [
+    "S-3939413c31e7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MANDALA",
+    "field": "attributes.radial_symmetry_order",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

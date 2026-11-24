@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "f3233806b4fe6890a8fc48f94d57ea002a1707b33e3f2633db49bf3f2dfb014b",
+   "id": "758d333131598bfab34c86cc38c36801c34257c7d5d9e8be3ddf9e154fe7e58e",
    "inputs": [
-    "S-93859cb378d3"
+    "93859cb378d354cb54864c26904cbc15a2b4f6281a28137388a279fa6eda344a"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,11 +15,12 @@
    "params": {
     "entity": "BEE_NEST_SITE",
     "field": "attributes.quorum_threshold_at_site",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1",
     "evidence_type": "not_assessed",
     "reproducibility": "not_assessed"
    },
    "value": null,
-   "assumptions": [],
+   "assumptions": null,
    "scope": {
     "condition": {
      "environment": "a swarm that has left its hive and is choosing a new cavity",
@@ -29,8 +30,9 @@
     }
    },
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -39,9 +41,9 @@
    "snapshot_class": null
   },
   {
-   "id": "f9ab2d56373e863a3f87c49b761767bf96946d3ce79a5b3c5a505c5e20b63bc9",
+   "id": "91c1d366e1caee3c214a7c97415fe7576f25893821b42297a9ec200bbcd832f9",
    "inputs": [
-    "S-93859cb378d3"
+    "93859cb378d354cb54864c26904cbc15a2b4f6281a28137388a279fa6eda344a"
    ],
    "method": {
     "name": "manual_entry",
@@ -50,11 +52,12 @@
    "params": {
     "entity": "BEE_NEST_SITE",
     "field": "attributes.time_to_decision",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1",
     "evidence_type": "not_assessed",
     "reproducibility": "not_assessed"
    },
    "value": null,
-   "assumptions": [],
+   "assumptions": null,
    "scope": {
     "condition": {
      "environment": "a swarm that has left its hive and is choosing a new cavity",
@@ -64,8 +67,9 @@
     }
    },
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -74,9 +78,9 @@
    "snapshot_class": null
   },
   {
-   "id": "a9905b2a1411d7814fb5ee3114be33998f685ff76aa66ede0576cb7d61408f06",
+   "id": "18ae8923f8e83102d53a51f871fd3874455ab8e7011a39b17b0918593bcd8077",
    "inputs": [
-    "S-93859cb378d3"
+    "93859cb378d354cb54864c26904cbc15a2b4f6281a28137388a279fa6eda344a"
    ],
    "method": {
     "name": "manual_entry",
@@ -85,11 +89,12 @@
    "params": {
     "entity": "BEE_NEST_SITE",
     "field": "attributes.choice_accuracy",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1",
     "evidence_type": "not_assessed",
     "reproducibility": "not_assessed"
    },
    "value": null,
-   "assumptions": [],
+   "assumptions": null,
    "scope": {
     "condition": {
      "environment": "a swarm that has left its hive and is choosing a new cavity",
@@ -99,8 +104,9 @@
     }
    },
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -109,7 +115,7 @@
    "snapshot_class": null
   },
   {
-   "id": "6e78cac257e637ed6c1b95c5bc3b409c370ac0dfe8a046db3677fa6875bb9e22",
+   "id": "39bddfb8a46d157b05726f7d66919e0fbbc25738c884f41036c813fb99a71f72",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -117,14 +123,16 @@
    },
    "params": {
     "entity": "BEE_NEST_SITE",
-    "field": "coordination.carrier"
+    "field": "coordination.carrier",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -133,7 +141,7 @@
    "snapshot_class": null
   },
   {
-   "id": "49738c6e36364b8a3b8b21121cda04272e03e38807ced08068bffbcd0c853a5d",
+   "id": "6b5df8ae2b34238e27420121449fc9eb6a4858295409d88adde181cc3d488dea",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -141,14 +149,16 @@
    },
    "params": {
     "entity": "BEE_NEST_SITE",
-    "field": "coordination.signal"
+    "field": "coordination.signal",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -157,7 +167,7 @@
    "snapshot_class": null
   },
   {
-   "id": "722128b44212bbf22df2b8ec8e8ec9cf2fb50603bf4daf335fcbb3ca729279e7",
+   "id": "f421ef9458dd281724588a035037daba4de6bca020415c6d0336c488038ab5ff",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -165,14 +175,16 @@
    },
    "params": {
     "entity": "BEE_NEST_SITE",
-    "field": "coordination.record"
+    "field": "coordination.record",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -181,7 +193,7 @@
    "snapshot_class": null
   },
   {
-   "id": "f35e0326b4ef1d94f58bd16b795770c6bbf6bef1fe5c10b90bf1ff97ff4ba3bf",
+   "id": "533155fc85147359802fa7668f7c1d226c3bcc4439cb2e0f823eec0452c3205f",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -189,14 +201,16 @@
    },
    "params": {
     "entity": "BEE_NEST_SITE",
-    "field": "coordination.closure"
+    "field": "coordination.closure",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -205,7 +219,7 @@
    "snapshot_class": null
   },
   {
-   "id": "5aaea15fe1645e919dd27027b38810273c5c9f82f0cac311e07c455531324476",
+   "id": "69c1a3c6b5208bc287e25e682f37a88374ef25c83ab0c0b007d5a88af4ccc877",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -213,14 +227,16 @@
    },
    "params": {
     "entity": "BEE_NEST_SITE",
-    "field": "coordination.trust_basis"
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -229,7 +245,7 @@
    "snapshot_class": null
   },
   {
-   "id": "2c25b7619712d5624e775af88a2a45f99c4ed2ece5334ee0723688a4ae13104b",
+   "id": "4616ed6d56516a4f8eb9655dba113eb71fcfa529ab26f96f39d775bc2065deb0",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -237,14 +253,16 @@
    },
    "params": {
     "entity": "BEE_NEST_SITE",
-    "field": "coordination.energy_cost"
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -253,7 +271,7 @@
    "snapshot_class": null
   },
   {
-   "id": "eac94040ebbbeceb7e888fa072de59b33186fa67dc22542171dc30f0b0735f0c",
+   "id": "b88e899845f715d5af1b900cf8c36df574f8d1d8eb1ca783ea8a5f51dc0249ff",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -261,14 +279,16 @@
    },
    "params": {
     "entity": "BEE_NEST_SITE",
-    "field": "coordination.loop_topology"
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "VOID",
@@ -277,9 +297,9 @@
    "snapshot_class": null
   },
   {
-   "id": "d015ecd48c1ddad84509f8ce7a4c0ba3a60b86f33c4028a5c2b915dc40a05b43",
+   "id": "cafb964554e63c83ea73fda19dd2993e71043131135395a1b7694e8bad8aeb5a",
    "inputs": [
-    "S-0123fa592deb"
+    "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
    ],
    "method": {
     "name": "manual_entry",
@@ -287,7 +307,8 @@
    },
    "params": {
     "entity": "BEE_NEST_SITE",
-    "field": "coordination.assumption_trace"
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
    },
    "value": [
     "coordination requires money",
@@ -303,8 +324,9 @@
    ],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

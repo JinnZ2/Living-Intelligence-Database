@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "8f2890504c02206b6f5517506120cd672e65b15181bb36d5d34f334fce9cb4fb",
+   "id": "11e7367b665345deeb16e4aa60d89156dd9a60c72903eeaeacc834575014e9e1",
    "inputs": [
-    "S-b809bfd1e9cb"
+    "b809bfd1e9cb549909102e0cde2dfada6bf4f54e430ec33c9d68f8d6e6febb5f"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "EVOL_ALG",
     "field": "attributes.fitness_selection",
+    "entity_file_sha256": "ba75881338c9d983ebd798aad4b475db3befa5b4b7eb7f36294428c9d52875be",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.84,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "8008df857b1181b1bf09b0b210efa81a30baf00f162615bb577e87beb4737b05",
+   "id": "5875ab87709414ae806458b02089f04b77bb2ed174777f6c09450bf44ac998cc",
    "inputs": [
-    "S-95b726e29a3e"
+    "95b726e29a3e769b9c05c8ee4c0afeb5870fc7cd75a106b8fa2bea5f014ffe7b"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "EVOL_ALG",
     "field": "attributes.crossover_recombination",
+    "entity_file_sha256": "ba75881338c9d983ebd798aad4b475db3befa5b4b7eb7f36294428c9d52875be",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.8,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "acc91c0d3399f4565f8fa259d76780f7b4ae00b0757d7cf75acc7fbc90a2cae8",
+   "id": "05195a7a9017662d3fc0b0a39b8771ff4377c47c7c0a8da18ccefeda4719a8bf",
    "inputs": [
-    "S-ca8251b3d59e"
+    "ca8251b3d59e76507bbba4cb27a5b7c39a30ce284a530eb7ac2be94b0c25cef0"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "EVOL_ALG",
     "field": "attributes.mutation_exploration",
+    "entity_file_sha256": "ba75881338c9d983ebd798aad4b475db3befa5b4b7eb7f36294428c9d52875be",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.78,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

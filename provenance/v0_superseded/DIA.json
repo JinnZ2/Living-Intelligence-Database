@@ -1,0 +1,32 @@
+{
+ "entity": "DIA",
+ "path": "ontology/crystal/diamond.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "4f566285d35ff0a2fb0c4e42ae8e9a04a5cdc4afc211e7e0760c4e026e419056",
+   "inputs": [
+    "S-8cd464f242bf"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DIA",
+    "field": "attributes.thermal_conductivity_ratio",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.97,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

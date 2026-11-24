@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "61cb6918e938c0d02d43d0650c0775791a8f3a3815915371fef9c04ca4f52d88",
+   "id": "2b6725b4957f9d0af3198b226dccbce922014243cc75ef0e7ef14f671072bd3e",
    "inputs": [
-    "S-3f4549e1a138"
+    "3f4549e1a138613ed55e77a5ccffd8ca21a0c118278fda34395f30932a40f742"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "WH",
     "field": "attributes.long_range_acoustic",
+    "entity_file_sha256": "e43d97fd75c3c6a18f8b443ba6d166d5541d1f8bb321297f84066810bca28ca7",
     "evidence_type": "field_observation",
     "reproducibility": "high"
    },
    "value": 0.93,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "72da744a671f30b3546a19ac31db0a120d9901387ba675d97b802cf204ffa304",
+   "id": "4ca15ddee13596ec884c0fb26d851d9432762ac72e181004f73a6876d45cee3e",
    "inputs": [
-    "S-165a941ddc7f"
+    "165a941ddc7f948e9db883010946bb1a232159691315ae08350f3b7a90654689"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "WH",
     "field": "attributes.magnetic_navigation",
+    "entity_file_sha256": "e43d97fd75c3c6a18f8b443ba6d166d5541d1f8bb321297f84066810bca28ca7",
     "evidence_type": "field_observation",
     "reproducibility": "medium"
    },
    "value": 0.91,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "a60d734aa1c359f6b5c337c8bce12d76b877329e2860248c28f2a3061e2f0735",
+   "id": "87cacf4f296357308622c5070dc79e82bfe698df234876134cc9e0a430598360",
    "inputs": [
-    "S-8c71dac0dd49"
+    "8c71dac0dd4978228ad83a65160c686712713eef83590c4ff0aee1496def9bb3"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,15 +69,17 @@
    "params": {
     "entity": "WH",
     "field": "attributes.cultural_song_transmission",
+    "entity_file_sha256": "e43d97fd75c3c6a18f8b443ba6d166d5541d1f8bb321297f84066810bca28ca7",
     "evidence_type": "cyclic_observation",
     "reproducibility": "high"
    },
    "value": 0.89,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

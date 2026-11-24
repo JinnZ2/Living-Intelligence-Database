@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "cf78c6ac5e8e963b24e1e8a779f6719124098168f9c8f6df6f6609c729a2a0e4",
+   "id": "d0116e8443f75320fd0308f017e2f7f17701d93636f3cec71f43a3b3aa065316",
    "inputs": [
-    "S-5bea5baaff13"
+    "5bea5baaff13b5cdcd038840e71f43a49f99ea5ae990f486f03c77c9a98d6815"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,23 +15,25 @@
    "params": {
     "entity": "MORMYRID",
     "field": "attributes.active_electrolocation",
+    "entity_file_sha256": "365d8c1678c1c4e2a4eae85777f112f0b52e70dde850c151b5c492e43e13feb6",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.96,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "03e0aa9c816ca34549a7c7636e507ca971fffd639ec2e6c8d444118aec0d6fc6",
+   "id": "b94d8f380a866f62bec93fee36e0dd30dc090b7f98984e5888ea3c9075decfd1",
    "inputs": [
-    "S-89472de72cbd"
+    "89472de72cbdaff28d7c07b3c539d64084db91dbd04090db36c408a717d0b90a"
    ],
    "method": {
     "name": "manual_entry",
@@ -40,23 +42,25 @@
    "params": {
     "entity": "MORMYRID",
     "field": "attributes.eod_communication",
+    "entity_file_sha256": "365d8c1678c1c4e2a4eae85777f112f0b52e70dde850c151b5c492e43e13feb6",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.94,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "2b7d5dc161c96f43b68e742b6459af3728be4cc6fa81cd1bf658475ba5bed53e",
+   "id": "2503315cfa32f916a96707ce4514a17f91ef4e2b646415de90fc048ead8b9126",
    "inputs": [
-    "S-ffdbcf284aff"
+    "ffdbcf284aff79b04beb34a7d053ecb9c5836bf8331ffd0a9151f859eca85ea9"
    ],
    "method": {
     "name": "manual_entry",
@@ -65,23 +69,25 @@
    "params": {
     "entity": "MORMYRID",
     "field": "attributes.dual_channel_processing",
+    "entity_file_sha256": "365d8c1678c1c4e2a4eae85777f112f0b52e70dde850c151b5c492e43e13feb6",
     "evidence_type": "lab_measurement",
     "reproducibility": "medium"
    },
    "value": 0.93,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "f50655ca18f44d06c86bcc83170cd727c6d5997a4ddff332516fa03b937582c2",
+   "id": "ea2ec6ef4590ef3e8ebdc0398bca07c4b3bf21faf484f107f7cbe89b4478aea3",
    "inputs": [
-    "S-6ef3d475b788"
+    "6ef3d475b788b42d6986117f2d89c0bc84c84fbdb09b87f060b4ce649f092742"
    ],
    "method": {
     "name": "manual_entry",
@@ -90,15 +96,17 @@
    "params": {
     "entity": "MORMYRID",
     "field": "attributes.temporal_microsecond_precision",
+    "entity_file_sha256": "365d8c1678c1c4e2a4eae85777f112f0b52e70dde850c151b5c492e43e13feb6",
     "evidence_type": "lab_measurement",
     "reproducibility": "high"
    },
    "value": 0.97,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

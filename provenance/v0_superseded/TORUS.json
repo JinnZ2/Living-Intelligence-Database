@@ -1,0 +1,32 @@
+{
+ "entity": "TORUS",
+ "path": "ontology/shape/torus.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2c1ed7dbc1e883963489a3fd36129f8b2886419d83320ce6db53864133d59836",
+   "inputs": [
+    "S-d45d9ca80914"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TORUS",
+    "field": "attributes.toroidal_confinement_advantage",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

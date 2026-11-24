@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "1205ec86d4767c564a73e824c55d6d4c59032cb58422a2935029d603a18d9421",
+   "id": "b4a10947c25c7c63d74964c1b89a07c7c1c73cf52f0da21eff62bda0b43176e8",
    "inputs": [
-    "S-6a5e0e322bca"
+    "6a5e0e322bcae3f2716f30fe3614c2335e4be13c95415f436afdb1ab255021e4"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "BIOGRID2",
     "field": "attributes.network_resilience_index",
+    "entity_file_sha256": "46636236185a81d070323847a89b8fd9ff17b702ea344c9b895cd283786cd176",
     "evidence_type": "simulation",
     "reproducibility": "high"
    },
    "value": 0.94,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

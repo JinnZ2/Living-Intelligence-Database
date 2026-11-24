@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "43bed82c1905bd49170de0105c4d9b96760bd70254dcdeead505093a61a555b6",
+   "id": "9f12c128d63b6cbf04d51bbfadc948d162248d2e39774ca41aba87cf62aef0d1",
    "inputs": [
-    "S-5958170d9ad5"
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
    ],
    "method": {
     "name": "manual_entry",
@@ -14,22 +14,24 @@
    },
    "params": {
     "entity": "STONE_LEDGER",
-    "field": "coordination.carrier"
+    "field": "coordination.carrier",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
    },
    "value": "Etched stone or clay recording what is owed on a mismatch.",
    "assumptions": [],
    "scope": null,
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "c3cbce5af3666eb438f78e713835f5f45d5a43c632fb060d085dc7cc25d0f788",
+   "id": "3a15f89e5806134e366c7e14ce61c91f51032fd4f5e7c5b11734ea8a03c714e7",
    "inputs": [
-    "S-5958170d9ad5"
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
    ],
    "method": {
     "name": "manual_entry",
@@ -37,22 +39,24 @@
    },
    "params": {
     "entity": "STONE_LEDGER",
-    "field": "coordination.signal"
+    "field": "coordination.signal",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
    },
    "value": "The mismatch itself: an unequal exchange between parties.",
    "assumptions": [],
    "scope": null,
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "ce6a9735b0f25e3beafb5cdc4f7959c789532235d8c9f51f7f629bf60f7a652f",
+   "id": "2a2bd02960f98047f14148631634a6bba1aa411ac16ed9b36f27c309bbbff309",
    "inputs": [
-    "S-5958170d9ad5"
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
    ],
    "method": {
     "name": "manual_entry",
@@ -60,22 +64,24 @@
    },
    "params": {
     "entity": "STONE_LEDGER",
-    "field": "coordination.record"
+    "field": "coordination.record",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
    },
    "value": "A shared physical object, held by the parties.",
    "assumptions": [],
    "scope": null,
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "ef008cbc878272fec64d98c7facd3a4b3e8e4f8a2be8dc9678a8cb0a92e86c29",
+   "id": "abe4e16eb53aa935cf072f19d4175167dabcd9509ca6896854aaf68aea4befe5",
    "inputs": [
-    "S-5958170d9ad5"
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
    ],
    "method": {
     "name": "manual_entry",
@@ -83,22 +89,24 @@
    },
    "params": {
     "entity": "STONE_LEDGER",
-    "field": "coordination.closure"
+    "field": "coordination.closure",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
    },
    "value": "Art is made over the record when the obligation completes. The record is transformed, not destroyed.",
    "assumptions": [],
    "scope": null,
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "240c3cdde0a27359a982a5b3386a7b300f1c1f28261874bd139f1edddb0ca98a",
+   "id": "a517a6442b517a83c7dd5ede3d88fef2aac42f4a61412f718a1b35fed1e891d5",
    "inputs": [
-    "S-5958170d9ad5"
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
    ],
    "method": {
     "name": "manual_entry",
@@ -106,20 +114,22 @@
    },
    "params": {
     "entity": "STONE_LEDGER",
-    "field": "coordination.trust_basis"
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
    },
    "value": "The count of completed-record artworks from many different people.",
    "assumptions": [],
    "scope": null,
    "status": "OBSERVED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "351fe9890f821372fbbb55cee7e91015e783875e3665d39d092273e84cd9206a",
+   "id": "e4fb6036c8a276148c1110ac472c78d9598594bffeccf011e549937f2c55db13",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -127,14 +137,16 @@
    },
    "params": {
     "entity": "STONE_LEDGER",
-    "field": "coordination.energy_cost"
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
    },
    "value": null,
    "assumptions": [],
    "scope": null,
    "status": null,
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": {
     "state": "LEXICAL_VOID",
@@ -143,9 +155,9 @@
    "snapshot_class": null
   },
   {
-   "id": "2624b572f790d2c8cc29387ad88902bd77be50d433a949ad74611ec2ff710871",
+   "id": "304602a5ef6dbdfd4844d7d1f7c1b538db6ff1b48c5ecd3b674ddecc0d61ce1a",
    "inputs": [
-    "S-5958170d9ad5"
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
    ],
    "method": {
     "name": "manual_entry",
@@ -153,7 +165,8 @@
    },
    "params": {
     "entity": "STONE_LEDGER",
-    "field": "coordination.loop_topology"
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
    },
    "value": {
     "cycles": [
@@ -180,16 +193,17 @@
    "assumptions": [],
    "scope": null,
    "status": "DERIVED (basis: OBSERVED)",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "df7cd56c53bce39266a9c9e78c687a2a723b2fe496bd732e8d37e74510ee1b81",
+   "id": "9e0fc97a4cc183a16e000ef0212d62c3c320e779b2558bba89700e4e12b20d23",
    "inputs": [
-    "S-5958170d9ad5"
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
    ],
    "method": {
     "name": "manual_entry",
@@ -197,7 +211,8 @@
    },
    "params": {
     "entity": "STONE_LEDGER",
-    "field": "coordination.assumption_trace"
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
    },
    "value": [
     "coordination requires money",
@@ -211,8 +226,9 @@
    ],
    "scope": null,
    "status": "PROPOSED",
+   "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null

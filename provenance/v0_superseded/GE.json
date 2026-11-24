@@ -1,0 +1,82 @@
+{
+ "entity": "GE",
+ "path": "ontology/animal/gecko.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "5149aab1d268281929bc35b87bf390b9ef7c9f38b1ff2a430fcf68fc22418eb0",
+   "inputs": [
+    "S-90cde95c171b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GE",
+    "field": "attributes.setae_adhesion",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8eea07ef20950e8ce0364c02e15c06d05da69943056d710937298142c8d7b899",
+   "inputs": [
+    "S-8e1800d5b5b6"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GE",
+    "field": "attributes.self_cleaning_locomotion",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "56b27310188d0b2f6b24745aad0c6142554ea3ca7e20306fd1f8fb00c42641a4",
+   "inputs": [
+    "S-5189d45dd39c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GE",
+    "field": "attributes.directional_grip",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

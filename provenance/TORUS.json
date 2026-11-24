@@ -4,9 +4,9 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "2c1ed7dbc1e883963489a3fd36129f8b2886419d83320ce6db53864133d59836",
+   "id": "ae3a96408b2d4011a8935ea74873ee818e185e168d3adac82bb7af5c33f12051",
    "inputs": [
-    "S-d45d9ca80914"
+    "d45d9ca8091460189e74c1fb2c77cacbd2ea56d6425c5eb52080dcd6eac43d72"
    ],
    "method": {
     "name": "manual_entry",
@@ -15,15 +15,17 @@
    "params": {
     "entity": "TORUS",
     "field": "attributes.toroidal_confinement_advantage",
+    "entity_file_sha256": "1b6391520274f9cf0111cf2aeb54a2474c7ade4769839b9e3ff07374d7159e16",
     "evidence_type": "cyclic_observation",
     "reproducibility": "high"
    },
    "value": 0.89,
-   "assumptions": [],
+   "assumptions": null,
    "scope": null,
    "status": null,
+   "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
    "claim": null,
    "void": null,
    "snapshot_class": null
