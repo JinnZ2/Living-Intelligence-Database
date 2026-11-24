@@ -170,6 +170,9 @@ One step per field: `attributes.<name>`, `coordination.<field>`,
 
 No step uses this table. It is written here so it can be argued with.
 
+Status comes from reading the source, not from its evidence_type. The table
+stays not applied (confirmed by order, amendment "stratified hold-out").
+
 | `evidence_type` (count of attribute values) | proposed status | open point |
 |---|---|---|
 | `lab_measurement` (132), `field_observation` (47), `cyclic_observation` (24) | OBSERVED | only if the source is opened and says so; none was opened |

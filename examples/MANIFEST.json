@@ -2,8 +2,8 @@
  "snapshot_class": "SUMMARY_ONLY",
  "note": "Counts and the hold-out list for examples/lid_examples.jsonl. No model was trained. A derivation_path is an ordering of record fields by declared role; it does not claim that one field was derived from another.",
  "declared": "registry/DECLARED.json, amendment 'physics usage: example export'",
- "declared_commit": "f8feae990b494c39e9493b92956f14bd7ae83cd5",
- "sha256": "0ce6016a5a5d2e77e8a219046cf0aab243455ac2569150f502395ac22c90eb4c",
+ "declared_commit": "7ce237c2beb1ca01b96f29df28c144aded91222c",
+ "sha256": "a0d690c57d78726955a3186e37fc6d27bbffd719c3c526bfe58284fa5714274e",
  "examples": 60,
  "entities_with_examples": [
   "ANT",
@@ -16,13 +16,41 @@
   "VENUS"
  ],
  "holdout_entities": [
-  "BEE_NEST_SITE",
-  "MY"
+  "VENUS",
+  "BEE_NEST_SITE"
  ],
  "holdout_fraction": 0.2,
+ "holdout_strata": {
+  "key": "has_statused_field",
+  "strata": {
+   "yes": {
+    "entities": [
+     "VENUS",
+     "ANT",
+     "STONE_LEDGER"
+    ],
+    "holdout": [
+     "VENUS"
+    ]
+   },
+   "no": {
+    "entities": [
+     "BEE_NEST_SITE",
+     "MY",
+     "SLIME",
+     "QUORUM",
+     "MIMOSA"
+    ],
+    "holdout": [
+     "BEE_NEST_SITE"
+    ]
+   }
+  }
+ },
+ "measurement_note": "n too small to measure: the split shows the rule works; no rate computed on it is a measurement",
  "by_split": {
-  "train": 43,
-  "holdout": 17
+  "train": 41,
+  "holdout": 19
  },
  "by_kind": {
   "CONTESTED_LABEL": {
@@ -34,16 +62,16 @@
    "holdout": 0
   },
   "OBSERVED": {
-   "train": 11,
-   "holdout": 0
+   "train": 5,
+   "holdout": 6
   },
   "PROPOSED": {
-   "train": 6,
-   "holdout": 0
+   "train": 5,
+   "holdout": 1
   },
   "UNMEASURED": {
-   "train": 23,
-   "holdout": 17
+   "train": 28,
+   "holdout": 12
   }
  },
  "by_status": {
@@ -52,22 +80,22 @@
    "holdout": 0
   },
   "OBSERVED": {
-   "train": 11,
-   "holdout": 0
+   "train": 5,
+   "holdout": 6
   },
   "PROPOSED": {
-   "train": 6,
-   "holdout": 0
+   "train": 5,
+   "holdout": 1
   },
   "null": {
-   "train": 25,
-   "holdout": 17
+   "train": 30,
+   "holdout": 12
   }
  },
  "by_ontology": {
   "plant": {
-   "train": 30,
-   "holdout": 7
+   "train": 28,
+   "holdout": 9
   },
   "social": {
    "train": 13,

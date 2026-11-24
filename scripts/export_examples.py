@@ -183,13 +183,26 @@ def build(root=ROOT):
     return examples, excluded, info
 
 
+STATUSED_KINDS = ("OBSERVED", "DERIVED", "PROPOSED")
+
+
 def split(examples):
-    """Hold out whole entities: first ceil(0.2 * n) by sha256 of the entity id."""
-    ents = sorted({e["entity"] for e in examples}, key=lambda x: hashlib.sha256(x.encode("utf-8")).hexdigest())
-    held = ents[:math.ceil(HOLDOUT_FRACTION * len(ents))] if ents else []
+    """Hold out whole entities, stratified by has_statused_field (amendment
+    'stratified hold-out'): per stratum, the first max(1, ceil(0.2 * n)) by
+    sha256 of the entity id. Returns (held, entities, strata)."""
+    def order(x):
+        return hashlib.sha256(x.encode("utf-8")).hexdigest()
+    ents = sorted({e["entity"] for e in examples}, key=order)
+    statused = {e["entity"] for e in examples if e["kind"] in STATUSED_KINDS}
+    strata, held = {}, []
+    for name, members in (("yes", [x for x in ents if x in statused]),
+                          ("no", [x for x in ents if x not in statused])):
+        h = members[:max(1, math.ceil(HOLDOUT_FRACTION * len(members)))] if members else []
+        strata[name] = {"entities": members, "holdout": h}
+        held += h
     for e in examples:
         e["split"] = "holdout" if e["entity"] in held else "train"
-    return held, ents
+    return held, ents, strata
 
 
 def counts(examples, key):
@@ -201,7 +214,7 @@ def counts(examples, key):
     return dict(sorted(out.items(), key=lambda kv: str(kv[0])))
 
 
-def check(examples, held, root=ROOT):
+def check(examples, held, root=ROOT, strata=None):
     """Failure strings for the declared checks."""
     bad = []
     hb = er.head_steps(root)
@@ -236,6 +249,9 @@ def check(examples, held, root=ROOT):
             bad.append("%s: UNMEASURED answer carries a value" % e["id"])
         if k in ("OBSERVED", "DERIVED", "PROPOSED") and not e["provenance"]["source_ids"]:
             bad.append("%s: no source id" % e["id"])
+    for name, st in (strata or {}).items():
+        if st["entities"] and not st["holdout"]:
+            bad.append("stratum %s has no hold-out entity" % name)
     for ent, s in sides.items():
         if len(s) != 1:
             bad.append("%s: on both sides of the split" % ent)
@@ -250,8 +266,8 @@ def main(argv):
         print("refused: reference/lid_reference.jsonl is missing or fails its check; run export_reference.py")
         return 1
     examples, excluded, info = build()
-    held, ents = split(examples)
-    bad = check(examples, held)
+    held, ents, strata = split(examples)
+    bad = check(examples, held, strata=strata)
     text = "".join(json.dumps(e, ensure_ascii=False, sort_keys=True) + "\n" for e in examples)
     manifest = {
         "snapshot_class": "SUMMARY_ONLY",
@@ -264,6 +280,9 @@ def main(argv):
         "examples": len(examples),
         "entities_with_examples": ents and sorted(ents),
         "holdout_entities": held, "holdout_fraction": HOLDOUT_FRACTION,
+        "holdout_strata": {"key": "has_statused_field", "strata": strata},
+        "measurement_note": "n too small to measure: the split shows the rule works; "
+                            "no rate computed on it is a measurement",
         "by_split": {s: sum(e["split"] == s for e in examples) for s in ("train", "holdout")},
         "by_kind": counts(examples, "kind"), "by_status": counts(examples, "status"),
         "by_ontology": counts(examples, "ontology"),
@@ -293,6 +312,10 @@ def main(argv):
             print("  %-16s train %3d   holdout %3d" % (k, v["train"], v["holdout"]))
     print("excluded fields: %s" % excluded)
     print("entities with examples: %d of %d   hold-out: %s" % (len(ents), len(info), ", ".join(held)))
+    for name, st in strata.items():
+        print("  has_statused_field=%-3s entities %s   hold-out %s"
+              % (name, ", ".join(st["entities"]), ", ".join(st["holdout"])))
+    print("n too small to measure")
     return 0
 
 

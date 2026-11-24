@@ -75,28 +75,41 @@ PROPOSED and was written here.
 
 | kind | rule | train | hold-out |
 |---|---|---|---|
-| OBSERVED | status OBSERVED, with a source | 11 | 0 |
+| OBSERVED | status OBSERVED, with a source | 5 | 6 |
 | DERIVED | status DERIVED, with a source; basis stated | 1 | 0 |
-| PROPOSED | labeled "PROPOSED, not established" | 6 | 0 |
-| UNMEASURED | the field is null; the claim is "unmeasured" | 23 | 17 |
+| PROPOSED | labeled "PROPOSED, not established" | 5 | 1 |
+| UNMEASURED | the field is null; the claim is "unmeasured" | 28 | 12 |
 | CONTESTED_LABEL | the label does not decide; function fields given | 2 | 0 |
-| total | | 43 | 17 |
+| total | | 41 | 19 |
 
 | answer status | train | hold-out |
 |---|---|---|
-| OBSERVED | 11 | 0 |
+| OBSERVED | 5 | 6 |
 | DERIVED (basis: OBSERVED) | 1 | 0 |
-| PROPOSED | 6 | 0 |
-| null | 25 | 17 |
+| PROPOSED | 5 | 1 |
+| null | 30 | 12 |
 
 | ontology type | train | hold-out |
 |---|---|---|
-| plant | 30 | 7 |
+| plant | 28 | 9 |
 | social | 13 | 10 |
 
-Hold-out, by entity (first ceil(0.2 × 8) = 2 entities by sha256 of the
-entity id): BEE_NEST_SITE, MY. Train: ANT, MIMOSA, QUORUM, SLIME,
-STONE_LEDGER, VENUS.
+Hold-out, by entity, stratified (amendment "stratified hold-out", declared
+before this split was computed). `has_statused_field` is yes when the entity
+has at least one OBSERVED, DERIVED or PROPOSED example. Within a stratum the
+entities are sorted by sha256 of the entity id and the first
+max(1, ceil(0.2 × n)) are held out.
+
+| has_statused_field | entities, in sha256 order | hold-out |
+|---|---|---|
+| yes (3) | VENUS, ANT, STONE_LEDGER | VENUS |
+| no (5) | BEE_NEST_SITE, MY, SLIME, QUORUM, MIMOSA | BEE_NEST_SITE |
+
+**n too small to measure.** With 8 entities and 2 held out, the split shows
+the rule works. No rate computed on it is a measurement.
+
+The first split (commit `2f3d933`: first 2 of 8 by sha256, unstratified)
+held out BEE_NEST_SITE and MY, 17 examples, all UNMEASURED.
 
 Excluded fields: 225 NOT_ASSESSED (values with a source and no status tag),
 12 UNSOURCED, 6 `assumption_trace`.
@@ -106,11 +119,12 @@ What the counts show:
 - 8 of 122 entities give any example, in 2 of 9 ontology types. The other
   114 entities have attribute values only, and those carry no status tag.
 - 40 of 60 examples are UNMEASURED. The set mostly teaches the void.
-- Both hold-out entities have only null fields, so the hold-out has no
-  OBSERVED, DERIVED or PROPOSED example. It can test whether "unmeasured"
-  is kept on an unseen entity. It cannot test anything about values. The
-  split rule was declared before the split was computed and was not changed
-  after.
+- VENUS is the only entity with `gate_sensing` or statused
+  `functional_intelligence` fields, and it is held out. Train therefore has
+  no OBSERVED or PROPOSED example from those two blocks: its 11 statused
+  examples are all `coordination` fields of ANT and STONE_LEDGER. The
+  hold-out tests those blocks on an unseen entity with no train example of
+  the same block.
 - 5 of the 12 PROPOSED fields and 1 of the 2 DERIVED fields are not targets:
   the 6 `assumption_trace` fields are PROPOSED and excluded by rule, and one
   DERIVED field has no source.
