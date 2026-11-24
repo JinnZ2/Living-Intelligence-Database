@@ -1,0 +1,1537 @@
+{
+ "tool": "lid_welds.py",
+ "date": "2026-11-24",
+ "status": "PROPOSED",
+ "instrument": "JinnZ2/method-layer de_weld.py",
+ "method_layer_commit": "4636166350f46597b8566e225475ecc7412b18e9",
+ "repository_commit": "63d93c00951b14ed7352891747468c9b65cca146",
+ "welds": [
+  {
+   "id": "W01",
+   "label": "the hexagon 'efficiency' number",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "hexagonal_cell_efficiency = 0.97",
+     "sentence": "Ratio of honey volume stored per unit wax mass in hexagonal cells compared to the next-best regular tessellation. Derives from the honeycomb conjecture [ontology/animal/bee.json @ 63d93c0, attributes.hexagonal_cell_efficiency.scope.definition]",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[geometry_2d] the regular hexagonal partition minimises perimeter per unit area in the plane (a proof about 2D perimeter, not wax mass or volume)",
+       "scope": {
+        "who": null,
+        "where": "the plane",
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://link.springer.com/article/10.1007/s004540010071",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[geometry_3d] a real cell is 3D; its rhombic-dodecahedral base is not the minimal-surface closure",
+       "scope": {
+        "who": null,
+        "where": "3D cell",
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://projecteuclid.org/journalArticle/Download?urlid=bams/1183526078",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[material_energy_cost] wax mass is paid for in honey, about 8 kg per kg wax",
+       "scope": {
+        "who": "colony",
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://www.fao.org/4/i0842e/i0842e12.pdf",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[formation_process] how the hexagon forms is CONTESTED: wax flow vs thermal expansion vs self-organised angular redistribution",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": "comb building",
+        "use": null
+       },
+       "evidence": "https://www.ncbi.nlm.nih.gov/pmc/articles/3730681 ; https://www.nature.com/articles/s44434-026-00004-2",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "abundance",
+       "claim": "uses less wax per unit stored honey",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": "storage"
+       },
+       "evidence": null,
+       "status": "PROPOSED",
+       "other_name": null
+      },
+      {
+       "axis": "quality",
+       "claim": "'efficiency' as a merit of the design, 0.97",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "ontology/animal/bee.json @ 63d93c0",
+       "status": "OBSERVED",
+       "other_name": null
+      }
+     ],
+     "couplings": [
+      {
+       "a": 0,
+       "b": 4,
+       "relation": "coupled",
+       "note": "the 2D perimeter result is what the economy claim borrows"
+      },
+      {
+       "a": 0,
+       "b": 1,
+       "relation": "conflicting",
+       "note": "the 2D optimum does not carry to the 3D closure"
+      }
+     ],
+     "residue": [
+      {
+       "question": "which ratio 0.97 is, over which boundary (2D section, 3D cell, wax mass, honey cost), against which comparison tessellation",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "audit",
+        "science"
+       ]
+      }
+     ],
+     "used_in_judgment": true,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "thick",
+    "class_rule": "descriptive claim AND evaluative claim(s) declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "conflicting",
+      "note": "the 2D optimum does not carry to the 3D closure"
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "abundance",
+      "relation": "coupled",
+      "note": "the 2D perimeter result is what the economy claim borrows"
+     },
+     {
+      "a": 0,
+      "b": 5,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "abundance",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 5,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "abundance",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 5,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 3,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "abundance",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 3,
+      "b": 5,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 4,
+      "b": 5,
+      "a_axis": "abundance",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "thick: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use",
+     "axes[2](descriptive).scope.where",
+     "axes[2](descriptive).scope.when",
+     "axes[2](descriptive).scope.use",
+     "axes[3](descriptive).scope.who",
+     "axes[3](descriptive).scope.where",
+     "axes[3](descriptive).scope.use",
+     "axes[4](abundance).evidence",
+     "axes[4](abundance).scope.who",
+     "axes[4](abundance).scope.where",
+     "axes[4](abundance).scope.when",
+     "axes[5](quality).scope.who",
+     "axes[5](quality).scope.where",
+     "axes[5](quality).scope.when",
+     "axes[5](quality).scope.use"
+    ]
+   }
+  },
+  {
+   "id": "W02",
+   "label": "one confidence number",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "relational_confidence = 0.98",
+     "sentence": "relational_confidence: 0.98 [ontology/animal/bee.json @ 63d93c0, attributes.hexagonal_cell_efficiency.scope.evidence]",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[scope] the conditions under which the value holds",
+       "scope": {
+        "who": "owner resolution, 2026-11-24",
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[deviation] ± around the value (GUM: expanded uncertainty U)",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[certainty] coverage probability attached to ±U",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[recurrence] how often the pattern recurs across domains; kept separate by owner",
+       "scope": {
+        "who": "owner resolution, 2026-11-24",
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "quality",
+       "claim": "a single 0-1 trust score",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "ontology/animal/bee.json @ 63d93c0",
+       "status": "OBSERVED",
+       "other_name": null
+      }
+     ],
+     "couplings": [
+      {
+       "a": 1,
+       "b": 2,
+       "relation": "coupled",
+       "note": "U has meaning only with its coverage"
+      }
+     ],
+     "residue": [
+      {
+       "question": "which of the four the stored 0.98 encodes; it exceeds the repository's own formula by +0.54 on average across entities (audit baseline)",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "audit"
+       ]
+      }
+     ],
+     "used_in_judgment": true,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "thick",
+    "class_rule": "descriptive claim AND evaluative claim(s) declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "coupled",
+      "note": "U has meaning only with its coverage"
+     },
+     {
+      "a": 1,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 3,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "thick: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "axes[0](descriptive).evidence",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use",
+     "axes[2](descriptive).scope.who",
+     "axes[2](descriptive).scope.where",
+     "axes[2](descriptive).scope.when",
+     "axes[2](descriptive).scope.use",
+     "axes[3](descriptive).evidence",
+     "axes[3](descriptive).scope.where",
+     "axes[3](descriptive).scope.when",
+     "axes[3](descriptive).scope.use",
+     "axes[4](quality).scope.who",
+     "axes[4](quality).scope.where",
+     "axes[4](quality).scope.when",
+     "axes[4](quality).scope.use"
+    ]
+   }
+  },
+  {
+   "id": "W03",
+   "label": "the dependencies field",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "dependencies",
+     "sentence": "dependencies: [golden_ratio, pi] / [cell_type, construction_temperature, wax_purity] / [swarm_hunger_state, weather_window, ...] [ontology/animal/bee.json @ 63d93c0]",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[D0_constant] mathematical constants (pi, golden_ratio)",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "ontology/animal/bee.json @ 63d93c0",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[D2_condition] physical conditions (construction_temperature)",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "ontology/animal/bee.json @ 63d93c0",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[D3_material] material state (wax_purity)",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "ontology/animal/bee.json @ 63d93c0",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[D4_state] organism or colony state (swarm_hunger_state)",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "ontology/animal/bee.json @ 63d93c0",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[sensitivity_sign] whether the value rises or falls with the dependency; not stated in the field",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "PROPOSED",
+       "other_name": null
+      }
+     ],
+     "couplings": [],
+     "residue": [
+      {
+       "question": "which layer each string belongs to, and its signed, scoped effect; 6 of 9 bound in trace v0.2, 3 UNKNOWN/UNCHECKED",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "audit"
+       ]
+      }
+     ],
+     "used_in_judgment": null,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "descriptive",
+    "class_rule": "descriptive claim only, no valuation declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 3,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "descriptive: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "used_in_judgment",
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use",
+     "axes[2](descriptive).scope.who",
+     "axes[2](descriptive).scope.where",
+     "axes[2](descriptive).scope.when",
+     "axes[2](descriptive).scope.use",
+     "axes[3](descriptive).scope.who",
+     "axes[3](descriptive).scope.where",
+     "axes[3](descriptive).scope.when",
+     "axes[3](descriptive).scope.use",
+     "axes[4](descriptive).evidence",
+     "axes[4](descriptive).scope.who",
+     "axes[4](descriptive).scope.where",
+     "axes[4](descriptive).scope.when",
+     "axes[4](descriptive).scope.use"
+    ]
+   }
+  },
+  {
+   "id": "W04",
+   "label": "the word 'cycle'",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "cycle",
+     "sentence": "'cycles are cycles of whatever within the context of that' (owner, this session)",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[oscillation] repeats with a period (wingbeat ≈230 Hz)",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://www.pnas.org/doi/10.1073/pnas.0506590102",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[developmental_window] runs once per life stage (21-day worker development)",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://www.fao.org/4/X0083E/X0083E03.htm",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[transient] relaxes once and stops (circle→hexagon ≈6 s)",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://www.ncbi.nlm.nih.gov/pmc/articles/3730681",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[superposition] union of many cycles (multifloral season); unsourced",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "PROPOSED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[nesting] slow cycle's phase sets the fast cycle's regime (owner)",
+       "scope": {
+        "who": "owner resolution, 2026-11-24",
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "OBSERVED",
+       "other_name": null
+      }
+     ],
+     "couplings": [
+      {
+       "a": 0,
+       "b": 4,
+       "relation": "coupled",
+       "note": "nesting is between named cycles"
+      }
+     ],
+     "residue": [
+      {
+       "question": "which cycle, at what period, nested in which parent",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "audit"
+       ]
+      }
+     ],
+     "used_in_judgment": null,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "descriptive",
+    "class_rule": "descriptive claim only, no valuation declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "coupled",
+      "note": "nesting is between named cycles"
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 3,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 2,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 3,
+      "b": 4,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "descriptive: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "used_in_judgment",
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use",
+     "axes[2](descriptive).scope.who",
+     "axes[2](descriptive).scope.where",
+     "axes[2](descriptive).scope.when",
+     "axes[2](descriptive).scope.use",
+     "axes[3](descriptive).evidence",
+     "axes[3](descriptive).scope.who",
+     "axes[3](descriptive).scope.where",
+     "axes[3](descriptive).scope.when",
+     "axes[3](descriptive).scope.use",
+     "axes[4](descriptive).evidence",
+     "axes[4](descriptive).scope.where",
+     "axes[4](descriptive).scope.when",
+     "axes[4](descriptive).scope.use"
+    ]
+   }
+  },
+  {
+   "id": "W05",
+   "label": "the Sun",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "sunlight",
+     "sentence": "E_SUN in trace v0.2 (audit text): one node, two roles",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[energy_source] 1360.8 ± 0.5 W/m² at 1 AU feeds photosynthesis → nectar sugar",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://esdpubs.nasa.gov/sgpubs/content/A_new_lower_value_of_total_solar_irradiance_Evidence_and_climate_significance",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[information_source] the sun's azimuth is the compass reference the waggle dance encodes",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4667876/",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[cycle_driver] sets the day (CY_DAY entrainment) and the year",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "OBSERVED",
+       "other_name": null
+      }
+     ],
+     "couplings": [
+      {
+       "a": 0,
+       "b": 1,
+       "relation": "independent",
+       "note": "the compass reads direction, not flux: a cloudy-day energy drop need not change the bearing (PROPOSED reading; NOT_TESTED)"
+      }
+     ],
+     "residue": [
+      {
+       "question": "no repository entity represents incoming solar radiation",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "audit"
+       ]
+      }
+     ],
+     "used_in_judgment": null,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "descriptive",
+    "class_rule": "descriptive claim only, no valuation declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "independent",
+      "note": "the compass reads direction, not flux: a cloudy-day energy drop need not change the bearing (PROPOSED reading; NOT_TESTED)"
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "descriptive: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "used_in_judgment",
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use",
+     "axes[2](descriptive).evidence",
+     "axes[2](descriptive).scope.who",
+     "axes[2](descriptive).scope.where",
+     "axes[2](descriptive).scope.when",
+     "axes[2](descriptive).scope.use"
+    ]
+   }
+  },
+  {
+   "id": "W06",
+   "label": "'honey' across forage regimes",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "honey (mānuka vs wildflower)",
+     "sentence": "audit text: same bee, same physics, different forage",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[energy_layer] total sugar alike: 59.11 ± 0.36 vs 56.02 ± 2.02 g/100 g, n=3",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://academic.oup.com/ijfst/article/54/12/3185/7805247",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[chemistry_layer] DHA→MGO pathway in mānuka; absent in clover until DHA is added",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://pubmed.ncbi.nlm.nih.gov/19368902/",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "quality",
+       "claim": "'better honey' / grade",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": "market"
+       },
+       "evidence": null,
+       "status": "PROPOSED",
+       "other_name": null
+      }
+     ],
+     "couplings": [
+      {
+       "a": 0,
+       "b": 1,
+       "relation": "independent",
+       "note": "sugar alike while chemistry diverges in the cited studies"
+      }
+     ],
+     "residue": [
+      {
+       "question": "whether wax composition or honey-per-wax differ by forage: no source",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "science"
+       ]
+      }
+     ],
+     "used_in_judgment": null,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "thick",
+    "class_rule": "descriptive claim AND evaluative claim(s) declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "independent",
+      "note": "sugar alike while chemistry diverges in the cited studies"
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "quality",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "thick: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "used_in_judgment",
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use",
+     "axes[2](quality).evidence",
+     "axes[2](quality).scope.who",
+     "axes[2](quality).scope.where",
+     "axes[2](quality).scope.when"
+    ]
+   }
+  },
+  {
+   "id": "W07",
+   "label": "the energy content of honey",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "1270 kJ / 100 g",
+     "sentence": "USDA FoodData Central 169640, Energy, derivation 'Calculated'",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[human_metabolizable] energy a human derives, by conversion factors",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://fdc.nal.usda.gov/portal-data/external/169640",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[bee_usable] energy a bee derives from the same honey; not found",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "PROPOSED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[combustion] bomb-calorimeter enthalpy; not looked up",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "PROPOSED",
+       "other_name": null
+      }
+     ],
+     "couplings": [],
+     "residue": [
+      {
+       "question": "which of the three the wax-power figure should use",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "science"
+       ]
+      }
+     ],
+     "used_in_judgment": null,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "descriptive",
+    "class_rule": "descriptive claim only, no valuation declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "descriptive: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "used_in_judgment",
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).evidence",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use",
+     "axes[2](descriptive).evidence",
+     "axes[2](descriptive).scope.who",
+     "axes[2](descriptive).scope.where",
+     "axes[2](descriptive).scope.when",
+     "axes[2](descriptive).scope.use"
+    ]
+   }
+  },
+  {
+   "id": "W08",
+   "label": "two layer stacks",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "layer L0–L5 / D0–D5",
+     "sentence": "docs/GROUNDING_LAYERS.md (L0 classical physics … L5 social) vs this audit's D0–D5",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[repository_stack] L0 physics, L1 thermodynamics, L2 planetary, L3 ecological, L4 biomechanics, Lε epistemic membrane, L5 social",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "docs/GROUNDING_LAYERS.md @ 63d93c0",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[audit_stack] D0 physics … D5 relation, built from the owner's dependency answer",
+       "scope": {
+        "who": "owner resolution, 2026-11-24",
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "OBSERVED",
+       "other_name": null
+      }
+     ],
+     "couplings": [],
+     "residue": [
+      {
+       "question": "whether D-n maps to L-n; same shape, mapping not declared by the owner",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "audit"
+       ]
+      }
+     ],
+     "used_in_judgment": null,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "descriptive",
+    "class_rule": "descriptive claim only, no valuation declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "descriptive: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "used_in_judgment",
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).evidence",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use"
+    ]
+   }
+  },
+  {
+   "id": "W09",
+   "label": "verb to noun",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "hexagonal_cell_efficiency (attribute)",
+     "sentence": "'every noun is a verb in our language… there is no static noun' (owner)",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[process] building: secretion every 12 h, heating, a ≈6 s relaxation",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "https://www.fao.org/4/i0842e/i0842e12.pdf",
+       "status": "OBSERVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[state] a stored attribute value with no time index",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": "ontology/animal/bee.json @ 63d93c0",
+       "status": "OBSERVED",
+       "other_name": null
+      }
+     ],
+     "couplings": [
+      {
+       "a": 0,
+       "b": 1,
+       "relation": "conflicting",
+       "note": "the attribute has no slot for the cycle the process runs on"
+      }
+     ],
+     "residue": [
+      {
+       "question": "how the schema would carry a process (rate, cycle, scope) without forcing it into a static noun",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "engineering"
+       ]
+      }
+     ],
+     "used_in_judgment": null,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "descriptive",
+    "class_rule": "descriptive claim only, no valuation declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "conflicting",
+      "note": "the attribute has no slot for the cycle the process runs on"
+     }
+    ],
+    "flags": [],
+    "flag_rule": "descriptive: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "PRESENT",
+    "void_slots": [
+     "used_in_judgment",
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use"
+    ]
+   }
+  },
+  {
+   "id": "W10",
+   "label": "the common denominator itself",
+   "record": {
+    "schema_version": "1.0",
+    "input": {
+     "term": "0.0188 W (wax-producing worker, CY_SCALE average)",
+     "sentence": "common_denominator.py D_POWER_WAX (audit output)",
+     "axes": [
+      {
+       "axis": "descriptive",
+       "claim": "[cycle_average] throughput averaged over one 12 h scale cycle",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "DERIVED",
+       "other_name": null
+      },
+      {
+       "axis": "descriptive",
+       "claim": "[phase_profile] how the throughput varies within the cycle; not sourced",
+       "scope": {
+        "who": null,
+        "where": null,
+        "when": null,
+        "use": null
+       },
+       "evidence": null,
+       "status": "PROPOSED",
+       "other_name": null
+      }
+     ],
+     "couplings": [],
+     "residue": [
+      {
+       "question": "averaging over a cycle hides its phases; the average must carry the cycle's name",
+       "contested_as_of": "2026-11-24",
+       "needs": [
+        "science"
+       ]
+      }
+     ],
+     "used_in_judgment": null,
+     "context_valuation": null,
+     "provenance": "model-authored reading (Claude Opus 5.5, Perplexity Computer), 2026-11-24"
+    },
+    "term_class": "descriptive",
+    "class_rule": "descriptive claim only, no valuation declared",
+    "cross_axis": [
+     {
+      "a": 0,
+      "b": 1,
+      "a_axis": "descriptive",
+      "b_axis": "descriptive",
+      "relation": "undeclared",
+      "note": null
+     }
+    ],
+    "flags": [],
+    "flag_rule": "descriptive: the ungrounded-evaluation rule applies to THIN terms only",
+    "descriptive_evidence": "VOID",
+    "void_slots": [
+     "used_in_judgment",
+     "axes[0](descriptive).evidence",
+     "axes[0](descriptive).scope.who",
+     "axes[0](descriptive).scope.where",
+     "axes[0](descriptive).scope.when",
+     "axes[0](descriptive).scope.use",
+     "axes[1](descriptive).evidence",
+     "axes[1](descriptive).scope.who",
+     "axes[1](descriptive).scope.where",
+     "axes[1](descriptive).scope.when",
+     "axes[1](descriptive).scope.use"
+    ]
+   }
+  }
+ ],
+ "encoding_control": {
+  "note": "same declarations with sub-quantities on Axis.OTHER; shows de_weld reading them as evaluative",
+  "results": {
+   "W01": {
+    "term_class": "thin",
+    "flags": [
+     "ungrounded_evaluation"
+    ]
+   },
+   "W02": {
+    "term_class": "thin",
+    "flags": [
+     "ungrounded_evaluation"
+    ]
+   },
+   "W03": {
+    "term_class": "thin",
+    "flags": []
+   },
+   "W04": {
+    "term_class": "thin",
+    "flags": []
+   },
+   "W05": {
+    "term_class": "thin",
+    "flags": []
+   },
+   "W06": {
+    "term_class": "thin",
+    "flags": []
+   },
+   "W07": {
+    "term_class": "thin",
+    "flags": []
+   },
+   "W08": {
+    "term_class": "thin",
+    "flags": []
+   },
+   "W09": {
+    "term_class": "thin",
+    "flags": []
+   },
+   "W10": {
+    "term_class": "thin",
+    "flags": []
+   }
+  }
+ }
+}

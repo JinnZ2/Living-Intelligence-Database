@@ -1,0 +1,171 @@
+{
+ "record": "REFERENCE_TRACE_BE_HEXAGONAL_CELL",
+ "findings": [
+  [
+   "NOTED_MISMATCH",
+   "G2D_HALES",
+   "CITATION_MISMATCH"
+  ],
+  [
+   "NOTED_MISMATCH",
+   "G2D_HALES",
+   "SCOPE_MISMATCH"
+  ],
+  [
+   "GAP",
+   "E_SUN",
+   "GAP: no repository entity represents incoming solar radiation. SOLAR_WIND is a plasma flow."
+  ],
+  [
+   "GAP",
+   "D4_MANUKA",
+   "GAP: no repository entity for mānuka."
+  ],
+  [
+   "CYCLE_NO_PERIOD",
+   "CY_LIFE",
+   "UNKNOWN"
+  ],
+  [
+   "CYCLE_TOP_LEVEL",
+   "CY_SOLAR",
+   "solar activity cycle"
+  ],
+  [
+   "CYCLE_NO_PERIOD",
+   "CY_FLOWER_AGE",
+   "TRACED"
+  ],
+  [
+   "CYCLE_NO_PERIOD",
+   "CY_WILDFLOWER",
+   "PROPOSED_UNSOURCED"
+  ]
+ ],
+ "summary": {
+  "layers_present": [
+   "D0_law",
+   "D1_energy",
+   "D2_condition",
+   "D3_material",
+   "D4_entity",
+   "D5_pattern"
+  ],
+  "paths_total": 20,
+  "paths_ending_at_D0": 19,
+  "paths_ending_elsewhere": {
+   "D2_condition": [
+    "P_HEX_CELL > G3D_FEJES > C_WALL"
+   ]
+  },
+  "paths_through_PROPOSED_or_UNKNOWN": 6,
+  "status_counts": {
+   "CONTESTED": 1,
+   "DERIVED": 1,
+   "PROPOSED": 1,
+   "RECORDED_UNVERIFIED": 1,
+   "TRACED": 22,
+   "UNKNOWN": 0
+  },
+  "cycle_ladder": [
+   {
+    "child": "mānuka flowering window",
+    "parent": "colony annual cycle",
+    "ratio": 6.5,
+    "log10_separation": 0.81
+   },
+   {
+    "child": "colony annual cycle",
+    "parent": "solar activity cycle",
+    "ratio": 11.0,
+    "log10_separation": 1.04
+   },
+   {
+    "child": "wax-scale secretion",
+    "parent": "wax-gland age window",
+    "ratio": 12.0,
+    "log10_separation": 1.08
+   },
+   {
+    "child": "worker development",
+    "parent": "colony annual cycle",
+    "ratio": 17.4,
+    "log10_separation": 1.24
+   },
+   {
+    "child": "circle→hexagon transition",
+    "parent": "wax-scale secretion",
+    "ratio": 7200.0,
+    "log10_separation": 3.86
+   },
+   {
+    "child": "wingbeat",
+    "parent": "daily activity (circadian)",
+    "ratio": 19872000.0,
+    "log10_separation": 7.3
+   },
+   {
+    "child": "daily activity (circadian)",
+    "parent": "worker adult life",
+    "ratio": null,
+    "log10_separation": null,
+    "reason": "period missing on one side"
+   },
+   {
+    "child": "wax-gland age window",
+    "parent": "worker adult life",
+    "ratio": null,
+    "log10_separation": null,
+    "reason": "period missing on one side"
+   },
+   {
+    "child": "worker adult life",
+    "parent": "colony annual cycle",
+    "ratio": null,
+    "log10_separation": null,
+    "reason": "period missing on one side"
+   },
+   {
+    "child": "mānuka flower nectar stages",
+    "parent": "mānuka flowering window",
+    "ratio": null,
+    "log10_separation": null,
+    "reason": "period missing on one side"
+   },
+   {
+    "child": "multifloral forage season",
+    "parent": "colony annual cycle",
+    "ratio": null,
+    "log10_separation": null,
+    "reason": "period missing on one side"
+   }
+  ],
+  "cycle_span_log10_s": [
+   -2.36,
+   8.54
+  ],
+  "differential": {
+   "invariant": 6,
+   "unknown_dependence": 2,
+   "variant": 4,
+   "sensitivities": 5,
+   "sensitivity_signs": [
+    "+",
+    "+ (small)",
+    "+",
+    "GENOTYPE-DEPENDENT",
+    "NONE (variance share, not a direction)"
+   ],
+   "new_roots_reach_D0": {
+    "D4_MANUKA": true,
+    "D4_WILDFLOWER": true,
+    "H_DHA_MGO": true
+   }
+  },
+  "repo_bindings": {
+   "checked_against": "/home/user/workspace/lid/ontology/animal/bee.json",
+   "bound": 6,
+   "unbound": 3
+  }
+ }
+}

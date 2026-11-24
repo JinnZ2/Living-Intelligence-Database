@@ -1,0 +1,406 @@
+{
+ "tool": "common_denominator.py",
+ "version": "0.3",
+ "date": "2026-11-24",
+ "status": "PROPOSED",
+ "rule": "a quantity is only comparable with another when both\ncarry, explicitly,\n  1. an SI dimension vector (kg, m, s, K, mol),\n  2. a value interval (low, central, high) as stated by the source,\n  3. a time basis: INSTANT, AVERAGE_OVER:<cycle id>, PER_EVENT:<event>, or NONE,\n  4. a scope string and a source URL or a DERIVED marker.\nMultiplication and division combine dimensions. Addition, subtraction and ratio\ncomparison require identical dimensions. Any operation whose operands carry\ndifferent time bases is not computed silently: the result is flagged\nDENOMINATOR_MISMATCH and kept only as a labelled bound, or refused.",
+ "quantities": [
+  {
+   "id": "R_SCALE",
+   "what": "wax scales secreted per wax-producing worker",
+   "interval": [
+    0.00018518518518518518,
+    0.00018518518518518518,
+    0.00018518518518518518
+   ],
+   "dimension": "s^-1",
+   "time_basis": "AVERAGE_OVER:CY_SCALE",
+   "scope": "wax-producing worker",
+   "source": "https://www.fao.org/4/i0842e/i0842e12.pdf",
+   "status": "TRACED",
+   "note": "'8 scales every 12 h' -> 1.85e-4 scales/s; scale counted as a dimensionless event"
+  },
+  {
+   "id": "M_SCALE",
+   "what": "mass per wax scale",
+   "interval": [
+    1e-06,
+    1e-06,
+    1e-06
+   ],
+   "dimension": "kg",
+   "time_basis": "PER_EVENT:scale",
+   "scope": "beeswax",
+   "source": "https://www.fao.org/4/i0842e/i0842e12.pdf",
+   "status": "TRACED",
+   "note": "'about 1 million scales per kg' -> 1e-6 kg; the word 'about' carries no stated ±, so no interval is invented"
+  },
+  {
+   "id": "K_HONEY_WAX",
+   "what": "honey consumed per mass of wax",
+   "interval": [
+    6.66,
+    8.0,
+    15.0
+   ],
+   "dimension": "dimensionless",
+   "time_basis": "NONE",
+   "scope": "comb building",
+   "source": [
+    "https://www.fao.org/4/i0842e/i0842e12.pdf",
+    "https://en.wikipedia.org/wiki/Beeswax",
+    "https://www.fao.org/4/t0104e/T0104E04.htm"
+   ],
+   "status": "TRACED",
+   "note": "interval is the union of sources: 6.66–8.80 (Whitcomb via Wikipedia), ~8 (FAO), 8–15 (FAO T0104E)"
+  },
+  {
+   "id": "E_HONEY",
+   "what": "energy per mass of honey",
+   "interval": [
+    12700000.0,
+    12700000.0,
+    12700000.0
+   ],
+   "dimension": "m^2·s^-2",
+   "time_basis": "NONE",
+   "scope": "human-nutrition energy of honey",
+   "source": "https://fdc.nal.usda.gov/portal-data/external/169640",
+   "status": "PROXY",
+   "note": "USDA FDC 169640: 1270 kJ/100 g, derivation 'Calculated' from human energy-conversion factors. This is human metabolizable energy, used here as a PROXY for the bee's usable energy (see weld W07)."
+  },
+  {
+   "id": "I_SURF",
+   "what": "clear-sky noon surface irradiance",
+   "interval": [
+    700,
+    1000,
+    1300
+   ],
+   "dimension": "kg·s^-3",
+   "time_basis": "INSTANT",
+   "scope": "sea level-ish, clear sky, noon",
+   "source": "https://en.wikipedia.org/wiki/Solar_irradiance",
+   "status": "TRACED"
+  },
+  {
+   "id": "ETA_C3",
+   "what": "max solar-to-biomass conversion, C3",
+   "interval": [
+    0.046,
+    0.046,
+    0.046
+   ],
+   "dimension": "dimensionless",
+   "time_basis": "NONE",
+   "scope": "theoretical upper bound, 30 °C, 380 ppm",
+   "source": "https://pubmed.ncbi.nlm.nih.gov/18374559/",
+   "status": "TRACED",
+   "note": "upper bound, not typical"
+  },
+  {
+   "id": "S_MANUKA",
+   "what": "total sugar in mānuka honey",
+   "interval": [
+    0.5874999999999999,
+    0.5911,
+    0.5947
+   ],
+   "dimension": "dimensionless",
+   "time_basis": "NONE",
+   "scope": "n=3, one study",
+   "source": "https://academic.oup.com/ijfst/article/54/12/3185/7805247",
+   "status": "TRACED",
+   "note": "59.11 ± 0.36 g/100 g; ± as reported (dispersion statistic per source)"
+  },
+  {
+   "id": "S_MULTI",
+   "what": "total sugar in multifloral honey A",
+   "interval": [
+    0.54,
+    0.5602,
+    0.5804
+   ],
+   "dimension": "dimensionless",
+   "time_basis": "NONE",
+   "scope": "n=3, one study",
+   "source": "https://academic.oup.com/ijfst/article/54/12/3185/7805247",
+   "status": "TRACED",
+   "note": "56.02 ± 2.02 g/100 g"
+  },
+  {
+   "id": "C_DHA_MANUKA",
+   "what": "DHA in fresh mānuka comb honey",
+   "interval": [
+    0.001192,
+    null,
+    0.005099
+   ],
+   "dimension": "dimensionless",
+   "time_basis": "NONE",
+   "scope": "fresh comb honey",
+   "source": "https://pubmed.ncbi.nlm.nih.gov/19368902/",
+   "status": "TRACED",
+   "note": "1192–5099 mg/kg; no central value stated, none invented"
+  }
+ ],
+ "derived": [
+  {
+   "id": "D_WAX_RATE",
+   "what": "wax mass rate per wax-producing worker",
+   "interval": [
+    1.8518518518518518e-10,
+    1.8518518518518518e-10,
+    1.8518518518518518e-10
+   ],
+   "dimension": "kg·s^-1",
+   "time_basis": "AVERAGE_OVER:CY_SCALE",
+   "scope": "wax-producing worker",
+   "source": "DERIVED from R_SCALE × M_SCALE",
+   "status": "DERIVED"
+  },
+  {
+   "id": "D_E_SCALE_PART",
+   "what": "honey mass per scale",
+   "interval": [
+    6.66e-06,
+    8e-06,
+    1.4999999999999999e-05
+   ],
+   "dimension": "kg",
+   "time_basis": "PER_EVENT:scale",
+   "scope": "per scale",
+   "source": "DERIVED from M_SCALE × K_HONEY_WAX",
+   "status": "DERIVED"
+  },
+  {
+   "id": "D_E_PER_SCALE",
+   "what": "honey energy per wax scale (proxy)",
+   "interval": [
+    84.582,
+    101.6,
+    190.49999999999997
+   ],
+   "dimension": "kg·m^2·s^-2",
+   "time_basis": "PER_EVENT:scale",
+   "scope": "per scale",
+   "source": "DERIVED from D_E_SCALE_PART × E_HONEY",
+   "status": "DERIVED"
+  },
+  {
+   "id": "D_E_PER_CYCLE",
+   "what": "honey energy per 12 h scale cycle (proxy)",
+   "interval": [
+    676.656,
+    812.8,
+    1523.9999999999998
+   ],
+   "dimension": "kg·m^2·s^-2",
+   "time_basis": "PER_EVENT:CY_SCALE",
+   "scope": "one 12 h cycle, one worker",
+   "source": "DERIVED from D_E_PER_SCALE × 8 scales",
+   "status": "DERIVED"
+  },
+  {
+   "id": "D_HONEY_RATE",
+   "what": "honey mass rate",
+   "interval": [
+    1.2333333333333332e-09,
+    1.4814814814814814e-09,
+    2.7777777777777776e-09
+   ],
+   "dimension": "kg·s^-1",
+   "time_basis": "AVERAGE_OVER:CY_SCALE",
+   "scope": "wax-producing worker",
+   "source": "DERIVED from D_WAX_RATE × K_HONEY_WAX",
+   "status": "DERIVED"
+  },
+  {
+   "id": "D_POWER_WAX",
+   "what": "honey-energy throughput into wax (proxy)",
+   "interval": [
+    0.01566333333333333,
+    0.018814814814814815,
+    0.035277777777777776
+   ],
+   "dimension": "kg·m^2·s^-3",
+   "time_basis": "AVERAGE_OVER:CY_SCALE",
+   "scope": "wax-producing worker, CY_SCALE average",
+   "source": "DERIVED from D_HONEY_RATE × E_HONEY",
+   "status": "DERIVED"
+  },
+  {
+   "id": "D_BIO_FLUX_MAX",
+   "what": "max biomass energy flux, clear noon",
+   "interval": [
+    32.2,
+    46.0,
+    59.8
+   ],
+   "dimension": "kg·s^-3",
+   "time_basis": "INSTANT",
+   "scope": "clear-sky noon, C3 upper bound",
+   "source": "DERIVED from I_SURF × ETA_C3",
+   "status": "DERIVED"
+  },
+  {
+   "id": "D_AREA_BOUND",
+   "what": "leaf area at max efficiency to match wax power",
+   "interval": [
+    0.0002619286510590858,
+    0.00040901771336553945,
+    0.001095583160800552
+   ],
+   "dimension": "m^2",
+   "time_basis": "MIXED(AVERAGE_OVER:CY_SCALE|INSTANT)",
+   "scope": "BOUND ONLY",
+   "source": "DERIVED from D_POWER_WAX / D_BIO_FLUX_MAX",
+   "status": "DERIVED",
+   "note": "Computed to show the flag. A 12-h average divided by a noon peak understates the area; a day-average irradiance is NOT sourced here, so no corrected value is given.",
+   "flags": [
+    "DENOMINATOR_MISMATCH: quotient of D_POWER_WAX [AVERAGE_OVER:CY_SCALE] with D_BIO_FLUX_MAX [INSTANT]"
+   ]
+  }
+ ],
+ "comparisons": [
+  {
+   "pair": [
+    "S_MANUKA",
+    "S_MULTI"
+   ],
+   "result": "COMPARABLE",
+   "ratio_central": 1.0551588718314886,
+   "dimension": "dimensionless",
+   "time_basis": "NONE"
+  },
+  {
+   "pair": [
+    "D_POWER_WAX",
+    "D_BIO_FLUX_MAX"
+   ],
+   "result": "REFUSED",
+   "reason": "dimension kg·m^2·s^-3 vs kg·s^-3"
+  },
+  {
+   "pair": [
+    "D_POWER_WAX",
+    "any INSTANT power (synthetic probe)"
+   ],
+   "result": "REFUSED",
+   "reason": "time basis AVERAGE_OVER:CY_SCALE vs INSTANT"
+  },
+  {
+   "pair": [
+    "C_DHA_MANUKA",
+    "multifloral DHA"
+   ],
+   "result": "REFUSED",
+   "reason": "no counterpart quantity: multifloral regime has no reported DHA→MGO pathway (presence/absence, not a ratio)",
+   "source": "https://pubmed.ncbi.nlm.nih.gov/19368902/"
+  }
+ ],
+ "cycle_ladder": [
+  {
+   "id": "CY_WING",
+   "kind": "oscillation",
+   "parent": "CY_DAY",
+   "period_s": 0.004347826086956522,
+   "log10_s": -2.362,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_HEXFORM",
+   "kind": "transient_within_cycle",
+   "parent": "CY_SCALE",
+   "period_s": 6,
+   "log10_s": 0.778,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_SCALE",
+   "kind": "production_cycle",
+   "parent": "CY_GLAND",
+   "period_s": 43200,
+   "log10_s": 4.635,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_DAY",
+   "kind": "oscillation",
+   "parent": "CY_LIFE",
+   "period_s": 86400,
+   "log10_s": 4.937,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_GLAND",
+   "kind": "developmental_window",
+   "parent": "CY_LIFE",
+   "period_s": 518400,
+   "log10_s": 5.715,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_DEV",
+   "kind": "developmental_cycle",
+   "parent": "CY_YEAR",
+   "period_s": 1814400,
+   "log10_s": 6.259,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_LIFE",
+   "kind": "life_cycle",
+   "parent": "CY_YEAR",
+   "period_s": null,
+   "log10_s": null,
+   "status": "UNKNOWN"
+  },
+  {
+   "id": "CY_YEAR",
+   "kind": "seasonal_cycle",
+   "parent": "CY_SOLAR",
+   "period_s": 31557600.0,
+   "log10_s": 7.499,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_SOLAR",
+   "kind": "oscillation",
+   "parent": null,
+   "period_s": 347133600.0,
+   "log10_s": 8.54,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_MANUKA_BLOOM",
+   "kind": "seasonal_window",
+   "parent": "CY_YEAR",
+   "period_s": 4838400,
+   "log10_s": 6.685,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_FLOWER_AGE",
+   "kind": "developmental_window",
+   "parent": "CY_MANUKA_BLOOM",
+   "period_s": null,
+   "log10_s": null,
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_WILDFLOWER",
+   "kind": "superposition",
+   "parent": "CY_YEAR",
+   "period_s": null,
+   "log10_s": null,
+   "status": "PROPOSED_UNSOURCED"
+  }
+ ],
+ "findings": [
+  "Every sourced quantity in the energy chain could be placed on one SI dimension vector; the chain from scale rate to watts closes without any unsourced constant except the PROXY honey-energy value.",
+  "The time basis, not the unit, is where combinations failed: the leaf-area bound mixes a noon INSTANT with a CY_SCALE AVERAGE and is flagged rather than reported as a result.",
+  "Sugar in the two regimes is comparable on a mass basis; DHA/MGO is not comparable because one regime has no counterpart quantity. Energy is a common denominator for the sugar layer only.",
+  "Time (seconds, on a named cycle) is the only denominator every node in the trace shares; it is necessary but not sufficient, because averaging over a cycle hides that cycle's phases."
+ ]
+}

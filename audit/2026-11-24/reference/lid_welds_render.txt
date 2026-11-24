@@ -1,0 +1,173 @@
+== W01 the hexagon 'efficiency' number
+term: 'hexagonal_cell_efficiency = 0.97'   sentence: 'Ratio of honey volume stored per unit wax mass in hexagonal cells compared to the next-best regular tessellation. Derives from the honeycomb conjecture [ontology/animal/bee.json @ 63d93c0, attributes.hexagonal_cell_efficiency.scope.definition]'
+class: thick   (descriptive claim AND evaluative claim(s) declared)
+  [0] descriptive  claim='[geometry_2d] the regular hexagonal partition minimises perimeter per unit area in the plane (a proof about 2D perimeter, not wax mass or volume)' evidence='https://link.springer.com/article/10.1007/s004540010071' status=OBSERVED scope={'who': None, 'where': 'the plane', 'when': None, 'use': None}
+  [1] descriptive  claim='[geometry_3d] a real cell is 3D; its rhombic-dodecahedral base is not the minimal-surface closure' evidence='https://projecteuclid.org/journalArticle/Download?urlid=bams/1183526078' status=OBSERVED scope={'who': None, 'where': '3D cell', 'when': None, 'use': None}
+  [2] descriptive  claim='[material_energy_cost] wax mass is paid for in honey, about 8 kg per kg wax' evidence='https://www.fao.org/4/i0842e/i0842e12.pdf' status=OBSERVED scope={'who': 'colony', 'where': None, 'when': None, 'use': None}
+  [3] descriptive  claim='[formation_process] how the hexagon forms is CONTESTED: wax flow vs thermal expansion vs self-organised angular redistribution' evidence='https://www.ncbi.nlm.nih.gov/pmc/articles/3730681 ; https://www.nature.com/articles/s44434-026-00004-2' status=OBSERVED scope={'who': None, 'where': None, 'when': 'comb building', 'use': None}
+  [4] abundance    claim='uses less wax per unit stored honey' evidence=None status=PROPOSED scope={'who': None, 'where': None, 'when': None, 'use': 'storage'}
+  [5] quality      claim="'efficiency' as a merit of the design, 0.97" evidence='ontology/animal/bee.json @ 63d93c0' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: conflicting
+  cross 0-2 descriptive/descriptive: undeclared
+  cross 0-3 descriptive/descriptive: undeclared
+  cross 0-4 descriptive/abundance: coupled
+  cross 0-5 descriptive/quality: undeclared
+  cross 1-2 descriptive/descriptive: undeclared
+  cross 1-3 descriptive/descriptive: undeclared
+  cross 1-4 descriptive/abundance: undeclared
+  cross 1-5 descriptive/quality: undeclared
+  cross 2-3 descriptive/descriptive: undeclared
+  cross 2-4 descriptive/abundance: undeclared
+  cross 2-5 descriptive/quality: undeclared
+  cross 3-4 descriptive/abundance: undeclared
+  cross 3-5 descriptive/quality: undeclared
+  cross 4-5 abundance/quality: undeclared
+  residue: which ratio 0.97 is, over which boundary (2D section, 3D cell, wax mass, honey cost), against which comparison tessellation (as of 2026-11-24; needs ['audit', 'science'])
+flags: []   (thick: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (20): axes[0](descriptive).scope.who, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).scope.who, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use, axes[2](descriptive).scope.where, axes[2](descriptive).scope.when, axes[2](descriptive).scope.use, axes[3](descriptive).scope.who, axes[3](descriptive).scope.where, axes[3](descriptive).scope.use, axes[4](abundance).evidence, axes[4](abundance).scope.who, axes[4](abundance).scope.where, axes[4](abundance).scope.when, axes[5](quality).scope.who, axes[5](quality).scope.where, axes[5](quality).scope.when, axes[5](quality).scope.use
+
+== W02 one confidence number
+term: 'relational_confidence = 0.98'   sentence: 'relational_confidence: 0.98 [ontology/animal/bee.json @ 63d93c0, attributes.hexagonal_cell_efficiency.scope.evidence]'
+class: thick   (descriptive claim AND evaluative claim(s) declared)
+  [0] descriptive  claim='[scope] the conditions under which the value holds' evidence=None status=OBSERVED scope={'who': 'owner resolution, 2026-11-24', 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim='[deviation] ± around the value (GUM: expanded uncertainty U)' evidence='https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [2] descriptive  claim='[certainty] coverage probability attached to ±U' evidence='https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [3] descriptive  claim='[recurrence] how often the pattern recurs across domains; kept separate by owner' evidence=None status=OBSERVED scope={'who': 'owner resolution, 2026-11-24', 'where': None, 'when': None, 'use': None}
+  [4] quality      claim='a single 0-1 trust score' evidence='ontology/animal/bee.json @ 63d93c0' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: undeclared
+  cross 0-2 descriptive/descriptive: undeclared
+  cross 0-3 descriptive/descriptive: undeclared
+  cross 0-4 descriptive/quality: undeclared
+  cross 1-2 descriptive/descriptive: coupled
+  cross 1-3 descriptive/descriptive: undeclared
+  cross 1-4 descriptive/quality: undeclared
+  cross 2-3 descriptive/descriptive: undeclared
+  cross 2-4 descriptive/quality: undeclared
+  cross 3-4 descriptive/quality: undeclared
+  residue: which of the four the stored 0.98 encodes; it exceeds the repository's own formula by +0.54 on average across entities (audit baseline) (as of 2026-11-24; needs ['audit'])
+flags: []   (thick: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (20): axes[0](descriptive).evidence, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).scope.who, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use, axes[2](descriptive).scope.who, axes[2](descriptive).scope.where, axes[2](descriptive).scope.when, axes[2](descriptive).scope.use, axes[3](descriptive).evidence, axes[3](descriptive).scope.where, axes[3](descriptive).scope.when, axes[3](descriptive).scope.use, axes[4](quality).scope.who, axes[4](quality).scope.where, axes[4](quality).scope.when, axes[4](quality).scope.use
+
+== W03 the dependencies field
+term: 'dependencies'   sentence: 'dependencies: [golden_ratio, pi] / [cell_type, construction_temperature, wax_purity] / [swarm_hunger_state, weather_window, ...] [ontology/animal/bee.json @ 63d93c0]'
+class: descriptive   (descriptive claim only, no valuation declared)
+  [0] descriptive  claim='[D0_constant] mathematical constants (pi, golden_ratio)' evidence='ontology/animal/bee.json @ 63d93c0' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim='[D2_condition] physical conditions (construction_temperature)' evidence='ontology/animal/bee.json @ 63d93c0' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [2] descriptive  claim='[D3_material] material state (wax_purity)' evidence='ontology/animal/bee.json @ 63d93c0' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [3] descriptive  claim='[D4_state] organism or colony state (swarm_hunger_state)' evidence='ontology/animal/bee.json @ 63d93c0' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [4] descriptive  claim='[sensitivity_sign] whether the value rises or falls with the dependency; not stated in the field' evidence=None status=PROPOSED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: undeclared
+  cross 0-2 descriptive/descriptive: undeclared
+  cross 0-3 descriptive/descriptive: undeclared
+  cross 0-4 descriptive/descriptive: undeclared
+  cross 1-2 descriptive/descriptive: undeclared
+  cross 1-3 descriptive/descriptive: undeclared
+  cross 1-4 descriptive/descriptive: undeclared
+  cross 2-3 descriptive/descriptive: undeclared
+  cross 2-4 descriptive/descriptive: undeclared
+  cross 3-4 descriptive/descriptive: undeclared
+  residue: which layer each string belongs to, and its signed, scoped effect; 6 of 9 bound in trace v0.2, 3 UNKNOWN/UNCHECKED (as of 2026-11-24; needs ['audit'])
+flags: []   (descriptive: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (22): used_in_judgment, axes[0](descriptive).scope.who, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).scope.who, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use, axes[2](descriptive).scope.who, axes[2](descriptive).scope.where, axes[2](descriptive).scope.when, axes[2](descriptive).scope.use, axes[3](descriptive).scope.who, axes[3](descriptive).scope.where, axes[3](descriptive).scope.when, axes[3](descriptive).scope.use, axes[4](descriptive).evidence, axes[4](descriptive).scope.who, axes[4](descriptive).scope.where, axes[4](descriptive).scope.when, axes[4](descriptive).scope.use
+
+== W04 the word 'cycle'
+term: 'cycle'   sentence: "'cycles are cycles of whatever within the context of that' (owner, this session)"
+class: descriptive   (descriptive claim only, no valuation declared)
+  [0] descriptive  claim='[oscillation] repeats with a period (wingbeat ≈230 Hz)' evidence='https://www.pnas.org/doi/10.1073/pnas.0506590102' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim='[developmental_window] runs once per life stage (21-day worker development)' evidence='https://www.fao.org/4/X0083E/X0083E03.htm' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [2] descriptive  claim='[transient] relaxes once and stops (circle→hexagon ≈6 s)' evidence='https://www.ncbi.nlm.nih.gov/pmc/articles/3730681' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [3] descriptive  claim='[superposition] union of many cycles (multifloral season); unsourced' evidence=None status=PROPOSED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [4] descriptive  claim="[nesting] slow cycle's phase sets the fast cycle's regime (owner)" evidence=None status=OBSERVED scope={'who': 'owner resolution, 2026-11-24', 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: undeclared
+  cross 0-2 descriptive/descriptive: undeclared
+  cross 0-3 descriptive/descriptive: undeclared
+  cross 0-4 descriptive/descriptive: coupled
+  cross 1-2 descriptive/descriptive: undeclared
+  cross 1-3 descriptive/descriptive: undeclared
+  cross 1-4 descriptive/descriptive: undeclared
+  cross 2-3 descriptive/descriptive: undeclared
+  cross 2-4 descriptive/descriptive: undeclared
+  cross 3-4 descriptive/descriptive: undeclared
+  residue: which cycle, at what period, nested in which parent (as of 2026-11-24; needs ['audit'])
+flags: []   (descriptive: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (22): used_in_judgment, axes[0](descriptive).scope.who, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).scope.who, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use, axes[2](descriptive).scope.who, axes[2](descriptive).scope.where, axes[2](descriptive).scope.when, axes[2](descriptive).scope.use, axes[3](descriptive).evidence, axes[3](descriptive).scope.who, axes[3](descriptive).scope.where, axes[3](descriptive).scope.when, axes[3](descriptive).scope.use, axes[4](descriptive).evidence, axes[4](descriptive).scope.where, axes[4](descriptive).scope.when, axes[4](descriptive).scope.use
+
+== W05 the Sun
+term: 'sunlight'   sentence: 'E_SUN in trace v0.2 (audit text): one node, two roles'
+class: descriptive   (descriptive claim only, no valuation declared)
+  [0] descriptive  claim='[energy_source] 1360.8 ± 0.5 W/m² at 1 AU feeds photosynthesis → nectar sugar' evidence='https://esdpubs.nasa.gov/sgpubs/content/A_new_lower_value_of_total_solar_irradiance_Evidence_and_climate_significance' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim="[information_source] the sun's azimuth is the compass reference the waggle dance encodes" evidence='https://pmc.ncbi.nlm.nih.gov/articles/PMC4667876/' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [2] descriptive  claim='[cycle_driver] sets the day (CY_DAY entrainment) and the year' evidence=None status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: independent
+  cross 0-2 descriptive/descriptive: undeclared
+  cross 1-2 descriptive/descriptive: undeclared
+  residue: no repository entity represents incoming solar radiation (as of 2026-11-24; needs ['audit'])
+flags: []   (descriptive: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (14): used_in_judgment, axes[0](descriptive).scope.who, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).scope.who, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use, axes[2](descriptive).evidence, axes[2](descriptive).scope.who, axes[2](descriptive).scope.where, axes[2](descriptive).scope.when, axes[2](descriptive).scope.use
+
+== W06 'honey' across forage regimes
+term: 'honey (mānuka vs wildflower)'   sentence: 'audit text: same bee, same physics, different forage'
+class: thick   (descriptive claim AND evaluative claim(s) declared)
+  [0] descriptive  claim='[energy_layer] total sugar alike: 59.11 ± 0.36 vs 56.02 ± 2.02 g/100 g, n=3' evidence='https://academic.oup.com/ijfst/article/54/12/3185/7805247' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim='[chemistry_layer] DHA→MGO pathway in mānuka; absent in clover until DHA is added' evidence='https://pubmed.ncbi.nlm.nih.gov/19368902/' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [2] quality      claim="'better honey' / grade" evidence=None status=PROPOSED scope={'who': None, 'where': None, 'when': None, 'use': 'market'}
+  cross 0-1 descriptive/descriptive: independent
+  cross 0-2 descriptive/quality: undeclared
+  cross 1-2 descriptive/quality: undeclared
+  residue: whether wax composition or honey-per-wax differ by forage: no source (as of 2026-11-24; needs ['science'])
+flags: []   (thick: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (13): used_in_judgment, axes[0](descriptive).scope.who, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).scope.who, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use, axes[2](quality).evidence, axes[2](quality).scope.who, axes[2](quality).scope.where, axes[2](quality).scope.when
+
+== W07 the energy content of honey
+term: '1270 kJ / 100 g'   sentence: "USDA FoodData Central 169640, Energy, derivation 'Calculated'"
+class: descriptive   (descriptive claim only, no valuation declared)
+  [0] descriptive  claim='[human_metabolizable] energy a human derives, by conversion factors' evidence='https://fdc.nal.usda.gov/portal-data/external/169640' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim='[bee_usable] energy a bee derives from the same honey; not found' evidence=None status=PROPOSED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [2] descriptive  claim='[combustion] bomb-calorimeter enthalpy; not looked up' evidence=None status=PROPOSED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: undeclared
+  cross 0-2 descriptive/descriptive: undeclared
+  cross 1-2 descriptive/descriptive: undeclared
+  residue: which of the three the wax-power figure should use (as of 2026-11-24; needs ['science'])
+flags: []   (descriptive: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (15): used_in_judgment, axes[0](descriptive).scope.who, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).evidence, axes[1](descriptive).scope.who, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use, axes[2](descriptive).evidence, axes[2](descriptive).scope.who, axes[2](descriptive).scope.where, axes[2](descriptive).scope.when, axes[2](descriptive).scope.use
+
+== W08 two layer stacks
+term: 'layer L0–L5 / D0–D5'   sentence: "docs/GROUNDING_LAYERS.md (L0 classical physics … L5 social) vs this audit's D0–D5"
+class: descriptive   (descriptive claim only, no valuation declared)
+  [0] descriptive  claim='[repository_stack] L0 physics, L1 thermodynamics, L2 planetary, L3 ecological, L4 biomechanics, Lε epistemic membrane, L5 social' evidence='docs/GROUNDING_LAYERS.md @ 63d93c0' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim="[audit_stack] D0 physics … D5 relation, built from the owner's dependency answer" evidence=None status=OBSERVED scope={'who': 'owner resolution, 2026-11-24', 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: undeclared
+  residue: whether D-n maps to L-n; same shape, mapping not declared by the owner (as of 2026-11-24; needs ['audit'])
+flags: []   (descriptive: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (9): used_in_judgment, axes[0](descriptive).scope.who, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).evidence, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use
+
+== W09 verb to noun
+term: 'hexagonal_cell_efficiency (attribute)'   sentence: "'every noun is a verb in our language… there is no static noun' (owner)"
+class: descriptive   (descriptive claim only, no valuation declared)
+  [0] descriptive  claim='[process] building: secretion every 12 h, heating, a ≈6 s relaxation' evidence='https://www.fao.org/4/i0842e/i0842e12.pdf' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim='[state] a stored attribute value with no time index' evidence='ontology/animal/bee.json @ 63d93c0' status=OBSERVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: conflicting
+  residue: how the schema would carry a process (rate, cycle, scope) without forcing it into a static noun (as of 2026-11-24; needs ['engineering'])
+flags: []   (descriptive: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: PRESENT
+void slots (9): used_in_judgment, axes[0](descriptive).scope.who, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).scope.who, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use
+
+== W10 the common denominator itself
+term: '0.0188 W (wax-producing worker, CY_SCALE average)'   sentence: 'common_denominator.py D_POWER_WAX (audit output)'
+class: descriptive   (descriptive claim only, no valuation declared)
+  [0] descriptive  claim='[cycle_average] throughput averaged over one 12 h scale cycle' evidence=None status=DERIVED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  [1] descriptive  claim='[phase_profile] how the throughput varies within the cycle; not sourced' evidence=None status=PROPOSED scope={'who': None, 'where': None, 'when': None, 'use': None}
+  cross 0-1 descriptive/descriptive: undeclared
+  residue: averaging over a cycle hides its phases; the average must carry the cycle's name (as of 2026-11-24; needs ['science'])
+flags: []   (descriptive: the ungrounded-evaluation rule applies to THIN terms only)
+descriptive evidence: VOID
+void slots (11): used_in_judgment, axes[0](descriptive).evidence, axes[0](descriptive).scope.who, axes[0](descriptive).scope.where, axes[0](descriptive).scope.when, axes[0](descriptive).scope.use, axes[1](descriptive).evidence, axes[1](descriptive).scope.who, axes[1](descriptive).scope.where, axes[1](descriptive).scope.when, axes[1](descriptive).scope.use
+

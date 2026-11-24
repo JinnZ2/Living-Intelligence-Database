@@ -1,0 +1,202 @@
+{
+ "T03.load.unloadable_index_paths": [],
+ "T03.load.entities_with_scoped_attributes": 120,
+ "T03.load.thin_index_has_attributes": 0,
+ "T03.verify.unknown_claim_on_real_index": {
+  "entities_consulted": 122,
+  "tests_gathered": 0,
+  "tests_passed": 0,
+  "prior_probability": 0.5,
+  "posterior_probability": 0.5
+ },
+ "T03.verify.same_function_repeated_as_evidence": [
+  {
+   "n_attrs": 0,
+   "claim_calls": 0,
+   "tests": 0,
+   "posterior": 0.5
+  },
+  {
+   "n_attrs": 1,
+   "claim_calls": 1,
+   "tests": 1,
+   "posterior": 0.79
+  },
+  {
+   "n_attrs": 2,
+   "claim_calls": 2,
+   "tests": 2,
+   "posterior": 0.934
+  },
+  {
+   "n_attrs": 5,
+   "claim_calls": 5,
+   "tests": 5,
+   "posterior": 0.9987
+  },
+  {
+   "n_attrs": 10,
+   "claim_calls": 10,
+   "tests": 10,
+   "posterior": 1.0
+  },
+  {
+   "n_attrs": 20,
+   "claim_calls": 20,
+   "tests": 20,
+   "posterior": 1.0
+  }
+ ],
+ "T03.verify.empty_scope_text_overlap": 0.5,
+ "T03.verify.hydrated_real_always_true": {
+  "tests": 228,
+  "claim_calls": 228,
+  "posterior": 1.0
+ },
+ "T03.verify.hydrated_real_always_false": {
+  "tests": 228,
+  "posterior": 0.0
+ },
+ "T03.falsifier.summary": {
+  "outcomes": {
+   "ran": 120,
+   "error:No": 2
+  },
+  "exceptions": {},
+  "counterexamples_total": 601,
+  "no_match_counted_as_survived": 601,
+  "zero_tests_entities": 0,
+  "resistance_1.0": 120
+ },
+ "T03.falsifier.zero_tests_fixture": {
+  "counterexamples_generated": 0,
+  "tests_survived": 0,
+  "falsification_resistance": 1.0
+ },
+ "T03.falsifier.missing_file_silent_fallback": {
+  "error": "No scoped attributes found in entity FZ."
+ },
+ "T03.dep.edges": {
+  "index_relations": 555,
+  "tracer_link_edges": 554,
+  "tracer_scope_dependency_edges": 5,
+  "in_index_not_tracer": [
+   [
+    "WOLF_PACK",
+    "COUNCIL",
+    "synergy"
+   ]
+  ],
+  "in_tracer_not_index": []
+ },
+ "T03.dep.scope_dependencies_silently_dropped": {
+  "count": 646,
+  "sample": [
+   [
+    "AUTOENC",
+    "latent_compression",
+    "compression_ratio"
+   ],
+   [
+    "AUTOENC",
+    "latent_compression",
+    "dataset_complexity"
+   ],
+   [
+    "AUTOENC",
+    "latent_compression",
+    "architecture_depth"
+   ],
+   [
+    "AUTOENC",
+    "variational_sampling",
+    "latent_dimension"
+   ],
+   [
+    "AUTOENC",
+    "variational_sampling",
+    "dataset"
+   ],
+   [
+    "AUTOENC",
+    "variational_sampling",
+    "architecture"
+   ],
+   [
+    "EVOL_ALG",
+    "fitness_selection",
+    "problem_dimensionality"
+   ],
+   [
+    "EVOL_ALG",
+    "fitness_selection",
+    "function_modality"
+   ]
+  ]
+ },
+ "T03.dep.WOLF_PACK_children": [
+  [
+   "OC",
+   "resonance",
+   "truncated"
+  ],
+  [
+   "ECHO",
+   "temporal_bridge",
+   "truncated"
+  ]
+ ],
+ "T03.audit.summary": {
+  "total": 122,
+  "unscoped_numerics": 0,
+  "noun_pretenders": 0,
+  "contradictions": 2,
+  "missing_deps": 651,
+  "scoped_ratio": 1.0,
+  "confidence_distribution": {
+   "0.88": 18,
+   "0.82": 13,
+   "0.81": 4,
+   "0.76": 2,
+   "0.77": 2,
+   "0.83": 9,
+   "0.8": 9,
+   "0.86": 7,
+   "0.78": 9,
+   "0.93": 15,
+   "0.89": 14,
+   "0.9": 16,
+   "0.85": 10,
+   "0.79": 2,
+   "0.84": 5,
+   "0.95": 5,
+   "0.92": 12,
+   "0.87": 12,
+   "0.98": 5,
+   "0.94": 16,
+   "0.91": 18,
+   "0.74": 1,
+   "0.72": 1,
+   "0.75": 2,
+   "0.73": 1,
+   "0.96": 2,
+   "0.97": 3,
+   "0.6": 1,
+   "0.99": 11,
+   "0.5": 3
+  }
+ },
+ "T03.conf.fallback_mismatch": {
+  "scope_checker.extract_confidence": 0.06,
+  "audit_bucket_default": 0.5
+ },
+ "T03.conf.real_scoped_attrs_without_explicit_confidence": {
+  "scoped_attrs": 228,
+  "audit_assigns_0.5_scope_checker_computes": 3
+ },
+ "T03.audit.missing_file_silent_fallback": {
+  "total_entities": 1,
+  "scoped_ratio": 1.0,
+  "any_warning_key": []
+ }
+}

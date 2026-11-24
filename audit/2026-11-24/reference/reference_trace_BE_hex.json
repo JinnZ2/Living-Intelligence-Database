@@ -1,0 +1,434 @@
+{
+ "record": "REFERENCE_TRACE_BE_HEXAGONAL_CELL",
+ "version": "0.1",
+ "date": "2026-11-24",
+ "status": "PROPOSED",
+ "baseline_commit": "63d93c00951b14ed7352891747468c9b65cca146",
+ "subject": {
+  "entity": "BE",
+  "attribute": "hexagonal_cell_efficiency"
+ },
+ "rule": "TRACED nodes require a source. PROPOSED/UNKNOWN nodes carry no confidence. CONTESTED nodes preserve all accounts.",
+ "nodes": [
+  {
+   "id": "P_HEX_CELL",
+   "layer": "D5_pattern",
+   "role": "pattern",
+   "claim": "Record: hexagonal_cell_efficiency = 0.97, 'ratio of honey volume stored per unit wax mass ... vs next-best regular tessellation'",
+   "status": "RECORDED_UNVERIFIED",
+   "value": {
+    "y": 0.97,
+    "deviation": "±0.01 (prose in measurement_limits)"
+   },
+   "repo_entity": "BE",
+   "depends_on": [
+    "G2D_HALES",
+    "G3D_FEJES",
+    "F_FLOW",
+    "E_WAX_COST",
+    "M_WAX",
+    "C_BROOD_T",
+    "C_FLOW_T"
+   ]
+  },
+  {
+   "id": "G2D_HALES",
+   "layer": "D0_law",
+   "role": "governing_law",
+   "claim": "Any partition of the plane into regions of equal area has perimeter at least that of the regular hexagonal tiling (2D).",
+   "status": "TRACED",
+   "source": [
+    "https://link.springer.com/article/10.1007/s004540010071",
+    "https://arxiv.org/abs/math/9906042"
+   ],
+   "repo_entity": "HEX",
+   "note": "Published Discrete Comput Geom 25:1-22 (2001); repo cites '36:5-69 (1999)' -> CITATION_MISMATCH. Theorem is 2D perimeter; record claims 3D volume per wax mass -> SCOPE_MISMATCH."
+  },
+  {
+   "id": "G3D_FEJES",
+   "layer": "D0_law",
+   "role": "governing_law",
+   "claim": "The 3D bee cell (three-rhombus base) is not surface-minimizing; two hexagons + two rhombi is more economical, saving <0.35% of the opening area.",
+   "status": "TRACED",
+   "source": [
+    "https://projecteuclid.org/journalArticle/Download?urlid=bams/1183526078"
+   ],
+   "value": {
+    "y": "<0.35% of opening area",
+    "deviation": "upper bound stated by source"
+   },
+   "note": "With non-zero wall thickness the three-rhombus base may be closer to optimum (Weaire & Phelan, as reported in Apidologie 2022). Optimality in 3D is regime-dependent on wall thickness.",
+   "depends_on": [
+    "C_WALL"
+   ]
+  },
+  {
+   "id": "C_WALL",
+   "layer": "D2_condition",
+   "role": "boundary_condition",
+   "claim": "Wall thickness: zero (idealized) vs real non-uniform beeswax walls.",
+   "status": "TRACED",
+   "source": [
+    "https://projecteuclid.org/journalArticle/Download?urlid=bams/1183526078",
+    "https://link.springer.com/10.1007/s13592-022-00915-8"
+   ],
+   "regime": {
+    "var": "wall_thickness",
+    "kinds": [
+     "idealized_zero",
+     "real_nonuniform"
+    ]
+   }
+  },
+  {
+   "id": "F_FLOW",
+   "layer": "D0_law",
+   "role": "governing_law",
+   "claim": "Cells are built circular; visco-elastic wax heated by workers flows near triple junctions; surface-energy minimization straightens walls into rounded hexagons.",
+   "status": "CONTESTED",
+   "source": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/3730681",
+    "https://link.springer.com/article/10.1007/s42452-019-1239-0",
+    "https://www.nature.com/articles/s44434-026-00004-2"
+   ],
+   "note": "Three accounts preserved, not reconciled: (a) surface-tension wax flow (Karihaloo 2013); (b) thermal expansion and stress above yield under a temperature gradient, without melting (Talukdar & Dutta, SN Appl Sci 2019); (c) workers iteratively equalising angular space at junctions, self-organised (npj/Nature 2026). Divergence is retained as data.",
+   "depends_on": [
+    "C_FLOW_T",
+    "E_BODY_HEAT"
+   ]
+  },
+  {
+   "id": "C_FLOW_T",
+   "layer": "D2_condition",
+   "role": "boundary_condition",
+   "claim": "Wax flows visco-elastically at about 45 °C at the triple junction.",
+   "status": "TRACED",
+   "source": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/3730681"
+   ],
+   "value": {
+    "y": 45,
+    "unit": "°C",
+    "deviation": "'about' — not quantified by source"
+   },
+   "depends_on": [
+    "E_BODY_HEAT"
+   ]
+  },
+  {
+   "id": "C_MELT",
+   "layer": "D2_condition",
+   "role": "boundary_condition",
+   "claim": "Beeswax melts at 62–64 °C (upper regime bound: comb structure fails).",
+   "status": "TRACED",
+   "source": [
+    "https://en.wikipedia.org/wiki/Beeswax"
+   ],
+   "value": {
+    "y": [
+     62,
+     64
+    ],
+    "unit": "°C",
+    "deviation": "range"
+   }
+  },
+  {
+   "id": "C_BROOD_T",
+   "layer": "D2_condition",
+   "role": "boundary_condition",
+   "claim": "Brood nest regulated at 33–36 °C; capped brood 34.8–35.9 °C across ambient 13–41 °C.",
+   "status": "TRACED",
+   "source": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2813292/",
+    "https://link.springer.com/article/10.1007/s00359-021-01464-8"
+   ],
+   "value": {
+    "y": [
+     34.8,
+     35.9
+    ],
+    "unit": "°C",
+    "regime": "ambient 13–41 °C"
+   },
+   "depends_on": [
+    "E_BODY_HEAT"
+   ]
+  },
+  {
+   "id": "REGIME_HEX",
+   "layer": "D2_condition",
+   "role": "regime",
+   "claim": "Derived operating regime for hexagon formation: local wax ~45 °C, nest ~33–36 °C, below melt 62–64 °C.",
+   "status": "DERIVED",
+   "source": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/3730681",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2813292/",
+    "https://en.wikipedia.org/wiki/Beeswax"
+   ],
+   "regime": {
+    "bounds": {
+     "wax_local_T_C": [
+      45,
+      62
+     ],
+     "nest_T_C": [
+      33,
+      36
+     ]
+    },
+    "outside": "NOT_IN_SCOPE"
+   },
+   "note": "Lower bound 45 °C is 'about'; treat as CONDITIONAL until a source gives a range."
+  },
+  {
+   "id": "M_WAX",
+   "layer": "D3_material",
+   "role": "material",
+   "claim": "Beeswax composition: monoesters 35–45%, hydrocarbons 12–16%, free fatty acids 12–14%; hydrocarbons probably from oenocytes.",
+   "status": "TRACED",
+   "source": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11538619/",
+    "https://hal.science/hal-00890889v1/file/hal-00890889.pdf"
+   ],
+   "depends_on": [
+    "M_GLANDS"
+   ]
+  },
+  {
+   "id": "M_GLANDS",
+   "layer": "D3_material",
+   "role": "material",
+   "claim": "Secreted as liquid by four pairs of wax glands on young workers; glands largest ~day 12, decline after day 18; ~1 million scales per kg.",
+   "status": "TRACED",
+   "source": [
+    "https://www.fao.org/4/i0842e/i0842e12.pdf",
+    "https://hal.science/hal-00890889v1/file/hal-00890889.pdf"
+   ],
+   "depends_on": [
+    "E_WAX_COST"
+   ]
+  },
+  {
+   "id": "E_WAX_COST",
+   "layer": "D1_energy",
+   "role": "energy_source",
+   "claim": "Wax is synthesised from sugar: ~8 kg honey consumed per kg wax.",
+   "status": "TRACED",
+   "source": [
+    "https://www.fao.org/4/i0842e/i0842e12.pdf",
+    "https://en.wikipedia.org/wiki/Beeswax",
+    "https://www.fao.org/4/t0104e/T0104E04.htm"
+   ],
+   "value": {
+    "y": 8,
+    "unit": "kg honey / kg wax",
+    "deviation": "sources span 6.66–8.80 (Whitcomb 1946, via Wikipedia) to 8–15 (FAO T0104E)"
+   },
+   "depends_on": [
+    "E_NECTAR"
+   ]
+  },
+  {
+   "id": "E_BODY_HEAT",
+   "layer": "D1_energy",
+   "role": "energy_source",
+   "claim": "Heat for wax working and brood comes from worker thoracic muscle metabolism fuelled by nectar sugar; ~40% of the colony's annual energy intake goes to brood-nest heating.",
+   "status": "TRACED",
+   "source": [
+    "https://www.pnas.org/doi/10.1073/pnas.1232346100",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/3730681"
+   ],
+   "value": {
+    "y": 0.4,
+    "unit": "fraction of annual energy",
+    "deviation": "'≈' estimate"
+   },
+   "depends_on": [
+    "E_NECTAR"
+   ]
+  },
+  {
+   "id": "E_NECTAR",
+   "layer": "D1_energy",
+   "role": "energy_source",
+   "claim": "Nectar sugars originate from sucrose loaded from phloem, produced by photosynthesis.",
+   "status": "TRACED",
+   "source": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9058545/"
+   ],
+   "repo_entity": "PHLOEM_XYLEM",
+   "depends_on": [
+    "D4_FLOWERS",
+    "E_SUN"
+   ]
+  },
+  {
+   "id": "E_SUN",
+   "layer": "D1_energy",
+   "role": "energy_source",
+   "claim": "Total solar irradiance at 1 AU: 1360.8 ± 0.5 W/m² (2008 solar minimum).",
+   "status": "TRACED",
+   "source": [
+    "https://esdpubs.nasa.gov/sgpubs/content/A_new_lower_value_of_total_solar_irradiance_Evidence_and_climate_significance"
+   ],
+   "value": {
+    "y": 1360.8,
+    "unit": "W/m²",
+    "deviation": "±0.5"
+   },
+   "note": "GAP: no repository entity represents incoming solar radiation. SOLAR_WIND is a plasma flow.",
+   "depends_on": [
+    "L_CONSERVE"
+   ]
+  },
+  {
+   "id": "L_CONSERVE",
+   "layer": "D0_law",
+   "role": "governing_law",
+   "claim": "Open, far-from-equilibrium systems maintain ordered structure only through continuous energy/matter exchange and disappear if it ceases (dissipative structures).",
+   "status": "TRACED",
+   "source": [
+    "https://www.utphysicshistory.net/IlyaPrigogine.html"
+   ],
+   "note": "Energy conservation is assumed as the accounting law for the chain; no repository equation reference exists for it."
+  },
+  {
+   "id": "D4_FLOWERS",
+   "layer": "D4_entity",
+   "role": "entity",
+   "claim": "Flowering plants supplying nectar.",
+   "status": "PROPOSED",
+   "repo_entity": "SUN (Sunflower) / LEAF_TESS",
+   "note": "Which repository plant entities stand for nectar sources is an owner decision.",
+   "depends_on": [
+    "E_SUN"
+   ]
+  },
+  {
+   "id": "D4_HOT_WORKERS",
+   "layer": "D4_entity",
+   "role": "entity",
+   "claim": "Workers heat the wax with their bodies during comb building.",
+   "status": "TRACED",
+   "source": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/3730681"
+   ],
+   "repo_entity": "BE"
+  }
+ ],
+ "cycles": [
+  {
+   "id": "CY_WING",
+   "name": "wingbeat",
+   "kind": "oscillation",
+   "period_s": 0.004347826086956522,
+   "period_text": "≈230 Hz (229.8 ± 11.0 Hz, n=4, hovering)",
+   "context": "hovering flight, normal air",
+   "parent": "CY_DAY",
+   "source": [
+    "https://www.pnas.org/doi/10.1073/pnas.0506590102"
+   ],
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_HEXFORM",
+   "name": "circle→hexagon transition",
+   "kind": "transient_within_cycle",
+   "period_s": 6,
+   "period_text": "≈6 s fully heated; ≈36 s partially heated",
+   "context": "comb building, wax ~45 °C",
+   "parent": "CY_SCALE",
+   "source": [
+    "https://www.nbcnews.com/sciencemain/bees-dont-do-math-hexagonal-honeycombs-emerge-naturally-6c10677058"
+   ],
+   "status": "TRACED",
+   "note": "A relaxation, not a repeat. Recorded as a transient phase inside the comb-building cycle; whether it counts as a cycle in its own right is an owner call."
+  },
+  {
+   "id": "CY_SCALE",
+   "name": "wax-scale secretion",
+   "kind": "production_cycle",
+   "period_s": 43200,
+   "period_text": "8 scales every 12 h",
+   "context": "wax-producing worker",
+   "parent": "CY_GLAND",
+   "source": [
+    "https://www.fao.org/4/i0842e/i0842e12.pdf"
+   ],
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_DAY",
+   "name": "daily activity (circadian)",
+   "kind": "oscillation",
+   "period_s": 86400,
+   "period_text": "24 h",
+   "context": "foraging / in-hive activity",
+   "parent": "CY_LIFE",
+   "status": "PROPOSED_UNSOURCED",
+   "note": "Nesting position is assumed; a honeybee circadian source has not been attached."
+  },
+  {
+   "id": "CY_GLAND",
+   "name": "wax-gland age window",
+   "kind": "developmental_window",
+   "period_s": 518400,
+   "period_text": "begins <1 wk, peaks ≈2 wk (≈day 12), declines after day 18",
+   "context": "worker life stage; swarm regime overrides (all ages build)",
+   "parent": "CY_LIFE",
+   "source": [
+    "https://hal.science/hal-00890889v1/file/hal-00890889.pdf",
+    "https://www.fao.org/4/i0842e/i0842e12.pdf"
+   ],
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_DEV",
+   "name": "worker development",
+   "kind": "developmental_cycle",
+   "period_s": 1814400,
+   "period_text": "21 days (3 egg, 6 larva, 12 pupa)",
+   "context": "brood at 33–36 °C",
+   "parent": "CY_YEAR",
+   "source": [
+    "https://www.fao.org/4/X0083E/X0083E03.htm"
+   ],
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_LIFE",
+   "name": "worker adult life",
+   "kind": "life_cycle",
+   "period_text": "not attached",
+   "context": "season-dependent",
+   "parent": "CY_YEAR",
+   "status": "UNKNOWN"
+  },
+  {
+   "id": "CY_YEAR",
+   "name": "colony annual cycle",
+   "kind": "seasonal_cycle",
+   "period_s": 31557600.0,
+   "period_text": "1 year (winter cluster vs summer energy partition)",
+   "context": "temperate colony",
+   "parent": "CY_SOLAR",
+   "source": [
+    "https://www.pnas.org/doi/10.1073/pnas.1232346100"
+   ],
+   "status": "TRACED"
+  },
+  {
+   "id": "CY_SOLAR",
+   "name": "solar activity cycle",
+   "kind": "oscillation",
+   "period_s": 347133600.0,
+   "period_text": "≈11 years; TSI varies ≈0.1% min→max",
+   "context": "Sun at 1 AU",
+   "source": [
+    "https://www.swsc-journal.org/articles/swsc/full_html/2016/01/swsc160010/swsc160010.html"
+   ],
+   "status": "TRACED"
+  }
+ ]
+}
