@@ -170,3 +170,14 @@ Per your convention, corrections go in as dated notes beside the original claims
 - `ablation_controls.py` → `ablation_results.json`: Stages 05–06
 
 Every script uses only the standard library and runs offline against a repository copy. To reproduce, run each one from a copy of the repository root at commit `63d93c0`.
+
+## Dated note, 2026-11-24: re-checked against main `906e86a`
+
+The tables above describe `63d93c0` and are unchanged. Instrument repairs merged later (PRs #25–27) were re-checked with `recheck_main.py`; see `LID_recheck_against_main_2026-11-24.md`. Results:
+
+- **Repaired:** most Stage 03 instrument findings, including the unknown claim, repeated evidence, "no match counted as survived", the silent fallbacks, the broken-link exit code and the write order.
+- **Still holding:** the empty-scope 0.5 overlap, the confidence fallback, the shipped-index CLI gathering no evidence, the `relational/` skip, and every data-level finding.
+- **Narrowed:** the audit-vs-tracer disagreement, from 651 vs 0 to 651 vs 646.
+- **New:** three findings, N1–N3.
+
+With `--legacy`, main reproduces the readings recorded here.

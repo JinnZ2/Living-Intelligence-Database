@@ -36,3 +36,4 @@ All scripts are Python 3 standard library only and need no network. `jsonschema`
 ## Outside-reader package (added 2026-11-24)
 
 `kimi_2026-11-25/` holds the package Kimi (Moonshot AI) produced, unzipped byte-for-byte and not edited. It contains four draft schemas, a completed readings file, a 28-check suite, a report and figures. The `#U2014` in the report's filename is how an em dash came through the zip. Everything in the package is PROPOSED. To run `tests/validate_loud.py`, first copy this audit folder (`audit/2026-11-24/`) to `/tmp/audit/lid_audit/`. The suite reads its fixtures from `/tmp/audit/lid_audit/reference/`. Result on 2026-11-24: 28/28, exit 0. The review is `LID_review_of_Kimi_schema_additions_2026-11-24.md`.
+| `recheck_main.py` (run from the root of a copy; `OUT=...`) | `recheck_results_63d93c0.json`, `recheck_results_906e86a.json`; written up in `LID_recheck_against_main_2026-11-24.md` |

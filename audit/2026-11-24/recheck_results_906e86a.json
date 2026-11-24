@@ -1,0 +1,404 @@
+{
+ "meta": {
+  "head": "906e86af1cdd004d882de0ee94097679d9867d14",
+  "legacy_switch_present": true
+ },
+ "index": {
+  "entities": 122,
+  "relations": 555,
+  "ontology_json_files": 125,
+  "relational_dir_files": [
+   "biosphere_reference.json",
+   "synergies.json"
+  ],
+  "relational_ids_in_index": []
+ },
+ "V1.unknown_claim.default": {
+  "exit": 2,
+  "verdict": "UNKNOWN",
+  "entities_consulted": null,
+  "tests_gathered": null,
+  "evidence_count": 0,
+  "tests_passed": 0,
+  "posterior_probability": null
+ },
+ "V2.readme_example_hex_efficiency.default": {
+  "exit": 2,
+  "verdict": "UNKNOWN",
+  "entities_consulted": null,
+  "tests_gathered": null,
+  "evidence_count": 0,
+  "tests_passed": 0,
+  "posterior_probability": null
+ },
+ "V3.cli_always_true_real_index.default": {
+  "exit": 0,
+  "verdict": "NOT_TESTED",
+  "entities_consulted": 122,
+  "tests_gathered": 0,
+  "evidence_count": 0,
+  "tests_passed": 0,
+  "posterior_probability": 0.5
+ },
+ "V1.unknown_claim.legacy": {
+  "exit": 0,
+  "verdict": "NOT_TESTED",
+  "entities_consulted": 122,
+  "tests_gathered": 0,
+  "evidence_count": 0,
+  "tests_passed": 0,
+  "posterior_probability": 0.5
+ },
+ "V2.readme_example_hex_efficiency.legacy": {
+  "exit": 0,
+  "verdict": "NOT_TESTED",
+  "entities_consulted": 4,
+  "tests_gathered": 0,
+  "evidence_count": 0,
+  "tests_passed": 0,
+  "posterior_probability": 0.5
+ },
+ "V3.cli_always_true_real_index.legacy": {
+  "exit": 0,
+  "verdict": "NOT_TESTED",
+  "entities_consulted": 122,
+  "tests_gathered": 0,
+  "evidence_count": 0,
+  "tests_passed": 0,
+  "posterior_probability": 0.5
+ },
+ "V4.posterior_vs_attribute_count.default": [
+  {
+   "n": 0,
+   "calls": 0,
+   "posterior": 0.5,
+   "verdict": "NOT_TESTED"
+  },
+  {
+   "n": 1,
+   "calls": 1,
+   "posterior": 0.79,
+   "verdict": "TESTED"
+  },
+  {
+   "n": 2,
+   "calls": 1,
+   "posterior": 0.79,
+   "verdict": "TESTED"
+  },
+  {
+   "n": 5,
+   "calls": 1,
+   "posterior": 0.79,
+   "verdict": "TESTED"
+  },
+  {
+   "n": 10,
+   "calls": 1,
+   "posterior": 0.79,
+   "verdict": "TESTED"
+  },
+  {
+   "n": 20,
+   "calls": 1,
+   "posterior": 0.79,
+   "verdict": "TESTED"
+  }
+ ],
+ "V5.hydrated_always_true.default": {
+  "tests_gathered": 228,
+  "calls": 1,
+  "evidence_count": 1,
+  "posterior": 0.8111
+ },
+ "V4.posterior_vs_attribute_count.legacy": [
+  {
+   "n": 0,
+   "calls": 0,
+   "posterior": 0.5,
+   "verdict": "NOT_TESTED"
+  },
+  {
+   "n": 1,
+   "calls": 1,
+   "posterior": 0.79,
+   "verdict": "TESTED"
+  },
+  {
+   "n": 2,
+   "calls": 2,
+   "posterior": 0.934,
+   "verdict": "TESTED"
+  },
+  {
+   "n": 5,
+   "calls": 5,
+   "posterior": 0.9987,
+   "verdict": "TESTED"
+  },
+  {
+   "n": 10,
+   "calls": 10,
+   "posterior": 1.0,
+   "verdict": "TESTED"
+  },
+  {
+   "n": 20,
+   "calls": 20,
+   "posterior": 1.0,
+   "verdict": "TESTED"
+  }
+ ],
+ "V5.hydrated_always_true.legacy": {
+  "tests_gathered": 228,
+  "calls": 228,
+  "evidence_count": 228,
+  "posterior": 1.0
+ },
+ "V6.empty_scope_text_overlap": 0.5,
+ "F1.all_entities.default": {
+  "outcomes": {
+   "ran": 120,
+   "error:No": 2
+  },
+  "exceptions": {},
+  "counterexamples": 601,
+  "check_outcomes": {
+   "NOT_TESTED": 601
+  },
+  "resistance_values": {
+   "None": 120
+  }
+ },
+ "F1.all_entities.legacy": {
+  "outcomes": {
+   "ran": 120,
+   "error:No": 2
+  },
+  "exceptions": {},
+  "counterexamples": 601,
+  "check_outcomes": {
+   "survived": 601
+  },
+  "resistance_values": {
+   "1.0": 120
+  }
+ },
+ "F1b.search_against_full_records.default": {
+  "check_outcomes_vs_hydrated": {
+   "RISK_FLAGGED": 360,
+   "NOT_TESTED": 241
+  }
+ },
+ "F2.empty_scope_fixture": {
+  "counterexamples_generated": 0,
+  "tests_survived": 0,
+  "falsification_resistance": null,
+  "resistance_reason": "no counterexample was tested: no score"
+ },
+ "F3.missing_file": {
+  "error": "LOAD_FAILED: entity file for FZ could not be loaded; nothing was analysed.",
+  "load_failures": [
+   {
+    "id": "FZ",
+    "path": "does/not/exist.json",
+    "state": "LOAD_FAILED",
+    "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/lid_main/does/not/exist.json'"
+   }
+  ]
+ },
+ "F4.readme_example_COUNCIL": {
+  "exit": 0,
+  "error": "Entity COUNCIL not found.",
+  "mode": null
+ },
+ "D1.edges": {
+  "index_relations": 555,
+  "tracer_link_edges": 555,
+  "tracer_scope_dependency_edges": 5,
+  "in_index_not_tracer": [],
+  "in_tracer_not_index": [],
+  "reported_unresolved": [
+   {
+    "source": "WOLF_PACK",
+    "target": "COUNCIL",
+    "relation": "synergy"
+   }
+  ],
+  "reported_non_entity_scope_deps": 646,
+  "reported_load_failures": []
+ },
+ "D2.scope_dependencies_not_entities": {
+  "count": 646,
+  "listed_by_tracer": 646
+ },
+ "D3.WOLF_PACK_children": [
+  [
+   "COUNCIL",
+   "synergy",
+   "unresolved"
+  ],
+  [
+   "OC",
+   "resonance",
+   "truncated"
+  ],
+  [
+   "ECHO",
+   "temporal_bridge",
+   "truncated"
+  ]
+ ],
+ "D4.readme_example_goal:COUNCIL": {
+  "exit": 0,
+  "error": "No matching entity found. Try an entity ID (e.g., 'COUNCIL') or a keyword present in the database.",
+  "start": null
+ },
+ "D4.readme_example_goal:maintain a watershed for 7 generations": {
+  "exit": 0,
+  "error": "No matching entity found. Try an entity ID (e.g., 'COUNCIL') or a keyword present in the database.",
+  "start": null
+ },
+ "A1.real_run": {
+  "total": 122,
+  "loaded": 122,
+  "load_failures": [],
+  "unscoped_numerics": 0,
+  "noun_pretenders": 0,
+  "contradictions": 2,
+  "missing_deps": 651,
+  "scoped_ratio": 1.0,
+  "confidence_distribution": {
+   "0.88": 18,
+   "0.82": 13,
+   "0.81": 4,
+   "0.76": 2,
+   "0.77": 2,
+   "0.83": 9,
+   "0.8": 9,
+   "0.86": 7,
+   "0.78": 9,
+   "0.93": 15,
+   "0.89": 14,
+   "0.9": 16,
+   "0.85": 10,
+   "0.79": 2,
+   "0.84": 5,
+   "0.95": 5,
+   "0.92": 12,
+   "0.87": 12,
+   "0.98": 5,
+   "0.94": 16,
+   "0.91": 18,
+   "0.74": 1,
+   "0.72": 1,
+   "0.75": 2,
+   "0.73": 1,
+   "0.96": 2,
+   "0.97": 3,
+   "0.6": 1,
+   "0.99": 11,
+   "0.5": 3
+  }
+ },
+ "A1b.instrument_disagreement_same_field": {
+  "audit_missing_deps": 651,
+  "tracer_listed_non_entity": 646,
+  "audit_record_keys": [
+   "attribute",
+   "entity",
+   "missing_dependency"
+  ],
+  "in_audit_not_tracer": [
+   [
+    "BE",
+    "hexagonal_cell_efficiency",
+    "golden_ratio"
+   ],
+   [
+    "BE",
+    "hexagonal_cell_efficiency",
+    "pi"
+   ],
+   [
+    "FRACTAL",
+    "self_similarity_index",
+    "golden_ratio"
+   ],
+   [
+    "FRACTAL",
+    "self_similarity_index",
+    "pi"
+   ],
+   [
+    "SPIRAL",
+    "phi_ratio_cross_domain_frequency",
+    "golden_ratio"
+   ]
+  ]
+ },
+ "A2.confidence_fallback": {
+  "scope_checker": 0.06,
+  "audit_bucket": 0.5,
+  "real_attrs_affected": 3
+ },
+ "A3.missing_file": {
+  "total_entities": 1,
+  "entities_loaded": 0,
+  "scoped_ratio": null,
+  "load_failures": [
+   {
+    "id": "GHOST",
+    "path": "nope.json",
+    "state": "LOAD_FAILED",
+    "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/lid_main/nope.json'"
+   }
+  ]
+ },
+ "A4.no_numerics_ratio": {
+  "scoped_ratio": null,
+  "scoped_ratio_reason": "no numeric attribute was scanned: no ratio"
+ },
+ "B1.rebuild": {
+  "exit": 0,
+  "index_bytes_changed": false,
+  "entities": 122,
+  "relations": 555,
+  "same_entity_ids": true,
+  "relational_skipped_message": [
+   "⚠️  No schema for 'relational', skipping validation for this directory."
+  ]
+ },
+ "B2.extra_broken_link": {
+  "exit": 1,
+  "index_written": false
+ },
+ "B2.extra_broken_link.legacy": {
+  "exit": 0,
+  "index_written": true
+ },
+ "B3.record_missing_id": {
+  "exit": 0,
+  "index_written": true,
+  "entities_in_written_index": 121,
+  "message": [
+   "⚠️  Skipping /tmp/lid_main/ontology/ai/autoencoder.json: missing required 'id' or 'name' field"
+  ]
+ },
+ "B4.validation_error_write_order": {
+  "exit": 1,
+  "index_written": false,
+  "message": [
+   "❌ Duplicate ID 'AUTOENC' in /tmp/lid_main/ontology/ai/zz_recheck_duplicate.json (first seen in ontology/ai/autoencoder.json)",
+   "❌ 1 error(s). ontology_index.json was NOT written."
+  ]
+ },
+ "B.restored": true,
+ "L.data_counts": {
+  "scoped_attrs": 228,
+  "single_float_value": 225,
+  "condition_block": 10,
+  "deviation_field": 0,
+  "files_with_temporal_range": 0
+ }
+}
