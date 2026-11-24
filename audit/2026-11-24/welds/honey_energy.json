@@ -1,0 +1,32 @@
+{
+  "term": "honey energy 1270 kJ/100 g",
+  "domain": "bee energy chain",
+  "tracked_by_label": "human_metabolizable",
+  "note": "USDA FDC 169640, derivation 'Calculated'. Used as PROXY for bee-usable energy in common_denominator.py.",
+  "components": [
+    {
+      "id": "human_metabolizable",
+      "name": "energy a human derives",
+      "unit": "kJ/100 g"
+    },
+    {
+      "id": "bee_usable",
+      "name": "energy a bee derives",
+      "unit": "kJ/100 g"
+    },
+    {
+      "id": "combustion",
+      "name": "combustion enthalpy",
+      "unit": "kJ/100 g"
+    }
+  ],
+  "divergences": [
+    {
+      "id": "proxy-in-wax-chain",
+      "note": "Only the human value has a source; the wax-power figure 0.0188 W rests on it. See OPEN_QUESTIONS #2.",
+      "readings": {}
+    }
+  ],
+  "status": "PROPOSED",
+  "date": "2026-11-24"
+}
