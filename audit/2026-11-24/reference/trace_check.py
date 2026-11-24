@@ -13,16 +13,27 @@ if len(sys.argv) > 1 and sys.argv[1] == "--selftest":
     nest = {"record": "SELFTEST", "nodes": clean["nodes"], "cycles": [cyc("CY_A", 10, "CY_B"), cyc("CY_B", 5, None)]}
     ok = []
     with tempfile.TemporaryDirectory() as t:
+        info = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), note="GAP: constructed")],
+                "cycles": [cyc("CY_A", None, "CY_B"), cyc("CY_B", 5, None)]}
+        nosrc = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), source=[])], "cycles": []}
+        mism = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), note="x -> CITATION_MISMATCH")], "cycles": []}
+        other = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), status="VERIFIED")], "cycles": []}
         for name, rec_, want, must in (("clean trace exits 0", clean, 0, None),
                                        ("dangling dependency exits 1", dirty, 1, "DANGLING_DEP"),
-                                       ("nesting violation exits 1", nest, 1, "NESTING_VIOLATION")):
+                                       ("nesting violation exits 1", nest, 1, "NESTING_VIOLATION"),
+                                       ("INFO-only trace (GAP, no period, top-level cycle) exits 0", info, 0, "CYCLE_NO_PERIOD"),
+                                       ("TRACED node without a source exits 1", nosrc, 1, "NO_SOURCE"),
+                                       ("noted CITATION_MISMATCH exits 1", mism, 1, "NOTED_MISMATCH"),
+                                       ("a code with no declared severity (BAD_STATUS) exits 1", other, 1, "BAD_STATUS")):
             src, dst = os.path.join(t, "in.json"), os.path.join(t, "out.json")
             json.dump(rec_, open(src, "w"))
             r = subprocess.run([sys.executable, os.path.abspath(__file__), src, dst], capture_output=True, text=True,
                                env={k: v for k, v in os.environ.items() if k != "LID_STRICT"})
             got = [f[0] for f in json.load(open(dst))["findings"]]
-            # a top-level cycle is itself a finding in this checker, so only the named one is asserted
-            good = r.returncode == want and (must is None or must in got) and (want == 1 or got == [])
+            # only the named finding is asserted; the INFO-only case asserts its whole set
+            good = r.returncode == want and (must is None or must in got) and (want == 1 or must is not None or got == [])
+            if name.startswith("INFO-only"):
+                good = good and sorted(set(got)) == ["CYCLE_NO_PERIOD", "CYCLE_TOP_LEVEL", "GAP"]
             ok.append(good)
             print("%s  %s  (exit %d, findings %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
     print("checks: %d   failed: %d" % (len(ok), ok.count(False)))
@@ -125,9 +136,16 @@ if os.environ.get("LID_STRICT") == "1" and out["findings"]:
     print(f"STRICT: {len(out['findings'])} findings", file=sys.stderr)
     sys.exit(1)
 
-# 2026-11-24, later (order 'process form + Kimi schemas'): the exit is loud by default.
-# Any finding exits 1; LID_STRICT is no longer needed. The output file is written before
-# the exit and its bytes are unchanged, so earlier result files still reproduce.
-if out["findings"]:
-    print(f"{len(out['findings'])} findings: exit 1", file=sys.stderr)
-    sys.exit(1)
+# 2026-11-24, later (order 'process form + Kimi schemas'): any finding exited 1.
+# 2026-11-24, follow-up order (registry/DECLARED.json, 'trace_check severities; ...'): severities.
+# ERROR exits 1. INFO is reported and exits 0. A code with no declared severity is ERROR.
+# The findings list and the output file are unchanged; severities are printed to stderr.
+INFO = {"CYCLE_NO_PERIOD", "CYCLE_TOP_LEVEL", "GAP"}
+def severity(f):
+    return "INFO" if f[0] in INFO else "ERROR"
+_err = [f for f in out["findings"] if severity(f) == "ERROR"]
+_inf = [f for f in out["findings"] if severity(f) == "INFO"]
+print("ERROR %d   INFO %d" % (len(_err), len(_inf)), file=sys.stderr)
+for f in _err: print("  ERROR  " + "  ".join(str(x) for x in f[:3]), file=sys.stderr)
+for f in _inf: print("  INFO   " + "  ".join(str(x) for x in f[:2]), file=sys.stderr)
+sys.exit(1 if _err else 0)
