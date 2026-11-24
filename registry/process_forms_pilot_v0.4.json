@@ -1,0 +1,221 @@
+{
+  "record": "PROCESS_FORM_PILOT_SUPERSEDED",
+  "date": "2026-11-24",
+  "status": "PROPOSED",
+  "note": "The BE.hexagonal_cell_efficiency pilot record as built from the v0.4 reference trace (commit 0fcb623), kept unchanged. registry/process_forms.json now holds the record rebuilt from v0.6. The v0.3 build is in registry/process_forms_pilot_v0.3.json.",
+  "process_forms": [
+    {
+      "attribute": "BE.hexagonal_cell_efficiency",
+      "status": "PROPOSED",
+      "form": {
+        "kind": "state",
+        "quantity": "Ratio of honey volume stored per unit wax mass in hexagonal cells compared to the next-best regular tessellation. Derives from the honeycomb conjecture: hexagons minimize total perimeter for equal-area tiling of a plane.",
+        "value": {
+          "y": 0.97,
+          "node": "P_HEX_CELL",
+          "node_status": "RECORDED_UNVERIFIED"
+        },
+        "units": null
+      },
+      "driver": "F_FLOW (D0_law, CONTESTED): Cells are built circular; visco-elastic wax heated by workers flows near triple junctions; surface-energy minimization straightens walls into rounded hexagons. Heat: E_BODY_HEAT (D1_energy, TRACED).",
+      "driver_nodes": [
+        {
+          "node": "F_FLOW",
+          "layer": "D0_law",
+          "role": "governing_law",
+          "status": "CONTESTED",
+          "claim": "Cells are built circular; visco-elastic wax heated by workers flows near triple junctions; surface-energy minimization straightens walls into rounded hexagons."
+        },
+        {
+          "node": "E_BODY_HEAT",
+          "layer": "D1_energy",
+          "role": "energy_source",
+          "status": "TRACED",
+          "claim": "Heat for wax working and brood comes from worker thoracic muscle metabolism fuelled by nectar sugar; ~40% of the colony's annual energy intake goes to brood-nest heating."
+        },
+        {
+          "node": "D4_HOT_WORKERS",
+          "layer": "D4_entity",
+          "role": "entity",
+          "status": "TRACED",
+          "claim": "Workers heat the wax with their bodies during comb building."
+        }
+      ],
+      "timescale": {
+        "cycle_ref": "CY_HEXFORM",
+        "text": "≈6 s fully heated; ≈36 s partially heated",
+        "nested_in": [
+          "CY_SCALE",
+          "CY_GLAND",
+          "CY_LIFE",
+          "CY_YEAR",
+          "CY_SOLAR"
+        ],
+        "note": "cycle context as recorded: comb building, wax ~45 °C. The cycle is the formation transient; the periods of the enclosing cycles are in registry/cycles.json."
+      },
+      "regime_bounds": {
+        "wax_local_T_C": [
+          45,
+          62
+        ],
+        "nest_T_C": [
+          33,
+          36
+        ]
+      },
+      "regime": {
+        "node": "REGIME_HEX",
+        "status": "DERIVED",
+        "outside": "NOT_IN_SCOPE",
+        "note": "Lower bound 45 °C is 'about'; treat as CONDITIONAL until a source gives a range. | v0.3 (2026-11-24): the 45 °C lower bound comes from C_FLOW_T, now CONTESTED; the regime is CONDITIONAL on which account holds. Bauer & Bienefeld's 33.6–37.6 °C would fall below this bound."
+      },
+      "scope_ref": "ontology/animal/bee.json#attributes.hexagonal_cell_efficiency.scope",
+      "dependencies": {
+        "root_node": "P_HEX_CELL",
+        "direct": [
+          {
+            "node": "G2D_HALES",
+            "layer": "D0_law",
+            "role": "governing_law",
+            "status": "TRACED"
+          },
+          {
+            "node": "G3D_FEJES",
+            "layer": "D0_law",
+            "role": "governing_law",
+            "status": "TRACED"
+          },
+          {
+            "node": "F_FLOW",
+            "layer": "D0_law",
+            "role": "governing_law",
+            "status": "CONTESTED"
+          },
+          {
+            "node": "E_WAX_COST",
+            "layer": "D1_energy",
+            "role": "energy_source",
+            "status": "TRACED"
+          },
+          {
+            "node": "M_WAX",
+            "layer": "D3_material",
+            "role": "material",
+            "status": "TRACED"
+          },
+          {
+            "node": "C_BROOD_T",
+            "layer": "D2_condition",
+            "role": "boundary_condition",
+            "status": "TRACED"
+          },
+          {
+            "node": "C_FLOW_T",
+            "layer": "D2_condition",
+            "role": "boundary_condition",
+            "status": "CONTESTED"
+          },
+          {
+            "node": "P_BUILT_MEASURED",
+            "layer": "D5_pattern",
+            "role": "pattern",
+            "status": "TRACED"
+          },
+          {
+            "node": "G3D_BASE_NOT_OPTIMAL",
+            "layer": "D0_law",
+            "role": "governing_law",
+            "status": "TRACED"
+          },
+          {
+            "node": "REGIME_HEX",
+            "layer": "D2_condition",
+            "role": "regime",
+            "status": "DERIVED"
+          },
+          {
+            "node": "C_MELT",
+            "layer": "D2_condition",
+            "role": "boundary_condition",
+            "status": "TRACED"
+          },
+          {
+            "node": "D4_HOT_WORKERS",
+            "layer": "D4_entity",
+            "role": "entity",
+            "status": "TRACED"
+          }
+        ],
+        "reachable_by_layer": {
+          "D0_law": [
+            "G2D_HALES",
+            "G3D_FEJES",
+            "F_FLOW",
+            "G3D_BASE_NOT_OPTIMAL",
+            "G3D_DAUTER",
+            "L_CONSERVE"
+          ],
+          "D1_energy": [
+            "E_WAX_COST",
+            "E_BODY_HEAT",
+            "E_NECTAR",
+            "E_PHOTO_MAX",
+            "E_SUN",
+            "E_SURFACE"
+          ],
+          "D2_condition": [
+            "C_BROOD_T",
+            "C_FLOW_T",
+            "REGIME_HEX",
+            "C_MELT",
+            "C_WALL"
+          ],
+          "D3_material": [
+            "M_WAX",
+            "M_GLANDS"
+          ],
+          "D4_entity": [
+            "D4_HOT_WORKERS",
+            "D4_FLOWERS"
+          ],
+          "D5_pattern": [
+            "P_BUILT_MEASURED"
+          ]
+        },
+        "not_reached": [
+          "D4_MANUKA",
+          "D4_WILDFLOWER",
+          "E_NECTARY_PHOTO",
+          "H_DHA_MGO",
+          "I_SUNCOMPASS",
+          "L_SCATTER"
+        ]
+      },
+      "deviation": {
+        "text": "±0.01 (prose in measurement_limits)",
+        "node": "P_HEX_CELL",
+        "confidence_record": "registry/confidence_records.json#BE.hexagonal_cell_efficiency",
+        "note": "as the trace records it; the prose it points to is quoted in the confidence record. Not parsed into a number."
+      },
+      "being_tense": null,
+      "phase_now": [],
+      "carried_from_phase": [],
+      "legacy_scalar": {
+        "value": 0.97,
+        "source_field": "ontology/animal/bee.json#attributes.hexagonal_cell_efficiency.value",
+        "flag": "LEGACY_SCALAR",
+        "kept": true
+      },
+      "open_findings": [],
+      "trace": {
+        "file": "audit/2026-11-24/reference/reference_trace_BE_hex_v0.4.json",
+        "version": "0.4",
+        "sha256": "a17aa46fc115c93e40d3e2a161ca6d3ded59259baf02d0e59a65c1541aef6418"
+      },
+      "source": [
+        "audit/2026-11-24/reference/reference_trace_BE_hex_v0.4.json"
+      ],
+      "note": "Pilot. form.kind 'state' is this conversion's reading: the stored quantity is a ratio of a built structure; the trace does not classify it as rate or state. The value is the trace's root node, status RECORDED_UNVERIFIED. The driver is CONTESTED (four accounts kept) and the lower regime bound is CONDITIONAL on it. being_tense is null: not assessed. No number here is new."
+    }
+  ]
+}

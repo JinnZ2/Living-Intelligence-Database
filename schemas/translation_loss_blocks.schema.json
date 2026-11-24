@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "x-lid": {
     "status": "PROPOSED",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "version_rule": "MINOR: additive; no existing schema or entity file is changed",
     "adopted": "2026-11-24",
     "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/translation_loss_blocks.schema.json",
@@ -12,7 +12,8 @@
       "confidence record: certainty and recurrence may be null (not recorded); deviation.value may be null; deviation gains quote and expressions; kind gains plus_minus_unspecified, varies_unquantified, mixed; fields attribute and source_field added",
       "process_forms block added",
       "0.2.0: being_tense, phase_now, carried_from_phase added to process_forms items; phase_records block added",
-      "0.3.0: process_forms items gain driver_nodes, regime, dependencies, deviation, legacy_scalar, open_findings, trace, note; timescale gains nested_in and note"
+      "0.3.0: process_forms items gain driver_nodes, regime, dependencies, deviation, legacy_scalar, open_findings, trace, note; timescale gains nested_in and note",
+      "0.4.0: a process_forms dependencies.direct item may carry edge_status and edge_note, copied from an edge object in the trace (MINOR, additive; order 'close-out')"
     ]
   },
   "id": "translation_loss_blocks.schema.json",
@@ -820,6 +821,20 @@
                     },
                     "status": {
                       "type": "string"
+                    },
+                    "edge_status": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Status of the edge from the root to this node, when the trace writes the edge as an object (reference_trace schema 0.4.0 and later). Copied from the trace."
+                    },
+                    "edge_note": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Note on that edge, copied from the trace."
                     }
                   }
                 }

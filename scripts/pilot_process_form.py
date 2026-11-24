@@ -3,6 +3,9 @@
 
 2026-11-24 (order 'trace v0.4'): the trace read is now v0.4. The record built from v0.3 is kept
 unchanged in registry/process_forms_pilot_v0.3.json.
+2026-11-24 (order 'close-out'): the trace read is now v0.6; the v0.4 build is kept in
+registry/process_forms_pilot_v0.4.json. A dependency written as an edge object {id, status, note}
+is read by its id, and its edge status and note are copied into dependencies.direct.
 
     python3 scripts/pilot_process_form.py            write the record into registry/process_forms.json
     python3 scripts/pilot_process_form.py --check    rebuild and compare; exit 1 if the stored record differs
@@ -19,8 +22,8 @@ import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TRACE = "audit/2026-11-24/reference/reference_trace_BE_hex_v0.4.json"
-RESULTS = "audit/2026-11-24/reference/trace_check_results_v0.4.json"
+TRACE = "audit/2026-11-24/reference/reference_trace_BE_hex_v0.6.json"
+RESULTS = "audit/2026-11-24/reference/trace_check_results_v0.6.json"
 ENTITY = "ontology/animal/bee.json"
 ATTR = "hexagonal_cell_efficiency"
 OUT = os.path.join(ROOT, "registry", "process_forms.json")
@@ -36,6 +39,10 @@ def is_info(x):
     return x[0] in ERROR_FREE_INFO or (x[0] == "CYCLE_NO_SOURCE" and len(x) > 2 and x[2] == "PROPOSED")
 
 
+def dep_id(e):
+    return e["id"] if isinstance(e, dict) else e
+
+
 def j(rel):
     return json.load(open(os.path.join(ROOT, rel), encoding="utf-8"))
 
@@ -46,12 +53,12 @@ def build():
     C = {c["id"]: c for c in j("registry/cycles.json")["cycles"]}
     attr = ent["attributes"][ATTR]
     root = next(n for n in t["nodes"] if n["layer"] == "D5_pattern" and n.get("repo_entity") == ent["id"])
-    seen, stack = [], list(root.get("depends_on", []))
+    seen, stack = [], [dep_id(e) for e in root.get("depends_on", [])]
     while stack:
         k = stack.pop(0)
         if k in N and k not in seen:
             seen.append(k)
-            stack += N[k].get("depends_on", [])
+            stack += [dep_id(e) for e in N[k].get("depends_on", [])]
     by_layer = {}
     for k in seen:
         by_layer.setdefault(N[k]["layer"], []).append(k)
@@ -85,8 +92,10 @@ def build():
         "scope_ref": "%s#attributes.%s.scope" % (ENTITY, ATTR),
         "dependencies": {
             "root_node": root["id"],
-            "direct": [{"node": k, "layer": N[k]["layer"], "role": N[k]["role"], "status": N[k]["status"]}
-                       for k in root["depends_on"]],
+            "direct": [dict({"node": dep_id(e), "layer": N[dep_id(e)]["layer"], "role": N[dep_id(e)]["role"],
+                             "status": N[dep_id(e)]["status"]},
+                            **({"edge_status": e.get("status"), "edge_note": e.get("note")} if isinstance(e, dict) else {}))
+                       for e in root["depends_on"]],
             "reachable_by_layer": {k: by_layer[k] for k in sorted(by_layer)},
             "not_reached": sorted(k for k in N if k not in seen and k != root["id"])},
         "deviation": {"text": root["value"]["deviation"], "node": root["id"],
@@ -123,7 +132,7 @@ if __name__ == "__main__":
     doc["process_forms"] = [r for r in doc.get("process_forms", []) if r["attribute"] != rec["attribute"]] + [rec]
     doc = {k: doc[k] for k in ("record", "version", "date", "status", "note", "process_forms", "phase_records") if k in doc}
     doc["note"] = doc["note"].split(" PILOT:")[0] + (" PILOT: one process_forms record, BE.hexagonal_cell_efficiency, "
-                                                     "built by scripts/pilot_process_form.py from the v0.4 reference trace; the v0.3 build is kept in "
-                                                     "registry/process_forms_pilot_v0.3.json.")
+                                                     "built by scripts/pilot_process_form.py from the v0.6 reference trace; the v0.3 and v0.4 builds are kept in "
+                                                     "registry/process_forms_pilot_v0.3.json and _v0.4.json.")
     open(OUT, "w", encoding="utf-8").write(dump(doc))
     print("wrote the pilot record into registry/process_forms.json")

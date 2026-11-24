@@ -3,7 +3,7 @@
   "version": "0.1",
   "date": "2026-11-24",
   "status": "PROPOSED",
-  "note": "Process-form records kept beside the entity files; no entity file is edited. All fields are PROPOSED. Null = not assessed. The one record here is the example given in the owner's addendum of 2026-11-24; it is not an observation and has no source. PILOT: one process_forms record, BE.hexagonal_cell_efficiency, built by scripts/pilot_process_form.py from the v0.4 reference trace; the v0.3 build is kept in registry/process_forms_pilot_v0.3.json.",
+  "note": "Process-form records kept beside the entity files; no entity file is edited. All fields are PROPOSED. Null = not assessed. The one record here is the example given in the owner's addendum of 2026-11-24; it is not an observation and has no source. PILOT: one process_forms record, BE.hexagonal_cell_efficiency, built by scripts/pilot_process_form.py from the v0.6 reference trace; the v0.3 and v0.4 builds are kept in registry/process_forms_pilot_v0.3.json and _v0.4.json.",
   "process_forms": [
     {
       "attribute": "BE.hexagonal_cell_efficiency",
@@ -126,25 +126,33 @@
             "node": "G3D_BASE_NOT_OPTIMAL",
             "layer": "D0_law",
             "role": "governing_law",
-            "status": "TRACED"
+            "status": "TRACED",
+            "edge_status": "DERIVED (basis: OBSERVED)",
+            "edge_note": null
           },
           {
             "node": "REGIME_HEX",
             "layer": "D2_condition",
             "role": "regime",
-            "status": "DERIVED"
+            "status": "DERIVED",
+            "edge_status": "PROPOSED",
+            "edge_note": "used by record, previously unreachable"
           },
           {
             "node": "C_MELT",
             "layer": "D2_condition",
             "role": "boundary_condition",
-            "status": "TRACED"
+            "status": "TRACED",
+            "edge_status": "PROPOSED",
+            "edge_note": "used by record, previously unreachable"
           },
           {
             "node": "D4_HOT_WORKERS",
             "layer": "D4_entity",
             "role": "entity",
-            "status": "TRACED"
+            "status": "TRACED",
+            "edge_status": "PROPOSED",
+            "edge_note": "used by record, previously unreachable"
           }
         ],
         "reachable_by_layer": {
@@ -209,12 +217,12 @@
       },
       "open_findings": [],
       "trace": {
-        "file": "audit/2026-11-24/reference/reference_trace_BE_hex_v0.4.json",
-        "version": "0.4",
-        "sha256": "a17aa46fc115c93e40d3e2a161ca6d3ded59259baf02d0e59a65c1541aef6418"
+        "file": "audit/2026-11-24/reference/reference_trace_BE_hex_v0.6.json",
+        "version": "0.6",
+        "sha256": "a3a198da46744eb9e239710a7f7a8f990730abd5a70177d8620407d09f4f86a6"
       },
       "source": [
-        "audit/2026-11-24/reference/reference_trace_BE_hex_v0.4.json"
+        "audit/2026-11-24/reference/reference_trace_BE_hex_v0.6.json"
       ],
       "note": "Pilot. form.kind 'state' is this conversion's reading: the stored quantity is a ratio of a built structure; the trace does not classify it as rate or state. The value is the trace's root node, status RECORDED_UNVERIFIED. The driver is CONTESTED (four accounts kept) and the lower regime bound is CONDITIONAL on it. being_tense is null: not assessed. No number here is new."
     }
