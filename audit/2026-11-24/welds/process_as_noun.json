@@ -1,0 +1,27 @@
+{
+  "term": "hexagonal_cell_efficiency (attribute)",
+  "domain": "LID schema",
+  "tracked_by_label": "state",
+  "note": "Owner: every noun is a verb. The schema stores a value without the cycle the process runs on.",
+  "components": [
+    {
+      "id": "state",
+      "name": "stored attribute value, no time index",
+      "unit": "dimensionless"
+    },
+    {
+      "id": "process",
+      "name": "building: secretion, heating, relaxation",
+      "unit": "rate on a named cycle"
+    }
+  ],
+  "divergences": [
+    {
+      "id": "no-cycle-slot",
+      "note": "Comb building runs on CY_SCALE (12 h) with a ~6 s relaxation; the attribute carries neither. See OPEN_QUESTIONS #4.",
+      "readings": {}
+    }
+  ],
+  "status": "PROPOSED",
+  "date": "2026-11-24"
+}

@@ -1,0 +1,27 @@
+{
+  "term": "de_weld Axis.OTHER",
+  "domain": "method instrument (method-layer de_weld.py @4636166)",
+  "tracked_by_label": "evaluative",
+  "note": "OTHER is counted among EVALUATIVE_AXES. A named descriptive sub-quantity placed on OTHER is read as evaluation.",
+  "components": [
+    {
+      "id": "evaluative",
+      "name": "a judgement axis",
+      "unit": "axis membership"
+    },
+    {
+      "id": "named_descriptive",
+      "name": "a named descriptive sub-quantity",
+      "unit": "axis membership"
+    }
+  ],
+  "divergences": [
+    {
+      "id": "lid-W01-W02",
+      "note": "Encoded on OTHER, W01 and W02 classed THIN and flagged ungrounded_evaluation despite sourced descriptive claims; on DESCRIPTIVE they class THICK, no flag. See OPEN_QUESTIONS #1.",
+      "readings": {}
+    }
+  ],
+  "status": "PROPOSED",
+  "date": "2026-11-24"
+}

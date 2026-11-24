@@ -99,3 +99,19 @@ The owner's statement "every noun is a verb" corresponds to the rule's insistenc
 - `reference/lid_welds.py`, `reference/lid_welds_results.json`, `reference/lid_welds_render.txt`: the weld register on de_weld.
 - `reference/common_denominator.py`, `reference/common_denominator_results.json`: the time-basis rule and the worked chain.
 - `reference/trace_check.py`: dated 2026-11-24 note added. The script now also looks for `bee.json` three levels up, so it runs in place in the repository. Both earlier result files reproduce byte-for-byte.
+
+## Note added 2026-11-24 (later): the four findings, marked
+
+Added beside the text above without changing it. The four findings from this posting are now marked in the owner's own formats:
+
+| Finding | Marked as | Weld file | Open question |
+|---|---|---|---|
+| de_weld OTHER counted as evaluative | weld inside the instrument, plus GAP (INSTRUMENT) | `welds/de_weld_other_axis.json` | `OPEN_QUESTIONS.md` #1 |
+| Honey energy is human metabolizable (W07) | weld, plus GAP (EVIDENCE, UNKNOWN_ATM) | `welds/honey_energy.json` | #2 |
+| D0–D5 vs L0–L5 (W08) | weld, plus DECISION (owner) | `welds/layer_stack.json` | #3 |
+| Process stored as static noun (W09) | weld, plus GAP (SCHEMA) | `welds/process_as_noun.json` | #4 |
+
+Checks run against Simulators at `b40dfde`, without writing into that repository:
+
+- `tools/gap_index.py` `parse_entries` and `build_row` parse all four entries, and `complete` is True for each. Entry #3 uses the DECISION template: Fork, Winning condition, Discriminator, Blocked by, Who could run it.
+- `category-weld/weld.py` `load_welds` and `score` read all four weld files. Every case reads `--` because no case has paired before/after readings. That is correct: none of these welds has been quantified.

@@ -1,0 +1,27 @@
+{
+  "term": "layer (D0–D5 / L0–L5)",
+  "domain": "LID dependency grounding",
+  "tracked_by_label": "repository_L",
+  "note": "Same shape, two stacks, no declared mapping.",
+  "components": [
+    {
+      "id": "repository_L",
+      "name": "docs/GROUNDING_LAYERS.md L0–L5 + Lε",
+      "unit": "layer index"
+    },
+    {
+      "id": "audit_D",
+      "name": "audit D0–D5 from owner's dependency answer",
+      "unit": "layer index"
+    }
+  ],
+  "divergences": [
+    {
+      "id": "epistemic-membrane",
+      "note": "L has an epistemic membrane Lε between L4 and L5; D has no counterpart. See OPEN_QUESTIONS #3.",
+      "readings": {}
+    }
+  ],
+  "status": "PROPOSED",
+  "date": "2026-11-24"
+}
