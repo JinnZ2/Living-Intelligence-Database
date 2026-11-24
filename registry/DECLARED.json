@@ -169,6 +169,73 @@
         },
         "renames": "none"
       }
+    },
+    {
+      "date": "2026-11-24",
+      "name": "physics usage: example export",
+      "after": "the runtime reference export passed its test; before scripts/export_examples.py existed and before any example or split was computed",
+      "changes_a_declared_value": false,
+      "what": "Filters, field roles, path rule and hold-out split for examples/lid_examples.jsonl. No model is trained by this order.",
+      "status": "PROPOSED",
+      "example_export": {
+        "tool": "scripts/export_examples.py",
+        "output": "examples/lid_examples.jsonl and examples/MANIFEST.json",
+        "source": "head steps under provenance/, read with the reading labels of the runtime reference amendment. The reference must pass its own check first.",
+        "one_example_per": "one target field (head step) that passes the filters",
+        "filters": {
+          "include": {
+            "OBSERVED": "reading OBSERVED",
+            "DERIVED": "reading DERIVED (has a source); the basis is stated in the answer",
+            "PROPOSED": "reading PROPOSED; the answer is labeled PROPOSED and never worded as fact",
+            "UNMEASURED": "reading NO_INFORMATION (the field is null), in any block including attributes; the answer claim is 'unmeasured'",
+            "CONTESTED_LABEL": "a functional_intelligence.contested_label entry; the answer says the label does not decide and gives the function fields"
+          },
+          "exclude": {
+            "NOT_ASSESSED": "a value with a source and no status tag (most attribute values). Not promoted: the evidence_type -> status table stays not applied",
+            "UNSOURCED": "a value with no source, whatever its status tag",
+            "assumption_trace": "coordination.assumption_trace is not a target and not a path element; its assumption ids are carried in the answer scope of coordination examples"
+          }
+        },
+        "roles": {
+          "status": "PROPOSED mapping of record fields to path positions; written here, not taken from a source",
+          "observation": [
+            "functional_intelligence.adapts",
+            "functional_intelligence.signals",
+            "functional_intelligence.responds_to_other",
+            "functional_intelligence.changes_environment",
+            "functional_intelligence.co_adapts",
+            "gate_sensing.limit_sensed",
+            "gate_sensing.early_signal",
+            "attributes.* (null ones only)"
+          ],
+          "mechanism": [
+            "coordination.carrier",
+            "coordination.signal",
+            "coordination.record",
+            "coordination.closure",
+            "coordination.trust_basis",
+            "coordination.loop_topology",
+            "gate_sensing.response"
+          ],
+          "physics": [
+            "coordination.energy_cost",
+            "gate_sensing.lead_time"
+          ],
+          "status_element": "the last path element: the target's status tag, status note, reading and void"
+        },
+        "derivation_path": "the entity's included fields (contested labels excepted) whose role comes before the target's, then those of the target's role that come before it in the order listed above, then the target, then the status element. Each element carries field, role, reading, value, status, step_id, source_ids, void. The path is an ordering of record fields by declared role. No stored step names another field as its input, so the path does not claim one field was derived from another.",
+        "question": "one fixed template per field, filled with the entity name",
+        "answer": "claim, status, scope (the step's scope and, for coordination fields, the entity's assumption ids), kind, and void when null",
+        "provenance": "step_ids and source_ids of every path element",
+        "holdout": {
+          "unit": "entity: all examples of an entity are on one side",
+          "rule": "take the entities that have at least one example, sort by sha256 of the entity id as UTF-8 (hex, ascending), and hold out the first ceil(0.2 * n)",
+          "field": "split = 'train' or 'holdout' on each example"
+        },
+        "snapshot_class": "SUMMARY_ONLY on the manifest",
+        "check": "every step id is a head step; no example has an UNSOURCED or NOT_ASSESSED target or path element; an OBSERVED example has status OBSERVED; a PROPOSED answer carries the PROPOSED label; an UNMEASURED answer has a null value; no entity is on both sides of the split"
+      },
+      "renames": "none"
     }
   ]
 }
