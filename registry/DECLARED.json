@@ -236,6 +236,23 @@
         "check": "every step id is a head step; no example has an UNSOURCED or NOT_ASSESSED target or path element; an OBSERVED example has status OBSERVED; a PROPOSED answer carries the PROPOSED label; an UNMEASURED answer has a null value; no entity is on both sides of the split"
       },
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "stratified hold-out",
+      "after": "the example export at 2f3d933, whose hold-out (BEE_NEST_SITE, MY) held only UNMEASURED examples; by the owner's order",
+      "changes_a_declared_value": true,
+      "what": "Replaces the hold-out rule of the amendment 'physics usage: example export'. Filters, roles, path rule and checks are unchanged. Declared before the new split was computed.",
+      "holdout": {
+        "unit": "entity: all examples of an entity are on one side",
+        "strata": "has_statused_field = yes when the entity has at least one example of kind OBSERVED, DERIVED or PROPOSED; no otherwise. coordination.assumption_trace is not an example and does not count.",
+        "rule": "within each stratum, sort the entities by sha256 of the entity id as UTF-8 (hex, ascending) and hold out the first max(1, ceil(0.2 * n)); an empty stratum holds out none",
+        "field": "split = 'train' or 'holdout' on each example; the manifest lists each stratum with its entities and its hold-out",
+        "check_added": "each non-empty stratum has at least one hold-out entity",
+        "note": "n too small to measure: with 8 entities the split shows the rule works; no rate computed on it is a measurement"
+      },
+      "evidence_type_table": "stays NOT APPLIED. Status comes from reading the source, not from its evidence_type.",
+      "renames": "none"
     }
   ]
 }
