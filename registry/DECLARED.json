@@ -615,6 +615,43 @@
       "pilot_process_form": "registry/process_forms.json: the BE.hexagonal_cell_efficiency record is rebuilt from the v0.4 trace by the same script and the same rule (every value copied from a named trace node, a cycle or the entity file). The record built from v0.3 is kept unchanged in registry/process_forms_pilot_v0.3.json. This replaces 'built only from ...v0.3.json' in the earlier entry.",
       "renames": "none",
       "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "schema 0.2.0 and 0.4.0; ENTITY_TRACE_DIVERGENCE; entity correction in the provenance step",
+      "after": "branch process-form-kimi-schemas at 0fcb623; by the owner's order 'pins + entity correction'. Declared before the schema files, the checker change, the entity edit, the provenance step and the v0.5 trace.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "schemas": {
+        "0.2.0": "the reference_trace schema as received (0.1.0, Kimi) plus one optional field, status_history, on a node; nothing else differs. File: schemas/pinned/reference_trace.0.2.0.schema.json. Trace v0.3 is pinned to it (replaces the pin 'v0.3 -> as received 0.1.0' of the entry 'trace v0.4: ...', under which v0.3 failed).",
+        "0.2.0_name_clash": "the adopted schema's own change list already used the number 0.2.0 for a different change ('cycle field phases added'), a state of schemas/reference_trace.schema.json that was superseded by 0.3.0. The two are different schemas. The owner's 0.2.0 above is the one that is pinned; a pin names its schema by file path and sha256, never by the number alone. The adopted file's change list is left as written.",
+        "0.3.0": "frozen copy of the adopted schema as it stands at 0fcb623: schemas/pinned/reference_trace.0.3.0.schema.json, byte-identical, so trace v0.4 keeps its pin when the adopted file moves on.",
+        "0.4.0": "0.3.0 plus: an item of a node's depends_on is a string (the node id, as before) or an object {id, status, note} with id required. MINOR, additive: every trace valid under 0.3.0 stays valid. schemas/reference_trace.schema.json becomes 0.4.0.",
+        "pins": {
+          "v0.1": "as received 0.1.0",
+          "v0.2": "as received 0.1.0",
+          "v0.3": "0.2.0",
+          "v0.4": "0.3.0 (frozen copy)",
+          "v0.5": "0.4.0"
+        }
+      },
+      "ENTITY_TRACE_DIVERGENCE": {
+        "severity": "ERROR",
+        "meaning": "the trace records a correction that the entity's attribute does not carry",
+        "trace_records_a_correction_when": "a node's note, or the note of an entry in a node's status_history, holds a *_MISMATCH word (the schema calls these words load-bearing)",
+        "entity_carries_it_when": "the attribute named in the trace's subject has scope.evidence.correction with a non-empty source and a non-empty scope, in the entity file",
+        "finding": "[ENTITY_TRACE_DIVERGENCE, node id, entity.attribute], once per node. When the entity file cannot be read the check is not run and the summary says so; it is not counted as a pass.",
+        "what_it_does_not_check": "it does not compare the text of the correction with the trace; presence only",
+        "earlier_traces": "v0.1-v0.3 keep their NOTED_MISMATCH findings. Once the entity carries the correction they raise no ENTITY_TRACE_DIVERGENCE, so their stored result files still reproduce."
+      },
+      "entity_correction": {
+        "field": "attributes.<name>.scope.evidence.correction = {source, scope, note}. Added beside the original evidence.source, which is never edited.",
+        "provenance_step": "the backfill rule gains one clause: when an attribute has evidence.correction, the source id of correction.source is added to the step's inputs after the original source, and params.correction = {scope, note}. A step for an attribute with no correction is computed exactly as before, so no other step id moves. The entity edit therefore appends one superseding step for that field; the earlier step stays.",
+        "this_order": "BE.hexagonal_cell_efficiency only; text of the correction as given in the owner's order"
+      },
+      "trace_v0_5": "reference_trace_BE_hex_v0.5.json is a new file built from v0.4 (v0.1-v0.4 untouched): the status and note of the edges added in v0.4 move from the root's note onto the edges; the root's note gains a dated line saying the entity file now carries the correction. The pilot record stays built from v0.4; this order does not ask for a rebuild.",
+      "renames": "none",
+      "observer_slots": null
     }
   ]
 }
