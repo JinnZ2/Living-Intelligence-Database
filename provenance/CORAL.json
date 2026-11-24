@@ -1,0 +1,82 @@
+{
+ "entity": "CORAL",
+ "path": "ontology/animal/coral_reef.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "77c68d4d4d6de51e18ffdb5ab5280a89eb62495b551915ea0a3e3953841cf2b7",
+   "inputs": [
+    "S-fdf08f28d583"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CORAL",
+    "field": "attributes.symbiotic_photosynthesis",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8b1d59b8bddbc2768677179d422e4aba46bb6f152dbedbdba5d1f2e8495ccc31",
+   "inputs": [
+    "S-e6d93ac29a15"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CORAL",
+    "field": "attributes.fractal_construction",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "b4ce85bc3466f3c42ed1c152e3495f5554b6fef2a290e2f35285d110dd25fea9",
+   "inputs": [
+    "S-6b966ad0cb7c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CORAL",
+    "field": "attributes.niche_scaffolding",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

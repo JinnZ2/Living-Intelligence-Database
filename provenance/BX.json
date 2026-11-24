@@ -1,0 +1,82 @@
+{
+ "entity": "BX",
+ "path": "ontology/animal/bat.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "68d8834213d11833dd69855a45a71de569c3795fffe09cdffa3fbed1ac34be0d",
+   "inputs": [
+    "S-854511faa302"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BX",
+    "field": "attributes.echolocation_mapping",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "5085aa654bdf46835f9ff35753df3f6239d53a59b8113fca8777b33fc8f66992",
+   "inputs": [
+    "S-5166977eec90"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BX",
+    "field": "attributes.doppler_compensation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ad1cfdd49189554e7498ce670c86813865a2e9a998700a25919aaaa1ca68db86",
+   "inputs": [
+    "S-0ba0efc5a77d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BX",
+    "field": "attributes.jamming_avoidance",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

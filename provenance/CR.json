@@ -1,0 +1,82 @@
+{
+ "entity": "CR",
+ "path": "ontology/animal/cricket.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2b248a7f2fd1705a89d6059958f542b10bed735d6e56e80a35119341a64fb407",
+   "inputs": [
+    "S-a40e1b33eccb"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CR",
+    "field": "attributes.stridulation_encoding",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "6f1d0bedc7a61538d2a7a6aa75673d17dda22d600b353cd88fffa869276583bc",
+   "inputs": [
+    "S-ca3c91657f58"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CR",
+    "field": "attributes.phonotactic_navigation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1ab218a9668ba9429c36a9e2ceb079049534015baa3aab8e5bf35b678c24e25c",
+   "inputs": [
+    "S-0b188b60a7f8"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CR",
+    "field": "attributes.temperature_frequency_coupling",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "entity": "TARDI",
+ "path": "ontology/animal/tardigrade.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "16d7c5d7c472c243e5c3e17142a452088b9701af385784e2f027c18eac9c1180",
+   "inputs": [
+    "S-037c0fb19bb1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TARDI",
+    "field": "attributes.cryptobiosis",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.99,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0220804d01ccc4449c4d15e96bd79b1631833177781d69cafcff03e4d2851f0b",
+   "inputs": [
+    "S-08ab67e2393b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TARDI",
+    "field": "attributes.radiation_resistance",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.97,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "671e36116538320692e0f0f3c31ea8d03afdf8f6bf5c0d7fe17b544a9c5dab69",
+   "inputs": [
+    "S-5765499ac3e3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TARDI",
+    "field": "attributes.tdp_protein_shielding",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

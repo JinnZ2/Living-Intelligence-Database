@@ -1,0 +1,32 @@
+{
+ "entity": "ROOT_NET",
+ "path": "ontology/plant/root_network.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "14c999e01863796e35fffa22cfe569dcd0eb6e109a98945e2cfb9a90a1e0c3c0",
+   "inputs": [
+    "S-659cd7133ca2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ROOT_NET",
+    "field": "attributes.water_uptake_efficiency",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

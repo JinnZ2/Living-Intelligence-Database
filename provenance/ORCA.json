@@ -1,0 +1,82 @@
+{
+ "entity": "ORCA",
+ "path": "ontology/animal/orca.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "bf128b017d12fe3442f7d387f7f605d99f6e0d01bbb7d0ae51586ebaae5c763c",
+   "inputs": [
+    "S-708f09aaaacd"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ORCA",
+    "field": "attributes.cultural_hunting_tradition",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "dbee65e98915fde6bb4db086a396911cdcefbd708b81869b279c7c591c2f246d",
+   "inputs": [
+    "S-5e61e7667ca7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ORCA",
+    "field": "attributes.matriarchal_leadership",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "6543b7332050e26237d117b0c9d096ca4caeda10c32ffdce2e06bb6286a2bf50",
+   "inputs": [
+    "S-723e048e40e8"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ORCA",
+    "field": "attributes.dialect_transmission",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

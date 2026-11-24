@@ -1,0 +1,82 @@
+{
+ "entity": "RA",
+ "path": "ontology/animal/rat.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "b502770bf518f3df6d941ba62999df767e48df1d2de5ecb26b6e92de89d0cdeb",
+   "inputs": [
+    "S-7f666d3dd14b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RA",
+    "field": "attributes.cognitive_mapping",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1563314649394351277bb8456672f3ef3e3c353bd41decee0e7557236da9f143",
+   "inputs": [
+    "S-860b94f1c3db"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RA",
+    "field": "attributes.hexagonal_grid_cells",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "50517349c9374b14de0e8d15c8aef2a7cf3fa269319b31e86fb3a40d2f9783f5",
+   "inputs": [
+    "S-8d939a7fd8f6"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RA",
+    "field": "attributes.sleep_replay",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

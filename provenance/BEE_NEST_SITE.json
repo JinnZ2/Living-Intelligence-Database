@@ -1,0 +1,313 @@
+{
+ "entity": "BEE_NEST_SITE",
+ "path": "ontology/social/honeybee_nest_site_selection.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f3233806b4fe6890a8fc48f94d57ea002a1707b33e3f2633db49bf3f2dfb014b",
+   "inputs": [
+    "S-93859cb378d3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "attributes.quorum_threshold_at_site",
+    "evidence_type": "not_assessed",
+    "reproducibility": "not_assessed"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": {
+    "condition": {
+     "environment": "a swarm that has left its hive and is choosing a new cavity",
+     "constraints": [
+      "not assessed: source not opened"
+     ]
+    }
+   },
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "f9ab2d56373e863a3f87c49b761767bf96946d3ce79a5b3c5a505c5e20b63bc9",
+   "inputs": [
+    "S-93859cb378d3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "attributes.time_to_decision",
+    "evidence_type": "not_assessed",
+    "reproducibility": "not_assessed"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": {
+    "condition": {
+     "environment": "a swarm that has left its hive and is choosing a new cavity",
+     "constraints": [
+      "not assessed: source not opened"
+     ]
+    }
+   },
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "a9905b2a1411d7814fb5ee3114be33998f685ff76aa66ede0576cb7d61408f06",
+   "inputs": [
+    "S-93859cb378d3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "attributes.choice_accuracy",
+    "evidence_type": "not_assessed",
+    "reproducibility": "not_assessed"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": {
+    "condition": {
+     "environment": "a swarm that has left its hive and is choosing a new cavity",
+     "constraints": [
+      "not assessed: source not opened"
+     ]
+    }
+   },
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "6e78cac257e637ed6c1b95c5bc3b409c370ac0dfe8a046db3677fa6875bb9e22",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.carrier"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "49738c6e36364b8a3b8b21121cda04272e03e38807ced08068bffbcd0c853a5d",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.signal"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "722128b44212bbf22df2b8ec8e8ec9cf2fb50603bf4daf335fcbb3ca729279e7",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.record"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "f35e0326b4ef1d94f58bd16b795770c6bbf6bef1fe5c10b90bf1ff97ff4ba3bf",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.closure"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "5aaea15fe1645e919dd27027b38810273c5c9f82f0cac311e07c455531324476",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.trust_basis"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "2c25b7619712d5624e775af88a2a45f99c4ed2ece5334ee0723688a4ae13104b",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.energy_cost"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "eac94040ebbbeceb7e888fa072de59b33186fa67dc22542171dc30f0b0735f0c",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.loop_topology"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "d015ecd48c1ddad84509f8ce7a4c0ba3a60b86f33c4028a5c2b915dc40a05b43",
+   "inputs": [
+    "S-0123fa592deb"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.assumption_trace"
+   },
+   "value": [
+    "coordination requires money",
+    "collective decisions require a leader",
+    "agreement requires a shared language",
+    "only humans deliberate"
+   ],
+   "assumptions": [
+    "A-c6ed44ae9df7",
+    "A-beeabf1e52fd",
+    "A-21eda837cf89",
+    "A-625b0d50ad85"
+   ],
+   "scope": null,
+   "status": "PROPOSED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

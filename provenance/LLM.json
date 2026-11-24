@@ -1,0 +1,107 @@
+{
+ "entity": "LLM",
+ "path": "ontology/ai/large_language_model.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "85dfb29865030a0afe68a1b5e2559aa828ad9ed53466bdd3065d0f4f683f17d7",
+   "inputs": [
+    "S-2899c24ea768"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LLM",
+    "field": "attributes.self_attention",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a7c705a9a3abffdde682d2980f4fe552df72be485dfaac9f3a4778e71bee4d8c",
+   "inputs": [
+    "S-6b7af81e854f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LLM",
+    "field": "attributes.in_context_learning",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "fcde99f43118b63e8afdb170c63a8bd312b2608978f41aee6a6157d8c009b71e",
+   "inputs": [
+    "S-c9e39bea49b4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LLM",
+    "field": "attributes.token_embedding",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "016f2e5e654350f1b60113331b2984c441d3118c58033b127bdde3b5007254a0",
+   "inputs": [
+    "S-e18606a00b7d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LLM",
+    "field": "attributes.co_creative_dialogue",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

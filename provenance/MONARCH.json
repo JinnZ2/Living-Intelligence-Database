@@ -1,0 +1,82 @@
+{
+ "entity": "MONARCH",
+ "path": "ontology/animal/monarch_butterfly.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "4bced39a68fbac6ee27f3cd88af236af6e63d7a4684ade02a550a7b3ab3a49e5",
+   "inputs": [
+    "S-1ce463c85a49"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MONARCH",
+    "field": "attributes.multigenerational_navigation",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "276456332c8aa0a352eac635298696c89224ae16aad222438051731b13e685ae",
+   "inputs": [
+    "S-233badf7ffec"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MONARCH",
+    "field": "attributes.time_compensated_compass",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "cde9ccc54f87ca4a2706bea5e35453d85f59cefca2879e753867a769dbd96a2a",
+   "inputs": [
+    "S-cfb1b28184d3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MONARCH",
+    "field": "attributes.metamorphic_reorganization",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

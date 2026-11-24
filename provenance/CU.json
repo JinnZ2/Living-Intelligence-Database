@@ -1,0 +1,82 @@
+{
+ "entity": "CU",
+ "path": "ontology/animal/cuttlefish.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "839ece5f1980e6d3f37979dd8163c5891f382b54c2bc392676bbff7d6dcf8156",
+   "inputs": [
+    "S-76bfed4e7422"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CU",
+    "field": "attributes.hypnotic_display",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "93bcc0345d456913a3eabf11b07f5eb6743e8a7350d17130c9fda1e2f11c42cb",
+   "inputs": [
+    "S-dc47204c5a2a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CU",
+    "field": "attributes.instant_camouflage",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "55c07d62be19753032cc69a8667138362f12186bcbeb0e4e59dc26f9955af2a4",
+   "inputs": [
+    "S-ce3e63b3fd0c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CU",
+    "field": "attributes.buoyancy_control",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

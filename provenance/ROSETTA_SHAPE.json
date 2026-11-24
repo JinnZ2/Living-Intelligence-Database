@@ -1,0 +1,32 @@
+{
+ "entity": "ROSETTA_SHAPE",
+ "path": "ontology/shape/rosetta_shape_core.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "09a5ee23d1e49abd50007cca2f168cdc71229d74932946661da7d9538c8f94a9",
+   "inputs": [
+    "S-c1802bfa9177"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ROSETTA_SHAPE",
+    "field": "attributes.cross_ontology_translation_accuracy",
+    "evidence_type": "simulation",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

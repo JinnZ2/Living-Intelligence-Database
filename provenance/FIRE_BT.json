@@ -1,0 +1,82 @@
+{
+ "entity": "FIRE_BT",
+ "path": "ontology/animal/fire_beetle.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "713bbc6585c34145c7a101f498d7fc6a6279f3dc7430125e79f2715aae161c7e",
+   "inputs": [
+    "S-b2f391d4bd7c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FIRE_BT",
+    "field": "attributes.infrared_detection",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "717bb35872c83987023b56ad72b0f8adb576e5e5e76ae2649f69d6303d5e6151",
+   "inputs": [
+    "S-cae502f67799"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FIRE_BT",
+    "field": "attributes.pyrophilic_strategy",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "e5d6f49296616ab5dfd5619f1e3486bbf7f85f360b57b1257c42c4fc9baae8da",
+   "inputs": [
+    "S-3082d6adcd12"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FIRE_BT",
+    "field": "attributes.fire_navigation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

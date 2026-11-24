@@ -1,0 +1,32 @@
+{
+ "entity": "TEMPORAL",
+ "path": "ontology/temporal/temporal.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "e848227c7f5386d2f06736dd16f7fcf1fc385a8f0e718764aa1192e479e7e9bb",
+   "inputs": [
+    "S-6d7faebf98d3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TEMPORAL",
+    "field": "attributes.chronobiological_synchrony",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

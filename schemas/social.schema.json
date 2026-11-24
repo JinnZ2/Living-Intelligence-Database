@@ -9,6 +9,7 @@
     "gate_sensing": { "$ref": "gate_sensing.schema.json" },
     "functional_intelligence": { "$ref": "functional_intelligence.schema.json" },
     "observation_context": { "$ref": "observation_context.schema.json" },
+    "provenance": { "$ref": "provenance.schema.json" },
     "id": { "type": "string" },
     "name": { "type": "string" },
     "ontology": { "const": "social" },

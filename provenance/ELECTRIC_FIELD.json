@@ -1,0 +1,32 @@
+{
+ "entity": "ELECTRIC_FIELD",
+ "path": "ontology/energy/electric_field.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "c9bafea95e1bb9662e7991223162cb0974b395bbcadfddaadfaea4ed1e5a7939",
+   "inputs": [
+    "S-1435cc4389f2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ELECTRIC_FIELD",
+    "field": "attributes.coulomb_force_precision",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

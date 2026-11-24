@@ -1,0 +1,57 @@
+{
+ "entity": "AUTOENC",
+ "path": "ontology/ai/autoencoder.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "0d8527554dd391ff4a2d7a35ba0fdd6db13cfe2cf02e331fb8cfe9c9e3a61b80",
+   "inputs": [
+    "S-bc3cf88740e3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AUTOENC",
+    "field": "attributes.latent_compression",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0547cf4f0cd0ac1a8a6a2b7d244b75f7601b9476a34effe295292a3a300aac8e",
+   "inputs": [
+    "S-3b2e979f7c9d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AUTOENC",
+    "field": "attributes.variational_sampling",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.83,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

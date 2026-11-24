@@ -1,0 +1,32 @@
+{
+ "entity": "CYANO",
+ "path": "ontology/plant/cyanobacteria.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "14159a2151794cdd8d6944999bccfc26ec331876caeff58ee8dbeaa34b223b6c",
+   "inputs": [
+    "S-42029b61e65c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CYANO",
+    "field": "attributes.core_efficiency_factor",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

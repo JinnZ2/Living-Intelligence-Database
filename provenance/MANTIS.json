@@ -1,0 +1,82 @@
+{
+ "entity": "MANTIS",
+ "path": "ontology/animal/praying_mantis.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "b85a8cf9d5bff51a8e2c3c38782a3721a306806734a13f3976e551416b4f5fba",
+   "inputs": [
+    "S-cc9c874d8c2c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MANTIS",
+    "field": "attributes.stereoscopic_vision",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "3dd7f3da00870cb7853ee5eb4d42b7478f871ff204f03db59d79a7db930a1f32",
+   "inputs": [
+    "S-5eddbedf5e24"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MANTIS",
+    "field": "attributes.raptorial_strike",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "cf291e625a8c1a252edffc3fb2a7eab83a0daf0c7200269b9b3ea503b7562886",
+   "inputs": [
+    "S-53ac81dce99e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MANTIS",
+    "field": "attributes.ambush_patience",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "entity": "MULTI_HELIX",
+ "path": "ontology/shape/multi_helix.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "539ed9b36d1aed6b07c04211bdfe906c01a8efc1371bcbd3d37b9bc2ebf1d769",
+   "inputs": [
+    "S-c70ab41a0506"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MULTI_HELIX",
+    "field": "attributes.strand_interference_reduction",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

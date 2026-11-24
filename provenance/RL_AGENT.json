@@ -1,0 +1,82 @@
+{
+ "entity": "RL_AGENT",
+ "path": "ontology/ai/reinforcement_learner.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "da426d61480fecefb7dda83cea985e637e0a296f572753fbd2908048416f76da",
+   "inputs": [
+    "S-a2695dffd5dd"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RL_AGENT",
+    "field": "attributes.temporal_difference_learning",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8adc5baaf8871d66b94ce425053855f333b6e8a65dafb6390932dce51fb31f01",
+   "inputs": [
+    "S-58ff0c8055f4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RL_AGENT",
+    "field": "attributes.policy_gradient",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.84,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a72d3c308ab5505cb3ac753b6c2e2d4ac5b28f5063fd244e23f75fc7c6a4155a",
+   "inputs": [
+    "S-1cfdfc7b890b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RL_AGENT",
+    "field": "attributes.exploration_exploitation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.81,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

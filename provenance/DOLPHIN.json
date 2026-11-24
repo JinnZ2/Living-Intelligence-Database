@@ -1,0 +1,82 @@
+{
+ "entity": "DOLPHIN",
+ "path": "ontology/animal/dolphin.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "6d0db303cdc4f4f4bb27f4c6bc51417090caf60ac625bcb9547f43924ecec0ce",
+   "inputs": [
+    "S-9bf9ea6a4373"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DOLPHIN",
+    "field": "attributes.echolocation_holography",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "cf613630d71d1ca071da7169a18f5ca5935796423bd5464961081f6ac36aa50b",
+   "inputs": [
+    "S-f22b317e726e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DOLPHIN",
+    "field": "attributes.unihemispheric_sleep",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "b281766e3fa4c1135929e806ada11f4cec8c609bd2557891a277b97fdabcfd0e",
+   "inputs": [
+    "S-c0ad2d4c1f1e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DOLPHIN",
+    "field": "attributes.cooperative_hunting",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

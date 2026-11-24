@@ -1,0 +1,82 @@
+{
+ "entity": "HAW",
+ "path": "ontology/animal/hawk.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "68e7c787d2b2305533ec93bd54b1f90acda4ffed162fac1631fc682f4f1d4cd3",
+   "inputs": [
+    "S-7f3085818b58"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HAW",
+    "field": "attributes.precision_targeting",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.97,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1d3c4db8b12cac5851677b069656695440e4a56c9f1ea3e0b0d22706717793d9",
+   "inputs": [
+    "S-416a75cabc79"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HAW",
+    "field": "attributes.ballistic_dive",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "e1e8b9e4b443b64fc5c90597e3356a131c1c0e3e4af2d213f2afe53a2430cb4f",
+   "inputs": [
+    "S-99095756ce94"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HAW",
+    "field": "attributes.dual_fovea_scanning",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

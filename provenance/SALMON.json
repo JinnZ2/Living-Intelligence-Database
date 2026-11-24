@@ -1,0 +1,82 @@
+{
+ "entity": "SALMON",
+ "path": "ontology/animal/salmon.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "6191ee9d30fdaf82df54a60ccb07cd57b0a345026cf186369d5fab4f2a6369fc",
+   "inputs": [
+    "S-af3f51b37cb9"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SALMON",
+    "field": "attributes.olfactory_homing",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "484b4c61a335b940eff6776ae8e6cce7b294273198cba1576769186b4dba539f",
+   "inputs": [
+    "S-f821bd6806aa"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SALMON",
+    "field": "attributes.osmoregulatory_switch",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "4bb3cf75b825a1a78fc4798bd7dacb3467613b39e0850b93c8cbf15379bfdcd7",
+   "inputs": [
+    "S-7dcbe7a5ebb0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SALMON",
+    "field": "attributes.nutrient_teleportation",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

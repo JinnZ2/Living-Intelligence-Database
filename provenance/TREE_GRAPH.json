@@ -1,0 +1,32 @@
+{
+ "entity": "TREE_GRAPH",
+ "path": "ontology/shape/tree_graph.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "b66d6689e17877ec35ec3b9118e579fb84c85954ccd4fc486066e3323c33c7c5",
+   "inputs": [
+    "S-8f79c301ea0d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TREE_GRAPH",
+    "field": "attributes.murray_law_efficiency",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "entity": "SEED_KEEPER",
+ "path": "ontology/animal/seed_keeper.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "a46116551fed948062f201f894b96d307ee3dbba19d3bbb694b5399e8bf163f1",
+   "inputs": [
+    "S-64cfb52551a8"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SEED_KEEPER",
+    "field": "attributes.genetic_library_curation",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "eea2a5072bfef8f7e87e594689e5a2cc6c14a416e9ef30b1cea89e368e9cd152",
+   "inputs": [
+    "S-fff47b4b215e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SEED_KEEPER",
+    "field": "attributes.heirloom_selection",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0453f78f869ce5f15319267e62951ee92f56696711887a429a5e040eec662f60",
+   "inputs": [
+    "S-b8eb2615e34d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SEED_KEEPER",
+    "field": "attributes.seed_exchange_network",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

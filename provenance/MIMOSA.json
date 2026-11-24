@@ -1,0 +1,181 @@
+{
+ "entity": "MIMOSA",
+ "path": "ontology/plant/mimosa.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "87ca87b80a5add5b9d31a1f5ad74b2bfe6a4dfa838927279867810c5e30a1854",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.adapts"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "ca6322e31945dabc94d8640a55a514232408973e24f4e0cfa8be3541708a00f8",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.signals"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "b629cd34480fe7a7ccea98c587edc02c43a8006243b6ef1ff4cfb9c4f44c479b",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.responds_to_other"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "8d774a226c3d541bc6567a4866c443e6b48be7e408378a709765d84da2ab3c31",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.changes_environment"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "3e74ddd9a7ee27a902d62c9bd78a1fc5c3575c7816624808a64945ebec7ffcbe",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.co_adapts"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "eba10fd2478e7efac5d7cc804207c64ab6ce3559c2df5e91eb9a27f2b38a992f",
+   "inputs": [
+    "S-4d63460b8ede"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.contested_label[0]",
+    "claimed_by": [
+     "S-4d63460b8ede"
+    ],
+    "disputed_by": []
+   },
+   "value": "learning (habituation of leaf folding)",
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "20f6b4ff937b0788dd813294ffb86189524d249fe1c19d33e094a3cd990584be",
+   "inputs": [
+    "S-3fdd07b2093e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.contested_label[1]",
+    "claimed_by": [],
+    "disputed_by": [
+     "S-3fdd07b2093e"
+    ]
+   },
+   "value": "consciousness (plants in general)",
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "entity": "STORYTELLER",
+ "path": "ontology/animal/storyteller.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "6423461df647e166496a82a3e712ba9bd6834103137e80ac9e776a7eec430d6c",
+   "inputs": [
+    "S-867b4b70d950"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STORYTELLER",
+    "field": "attributes.mnemonic_encoding",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.97,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "dcb8ebc5905a6c7e4d5b9fcb21a83d6f50eb6c7cffff9f0b7009e336d3784684",
+   "inputs": [
+    "S-5ed14ead4075"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STORYTELLER",
+    "field": "attributes.songline_navigation",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ab0efb4208a9d7415ce4c14ff45e920c2f0e409dff5b36a345e8abd3b89160ea",
+   "inputs": [
+    "S-226b708ada7b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STORYTELLER",
+    "field": "attributes.error_correction_retelling",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

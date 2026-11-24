@@ -1,0 +1,32 @@
+{
+ "entity": "OBS",
+ "path": "ontology/crystal/obsidian.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f921d2ee1705e24d1788f83d3c3cf9c9e91c20b6553aa6690e27a11d15d887fc",
+   "inputs": [
+    "S-7c73c7dbe20e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OBS",
+    "field": "attributes.conchoidal_fracture_sharpness",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

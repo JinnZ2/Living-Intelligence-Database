@@ -1,0 +1,82 @@
+{
+ "entity": "PE",
+ "path": "ontology/animal/penguin.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "30ce00482725c7c1eb1dc1dac282337aa26fdf33d8808e431c91d694a831ced3",
+   "inputs": [
+    "S-f015a7520427"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PE",
+    "field": "attributes.thermal_huddle_rotation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "265e87dddc39a42b7874a0d45945891031f858fd2fc66e43ac83065445a98dbb",
+   "inputs": [
+    "S-968ba3d97c48"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PE",
+    "field": "attributes.counter_current_exchange",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "b96c6777674cda4f673c091daab42479071f52fe5018a045193048dc668d982c",
+   "inputs": [
+    "S-9b63fbc72b20"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PE",
+    "field": "attributes.hydrodynamic_diving",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

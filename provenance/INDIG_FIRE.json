@@ -1,0 +1,82 @@
+{
+ "entity": "INDIG_FIRE",
+ "path": "ontology/animal/indigenous_fire.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "ac80ba15344ee2e3bab0e9ae52f29eda3e13ce6d91a820544352a13b23eaeeae",
+   "inputs": [
+    "S-50e42dd6583b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "INDIG_FIRE",
+    "field": "attributes.mosaic_burn_pattern",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "d2cff65c40b97ae92acbe9e08bd62b0503c42c0fdc485b68558f779adf32d668",
+   "inputs": [
+    "S-89e60d88b841"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "INDIG_FIRE",
+    "field": "attributes.phenological_timing",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "b97aaf3ee9ccf7e8e03e64d70678033f8b694706e8f108f86057ef7c1ed6ce76",
+   "inputs": [
+    "S-cf0ec22b078c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "INDIG_FIRE",
+    "field": "attributes.oral_tradition_transfer",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

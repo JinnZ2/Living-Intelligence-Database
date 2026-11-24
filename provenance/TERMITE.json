@@ -1,0 +1,82 @@
+{
+ "entity": "TERMITE",
+ "path": "ontology/animal/termite_mound.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "9bc993284cc7529c8935ef06fa5db45e30057b7c8d8781dbf71fe62f19558891",
+   "inputs": [
+    "S-65925f7a1c18"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TERMITE",
+    "field": "attributes.convective_ventilation",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "60fe18a323edc8246fa368c67fbbeafd1534f4de6760c00370fb5d5e4f73e8b0",
+   "inputs": [
+    "S-b246dd6085bb"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TERMITE",
+    "field": "attributes.stigmergic_construction",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "4560a3e54c464d0a9d7920da8726e38e2211cc359020a70a0810e35dda32bd3e",
+   "inputs": [
+    "S-ad88a8d13a06"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TERMITE",
+    "field": "attributes.fungal_agriculture",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}
