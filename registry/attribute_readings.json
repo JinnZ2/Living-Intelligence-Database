@@ -1,5 +1,5 @@
 {
-  "note": "Readings side by side, one entry per field. First reader: Kimi (Moonshot AI), file kept byte for byte at audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json (sha256 18c82bb2723db8b7c995d389fe297e3e9208dacae1e8ef47bb6eed9db9c94459). No reading is deleted. Nothing in this repository consumes this file yet (audit/2026-11-24/OPEN_QUESTIONS.md #6); no provenance step was built from it.",
+  "note": "Readings side by side, one entry per field. First reader: Kimi (Moonshot AI), file kept byte for byte at audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json (sha256 18c82bb2723db8b7c995d389fe297e3e9208dacae1e8ef47bb6eed9db9c94459). No reading is deleted. Nothing in this repository consumes this file yet (audit/2026-11-24/OPEN_QUESTIONS.md #6); no provenance step was built from it. Reviewer slots: 10 filled 'agree' from 'reviewer readings file 2026-11-24 (Claude chat)' on the owner's follow-up order; 1 (KA elastic_energy_storage) differs and is kept as recorded.",
   "readings": [
     {
       "entity": "AN",
@@ -33,13 +33,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "AN",
@@ -73,13 +75,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "BE",
@@ -113,13 +117,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "KA",
@@ -193,13 +199,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "NOT_READ",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "KA",
@@ -233,13 +241,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "MORMYRID",
@@ -273,13 +283,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "OC",
@@ -313,13 +325,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "OC",
@@ -353,13 +367,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "NOT_ADDRESSED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "TU",
@@ -400,13 +416,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     },
     {
       "entity": "TU",
@@ -440,13 +458,15 @@
         },
         {
           "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
-          "claim_support": null,
-          "number_support": null,
-          "basis": "NOT_TESTED: no reviewer reading was made for this field",
-          "date": "2026-11-24"
+          "claim_support": "NOT_ADDRESSED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
         }
       ],
-      "status_rule": "single reading; field-level values are the first reader's"
+      "status_rule": "two readings agree; field-level values are unchanged"
     }
   ]
 }

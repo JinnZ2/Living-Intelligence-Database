@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "x-lid": {
     "status": "PROPOSED",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "version_rule": "MINOR: additive; no existing schema or entity file is changed",
     "adopted": "2026-11-24",
     "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
@@ -11,9 +11,9 @@
     "changes_from_as_received": [
       "cycle status enum is TRACED / PROPOSED / UNKNOWN; PROPOSED_UNSOURCED retired; fields unsourced and legacy_status added",
       "node field unsourced added",
-      "not changed: the schema is still closed and has no status_history field, so it rejects reference_trace_BE_hex_v0.3.json (audit OPEN_QUESTIONS #6, owner's decision)",
       "traces v0.1 and v0.2 carry the retired status and validate against the as-received schema, not this copy",
-      "0.2.0: cycle field phases added (ordered list, optional)"
+      "0.2.0: cycle field phases added (ordered list, optional)",
+      "0.3.0: optional status_history on nodes and cycles (list of {version, status, date?, note?}); the v0.3 trace's status_history is now accepted"
     ]
   },
   "$id": "reference_trace.schema.json",
@@ -220,6 +220,32 @@
             "minLength": 1
           },
           "description": "The cycle's phases in order, earliest first. Optional. Used to decide whether a phase is completed relative to phase_now. For a repeating cycle the order reads one turn."
+        },
+        "status_history": {
+          "type": "array",
+          "description": "Earlier statuses, oldest first. A status change is recorded here; the earlier status is never overwritten out of the record.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "version",
+              "status"
+            ],
+            "properties": {
+              "version": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
         }
       },
       "allOf": [
@@ -403,6 +429,32 @@
           "unsourced": {
             "type": "boolean",
             "description": "True when no source describes the node. Only with status PROPOSED."
+          },
+          "status_history": {
+            "type": "array",
+            "description": "Earlier statuses, oldest first. A status change is recorded here; the earlier status is never overwritten out of the record.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "version",
+                "status"
+              ],
+              "properties": {
+                "version": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
           }
         },
         "allOf": [
