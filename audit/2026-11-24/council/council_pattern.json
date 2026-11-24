@@ -181,18 +181,6 @@
  },
  "links": [
   {
-   "rel": "pattern_of",
-   "to": "COUNCIL",
-   "status": "PROPOSED",
-   "note": "COUNCIL is at validation/example/council.json, unindexed; that file is not edited"
-  },
-  {
-   "rel": "connected_to",
-   "to": "BIOSPHERE",
-   "status": "PROPOSED",
-   "note": "root dependency"
-  },
-  {
    "rel": "connected_to",
    "to": "STONE_LEDGER",
    "status": "PROPOSED",
@@ -205,9 +193,27 @@
    "note": "long cycles"
   }
  ],
+ "held_links": {
+  "_note": "Not in links: neither target is in the index, so the build would stop on them, and 'pattern_of' is not in the schema's rel list. Held here; they move into links when their targets are indexed (owner's decision). registry/known_held_links.json is not edited.",
+  "items": [
+   {
+    "rel": "pattern_of",
+    "to": "COUNCIL",
+    "where": "validation/example/council.json (unindexed; not edited)",
+    "status": "PROPOSED"
+   },
+   {
+    "rel": "connected_to",
+    "to": "BIOSPHERE",
+    "where": "ontology/relational/biosphere_reference.json (unindexed: relational/ has no schema)",
+    "note": "root dependency",
+    "status": "PROPOSED"
+   }
+  ]
+ },
  "not_carried": "The names of peoples and the cross-domain examples in validation/example/council.json. They remain there, held under its _audit_note ('unsourced; not consented; not promoted').",
  "metadata": {
   "scope_note": "Name no specific tribe, nation or person in this record.",
-  "placement": "audit/2026-11-24/council/ (proposal). Moving it into ontology/social/ is the owner's decision."
+  "placement": "ontology/social/council_pattern.json, placed on the owner's yes of 2026-11-24. The copy at audit/2026-11-24/council/council_pattern.json is byte-identical. The record's content stays PROPOSED."
  }
 }

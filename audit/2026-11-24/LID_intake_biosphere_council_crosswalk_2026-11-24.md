@@ -209,6 +209,13 @@ The owner wrote: "Thé pattern of the council is what’s important, not the peo
 - **Held file not edited.** `validation/example/council.json` is unchanged. Its names and cross-domain examples stay held there. The build fails if any of them appears in the pattern record, and a planted "Māori" made it fail as intended.
 - **Placement.** The record sits in the audit folder. Moving it into `ontology/social/` is the owner's decision.
 
+> **Note, 2026-11-24 (added; the line above is unchanged).** On the owner's "Both please", the record was placed at `ontology/social/council_pattern.json`, byte-identical to the audit copy. Its content stays PROPOSED.
+>
+> - **Links.** Two links moved to `held_links`: `pattern_of` COUNCIL, because `pattern_of` is not in the schema's rel list and COUNCIL is unindexed, and `connected_to` BIOSPHERE, which is unindexed. The build would otherwise stop on them. `registry/known_held_links.json` is not edited.
+> - **Index.** `scripts/build_index.py` then indexed 123 entities (was 122) and 557 relations (was 555). The only additions are COUNCIL_PATTERN and its links to STONE_LEDGER and CYCLE; nothing was removed. The one broken link reported is the existing KNOWN_HELD WOLF_PACK → COUNCIL.
+> - **Checks.** `validation/coordination_check.py`: 0 failures, and its self-test passed 38/38. `validation/fixtures/run_fixtures.py`: 8/8 PASS.
+> - **Baseline.** The deviation and biosphere results in this folder were computed at `7be9b5b`, before this entity existed. They are not re-run.
+
 ### A mismatch in AI-arena (OBSERVED, not fixed)
 
 `CLAUDE.md` says "v2 is currently documented but not yet implemented". Yet `arena/coordinator.py`, `arena/admission.py` and their neighbours exist, and `protocol/arena_protocol.md` says it governs v2.

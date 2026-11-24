@@ -1451,6 +1451,13 @@
       "substrate_layer": "substrate_primary"
     },
     {
+      "id": "COUNCIL_PATTERN",
+      "name": "Council pattern (no people named)",
+      "ontology": "social",
+      "path": "ontology/social/council_pattern.json",
+      "description": "The council as a pattern: those who look to the root dependency, the long cycle, and the accounting of wisdom, in the owner's words, which the owner says English does not quite fit. No specific tribe, nation or person is named in this record."
+    },
+    {
       "id": "BEE_NEST_SITE",
       "name": "Honeybee Nest-Site Selection",
       "ontology": "social",
@@ -4210,6 +4217,16 @@
       "source": "ANT",
       "target": "MY",
       "relation": "resonance"
+    },
+    {
+      "source": "COUNCIL_PATTERN",
+      "target": "STONE_LEDGER",
+      "relation": "connected_to"
+    },
+    {
+      "source": "COUNCIL_PATTERN",
+      "target": "CYCLE",
+      "relation": "connected_to"
     },
     {
       "source": "BEE_NEST_SITE",
