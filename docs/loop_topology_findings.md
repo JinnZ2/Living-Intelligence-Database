@@ -13,7 +13,8 @@ OBSERVED (seen in this repository, with the command that shows it).
 
 - Small driven Markov models built with the standard library only.
 - No organism, colony or instrument was measured.
-- No number is given here: none was delivered with the findings.
+- The numbers in the table below were delivered on 2026-11-24, after the
+  findings text. They were not rerun here.
 
 ## Findings
 
@@ -47,6 +48,25 @@ OBSERVED (seen in this repository, with the command that shows it).
      loop (adiabatic elimination).
    - Time cuts (slower sampling) remove the fastest loop first.
 
+## Numbers
+
+REPORTED (toy model, stdlib Markov, 2026-11-23, code not in repo). The value
+is the recovered fraction of the true dissipation under each cut.
+
+| cut | recovered fraction of true dissipation |
+|---|---|
+| loop kept visible (4-ring) | 1.00 |
+| loop collapsed to 2 labels | 0.00 (any drive 2-8) |
+| non-adjacent merge, uneven rates | 0.01 |
+| figure-eight: collapse fast loop | 0.07 (fast loop = 93% of cost) |
+| figure-eight: collapse slow loop | 0.93 |
+| figure-eight: mix states across | 1.00 |
+| time cut tau = 0.01 / 0.05 / 0.2 / 1 / 5 | 0.74 / 0.24 / 0.06 / 0.03 / 0.00 |
+| static I(x;y) across driven loop | 0.000 at every coupling 0.05-0.9 |
+
+The last row is a mutual-information value, not a recovered fraction; it is
+listed here as delivered. Units of tau and of drive were not delivered.
+
 ## Proposed
 
 - **Rule.** PROPOSED. A loop's cost stays visible only if the cut keeps at
@@ -74,5 +94,6 @@ inside the record.
 ## Provenance
 
 Findings 1 to 6 and the two proposals: stated in the work order of
-2026-11-24 (Kavik + Claude), dated 2026-11-23 there. The repository
+2026-11-24 (Kavik + Claude), dated 2026-11-23 there. The numbers table: a
+second work order of 2026-11-24, same date tag. The repository
 instance: run in this repository on branch `coordination-layer`.
