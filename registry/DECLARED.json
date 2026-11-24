@@ -108,6 +108,42 @@
         "first_build": "the 303 steps and the source registry of the first build are kept unchanged under provenance/v0_superseded/ and registry/v0_superseded/; they are not part of the live chain",
         "FIELD_CHANGED_consequence": "because the id covers the entity file hash, any byte change to an entity file gives every field of that entity a new step"
       }
+    },
+    {
+      "date": "2026-11-24",
+      "name": "fixes v2",
+      "after": "the rebuild at 5a066a7 (303 live steps, id rule of the first amendment) and the owner's work order 'provenance-chain, fixes v2'",
+      "changes_a_declared_value": true,
+      "what": "Rules changed by order before the v2 rebuild. Earlier text is kept as declared; where it differs, this entry governs.",
+      "changes": {
+        "step_id": "sha256 of the canonical JSON of {entity_id, field_path, value_sha256, inputs, method, params, assumptions, scope, status}. entity_id = params.entity; field_path = params.field; value_sha256 = sha256 of the canonical JSON of the value; params is taken without entity_file_sha256.",
+        "entity_file_sha256": "stays in params as context: the entity file's sha256 when the step was written. It is not in the id. A byte change to an entity file gives a new step only to a field whose id inputs changed.",
+        "not_in_step_id": [
+          "params.entity_file_sha256",
+          "status_note",
+          "supersedes",
+          "declared_pre_run",
+          "claim",
+          "void",
+          "snapshot_class"
+        ],
+        "revision_rule": "a revision that changes only status, assumptions or scope now has a new id: build appends it as a new step whose supersedes names the old one; the old step stays.",
+        "void_states": {
+          "mapping_status": "PROPOSED",
+          "VOID": "the field is null; reason holds the record's words for the gap when it has any, else null",
+          "UNMAPPED": "the field has a value and no source",
+          "LEXICAL_VOID": "no term exists: an open label slot only. In the backfill: a functional_intelligence.contested_label entry whose label is null",
+          "REJECTED": "a value failed a declared gate. The chain declares no gate (thresholds: none), so the backfill produces none"
+        },
+        "live_chain_before_this_amendment": "the 303 steps built at 5a066a7 carry ids under the previous rule and cannot be re-derived under this one. They are moved unchanged to provenance/v1_superseded/ (with INDEX.json) and are not part of the live chain. The registries keep their id rules and stay in place.",
+        "kept_as_is": [
+          "provenance/v0_superseded/",
+          "registry/v0_superseded/",
+          "snapshot_class values and use"
+        ],
+        "selftest_added": "change one field of an entity file: only that field's step reads FIELD_CHANGED, and build appends one step",
+        "renames": "none"
+      }
     }
   ]
 }
