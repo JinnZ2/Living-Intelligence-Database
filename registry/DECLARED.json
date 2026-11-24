@@ -471,6 +471,40 @@
       "trace_check": "audit/2026-11-24/reference/trace_check.py exits 1 whenever findings is non-empty (LID_STRICT is no longer needed); --selftest added. The output file bytes are unchanged.",
       "renames": "PROPOSED_UNSOURCED -> PROPOSED + unsourced",
       "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "process form addendum: being_tense, phase_now, carried_from_phase",
+      "after": "the entry 'process form + Kimi schemas' and branch process-form-kimi-schemas at 8697312; by the owner's addendum. Declared before the schema change, the checker and the example record.",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "fields": {
+        "being_tense": "per entry or attribute: CURRENTLY_BEING | HAVING_BEEN | PROJECTED | null. Null = not assessed.",
+        "phase_now": "list of {cycle_ref, phase, observed_at, scope}. cycle_ref is an id in registry/cycles.json. Several cycles are allowed: an organism sits in several at once. observed_at null = no observation recorded.",
+        "carried_from_phase": "list of {cycle_ref, phase, carried, still_acting, source, status}. phase is a completed phase; carried says what persists (imprint, learning, structure, memory); still_acting is yes | no | unmeasured; source null goes with status PROPOSED and unsourced true."
+      },
+      "rule": "a completed phase is never deleted. It is marked HAVING_BEEN and what it carried is kept.",
+      "all_new_fields": "status PROPOSED. Null = not assessed, which is neither no nor zero.",
+      "checker": {
+        "script": "scripts/phase_check.py",
+        "violations": [
+          "a cycle_ref (phase_now or carried_from_phase) that is not in registry/cycles.json",
+          "a carried phase that is not earlier than the phase_now of the same cycle, where the cycle lists its phases in order",
+          "a carried phase or phase_now phase that the cycle's phase list does not contain",
+          "a value outside a declared vocabulary (being_tense, still_acting)",
+          "a carried item marked with a being_tense other than HAVING_BEEN",
+          "a carried item with no source that is not PROPOSED + unsourced",
+          "a carried item present in the last committed file and missing now (the never-deleted rule)"
+        ],
+        "recorded_gaps": [
+          "a carried phase whose order cannot be checked: the cycle lists no phases, or the subject has no phase_now in that cycle. Listed; not passed and not failed."
+        ],
+        "what_completed_means": "the cycle in registry/cycles.json carries an ordered list 'phases'; a phase is completed relative to phase_now when it comes earlier in that list. For a repeating cycle this reads one turn only."
+      },
+      "where": "records live in registry/process_forms.json under phase_records (subject = entity id or entity.attribute); entity files are not edited. The schema copies gain the three fields and the cycle item gains an optional ordered 'phases' list; version 0.2.0 (MINOR, additive).",
+      "example": "from the addendum: salmon, phase_now spawning; carried_from_phase juvenile -> geomagnetic imprint, still_acting yes, PROPOSED until sourced. Recorded as an example with source null. The cycle it needs (CY_SALMON_LIFE) is added to registry/cycles.json as PROPOSED + unsourced, holding only the two phases the addendum names, in the order the example implies; no period.",
+      "renames": "none",
+      "observer_slots": null
     }
   ]
 }
