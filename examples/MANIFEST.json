@@ -2,7 +2,7 @@
  "snapshot_class": "SUMMARY_ONLY",
  "note": "Counts and the hold-out list for examples/lid_examples.jsonl. No model was trained. A derivation_path is an ordering of record fields by declared role; it does not claim that one field was derived from another.",
  "declared": "registry/DECLARED.json, amendment 'physics usage: example export'",
- "declared_commit": "d7ec727dd905f3bb09b08b137aa379d75f4b4fc7",
+ "declared_commit": "9e9c7ed10315a7ece000a004da7b9e1489f7342d",
  "sha256": "a0d690c57d78726955a3186e37fc6d27bbffd719c3c526bfe58284fa5714274e",
  "examples": 60,
  "entities_with_examples": [
