@@ -64,3 +64,21 @@ These are listed as PROPOSED and not decided here:
 3. Whether `depends_on` becomes typed (for example, energy vs constraint vs information).
 4. Whether Gallo et al. 2026 joins the CONTESTED F_FLOW node as its own account. In v0.3 it stays as account (c), with the label corrected.
 5. Where the four schemas go, if anywhere. They stay under `audit/` for now.
+
+## Dated note, 2026-11-24: Kimi's revised trace schema (rev1)
+
+Stored unedited in `kimi_2026-11-25_rev1/reference_trace.schema.json` (SHA-1 `49ab439a…`). The original in `kimi_2026-11-25/` (`2027a18a…`) is unchanged.
+
+| Check | Result | Label |
+|---|---|---|
+| What changed | One addition only: an optional node `status_history`, an array with at least one entry, each entry `{version, status}`, closed | OBSERVED (diff) |
+| Self-valid draft-07 | Yes | OBSERVED |
+| v0.1, v0.2, v0.3 traces | All validate | OBSERVED |
+| Kimi's suite with rev1 | 28/28, exit 0 | OBSERVED |
+| Rejected as expected | empty history; out-of-vocabulary status; entry missing `version`; history given as a string | OBSERVED |
+
+Still open (PROPOSED; for the owner to decide):
+1. The description says "dated", but an entry cannot hold a `date`: adding one is rejected. The date currently lives only in the node's `note` text.
+2. Cycles cannot carry `status_history`. The cycle definition is shared byte-for-byte with `cycle_registry.schema.json`, so adding it would mean changing both files.
+3. A history entry whose status equals the current status is accepted. A schema cannot easily express "this differs from the current value", so that would be a checker rule.
+4. The suite has no `status_history` cases yet, so a later change could drop the field without any test failing.
