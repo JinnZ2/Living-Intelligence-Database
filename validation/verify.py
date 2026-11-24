@@ -5,7 +5,18 @@ Uses relational confidence: cycle recurrence, cross-domain rhyme,
 and dependency coherence — not source prestige.
 
 Usage:
-  python3 verify.py --claim "hex_efficiency" --domain "hex" --prior 0.5
+  python3 verify.py --claim always_true --domain "hex" --prior 0.5
+  python3 verify.py --claim always_true --legacy        behaviour before the 2026-11-24 repair
+
+Repair 2026-11-24 (fixtures F1, F2 in validation/fixtures/DECLARED.json):
+  F1  a claim name that is not registered reads verdict UNKNOWN with a null posterior and
+      exit 2. Before, it was run as a claim that returns True.
+  F2  a claim takes no argument, so it cannot see the attribute it is "tested" on. It is run
+      once and counted as one piece of evidence (evidence_count 1), weighted by the best
+      matching attribute. Before, it was counted once per matching attribute, so the posterior
+      rose with the number of attributes. tests_gathered still gives the number of matching
+      attributes; it is not a count of independent tests.
+  The behaviour before the repair is kept behind legacy=True / --legacy, for comparison.
 """
 
 import json
@@ -90,7 +101,8 @@ def verify_claim(claim: Callable[[], bool],
                  ontology_path: Optional[str] = None,
                  prior: float = 0.5,
                  domain_hint: Optional[str] = None,
-                 claim_scope_text: str = "") -> dict:
+                 claim_scope_text: str = "",
+                 legacy: bool = False) -> dict:
     if ontology is None:
         ontology = load_ontology(ontology_path)
 
@@ -105,14 +117,29 @@ def verify_claim(claim: Callable[[], bool],
         all_tests.extend(tests)
 
     results = []
-    for test_func, weight in all_tests:
+    claim_error = None
+    if legacy:
+        # before the repair: the same claim, run and counted once per matching attribute
+        for test_func, weight in all_tests:
+            try:
+                passed = test_func()
+                results.append((passed, weight))
+            except Exception:
+                results.append((False, weight))
+    elif all_tests:
+        # one claim, one run, one piece of evidence; weight = the best matching attribute
+        weight = max(w for _, w in all_tests)
         try:
-            passed = test_func()
-            results.append((passed, weight))
-        except Exception:
-            results.append((False, weight))
+            passed = bool(claim())
+        except Exception as e:
+            passed, claim_error = False, "%s: %s" % (type(e).__name__, e)
+        results.append((passed, weight))
 
     posterior = bayesian_update_weighted(prior, results)
+    if not results:
+        verdict = "NOT_TESTED"
+    else:
+        verdict = "TESTED"
 
     unscoped_warnings = []
     noun_pretenders = []
@@ -125,11 +152,17 @@ def verify_claim(claim: Callable[[], bool],
             noun_pretenders.append({"entity": ent["id"], "noun_pretending_attributes": nouns})
 
     return {
+        "mode": "legacy" if legacy else "repaired",
+        "verdict": verdict,
         "entities_consulted": len(entities),
         "tests_gathered": len(all_tests),
+        "evidence_count": len(results),
         "tests_passed": sum(1 for p, _ in results if p),
+        "claim_error": claim_error,
         "prior_probability": prior,
         "posterior_probability": round(posterior, 4),
+        "posterior_note": ("no evidence was gathered: the number given is the prior, unchanged"
+                           if not results else None),
         "unscoped_warnings": unscoped_warnings,
         "noun_pretender_warnings": noun_pretenders,
         "falsifiability_note": "Check individual entity scopes for conditions that would falsify. Evidence is a verb: look for cycles, cross-domain rhymes, and relational coherence."
@@ -145,6 +178,8 @@ if __name__ == "__main__":
     parser.add_argument("--domain", type=str, default="")
     parser.add_argument("--prior", type=float, default=0.5)
     parser.add_argument("--ontology", type=str, default=None)
+    parser.add_argument("--legacy", action="store_true",
+                        help="behaviour before the 2026-11-24 repair (unknown claim -> True; one count per attribute)")
     args = parser.parse_args()
 
     claims = {
@@ -152,6 +187,23 @@ if __name__ == "__main__":
         "always_false": lambda: False,
     }
 
-    claim_func = claims.get(args.claim, lambda: True)
-    result = verify_claim(claim_func, prior=args.prior, domain_hint=args.domain, ontology_path=args.ontology)
+    if args.legacy:
+        claim_func = claims.get(args.claim, lambda: True)
+    elif args.claim not in claims:
+        print(json.dumps({
+            "mode": "repaired",
+            "verdict": "UNKNOWN",
+            "claim": args.claim,
+            "reason": "no claim is registered under this name; it was not run",
+            "known_claims": sorted(claims),
+            "tests_passed": 0,
+            "evidence_count": 0,
+            "prior_probability": args.prior,
+            "posterior_probability": None
+        }, indent=2))
+        sys.exit(2)
+    else:
+        claim_func = claims[args.claim]
+    result = verify_claim(claim_func, prior=args.prior, domain_hint=args.domain,
+                          ontology_path=args.ontology, legacy=args.legacy)
     print(json.dumps(result, indent=2))
