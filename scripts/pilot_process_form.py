@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Pilot conversion: BE.hexagonal_cell_efficiency -> process form, built from the v0.3 reference trace.
+"""Pilot conversion: BE.hexagonal_cell_efficiency -> process form, built from the reference trace.
+
+2026-11-24 (order 'trace v0.4'): the trace read is now v0.4. The record built from v0.3 is kept
+unchanged in registry/process_forms_pilot_v0.3.json.
 
     python3 scripts/pilot_process_form.py            write the record into registry/process_forms.json
     python3 scripts/pilot_process_form.py --check    rebuild and compare; exit 1 if the stored record differs
@@ -16,7 +19,8 @@ import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TRACE = "audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json"
+TRACE = "audit/2026-11-24/reference/reference_trace_BE_hex_v0.4.json"
+RESULTS = "audit/2026-11-24/reference/trace_check_results_v0.4.json"
 ENTITY = "ontology/animal/bee.json"
 ATTR = "hexagonal_cell_efficiency"
 OUT = os.path.join(ROOT, "registry", "process_forms.json")
@@ -25,6 +29,11 @@ DRIVER_NODES = ["F_FLOW", "E_BODY_HEAT", "D4_HOT_WORKERS"]
 REGIME_NODE = "REGIME_HEX"
 CYCLE = "CY_HEXFORM"
 ERROR_FREE_INFO = {"CYCLE_NO_PERIOD", "CYCLE_TOP_LEVEL", "GAP"}
+
+
+def is_info(x):
+    # the declared severities: INFO codes, and CYCLE_NO_SOURCE on a PROPOSED cycle
+    return x[0] in ERROR_FREE_INFO or (x[0] == "CYCLE_NO_SOURCE" and len(x) > 2 and x[2] == "PROPOSED")
 
 
 def j(rel):
@@ -51,7 +60,7 @@ def build():
         chain.append(k)
         k = C[k].get("parent")
     reg = N[REGIME_NODE]
-    results = j("audit/2026-11-24/reference/trace_check_results_v0.3.json")["findings"]
+    results = j(RESULTS)["findings"]
     conf = [r for r in j("registry/confidence_records.json")["confidence_records"]
             if r["attribute"] == "%s.%s" % (ent["id"], ATTR)]
     f = N["F_FLOW"]
@@ -89,7 +98,7 @@ def build():
         "carried_from_phase": [],
         "legacy_scalar": {"value": attr["value"], "source_field": "%s#attributes.%s.value" % (ENTITY, ATTR),
                           "flag": "LEGACY_SCALAR", "kept": True},
-        "open_findings": [x for x in results if x[0] not in ERROR_FREE_INFO and x[1] in set(seen) | {root["id"]}],
+        "open_findings": [x for x in results if not is_info(x) and x[1] in set(seen) | {root["id"]}],
         "trace": {"file": TRACE, "version": t["version"],
                   "sha256": hashlib.sha256(open(os.path.join(ROOT, TRACE), "rb").read()).hexdigest()},
         "source": [TRACE],
@@ -114,6 +123,7 @@ if __name__ == "__main__":
     doc["process_forms"] = [r for r in doc.get("process_forms", []) if r["attribute"] != rec["attribute"]] + [rec]
     doc = {k: doc[k] for k in ("record", "version", "date", "status", "note", "process_forms", "phase_records") if k in doc}
     doc["note"] = doc["note"].split(" PILOT:")[0] + (" PILOT: one process_forms record, BE.hexagonal_cell_efficiency, "
-                                                     "built by scripts/pilot_process_form.py from the v0.3 reference trace.")
+                                                     "built by scripts/pilot_process_form.py from the v0.4 reference trace; the v0.3 build is kept in "
+                                                     "registry/process_forms_pilot_v0.3.json.")
     open(OUT, "w", encoding="utf-8").write(dump(doc))
     print("wrote the pilot record into registry/process_forms.json")

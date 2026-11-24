@@ -3,7 +3,7 @@
   "version": "0.1",
   "date": "2026-11-24",
   "status": "PROPOSED",
-  "note": "Process-form records kept beside the entity files; no entity file is edited. All fields are PROPOSED. Null = not assessed. The one record here is the example given in the owner's addendum of 2026-11-24; it is not an observation and has no source. PILOT: one process_forms record, BE.hexagonal_cell_efficiency, built by scripts/pilot_process_form.py from the v0.3 reference trace.",
+  "note": "Process-form records kept beside the entity files; no entity file is edited. All fields are PROPOSED. Null = not assessed. The one record here is the example given in the owner's addendum of 2026-11-24; it is not an observation and has no source. PILOT: one process_forms record, BE.hexagonal_cell_efficiency, built by scripts/pilot_process_form.py from the v0.4 reference trace; the v0.3 build is kept in registry/process_forms_pilot_v0.3.json.",
   "process_forms": [
     {
       "attribute": "BE.hexagonal_cell_efficiency",
@@ -121,6 +121,30 @@
             "layer": "D5_pattern",
             "role": "pattern",
             "status": "TRACED"
+          },
+          {
+            "node": "G3D_BASE_NOT_OPTIMAL",
+            "layer": "D0_law",
+            "role": "governing_law",
+            "status": "TRACED"
+          },
+          {
+            "node": "REGIME_HEX",
+            "layer": "D2_condition",
+            "role": "regime",
+            "status": "DERIVED"
+          },
+          {
+            "node": "C_MELT",
+            "layer": "D2_condition",
+            "role": "boundary_condition",
+            "status": "TRACED"
+          },
+          {
+            "node": "D4_HOT_WORKERS",
+            "layer": "D4_entity",
+            "role": "entity",
+            "status": "TRACED"
           }
         ],
         "reachable_by_layer": {
@@ -128,6 +152,7 @@
             "G2D_HALES",
             "G3D_FEJES",
             "F_FLOW",
+            "G3D_BASE_NOT_OPTIMAL",
             "G3D_DAUTER",
             "L_CONSERVE"
           ],
@@ -142,6 +167,8 @@
           "D2_condition": [
             "C_BROOD_T",
             "C_FLOW_T",
+            "REGIME_HEX",
+            "C_MELT",
             "C_WALL"
           ],
           "D3_material": [
@@ -149,6 +176,7 @@
             "M_GLANDS"
           ],
           "D4_entity": [
+            "D4_HOT_WORKERS",
             "D4_FLOWERS"
           ],
           "D5_pattern": [
@@ -156,15 +184,12 @@
           ]
         },
         "not_reached": [
-          "C_MELT",
-          "D4_HOT_WORKERS",
           "D4_MANUKA",
           "D4_WILDFLOWER",
           "E_NECTARY_PHOTO",
           "H_DHA_MGO",
           "I_SUNCOMPASS",
-          "L_SCATTER",
-          "REGIME_HEX"
+          "L_SCATTER"
         ]
       },
       "deviation": {
@@ -182,25 +207,14 @@
         "flag": "LEGACY_SCALAR",
         "kept": true
       },
-      "open_findings": [
-        [
-          "NOTED_MISMATCH",
-          "G2D_HALES",
-          "CITATION_MISMATCH"
-        ],
-        [
-          "NOTED_MISMATCH",
-          "G2D_HALES",
-          "SCOPE_MISMATCH"
-        ]
-      ],
+      "open_findings": [],
       "trace": {
-        "file": "audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json",
-        "version": "0.3",
-        "sha256": "0839cc3ef9926e7259e21b0a5023b00be54aec634cda2d63ba9ed4328785edb4"
+        "file": "audit/2026-11-24/reference/reference_trace_BE_hex_v0.4.json",
+        "version": "0.4",
+        "sha256": "a17aa46fc115c93e40d3e2a161ca6d3ded59259baf02d0e59a65c1541aef6418"
       },
       "source": [
-        "audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json"
+        "audit/2026-11-24/reference/reference_trace_BE_hex_v0.4.json"
       ],
       "note": "Pilot. form.kind 'state' is this conversion's reading: the stored quantity is a ratio of a built structure; the trace does not classify it as rate or state. The value is the trace's root node, status RECORDED_UNVERIFIED. The driver is CONTESTED (four accounts kept) and the lower regime bound is CONDITIONAL on it. being_tense is null: not assessed. No number here is new."
     }
