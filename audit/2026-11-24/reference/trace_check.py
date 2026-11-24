@@ -1,7 +1,32 @@
 """Stdlib checker for a reference dependency trace. No network. Deterministic.
 Checks: node status/source rules, dangling deps, layers reached, path to D0,
 cycle naming/period/parent, nesting order, timescale separation ratios."""
-import json, math, sys
+import json, math, os, sys   # os: 2026-11-24, the exit lines below used it without an import when a trace had no repo_bindings (v0.1 crashed with NameError after writing its output)
+# 2026-11-24 (order 'process form + Kimi schemas'): --selftest. Runs this same file on a
+# clean constructed trace (must exit 0) and on one with a dangling dependency (must exit 1).
+if len(sys.argv) > 1 and sys.argv[1] == "--selftest":
+    import subprocess, tempfile
+    node = lambda i, layer, deps: {"id": i, "layer": layer, "status": "TRACED", "source": ["constructed"], "depends_on": deps}
+    cyc = lambda i, per, par: {"id": i, "name": i.lower(), "period_s": per, "parent": par, "status": "TRACED", "source": ["constructed"]}
+    clean = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), node("L", "D0_law", [])], "cycles": []}
+    dirty = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L", "MISSING"]), node("L", "D0_law", [])], "cycles": []}
+    nest = {"record": "SELFTEST", "nodes": clean["nodes"], "cycles": [cyc("CY_A", 10, "CY_B"), cyc("CY_B", 5, None)]}
+    ok = []
+    with tempfile.TemporaryDirectory() as t:
+        for name, rec_, want, must in (("clean trace exits 0", clean, 0, None),
+                                       ("dangling dependency exits 1", dirty, 1, "DANGLING_DEP"),
+                                       ("nesting violation exits 1", nest, 1, "NESTING_VIOLATION")):
+            src, dst = os.path.join(t, "in.json"), os.path.join(t, "out.json")
+            json.dump(rec_, open(src, "w"))
+            r = subprocess.run([sys.executable, os.path.abspath(__file__), src, dst], capture_output=True, text=True,
+                               env={k: v for k, v in os.environ.items() if k != "LID_STRICT"})
+            got = [f[0] for f in json.load(open(dst))["findings"]]
+            # a top-level cycle is itself a finding in this checker, so only the named one is asserted
+            good = r.returncode == want and (must is None or must in got) and (want == 1 or got == [])
+            ok.append(good)
+            print("%s  %s  (exit %d, findings %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
+    print("checks: %d   failed: %d" % (len(ok), ok.count(False)))
+    sys.exit(0 if all(ok) else 1)
 rec = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "reference_trace_BE_hex.json"))
 N = {n["id"]: n for n in rec["nodes"]}; C = {c["id"]: c for c in rec["cycles"]}
 out = {"record": rec["record"], "findings": [], "summary": {}}
@@ -49,7 +74,7 @@ for c in C.values():
         ladder.append({"child": c["name"], "parent": p["name"], "ratio": None, "log10_separation": None, "reason": "period missing on one side"})
 out["summary"]["cycle_ladder"] = sorted(ladder, key=lambda x: (x["log10_separation"] is None, x["log10_separation"] or 0))
 spans = [c["period_s"] for c in C.values() if c.get("period_s")]
-out["summary"]["cycle_span_log10_s"] = [round(math.log10(min(spans)), 2), round(math.log10(max(spans)), 2)]
+out["summary"]["cycle_span_log10_s"] = [round(math.log10(min(spans)), 2), round(math.log10(max(spans)), 2)] if spans else None   # 2026-11-24: None when no cycle has a period (was a crash)
 # --- optional v0.2 sections -------------------------------------------------
 def reaches_D0(i, seen=()):
     if N[i]["layer"] == "D0_law": return True
@@ -98,4 +123,11 @@ print(json.dumps(out, indent=1, ensure_ascii=False))
 # Raised by an outside reader (Kimi, 2026-11-25): findings were silent to CI.
 if os.environ.get("LID_STRICT") == "1" and out["findings"]:
     print(f"STRICT: {len(out['findings'])} findings", file=sys.stderr)
+    sys.exit(1)
+
+# 2026-11-24, later (order 'process form + Kimi schemas'): the exit is loud by default.
+# Any finding exits 1; LID_STRICT is no longer needed. The output file is written before
+# the exit and its bytes are unchanged, so earlier result files still reproduce.
+if out["findings"]:
+    print(f"{len(out['findings'])} findings: exit 1", file=sys.stderr)
     sys.exit(1)
