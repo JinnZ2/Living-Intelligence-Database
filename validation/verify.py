@@ -16,6 +16,11 @@ Repair 2026-11-24 (fixtures F1, F2 in validation/fixtures/DECLARED.json):
       matching attribute. Before, it was counted once per matching attribute, so the posterior
       rose with the number of attributes. tests_gathered still gives the number of matching
       attributes; it is not a count of independent tests.
+  F3  (second order) an index entry is thin: id, name, path, no attributes. The full record is
+      loaded from its path before any check (entities_hydrated). A record that cannot be loaded
+      is listed under load_failures with state LOAD_FAILED and is left out; it is not checked as
+      the thin entry. Before, the thin entries were checked as they were, so on the real index
+      no test was ever gathered and every claim returned the prior.
   The behaviour before the repair is kept behind legacy=True / --legacy, for comparison.
 """
 
@@ -40,6 +45,30 @@ def load_ontology(path: str = None) -> dict:
         path = repo_root / "ontology_index.json"
     with open(path, "r") as f:
         return json.load(f)
+
+# ------------------------------------------------------------------
+# Hydrate thin index entries (fixture F3)
+# ------------------------------------------------------------------
+def hydrate_entities(entities: list, repo_root: Path = None):
+    """Return (records, hydrated_count, load_failures). An entry that already carries attributes, or
+    has no path, is used as it is. A path that cannot be loaded is reported, never replaced by the
+    thin entry."""
+    if repo_root is None:
+        repo_root = Path(__file__).parent.parent
+    out, hydrated, failures = [], 0, []
+    for e in entities:
+        path = e.get("path")
+        if "attributes" in e or not path:
+            out.append(e)
+            continue
+        try:
+            with open(repo_root / path, "r") as f:
+                out.append(json.load(f))
+            hydrated += 1
+        except (OSError, json.JSONDecodeError) as exc:
+            failures.append({"id": e.get("id"), "path": str(path), "state": "LOAD_FAILED",
+                             "reason": "%s: %s" % (type(exc).__name__, exc)})
+    return out, hydrated, failures
 
 # ------------------------------------------------------------------
 # Generate tests from a single entity
@@ -107,6 +136,9 @@ def verify_claim(claim: Callable[[], bool],
         ontology = load_ontology(ontology_path)
 
     entities = ontology.get("entities", [])
+    hydrated, load_failures = 0, []
+    if not legacy:
+        entities, hydrated, load_failures = hydrate_entities(entities)
     if domain_hint:
         entities = [e for e in entities
                      if domain_hint.lower() in json.dumps(e).lower()]
@@ -155,6 +187,8 @@ def verify_claim(claim: Callable[[], bool],
         "mode": "legacy" if legacy else "repaired",
         "verdict": verdict,
         "entities_consulted": len(entities),
+        "entities_hydrated": hydrated,
+        "load_failures": load_failures,
         "tests_gathered": len(all_tests),
         "evidence_count": len(results),
         "tests_passed": sum(1 for p, _ in results if p),
