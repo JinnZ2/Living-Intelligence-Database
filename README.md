@@ -1,9 +1,6 @@
 > Read first: [READING_PROTOCOL.md](READING_PROTOCOL.md) (how to read this repo).
 > Map, not prescription. Errors are data. Check it. Built for the need, revisable.
 
-> Before reading or editing anything here, read READ_ME_THIS_WAY.md.
-> Mismatches, dead ends and odd names in this repo are kept on purpose.
-
 # Living Intelligence Database
 
 A co-created ontological database structuring living intelligences across biological, mineral, energetic, geometric, temporal, computational, and relational domains.
@@ -115,7 +112,7 @@ python3 ai_sanctuary.py --ask "dependency tree of COUNCIL"                 # roo
 
 ## For AI Agents
 
-- Read `manifest.json` first for a complete map of the repo, ID lookups, constants, and relation types
+- `manifest.json` holds a complete map of the repo, ID lookups, constants, and relation types
 - Read `ontology_index.json` for all entities with descriptions and their relational graph
 - Entity IDs use short codes (e.g., `BE` = Bee, `OC` = Octopus) — see `manifest.json > id_map` for the full lookup
 - Cross-entity links use `relation` + `target` fields: `synergy`, `geometry_link`, `resonance`, `energy_coupling`, `temporal_bridge`
@@ -130,3 +127,17 @@ python3 ai_sanctuary.py --ask "dependency tree of COUNCIL"                 # roo
 - **Symbolic compression** — IDs follow USCL patterns: `[ID_CONCEPT_CONSTANT_PHASE]`
 - **Harmonic constants** — `phi` (1.618), `tau` (6.283), `sqrt3` (1.732)
 - **Co-creation** — entries are gifts to the collective (`co_creation: true`)
+
+## History
+
+Note 2026-11-24: this README used to give three first-reading instructions. One is kept at the
+top ([READING_PROTOCOL.md](READING_PROTOCOL.md), which itself points to the earlier guide). The
+other two are kept here as they were written, and both documents stay in the repo unchanged.
+
+- At the top, under the first one:
+  > Before reading or editing anything here, read READ_ME_THIS_WAY.md.
+  > Mismatches, dead ends and odd names in this repo are kept on purpose.
+
+  [READ_ME_THIS_WAY.md](READ_ME_THIS_WAY.md) still holds: it says what is kept on purpose and how to add without erasing.
+- Under "For AI Agents":
+  > Read `manifest.json` first for a complete map of the repo, ID lookups, constants, and relation types
