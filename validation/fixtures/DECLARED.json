@@ -51,5 +51,46 @@
     "legacy": "the behaviour before the repair stays reachable behind a --legacy flag (and a legacy=True argument), for comparison; it is not deleted",
     "no_tuning": "a fixture's stated answer is not changed after the instruments are seen to fail or pass it",
     "stdlib": "the runner and the repairs use the standard library only. scripts/build_index.py already imports jsonschema; where that is not installed F6 reads NOT_RUN, which is not a pass"
-  }
+  },
+  "amendments": [
+    {
+      "date": "2026-11-24",
+      "name": "second order: eight fixtures (F3 hydration and F7 one confidence added; renumbered)",
+      "after": "branch instrument-repair at 3caac9a, where the six fixtures above already pass. By the owner's revised order 'LID Package A: instrument reliability'. Declared before verify.py, scope_checker.py, audit.py, grounding_inspector.py or goal_refiner.py are changed for F3 and F7.",
+      "status": "PROPOSED",
+      "numbering": {
+        "rule": "the revised order numbers eight fixtures. The six above keep their text; their ids map as follows. The runner uses the new ids from here on. results_before.json (old ids, at ad2ae9b) is kept as written.",
+        "map": {
+          "F1": "F1 (unchanged)",
+          "F2": "F2 (unchanged)",
+          "F3 (new)": "new, below",
+          "F4": "was F3 (falsifier.py)",
+          "F5": "was F4 (dependency_tree.py)",
+          "F6": "was F5b (audit.py); the rows on falsifier.py and dependency_tree.py stay as F6a and F6c",
+          "F7 (new)": "new, below",
+          "F8": "was F6 (scripts/build_index.py)"
+        }
+      },
+      "fixtures": {
+        "F3": {
+          "instrument": "validation/verify.py",
+          "input": "(a) an index of one thin entry (id, name, path; no attributes) whose path holds the full record with one scoped attribute; (b) an index of one thin entry whose path does not exist",
+          "must_read": "(a) the full record is loaded before any check: entities_hydrated 1, tests_gathered 1, evidence_count 1, verdict TESTED; (b) load_failures holds the id with state LOAD_FAILED, evidence_count 0, verdict NOT_TESTED",
+          "defect": "verify reads the index entries as they are; an index entry has no attributes, so on the real index no test is ever gathered and every claim returns the prior"
+        },
+        "F7": {
+          "instrument": "validation/scope_checker.py, validation/audit.py, validation/grounding_inspector.py, validation/goal_refiner.py",
+          "input": "one record with two scoped attributes: 'computed' has no stored relational_confidence, reproducibility 'repeats each season', cross_domain_count 3, relational_dependencies_verified true; 'explicit' has relational_confidence 0.9 stored",
+          "must_read": "every instrument reports, for 'computed', the value 0.544 with basis computed (0.8 x 0.85 x 0.8 by scope_checker's own table), and for 'explicit' 0.9 with basis explicit. Where each is read: scope_checker.confidence_record; audit report confidence_by_attribute (and its bucket 0.54); grounding_inspector.le_score_attribute()['relational_confidence']; goal_refiner.generate_alternatives()[0]['inspiration_evidence']",
+          "defect": "audit.py buckets an attribute with no stored confidence as 0.5 where scope_checker computes one; grounding_inspector reports no confidence at all for it (its le_score is another quantity)",
+          "not_changed": "grounding_inspector's le_score and its inflation warning are left as they are; see open_design_decisions"
+        }
+      },
+      "open_design_decisions": [
+        "F7: grounding_inspector's le_score (Le.obs/pat/xfr/enc) is a different quantity from relational confidence. The fixture is met by reporting the shared confidence beside it. Whether le_score should itself be replaced by, or reconciled with, relational confidence is the owner's decision and is not made here.",
+        "F7: grounding_inspector's 'confidence inflation' warning compares only a STORED relational_confidence with its transfer score. Whether it should also fire on a computed one is not decided here."
+      ],
+      "observer_slots": null
+    }
+  ]
 }

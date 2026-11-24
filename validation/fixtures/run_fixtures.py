@@ -72,6 +72,67 @@ def _entity_file(tmp, name, entity):
     return str(p)
 
 
+def f3_hydrate(tmp):
+    import verify
+    full = _entity_file(tmp, "full.json", {"id": "FX", "name": "fx", "attributes": {"a": scoped()}})
+    oa = verify.verify_claim(lambda: True, ontology={"entities": [{"id": "FX", "name": "fx", "path": full}]}, prior=0.5)
+    ob = verify.verify_claim(lambda: True, ontology=GHOST, prior=0.5)
+    lf = ob.get("load_failures", "absent")
+    seen = {"a_hydrated": oa.get("entities_hydrated", "absent"), "a_tests_gathered": oa.get("tests_gathered"),
+            "a_evidence_count": oa.get("evidence_count"), "a_verdict": oa.get("verdict"),
+            "b_load_failures": lf, "b_evidence_count": ob.get("evidence_count"), "b_verdict": ob.get("verdict")}
+    ok = (oa.get("entities_hydrated") == 1 and oa.get("tests_gathered") == 1 and oa.get("evidence_count") == 1
+          and oa.get("verdict") == "TESTED"
+          and isinstance(lf, list) and any(x.get("id") == "GHOST" and x.get("state") == "LOAD_FAILED" for x in lf)
+          and ob.get("evidence_count") == 0 and ob.get("verdict") == "NOT_TESTED")
+    return ok, seen
+
+
+F7_RECORD = {"id": "F7", "name": "fixture seven", "ontology": "animal", "attributes": {
+    "pattern": "fixture",
+    "computed": {"value": 1, "scope": {"definition": "x", "falsifiability": "y", "evidence": {
+        "reproducibility": "repeats each season", "cross_domain_count": 3, "relational_dependencies_verified": True}}},
+    "explicit": {"value": 1, "scope": {"definition": "x", "falsifiability": "y", "evidence": {
+        "reproducibility": "repeats each season", "cross_domain_count": 3, "relational_dependencies_verified": True,
+        "relational_confidence": 0.9}}}}}
+F7_WANT = {"computed": (0.544, "computed"), "explicit": (0.9, "explicit")}
+
+
+def f7(tmp):
+    import scope_checker, audit, grounding_inspector, goal_refiner
+    attrs = F7_RECORD["attributes"]
+    seen = {}
+
+    def put(inst, name, value, basis):
+        seen.setdefault(inst, {})[name] = [None if value is None else round(value, 6), basis]
+    for name in F7_WANT:
+        rec = getattr(scope_checker, "confidence_record", None)
+        if rec is None:
+            put("scope_checker", name, scope_checker.extract_confidence(attrs[name]), "absent: no confidence_record")
+        else:
+            r = rec(attrs[name]); put("scope_checker", name, r.get("value"), r.get("basis"))
+        g = grounding_inspector.le_score_attribute(attrs[name]).get("relational_confidence")
+        put("grounding_inspector", name, (g or {}).get("value"), (g or {}).get("basis", "absent: not reported"))
+    full = _entity_file(tmp, "f7.json", F7_RECORD)
+    a = audit.audit({"entities": [{"id": "F7", "name": "fixture seven", "path": full}]}, repo_root=ROOT)
+    rows = {r["attribute"]: r for r in a.get("confidence_by_attribute", [])}
+    for name in F7_WANT:
+        if name in rows:
+            put("audit", name, rows[name].get("value"), rows[name].get("basis"))
+        else:
+            put("audit", name, None, "absent: buckets only %s" % dict(a.get("confidence_distribution", {})))
+    alts = goal_refiner.generate_alternatives("goal", "fixture", F7_RECORD)
+    insp = {i["attribute"]: i for i in alts[0]["inspiration_evidence"]}
+    for name in F7_WANT:
+        put("goal_refiner", name, insp[name].get("confidence"), insp[name].get("confidence_basis", "absent: no basis"))
+    buckets = {str(k): v for k, v in dict(a.get("confidence_distribution", {})).items()}
+    seen["audit_buckets"] = buckets
+    ok = all(seen[inst][name] == [F7_WANT[name][0], F7_WANT[name][1]]
+             for inst in ("scope_checker", "audit", "grounding_inspector", "goal_refiner") for name in F7_WANT) \
+        and buckets == {"0.54": 1, "0.9": 1}
+    return ok, seen
+
+
 def f3(tmp):
     import falsifier
     a = _entity_file(tmp, "fa.json", {"id": "FA", "attributes": {"k": scoped(condition={"constraints": ["zzqx_never_present"]})}})
@@ -165,15 +226,18 @@ def f6(tmp):
     return (a == 0 and b == 1 and c == 1), seen
 
 
+# ids follow the revised order (validation/fixtures/DECLARED.json, amendments[0].numbering)
 FIXTURES = [
     ("F1", "verify.py", "unknown claim -> UNKNOWN, posterior null", f1),
     ("F2", "verify.py", "one claim over 5 attributes -> evidence count 1", f2),
-    ("F3", "falsifier.py", "no match -> NOT_TESTED; 0 tests -> no score", f3),
-    ("F4", "dependency_tree.py", "unresolved link reported, not dropped", f4),
-    ("F5a", "falsifier.py", "load fails -> LOAD_FAILED, no thin substitution", f5_falsifier),
-    ("F5b", "audit.py", "load fails -> LOAD_FAILED, scoped_ratio null", f5_audit),
-    ("F5c", "dependency_tree.py", "load fails -> LOAD_FAILED, not built from thin entry", f5_dependency_tree),
-    ("F6", "scripts/build_index.py", "broken link -> exit 1 (one KNOWN_HELD link allowlisted)", f6),
+    ("F3", "verify.py", "thin index entry -> full record loaded before checks", f3_hydrate),
+    ("F4", "falsifier.py", "no match -> NOT_TESTED; 0 tests -> no score", f3),
+    ("F5", "dependency_tree.py", "unresolved link reported, not dropped", f4),
+    ("F6", "audit.py", "load fails -> LOAD_FAILED, scoped_ratio null", f5_audit),
+    ("F6a", "falsifier.py", "load fails -> LOAD_FAILED, no thin substitution", f5_falsifier),
+    ("F6c", "dependency_tree.py", "load fails -> LOAD_FAILED, not built from thin entry", f5_dependency_tree),
+    ("F7", "scope_checker/audit/grounding/goal", "same record -> same confidence in every instrument", f7),
+    ("F8", "scripts/build_index.py", "broken link -> exit 1 (one KNOWN_HELD link allowlisted)", f6),
 ]
 
 
@@ -197,7 +261,7 @@ def run_all():
 if __name__ == "__main__":
     rows = run_all()
     for r in rows:
-        print("%-4s %-8s %-24s %s" % (r["id"], r["state"], r["instrument"], r["must_read"]))
+        print("%-4s %-8s %-36s %s" % (r["id"], r["state"], r["instrument"], r["must_read"]))
         print("       observed: %s" % json.dumps(r["observed"], ensure_ascii=False)[:300])
     counts = {s: sum(r["state"] == s for r in rows) for s in ("PASS", "FAIL", "ERROR", "NOT_RUN")}
     print("fixtures: %d   PASS %d   FAIL %d   ERROR %d   NOT_RUN %d"
