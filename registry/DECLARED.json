@@ -360,6 +360,40 @@
         "blind": "blind/ is left as built at 4221e16; it is a frozen package and is not rebuilt when the reference moves"
       },
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "claim/number split (abstract pass)",
+      "after": "the second index at 1ad8882 and the leads at 80e63ab; by the owner's order. Declared before any abstract was fetched or read. Replaces the 'judgment' and 'several_works' parts of the abstract_pass entry in the amendment 'UNDERSPECIFIED + MATCH_SUSPECT; second index; abstract pass'; its scope, fetch, reader, mechanism and registry parts stand.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "why": "An attribute field holds two things: a claim (its scope.definition in the entity file) and a number (its value). An abstract can state the claim without the number. One judgment per field could not say that.",
+      "per_field": {
+        "claim_support": {
+          "STATED": "the abstract states the claim in the field's definition",
+          "RELATED": "the abstract is on the subject and does not state the claim",
+          "CONTRADICTED": "the abstract contradicts the claim or the number",
+          "NOT_READ": "no abstract was available for any work behind the field"
+        },
+        "number_support": {
+          "STATED": "the abstract gives the field's number, or one that rounds to it, for the defined quantity",
+          "NOT_STATED": "it does not"
+        }
+      },
+      "outcome": {
+        "claim STATED + number STATED": "status 'OBSERVED (basis: abstract)'; void null",
+        "claim STATED + number NOT_STATED": "status 'OBSERVED (basis: abstract)' for the claim; the number is UNMAPPED: void {state: UNMAPPED, reason: 'number not stated in the abstract read; the status applies to the claim only'}",
+        "claim RELATED": "status 'PROPOSED', with a note",
+        "claim CONTRADICTED": "the value is kept; status 'PROPOSED'; note 'contradicted by abstract'",
+        "claim NOT_READ": "no new step"
+      },
+      "several_works": "per field over the works read: claim_support is CONTRADICTED when any abstract contradicts, else STATED when any states the claim, else RELATED. number_support is STATED when any abstract gives the number. Works of the same string that were not read are named in the note.",
+      "recorded": "registry/attribute_readings.json, one entry per field: entity, field, claim (the definition, copied verbatim at reading time), value, claim_support, number_support, status, note, per-work {source_id, pmid, claim_support, number_support, quote of at most 25 words}, read 'abstract', date, reader. The step carries the status, a status_note, the void above, and params.status_basis {read, source_ids, pmids, claim_support, number_support, claim_sha256}.",
+      "reference": "a seventh reading, OBSERVED_CLAIM_ONLY: the claim is observed in an abstract and the number is not sourced; use the claim, not the number. It is read before the UNMAPPED rule. Reference fields gain claim, claim_support and number_support (null where there is no reading).",
+      "examples": "an OBSERVED_CLAIM_ONLY field is a target of kind OBSERVED_CLAIM: its answer states the claim as OBSERVED and says the number is not sourced; the number is not in the claim. Kind OBSERVED needs both STATED.",
+      "holdout": "the stratified rule is re-applied unchanged. An OBSERVED_CLAIM example carries an OBSERVED status tag, so its entity counts as has_statused_field = yes, the same as kinds OBSERVED, DERIVED and PROPOSED. This is stated here because the earlier entry listed three kinds and this kind did not exist then.",
+      "limits": "one reader, abstracts only, no second reading. STATED means stated in the abstract, not shown in the paper's data.",
+      "renames": "none"
     }
   ]
 }
