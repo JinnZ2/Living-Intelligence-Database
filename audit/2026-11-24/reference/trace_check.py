@@ -43,6 +43,22 @@ if len(sys.argv) > 1 and sys.argv[1] == "--selftest":
                 good = good and sorted(set(got)) == ["CYCLE_NO_PERIOD", "CYCLE_TOP_LEVEL", "GAP"]
             ok.append(good)
             print("%s  %s  (exit %d, findings %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
+        # 2026-11-24 (order 'pins + entity correction'): ENTITY_TRACE_DIVERGENCE, against a constructed entity file
+        hist = [{"version": "0", "status": "TRACED", "note": "record cites x -> CITATION_MISMATCH"}]
+        div = {"record": "SELFTEST", "subject": {"entity": "E", "attribute": "a"},
+               "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), status_history=hist)], "cycles": []}
+        ent = lambda ev: {"id": "E", "attributes": {"a": {"value": 1, "scope": {"evidence": ev}}}}
+        for name, entity, want, has in (("correction in the trace, none on the entity: ENTITY_TRACE_DIVERGENCE, exits 1", ent({"source": "s"}), 1, True),
+                                        ("entity carries the correction: no divergence, exits 0", ent({"source": "s", "correction": {"source": "c", "scope": "2D"}}), 0, False),
+                                        ("correction without a scope does not count as carried, exits 1", ent({"source": "s", "correction": {"source": "c", "scope": ""}}), 1, True)):
+            src, dst, ef = os.path.join(t, "in.json"), os.path.join(t, "out.json"), os.path.join(t, "entity.json")
+            json.dump(div, open(src, "w")); json.dump(entity, open(ef, "w"))
+            r = subprocess.run([sys.executable, os.path.abspath(__file__), src, dst], capture_output=True, text=True,
+                               env=dict({k: v for k, v in os.environ.items() if k != "LID_STRICT"}, LID_ENTITY_FILE=ef))
+            got = [f[0] for f in json.load(open(dst))["findings"]]
+            good = r.returncode == want and (("ENTITY_TRACE_DIVERGENCE" in got) == has)
+            ok.append(good)
+            print("%s  %s  (exit %d, findings %s)" % ("PASS" if good else "FAIL", name, r.returncode, got))
     print("checks: %d   failed: %d" % (len(ok), ok.count(False)))
     sys.exit(0 if all(ok) else 1)
 rec = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "reference_trace_BE_hex.json"))
@@ -136,6 +152,33 @@ if RB:
             if b["repo_dependency"] not in deps: F(["BINDING_STRING_NOT_IN_REPO", b["attribute"], b["repo_dependency"]])
         bound += bool(b["binds_to"]); unbound += not b["binds_to"]
     out["summary"]["repo_bindings"] = {"checked_against": bee if attrs is not None else "NOT_AVAILABLE", "bound": bound, "unbound": unbound}
+# --- ENTITY_TRACE_DIVERGENCE (2026-11-24, registry/DECLARED.json, 'schema 0.2.0 and 0.4.0; ...') ---
+# The trace records a correction (a *_MISMATCH word in a node's note or in a status_history note)
+# that the entity's attribute does not carry (scope.evidence.correction with source and scope).
+# Presence only: the text of the correction is not compared. Runs when the trace names a subject.
+SUBJ = rec.get("subject")
+if SUBJ:
+    import re as _re
+    _root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..")
+    _ef = os.environ.get("LID_ENTITY_FILE")
+    if not _ef:
+        try:
+            _ix = json.load(open(os.path.join(_root, "ontology_index.json")))
+            _ef = next((os.path.join(_root, e["path"]) for e in _ix["entities"] if e["id"] == SUBJ["entity"]), None)
+        except (OSError, ValueError):
+            _ef = None
+    recorded = [n["id"] for n in N.values()
+                if _re.search(r"[A-Z_]+_MISMATCH", " ".join([n.get("note", "")] + [h.get("note", "") for h in n.get("status_history", [])]))]
+    if _ef and os.path.exists(_ef):
+        _ev = json.load(open(_ef)).get("attributes", {}).get(SUBJ["attribute"], {})
+        _ev = (_ev.get("scope", {}) if isinstance(_ev, dict) else {}).get("evidence", {}) or {}
+        _c = _ev.get("correction") or {}
+        carried = bool(_c.get("source")) and bool(_c.get("scope"))
+        if not carried:
+            for i in recorded: F(["ENTITY_TRACE_DIVERGENCE", i, "%s.%s" % (SUBJ["entity"], SUBJ["attribute"])])
+        out["summary"]["entity_trace_divergence"] = {"state": "CHECKED", "correction_recorded_by": recorded, "entity_carries_correction": carried}
+    else:
+        out["summary"]["entity_trace_divergence"] = {"state": "NOT_RUN", "reason": "entity file not available", "correction_recorded_by": recorded}
 json.dump(out, open(sys.argv[2] if len(sys.argv) > 2 else "trace_check_results.json", "w"), indent=1, ensure_ascii=False)
 print(json.dumps(out, indent=1, ensure_ascii=False))
 

@@ -1,7 +1,7 @@
 {
  "snapshot_class": "SUMMARY_ONLY",
  "note": "Per-entity counts. The steps cannot be rebuilt from this file.",
- "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+ "declared_pre_run": "6bd80a940612b95554ef276e6e86a9854668b19b",
  "entities": [
   {
    "entity": "AUTOENC",
@@ -66,7 +66,7 @@
   {
    "entity": "BE",
    "path": "ontology/animal/bee.json",
-   "steps": 6,
+   "steps": 7,
    "head_steps": 6
   },
   {

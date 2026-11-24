@@ -1,0 +1,107 @@
+{
+ "record": "ENTITY_TRACE_DIVERGENCE_BEFORE_AFTER",
+ "date": "2026-11-24",
+ "status": "PROPOSED",
+ "subject": "BE.hexagonal_cell_efficiency",
+ "before": "entity file at commit 6bd80a9 (no evidence.correction)",
+ "after": "entity file with evidence.correction added",
+ "provenance_step": {
+  "new": "29bcd4671a6661b3654ff92900676fd3b0745ec9704d61361473779f231e7def",
+  "supersedes": "36d6c752a8cd3b4b5028d0889311128673a3f7795f01ca78deea07fd70576bf2"
+ },
+ "note": "v0.1-v0.3 still exit 1 after the correction: their NOTED_MISMATCH findings are part of those files and stay.",
+ "traces": [
+  {
+   "trace_version": "0.1",
+   "before": {
+    "ERROR": 3,
+    "INFO": 3,
+    "exit": 1,
+    "ENTITY_TRACE_DIVERGENCE": [
+     [
+      "ENTITY_TRACE_DIVERGENCE",
+      "G2D_HALES",
+      "BE.hexagonal_cell_efficiency"
+     ]
+    ],
+    "entity_carries_correction": false
+   },
+   "after": {
+    "ERROR": 2,
+    "INFO": 3,
+    "exit": 1,
+    "ENTITY_TRACE_DIVERGENCE": [],
+    "entity_carries_correction": true
+   }
+  },
+  {
+   "trace_version": "0.2",
+   "before": {
+    "ERROR": 3,
+    "INFO": 6,
+    "exit": 1,
+    "ENTITY_TRACE_DIVERGENCE": [
+     [
+      "ENTITY_TRACE_DIVERGENCE",
+      "G2D_HALES",
+      "BE.hexagonal_cell_efficiency"
+     ]
+    ],
+    "entity_carries_correction": false
+   },
+   "after": {
+    "ERROR": 2,
+    "INFO": 6,
+    "exit": 1,
+    "ENTITY_TRACE_DIVERGENCE": [],
+    "entity_carries_correction": true
+   }
+  },
+  {
+   "trace_version": "0.3",
+   "before": {
+    "ERROR": 3,
+    "INFO": 6,
+    "exit": 1,
+    "ENTITY_TRACE_DIVERGENCE": [
+     [
+      "ENTITY_TRACE_DIVERGENCE",
+      "G2D_HALES",
+      "BE.hexagonal_cell_efficiency"
+     ]
+    ],
+    "entity_carries_correction": false
+   },
+   "after": {
+    "ERROR": 2,
+    "INFO": 6,
+    "exit": 1,
+    "ENTITY_TRACE_DIVERGENCE": [],
+    "entity_carries_correction": true
+   }
+  },
+  {
+   "trace_version": "0.4",
+   "before": {
+    "ERROR": 1,
+    "INFO": 7,
+    "exit": 1,
+    "ENTITY_TRACE_DIVERGENCE": [
+     [
+      "ENTITY_TRACE_DIVERGENCE",
+      "G2D_HALES",
+      "BE.hexagonal_cell_efficiency"
+     ]
+    ],
+    "entity_carries_correction": false
+   },
+   "after": {
+    "ERROR": 0,
+    "INFO": 7,
+    "exit": 0,
+    "ENTITY_TRACE_DIVERGENCE": [],
+    "entity_carries_correction": true
+   }
+  }
+ ]
+}
