@@ -9,6 +9,9 @@ efetch on 2026-11-24), RECORD ONLY (bibliographic record fetched; it has no
 abstract), NOT OPENED (not fetched; nothing is stated from it), NOT RECORDED
 (no source read here gives the value).
 
+Delay, as used in this file: the time from data available to label accepted.
+A gap between two publications is not a delay in this sense.
+
 ## Definition
 
 A label placed before measurement stops investigation. The data waits on the
@@ -73,7 +76,7 @@ and whether it is resolved.
 | failed replication | Markel K (2020) "Lack of evidence for associative learning in pea plants", eLife 9:e57614, doi:10.7554/eLife.57614, PMID 32573434. ABSTRACT READ: a replication of the 2016 protocol with a larger sample and fully blinded analysis did not show the result |
 | exchange | Comment by Gagliano et al. (eLife 9:e61141, PMID 32909941) and response by Markel (eLife 9:e61689, PMID 32909944). RECORD ONLY: titles read, text not read |
 | critique | Taiz L, Alkon D, Draguhn A, Murphy A, Blatt M, Hawes C, Thiel G, Robinson DG (2019) "Plants Neither Possess nor Require Consciousness", Trends Plant Sci 24(8):677-687, doi:10.1016/j.tplants.2019.05.008, PMID 31279732. ABSTRACT READ: it calls the likelihood that plants have consciousness "effectively nil" |
-| delay | 2016 claim to 2020 replication attempt: 4 years, from the two publication years. Any other delay: NOT RECORDED |
+| delay | NOT RECORDED. 2016→2020 is a publication gap, not label-lock delay (= data available → label accepted) |
 | resolved? | NOT RECORDED. The pea result did not replicate in the one attempt read; no source read here addresses a replication of the Mimosa result |
 
 Layer with no dispute located in the sources read (disputes were not

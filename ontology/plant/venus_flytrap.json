@@ -85,7 +85,7 @@
       "note": "unmeasured: the abstract gives counts of stimulations, not times"
     },
     "status": {
-      "limit_sensed": "DERIVED (basis: OBSERVED)",
+      "limit_sensed": "PROPOSED",
       "early_signal": "OBSERVED",
       "response": "OBSERVED",
       "lead_time": null
@@ -149,6 +149,7 @@
     "coupling_note": "Prey animal inside the trap (moving, sodium-rich); nutrient-poor soil as the stated condition under which the plant depends on an animal diet.",
     "contested_label": null,
     "notes": {
+      "changes_environment": "background claim in source, not this study's result",
       "contested_label": "null = no information. The source title uses the word 'Counts'; no source disputing that label was read. Context reviews: Lin Y (2026) Plant embodied intelligence: A paradigmatic perspective. iScience 29(7):116511. doi:10.1016/j.isci.2026.116511. PMID 42383002 [abstract read via NCBI efetch 2026-11-24; review, cited as context]; Segundo-Ortin (2026) Philosophy Compass [NOT OPENED: not found in PubMed; title not confirmed]"
     }
   },
