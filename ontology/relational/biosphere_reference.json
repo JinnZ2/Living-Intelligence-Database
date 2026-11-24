@@ -1,0 +1,247 @@
+{
+  "id": "BIOSPHERE",
+  "name": "Earth biosphere (reference record)",
+  "ontology": "relational",
+  "record_kind": "earth_scale_reference",
+  "status": "PROPOSED",
+  "date": "2026-11-24",
+  "co_creation": true,
+  "co_authored": true,
+  "observer_slots": null,
+  "description": "The life-sustaining zone of Earth, held as one reference case for waste-cycling and gradient use. Every evidence line below is either a quote from a source fetched on 2026-11-24 or is marked NOT OPENED. The framing lines are the owner's, from the work order 'Earth-scale reference record', and are marked as such.",
+  "origin": "owner's work order 'LID: Earth-scale reference record', 2026-11-24",
+  "scope": {
+    "statement": "life-sustaining zone, not planetary energy balance",
+    "stated_by": "owner's order"
+  },
+  "energy_boundary": {
+    "state": "OPEN",
+    "statement": "sunlight in, heat out (stated, set aside)",
+    "stated_by": "owner's order",
+    "evidence": [
+      {
+        "source_state": "NOT OPENED",
+        "reason": "stated by the order and set aside by the order; no source was looked for"
+      }
+    ]
+  },
+  "material_boundary": {
+    "state": "MOSTLY_CLOSED",
+    "statement": "matter recycled over ~3.8 Gyr",
+    "stated_by": "owner's order",
+    "evidence": [
+      {
+        "source": "S2",
+        "quote": "The earliest life forms on our planet so far observed to have existed, are microbes that left signals of their presence in rocks ~ 3.6 Ga",
+        "reads": "age of the earliest observed life: this source gives ~3.6 Ga, not ~3.8. The order's ~3.8 Gyr and this ~3.6 Ga are both kept; they are not reconciled here."
+      },
+      {
+        "source_state": "NOT OPENED",
+        "reason": "no fetched source gives ~3.8 Gyr. A 2003 abstract (PMID 12594918) seen in a search listing used '3.8 Gyr' inside a hypothesis about the first cells; the listing was not kept and a second fetch failed, so it is not quoted.",
+        "claim": "~3.8 Gyr"
+      },
+      {
+        "source_state": "NOT OPENED",
+        "reason": "no source was opened that states the biosphere's matter is recycled, or that the material boundary is mostly closed. The pages tried for this (en.wikipedia.org, science.nasa.gov) did not answer from this machine; no value is written from recall.",
+        "claim": "matter recycled; boundary mostly closed"
+      }
+    ]
+  },
+  "control_group": {
+    "members": [
+      "Moon",
+      "Mars",
+      "Venus"
+    ],
+    "statement": "same star, no recycling network observed",
+    "stated_by": "owner's order",
+    "evidence": [
+      {
+        "source": "S4",
+        "quote": "However, from the perspective of the Solar System, Earth appears unique as the only planet known to support life.",
+        "reads": "no life known on another Solar System planet. This is not the same statement as 'no recycling network observed'."
+      },
+      {
+        "source_state": "NOT OPENED",
+        "reason": "no source was opened on the Moon as a control case, or on the absence of a recycling network on the Moon, Mars or Venus. The pages tried for this (en.wikipedia.org, science.nasa.gov) did not answer from this machine; no value is written from recall.",
+        "claim": "no recycling network observed (Moon, Mars, Venus)"
+      }
+    ]
+  },
+  "differing_variables": [
+    {
+      "variable": "liquid water",
+      "evidence": [
+        {
+          "source": "S4",
+          "quote": "many of Earth’s one-offs – plate tectonics, surface liquid water, a large moon, and life",
+          "reads": "surface liquid water is listed among Earth's one-offs (the source is quoting Shorttle et al. 2021)."
+        }
+      ]
+    },
+    {
+      "variable": "magnetic field",
+      "evidence": [
+        {
+          "source": "S4",
+          "quote": "But Venus, which is a similar size to Earth, has no magnetic field."
+        },
+        {
+          "source": "S4",
+          "quote": "Notably, Mars once had an intrinsic magnetic field, as evidenced by remnant crustal magnetism"
+        },
+        {
+          "source_state": "NOT OPENED",
+          "reason": "no source was opened on the Moon's magnetic field",
+          "claim": "Moon"
+        }
+      ]
+    },
+    {
+      "variable": "plate tectonics",
+      "evidence": [
+        {
+          "source": "S4",
+          "quote": "many of Earth’s one-offs – plate tectonics, surface liquid water, a large moon, and life",
+          "reads": "plate tectonics is listed among Earth's one-offs (same quoted passage)."
+        }
+      ]
+    },
+    {
+      "variable": "orbit",
+      "evidence": [
+        {
+          "source_state": "NOT OPENED",
+          "reason": "no source was opened on orbit as a differing variable. The pages tried for this (en.wikipedia.org, science.nasa.gov) did not answer from this machine; no value is written from recall."
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "line": "persistence + recovery after 5 mass extinctions",
+      "evidence": [
+        {
+          "source": "S5",
+          "quote": "Following the LOME, the Silurian era (~443 to 420 Ma) ( 9 ) comprised a 23-million-year recovery interval",
+          "reads": "recovery after one of the five (Late Ordovician), which the same article calls a \"Big Five\" event."
+        },
+        {
+          "source": "S5",
+          "quote": "The EDME was also followed by a similarly prolonged Mississippian (359 to 323 Ma) ( 9 ) recovery interval",
+          "reads": "recovery after a second (end-Devonian)."
+        },
+        {
+          "source_state": "NOT OPENED",
+          "reason": "no source was opened that lists all five mass extinctions or describes recovery after the other three; the count 5 is the order's",
+          "claim": "five events; recovery after each"
+        }
+      ]
+    },
+    {
+      "line": "chemotrophic systems without sunlight (e.g. Movile Cave, deep vents)",
+      "evidence": [
+        {
+          "source": "S1",
+          "quote": "Movile Cave (SE Romania) is a chemoautotrophically-based ecosystem fed by hydrogen sulfide-rich groundwater serving as a primary energy source analogous to the deep-sea hydrothermal ecosystems."
+        },
+        {
+          "source": "S1",
+          "quote": "The Movile Cave (SE Romania) was the first to be mentioned as defying the conventional view of subterranean ecosystems as supported by aboveground photosynthesis."
+        },
+        {
+          "source": "S1",
+          "quote": "The most studied chemoautotrophically-based ecosystems are deep-sea hydrothermal vents and cold seeps",
+          "reads": "deep vents named as chemoautotrophically-based ecosystems, in the Movile Cave article. No article about a vent ecosystem was opened."
+        },
+        {
+          "source_state": "NOT OPENED",
+          "reason": "no primary source on a deep-sea vent ecosystem was opened",
+          "claim": "deep vents (primary source)"
+        }
+      ]
+    }
+  ],
+  "n": {
+    "value": 1,
+    "statement": "no second biosphere known",
+    "note": "sample size, not absence of result",
+    "stated_by": "owner's order",
+    "evidence": [
+      {
+        "source": "S4",
+        "quote": "However, from the perspective of the Solar System, Earth appears unique as the only planet known to support life."
+      }
+    ]
+  },
+  "claim": {
+    "status": "PROPOSED",
+    "statement": "biosphere = longest-running test of waste-cycling and gradient use; zero-sum outcomes = scope errors (council rule)",
+    "stated_by": "owner's order",
+    "note": "A claim, not a finding. No source above states it. It rests on n = 1."
+  },
+  "links": [
+    {
+      "rel": "connected_to",
+      "to": "COUNCIL",
+      "direction": "both",
+      "status": "PROPOSED",
+      "note": "the council / ai-arena rule: zero-sum outcomes are scope errors. COUNCIL exists only at validation/example/council.json and is not indexed. The rule's text and the name 'ai-arena' were not found in this repository (searched for 'arena', 'zero-sum', 'zero sum'); the link is recorded on the owner's order."
+    },
+    {
+      "rel": "connected_to",
+      "to": "STONE_LEDGER",
+      "direction": "both",
+      "status": "PROPOSED",
+      "note": "closure: an obligation is recorded until it completes"
+    },
+    {
+      "rel": "connected_to",
+      "to": "ANT",
+      "direction": "both",
+      "status": "PROPOSED",
+      "note": "link named by the owner's order; no reason is given there and none is added here"
+    }
+  ],
+  "links_note": "Both directions are written here. ontology/social/stone_art_ledger.json and ontology/social/ant_colony.json are not edited: scripts/build_index.py skips ontology/relational/ (it has no schema), so BIOSPHERE is not in the index and a link written into those files would point at an id the index does not hold.",
+  "sources": {
+    "S1": {
+      "citation": "Competition-cooperation in the chemoautotrophic ecosystem of Movile Cave: first metagenomic approach on sediments. Environmental Microbiome, 2022. PMC9386943",
+      "fetched_from": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9386943/fullTextXML",
+      "fetched": "2026-11-24",
+      "read": "full text (reference list excluded)",
+      "sha256_of_fetched_bytes": "9d82eec0000feba3d304335bf449449ac19d14232f34770ba2a2e04018f86af2"
+    },
+    "S2": {
+      "citation": "Replicating lipid micelles: a feasible precursor to the origin of life and the earliest appearance of genomes. Human Genomics, 2026. PMC13539710",
+      "fetched_from": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13539710/fullTextXML",
+      "fetched": "2026-11-24",
+      "read": "full text (reference list excluded)",
+      "sha256_of_fetched_bytes": "367fb93fde73882b1dd22cedced2a330e0f092fda54b7cd96a08d2debf5e8ade"
+    },
+    "S4": {
+      "citation": "Exo-Geoscience Perspectives Beyond Habitability. Space Science Reviews, 2026. PMC12804257",
+      "fetched_from": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12804257/fullTextXML",
+      "fetched": "2026-11-24",
+      "read": "full text (reference list excluded)",
+      "sha256_of_fetched_bytes": "194a4d59bf93161acd71f0be906ad65a3f488ec4d99976e70ed0fa66e45ffc5f"
+    },
+    "S5": {
+      "citation": "Mass extinction triggered the early radiations of jawed vertebrates and their jawless relatives (gnathostomes). Science Advances, 2026. PMC12787538",
+      "fetched_from": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12787538/fullTextXML",
+      "fetched": "2026-11-24",
+      "read": "full text (reference list excluded)",
+      "sha256_of_fetched_bytes": "67725052940265c1a3ae6bebe263cdffed4558cf7a4e8703313ef6f0c717e706"
+    }
+  },
+  "not_reachable": [
+    "en.wikipedia.org",
+    "science.nasa.gov",
+    "link.springer.com",
+    "www.ams.org"
+  ],
+  "metadata": {
+    "created": "2026-11-24",
+    "schema": "none: ontology/relational/ has no schema and is skipped by the build"
+  }
+}
