@@ -1,0 +1,203 @@
+{
+  "record": "known-answer fixtures",
+  "commit": "acb45252cc7f071e8633711442669a8cd441c194",
+  "counts": {
+    "PASS": 8,
+    "FAIL": 2,
+    "ERROR": 0,
+    "NOT_RUN": 0
+  },
+  "fixtures": [
+    {
+      "id": "F1",
+      "instrument": "verify.py",
+      "must_read": "unknown claim -> UNKNOWN, posterior null",
+      "state": "PASS",
+      "observed": {
+        "verdict": "UNKNOWN",
+        "posterior_probability": null,
+        "tests_passed": 0
+      }
+    },
+    {
+      "id": "F2",
+      "instrument": "verify.py",
+      "must_read": "one claim over 5 attributes -> evidence count 1",
+      "state": "PASS",
+      "observed": {
+        "evidence_count": 1,
+        "claim_calls": 1,
+        "posterior_5_attrs": 0.79,
+        "posterior_1_attr": 0.79
+      }
+    },
+    {
+      "id": "F3",
+      "instrument": "verify.py",
+      "must_read": "thin index entry -> full record loaded before checks",
+      "state": "FAIL",
+      "observed": {
+        "a_hydrated": "absent",
+        "a_tests_gathered": 0,
+        "a_evidence_count": 0,
+        "a_verdict": "NOT_TESTED",
+        "b_load_failures": "absent",
+        "b_evidence_count": 0,
+        "b_verdict": "NOT_TESTED"
+      }
+    },
+    {
+      "id": "F4",
+      "instrument": "falsifier.py",
+      "must_read": "no match -> NOT_TESTED; 0 tests -> no score",
+      "state": "PASS",
+      "observed": {
+        "a_outcomes": [
+          "NOT_TESTED"
+        ],
+        "a_survived": 0,
+        "a_resistance": null,
+        "b_counterexamples": 0,
+        "b_resistance": null
+      }
+    },
+    {
+      "id": "F5",
+      "instrument": "dependency_tree.py",
+      "must_read": "unresolved link reported, not dropped",
+      "state": "PASS",
+      "observed": {
+        "unresolved": [
+          {
+            "source": "A",
+            "target": "NOT_THERE",
+            "relation": "synergy"
+          }
+        ],
+        "children": [
+          [
+            "NOT_THERE",
+            "unresolved"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "F6",
+      "instrument": "audit.py",
+      "must_read": "load fails -> LOAD_FAILED, scoped_ratio null",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
+          }
+        ],
+        "total_entities": 1,
+        "scoped_ratio": null
+      }
+    },
+    {
+      "id": "F6a",
+      "instrument": "falsifier.py",
+      "must_read": "load fails -> LOAD_FAILED, no thin substitution",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
+          }
+        ],
+        "error": "LOAD_FAILED: entity file for GHOST could not be loaded; nothing was analysed.",
+        "analysed": false
+      }
+    },
+    {
+      "id": "F6c",
+      "instrument": "dependency_tree.py",
+      "must_read": "load fails -> LOAD_FAILED, not built from thin entry",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
+          }
+        ],
+        "start_entity": null,
+        "error": "LOAD_FAILED: entity file for GHOST could not be loaded; no t"
+      }
+    },
+    {
+      "id": "F7",
+      "instrument": "scope_checker/audit/grounding/goal",
+      "must_read": "same record -> same confidence in every instrument",
+      "state": "FAIL",
+      "observed": {
+        "scope_checker": {
+          "computed": [
+            0.544,
+            "absent: no confidence_record"
+          ],
+          "explicit": [
+            0.9,
+            "absent: no confidence_record"
+          ]
+        },
+        "grounding_inspector": {
+          "computed": [
+            null,
+            "absent: not reported"
+          ],
+          "explicit": [
+            null,
+            "absent: not reported"
+          ]
+        },
+        "audit": {
+          "computed": [
+            null,
+            "absent: buckets only {0.5: 1, 0.9: 1}"
+          ],
+          "explicit": [
+            null,
+            "absent: buckets only {0.5: 1, 0.9: 1}"
+          ]
+        },
+        "goal_refiner": {
+          "computed": [
+            0.544,
+            "absent: no basis"
+          ],
+          "explicit": [
+            0.9,
+            "absent: no basis"
+          ]
+        },
+        "audit_buckets": {
+          "0.5": 1,
+          "0.9": 1
+        }
+      }
+    },
+    {
+      "id": "F8",
+      "instrument": "scripts/build_index.py",
+      "must_read": "broken link -> exit 1 (one KNOWN_HELD link allowlisted)",
+      "state": "PASS",
+      "observed": {
+        "a_as_is_with_allowlist_exit": 0,
+        "b_extra_broken_link_exit": 1,
+        "c_no_allowlist_exit": 1
+      }
+    }
+  ]
+}
