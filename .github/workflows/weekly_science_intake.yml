@@ -11,6 +11,14 @@
 # intake_queries.json, save the raw bytes with sha256, filter and list candidates offline,
 # generate rule-based hypothesis stubs, and open a pull request for a person to review.
 # It never merges, never writes ontology/ or registry/, and fails loudly on any NOT_RUN.
+#
+# Note 2026-11-24 (first dispatched run, 45514015851): three changes from the audit copy.
+#  1. validation/fixtures/run_fixtures.py exits 1 on NOT_RUN, and fixture F6 is NOT_RUN without
+#     jsonschema; the runner has none. A step now installs it, as pipeline.sh already does.
+#  2. upload-artifact ran with an empty path when the fetch step was skipped; it is now guarded.
+#  3. The repo setting blocks Actions from opening pull requests. If `gh pr create` fails, the
+#     step now opens an issue linking the pushed branch instead, so a person still reviews and
+#     merges. The branch is pushed either way. Nothing here merges.
 name: weekly-science-intake
 
 on:
@@ -24,6 +32,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 concurrency:
   group: weekly-science-intake
@@ -43,6 +52,11 @@ jobs:
 
       - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
+
+      # The repository's own validator (scripts/build_index.py, fixture F6) needs jsonschema,
+      # the same dependency pipeline.sh installs.
+      - name: Install jsonschema
+        run: python3 -m pip install --quiet jsonschema
 
       # Offline instruments first. Any failure stops the run before the network is used.
       - name: Self-tests (offline)
@@ -80,7 +94,7 @@ jobs:
           cmp "$OUT/intake.md" /tmp/replay/intake.md
 
       - uses: actions/upload-artifact@v7
-        if: always()
+        if: always() && steps.run.outputs.out != ''
         with:
           name: intake-${{ steps.run.outputs.until }}
           path: ${{ steps.run.outputs.out }}
@@ -102,6 +116,7 @@ jobs:
       - name: Open a pull request for review (never merged by this workflow)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
           OUT="${{ steps.run.outputs.out }}"; UNTIL="${{ steps.run.outputs.until }}"
@@ -112,9 +127,19 @@ jobs:
           git add "$OUT"
           git commit -m "intake: weekly candidates to $UNTIL (PROPOSED, unreviewed)"
           git push origin "$BR"
-          gh pr create --base main --head "$BR" \
-            --title "Weekly science intake to $UNTIL (PROPOSED, unreviewed)" \
-            --body-file "$OUT/intake.md" --label intake || \
-          gh pr create --base main --head "$BR" \
-            --title "Weekly science intake to $UNTIL (PROPOSED, unreviewed)" \
-            --body-file "$OUT/intake.md"
+          TITLE="Weekly science intake to $UNTIL (PROPOSED, unreviewed)"
+          if gh pr create --base main --head "$BR" --title "$TITLE" --body-file "$OUT/intake.md" --label intake \
+             || gh pr create --base main --head "$BR" --title "$TITLE" --body-file "$OUT/intake.md"; then
+            exit 0
+          fi
+          echo "::warning::pull request creation refused (repo setting); opening an issue that links the branch"
+          {
+            echo "Branch \`$BR\` was pushed; Actions is not permitted to open pull requests in this repository."
+            echo "Open the pull request by hand to review: https://github.com/$REPO/compare/main...$BR"
+            echo
+            echo "Nothing has been merged. Everything below is PROPOSED and unreviewed."
+            echo
+            cat "$OUT/intake.md"
+          } > /tmp/issue_body.md
+          gh issue create --title "$TITLE" --body-file /tmp/issue_body.md --label intake \
+            || gh issue create --title "$TITLE" --body-file /tmp/issue_body.md
