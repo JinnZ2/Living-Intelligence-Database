@@ -95,3 +95,5 @@ Context: the audit built a D0–D5 dependency stack from the owner's answer with
 **Data sources:** `audit/2026-11-24/kimi_2026-11-25/` (proposed schemas and readings); `reference/reference_trace_BE_hex_v0.3.json`
 
 **Falsifier:** if a history field can be added to the proposed schema and all 28 of Kimi's checks still pass, the second half of this gap closes.
+
+**Dated note, 2026-11-24 (#6, second half):** Kimi submitted a revised `reference_trace.schema.json`, stored unedited in `kimi_2026-11-25_rev1/`; the original is unchanged. The only change is an optional `status_history` on nodes (OBSERVED by diff). The falsifier was met: v0.1, v0.2 and v0.3 all validate, and Kimi's suite, run with the revised schema, still passes 28/28 (OBSERVED). The schema half of this gap is therefore closed. The ingest half stays open: nothing reads the readings file yet.

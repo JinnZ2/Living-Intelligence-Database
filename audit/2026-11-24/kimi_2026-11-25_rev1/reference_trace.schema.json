@@ -1,0 +1,627 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "reference_trace.schema.json",
+  "title": "reference trace file",
+  "description": "One known-answer dependency trace for one attribute of one entity (e.g. reference/reference_trace_BE_hex_v0.2.json). Layers run D0_law (governing law) to D5_pattern (the recorded attribute). Cross-field and cross-item invariants that JSON Schema draft-07 cannot express are enforced by reference/trace_check.py and documented on the fields they govern: dangling depends_on targets, paths from the D5 root to D0, cycle parent existence, and the nesting invariant parent.period_s > child.period_s. Style follows schemas/provenance_step.schema.json: closed objects, explicit required lists, hash strings as full lowercase sha256 hex.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record",
+    "version",
+    "date",
+    "status",
+    "baseline_commit",
+    "subject",
+    "rule",
+    "nodes",
+    "cycles"
+  ],
+  "definitions": {
+    "node_status": {
+      "enum": [
+        "TRACED",
+        "DERIVED",
+        "PROPOSED",
+        "UNKNOWN",
+        "CONTESTED",
+        "RECORDED_UNVERIFIED"
+      ],
+      "description": "Trace vocabulary. TRACED: sourced to a named work. DERIVED: computed from TRACED inputs. CONTESTED: sources disagree; all accounts are kept. PROPOSED / RECORDED_UNVERIFIED / UNKNOWN carry no confidence. TRACED, DERIVED and CONTESTED require a non-empty source list (enforced below by if/then). NOTE: cycles use a different status vocabulary (see the cycle definition); unifying the two vocabularies is open work."
+    },
+    "layer": {
+      "enum": [
+        "D0_law",
+        "D1_energy",
+        "D2_condition",
+        "D3_material",
+        "D4_entity",
+        "D5_pattern"
+      ]
+    },
+    "role": {
+      "enum": [
+        "governing_law",
+        "energy_source",
+        "information_source",
+        "boundary_condition",
+        "material",
+        "entity",
+        "pattern",
+        "regime",
+        "transformation",
+        "conversion_bound"
+      ]
+    },
+    "deviation": {
+      "description": "Deviation within scope. String form is the current prose form (e.g. '\u00b10.01 (prose in measurement_limits)'). Object form is the structured upgrade proposed in the translation-loss ledger (L05 + GUM map): {value, kind, asymmetric?}. See translation_loss_blocks.schema.json for the full confidence record this field upgrades into.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "kind"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            "kind": {
+              "enum": [
+                "standard",
+                "expanded",
+                "range",
+                "percent"
+              ]
+            },
+            "asymmetric": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "required": [
+                "lower",
+                "upper"
+              ],
+              "properties": {
+                "lower": {
+                  "type": "number"
+                },
+                "upper": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "cycle": {
+      "description": "One named cycle. Byte-identical to definitions.cycle in cycle_registry.schema.json; the validation suite asserts the two definitions stay equal so they cannot drift silently. Nesting invariant: when both parent and child carry period_s, parent.period_s / child.period_s must be > 1 (trace_check.py NESTING_VIOLATION); the log10 of that ratio is the timescale-separation ladder. Expressible only per-pair, so it is checker-enforced, not schema-enforced.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "kind",
+        "context",
+        "period_text",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CY_[A-Z0-9_]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Every cycle is named (owner rule, ledger v0.3): sleep, circadian, seasonal, compute. A bare word 'cycle' is not a name."
+        },
+        "kind": {
+          "enum": [
+            "oscillation",
+            "developmental_cycle",
+            "developmental_window",
+            "life_cycle",
+            "production_cycle",
+            "seasonal_cycle",
+            "seasonal_window",
+            "superposition",
+            "transient_within_cycle"
+          ],
+          "description": "keeps oscillation, developmental window, production cycle and a transient inside a cycle apart without ranking them. Extending this enum is backward compatible; removing a value is not."
+        },
+        "period_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "description": "Period in seconds. Null or absent when unsourced (trace_check.py CYCLE_NO_PERIOD is informational, not an error)."
+        },
+        "period_text": {
+          "type": "string",
+          "description": "The period as recorded, with uncertainty and sample size where known (e.g. '\u2248230 Hz (229.8 \u00b1 11.0 Hz, n=4, hovering)')."
+        },
+        "context": {
+          "type": "string",
+          "description": "The conditions the period holds under: a cycle is a cycle of whatever is in context."
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Id of the enclosing slower cycle, or null/absent at the top of the nesting. Must name an existing cycle (trace_check.py CYCLE_DANGLING_PARENT)."
+        },
+        "source": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "Source strings or URLs. Null marks an explicitly unsourced cycle (observed on PROPOSED_UNSOURCED); when present the list is non-empty. TRACED requires a non-empty list (if/then below; trace_check.py CYCLE_NO_SOURCE)."
+        },
+        "status": {
+          "enum": [
+            "TRACED",
+            "PROPOSED_UNSOURCED",
+            "UNKNOWN"
+          ],
+          "description": "Cycle vocabulary as observed in v0.1/v0.2. Diverges from the node vocabulary (PROPOSED_UNSOURCED vs PROPOSED); flagged for unification. TRACED requires source (if/then below; trace_check.py CYCLE_NO_SOURCE)."
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "TRACED"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "source"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "properties": {
+    "record": {
+      "type": "string",
+      "description": "Record name, e.g. REFERENCE_TRACE_BE_HEXAGONAL_CELL."
+    },
+    "version": {
+      "type": "string",
+      "description": "Record version, e.g. '0.2'. Prior versions stay on disk unchanged (append-only convention)."
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "TRACED",
+        "SUPERSEDED"
+      ],
+      "description": "Document lifecycle. PROPOSED: under review. TRACED: accepted as a known-answer reference. SUPERSEDED: replaced by a newer version; the supersedes_note of the successor names this file."
+    },
+    "baseline_commit": {
+      "type": "string",
+      "pattern": "^([0-9a-f]{40}|[0-9a-f]{64})$",
+      "description": "Git commit hash of the repository baseline the trace was built against (v0.2: 63d93c00951b14ed7352891747468c9b65cca146). 40 hex chars for a SHA-1 commit, 64 if the repository moves to SHA-256. Not to be confused with the sha256 step and source ids, which are always 64 hex."
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity",
+        "attribute"
+      ],
+      "properties": {
+        "entity": {
+          "type": "string",
+          "description": "Entity id in the repository, e.g. BE."
+        },
+        "attribute": {
+          "type": "string",
+          "description": "Attribute name on that entity, e.g. hexagonal_cell_efficiency."
+        }
+      }
+    },
+    "rule": {
+      "type": "string",
+      "description": "The one-line reading rule the trace was built under, kept verbatim."
+    },
+    "supersedes_note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Names the prior version this record replaces (PROV-O wasRevisionOf). The prior file stays unchanged beside this one."
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "layer",
+          "role",
+          "claim",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "layer": {
+            "$ref": "#/definitions/layer"
+          },
+          "role": {
+            "$ref": "#/definitions/role"
+          },
+          "claim": {
+            "type": "string",
+            "description": "What the node asserts, in prose. Where the node carries a repo value, the claim quotes it verbatim."
+          },
+          "status": {
+            "$ref": "#/definitions/node_status"
+          },
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "y"
+            ],
+            "properties": {
+              "y": {
+                "description": "Best estimate. Number, string or list as recorded; never coerced."
+              },
+              "deviation": {
+                "$ref": "#/definitions/deviation"
+              },
+              "unit": {
+                "type": "string"
+              },
+              "regime": {
+                "type": "string",
+                "description": "Regime the value holds under, when stated inline."
+              }
+            }
+          },
+          "source": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "Source strings or URLs. Required when status is TRACED, DERIVED or CONTESTED (if/then below; trace_check.py NO_SOURCE)."
+          },
+          "note": {
+            "type": "string",
+            "description": "Free note. Notes containing '*_MISMATCH' or 'GAP' are surfaced by trace_check.py as NOTED_MISMATCH / GAP findings; the words are load-bearing."
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true,
+            "description": "Ids of nodes this node depends on. Every id must exist in nodes (trace_check.py DANGLING_DEP). Untyped strings today; the typed dependency record {target, layer, role, required_in_regime, equation_ref, status, source} proposed in the ledger is the v0.3 upgrade path."
+          },
+          "repo_entity": {
+            "type": "string",
+            "description": "Repository entity this node corresponds to, when one exists."
+          },
+          "regime": {
+            "type": "object",
+            "minProperties": 1,
+            "description": "Free-form regime descriptor (bounds, variable lists, outside-scope rule). Shapes vary by node; closed sub-schemas come with the regime block proposal (ledger L03)."
+          },
+          "links_repo": {
+            "type": "string",
+            "description": "Repo attribute or candidate entities this node binds to, as prose."
+          },
+          "status_history": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Dated record of prior statuses; append-only, newest state stays in `status`. Corrections are added, never overwritten.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "version",
+                "status"
+              ],
+              "properties": {
+                "version": {
+                  "type": "string"
+                },
+                "status": {
+                  "$ref": "#/definitions/node_status"
+                }
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "TRACED",
+                    "DERIVED",
+                    "CONTESTED"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "source"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "cycles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/cycle"
+      },
+      "description": "The named cycles the trace touches, fastest to slowest. The standalone registry form of this array validates against cycle_registry.schema.json."
+    },
+    "environment_differential": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question",
+        "regimes",
+        "invariant_nodes",
+        "unknown_dependence",
+        "variant_nodes",
+        "sensitivities"
+      ],
+      "description": "v0.2 section: one question, two or more named regimes, and what is invariant, variant, or unknown between them.",
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "regimes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "uniqueItems": true,
+          "description": "Regime names (e.g. MANUKA, WILDFLOWER). Every variant_nodes entry must carry a key for each regime; trace_check.py enforces (DIFF_REGIME_MISSING). Schema-side, regime columns are string-valued additional properties on the variant node."
+        },
+        "invariant_nodes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "node id -> why it does not depend on the regime. Keys must exist in nodes (trace_check.py DIFF_UNKNOWN_NODE)."
+        },
+        "unknown_dependence": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "node id -> what is not known about its regime dependence. Keys must exist in nodes."
+        },
+        "variant_nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "node",
+              "status",
+              "source"
+            ],
+            "properties": {
+              "node": {
+                "type": "string",
+                "description": "Node id, or a named quantity not (yet) a node."
+              },
+              "status": {
+                "enum": [
+                  "TRACED",
+                  "PARTIAL",
+                  "PROPOSED",
+                  "UNKNOWN"
+                ],
+                "description": "TRACED: all regime columns sourced. PARTIAL: some regimes sourced, others open."
+              },
+              "source": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "shared_observation": {
+                "type": "string"
+              },
+              "implication": {
+                "type": "string"
+              },
+              "unit": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": {
+              "type": "string",
+              "description": "Regime columns: one key per entry in regimes, value the quantity or observation under that regime."
+            }
+          }
+        },
+        "sensitivities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "of",
+              "to",
+              "sign",
+              "magnitude",
+              "scope",
+              "source",
+              "status"
+            ],
+            "properties": {
+              "of": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "sign": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Signed direction within scope: '+', '-', or an explicit non-sign statement (e.g. 'GENOTYPE-DEPENDENT', 'NONE (variance share, not a direction)'). A local sign is not a global importance ranking; scope is mandatory so the sign cannot be read out of regime."
+              },
+              "magnitude": {
+                "type": "string",
+                "description": "Magnitude as recorded, with the study's own numbers."
+              },
+              "scope": {
+                "type": "string",
+                "description": "Conditions the sign and magnitude hold under. A sensitivity without scope is rejected (trace_check.py SENSITIVITY_INCOMPLETE)."
+              },
+              "source": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "status": {
+                "enum": [
+                  "TRACED",
+                  "PROPOSED",
+                  "UNKNOWN"
+                ]
+              },
+              "implication": {
+                "type": "string"
+              },
+              "cycle_link": {
+                "type": "string",
+                "description": "Id of the cycle this sensitivity runs on, when known."
+              }
+            }
+          }
+        },
+        "scope_dependent_divergence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "claim_a",
+            "source_a",
+            "claim_b",
+            "source_b",
+            "classification"
+          ],
+          "properties": {
+            "claim_a": {
+              "type": "string"
+            },
+            "source_a": {
+              "type": "string"
+            },
+            "claim_b": {
+              "type": "string"
+            },
+            "source_b": {
+              "type": "string"
+            },
+            "classification": {
+              "type": "string",
+              "description": "Why the two claims do or do not contradict once each is read inside its own scope. Both are kept; neither is smoothed over."
+            }
+          }
+        },
+        "classification_scheme": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Named category boundaries for the differential (e.g. DHA:Tsugar low/moderate/high), with source and note as string values."
+        }
+      }
+    },
+    "repo_bindings": {
+      "type": "array",
+      "description": "v0.2 section: binds repository dependency strings (scope.dependencies on the entity attribute) to trace nodes and cycles. Targets must exist in nodes or cycles (trace_check.py BINDING_TARGET_MISSING); strings are compared verbatim against the repo file (BINDING_STRING_NOT_IN_REPO).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "attribute",
+          "repo_dependency",
+          "binds_to",
+          "status"
+        ],
+        "properties": {
+          "attribute": {
+            "type": "string",
+            "description": "Attribute on the subject entity whose scope.dependencies holds the string."
+          },
+          "repo_dependency": {
+            "type": "string",
+            "description": "The dependency string exactly as it appears in the repository file."
+          },
+          "binds_to": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Node or cycle ids this string binds to. Empty means unbound so far."
+          },
+          "status": {
+            "enum": [
+              "PROPOSED",
+              "UNCHECKED",
+              "UNKNOWN",
+              "TRACED"
+            ],
+            "description": "PROPOSED: binding claimed, not yet compared. UNCHECKED: comparison not run. UNKNOWN: repo file unavailable to the checker. TRACED: string found verbatim in the named attribute's scope.dependencies."
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
