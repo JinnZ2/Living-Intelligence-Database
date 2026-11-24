@@ -2,7 +2,7 @@
  "note": "blind/package/ is handed over as is. expected.jsonl and this manifest stay out of it. package/lid_reference.jsonl differs from reference/lid_reference.jsonl in exactly one field (named in expected.jsonl); do not use the package copy as the reference.",
  "built_from": {
   "reference_sha256": "cdc16a4f9908d6ee4e77b6a322fc33f0c2a0809f88cd952fb62759bd3e1ba9cd",
-  "declared_commit": "7ce237c2beb1ca01b96f29df28c144aded91222c"
+  "declared_commit": "d7ec727dd905f3bb09b08b137aa379d75f4b4fc7"
  },
  "package": {
   "READING_PROTOCOL.md": {

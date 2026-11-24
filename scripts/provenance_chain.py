@@ -116,7 +116,8 @@ def source_entry(s):
     read from the string's own bracket note; absent a note, false and null."""
     m = _READ.search(s)
     return {"id": source_id(s), "string": s, "same_as": None,
-            "opened": m.group(1) if m else False, "fetched": m.group(2) if m else None}
+            "opened": m.group(1) if m else False, "fetched": m.group(2) if m else None,
+            "existence": None}
 
 
 _KEY = re.compile(r"^\W*([^\W\d_]+)[^()]*?\(?((?:1[5-9]|20)\d{2})\b")
@@ -330,7 +331,9 @@ def build(root=ROOT, quiet=False):
     dump(root / "registry" / "sources.json",
          {"note": "One entry per exact source string. id = sha256 of the string as UTF-8. "
                   "Two spellings of one work are two entries; nothing is merged and same_as is null. "
-                  "opened and fetched are read from the string's own bracket note.",
+                  "opened and fetched are read from the string's own bracket note. "
+                  "existence is null when not checked, else the result of scripts/existence_check.py; "
+                  "no string is edited.",
           "sources": sorted(src_reg.values(), key=lambda e: e["id"])})
     ass_file["note"] = ("One entry per assumption. id = 'A-' + first 12 hex of sha256(statement). "
                         "A revision is a new entry with supersedes; old entries stay.")

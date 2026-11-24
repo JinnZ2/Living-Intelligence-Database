@@ -1,0 +1,1587 @@
+{
+ "date": "2026-11-24",
+ "status": "HASHES_ONLY_SPECIMENS_NOT_COMMITTED",
+ "kept_in_repository": false,
+ "provenance_note": "Responses of NCBI esearch and esummary (db=pubmed) received by scripts/existence_check.py. Bibliographic summary records only; no abstract and no full text was fetched. Hashes identify the received bytes; they do not authenticate the source.",
+ "requests": 166,
+ "distinct_responses": 160,
+ "files": [
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Deneubourg[au] AND 1990[pdat] AND self[tiab] AND reinforcing[tiab] AND trail[tiab] AND formation[tiab]"
+   },
+   "bytes": 451,
+   "sha256": "a48516e0737959785a16e4bbe6ac31480d258c4bd8621becaf8212dbfdc4f2ec"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Pratt[au] AND 2002[pdat] AND nest[tiab] AND emigration[tiab] AND studies[tiab]"
+   },
+   "bytes": 413,
+   "sha256": "9243dc06e7da4f04524119e5f793ebaf7f8ff618ccd9194ef8945cee2b17f11f"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Gordon[au] AND 1999[pdat] AND long[tiab] AND term[tiab] AND pogonomyrmex[tiab] AND colony[tiab]"
+   },
+   "bytes": 444,
+   "sha256": "bbbeb3cb4870f85686b176c38401afd2140cf7e9f6e87f7f86b08a12c988366b"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hales[au] AND 1999[pdat] AND proof[ti] AND honeycomb[ti] AND conjecture[ti]"
+   },
+   "bytes": 389,
+   "sha256": "01b44b3b0a77a8a8ca48d49a98ee66c69b470d6a19e68e81e95bee442d70674a"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hales[au] AND proof[ti] AND honeycomb[ti] AND conjecture[ti]"
+   },
+   "bytes": 343,
+   "sha256": "13c5a4dfb4ef51764f557e617454fdbc10e61b10351c68bb1f0fbe452c268119"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "proof[ti] AND honeycomb[ti] AND conjecture[ti]"
+   },
+   "bytes": 325,
+   "sha256": "023779ea2ea5abbc10852dcedce4780229490697366e0ac5c8eabb4e1d4c99ee"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Frisch[au] AND 1967[pdat] AND dance[ti] AND language[ti] AND orientation[ti] AND bees[ti]"
+   },
+   "bytes": 410,
+   "sha256": "88d390643df7776fd9d1eff234323c901a18e4808f46429ee7f92c221b3095a2"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Frisch[au] AND dance[ti] AND language[ti] AND orientation[ti] AND bees[ti]"
+   },
+   "bytes": 364,
+   "sha256": "2e87aaa56579ae57b33e70f0dc00088344e8875ee4060a602c2c91cc3396bdac"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "dance[ti] AND language[ti] AND orientation[ti] AND bees[ti]"
+   },
+   "bytes": 345,
+   "sha256": "2854f2c019ae5f00107216c131eebc4237a34ff83bce44a71997f9e825714bf0"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Seeley[au] AND 1995[pdat] AND wisdom[ti] AND hive[ti]"
+   },
+   "bytes": 360,
+   "sha256": "4e6b6d370c66d4ca773ba545fed498129f446ab98314e3dc334665ad7d3c0aab"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Seeley[au] AND wisdom[ti] AND hive[ti]"
+   },
+   "bytes": 314,
+   "sha256": "98c3258bac64147fee2d63b0a36d73d5593111d0a2e1ae5bd002c1dfe509588a"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "wisdom[ti] AND hive[ti]"
+   },
+   "bytes": 295,
+   "sha256": "40ee037fd0e413fa6d3c5a74326e4b7c505d93a3878cb6fe0d78dfa822b33e81"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Seeley[au] AND 2010[pdat] AND honeybee[ti] AND democracy[ti]"
+   },
+   "bytes": 367,
+   "sha256": "f68f53037933e6db9a80b7fb0d2cdc11b1ea7622f8be6b921031cce493e9d37a"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Seeley[au] AND honeybee[ti] AND democracy[ti]"
+   },
+   "bytes": 321,
+   "sha256": "d12c73208bea6870609470ef987b90ce30d3c35058b5878aa7cea2f24d10a8f9"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "honeybee[ti] AND democracy[ti]"
+   },
+   "bytes": 302,
+   "sha256": "f66657aad4381ac3acabb109d6ac8515828165d46c3dc122f831d4423057ca0f"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hales[au] AND 1999[pdat] AND honeycomb[ti] AND conjecture[ti]"
+   },
+   "bytes": 368,
+   "sha256": "95ab3b8bf3fc173f602dcbad440d95a21da44e9fae3d340283d4a223c2f0bfc7"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hales[au] AND honeycomb[ti] AND conjecture[ti]"
+   },
+   "bytes": 322,
+   "sha256": "e22dd69726e7ea9f12ea14a6b7c5a7d59b79a9da9810f91988a8d7d57860481e"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "honeycomb[ti] AND conjecture[ti]"
+   },
+   "bytes": 304,
+   "sha256": "ba096d496572b5ae32f3d55727266975a22db3b4961e8f2453308f7fcc04cce9"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Thompson[au] AND 1917[pdat] AND growth[ti] AND form[ti]"
+   },
+   "bytes": 362,
+   "sha256": "80cc20e7f81bb630832945c4be9253a825a1a3381b1f7141ae5b09b613250ac9"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Thompson[au] AND growth[ti] AND form[ti]"
+   },
+   "bytes": 256,
+   "sha256": "c35cbb6f36c6b541a423a258615a91b9e74f52558d029f1504246607e5f81032"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "11104810,9199352,1608453,3579930"
+   },
+   "bytes": 7882,
+   "sha256": "f5db02a8f4b82e613141be5b9097a7ee00adf9a11759f76aa7f154d8d603ecb3"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "growth[ti] AND form[ti]"
+   },
+   "bytes": 252,
+   "sha256": "17adb2bf1c772a76f350d4301486d142fd580f15dcaa38090e19fb6c2a5f9c70"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "42987128,42978669,42890704,42845742,42776148"
+   },
+   "bytes": 10731,
+   "sha256": "cf55ad1bc5488c25bb19e3cc35eebd3c6df0a8f96a2e3bd05fbf51f8306516ae"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Dyer[au] AND 2002[pdat] AND biology[ti] AND dance[ti] AND language[ti]"
+   },
+   "bytes": 294,
+   "sha256": "74d393e1c6235e6ae4ced7da513517404a43fa0ca5da29287acf6bf7e747d3fe"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "11729095"
+   },
+   "bytes": 1450,
+   "sha256": "311d737f7684048904a80a985977a0e7f4f6e05eaf54961a98a354e9bfacdae9"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Seeley[au] AND 2004[pdat] AND group[ti] AND decision[ti] AND making[ti] AND nest[ti] AND site[ti] AND selection[ti] AND honey[ti] AND bees[ti]"
+   },
+   "bytes": 491,
+   "sha256": "ca737e1dd5b1c4770625ef0a9cc3cc274c0c5211069aa1bb94563314937e4be3"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Seeley[au] AND group[ti] AND decision[ti] AND making[ti] AND nest[ti] AND site[ti] AND selection[ti] AND honey[ti] AND bees[ti]"
+   },
+   "bytes": 445,
+   "sha256": "380d00617f22b10bb04a655d79278da19404b5a6230cf213746e7120fd124d5a"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "group[ti] AND decision[ti] AND making[ti] AND nest[ti] AND site[ti] AND selection[ti] AND honey[ti] AND bees[ti]"
+   },
+   "bytes": 426,
+   "sha256": "77c2b3b403d982619033c9f32466a1912e0df61426493530e7443baed004c40b"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Fahrenholz[au] AND 1989[pdat] AND thermal[ti] AND analysis[ti] AND honey[ti] AND colony[ti]"
+   },
+   "bytes": 412,
+   "sha256": "569a2e45462f25fb31418c7fcd6dfb3666a7585992e1143ad0b7704883d57ad7"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Fahrenholz[au] AND thermal[ti] AND analysis[ti] AND honey[ti] AND colony[ti]"
+   },
+   "bytes": 366,
+   "sha256": "b8b07da162ce44fd092b4253367940decd45ec4fd51e4f6a228d444bcfc0e5d8"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "thermal[ti] AND analysis[ti] AND honey[ti] AND colony[ti]"
+   },
+   "bytes": 343,
+   "sha256": "9044aa7c92b9c60ba5a878b773709d54520b9fa75f3d9528b501370ebaa7087e"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Stabentheiner[au] AND 2010[pdat] AND metabolic[tiab] AND rate[tiab] AND thermoregulating[tiab] AND clusters[tiab]"
+   },
+   "bytes": 462,
+   "sha256": "f59b0363db18eb7d3f99912e3bc1b3a05a1da39b4b9f8dcad935c836b3fc979c"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Noad[au] AND 2000[pdat] AND pacific[tiab] AND ocean[tiab] AND song[tiab] AND transmission[tiab]"
+   },
+   "bytes": 444,
+   "sha256": "4b587b9b4b8f94c1ef3f007d68296044df9cf363bde93d7f7ba526ba49a79e4b"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Garland[au] AND 2011[pdat] AND cultural[tiab] AND evolution[tiab] AND song[tiab]"
+   },
+   "bytes": 415,
+   "sha256": "22cff9e386d7b36190be6f7ca6ec8e464a9c45d130836421f703e46873bf689e"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Wiley[au] AND 2011[pdat] AND gulf[tiab] AND maine[tiab] AND bubble[tiab] AND studies[tiab]"
+   },
+   "bytes": 439,
+   "sha256": "fb9385fc6e42400a4dbf66721e78b2b6cefbadad5cd94af5008319057001a22d"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Mech[au] AND 2003[pdat] AND yellowstone[tiab] AND reintroduction[tiab] AND data[tiab]"
+   },
+   "bytes": 420,
+   "sha256": "3f1f394db1d1862753ffb592290e07e4a689319f9e74f17f449a0d3c0e2cb497"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Sumbre[au] AND 2001[pdat] AND control[ti] AND octopus[ti] AND extension[ti] AND peripheral[ti] AND motor[ti] AND program[ti]"
+   },
+   "bytes": 369,
+   "sha256": "933e82973233cb2b9546c5e971e675c08b7aabbb926d9ccb34f4c31d77c8de15"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "11546877"
+   },
+   "bytes": 1721,
+   "sha256": "06787e04d6973ef4a769999a771c480d91f7b48295fac705383e0121e4837279"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hochner[au] AND 2006[pdat] AND unified[ti] AND view[ti] AND animal[ti] AND body[ti] AND movements[ti]"
+   },
+   "bytes": 429,
+   "sha256": "415e0c92fde277f7087e7aa3bd813be3a9cc803266663afbef355d4ac528668b"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hochner[au] AND unified[ti] AND view[ti] AND animal[ti] AND body[ti] AND movements[ti]"
+   },
+   "bytes": 383,
+   "sha256": "5d92c82bf0141f1f20adfd193f124b87c7743bd6dc6a639e80a361ad0177e314"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "unified[ti] AND view[ti] AND animal[ti] AND body[ti] AND movements[ti]"
+   },
+   "bytes": 363,
+   "sha256": "68aba8bee67541ce201d38a768ca6ac8d66de5f28da0ec42b27093eb4163cffb"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Packard[au] AND 1971[pdat] AND body[ti] AND patterns[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 410,
+   "sha256": "e028fd8cc74c0f7e7e12593cb0c9a74347d2401f643ce1375d4957c3e2c03acc"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Packard[au] AND body[ti] AND patterns[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 364,
+   "sha256": "8eab742a08ac0b3018a27abda92a65f532955a43b6d5eb7846920333f1186f2a"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "body[ti] AND patterns[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 344,
+   "sha256": "4755d9cd29a23fe391b9523424c70a8f0546f3676c173bfd4edcf8ddf31751e3"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Langridge[au] AND 2009[pdat] AND chromatophore[tiab] AND response[tiab] AND timing[tiab] AND studies[tiab]"
+   },
+   "bytes": 455,
+   "sha256": "103fe6250afec042b5cb2e685d2fcf06ec8c5ac8437c973f34e168317e13b841"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hanlon[au] AND 2018[pdat] AND cephalopod[ti] AND behaviour[ti]"
+   },
+   "bytes": 369,
+   "sha256": "b1394c3991ea44031633c7fd101c85ba4e2afc742bf361b12623f915e5d43428"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hanlon[au] AND cephalopod[ti] AND behaviour[ti]"
+   },
+   "bytes": 323,
+   "sha256": "f39052e0952eb1ddb8361fbddf711fa8cb2e19b59992994c473d7a3d83e68b9c"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "cephalopod[ti] AND behaviour[ti]"
+   },
+   "bytes": 236,
+   "sha256": "c831a35b16233e54a09c4a429c68eecfe96d406794664c2d9c134d81cbbaaba8"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "37875088,25093557,24880797"
+   },
+   "bytes": 5407,
+   "sha256": "1463aaf2689ca9a40174111c1439a5479220425e962b6e3f98d8c2f1d1034694"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Sumbre[au] AND 2001[pdat] AND octopus[ti] AND shows[ti] AND controlled[ti] AND coordination[ti] AND despite[ti] AND decentralized[ti] AND neural[ti] AND design[ti]"
+   },
+   "bytes": 483,
+   "sha256": "629b647346dbc0a38bc5f7efea192233ec88c5fcd6ff0c5a8b32a863c4170f7e"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Sumbre[au] AND octopus[ti] AND shows[ti] AND controlled[ti] AND coordination[ti] AND despite[ti] AND decentralized[ti] AND neural[ti] AND design[ti]"
+   },
+   "bytes": 468,
+   "sha256": "75c46bcdf015defa43bc29c11ee9be292e1ce53245c4ec9f25beedf8738b11a7"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "octopus[ti] AND shows[ti] AND controlled[ti] AND coordination[ti] AND despite[ti] AND decentralized[ti] AND neural[ti] AND design[ti]"
+   },
+   "bytes": 453,
+   "sha256": "a5d7133a2c5c64c4c11bebf647bfd36609408fea3863f59cf8b4b803aa384351"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hochner[au] AND 2012[pdat] AND almost[ti] AND infinite[ti] AND behavioral[ti] AND repertoire[ti]"
+   },
+   "bytes": 417,
+   "sha256": "6c3eb0ab8c3cbfb7b3b9ed65fefd8542e5cb1d51427a768c17af3bf85f014f0e"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hochner[au] AND almost[ti] AND infinite[ti] AND behavioral[ti] AND repertoire[ti]"
+   },
+   "bytes": 402,
+   "sha256": "c5bb3afdde23e44789876401d6321c3e6c4b491e8c84008c4660265fe871f0dc"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "almost[ti] AND infinite[ti] AND behavioral[ti] AND repertoire[ti]"
+   },
+   "bytes": 386,
+   "sha256": "959537ef2b9bbc0638db76f162ea3564d889c3b52ba03b4833c70e733287b692"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Mäthger[au] AND 2008[pdat] AND evidence[ti] AND distributed[ti] AND light[ti] AND sensing[ti] AND skin[ti] AND cuttlefish[ti]"
+   },
+   "bytes": 460,
+   "sha256": "5869145417acf724968ac3905ebd463f1e42b0305ff041e288f4f6ef820be9a5"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Mäthger[au] AND evidence[ti] AND distributed[ti] AND light[ti] AND sensing[ti] AND skin[ti] AND cuttlefish[ti]"
+   },
+   "bytes": 324,
+   "sha256": "a14d5db2617494610c8e097ba382db2390e685cab552865759f77b243dd406b2"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "20392722"
+   },
+   "bytes": 1826,
+   "sha256": "68c90821ebedc31eb9be12a1e8aaa0f176b63014a1a6afae5f9191096800e10a"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hanlon[au] AND 2009[pdat] AND dynamic[tiab] AND camouflage[tiab]"
+   },
+   "bytes": 317,
+   "sha256": "93b2a56ca6bbabb9d32d5de6164822537d9b675a80670d1fe744dbf59807dc89"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Fossati[au] AND 2011[pdat] AND neural[ti] AND regeneration[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 416,
+   "sha256": "9eab4e51a5e93520f043920032c6c1fc9f4d3738cd50bc79c8f61a1ecee6a9ed"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Fossati[au] AND neural[ti] AND regeneration[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 370,
+   "sha256": "24775a806d6a773e46ec32195eb18341c900ffac5b666810faa5cdc506e81fe4"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "neural[ti] AND regeneration[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 350,
+   "sha256": "79fad05b79473af241a6c206831b118aa3644c2617a87cb07bf59e7f26bbe2bc"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Rohrbach[au] AND 2006[pdat] AND regeneration[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 395,
+   "sha256": "45ad99a8ee2d0efaa0fadfab84bbe9c3e9ac4b689ad062f16994ddd7ead8bfc6"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Rohrbach[au] AND regeneration[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 349,
+   "sha256": "41396c03183896db3275ffe78fbe673f7e4e78760507917ac91b2d1e32f27bf3"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "regeneration[ti] AND octopus[ti] AND vulgaris[ti]"
+   },
+   "bytes": 282,
+   "sha256": "e72954e1240a3b52635abebac7c96b0a6b35a26dd807abb02f5b46041dcc63dd"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "35186930,31527179,29643223,29523626,28425503"
+   },
+   "bytes": 10219,
+   "sha256": "db96916bd37e0bd6743e940d3f7be09ac547f26eab4a30be31ab6579c34aef21"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Alexander[au] AND 1975[pdat] AND mechanics[ti] AND hopping[ti] AND kangaroos[ti]"
+   },
+   "bytes": 394,
+   "sha256": "2690fd7e089cbe8929946f4ac42c87f54580f1db3203b266e3fd98c88654dc53"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Alexander[au] AND mechanics[ti] AND hopping[ti] AND kangaroos[ti]"
+   },
+   "bytes": 348,
+   "sha256": "7907318c0bd34bc6424af673b12bb19ca07ce3a150489ed2ea418aa8b81e32f1"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "mechanics[ti] AND hopping[ti] AND kangaroos[ti]"
+   },
+   "bytes": 326,
+   "sha256": "bcc686d59769fcb4d1cdd2bd3fb74cad25299526bc86fa4bbf2bb18d8e02d727"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Biewener[au] AND 1995[pdat] AND vivo[ti] AND muscle[ti] AND force[ti] AND elastic[ti] AND energy[ti] AND storage[ti] AND steady[ti] AND speed[ti]"
+   },
+   "bytes": 403,
+   "sha256": "5b2453a0f4757f6f3dcf58e00e9d16ce001bc90697dfa4d22e179bb26861df75"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "9319738"
+   },
+   "bytes": 1525,
+   "sha256": "de1b387194fc329a4d2bb20d08ad296efd5353794fe5804396edc8f15f590eec"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Baudinette[au] AND 1992[pdat] AND cost[ti] AND locomotion[ti] AND wild[ti] AND tammar[ti] AND wallabies[ti]"
+   },
+   "bytes": 435,
+   "sha256": "233e0c044ddc54f64d042011f444631a786afc80438f1f31b56ced9037c8b5fc"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Baudinette[au] AND cost[ti] AND locomotion[ti] AND wild[ti] AND tammar[ti] AND wallabies[ti]"
+   },
+   "bytes": 389,
+   "sha256": "55db1a69463c1dd57f14c32ff500b20ac0c05cf4ac6793ab793e728ee95ff11b"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "cost[ti] AND locomotion[ti] AND wild[ti] AND tammar[ti] AND wallabies[ti]"
+   },
+   "bytes": 366,
+   "sha256": "c16ebadd0c476ba909659cfb9d6609a1ffd9127ec56d30f304a58956c530517d"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Dawson[au] AND 1973[pdat] AND energetic[ti] AND cost[ti] AND locomotion[ti] AND kangaroos[ti]"
+   },
+   "bytes": 414,
+   "sha256": "0f122b2b82d970e4d894f948bd5a2b2a2f144b61ae79eca924f0d4d6b5991c9e"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Dawson[au] AND energetic[ti] AND cost[ti] AND locomotion[ti] AND kangaroos[ti]"
+   },
+   "bytes": 368,
+   "sha256": "5139ffe2a1923451800505f44ecc6413b4e1829807ea30f9e33b1359a3e469b5"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "energetic[ti] AND cost[ti] AND locomotion[ti] AND kangaroos[ti]"
+   },
+   "bytes": 349,
+   "sha256": "a0970a02d1e437ffaa8c288b57c5282878337010bcf559dc0a66fe6be5781300"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Griffin[au] AND 2000[pdat] AND penguin[ti] AND waddling[ti] AND wasteful[ti]"
+   },
+   "bytes": 300,
+   "sha256": "5c3f7a3f194aa0d47e055c9d3318a9c2b4d085e4404609a25b3ea3906061e426"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "11140670"
+   },
+   "bytes": 1321,
+   "sha256": "57a562bc8f66a18991ac2191087f5a1786a933d8414d08c7ab06071c35bd8259"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Askew[au] AND 2014[pdat] AND kangaroo[ti] AND tail[ti] AND propels[ti] AND powers[ti] AND pentapedal[ti] AND locomotion[ti]"
+   },
+   "bytes": 458,
+   "sha256": "d0fe1f4f76c05c62aa0a42a213c29b4d0d456abf0912d00534ae56b393ce39e5"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Askew[au] AND kangaroo[ti] AND tail[ti] AND propels[ti] AND powers[ti] AND pentapedal[ti] AND locomotion[ti]"
+   },
+   "bytes": 412,
+   "sha256": "c36a651377678e60e1be326378a1c874785e2491c6c140b768693dcd7da0d984"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "kangaroo[ti] AND tail[ti] AND propels[ti] AND powers[ti] AND pentapedal[ti] AND locomotion[ti]"
+   },
+   "bytes": 304,
+   "sha256": "3dc08b781fbe617bc08a2ea9af79ebd9ece30c9e741843a35d8a8f7e4b6a9fb2"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "24990111"
+   },
+   "bytes": 1803,
+   "sha256": "8be82238e2dfab3c3f13fce653658f39a8a939a2da50e9ea581e9d8da68e88a5"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Vaswani[au] AND 2017[pdat] AND attention[ti] AND need[ti]"
+   },
+   "bytes": 364,
+   "sha256": "49dbbbd2c26a6f2f249361408a19b9e47e113ffbe8219dcf07843e0308492a93"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Vaswani[au] AND attention[ti] AND need[ti]"
+   },
+   "bytes": 318,
+   "sha256": "805a4f2377b66eb6f2fb0a116d01c7e4a6b22f1f71738521a93128881818d4e9"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "attention[ti] AND need[ti]"
+   },
+   "bytes": 254,
+   "sha256": "544c734a9b14435d887d48a21f9e12e6a12e200f1a31bc379780f48fa856d0c8"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "42927006,42846471,42798940,42641401,42554381"
+   },
+   "bytes": 9130,
+   "sha256": "edfd2ffa5ab15fd479fda62d72ecff70ca5e6b40db5b5545303eb3b68d32ec3f"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Dai[au] AND 2019[pdat] AND transformer[ti]"
+   },
+   "bytes": 342,
+   "sha256": "4c7fa0606f98a37b6e9a1602f400c2f581eba77c1fd507374ab1f00b06f53fd6"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Dai[au] AND transformer[ti]"
+   },
+   "bytes": 251,
+   "sha256": "0ae7ebe2b111e52ea59a88119a2f05be3ffb207c80d7caae1699575538917481"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "43014161,42880085,42837364,42611673,42541520"
+   },
+   "bytes": 10140,
+   "sha256": "eee422023f2edb8539122761ef214f0210724d5b4dd548aa47386edb18011123"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "transformer[ti]"
+   },
+   "bytes": 237,
+   "sha256": "aba40c86b51c91b96ada8b05b7a34371f7410078385e5cb87c030a96a341441e"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "43075032,43073103,43072027,43071996,43071674"
+   },
+   "bytes": 9058,
+   "sha256": "d4308281b2b7ae1c50c3ff301f817625265eb0855128bdbe6656a5cb1521e310"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Brown[au] AND 2020[pdat] AND language[ti] AND models[ti] AND shot[ti] AND learners[ti]"
+   },
+   "bytes": 407,
+   "sha256": "ae8b06e83bc424d8054d40ce9ad53716721a164b33d9969050cbf97e55399a4f"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Brown[au] AND language[ti] AND models[ti] AND shot[ti] AND learners[ti]"
+   },
+   "bytes": 361,
+   "sha256": "962305d5083be60b6b40ef51d183c2e084d9b3a601fc14411bd78e5ad6b879e7"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "language[ti] AND models[ti] AND shot[ti] AND learners[ti]"
+   },
+   "bytes": 253,
+   "sha256": "6153c88a8cad579a7264514bd2d67fc788b5971e61224e6eaf8aa557a22a74ac"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "42771625"
+   },
+   "bytes": 1711,
+   "sha256": "93e4630d271482ea85c0dda2b0d8c7c197079ba3ac43d00409c05166375a2906"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Min[au] AND 2022[pdat] AND rethinking[ti] AND role[ti] AND demonstrations[ti]"
+   },
+   "bytes": 391,
+   "sha256": "eaa98fbec56d36c28c850e522190333b13d2b7694e4dd80f8f3621f6dfe5a63f"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Min[au] AND rethinking[ti] AND role[ti] AND demonstrations[ti]"
+   },
+   "bytes": 345,
+   "sha256": "18c7ad1be308519fbe2ff45075c6f815c6aac569092ffe97a33aca8aaa3e9436"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "rethinking[ti] AND role[ti] AND demonstrations[ti]"
+   },
+   "bytes": 329,
+   "sha256": "840ac73429c312ea1950b71a2edfe47da81d5fa8e06c269a519e233afbfc8cb7"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Mikolov[au] AND 2013[pdat] AND distributed[ti] AND representations[ti] AND words[ti]"
+   },
+   "bytes": 398,
+   "sha256": "373f7cc2d38500d61571184778c9c0c38a9cc2eebfbd25ca02493872b85465e7"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Mikolov[au] AND distributed[ti] AND representations[ti] AND words[ti]"
+   },
+   "bytes": 352,
+   "sha256": "d1ea9866a7c9cc232b2dbf854877f89a7f7040f7adf5d6b2aef899472257b603"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "distributed[ti] AND representations[ti] AND words[ti]"
+   },
+   "bytes": 264,
+   "sha256": "c797db30131bcc8e900d09cf7bee804afec0e62af90c6d2c79830554dcbacb3e"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "38903026,35339747,28801255"
+   },
+   "bytes": 5538,
+   "sha256": "483fb41c0563a58ee2c70dfd6f48ee3cfc6f5774d458c594056bc79543f563f6"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Devlin[au] AND 2018[pdat] AND bert[ti]"
+   },
+   "bytes": 338,
+   "sha256": "3a4a7f61b24bd19f16caae7458eebb8a86219db9300cdcbf778cfe2160d8dd85"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Devlin[au] AND bert[ti]"
+   },
+   "bytes": 292,
+   "sha256": "52bf996cf114139bd0115a7079ef2b48c397babe602010c1cbd769f97260f700"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "bert[ti]"
+   },
+   "bytes": 229,
+   "sha256": "02d66396ced493c0467232d376c55387c4e43f8982406039f45a837c68c46902"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "43033921,43014991,42995845,42993904,42970494"
+   },
+   "bytes": 10791,
+   "sha256": "0028b23e2e31a5a1004ba7be79432647e399909081daf19a34d927606be4a6bc"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Ippolito[au] AND 2022[pdat] AND creative[ti] AND writing[ti] AND collaborator[ti]"
+   },
+   "bytes": 395,
+   "sha256": "908b21c8b522c4f34d1a4b37b32013bf01320af2e33d66a8b1fc9c5d5e2f6dfe"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Ippolito[au] AND creative[ti] AND writing[ti] AND collaborator[ti]"
+   },
+   "bytes": 349,
+   "sha256": "1587d6c29cff73fdb74b892d083b15d1e12311c8a3f0ea099ffc903285a15451"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "creative[ti] AND writing[ti] AND collaborator[ti]"
+   },
+   "bytes": 328,
+   "sha256": "be09dd533c15b0349ba94f2b3cabbc2aac4c6e9d0634d9c97a59098a2da330ba"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Chakrabarty[au] AND 2023[pdat] AND artifice[ti] AND large[ti] AND language[ti] AND models[ti] AND false[ti] AND promise[ti] AND creativity[ti]"
+   },
+   "bytes": 484,
+   "sha256": "e76afda849b4189b6c69f7a8eacfcd5d4454737f1ecafae0b60602b468f30777"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Chakrabarty[au] AND artifice[ti] AND large[ti] AND language[ti] AND models[ti] AND false[ti] AND promise[ti] AND creativity[ti]"
+   },
+   "bytes": 438,
+   "sha256": "c1d2aae1d06968b5cab7a0823813ae9fce117267f02d744cb6827bbd9f8585f9"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "artifice[ti] AND large[ti] AND language[ti] AND models[ti] AND false[ti] AND promise[ti] AND creativity[ti]"
+   },
+   "bytes": 414,
+   "sha256": "8bdc33aa00a47b82be2712a65b74945c567322b545dc6270eb131560a1118ac3"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Heiligenberg[au] AND 1991[pdat] AND neural[ti] AND nets[ti] AND electric[ti] AND fish[ti]"
+   },
+   "bytes": 410,
+   "sha256": "1349c51789f30fa4364af3a24ff794a9aa6c6a95859fb268212de8e9ec4a6994"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Heiligenberg[au] AND neural[ti] AND nets[ti] AND electric[ti] AND fish[ti]"
+   },
+   "bytes": 364,
+   "sha256": "e6513113075de717b7d574e9b92bf6735a9e1edebeb41880a4816d035efa4597"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "neural[ti] AND nets[ti] AND electric[ti] AND fish[ti]"
+   },
+   "bytes": 339,
+   "sha256": "c6fed60b809c9afe9fd75539fee532c01ec51daebe49caf3fb9434ddf49f146c"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Emde[au] AND 1999[pdat] AND active[ti] AND electrolocation[ti] AND objects[ti] AND weakly[ti] AND electric[ti] AND fish[ti]"
+   },
+   "bytes": 458,
+   "sha256": "4e6768b0f5cc312e4c3557392a6b99e62122194322180fe280704104a28c1648"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Emde[au] AND active[ti] AND electrolocation[ti] AND objects[ti] AND weakly[ti] AND electric[ti] AND fish[ti]"
+   },
+   "bytes": 412,
+   "sha256": "0dcc18b15bedd06509a38e21b77cec26311ca3a18c219f9d1f3ab40127930f43"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "active[ti] AND electrolocation[ti] AND objects[ti] AND weakly[ti] AND electric[ti] AND fish[ti]"
+   },
+   "bytes": 305,
+   "sha256": "d407ea2cf7a47e3d1d7d6a5d8fe0eec20dfd088631052a705cee5c3657a544b7"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "10210662"
+   },
+   "bytes": 1378,
+   "sha256": "46cff69681d342cf67c6853810de4870dc8a759990c7a8ed0e11238b4bef525b"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hopkins[au] AND 1988[pdat] AND social[ti] AND communication[ti] AND aquatic[ti] AND environment[ti]"
+   },
+   "bytes": 420,
+   "sha256": "226d4d4fa9007fd0a95d8e34c646d19d467d57b79a6184d3d2f1bd9071e65cca"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Hopkins[au] AND social[ti] AND communication[ti] AND aquatic[ti] AND environment[ti]"
+   },
+   "bytes": 374,
+   "sha256": "7a9e2236eb00eb4f13d7c14ec3820de7272cf418af08199229bb86a90c0e9f92"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "social[ti] AND communication[ti] AND aquatic[ti] AND environment[ti]"
+   },
+   "bytes": 354,
+   "sha256": "a6e6c7a85373ffd8fb3ad4fbd6fc7b63a13f792c438c06fdcf071155252fd891"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Terleph[au] AND 2003[pdat] AND communication[tiab] AND specificity[tiab]"
+   },
+   "bytes": 393,
+   "sha256": "de3fccd29650392f1e6339d3930765ae1fe63760b786c233feb8156f6947a107"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Bodznick[au] AND 1986[pdat] AND mormyrid[tiab] AND electrosensory[tiab] AND processing[tiab]"
+   },
+   "bytes": 427,
+   "sha256": "2a44368a476d30325598d14897fd0ac87d7e37094888ecab5eba728ee04a3b4c"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Engelmann[au] AND 2002[pdat] AND electrosensory[tiab] AND mechanosensory[tiab] AND task[tiab] AND separation[tiab]"
+   },
+   "bytes": 463,
+   "sha256": "d930d7ea4506dfafeba564bebe6292128db324be60e3ed0ff7d092c1e3b6a333"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Moller[au] AND 1995[pdat] AND electric[ti] AND fishes[ti] AND history[ti] AND behavior[ti]"
+   },
+   "bytes": 411,
+   "sha256": "bf4c4a5bb7d084bf3a45eb7adc6c05d4d44b0f3fd7f0806710630cf4e338dd0c"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Moller[au] AND electric[ti] AND fishes[ti] AND history[ti] AND behavior[ti]"
+   },
+   "bytes": 365,
+   "sha256": "96a1b4110388d6fadd0c7b7ee5bc95c5f1f653925209842dec0b307a0397c362"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "electric[ti] AND fishes[ti] AND history[ti] AND behavior[ti]"
+   },
+   "bytes": 346,
+   "sha256": "6e250e1ad4d64714aefd00d803f9436de61493421c5982ffe56921b74ce2e511"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Bell[au] AND 2001[pdat]"
+   },
+   "bytes": 272,
+   "sha256": "bc2fcb6f0f32dfc5d82ee6e7e2b9a174abd98324353b3b6326261c67b058ec00"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Lohmann[au] AND 1994[pdat] AND detection[ti] AND magnetic[ti] AND inclination[ti] AND angle[ti] AND turtles[ti] AND possible[ti] AND mechanism[ti] AND determining[ti]"
+   },
+   "bytes": 424,
+   "sha256": "96625052d6917fd277beace21628dd0abab973f9f9ecaef4935a2b7f88dd487c"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "9317267"
+   },
+   "bytes": 1489,
+   "sha256": "bf260ad49b7ef8c4d30fc983ed501248c893a0d9a7f8b3b27489f92881ebe64f"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Lohmann[au] AND 2001[pdat] AND regional[ti] AND magnetic[ti] AND fields[ti] AND navigational[ti] AND markers[ti] AND turtles[ti]"
+   },
+   "bytes": 373,
+   "sha256": "17ea16ae4d562af524718c35b20699a4093a56a73885e670be38461f70d589f0"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "11598298"
+   },
+   "bytes": 1774,
+   "sha256": "41116d48a5f3e5119fe1a65dac9782ebbd239ed47c57b57bd1e2bb76da1729ed"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Bowen[au] AND 1993[pdat] AND population[ti] AND structure[ti] AND loggerhead[ti] AND turtles[ti] AND northwestern[ti] AND atlantic[ti] AND ocean[ti] AND mediterranean[ti]"
+   },
+   "bytes": 519,
+   "sha256": "c94c217c387580442aa49c7925150c23e290cbdede5c4d8927235d701102f931"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Bowen[au] AND population[ti] AND structure[ti] AND loggerhead[ti] AND turtles[ti] AND northwestern[ti] AND atlantic[ti] AND ocean[ti] AND mediterranean[ti]"
+   },
+   "bytes": 473,
+   "sha256": "79461c6221042dc3bb03dffe2e939144723703c748095a6681de1bf685496b50"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "population[ti] AND structure[ti] AND loggerhead[ti] AND turtles[ti] AND northwestern[ti] AND atlantic[ti] AND ocean[ti] AND mediterranean[ti]"
+   },
+   "bytes": 455,
+   "sha256": "c55e0e4bdeaec3eb4280db8b79bf17e85e8d656b6d2b1b66f2e5aeb7d76ce710"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Luschi[au] AND 1998[pdat] AND natal[tiab] AND homing[tiab] AND tracking[tiab]"
+   },
+   "bytes": 412,
+   "sha256": "092b746615fcb85536052d1a4ebc20d9d97d647d39afa848db24806f928f1a42"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Bolten[au] AND 2003[pdat] AND variation[ti] AND turtle[ti] AND life[ti] AND history[ti] AND patterns[ti]"
+   },
+   "bytes": 432,
+   "sha256": "2004bde5f42a69e523e66a0e3770f0acc9aa7305026747453c0074cd26f1e7f0"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Bolten[au] AND variation[ti] AND turtle[ti] AND life[ti] AND history[ti] AND patterns[ti]"
+   },
+   "bytes": 386,
+   "sha256": "1eeb25e48f964853269f3d9cf47a3a117fe2d85ce7f8a941fb101731a0cca8f5"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "variation[ti] AND turtle[ti] AND life[ti] AND history[ti] AND patterns[ti]"
+   },
+   "bytes": 367,
+   "sha256": "9be26f1196bf9cc26a07cb8b68f7ff2c3ea410843739a06ba083be78416132e2"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Gaspar[au] AND 2006[pdat] AND loggerhead[tiab] AND gyre[tiab] AND riding[tiab] AND behavior[tiab]"
+   },
+   "bytes": 446,
+   "sha256": "750f65e3dea3a0fa5fbb39290d9543cb72de75c08770a78b8ddf673502cc2710"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Lohmann[au] AND 2008[pdat] AND geomagnetic[ti] AND imprinting[ti] AND unifying[ti] AND hypothesis[ti] AND long[ti] AND distance[ti] AND natal[ti] AND homing[ti]"
+   },
+   "bytes": 419,
+   "sha256": "67224ce70aaea14c726612f18600240ff59890a9e1b0b22c9589b65d98216e07"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "19060188"
+   },
+   "bytes": 1950,
+   "sha256": "404ac4ee0ca1037f12b89a6545cf3888660e665b67ebfbf830e22ba32bad7018"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Dorigo[au] AND 1997[pdat] AND colony[ti] AND system[ti]"
+   },
+   "bytes": 362,
+   "sha256": "8fb6f0fa231082167d3b60a2c02f6282226ae6816238ede64d908e1ebf872b47"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Dorigo[au] AND colony[ti] AND system[ti]"
+   },
+   "bytes": 226,
+   "sha256": "3ec62548e1da0606b055f71b235a55c9f848917cb159f5d1b3968ddf2a1e8b95"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "18263004"
+   },
+   "bytes": 1574,
+   "sha256": "7f78fa47d32e7dd2b751bc42e2fb707fd3921f7ae7d6e64877e4b3be19151f1a"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Goss[au] AND 1989[pdat] AND self[ti] AND organized[ti] AND shortcuts[ti] AND argentine[ti]"
+   },
+   "bytes": 411,
+   "sha256": "ab7fbff87f2fa3c3b5dcef3eecc1536138ef618cd35184bee7a90074125e67fc"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Goss[au] AND self[ti] AND organized[ti] AND shortcuts[ti] AND argentine[ti]"
+   },
+   "bytes": 365,
+   "sha256": "2cf574751ec6935a7739b379a5c647582f731cedc571e9bfbf4589c5e5e726ba"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "self[ti] AND organized[ti] AND shortcuts[ti] AND argentine[ti]"
+   },
+   "bytes": 348,
+   "sha256": "de84e81007966cdc87ce7ce313b14e2d3c5088853a504f0cdaedb2a7e7856c36"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Theraulaz[au] AND 1999[pdat] AND brief[ti] AND history[ti] AND stigmergy[ti]"
+   },
+   "bytes": 300,
+   "sha256": "f5ee766b8ad3226282c280c27a76eaacb95c652308b6273e8e8c08551ce2ad5d"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "10633572"
+   },
+   "bytes": 1394,
+   "sha256": "46ca502af50bcb20d1d63cc10fc7097a031f4e6a596e4b40ca1b136338ec8f6c"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Tschinkel[au] AND 2003[pdat] AND subterranean[ti] AND nests[ti] AND trace[ti] AND fossils[ti] AND past[ti] AND future[ti]"
+   },
+   "bytes": 456,
+   "sha256": "e34d40f74c4c8f6808bf3ab4c1e378386b8d80d9a527c4f0d4e244fce5c4869d"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Tschinkel[au] AND subterranean[ti] AND nests[ti] AND trace[ti] AND fossils[ti] AND past[ti] AND future[ti]"
+   },
+   "bytes": 410,
+   "sha256": "ca4c466a69ada682621149196eb62b3e73ef7a4e8b2fdcfea2c76bcba7b0f347"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "subterranean[ti] AND nests[ti] AND trace[ti] AND fossils[ti] AND past[ti] AND future[ti]"
+   },
+   "bytes": 388,
+   "sha256": "49b7a762b0e350c8a8eef2fd51fa32b5d83bab0dc7e2fe9b52d29fe3538c18af"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Gordon[au] AND 2010[pdat] AND encounters[ti] AND interaction[ti] AND networks[ti] AND colony[ti] AND behavior[ti]"
+   },
+   "bytes": 441,
+   "sha256": "7619d196384999f3addf7df7e9e1fcc60e8e6a3bdadaa687d2df479bf4d36789"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Gordon[au] AND encounters[ti] AND interaction[ti] AND networks[ti] AND colony[ti] AND behavior[ti]"
+   },
+   "bytes": 395,
+   "sha256": "05f28a24aa478430262df9085dbee56449cd323d903f4d3c1cfa01871cab3cb6"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "encounters[ti] AND interaction[ti] AND networks[ti] AND colony[ti] AND behavior[ti]"
+   },
+   "bytes": 376,
+   "sha256": "be532a5c83f6933c1cae214f634b94be8af6b660d95abbcce0098a3e328853c0"
+  },
+  {
+   "endpoint": "esearch.fcgi",
+   "params": {
+    "db": "pubmed",
+    "retmax": 5,
+    "term": "Beshers[au] AND 2001[pdat] AND models[ti] AND division[ti] AND labor[ti] AND social[ti] AND insects[ti]"
+   },
+   "bytes": 341,
+   "sha256": "03809b288de414b83024c318354a32b38d8ea82da7dc5b344241e230d4e7f581"
+  },
+  {
+   "endpoint": "esummary.fcgi",
+   "params": {
+    "db": "pubmed",
+    "id": "11112175"
+   },
+   "bytes": 1456,
+   "sha256": "1cefc89cca2c2b7593be2ff865a786192b0e82ebc381de2c75e28af39c86972c"
+  }
+ ]
+}

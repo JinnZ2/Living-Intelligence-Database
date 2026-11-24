@@ -19,7 +19,7 @@ through the chain and re-run. Old versions are kept and never overwritten.
 |---|---|
 | `registry/DECLARED.json` | the rules, committed before the tool existed (`1c31cf8`), with an amendment committed before the rebuild (`b8ca746`) and a second, "fixes v2", committed before the v2 rebuild (`c1eff92`) |
 | `registry/assumptions.json` | one entry per assumption: `id`, `statement`, `domain`, `status`, `sources`, `supersedes` |
-| `registry/sources.json` | one entry per exact source string: `id`, `string`, `same_as` (null), `opened` (false or a depth word), `fetched` (null or a date) |
+| `registry/sources.json` | one entry per exact source string: `id`, `string`, `same_as` (null), `opened` (false or a depth word), `fetched` (null or a date), `existence` (null when not checked; else `{state, matched_record, checked, works}` from `scripts/existence_check.py`, see `docs/existence_check.md`). No string is ever edited |
 | `provenance/<entity_id>.json` | the steps of one entity |
 | `provenance/INDEX.json` | per-entity counts; `snapshot_class: SUMMARY_ONLY` |
 | `provenance/as_received/MANIFEST.json` | sha256 of specimens as received |

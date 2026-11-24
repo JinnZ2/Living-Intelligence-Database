@@ -140,3 +140,7 @@ here and needs a separate run.
 `docs/source_opening_plan.md` (written by `scripts/source_plan.py`) ranks the
 231 unopened sources. It is a plan: nothing was fetched. Status comes from
 reading the source, not from its evidence_type.
+
+Stage 1 (existence check, top 10 entities) is in `docs/existence_check.md`.
+It asks only whether a cited work can be found in PubMed as cited. It read no
+abstract, so it gave no field a status and marked no source opened.
