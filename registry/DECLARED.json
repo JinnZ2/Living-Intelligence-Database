@@ -408,6 +408,69 @@
       "reader": "replaces the 'reader' line of the abstract_pass entry: readings arrive as registry/attribute_readings.json from an outside reader. scripts in this repository build the steps and re-export from that file; they make no judgment.",
       "reading_queue": "docs/reading_queue.md, written by scripts/reading_queue.py: one row per field and found work (12 rows, 11 fields): entity, field, value, the field's definition text, PMID, DOI. It holds no abstract text and no judgment.",
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "process form + Kimi schemas",
+      "after": "main at ad2ae9b (merge of the review of the outside-reader package); by the owner's order. Declared before the extraction pass, the cycle registry and the trace_check change.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "schemas_adopted": {
+        "status": "PROPOSED",
+        "version": "0.1.0 (MINOR: additive; no existing schema or entity file is changed)",
+        "files": [
+          "schemas/reference_trace.schema.json",
+          "schemas/cycle_registry.schema.json",
+          "schemas/attribute_reading.schema.json",
+          "schemas/translation_loss_blocks.schema.json"
+        ],
+        "from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/, written by Kimi (Moonshot AI), kept there byte for byte. Each adopted copy records the as-received sha256 and every change in its x-lid block.",
+        "not_wired": "scripts/build_index.py does not read these schemas; they validate the audit and registry records only"
+      },
+      "status_vocabulary": {
+        "rule": "one vocabulary for nodes and cycles: status PROPOSED plus a flag unsourced (true/false). PROPOSED_UNSOURCED is retired.",
+        "mapping": {
+          "PROPOSED_UNSOURCED": "status PROPOSED, unsourced true, legacy_status 'PROPOSED_UNSOURCED'"
+        },
+        "existing": "one record carries the retired status: cycle CY_WILDFLOWER in reference_trace_BE_hex v0.1, v0.2 and v0.3. Those dated files are not edited; the mapping is applied where the cycle is written anew (registry/cycles.json)."
+      },
+      "process_form": {
+        "rule": "every attribute is stored as a process form: {rate or state, driver, timescale or cycle_ref, regime bounds, scope}. A bare scalar with none of these is legacy and is flagged LEGACY_SCALAR. Nothing is converted by this entry and no value is invented to fill a form.",
+        "fields": {
+          "form": "kind rate | state; the quantity; value and units as recorded",
+          "driver": "what changes the quantity or holds the state",
+          "timescale": "cycle_ref into registry/cycles.json, or the timescale as recorded",
+          "regime_bounds": "variable -> [low, high] within which the form holds",
+          "scope_ref": "the scope block the form is read under"
+        },
+        "flag": "scripts/process_form.py reports each attribute as PROCESS_FORM or LEGACY_SCALAR; it writes nothing into entity files",
+        "relates_to": "audit/2026-11-24/OPEN_QUESTIONS.md #4 (a process stored as a static noun)"
+      },
+      "readings": {
+        "rule": "readings from more than one reader are recorded side by side under readings_by; none is deleted. The field-level claim_support is read under the declared rule of the 'claim/number split' entry: the claim is the field's scope.definition. STATED needs the abstract to state that definition's claim; an abstract that states a neighbouring quantity is RELATED.",
+        "applied": {
+          "KA attributes.elastic_energy_storage": "Kimi STATED; reviewer RELATED. The definition is the fraction of mechanical energy recovered per stride against a muscle-powered stride; the quoted abstract gives recovery as a share of metabolic energy expenditure at one speed. Under the rule the field is RELATED, status PROPOSED.",
+          "other fields": "no reviewer reading; the reviewer slot is recorded as null (NOT_TESTED), and the field keeps the single reading"
+        },
+        "file": "registry/attribute_readings.json"
+      },
+      "extraction": {
+        "rule": "transcription only. For each attribute whose scope.measurement_limits prose holds a deviation or range expression, one confidence record {scope_ref, deviation, certainty: null, recurrence: null}. deviation holds the prose verbatim (quote) and the matched expressions verbatim; no number is parsed, computed or added.",
+        "patterns": {
+          "numeric_range": "a number, then - or an en dash, then a number",
+          "percent": "a number followed by %",
+          "varies": "the word 'varies'",
+          "plus_minus": "the sign ±"
+        },
+        "count_expected": "the 2026-11-24 ledger reports 92 of 228 (55 / 26 / 23 / 6). The ledger's own matching rule is not in the repository; the counts found under the patterns above are reported beside it, and no pattern is tuned to reach 92."
+      },
+      "cycles": {
+        "file": "registry/cycles.json from the 12 cycles of reference_trace_BE_hex_v0.3.json, with the status mapping above",
+        "check": "scripts/cycles_check.py: schema validation, parent exists, nesting (parent period > child period). Exit 1 on a violation. A missing period and a top-level cycle are recorded gaps, listed and not counted as violations."
+      },
+      "trace_check": "audit/2026-11-24/reference/trace_check.py exits 1 whenever findings is non-empty (LID_STRICT is no longer needed); --selftest added. The output file bytes are unchanged.",
+      "renames": "PROPOSED_UNSOURCED -> PROPOSED + unsourced",
+      "observer_slots": null
     }
   ]
 }

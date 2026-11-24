@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-lid": {
+    "status": "PROPOSED",
+    "version": "0.1.0",
+    "version_rule": "MINOR: additive; no existing schema or entity file is changed",
+    "adopted": "2026-11-24",
+    "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/cycle_registry.schema.json",
+    "as_received_sha256": "b4def05c3e1566906a0d222461389bf7a57f1926c76f8e1e592ee83ca738e2b9",
+    "author_of_as_received": "Kimi (Moonshot AI), outside reader, 2026-11-25",
+    "changes_from_as_received": [
+      "cycle status enum is TRACED / PROPOSED / UNKNOWN; PROPOSED_UNSOURCED retired; fields unsourced and legacy_status added"
+    ]
+  },
+  "$id": "cycle_registry.schema.json",
+  "title": "cycle registry file",
+  "description": "A standalone registry of named cycles (registry/cycles.json), following the registry file convention of registry/sources.json and registry/assumptions.json ({note, <plural>}). Cycles are cycles of whatever is in context; every cycle is named; cycles nest, and the nesting invariant parent.period_s > child.period_s is enforced by reference/trace_check.py (NESTING_VIOLATION), not by this schema, because it compares values across items. The log10 of the period ratio is the timescale-separation ladder. The cycle item definition is byte-identical to definitions.cycle in reference_trace.schema.json; the validation suite asserts equality so the two cannot drift silently.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record",
+    "version",
+    "date",
+    "status",
+    "cycles"
+  ],
+  "definitions": {
+    "cycle": {
+      "description": "One named cycle. Byte-identical to definitions.cycle in cycle_registry.schema.json; the validation suite asserts the two definitions stay equal so they cannot drift silently. Nesting invariant: when both parent and child carry period_s, parent.period_s / child.period_s must be > 1 (trace_check.py NESTING_VIOLATION); the log10 of that ratio is the timescale-separation ladder. Expressible only per-pair, so it is checker-enforced, not schema-enforced. Adopted copy: status vocabulary shared with nodes; unsourced is a flag.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "kind",
+        "context",
+        "period_text",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CY_[A-Z0-9_]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Every cycle is named (owner rule, ledger v0.3): sleep, circadian, seasonal, compute. A bare word 'cycle' is not a name."
+        },
+        "kind": {
+          "enum": [
+            "oscillation",
+            "developmental_cycle",
+            "developmental_window",
+            "life_cycle",
+            "production_cycle",
+            "seasonal_cycle",
+            "seasonal_window",
+            "superposition",
+            "transient_within_cycle"
+          ],
+          "description": "keeps oscillation, developmental window, production cycle and a transient inside a cycle apart without ranking them. Extending this enum is backward compatible; removing a value is not."
+        },
+        "period_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "description": "Period in seconds. Null or absent when unsourced (trace_check.py CYCLE_NO_PERIOD is informational, not an error)."
+        },
+        "period_text": {
+          "type": "string",
+          "description": "The period as recorded, with uncertainty and sample size where known (e.g. '≈230 Hz (229.8 ± 11.0 Hz, n=4, hovering)')."
+        },
+        "context": {
+          "type": "string",
+          "description": "The conditions the period holds under: a cycle is a cycle of whatever is in context."
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Id of the enclosing slower cycle, or null/absent at the top of the nesting. Must name an existing cycle (trace_check.py CYCLE_DANGLING_PARENT)."
+        },
+        "source": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "Source strings or URLs. Null marks an explicitly unsourced cycle (observed on PROPOSED_UNSOURCED); when present the list is non-empty. TRACED requires a non-empty list (if/then below; trace_check.py CYCLE_NO_SOURCE)."
+        },
+        "status": {
+          "enum": [
+            "TRACED",
+            "PROPOSED",
+            "UNKNOWN"
+          ],
+          "description": "One vocabulary shared with nodes. PROPOSED_UNSOURCED is retired (registry/DECLARED.json, amendment 'process form + Kimi schemas'): it is written PROPOSED with unsourced true. TRACED requires source."
+        },
+        "note": {
+          "type": "string"
+        },
+        "unsourced": {
+          "type": "boolean",
+          "description": "True when no source describes the item. Only with status PROPOSED. Replaces the retired status PROPOSED_UNSOURCED."
+        },
+        "legacy_status": {
+          "type": "string",
+          "description": "The status as first recorded, when it was mapped (for example PROPOSED_UNSOURCED)."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "TRACED"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "source"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "unsourced"
+            ],
+            "properties": {
+              "unsourced": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "status": {
+                "const": "PROPOSED"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "properties": {
+    "note": {
+      "type": "string",
+      "description": "Registry-level note, same role as 'note' in registry/sources.json."
+    },
+    "record": {
+      "type": "string",
+      "description": "Registry name, e.g. CYCLE_REGISTRY."
+    },
+    "version": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "TRACED",
+        "SUPERSEDED"
+      ],
+      "description": "Registry lifecycle, same vocabulary as the reference trace record."
+    },
+    "baseline_commit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^([0-9a-f]{40}|[0-9a-f]{64})$",
+      "description": "Git commit hash of the repository baseline, when the registry was extracted from a traced baseline. 40 hex chars for SHA-1, 64 for SHA-256."
+    },
+    "cycles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/cycle"
+      },
+      "description": "All named cycles, fastest to slowest. Id uniqueness and the parent-period nesting invariant are checker-enforced."
+    }
+  }
+}

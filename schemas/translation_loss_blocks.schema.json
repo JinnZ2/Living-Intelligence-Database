@@ -1,0 +1,609 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-lid": {
+    "status": "PROPOSED",
+    "version": "0.1.0",
+    "version_rule": "MINOR: additive; no existing schema or entity file is changed",
+    "adopted": "2026-11-24",
+    "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/translation_loss_blocks.schema.json",
+    "as_received_sha256": "26ccc74503e076c5c069d224fabf7917f33ad1f21629f4b0301e22cdff4ff8ff",
+    "author_of_as_received": "Kimi (Moonshot AI), outside reader, 2026-11-25",
+    "changes_from_as_received": [
+      "confidence record: certainty and recurrence may be null (not recorded); deviation.value may be null; deviation gains quote and expressions; kind gains plus_minus_unspecified, varies_unquantified, mixed; fields attribute and source_field added",
+      "process_forms block added"
+    ]
+  },
+  "id": "translation_loss_blocks.schema.json",
+  "title": "translation-loss ledger record blocks",
+  "description": "Record blocks proposed by the translation-loss ledger (L01-L15, v0.4, 2026-11-24): regime blocks (L03), coupling records with evaluated outcome states (L02/L04), typed dependency records (L06 consequence), confidence-as-scoped-deviation records (L05 + the GUM vocabulary map), and reciprocity records. These are the computational forms the ledger proposes; this schema makes each form validatable on its own before any entity file is touched. Nothing here renames or moves an existing field. Each block kind sits in its own array so a blocks file fails loudly on the first malformed record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record",
+    "version",
+    "date",
+    "status"
+  ],
+  "definitions": {
+    "layer": {
+      "enum": [
+        "D0_law",
+        "D1_energy",
+        "D2_condition",
+        "D3_material",
+        "D4_entity",
+        "D5_pattern"
+      ]
+    },
+    "role": {
+      "enum": [
+        "governing_law",
+        "energy_source",
+        "information_source",
+        "boundary_condition",
+        "material",
+        "entity",
+        "pattern",
+        "regime",
+        "transformation",
+        "conversion_bound"
+      ]
+    },
+    "outcome_state": {
+      "enum": [
+        "IN_REGIME",
+        "NOT_IN_SCOPE",
+        "CONDITION_UNKNOWN",
+        "UNRESOLVED_FORM",
+        "NOT_EXAMINED"
+      ],
+      "description": "L04 outcome states. Only IN_REGIME may carry a numeric output; the other four return no number. That rule is enforced by the evaluating instrument (e.g. regime_eval.py), not by this schema."
+    },
+    "reciprocity_facet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "regime",
+        "timescale"
+      ],
+      "properties": {
+        "regime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timescale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "via": {
+          "type": "string",
+          "description": "Named pathway for functional reciprocity."
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "properties": {
+    "record": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "TRACED",
+        "SUPERSEDED"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "regime_blocks": {
+      "type": "array",
+      "description": "L03: a regime block per attribute: {variables, bounds or predicates, timescale}. condition_variables from L06 are the raw material for its axes. Constraints with no operational test stay prose with status UNOPERATIONALIZED; no numeric bound is forced onto them.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "attribute",
+          "variables",
+          "timescale",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "attribute": {
+            "type": "string",
+            "description": "The attribute this regime scopes."
+          },
+          "variables": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "Regime axes: the condition variables the regime ranges over."
+          },
+          "bounds": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Per-variable [lower, upper] numeric bounds, or a predicate string where the test is not numeric. Null when nothing is bounded yet."
+          },
+          "timescale": {
+            "type": "string",
+            "description": "The timescale the regime holds on; names a cycle in the cycle registry where one applies."
+          },
+          "status": {
+            "enum": [
+              "OPERATIONAL",
+              "UNOPERATIONALIZED"
+            ],
+            "description": "UNOPERATIONALIZED: the constraint has no operational test yet and stays prose (ledger residual on L03)."
+          },
+          "source": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "coupling_records": {
+      "type": "array",
+      "description": "L02/L04: {source, target, relation, regimes:[{bounds, form|null}], couples:{source_state -> target_rate}}. Direction of the relationship is not stored; it is an evaluated output of the form inside the current regime, per the outcome-state vocabulary.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "target",
+          "relation",
+          "regimes",
+          "couples"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string",
+            "description": "The relation kind, without a baked-in direction."
+          },
+          "regimes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "bounds",
+                "form"
+              ],
+              "properties": {
+                "bounds": {
+                  "type": "object",
+                  "minProperties": 1,
+                  "description": "Variable bounds this regime covers."
+                },
+                "form": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The coupling form inside these bounds. Null means declared but unresolved: evaluation returns UNRESOLVED_FORM and no form is invented."
+                }
+              }
+            }
+          },
+          "couples": {
+            "type": "object",
+            "minProperties": 1,
+            "description": "source_state -> target_rate mapping, as recorded."
+          },
+          "outcome_state": {
+            "$ref": "#/definitions/outcome_state"
+          }
+        }
+      }
+    },
+    "dependency_records": {
+      "type": "array",
+      "description": "Typed dependency record, the proposed upgrade of the untyped depends_on strings: {target, layer, role, required_in_regime, equation_ref, status, source}.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target",
+          "layer",
+          "role",
+          "required_in_regime",
+          "equation_ref",
+          "status",
+          "source"
+        ],
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "Id of the node depended on."
+          },
+          "layer": {
+            "$ref": "#/definitions/layer"
+          },
+          "role": {
+            "$ref": "#/definitions/role"
+          },
+          "required_in_regime": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Regime ids or names in which this dependency is required. Null = required regardless of regime."
+          },
+          "equation_ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The equation or named relation the dependency enters, where one is known."
+          },
+          "status": {
+            "enum": [
+              "TRACED",
+              "DERIVED",
+              "PROPOSED",
+              "UNKNOWN",
+              "CONTESTED",
+              "RECORDED_UNVERIFIED"
+            ]
+          },
+          "source": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "confidence_records": {
+      "type": "array",
+      "description": "L05 + the GUM vocabulary map: confidence as scoped deviation. Owner term -> metrology term -> field: scope -> measurand definition and conditions -> scope_ref; deviation -> standard/expanded uncertainty -> deviation{value, kind, asymmetric?}; how certain -> coverage probability -> certainty{coverage, basis}; repeats across cycles -> recurrence{cycle_type, cycles_observed, span}. certainty.basis can say the certainty was earned across generations of observation, not only repeated measurement.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scope_ref",
+          "deviation",
+          "certainty",
+          "recurrence"
+        ],
+        "properties": {
+          "scope_ref": {
+            "type": "string",
+            "description": "Reference to the regime block (L03) the deviation holds within."
+          },
+          "deviation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "value",
+              "kind"
+            ],
+            "properties": {
+              "value": {
+                "type": [
+                  "number",
+                  "string",
+                  "null"
+                ],
+                "description": "Null when the prose was transcribed and not parsed into a number."
+              },
+              "kind": {
+                "enum": [
+                  "standard",
+                  "expanded",
+                  "range",
+                  "percent",
+                  "plus_minus_unspecified",
+                  "varies_unquantified",
+                  "mixed"
+                ]
+              },
+              "asymmetric": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "required": [
+                  "lower",
+                  "upper"
+                ],
+                "properties": {
+                  "lower": {
+                    "type": "number"
+                  },
+                  "upper": {
+                    "type": "number"
+                  }
+                }
+              },
+              "quote": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The source prose, verbatim."
+              },
+              "expressions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "kind",
+                    "text"
+                  ],
+                  "properties": {
+                    "kind": {
+                      "enum": [
+                        "numeric_range",
+                        "percent",
+                        "varies",
+                        "plus_minus"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "certainty": {
+            "oneOf": [
+              {
+                "type": "null",
+                "description": "Not recorded. Null is not zero and not 'certain'."
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "coverage",
+                  "basis"
+                ],
+                "properties": {
+                  "coverage": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Coverage probability (level of confidence), e.g. 0.9545 for k=2 on a normal distribution. Null when the basis is not probabilistic."
+                  },
+                  "basis": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "What the coverage rests on: repeated measurement, generations of observation, or another stated basis."
+                  }
+                }
+              }
+            ]
+          },
+          "recurrence": {
+            "oneOf": [
+              {
+                "type": "null",
+                "description": "Not recorded."
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "cycle_type",
+                  "cycles_observed",
+                  "span"
+                ],
+                "properties": {
+                  "cycle_type": {
+                    "type": "string",
+                    "description": "Reference into the named cycle registry; never a bare word."
+                  },
+                  "cycles_observed": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "span": {
+                    "type": [
+                      "string",
+                      "number"
+                    ],
+                    "description": "Total span observed, in seconds or as recorded prose."
+                  }
+                }
+              }
+            ]
+          },
+          "attribute": {
+            "type": "string",
+            "description": "entity id and attribute name the record was transcribed from."
+          },
+          "source_field": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "reciprocity_records": {
+      "type": "array",
+      "description": "reciprocity: {structural, physical, functional}, each with a regime and a timescale. Functional reciprocity can name a pathway, e.g. via: WATERSHED.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "subject",
+          "structural",
+          "physical",
+          "functional"
+        ],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "The relationship or edge this reciprocity record describes."
+          },
+          "structural": {
+            "$ref": "#/definitions/reciprocity_facet"
+          },
+          "physical": {
+            "$ref": "#/definitions/reciprocity_facet"
+          },
+          "functional": {
+            "$ref": "#/definitions/reciprocity_facet"
+          }
+        }
+      }
+    },
+    "process_forms": {
+      "type": "array",
+      "description": "An attribute in process form (dX/dt): what changes or what state is held, what drives it, on what timescale or named cycle, inside what regime bounds, under what scope. A bare scalar with none of these is legacy.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "attribute",
+          "form",
+          "driver",
+          "timescale",
+          "regime_bounds",
+          "scope_ref"
+        ],
+        "properties": {
+          "attribute": {
+            "type": "string"
+          },
+          "form": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "quantity"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "rate",
+                  "state"
+                ]
+              },
+              "quantity": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {},
+              "units": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "driver": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "What makes the quantity change or holds the state. Null = not recorded."
+          },
+          "timescale": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "cycle_ref": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^CY_[A-Z0-9_]+$"
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "description": "A named cycle in registry/cycles.json, or the timescale as recorded."
+          },
+          "regime_bounds": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Variable -> [low, high] within which the form holds. Null = not recorded."
+          },
+          "scope_ref": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "unsourced": {
+            "type": "boolean"
+          },
+          "source": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
