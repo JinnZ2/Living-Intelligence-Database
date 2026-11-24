@@ -151,6 +151,8 @@ But all current entities use `"relation"` and `"target"`. New contributors follo
 
 The file dated `2025-10-14` lists "GPT-5" as co-creator. GPT-5 had not been released at that date. This either reflects an aspirational future reference or should be corrected to the actual model used (GPT-4o, Claude, etc.). This affects academic credibility if the repo is cited.
 
+Note 2026-11-24 (correction, the line above is kept as written): GPT-5 was released 2025-08-07, which is before the `2025-10-14` date of `CO_CREATION.md`. The statement "GPT-5 had not been released at that date" is wrong, and the finding built on it (heading 1.11) does not hold. The co-creation record in `CO_CREATION.md` stands as written and is not changed. Source of the release date: the owner's work order of 2026-11-24; it was not looked up again here.
+
 ---
 
 ## 2. Markdown Information Gaps

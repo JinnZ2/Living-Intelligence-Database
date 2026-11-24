@@ -9,6 +9,17 @@ and returns a falsification report.
 Usage:
   python3 falsifier.py --entity "BE" --attribute "efficiency_factor"
   python3 falsifier.py --entity "COUNCIL"
+  python3 falsifier.py --entity "BE" --legacy        behaviour before the 2026-11-24 repair
+
+Repair 2026-11-24 (fixtures F3, F5 in validation/fixtures/DECLARED.json):
+  F3  a counterexample with no match in the database reads outcome NOT_TESTED: the search found
+      nothing, which is not a test the claim survived. A match reads RISK_FLAGGED (a text match,
+      still to be read by a person). This instrument has no observation that reads "survived",
+      so tests_survived is 0 by construction. With no RISK_FLAGGED check there is no score:
+      falsification_resistance is null (before: 1.0, also with 0 tests).
+  F5  if the entity file named in the index cannot be loaded, the report says LOAD_FAILED and
+      stops. Before, the thin index entry was used in its place without a word.
+  The behaviour before the repair is kept behind legacy=True / --legacy, for comparison.
 """
 
 import json
@@ -87,7 +98,7 @@ def generate_counterexamples(entity: dict, attribute_name: str) -> List[Dict[str
 # ------------------------------------------------------------------
 # 2. Check counterexamples against the database
 # ------------------------------------------------------------------
-def check_counterexample(counterexample: dict, ontology: dict) -> Dict[str, Any]:
+def check_counterexample(counterexample: dict, ontology: dict, legacy: bool = False) -> Dict[str, Any]:
     """Search the ontology for any entity that might serve as a counterexample."""
     search_terms = []
     if "constraint" in counterexample:
@@ -111,10 +122,21 @@ def check_counterexample(counterexample: dict, ontology: dict) -> Dict[str, Any]
                             "value": val,
                             "note": f"Found entity {entity['id']} that may relate to '{term}'."
                         })
+    if legacy:
+        return {
+            "counterexample": counterexample,
+            "matches_in_db": matches[:3],
+            "falsification_risk": "high" if matches else "low"
+        }
     return {
         "counterexample": counterexample,
+        "search_terms": search_terms,
         "matches_in_db": matches[:3],
-        "falsification_risk": "high" if matches else "low"
+        "outcome": "RISK_FLAGGED" if matches else "NOT_TESTED",
+        "falsification_risk": "high" if matches else None,
+        "reason": (None if matches else
+                   ("no search term for this kind of counterexample" if not search_terms
+                    else "no match in the database: nothing was tested"))
     }
 
 # ------------------------------------------------------------------
@@ -123,7 +145,8 @@ def check_counterexample(counterexample: dict, ontology: dict) -> Dict[str, Any]
 def falsify(entity_id: str,
             attribute_name: str = None,
             ontology: Optional[dict] = None,
-            ontology_path: Optional[str] = None) -> dict:
+            ontology_path: Optional[str] = None,
+            legacy: bool = False) -> dict:
     """Try to falsify a claim stored in an entity's scoped attribute."""
     if ontology is None:
         ontology = load_ontology(ontology_path)
@@ -145,8 +168,17 @@ def falsify(entity_id: str,
         try:
             with open(full_path, "r") as f:
                 entity = json.load(f)
-        except (OSError, json.JSONDecodeError):
-            entity = index_entry
+        except (OSError, json.JSONDecodeError) as exc:
+            if legacy:
+                entity = index_entry
+            else:
+                return {
+                    "mode": "repaired",
+                    "entity": entity_id,
+                    "error": f"LOAD_FAILED: entity file for {entity_id} could not be loaded; nothing was analysed.",
+                    "load_failures": [{"id": entity_id, "path": str(entity_path), "state": "LOAD_FAILED",
+                                       "reason": "%s: %s" % (type(exc).__name__, exc)}]
+                }
     else:
         entity = index_entry
 
@@ -164,26 +196,47 @@ def falsify(entity_id: str,
     survived = 0
     failed = 0
 
+    not_tested = 0
     for ce in counterexamples:
-        check = check_counterexample(ce, ontology)
+        check = check_counterexample(ce, ontology, legacy=legacy)
         checks.append(check)
         if check["falsification_risk"] == "high":
             failed += 1
-        else:
+        elif legacy:
             survived += 1
+        else:
+            not_tested += 1
 
     total = survived + failed
-    score = survived / total if total > 0 else 1.0
+    if legacy:
+        score = survived / total if total > 0 else 1.0
+        return {
+            "mode": "legacy",
+            "entity": entity_id,
+            "attribute": attribute_name,
+            "counterexamples_generated": len(counterexamples),
+            "tests_survived": survived,
+            "tests_failed": failed,
+            "falsification_resistance": round(score, 2),
+            "details": checks,
+            "note": "A high falsification resistance means the claim survived many stress tests. A low score means the claim may have narrow scope or hidden brittleness.",
+            "legacy_note": "reading before the 2026-11-24 repair: no match is counted as survived; 0 tests score 1.0"
+        }
 
     return {
+        "mode": "repaired",
         "entity": entity_id,
         "attribute": attribute_name,
         "counterexamples_generated": len(counterexamples),
         "tests_survived": survived,
         "tests_failed": failed,
-        "falsification_resistance": round(score, 2),
+        "tests_not_tested": not_tested,
+        "falsification_resistance": round(survived / total, 2) if total > 0 else None,
+        "resistance_reason": (None if total > 0 else
+                              "no counterexample was tested: no score"),
+        "load_failures": [],
         "details": checks,
-        "note": "A high falsification resistance means the claim survived many stress tests. A low score means the claim may have narrow scope or hidden brittleness."
+        "note": "NOT_TESTED = the search found nothing; it is not a survived test. RISK_FLAGGED = a text match in the database, to be read by a person. Null resistance = no score."
     }
 
 # ------------------------------------------------------------------
@@ -195,6 +248,8 @@ if __name__ == "__main__":
     parser.add_argument("--entity", type=str, required=True, help="Entity ID (e.g., 'BE')")
     parser.add_argument("--attribute", type=str, default=None, help="Attribute name (default: first scoped)")
     parser.add_argument("--ontology", type=str, default=None)
+    parser.add_argument("--legacy", action="store_true",
+                        help="behaviour before the 2026-11-24 repair (no match = survived; thin fallback on load failure)")
     args = parser.parse_args()
-    result = falsify(args.entity, args.attribute, ontology_path=args.ontology)
+    result = falsify(args.entity, args.attribute, ontology_path=args.ontology, legacy=args.legacy)
     print(json.dumps(result, indent=2))

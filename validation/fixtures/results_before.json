@@ -1,0 +1,104 @@
+{
+  "record": "known-answer fixtures",
+  "commit": "58f80e48bae46705ce65bfdb2ebd3f147683f7c9",
+  "counts": {
+    "PASS": 0,
+    "FAIL": 8,
+    "ERROR": 0,
+    "NOT_RUN": 0
+  },
+  "fixtures": [
+    {
+      "id": "F1",
+      "instrument": "verify.py",
+      "must_read": "unknown claim -> UNKNOWN, posterior null",
+      "state": "FAIL",
+      "observed": {
+        "verdict": null,
+        "posterior_probability": 0.79,
+        "tests_passed": 1
+      }
+    },
+    {
+      "id": "F2",
+      "instrument": "verify.py",
+      "must_read": "one claim over 5 attributes -> evidence count 1",
+      "state": "FAIL",
+      "observed": {
+        "evidence_count": "absent",
+        "claim_calls": 5,
+        "posterior_5_attrs": 0.9987,
+        "posterior_1_attr": 0.79
+      }
+    },
+    {
+      "id": "F3",
+      "instrument": "falsifier.py",
+      "must_read": "no match -> NOT_TESTED; 0 tests -> no score",
+      "state": "FAIL",
+      "observed": {
+        "a_outcomes": [
+          "low"
+        ],
+        "a_survived": 1,
+        "a_resistance": 1.0,
+        "b_counterexamples": 0,
+        "b_resistance": 1.0
+      }
+    },
+    {
+      "id": "F4",
+      "instrument": "dependency_tree.py",
+      "must_read": "unresolved link reported, not dropped",
+      "state": "FAIL",
+      "observed": {
+        "unresolved": "absent",
+        "children": []
+      }
+    },
+    {
+      "id": "F5a",
+      "instrument": "falsifier.py",
+      "must_read": "load fails -> LOAD_FAILED, no thin substitution",
+      "state": "FAIL",
+      "observed": {
+        "load_failures": "absent",
+        "error": "No scoped attributes found in entity GHOST.",
+        "analysed": false
+      }
+    },
+    {
+      "id": "F5b",
+      "instrument": "audit.py",
+      "must_read": "load fails -> LOAD_FAILED, scoped_ratio null",
+      "state": "FAIL",
+      "observed": {
+        "load_failures": "absent",
+        "total_entities": 1,
+        "scoped_ratio": 1.0
+      }
+    },
+    {
+      "id": "F5c",
+      "instrument": "dependency_tree.py",
+      "must_read": "load fails -> LOAD_FAILED, not built from thin entry",
+      "state": "FAIL",
+      "observed": {
+        "load_failures": "absent",
+        "start_entity": "GHOST",
+        "error": ""
+      }
+    },
+    {
+      "id": "F6",
+      "instrument": "scripts/build_index.py",
+      "must_read": "broken link -> exit 1 (one KNOWN_HELD link allowlisted)",
+      "state": "FAIL",
+      "observed": {
+        "a_as_is_with_allowlist_exit": 0,
+        "b_extra_broken_link_exit": 0,
+        "c_no_allowlist_exit": 0
+      }
+    }
+  ]
+}

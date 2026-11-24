@@ -56,6 +56,12 @@
       "directory": "ontology/ai/",
       "schema": "schemas/ai.schema.json",
       "description": "Artificial intelligences \u2014 neural networks, LLMs, evolutionary, swarm, reinforcement, generative"
+    },
+    {
+      "type": "social",
+      "directory": "ontology/social/",
+      "schema": "schemas/social.schema.json",
+      "description": "Social coordination cases \u2014 colony, pack, pod, swarm decision, obligation practice"
     }
   ],
   "entry_points": {
@@ -187,7 +193,11 @@
     "WH": "Whale",
     "WHALE_POD": "Humpback Whale Pod",
     "WOLF": "Wolf",
-    "WOLF_PACK": "Wolf Pack"
+    "WOLF_PACK": "Wolf Pack",
+    "MIMOSA": "Mimosa pudica",
+    "BEE_NEST_SITE": "Honeybee Nest-Site Selection",
+    "WHALE": "Humpback Whale Pod",
+    "STONE_LEDGER": "Stone-and-art obligation ledger"
   },
   "constants": {
     "phi": {
@@ -234,6 +244,22 @@
     {
       "name": "energy_mode",
       "description": "Shares an energy transmission mode"
+    },
+    {
+      "name": "energy_exchange",
+      "description": "Energy passes between the two entities"
     }
+  ],
+  "id_states": {
+    "what": "State of ids that are kept in id_map but are no longer the id of an entity in ontology/. Nothing is deleted from id_map.",
+    "status": "PROPOSED",
+    "WHALE_POD": {
+      "being_tense": "HAVING_BEEN",
+      "now": "WHALE",
+      "note": "Note 2026-11-24: no entity in ontology/ carries the id WHALE_POD. The entity named 'Humpback Whale Pod' (ontology/social/humpback_whale_pod.json) carries the id WHALE. The date of the change is not recorded in this checkout (shallow history). WHALE_POD is kept in id_map and is not deleted."
+    }
+  },
+  "notes": [
+    "Note 2026-11-24: id_map gained MIMOSA, BEE_NEST_SITE, WHALE, STONE_LEDGER (names copied from ontology_index.json); ontology_types gained social; relation_types gained energy_exchange (4 links in the index). Source: audit/2026-11-24/LID_execution_results_2026-11-24.md, Stage 01 and R11. The version field is unchanged."
   ]
 }

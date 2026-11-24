@@ -1,0 +1,15 @@
+{
+  "what": "Links whose target is not an entity in ontology/, known and held as they are. scripts/build_index.py fails on any broken link that is not listed here.",
+  "declared": "2026-11-24",
+  "status": "PROPOSED",
+  "rule": "an entry matches one link exactly (source, target, relation). An entry that matches no link in the build is reported as stale. Adding an entry is a decision of the owner; the build never adds one.",
+  "links": [
+    {
+      "source": "WOLF_PACK",
+      "target": "COUNCIL",
+      "relation": "synergy",
+      "state": "KNOWN_HELD",
+      "reason": "COUNCIL exists only at validation/example/council.json, outside ontology/, so the build does not index it. Whether COUNCIL moves into ontology/ or the link is recorded as pointing to an example is the owner's decision (audit/2026-11-24/LID_execution_results_2026-11-24.md, N03 and R10). Held until then; the link is not removed."
+    }
+  ]
+}

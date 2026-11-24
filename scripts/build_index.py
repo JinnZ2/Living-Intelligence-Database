@@ -1,3 +1,14 @@
+"""build_index.py -- validate ontology/ against schemas/ and write ontology_index.json.
+
+    python scripts/build_index.py             a broken link stops the build (exit 1, no index written)
+    python scripts/build_index.py --legacy    behaviour before the 2026-11-24 repair: broken links
+                                              are printed, the index is written, exit 0
+
+Repair 2026-11-24 (fixture F6 in validation/fixtures/DECLARED.json): a link whose target is not
+an indexed entity is an error. The only links let through are the ones listed, each with its
+reason, in registry/known_held_links.json (state KNOWN_HELD). An entry there that matches no
+link is reported as stale. With an error of any kind the index file is left as it was.
+"""
 import json, os, sys
 from pathlib import Path
 from jsonschema import validate, ValidationError
@@ -6,6 +17,19 @@ ROOT = Path(__file__).resolve().parents[1]
 ONTOLOGY_DIR = ROOT / "ontology"
 SCHEMA_DIR = ROOT / "schemas"
 OUTPUT_FILE = ROOT / "ontology_index.json"
+KNOWN_HELD_FILE = ROOT / "registry" / "known_held_links.json"
+
+def load_known_held():
+    """Return {(source, target, relation): reason} for links declared KNOWN_HELD. No file = none."""
+    if not KNOWN_HELD_FILE.exists():
+        return {}
+    with open(KNOWN_HELD_FILE, "r") as f:
+        doc = json.load(f)
+    held = {}
+    for l in doc.get("links", []):
+        if l.get("state") == "KNOWN_HELD" and l.get("reason"):
+            held[(l.get("source"), l.get("target"), l.get("relation"))] = l["reason"]
+    return held
 
 # Schemas referenced by file name from the per-type schemas ($ref: "<name>").
 SHARED_SCHEMAS = ("coordination.schema.json", "gate_sensing.schema.json",
@@ -34,7 +58,7 @@ def validate_entity(entity, schema):
     except ValidationError as e:
         return False, str(e)
 
-def build_index():
+def build_index(legacy=False):
     index = {"entities": [], "relations": []}
     seen_ids = {}
     errors = 0
@@ -112,10 +136,38 @@ def build_index():
         if rel["target"] not in all_ids:
             broken_links.append(rel)
 
-    if broken_links:
-        print(f"\n⚠️  {len(broken_links)} broken link(s) (target not in index):")
+    if legacy:
+        if broken_links:
+            print(f"\n⚠️  {len(broken_links)} broken link(s) (target not in index):")
+            for bl in broken_links:
+                print(f"   {bl['source']} --{bl['relation']}--> {bl['target']} (missing)")
+    else:
+        held = load_known_held()
+        seen_held = set()
+        not_held = []
         for bl in broken_links:
-            print(f"   {bl['source']} --{bl['relation']}--> {bl['target']} (missing)")
+            key = (bl["source"], bl["target"], bl["relation"])
+            if key in held:
+                seen_held.add(key)
+            else:
+                not_held.append(bl)
+        if seen_held:
+            print(f"\n⚠️  {len(seen_held)} broken link(s) KNOWN_HELD (registry/known_held_links.json):")
+            for k in sorted(seen_held):
+                print(f"   {k[0]} --{k[2]}--> {k[1]} (held)")
+        stale = sorted(set(held) - seen_held)
+        if stale:
+            print(f"\n⚠️  {len(stale)} KNOWN_HELD entr(y/ies) match no link in this build (stale):")
+            for k in stale:
+                print(f"   {k[0]} --{k[2]}--> {k[1]}")
+        if not_held:
+            print(f"\n❌ {len(not_held)} broken link(s) (target not in index, not KNOWN_HELD):")
+            for bl in not_held:
+                print(f"   {bl['source']} --{bl['relation']}--> {bl['target']} (missing)")
+            errors += len(not_held)
+        if errors > 0:
+            print(f"\n❌ {errors} error(s). ontology_index.json was NOT written.")
+            sys.exit(1)
 
     # Write index
     with open(OUTPUT_FILE, "w") as f:
@@ -128,4 +180,4 @@ def build_index():
         sys.exit(1)
 
 if __name__ == "__main__":
-    build_index()
+    build_index(legacy="--legacy" in sys.argv[1:])

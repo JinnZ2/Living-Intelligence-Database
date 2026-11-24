@@ -1,0 +1,55 @@
+{
+  "what": "Known-answer fixtures for the validation instruments, declared and committed BEFORE any instrument is changed. Each fixture is a constructed input with one stated answer. The runner is validation/fixtures/run_fixtures.py.",
+  "declared": "2026-11-24",
+  "base": "main at ad2ae9b",
+  "status": "PROPOSED",
+  "co_authored": true,
+  "observer_slots": null,
+  "origin": "the owner's work order 'LID Package A: instrument reliability'; the defects were measured in audit/2026-11-24/LID_execution_results_2026-11-24.md (Stage 01 and Stage 03, repair register R1-R5, R9)",
+  "why_its_own_file": "registry/DECLARED.json declares the provenance chain and another open branch appends to it; a second append here would collide with that one",
+  "fixtures": {
+    "F1": {
+      "instrument": "validation/verify.py",
+      "input": "the command line with --claim no_such_claim on a one-entity index",
+      "must_read": "verdict UNKNOWN; posterior_probability null; the unknown name is not run as a claim that returns True",
+      "defect": "an unregistered claim name silently becomes lambda: True"
+    },
+    "F2": {
+      "instrument": "validation/verify.py",
+      "input": "one claim function that takes no argument, one entity with 5 scoped attributes",
+      "must_read": "evidence_count 1 (not 5); the claim is called once; the posterior equals the posterior with 1 attribute",
+      "defect": "the same claim is counted once per attribute, so the posterior rises with the number of attributes"
+    },
+    "F3": {
+      "instrument": "validation/falsifier.py",
+      "input": "(a) a scoped attribute with one constraint and an ontology in which nothing matches it; (b) a scoped attribute with an empty scope",
+      "must_read": "(a) the check reads NOT_TESTED, tests_survived 0, falsification_resistance null; (b) 0 counterexamples, falsification_resistance null",
+      "defect": "no match is counted as survived; with 0 tests the score is 1.0"
+    },
+    "F4": {
+      "instrument": "validation/dependency_tree.py",
+      "input": "entity A with a link to an id that is not in the ontology",
+      "must_read": "the result lists the unresolved link (source, target, relation) under 'unresolved', and the tree shows the target as an unresolved node",
+      "defect": "a link whose target is not in the ontology is dropped silently"
+    },
+    "F5": {
+      "instrument": "validation/falsifier.py, validation/audit.py, validation/dependency_tree.py",
+      "input": "an index entry whose path does not exist",
+      "must_read": "the report carries load_failures with state LOAD_FAILED for that id; the thin index entry is not used in its place (falsifier: no analysis of the entity; audit: scoped_ratio null, not 1.0; dependency_tree: the id is not built from the thin entry)",
+      "defect": "a load failure falls back to the thin index entry without a word"
+    },
+    "F6": {
+      "instrument": "scripts/build_index.py",
+      "input": "a copy of ontology/ and schemas/: (a) as it is, with the allowlist; (b) with one more broken link added; (c) as it is, without the allowlist",
+      "must_read": "(a) exit 0; (b) exit 1; (c) exit 1",
+      "allowlist": "WOLF_PACK -> COUNCIL (synergy) is declared KNOWN_HELD in registry/known_held_links.json with its reason, so the build passes on that one link and on no other",
+      "defect": "broken links are printed and the build still writes the index and exits 0"
+    }
+  },
+  "rules": {
+    "order": "fixtures are run against the unchanged instruments first and the result is committed (results_before.json); then each instrument is repaired until its fixture passes",
+    "legacy": "the behaviour before the repair stays reachable behind a --legacy flag (and a legacy=True argument), for comparison; it is not deleted",
+    "no_tuning": "a fixture's stated answer is not changed after the instruments are seen to fail or pass it",
+    "stdlib": "the runner and the repairs use the standard library only. scripts/build_index.py already imports jsonschema; where that is not installed F6 reads NOT_RUN, which is not a pass"
+  }
+}
