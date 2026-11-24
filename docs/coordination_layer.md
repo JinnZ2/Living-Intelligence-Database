@@ -92,9 +92,7 @@ Why they exist: [`failure_mode_label_lock.md`](failure_mode_label_lock.md).
 | `ontology/plant/slime_mold.json` | stub. Tero 2010 read at abstract depth |
 | `ontology/plant/mycelium.json` | stub. Kiers 2011 and Karst 2023 read at abstract depth. Network claims flagged as contested |
 | `ontology/social/honeybee_nest_site_selection.json` | stub, new entity. Seeley & Visscher 2004 and Seeley 2010 not opened |
-
-Held, not created: a human stone-and-art debt ledger record, pending a
-consent check.
+| `ontology/social/stone_art_ledger.json` | new entity. Source is contributor oral knowledge and lived practice, tagged OBSERVED; not a published citation. Names no tribe, nation or person. `loop_topology` is `DERIVED (basis: OBSERVED)` |
 
 ## Checking
 

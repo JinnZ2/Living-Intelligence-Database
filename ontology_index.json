@@ -1477,6 +1477,13 @@
       "substrate_layer": "both"
     },
     {
+      "id": "STONE_LEDGER",
+      "name": "Stone-and-art obligation ledger",
+      "ontology": "social",
+      "path": "ontology/social/stone_art_ledger.json",
+      "description": "A practice common across many Indigenous peoples of the Americas: what is owed after an unequal exchange is recorded on stone or clay, and art is made over the record when the obligation completes. No specific tribe, nation or person is named in this record."
+    },
+    {
       "id": "WOLF_PACK",
       "name": "Wolf Pack",
       "ontology": "social",
