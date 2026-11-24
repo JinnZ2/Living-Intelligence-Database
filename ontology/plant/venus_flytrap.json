@@ -74,5 +74,92 @@
         ]
       }
     }
+  },
+  "gate_sensing": {
+    "limit_sensed": "Spending the digestive secretion on a trapped object that is not prey.",
+    "early_signal": "The number of action potentials fired as trigger hairs are touched: a running count of mechanical stimulations.",
+    "response": "Staged by the count. Two action potentials: the trap snaps shut. After the second stimulus: the jasmonic acid signalling pathway is activated. More than three: genes for prey-degrading hydrolases are expressed, in proportion to the number of stimulations. Transcripts of the sodium channel DmHKT1 also depend on the number of stimulations.",
+    "lead_time": {
+      "value": null,
+      "unit": null,
+      "note": "unmeasured: the abstract gives counts of stimulations, not times"
+    },
+    "status": {
+      "limit_sensed": "DERIVED (basis: OBSERVED)",
+      "early_signal": "OBSERVED",
+      "response": "OBSERVED",
+      "lead_time": null
+    },
+    "sources": {
+      "limit_sensed": [
+        "Böhm J, Scherzer S, Krol E, et al. (2016) The Venus Flytrap Dionaea muscipula Counts Prey-Induced Action Potentials to Induce Sodium Uptake. Curr Biol 26(3):286-295. doi:10.1016/j.cub.2015.11.057. PMID 26804557 [abstract read via NCBI efetch 2026-11-24; full text not read]"
+      ],
+      "early_signal": [
+        "Böhm J, Scherzer S, Krol E, et al. (2016) The Venus Flytrap Dionaea muscipula Counts Prey-Induced Action Potentials to Induce Sodium Uptake. Curr Biol 26(3):286-295. doi:10.1016/j.cub.2015.11.057. PMID 26804557 [abstract read via NCBI efetch 2026-11-24; full text not read]"
+      ],
+      "response": [
+        "Böhm J, Scherzer S, Krol E, et al. (2016) The Venus Flytrap Dionaea muscipula Counts Prey-Induced Action Potentials to Induce Sodium Uptake. Curr Biol 26(3):286-295. doi:10.1016/j.cub.2015.11.057. PMID 26804557 [abstract read via NCBI efetch 2026-11-24; full text not read]"
+      ],
+      "lead_time": null
+    },
+    "notes": {
+      "limit_sensed": "This record's reading of the abstract's phrase that the count makes it 'worthwhile activating the glands'. The abstract does not name a limit or a cost.",
+      "_depth": "All fields rest on the abstract only."
+    }
+  },
+  "functional_intelligence": {
+    "adapts": {
+      "value": "yes",
+      "status": "OBSERVED",
+      "source": [
+        "Böhm J, Scherzer S, Krol E, et al. (2016) The Venus Flytrap Dionaea muscipula Counts Prey-Induced Action Potentials to Induce Sodium Uptake. Curr Biol 26(3):286-295. doi:10.1016/j.cub.2015.11.057. PMID 26804557 [abstract read via NCBI efetch 2026-11-24; full text not read]"
+      ],
+      "note": "Hydrolase gene expression is proportional to the number of mechanical stimulations."
+    },
+    "signals": {
+      "value": "yes",
+      "status": "OBSERVED",
+      "source": [
+        "Böhm J, Scherzer S, Krol E, et al. (2016) The Venus Flytrap Dionaea muscipula Counts Prey-Induced Action Potentials to Induce Sodium Uptake. Curr Biol 26(3):286-295. doi:10.1016/j.cub.2015.11.057. PMID 26804557 [abstract read via NCBI efetch 2026-11-24; full text not read]"
+      ],
+      "note": "Within the plant: action potentials and the jasmonic acid pathway. No signal to another organism is reported in the abstract."
+    },
+    "responds_to_other": {
+      "value": "yes",
+      "status": "OBSERVED",
+      "source": [
+        "Böhm J, Scherzer S, Krol E, et al. (2016) The Venus Flytrap Dionaea muscipula Counts Prey-Induced Action Potentials to Induce Sodium Uptake. Curr Biol 26(3):286-295. doi:10.1016/j.cub.2015.11.057. PMID 26804557 [abstract read via NCBI efetch 2026-11-24; full text not read]"
+      ],
+      "note": "Responds to the touches of a moving, struggling prey animal."
+    },
+    "changes_environment": {
+      "value": "yes",
+      "status": "OBSERVED",
+      "source": [
+        "Böhm J, Scherzer S, Krol E, et al. (2016) The Venus Flytrap Dionaea muscipula Counts Prey-Induced Action Potentials to Induce Sodium Uptake. Curr Biol 26(3):286-295. doi:10.1016/j.cub.2015.11.057. PMID 26804557 [abstract read via NCBI efetch 2026-11-24; full text not read]"
+      ],
+      "note": "The closed trap is sealed and flooded with an acidic enzyme mix. Stated in the abstract as background, not as a result of this study."
+    },
+    "co_adapts": {
+      "value": "unmeasured",
+      "status": null,
+      "source": null,
+      "note": "unmeasured: no source read addresses change in the prey in response to the plant."
+    },
+    "coupling_note": "Prey animal inside the trap (moving, sodium-rich); nutrient-poor soil as the stated condition under which the plant depends on an animal diet.",
+    "contested_label": null,
+    "notes": {
+      "contested_label": "null = no information. The source title uses the word 'Counts'; no source disputing that label was read. Context reviews: Lin Y (2026) Plant embodied intelligence: A paradigmatic perspective. iScience 29(7):116511. doi:10.1016/j.isci.2026.116511. PMID 42383002 [abstract read via NCBI efetch 2026-11-24; review, cited as context]; Segundo-Ortin (2026) Philosophy Compass [NOT OPENED: not found in PubMed; title not confirmed]"
+    }
+  },
+  "observation_context": {
+    "gate_sensing.early_signal": "lab",
+    "gate_sensing.response": "lab",
+    "gate_sensing.limit_sensed": null,
+    "functional_intelligence.adapts": "lab",
+    "functional_intelligence.signals": "lab",
+    "functional_intelligence.responds_to_other": "lab",
+    "functional_intelligence.changes_environment": null,
+    "functional_intelligence.co_adapts": null
   }
 }

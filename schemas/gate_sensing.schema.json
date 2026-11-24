@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "gate_sensing.schema.json",
+  "title": "Gate sensing block",
+  "description": "How an entity senses an approaching limit and responds before it arrives. Every field is nullable. Null means no information: keep the key, never drop it.",
+  "type": "object",
+  "required": [
+    "limit_sensed",
+    "early_signal",
+    "response",
+    "lead_time",
+    "status",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "limit_sensed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "What approaching constraint is detected."
+    },
+    "early_signal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "How it is detected (slowing recovery, gradient change, habituation, a count of events)."
+    },
+    "response": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Adaptation taken before the limit arrives."
+    },
+    "lead_time": {
+      "description": "Time between the early signal and the limit. value is a number only if a source measured it; otherwise null with a note.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "value",
+        "unit",
+        "note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "status": {
+      "description": "Per field: OBSERVED, DERIVED (optionally with basis), PROPOSED, or null where the field has no value.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "limit_sensed": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        },
+        "early_signal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        },
+        "response": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        },
+        "lead_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        }
+      }
+    },
+    "sources": {
+      "description": "Citations per field.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "limit_sensed": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "early_signal": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "response": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "lead_time": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

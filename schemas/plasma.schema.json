@@ -5,6 +5,9 @@
   "required": ["id", "name", "ontology"],
   "properties": {
     "coordination": { "$ref": "coordination.schema.json" },
+    "gate_sensing": { "$ref": "gate_sensing.schema.json" },
+    "functional_intelligence": { "$ref": "functional_intelligence.schema.json" },
+    "observation_context": { "$ref": "observation_context.schema.json" },
     "id": { "type": "string" },
     "name": { "type": "string" },
     "ontology": { "const": "plasma" },

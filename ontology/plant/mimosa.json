@@ -1,0 +1,51 @@
+{
+  "id": "MIMOSA",
+  "name": "Mimosa pudica",
+  "ontology": "plant",
+  "emoji": "🌿",
+  "symbolic_code": "[MIMOSA_FOLD_HABITUATION_OPEN]",
+  "description": "The sensitive plant. Created to hold a contested-label record only; no capability field is filled.",
+  "co_creation": true,
+  "links": [
+    {
+      "relation": "connected_to",
+      "target": "VENUS"
+    }
+  ],
+  "metadata": {
+    "record_status": "stub: contested_label only",
+    "created": "2026-11-24",
+    "credit": "co-authored (JinnZ2 + Claude)",
+    "note": "entropy_profile and substrate_layer are not required by the plant schema and are left out: no source for them."
+  },
+  "functional_intelligence": {
+    "adapts": null,
+    "signals": null,
+    "responds_to_other": null,
+    "changes_environment": null,
+    "co_adapts": null,
+    "coupling_note": null,
+    "contested_label": [
+      {
+        "label": "learning (habituation of leaf folding)",
+        "claimed_by": [
+          "Gagliano M, Renton M, Depczynski M, Mancuso S (2014) Experience teaches plants to learn faster and forget slower in environments where it matters. Oecologia 175(1):63-72. doi:10.1007/s00442-013-2873-7. PMID 24390479 [abstract read via NCBI efetch 2026-11-24]"
+        ],
+        "disputed_by": null,
+        "note": "disputed_by is null = no information: no source disputing this specific result was read. The abstract states that leaf folding under repeated disturbance 'exhibits clear habituation, suggesting some elementary form of learning', and that the response persisted for a month."
+      },
+      {
+        "label": "consciousness (plants in general)",
+        "claimed_by": null,
+        "disputed_by": [
+          "Taiz L, Alkon D, Draguhn A, et al. (2019) Plants Neither Possess nor Require Consciousness. Trends Plant Sci 24(8):677-687. doi:10.1016/j.tplants.2019.05.008. PMID 31279732 [abstract read via NCBI efetch 2026-11-24]"
+        ],
+        "note": "The Taiz abstract calls the likelihood that plants have consciousness 'effectively nil'. It addresses plants in general and does not name Mimosa. No source claiming consciousness for Mimosa was read."
+      }
+    ],
+    "notes": {
+      "_scope": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them.",
+      "_context": "Context reviews: Lin Y (2026) Plant embodied intelligence: A paradigmatic perspective. iScience 29(7):116511. doi:10.1016/j.isci.2026.116511. PMID 42383002 [abstract read via NCBI efetch 2026-11-24; review, cited as context]; Segundo-Ortin (2026) Philosophy Compass [NOT OPENED: not found in PubMed; title not confirmed]"
+    }
+  }
+}

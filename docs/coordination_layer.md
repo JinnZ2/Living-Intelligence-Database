@@ -70,6 +70,19 @@ not visible at all.
 The toy-model findings behind this field are in
 [`loop_topology_findings.md`](loop_topology_findings.md).
 
+## Related blocks
+
+Three more optional blocks follow the same pattern (own schema file under
+`schemas/`, referenced from every per-type schema, null = no information):
+
+| block | holds |
+|---|---|
+| `gate_sensing` | `limit_sensed`, `early_signal`, `response`, `lead_time` (null value unless measured), with `status` and `sources` per field |
+| `functional_intelligence` | `adapts`, `signals`, `responds_to_other`, `changes_environment`, `co_adapts`: each `yes` / `no` / `unmeasured` with its own status and source; `coupling_note`; `contested_label` (open slot, never required for the yes/no fields) |
+| `observation_context` | per claim (`<block>.<field>`): `lab` / `field` / `long_term_coupled` / `mixed`, or null |
+
+Why they exist: [`failure_mode_label_lock.md`](failure_mode_label_lock.md).
+
 ## Records
 
 | record | state |

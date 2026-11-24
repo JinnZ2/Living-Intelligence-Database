@@ -1041,6 +1041,13 @@
       "substrate_layer": "substrate_primary"
     },
     {
+      "id": "MIMOSA",
+      "name": "Mimosa pudica",
+      "ontology": "plant",
+      "path": "ontology/plant/mimosa.json",
+      "description": "The sensitive plant. Created to hold a contested-label record only; no capability field is filled."
+    },
+    {
       "id": "MOSS",
       "name": "Moss",
       "ontology": "plant",
@@ -3531,6 +3538,11 @@
       "source": "MANGROVE",
       "target": "FLUX",
       "relation": "energy_coupling"
+    },
+    {
+      "source": "MIMOSA",
+      "target": "VENUS",
+      "relation": "connected_to"
     },
     {
       "source": "MOSS",

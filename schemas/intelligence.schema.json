@@ -429,6 +429,562 @@
         }
       }
     },
+    "gate_sensing": {
+      "title": "Gate sensing block",
+      "description": "How an entity senses an approaching limit and responds before it arrives. Every field is nullable. Null means no information: keep the key, never drop it.",
+      "type": "object",
+      "required": [
+        "limit_sensed",
+        "early_signal",
+        "response",
+        "lead_time",
+        "status",
+        "sources"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "limit_sensed": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "What approaching constraint is detected."
+        },
+        "early_signal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "How it is detected (slowing recovery, gradient change, habituation, a count of events)."
+        },
+        "response": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Adaptation taken before the limit arrives."
+        },
+        "lead_time": {
+          "description": "Time between the early signal and the limit. value is a number only if a source measured it; otherwise null with a note.",
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "value",
+            "unit",
+            "note"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "status": {
+          "description": "Per field: OBSERVED, DERIVED (optionally with basis), PROPOSED, or null where the field has no value.",
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "limit_sensed": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            },
+            "early_signal": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            },
+            "response": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            },
+            "lead_time": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            }
+          }
+        },
+        "sources": {
+          "description": "Citations per field.",
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "limit_sensed": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "early_signal": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "response": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "lead_time": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "functional_intelligence": {
+      "title": "Functional intelligence block",
+      "description": "What an entity is observed to do, recorded without requiring a label such as 'intelligent' or 'conscious'. Each capability is yes / no / unmeasured with its own status and source. Null means no information.",
+      "type": "object",
+      "required": [
+        "adapts",
+        "signals",
+        "responds_to_other",
+        "changes_environment",
+        "co_adapts",
+        "coupling_note",
+        "contested_label"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "adapts": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "value",
+            "status",
+            "source"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no",
+                "unmeasured"
+              ]
+            },
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            },
+            "source": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "description": "Changes its own response with conditions or with what has happened to it."
+        },
+        "signals": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "value",
+            "status",
+            "source"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no",
+                "unmeasured"
+              ]
+            },
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            },
+            "source": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "description": "Emits a signal that another part of itself or another organism can read."
+        },
+        "responds_to_other": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "value",
+            "status",
+            "source"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no",
+                "unmeasured"
+              ]
+            },
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            },
+            "source": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "description": "Changes what it does in response to another organism."
+        },
+        "changes_environment": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "value",
+            "status",
+            "source"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no",
+                "unmeasured"
+              ]
+            },
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            },
+            "source": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "description": "Alters its surroundings in a way that then bears on itself or others."
+        },
+        "co_adapts": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "value",
+            "status",
+            "source"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no",
+                "unmeasured"
+              ]
+            },
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "OBSERVED",
+                "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
+                "PROPOSED",
+                null
+              ]
+            },
+            "source": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "description": "It and a partner each change in response to the other, over repeated contact."
+        },
+        "coupling_note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "What the relation is with (the partner, prey, host, substrate)."
+        },
+        "contested_label": {
+          "description": "Open slot: labels under dispute and who disputes them. Recorded; never required for the yes/no fields, and never changes them.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "required": [
+              "label",
+              "claimed_by",
+              "disputed_by"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "claimed_by": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "disputed_by": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "observation_context": {
+      "title": "Observation context",
+      "description": "Per claim, the setting in which it was observed. Key = '<block>.<field>' (e.g. 'gate_sensing.response'). Value = lab / field / long_term_coupled / mixed, or null = not known. A lab setting is an observer cut: it removes the loops that run through the organism's environment.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "enum": [
+          "lab",
+          "field",
+          "long_term_coupled",
+          "mixed",
+          null
+        ]
+      }
+    },
     "meta": {
       "type": "object",
       "properties": {
