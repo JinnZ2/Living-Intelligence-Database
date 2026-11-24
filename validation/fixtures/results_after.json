@@ -1,0 +1,136 @@
+{
+  "record": "known-answer fixtures",
+  "commit": "1d09b498fbceb0ea9e1482b96830f0e3fbdda963",
+  "counts": {
+    "PASS": 8,
+    "FAIL": 0,
+    "ERROR": 0,
+    "NOT_RUN": 0
+  },
+  "fixtures": [
+    {
+      "id": "F1",
+      "instrument": "verify.py",
+      "must_read": "unknown claim -> UNKNOWN, posterior null",
+      "state": "PASS",
+      "observed": {
+        "verdict": "UNKNOWN",
+        "posterior_probability": null,
+        "tests_passed": 0
+      }
+    },
+    {
+      "id": "F2",
+      "instrument": "verify.py",
+      "must_read": "one claim over 5 attributes -> evidence count 1",
+      "state": "PASS",
+      "observed": {
+        "evidence_count": 1,
+        "claim_calls": 1,
+        "posterior_5_attrs": 0.79,
+        "posterior_1_attr": 0.79
+      }
+    },
+    {
+      "id": "F3",
+      "instrument": "falsifier.py",
+      "must_read": "no match -> NOT_TESTED; 0 tests -> no score",
+      "state": "PASS",
+      "observed": {
+        "a_outcomes": [
+          "NOT_TESTED"
+        ],
+        "a_survived": 0,
+        "a_resistance": null,
+        "b_counterexamples": 0,
+        "b_resistance": null
+      }
+    },
+    {
+      "id": "F4",
+      "instrument": "dependency_tree.py",
+      "must_read": "unresolved link reported, not dropped",
+      "state": "PASS",
+      "observed": {
+        "unresolved": [
+          {
+            "source": "A",
+            "target": "NOT_THERE",
+            "relation": "synergy"
+          }
+        ],
+        "children": [
+          [
+            "NOT_THERE",
+            "unresolved"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "F5a",
+      "instrument": "falsifier.py",
+      "must_read": "load fails -> LOAD_FAILED, no thin substitution",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
+          }
+        ],
+        "error": "LOAD_FAILED: entity file for GHOST could not be loaded; nothing was analysed.",
+        "analysed": false
+      }
+    },
+    {
+      "id": "F5b",
+      "instrument": "audit.py",
+      "must_read": "load fails -> LOAD_FAILED, scoped_ratio null",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
+          }
+        ],
+        "total_entities": 1,
+        "scoped_ratio": null
+      }
+    },
+    {
+      "id": "F5c",
+      "instrument": "dependency_tree.py",
+      "must_read": "load fails -> LOAD_FAILED, not built from thin entry",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
+          }
+        ],
+        "start_entity": null,
+        "error": "LOAD_FAILED: entity file for GHOST could not be loaded; no t"
+      }
+    },
+    {
+      "id": "F6",
+      "instrument": "scripts/build_index.py",
+      "must_read": "broken link -> exit 1 (one KNOWN_HELD link allowlisted)",
+      "state": "PASS",
+      "observed": {
+        "a_as_is_with_allowlist_exit": 0,
+        "b_extra_broken_link_exit": 1,
+        "c_no_allowlist_exit": 1
+      }
+    }
+  ]
+}
