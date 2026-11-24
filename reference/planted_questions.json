@@ -1,0 +1,111 @@
+{
+ "note": "Written by hand from the records before the test ran. Answers are produced from reference/lid_reference.jsonl alone. expect.reading is the label the reading protocol gives.",
+ "questions": [
+  {
+   "q": "What carries the coordination signal in an ant colony?",
+   "entity": "ANT",
+   "field": "coordination.carrier",
+   "expect": {
+    "reading": "PROPOSED",
+    "status": "PROPOSED",
+    "value": "Trail pheromone deposited on the substrate by walking foragers."
+   }
+  },
+  {
+   "q": "What carries the coordination signal in the stone ledger?",
+   "entity": "STONE_LEDGER",
+   "field": "coordination.carrier",
+   "expect": {
+    "reading": "OBSERVED",
+    "status": "OBSERVED",
+    "value": "Etched stone or clay recording what is owed on a mismatch."
+   }
+  },
+  {
+   "q": "What is the loop topology of the stone ledger, and on what basis?",
+   "entity": "STONE_LEDGER",
+   "field": "coordination.loop_topology",
+   "expect": {
+    "reading": "DERIVED",
+    "status": "DERIVED (basis: OBSERVED)"
+   }
+  },
+  {
+   "q": "What does ant trail coordination cost in joules?",
+   "entity": "ANT",
+   "field": "coordination.energy_cost",
+   "expect": {
+    "reading": "NO_INFORMATION",
+    "reason": "unmeasured"
+   }
+  },
+  {
+   "q": "What is the coordination signal in quorum sensing?",
+   "entity": "QUORUM",
+   "field": "coordination.signal",
+   "expect": {
+    "reading": "NO_INFORMATION",
+    "reason": null
+   }
+  },
+  {
+   "q": "How does a Venus flytrap respond to the early signal?",
+   "entity": "VENUS",
+   "field": "gate_sensing.response",
+   "expect": {
+    "reading": "OBSERVED",
+    "status": "OBSERVED"
+   }
+  },
+  {
+   "q": "Which limit does the Venus flytrap's gate sense?",
+   "entity": "VENUS",
+   "field": "gate_sensing.limit_sensed",
+   "expect": {
+    "reading": "PROPOSED",
+    "status": "PROPOSED",
+    "value": "Spending the digestive secretion on a trapped object that is not prey."
+   }
+  },
+  {
+   "q": "How far do humpback whales migrate each year?",
+   "entity": "WHALE",
+   "field": "attributes.migration_range",
+   "expect": {
+    "reading": "UNSOURCED"
+   }
+  },
+  {
+   "q": "What is the foraging efficiency of an ant colony?",
+   "entity": "ANT",
+   "field": "attributes.foraging_efficiency",
+   "expect": {
+    "reading": "NOT_ASSESSED",
+    "value": 0.93
+   }
+  },
+  {
+   "q": "Does Mimosa learn?",
+   "entity": "MIMOSA",
+   "label": "learning",
+   "function_fields": [
+    "functional_intelligence.adapts",
+    "functional_intelligence.signals",
+    "functional_intelligence.responds_to_other",
+    "functional_intelligence.changes_environment",
+    "functional_intelligence.co_adapts"
+   ],
+   "expect": {
+    "reading": "NO_INFORMATION",
+    "label_listed": true
+   }
+  }
+ ],
+ "planted_wrong_record": {
+  "note": "Applied to an in-memory copy of the reference only; never written to reference/lid_reference.jsonl.",
+  "entity": "ANT",
+  "field": "coordination.carrier",
+  "status": "OBSERVED",
+  "value": "A map of the colony's goals held by the queen and read by each forager."
+ }
+}
