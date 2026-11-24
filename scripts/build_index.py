@@ -89,12 +89,14 @@ def build_index():
             index["entities"].append(entry)
 
             # Collect relational data from links array
+            # Two link shapes exist: {relation, target} and {rel, to}. Read both.
             for link in data.get("links", []):
-                if "target" in link:
+                target = link.get("target", link.get("to"))
+                if target is not None:
                     index["relations"].append({
                         "source": data["id"],
-                        "target": link["target"],
-                        "relation": link.get("relation", "connected_to")
+                        "target": target,
+                        "relation": link.get("relation", link.get("rel", "connected_to"))
                     })
 
     # Link integrity check

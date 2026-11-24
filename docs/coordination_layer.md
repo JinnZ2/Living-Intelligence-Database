@@ -37,7 +37,8 @@ Status tags:
 - `OBSERVED`: stated by a source that was opened and read. The citation says
   how deep the read was (abstract, full text).
 - `DERIVED`: worked out from other fields of the same record. It is no stronger
-  than the fields it rests on.
+  than the fields it rests on. It may carry that basis:
+  `DERIVED (basis: PROPOSED)` or `DERIVED (basis: OBSERVED)`.
 - `PROPOSED`: not checked. This includes statements carried from memory or
   from other repository text, and citations that were not opened.
 
@@ -66,17 +67,14 @@ read as 0. It was not measured as 0; it was outside the cut.
 survive. A cut with an empty list is a view from which the coordination is
 not visible at all.
 
-Link to the loop-topology and hidden-cost findings: NOT LOCATED. No file by
-either name is in this repository, and none was found in the sibling
-checkouts searched (`simulators`, `method-layer`,
-`thermodynamic-accountability-framework`). Add the path here when it is
-known.
+The toy-model findings behind this field are in
+[`loop_topology_findings.md`](loop_topology_findings.md).
 
 ## Records
 
 | record | state |
 |---|---|
-| `ontology/social/ant_colony.json` | pilot: all fields filled except `energy_cost.joules` (unmeasured). Text fields are PROPOSED: Goss 1989 and Deneubourg 1990 could not be opened. `loop_topology` is DERIVED from them |
+| `ontology/social/ant_colony.json` | pilot: all fields filled except `energy_cost.joules` (unmeasured). Text fields are PROPOSED: Goss 1989 and Deneubourg 1990 could not be opened. `loop_topology` is `DERIVED (basis: PROPOSED)` |
 | `ontology/plant/quorum_biofilm.json` | stub. Miller & Bassler 2001 read at abstract depth |
 | `ontology/plant/slime_mold.json` | stub. Tero 2010 read at abstract depth |
 | `ontology/plant/mycelium.json` | stub. Kiers 2011 and Karst 2023 read at abstract depth. Network claims flagged as contested |

@@ -4178,6 +4178,66 @@
       "relation": "resonance"
     },
     {
+      "source": "ANT",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "ANT",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "ANT",
+      "target": "MY",
+      "relation": "resonance"
+    },
+    {
+      "source": "BEE_NEST_SITE",
+      "target": "BE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "BEE_NEST_SITE",
+      "target": "ANT",
+      "relation": "resonance"
+    },
+    {
+      "source": "WHALE",
+      "target": "ECHO",
+      "relation": "resonance"
+    },
+    {
+      "source": "WHALE",
+      "target": "ANT",
+      "relation": "synergy"
+    },
+    {
+      "source": "WHALE",
+      "target": "SPIRAL",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "WHALE",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "WOLF_PACK",
+      "target": "COUNCIL",
+      "relation": "synergy"
+    },
+    {
+      "source": "WOLF_PACK",
+      "target": "OC",
+      "relation": "resonance"
+    },
+    {
+      "source": "WOLF_PACK",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
+    },
+    {
       "source": "CYCLE",
       "target": "ECHO",
       "relation": "temporal_bridge"

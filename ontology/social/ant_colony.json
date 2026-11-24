@@ -84,7 +84,7 @@
   "links": [
     { "rel": "geometry_link", "to": "HEX", "note": "Colony tunnels often approximate hexagonal packing for structural efficiency." },
     { "rel": "synergy", "to": "BE", "note": "Both use pheromone/waggle communication and quorum sensing for collective decision." },
-    { "rel": "resonance", "to": "MYCELIUM", "note": "Both distribute information without central nodes; both show self-repairing network topology." }
+    { "rel": "resonance", "to": "MY", "note": "Both distribute information without central nodes; both show self-repairing network topology." }
   ],
   "coordination": {
     "carrier": "Trail pheromone deposited on the substrate by walking foragers.",
@@ -182,7 +182,7 @@
       "closure": "PROPOSED",
       "trust_basis": "PROPOSED",
       "energy_cost": null,
-      "loop_topology": "DERIVED",
+      "loop_topology": "DERIVED (basis: PROPOSED)",
       "assumption_trace": "PROPOSED"
     },
     "notes": {

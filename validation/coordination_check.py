@@ -12,7 +12,8 @@ Standard library only (no jsonschema). Checks:
        - loop_topology is null or {cycles, observer_cuts}; every cycle id
          named under cycles_surviving exists
        - assumption_trace is null or a list of strings
-       - status tags are OBSERVED / DERIVED / PROPOSED or null
+       - status tags are OBSERVED / DERIVED / PROPOSED or null; DERIVED may
+         carry a basis: "DERIVED (basis: PROPOSED)" or "DERIVED (basis: OBSERVED)"
        - a field that holds a value has a status tag; a field with no value
          has none (energy_cost with joules null counts as no value)
        - sources keys are field names; values are null or lists of strings
@@ -34,7 +35,8 @@ TEXT = ("carrier", "signal", "record", "closure", "trust_basis")
 FIELDS = TEXT + ("energy_cost", "loop_topology", "assumption_trace")
 KEYS = FIELDS + ("sources", "status")
 OPTIONAL = ("notes",)
-STATUS = ("OBSERVED", "DERIVED", "PROPOSED")
+STATUS = ("OBSERVED", "DERIVED", "PROPOSED",
+          "DERIVED (basis: PROPOSED)", "DERIVED (basis: OBSERVED)")
 PER_TYPE = ("ai", "animal", "crystal", "energy", "plant", "plasma", "shape",
             "social", "temporal")
 
@@ -115,7 +117,7 @@ def check_block(c):
         if k not in FIELDS:
             out.append("status: '%s' is not a field name" % k)
         elif st[k] is not None and st[k] not in STATUS:
-            out.append("status.%s = %r is not one of %s" % (k, st[k], "/".join(STATUS)))
+            out.append("status.%s = %r is not one of: %s" % (k, st[k], ", ".join(STATUS)))
     for k in FIELDS:
         tag = (st or {}).get(k)
         if has_value(c, k) and tag is None:
@@ -213,6 +215,12 @@ def selftest():
         ("dropped key fires", lambda: bad(lambda c: c.pop("closure"))),
         ("unknown key fires", lambda: bad(lambda c: c.update(price="1"))),
         ("bad status tag fires", lambda: bad(lambda c: c["status"].update(carrier="TRUE"))),
+        ("DERIVED with a basis passes", lambda: bad(
+            lambda c: c["status"].update(loop_topology="DERIVED (basis: PROPOSED)")) == []),
+        ("DERIVED with an unknown basis fires", lambda: bad(
+            lambda c: c["status"].update(loop_topology="DERIVED (basis: GUESS)"))),
+        ("basis on a non-DERIVED tag fires", lambda: bad(
+            lambda c: c["status"].update(carrier="OBSERVED (basis: PROPOSED)"))),
         ("value without status fires", lambda: bad(lambda c: c["status"].pop("carrier"))),
         ("status on a null field fires", lambda: bad(lambda c: c["status"].update(signal="OBSERVED"))),
         ("joules as text fires", lambda: bad(lambda c: c["energy_cost"].update(joules="low"))),

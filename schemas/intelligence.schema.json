@@ -293,7 +293,7 @@
           }
         },
         "status": {
-          "description": "Per field: OBSERVED, DERIVED, PROPOSED, or null where the field is null.",
+          "description": "Per field: OBSERVED, DERIVED, PROPOSED, or null where the field has no value. DERIVED may carry the status of what it rests on: 'DERIVED (basis: PROPOSED)' or 'DERIVED (basis: OBSERVED)'.",
           "type": [
             "object",
             "null"
@@ -308,6 +308,8 @@
               "enum": [
                 "OBSERVED",
                 "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
                 "PROPOSED",
                 null
               ]
@@ -320,6 +322,8 @@
               "enum": [
                 "OBSERVED",
                 "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
                 "PROPOSED",
                 null
               ]
@@ -332,6 +336,8 @@
               "enum": [
                 "OBSERVED",
                 "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
                 "PROPOSED",
                 null
               ]
@@ -344,6 +350,8 @@
               "enum": [
                 "OBSERVED",
                 "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
                 "PROPOSED",
                 null
               ]
@@ -356,6 +364,8 @@
               "enum": [
                 "OBSERVED",
                 "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
                 "PROPOSED",
                 null
               ]
@@ -368,6 +378,8 @@
               "enum": [
                 "OBSERVED",
                 "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
                 "PROPOSED",
                 null
               ]
@@ -380,6 +392,8 @@
               "enum": [
                 "OBSERVED",
                 "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
                 "PROPOSED",
                 null
               ]
@@ -392,6 +406,8 @@
               "enum": [
                 "OBSERVED",
                 "DERIVED",
+                "DERIVED (basis: PROPOSED)",
+                "DERIVED (basis: OBSERVED)",
                 "PROPOSED",
                 null
               ]

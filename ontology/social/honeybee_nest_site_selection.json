@@ -85,7 +85,8 @@
   "substrate_layer": "substrate_primary",
   "metadata": {
     "record_status": "stub",
-    "entropy_profile_basis": "PROPOSED: required by the schema; assigned without a source",
+    "entropy_profile_status": "PROPOSED",
+    "entropy_profile_note": "unsourced: the three values are required by the schema and were assigned without a source",
     "created": "2026-11-24",
     "credit": "co-authored (JinnZ2 + Claude)"
   },
