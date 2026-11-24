@@ -505,6 +505,61 @@
       "example": "from the addendum: salmon, phase_now spawning; carried_from_phase juvenile -> geomagnetic imprint, still_acting yes, PROPOSED until sourced. Recorded as an example with source null. The cycle it needs (CY_SALMON_LIFE) is added to registry/cycles.json as PROPOSED + unsourced, holding only the two phases the addendum names, in the order the example implies; no period.",
       "renames": "none",
       "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "trace_check severities; status_history; reviewer slots; pilot process form",
+      "after": "branch process-form-kimi-schemas at cc93da9; by the owner's follow-up order (written against 8697312). Declared before the checker change, the schema change, the readings change and the pilot record.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "trace_check_severities": {
+        "replaces": "the line 'trace_check.py exits 1 whenever findings is non-empty' of the entry 'process form + Kimi schemas'",
+        "ERROR": {
+          "exit": 1,
+          "codes": [
+            "DANGLING_DEP",
+            "NESTING_VIOLATION",
+            "NO_SOURCE",
+            "NOTED_MISMATCH naming CITATION_MISMATCH or SCOPE_MISMATCH",
+            "BINDING_TARGET_MISSING",
+            "BINDING_STRING_NOT_IN_REPO"
+          ]
+        },
+        "INFO": {
+          "exit": 0,
+          "codes": [
+            "CYCLE_NO_PERIOD",
+            "CYCLE_TOP_LEVEL",
+            "GAP"
+          ],
+          "note": "reported, never hidden"
+        },
+        "codes_the_order_does_not_name": {
+          "codes": [
+            "BAD_STATUS",
+            "CYCLE_UNNAMED",
+            "CYCLE_NO_SOURCE",
+            "CYCLE_DANGLING_PARENT",
+            "DIFF_UNKNOWN_NODE",
+            "DIFF_NO_SOURCE",
+            "DIFF_REGIME_MISSING",
+            "SENSITIVITY_INCOMPLETE",
+            "NOTED_MISMATCH naming any other *_MISMATCH"
+          ],
+          "rule": "ERROR until the owner assigns them. A code with no declared severity is never treated as INFO."
+        },
+        "output": "the findings list in the results file is unchanged, so earlier result files still reproduce; the severity counts are printed, not written into that file"
+      },
+      "status_history": "schemas/reference_trace.schema.json: optional status_history on a node and on a cycle: a list of {version, status} with optional date and note. MINOR, additive (0.3.0). The cycle definition stays identical in cycle_registry.schema.json.",
+      "being_tense_addendum": "already declared in the entry 'process form addendum: being_tense, phase_now, carried_from_phase' (commit e7321e6) and built at cc93da9. The follow-up order restates it; nothing differs, nothing is declared again.",
+      "reviewer_slots": "registry/attribute_readings.json: the reviewer slot of the 10 fields that had none is filled 'agree' (the reviewer's reading equals the first reader's), source 'reviewer readings file 2026-11-24 (Claude chat)'. That file is not in this repository; the entry is recorded on the owner's order and says so. KA elastic_energy_storage is unchanged (RELATED).",
+      "pilot_process_form": {
+        "subject": "BE.hexagonal_cell_efficiency",
+        "rule": "one process_forms record in registry/process_forms.json, built only from audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json and registry/cycles.json: driver, timescale / cycle_ref, regime bounds, scope, D-layer dependencies, deviation. Every value is copied from a named trace node or cycle; nothing is computed or added. A part the trace does not give is null with a reason.",
+        "legacy": "the stored scalar is kept beside the record as legacy_scalar, flagged LEGACY_SCALAR, not deleted; the entity file is not edited. Every other attribute stays flagged LEGACY_SCALAR."
+      },
+      "renames": "none",
+      "observer_slots": null
     }
   ]
 }
