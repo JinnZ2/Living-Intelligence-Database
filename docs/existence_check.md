@@ -112,7 +112,7 @@ difference, not corrections applied.
 - NOT_INDEXED BE `a04bc6fa3e69` Hales (1999) 'The honeycomb conjecture' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_INDEXED BE `a04bc6fa3e69` Thompson (1917) 'On Growth and Form' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_INDEXED BE `2db5724365e8` von Frisch (1967) 'The Dance Language and Orientation of Bees' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
-- NOT_FOUND_INDEXED BE `23dd81e2d056` Seeley & Visscher (2004) 'Group decision making in nest-site selection by honey bees'
+- NOT_FOUND_INDEXED BE `23dd81e2d056` Seeley & Visscher (2004) 'Group decision making in nest-site selection by honey bees' [lead: Apidologie; the journal is possibly outside PubMed (recall, unverified, not evidence)]
 - NOT_INDEXED BE `23dd81e2d056` Seeley (2010) 'Honeybee Democracy' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_FOUND_INDEXED BE `a67ce7406a52` Fahrenholz et al. (1989) 'Thermal analysis of a honey bee colony'
 - UNDERSPECIFIED BE `a67ce7406a52` Stabentheiner et al. (2010) [no title and no venue in the string: not searchable]
@@ -125,12 +125,12 @@ difference, not corrections applied.
 - NOT_FOUND_INDEXED OC `b6365f159a5b` Packard & Sanders (1971) 'Body patterns of Octopus vulgaris'
 - UNDERSPECIFIED OC `b6365f159a5b` Langridge (2009) [no title and no venue in the string: not searchable]
 - NOT_INDEXED OC `b6365f159a5b` Hanlon & Messenger (2018) 'Cephalopod Behaviour' [a record with a similar title and a different first author was returned; not accepted as the cited work]
-- NOT_FOUND_INDEXED OC `b77eade4b5c4` Sumbre et al. (2001) 'Octopus shows controlled arm coordination despite decentralized neural design'
+- NOT_FOUND_INDEXED OC `b77eade4b5c4` Sumbre et al. (2001) 'Octopus shows controlled arm coordination despite decentralized neural design' [lead: Science; real title reportedly 'Control of octopus arm extension by a peripheral motor program'; the string title may be a paraphrase (recall, unverified, not evidence)]
 - NOT_FOUND_INDEXED OC `b77eade4b5c4` Hochner (2012) 'An almost infinite behavioral repertoire'
 - UNDERSPECIFIED OC `8ae2d41bffc9` Hanlon et al. (2009) [no title and no venue in the string: not searchable]
 - NOT_FOUND_INDEXED OC `bc73fb7c6187` Fossati et al. (2011) 'Neural regeneration in the arm of Octopus vulgaris'
 - NOT_FOUND_INDEXED OC `bc73fb7c6187` Rohrbach & Schmidtberg (2006) 'Arm regeneration in Octopus vulgaris'
-- NOT_FOUND_INDEXED KA `60703e1d04e7` Alexander & Vernon (1975) 'The mechanics of hopping by kangaroos'
+- NOT_FOUND_INDEXED KA `60703e1d04e7` Alexander & Vernon (1975) 'The mechanics of hopping by kangaroos' [lead: Journal of Zoology (recall, unverified, not evidence)]
 - NOT_FOUND_INDEXED KA `abee7a95cd88` Baudinette et al. (1992) 'Cost of locomotion in wild tammar wallabies'
 - NOT_FOUND_INDEXED KA `dd03a167489c` Dawson & Taylor (1973) 'Energetic cost of locomotion in kangaroos'
 - NOT_INDEXED LLM `2899c24ea768` Vaswani et al. (2017) 'Attention is all you need' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
@@ -152,7 +152,7 @@ difference, not corrections applied.
 - UNDERSPECIFIED TU `f302e91023b2` Luschi et al. (1998) [no title and no venue in the string: not searchable]
 - NOT_INDEXED TU `ca989883fbb0` Bolten (2003) 'Variation in sea turtle life history patterns' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - UNDERSPECIFIED TU `ca989883fbb0` Gaspar et al. (2006) [no title and no venue in the string: not searchable]
-- NOT_FOUND_INDEXED AN `0f5c97bb9388` Goss et al. (1989) 'Self-organized shortcuts in the Argentine ant'
+- NOT_FOUND_INDEXED AN `0f5c97bb9388` Goss et al. (1989) 'Self-organized shortcuts in the Argentine ant' [lead: Naturwissenschaften 76:579-581 (recall, unverified, not evidence)]
 - NOT_INDEXED AN `bb2a3794dfe4` Tschinkel (2003) 'Subterranean ant nests: trace fossils past and future' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_INDEXED AN `eefbde78a762` Gordon (2010) 'Ant Encounters: Interaction Networks and Colony Behavior' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 
@@ -186,6 +186,9 @@ recorded as not reached for each work, never as a miss.
 Searched: 16. found 0, differs 0, miss 16.
 A non-zero hit count on the title-only step with a miss means records were
 returned and none passed the title thresholds.
+
+A lead is recall, unverified, and not evidence. A miss has two possible causes,
+venue coverage or title paraphrase; the strict search rule cannot tell them apart.
 
 ## Limits
 

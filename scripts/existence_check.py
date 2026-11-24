@@ -641,7 +641,7 @@ def report():
             L.append("- %s %s `%s` %s (%s)%s%s" % (
                 w["state"], ent, sid[:12], w["cited"]["author"], w["cited"]["year"],
                 " '%s'" % w["cited"]["title"] if w["cited"]["title"] else "",
-                " [%s]" % w["note"] if w["note"] else ""))
+                " [%s]" % w["note"] if w["note"] else "") + (" [lead: %s]" % w["lead"] if w.get("lead") else ""))
     sec = [(ent, sid, w) for ent, _, src in top_entities() for sid in dict.fromkeys(src)
            for w in reg[sid]["existence"]["works"] if w.get("second_index")]
     done = set()
@@ -666,6 +666,8 @@ def report():
     L += ["", "Searched: %d. %s." % (len(done), ", ".join("%s %d" % (k, tally.get(k, 0)) for k in ("found", "differs", "miss"))),
           "A non-zero hit count on the title-only step with a miss means records were",
           "returned and none passed the title thresholds."]
+    L += ["", "A lead is recall, unverified, and not evidence. A miss has two possible causes,",
+          "venue coverage or title paraphrase; the strict search rule cannot tell them apart."]
     L += ["", "## Limits", "",
           "- Two indexes that overlap heavily (Europe PMC includes the PubMed records). A work absent",
           "  from both may be in another index; OpenAlex was not reached and nothing else was searched.",
