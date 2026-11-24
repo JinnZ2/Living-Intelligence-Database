@@ -111,3 +111,14 @@ Neither check tests whether a source says what a field says.
 | link | state |
 |---|---|
 | `WOLF_PACK --synergy--> COUNCIL` | left broken. The target is a validation fixture (`validation/example/council.json`), held out of `ontology/` pending a source audit. |
+
+Latent: `validation/example/council.json` is read by no code today. If it
+were indexed, its unsourced evidence values would be read by four modules,
+each differently:
+
+| module | would read |
+|---|---|
+| `validation/scope_checker.py` | `relational_confidence` (0.79, 0.55) returned as the confidence; `relational_dependencies_verified` (true / false) as a weight; the cross-domain counts (5, 2) as a weight |
+| `validation/audit.py` | `relational_confidence`, counted into the confidence distribution |
+| `validation/grounding_inspector.py` | the cross-domain counts into a score; `relational_confidence` compared against that score |
+| `validation/goal_refiner.py` | only whether the key `cross_domain_count` is present (adds to a score) |
