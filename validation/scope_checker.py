@@ -117,6 +117,26 @@ def extract_confidence(attr_value: Any, ontology: dict = None) -> float:
         return scope["relational_confidence"]
     return compute_relational_confidence(attr_value, ontology)
 
+def confidence_record(attr_value: Any, ontology: dict = None) -> Dict[str, Any]:
+    """
+    The one confidence every instrument reports for a record (fixture F7, 2026-11-24).
+    Returns {"value": float or None, "basis": "explicit" | "computed" | "absent"}.
+      explicit  a relational_confidence is stored on the record (evidence first, then scope)
+      computed  none is stored; the value is compute_relational_confidence
+      absent    the attribute has no scope block: there is no confidence, value is None
+    extract_confidence is unchanged and still returns 0.5 for an unscoped attribute; that 0.5 is
+    a default, not a reading, which is why this function says "absent" instead.
+    """
+    if not is_scoped(attr_value):
+        return {"value": None, "basis": "absent"}
+    scope = attr_value["scope"] if isinstance(attr_value["scope"], dict) else {}
+    evidence = scope.get("evidence", {}) or {}
+    if "relational_confidence" in evidence:
+        return {"value": evidence["relational_confidence"], "basis": "explicit"}
+    if "relational_confidence" in scope:
+        return {"value": scope["relational_confidence"], "basis": "explicit"}
+    return {"value": compute_relational_confidence(attr_value, ontology), "basis": "computed"}
+
 # ------------------------------------------------------------------
 # Flagging
 # ------------------------------------------------------------------
