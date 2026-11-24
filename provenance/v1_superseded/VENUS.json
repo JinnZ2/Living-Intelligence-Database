@@ -1,0 +1,271 @@
+{
+ "entity": "VENUS",
+ "path": "ontology/plant/venus_flytrap.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "32d50d98c893df88e12e8a9cf2dcf7d71f34d0e6515795e5d5357447cb798273",
+   "inputs": [
+    "80dbe6e08543269f94f31dff82d5e339df23b3a354ebb1aca5aa8b419cba8d3f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "d920a768d7ea12f21818ee50a254fced91f53ee4ce8c98ade3593de655a80432",
+   "inputs": [
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "gate_sensing.limit_sensed",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": "Spending the digestive secretion on a trapped object that is not prey.",
+   "assumptions": [],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "26660ef6550cbc872eae853e370f9466e6785bcca79a376678ce7efff1a0584f",
+   "inputs": [
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "gate_sensing.early_signal",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": "The number of action potentials fired as trigger hairs are touched: a running count of mechanical stimulations.",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "babf7ad7e758fc7bb10fd9a18115a09178610af5a09e69efeaf93a605b10c6e2",
+   "inputs": [
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "gate_sensing.response",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": "Staged by the count. Two action potentials: the trap snaps shut. After the second stimulus: the jasmonic acid signalling pathway is activated. More than three: genes for prey-degrading hydrolases are expressed, in proportion to the number of stimulations. Transcripts of the sodium channel DmHKT1 also depend on the number of stimulations.",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "5fa9329d395da67ac54d2bfef12d64e2b9c7e27494bef71751d5b6888303eaf9",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "gate_sensing.lead_time",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "unmeasured: the abstract gives counts of stimulations, not times"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "2585ee07ad8bfb5da74f714f59eef29283c4ca294fbc1bcf66d632681fdfd66e",
+   "inputs": [
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.adapts",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": "yes",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a81a43c2535278d148e2efa595fcdfa0c3886fd4089b4873aa7f3b5890ab5375",
+   "inputs": [
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.signals",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": "yes",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "170c22c5509c2177709b79a10b080d5c60e3b687873f58e90e32cc3fbf8924a5",
+   "inputs": [
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.responds_to_other",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": "yes",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "fa263d2ef22765c0cd912135a0ca4795a5e1fb8fac4b857d3df30e9ac50d52ee",
+   "inputs": [
+    "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.changes_environment",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": "yes",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "7c5a81cf30a8bdac37a84bd26f1db621e4218242c17e26dcac7769cd78153d04",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.co_adapts",
+    "entity_file_sha256": "85a053a262f59703c6a8105f5a20473c608e17a2e4d6661ca773201eaf7a46b6"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "unmeasured: no source read addresses change in the prey in response to the plant."
+   },
+   "snapshot_class": null
+  }
+ ]
+}

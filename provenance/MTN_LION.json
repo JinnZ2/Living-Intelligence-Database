@@ -4,7 +4,7 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "38c376aa8b5054ba14706c533ac49a31235c15217b5d88a1947b9b8a9a6e0416",
+   "id": "fc878363c29261174aad1a9618052b49147a65829b5d0cd4f456ec350b87c444",
    "inputs": [
     "ea473bccaa835f73587d51f81c3b3d95e62376ba138432b710a08a46cb371650"
    ],
@@ -25,13 +25,13 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "4f4702d7887707f36a4014bc023bc9de0e4247918f651fd2e5816a45e6bc7a42",
+   "id": "f8839d3ff36e8d7589ced1bdbe718d2f98f9c71283a558acf0bda6f51b36b38b",
    "inputs": [
     "9a2825bfb772a997b805f4f1c5954a1552aec37765fc05e335e2ba44fa95052d"
    ],
@@ -52,13 +52,13 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "8430735e5efbca2e85dfa6c4b2e85b9be590ceed34b5ae1d9a26fd9f6eb7016e",
+   "id": "6b7c0d94ca8ae9dbfed0205b5abf62f0546983e3fa32217571aa1ddcf5d55f9a",
    "inputs": [
     "6018a21225e4b7a2abf434540b6daf7678d0f55d833e7359de9f6a756ee18603"
    ],
@@ -79,7 +79,7 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null

@@ -1,0 +1,88 @@
+{
+ "entity": "SEED_KEEPER",
+ "path": "ontology/animal/seed_keeper.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "91e28431943d58dd14234acd258ea1fd5d7d6150a2aaaa66fbd067d0f5aa236a",
+   "inputs": [
+    "64cfb52551a87804df142faaff7b594c559e3ed6ec395060bd5ec3343d9915d2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SEED_KEEPER",
+    "field": "attributes.genetic_library_curation",
+    "entity_file_sha256": "3a162829cf626c5b6996a21e20a04f6c3f4ea5a69ee4eef7a19171b7be58d478",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "4959042bf680384161a99b3aaa098b4067302185a02b49bdd869fbfd856ab5ec",
+   "inputs": [
+    "fff47b4b215e57871e28e481484f7350f5fccce4363992b1aafb9e89856be2a8"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SEED_KEEPER",
+    "field": "attributes.heirloom_selection",
+    "entity_file_sha256": "3a162829cf626c5b6996a21e20a04f6c3f4ea5a69ee4eef7a19171b7be58d478",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "08fdd81ce423f70b744700451b07432921931f264dee4ce2a8942b4f4d50ea69",
+   "inputs": [
+    "b8eb2615e34daa5e4e549661cb66c005f8fad0a56a1564505283384126385fb9"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SEED_KEEPER",
+    "field": "attributes.seed_exchange_network",
+    "entity_file_sha256": "3a162829cf626c5b6996a21e20a04f6c3f4ea5a69ee4eef7a19171b7be58d478",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

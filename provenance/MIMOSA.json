@@ -4,7 +4,7 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "eb1cb1eacd63808dd2451692847e2e5b2c6365ea6a77faaf48f4eb3a5e13acbe",
+   "id": "bf94ee781b4d926848bd5b39097661caae43d54695b40d4d9e58db9ade499a91",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -21,16 +21,16 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
-    "state": "LEXICAL_VOID",
+    "state": "VOID",
     "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
    },
    "snapshot_class": null
   },
   {
-   "id": "342fe46ebd4b6a0ad97c4359bce20c1324422918b12d79ded0df0c678b122cbc",
+   "id": "dae895347456c6680a481222af9558013ba8265abb15e5ce21b85fa3d3c5b5d0",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -47,16 +47,16 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
-    "state": "LEXICAL_VOID",
+    "state": "VOID",
     "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
    },
    "snapshot_class": null
   },
   {
-   "id": "d670845f7d06cf2301ad16b1c5bd498dfe3672041e3ddc51963751ed0ec0fb8b",
+   "id": "1313a7adcfa717a9fd3d842f884490e160b25b0106169d8392d9c27c7f4a7515",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -73,16 +73,16 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
-    "state": "LEXICAL_VOID",
+    "state": "VOID",
     "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
    },
    "snapshot_class": null
   },
   {
-   "id": "611a404d9e3473dd4bdfd677b2e46612645d13d6d74dfda51b192cdd83076774",
+   "id": "fe1416c944034c23b123557e7b98e8780a48d0d45b4f159570600fbf11d061a0",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -99,16 +99,16 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
-    "state": "LEXICAL_VOID",
+    "state": "VOID",
     "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
    },
    "snapshot_class": null
   },
   {
-   "id": "f01379d99f00111c80d53e4a9119071c23045b8a397dda14187737cf0b831205",
+   "id": "cf0038840ef5a081c3379a7ea39da435a768e0c12c190223aa00c8fabcec8dd4",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -125,16 +125,16 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
-    "state": "LEXICAL_VOID",
+    "state": "VOID",
     "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
    },
    "snapshot_class": null
   },
   {
-   "id": "b5ead323a73d1cd448fcb63c8c49b60bf5cd2a993ecae6dbe2c7e1feda017a2b",
+   "id": "02ecc6476786d120a757b29d286201bb0ac860dcd254fb89cfe8dc8d286f5e7b",
    "inputs": [
     "4d63460b8ede30e6dcee6dc370c5c22bb2069d615d55c963f5a6df9c148b3665"
    ],
@@ -157,13 +157,13 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "516a5fcc8760ecb748dd518a0b75f2e4cc0639ca47f79308fa66c510e82ad99d",
+   "id": "2380e26fd6c93c826c260dd77fdb9df5309a9f2988309f1c47fdc3d8085082e0",
    "inputs": [
     "3fdd07b2093e3a9cf8080e59bdc4ab1d21dd7eb177cba050db66efe9aa6d206b"
    ],
@@ -186,7 +186,7 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null

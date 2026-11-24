@@ -1,0 +1,453 @@
+{
+ "entity": "ANT",
+ "path": "ontology/social/ant_colony.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "caf9adb5cef1967477036ca5b2fe4755198181551ae3ad187ef5a31c3934ff14",
+   "inputs": [
+    "ad120380ae747de138505b7a75449038e34ecb2bab970d50e8410fef87d180cf"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "attributes.foraging_efficiency",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": {
+    "condition": {
+     "environment": "stable pheromone gradient, temperature 20-30°C",
+     "constraints": [
+      "pheromone trails must remain viable",
+      "no chemical disruption",
+      "colony size > 1000"
+     ]
+    }
+   },
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "b282e259c70e05ba7312e8b4e6147fdb09a5e52e1ecbf72982d08dd954b92732",
+   "inputs": [
+    "3786c807f671a546c956faf4c77483deac7803a5838f4f07dfed7776b918f0f1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "attributes.quorum_sensing_threshold",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8",
+    "evidence_type": "cross_domain_rhyme",
+    "reproducibility": "medium"
+   },
+   "value": 0.15,
+   "assumptions": null,
+   "scope": {
+    "condition": {
+     "environment": "nest emigration scenario",
+     "constraints": [
+      "scouts must reach threshold independently",
+      "no central coordinator"
+     ]
+    }
+   },
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "2801c7fec24cd2132c6fc554f540b78498cefa4174766652c1565d3d181d567c",
+   "inputs": [
+    "cf5d62eb0710c42d1f0d130f6cdc80a40ff987437f6704a970bdcd5732be6a58"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "attributes.collective_resilience",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": {
+    "condition": {
+     "environment": "established colony with queen intact",
+     "constraints": [
+      "queen must survive",
+      "brood must be retained"
+     ]
+    }
+   },
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "13189b739d54d7cb940286baac040f7a43123db73bfb9359ba1c614616ae6b21",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "attributes.division_of_labor",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": "Emergent role differentiation without central assignment: workers shift roles based on colony need and local pheromone density.",
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "9314434e072a208625d98d900e87b8468e36604c2c807566f9264305b3892099",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "attributes.communication_mode",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": "Pheromone gradient + antennal contact. No vocalizations. Signal degrades in ~10 minutes, preventing false trails from persisting.",
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "77a9ec81ef97bfb558b668d67e3bff6c4f5f28bd585c7c7229cb53b26c233db2",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "attributes.pattern",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": "decentralized emergence, positive feedback with natural decay",
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "b2a4ca85e579d8a4d37862b0d40c5b1bce5ddf71393694c5fe186d9ba0d61bd3",
+   "inputs": [
+    "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
+    "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226",
+    "47f669017c021df9b3ffc3f3a06d2d07b09fceb87811a5b301035ed0a4c9a461"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "coordination.carrier",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": "Trail pheromone deposited on the substrate by walking foragers.",
+   "assumptions": [],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "6b6554ef482efb55c3a6d1036e723ea6361f1a98ba1935ca0cd875e56c9205fd",
+   "inputs": [
+    "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
+    "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226",
+    "47f669017c021df9b3ffc3f3a06d2d07b09fceb87811a5b301035ed0a4c9a461"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "coordination.signal",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": "Local pheromone concentration on the ground at a branch point; a forager's branch choice is biased toward the stronger trail.",
+   "assumptions": [],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "f5b22b002adbfb88e4649659a14d10c672d955196b9a34327c6c6dfa6bbd509a",
+   "inputs": [
+    "47f669017c021df9b3ffc3f3a06d2d07b09fceb87811a5b301035ed0a4c9a461"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "coordination.record",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": "The environment: the trail on the ground. No individual ant holds the map; the state is outside the bodies.",
+   "assumptions": [],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0400e463fb9f1103a3443b0f7871f1dde93d472cd5d7ef2944fafe382fa3acea",
+   "inputs": [
+    "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "coordination.closure",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": "A round trip nest -> food -> nest. A completed trip is visible to others only as added pheromone on the path walked.",
+   "assumptions": [],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1b5b8a9aa0876433e661c2f50abdc26d2c759587925391c03614b9a29a0312ad",
+   "inputs": [
+    "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
+    "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": "Reinforcement: pheromone accumulated from completed trips, set against loss of the mark over time. A shorter path is completed more often per unit time and so accumulates faster.",
+   "assumptions": [],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1c2da56c48695062f449cee7f10a89e3d15d397ded9c80f33716c6cadb243c69",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "unmeasured"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "e683d9fd91154fe300ce07860611d40003f7c74d89b9b4d952e8b1874fdff380",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": {
+    "cycles": [
+     {
+      "id": "L1",
+      "path": "forager walks path -> deposits pheromone -> pheromone biases the next forager's choice -> next forager walks path"
+     },
+     {
+      "id": "L2",
+      "path": "food returned to nest -> colony sustains and recruits foragers -> foragers leave nest -> food returned to nest"
+     },
+     {
+      "id": "L3",
+      "path": "pheromone decays -> unused path loses its mark -> fewer ants choose it -> less deposit on it"
+     }
+    ],
+    "observer_cuts": [
+     {
+      "cut": "single ant followed, trail state not recorded",
+      "cycles_surviving": [],
+      "note": "L1 and L3 pass through the trail and many agents; the record reads as an individual choosing, and the coordination cost reads as 0"
+     },
+     {
+      "cut": "trail imaged at one instant, ant traffic not recorded",
+      "cycles_surviving": [],
+      "note": "the trail reads as a fixed structure, not a loop"
+     },
+     {
+      "cut": "food intake counted at the nest entrance only",
+      "cycles_surviving": [
+       "L2"
+      ],
+      "note": "L1 and L3 are outside the boundary; pheromone production is not on the ledger"
+     },
+     {
+      "cut": "colony plus arena observed over many round trips",
+      "cycles_surviving": [
+       "L1",
+       "L2",
+       "L3"
+      ],
+      "note": null
+     }
+    ]
+   },
+   "assumptions": [],
+   "scope": null,
+   "status": "DERIVED (basis: PROPOSED)",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "38b165f28d34da4dcd0bf6dbb096e84885070280ec8a17225047ddbddb19cc38",
+   "inputs": [
+    "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ANT",
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "b1fd5b6430878749dcf26cf1d53b3832bcc6f6dd04530ab4f6e46a727ff123e8"
+   },
+   "value": [
+    "coordination requires money",
+    "coordination requires a central planner or a shared plan",
+    "a record of who did what must be held by an individual or an institution",
+    "optimization requires an optimizer",
+    "only humans innovate"
+   ],
+   "assumptions": [
+    "A-c6ed44ae9df7",
+    "A-a8928d7bb384",
+    "A-27a1d5fa31de",
+    "A-5bdb8c8b07b3",
+    "A-57eca4b5bab7"
+   ],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

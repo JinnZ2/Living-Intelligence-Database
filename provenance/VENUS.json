@@ -4,7 +4,7 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "32d50d98c893df88e12e8a9cf2dcf7d71f34d0e6515795e5d5357447cb798273",
+   "id": "69c36f0ca6061023e789d60b71310e83096278b7e9ac5c3c2910a7b9f77ffca7",
    "inputs": [
     "80dbe6e08543269f94f31dff82d5e339df23b3a354ebb1aca5aa8b419cba8d3f"
    ],
@@ -25,13 +25,13 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "d920a768d7ea12f21818ee50a254fced91f53ee4ce8c98ade3593de655a80432",
+   "id": "bfaa7616b16e240e40b0f52d1206b4b8d8bad5c1aebed25df51b93fe34271497",
    "inputs": [
     "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
@@ -50,13 +50,13 @@
    "status": "PROPOSED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "26660ef6550cbc872eae853e370f9466e6785bcca79a376678ce7efff1a0584f",
+   "id": "dbaf0e6a55efbbdac03905671ce21507afb12222037275cdb1751064197e888a",
    "inputs": [
     "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
@@ -77,13 +77,13 @@
    "status": "OBSERVED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "babf7ad7e758fc7bb10fd9a18115a09178610af5a09e69efeaf93a605b10c6e2",
+   "id": "c846c7636863522d042d016556d998726fdde6d695df01b1efb7af8ffd79e7aa",
    "inputs": [
     "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
@@ -104,13 +104,13 @@
    "status": "OBSERVED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "5fa9329d395da67ac54d2bfef12d64e2b9c7e27494bef71751d5b6888303eaf9",
+   "id": "c364e90b1c48104bd520033b1fe3a34407ed06353864daacbf2687a1a7925065",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -127,16 +127,16 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
-    "state": "LEXICAL_VOID",
+    "state": "VOID",
     "reason": "unmeasured: the abstract gives counts of stimulations, not times"
    },
    "snapshot_class": null
   },
   {
-   "id": "2585ee07ad8bfb5da74f714f59eef29283c4ca294fbc1bcf66d632681fdfd66e",
+   "id": "7a98c24221d5cca3f6712ab02b84354570fca7a56e433afc118c765246025d7e",
    "inputs": [
     "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
@@ -157,13 +157,13 @@
    "status": "OBSERVED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "a81a43c2535278d148e2efa595fcdfa0c3886fd4089b4873aa7f3b5890ab5375",
+   "id": "bb6a8bc3063091ff926d72c0e173135442fd0464de5c3a67cbd3c802713cbe0d",
    "inputs": [
     "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
@@ -184,13 +184,13 @@
    "status": "OBSERVED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "170c22c5509c2177709b79a10b080d5c60e3b687873f58e90e32cc3fbf8924a5",
+   "id": "8d240edf341e3730a00a87b57acad2adc8c9544ff5655cdbe8627b8819a96ac3",
    "inputs": [
     "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
@@ -211,13 +211,13 @@
    "status": "OBSERVED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "fa263d2ef22765c0cd912135a0ca4795a5e1fb8fac4b857d3df30e9ac50d52ee",
+   "id": "4a2e4b7bab580a325cbc2d1a3c2d799ff585684d0f0412f5307a10b25f7d9d73",
    "inputs": [
     "e6e40c0963c377559e63ef92cc2d4ac28c349426bb4fea3b31e0d4999f45bcc0"
    ],
@@ -236,13 +236,13 @@
    "status": "OBSERVED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "7c5a81cf30a8bdac37a84bd26f1db621e4218242c17e26dcac7769cd78153d04",
+   "id": "77dde3c16942a29f1a520610558ab2c56ee8ff5cabf688cc232bcd04dc96f726",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -259,10 +259,10 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
-    "state": "LEXICAL_VOID",
+    "state": "VOID",
     "reason": "unmeasured: no source read addresses change in the prey in response to the plant."
    },
    "snapshot_class": null

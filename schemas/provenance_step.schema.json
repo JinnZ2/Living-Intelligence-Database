@@ -52,7 +52,7 @@
           "id": {
             "type": "string",
             "pattern": "^[0-9a-f]{64}$",
-            "description": "sha256 of the canonical JSON of {inputs, method, params, value}. params holds the entity file sha256 and the field path, so the id covers entity file hash + field path + value."
+            "description": "sha256 of the canonical JSON of {entity_id, field_path, value_sha256, inputs, method, params, assumptions, scope, status}, with params taken without entity_file_sha256 (fixes v2). The entity file sha256 stays in params as context and is not in the id."
           },
           "inputs": {
             "type": "array",

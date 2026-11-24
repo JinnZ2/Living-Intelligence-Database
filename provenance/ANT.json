@@ -4,7 +4,7 @@
  "snapshot_class": null,
  "steps": [
   {
-   "id": "caf9adb5cef1967477036ca5b2fe4755198181551ae3ad187ef5a31c3934ff14",
+   "id": "50f0b2a322a2fb047de1e8fbfb919b8487b438cdff0cb8188cfec9b6dbcdabbf",
    "inputs": [
     "ad120380ae747de138505b7a75449038e34ecb2bab970d50e8410fef87d180cf"
    ],
@@ -34,13 +34,13 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "b282e259c70e05ba7312e8b4e6147fdb09a5e52e1ecbf72982d08dd954b92732",
+   "id": "9b275684477206320b0bccaff582cf8af4f63c4868b877e94528614156a6b6dd",
    "inputs": [
     "3786c807f671a546c956faf4c77483deac7803a5838f4f07dfed7776b918f0f1"
    ],
@@ -69,13 +69,13 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "2801c7fec24cd2132c6fc554f540b78498cefa4174766652c1565d3d181d567c",
+   "id": "ece36d67fca0d9e9b03d1889009afd58ccfd08fe3021e1b6ef7bcd0fe2b20069",
    "inputs": [
     "cf5d62eb0710c42d1f0d130f6cdc80a40ff987437f6704a970bdcd5732be6a58"
    ],
@@ -104,13 +104,13 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "13189b739d54d7cb940286baac040f7a43123db73bfb9359ba1c614616ae6b21",
+   "id": "3ea8d46156b6855f07efc4a0574b4d1243be21be5af340d95d7dd4ac205f3fe4",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -127,7 +127,7 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -136,7 +136,7 @@
    "snapshot_class": null
   },
   {
-   "id": "9314434e072a208625d98d900e87b8468e36604c2c807566f9264305b3892099",
+   "id": "cc195d91ef95ca193d15ba167f2d0f1465bb668ecda84117e85292d84bfe4e27",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -153,7 +153,7 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -162,7 +162,7 @@
    "snapshot_class": null
   },
   {
-   "id": "77a9ec81ef97bfb558b668d67e3bff6c4f5f28bd585c7c7229cb53b26c233db2",
+   "id": "300b0091e218994798010bb4616b07f182ce3a375d6d745b916360b7bd115cbd",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -179,7 +179,7 @@
    "status": null,
    "status_note": "not assessed in this vocabulary",
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -188,7 +188,7 @@
    "snapshot_class": null
   },
   {
-   "id": "b2a4ca85e579d8a4d37862b0d40c5b1bce5ddf71393694c5fe186d9ba0d61bd3",
+   "id": "4038d63e62058dddee187583451a1a0d176d596e0ab0adda8d28204638406450",
    "inputs": [
     "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
     "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226",
@@ -209,13 +209,13 @@
    "status": "PROPOSED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "6b6554ef482efb55c3a6d1036e723ea6361f1a98ba1935ca0cd875e56c9205fd",
+   "id": "e89234ce5e21e8aa9e378da85e2c87c96a3e2f4bcfe3d796bc8b8978a8c2bba0",
    "inputs": [
     "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
     "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226",
@@ -236,13 +236,13 @@
    "status": "PROPOSED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "f5b22b002adbfb88e4649659a14d10c672d955196b9a34327c6c6dfa6bbd509a",
+   "id": "3ba80f3990663d0cccdaaa8f512b9441b65e93a8f9ba2d6bcee94fc37574dc8b",
    "inputs": [
     "47f669017c021df9b3ffc3f3a06d2d07b09fceb87811a5b301035ed0a4c9a461"
    ],
@@ -261,13 +261,13 @@
    "status": "PROPOSED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "0400e463fb9f1103a3443b0f7871f1dde93d472cd5d7ef2944fafe382fa3acea",
+   "id": "f368f115a25785dfe12295525062b1cb06a3991f93a12cd0853be75e221d70d8",
    "inputs": [
     "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0"
    ],
@@ -286,13 +286,13 @@
    "status": "PROPOSED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "1b5b8a9aa0876433e661c2f50abdc26d2c759587925391c03614b9a29a0312ad",
+   "id": "fa1605d58d6be2ac75c9fc4e134d818c17451792b222d7313c370e20b2571ad6",
    "inputs": [
     "acd95308766fe9a887c56a869380ca9af03bc4656a79152efed9da15de5c48b0",
     "257b48ea9528454b0a2b6e3db359f4efc1f696adef8825b61912dfa46b587226"
@@ -312,13 +312,13 @@
    "status": "PROPOSED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null
   },
   {
-   "id": "1c2da56c48695062f449cee7f10a89e3d15d397ded9c80f33716c6cadb243c69",
+   "id": "cbc4b75652d71b2f7c4cd9a253fa164f4f3656c7488e1958cc089d87c0b701bd",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -335,16 +335,16 @@
    "status": null,
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
-    "state": "LEXICAL_VOID",
+    "state": "VOID",
     "reason": "unmeasured"
    },
    "snapshot_class": null
   },
   {
-   "id": "e683d9fd91154fe300ce07860611d40003f7c74d89b9b4d952e8b1874fdff380",
+   "id": "3f7ae4ff646c2bb71436401b7da1c5c2e63fbe5ae4ab6c2d43a9e2179ce28a89",
    "inputs": [],
    "method": {
     "name": "manual_entry",
@@ -404,7 +404,7 @@
    "status": "DERIVED (basis: PROPOSED)",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": {
     "state": "UNMAPPED",
@@ -413,7 +413,7 @@
    "snapshot_class": null
   },
   {
-   "id": "38b165f28d34da4dcd0bf6dbb096e84885070280ec8a17225047ddbddb19cc38",
+   "id": "5957e3074a953ae6d33120f129500eeab10cea1b498a879cc1b565a8fb912da7",
    "inputs": [
     "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
    ],
@@ -444,7 +444,7 @@
    "status": "PROPOSED",
    "status_note": null,
    "supersedes": null,
-   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
    "claim": null,
    "void": null,
    "snapshot_class": null

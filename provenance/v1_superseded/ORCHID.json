@@ -1,0 +1,34 @@
+{
+ "entity": "ORCHID",
+ "path": "ontology/plant/orchid.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "562478595e322c103b8629aed3bfa1d5142253755dd8bd6accd0ae98fa8a9723",
+   "inputs": [
+    "5d462bed7f32a4aafd36b5cd8aa480da214e57fd1e6824e46fbb47e08ff724e0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ORCHID",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "c8a2790d4e8d99a54709977a1d1bcbf4c12b0b1bf88638d97a55f5c4fa5f6da8",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

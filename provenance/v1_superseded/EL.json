@@ -1,0 +1,88 @@
+{
+ "entity": "EL",
+ "path": "ontology/animal/elephant.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "3abdfee177ec14c74ac975f42f42606645e87db20f4a5db2b7f7322d6a6a93bb",
+   "inputs": [
+    "d79784a651d1290b7553c487e0c6bfa8637680d6d0344c3ec7ed6ffa30ccb785"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EL",
+    "field": "attributes.infrasonic_communication",
+    "entity_file_sha256": "d554b6055a543a1ca1b4b5076c6a7842ca84f069e302e6e91d4b2bce2a62812c",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "5d41045f136af77f9fc7021174fe9fe07b989a3b2a9053a113aa9ed3681a1c35",
+   "inputs": [
+    "a716552f5642a45a6316214dad112529e79ad1a9451f80f1fba41740bb62a29b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EL",
+    "field": "attributes.spatial_memory_mapping",
+    "entity_file_sha256": "d554b6055a543a1ca1b4b5076c6a7842ca84f069e302e6e91d4b2bce2a62812c",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "580eba1f0a23dca6dfe5d84f598deb8be7da06f0f26023b24ca7fffa9a15fef0",
+   "inputs": [
+    "24569092f9eb33f40035a5cb74ad76c812e9e9f4850f4c7108267ee2f4158fed"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EL",
+    "field": "attributes.empathic_social_bonding",
+    "entity_file_sha256": "d554b6055a543a1ca1b4b5076c6a7842ca84f069e302e6e91d4b2bce2a62812c",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

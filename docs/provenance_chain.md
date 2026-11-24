@@ -17,7 +17,7 @@ through the chain and re-run. Old versions are kept and never overwritten.
 
 | path | holds |
 |---|---|
-| `registry/DECLARED.json` | the rules, committed before the tool existed (`1c31cf8`), with one amendment committed before the rebuild (`b8ca746`) |
+| `registry/DECLARED.json` | the rules, committed before the tool existed (`1c31cf8`), with an amendment committed before the rebuild (`b8ca746`) and a second, "fixes v2", committed before the v2 rebuild (`c1eff92`) |
 | `registry/assumptions.json` | one entry per assumption: `id`, `statement`, `domain`, `status`, `sources`, `supersedes` |
 | `registry/sources.json` | one entry per exact source string: `id`, `string`, `same_as` (null), `opened` (false or a depth word), `fetched` (null or a date) |
 | `provenance/<entity_id>.json` | the steps of one entity |
@@ -26,6 +26,7 @@ through the chain and re-run. Old versions are kept and never overwritten.
 | `schemas/provenance_step.schema.json` | validates the files under `provenance/`; no entity schema references it |
 | `scripts/provenance_chain.py` | `build`, `trace`, `stale`, `dups`, `--selftest` |
 | `provenance/v0_superseded/`, `registry/v0_superseded/` | the first build (303 steps, old id rules), kept unchanged; not part of the live chain |
+| `provenance/v1_superseded/` | the second build (303 steps at `5a066a7`, id covering the entity file hash, old void mapping), moved unchanged; not part of the live chain. The registries did not change and stay in place |
 
 Entity files are not changed by the chain and carry no provenance key.
 
@@ -33,10 +34,10 @@ Entity files are not changed by the chain and carry no provenance key.
 
 | key | meaning |
 |---|---|
-| `id` | sha256 of the canonical JSON of `{inputs, method, params, value}`. `params` holds the entity file's sha256 and the field path, so the id covers entity file hash + field path + value |
+| `id` | sha256 of the canonical JSON of `{entity_id, field_path, value_sha256, inputs, method, params, assumptions, scope, status}`. `entity_id` and `field_path` are `params.entity` and `params.field`; `value_sha256` is the sha256 of the value's canonical JSON; `params` is taken without `entity_file_sha256` |
 | `inputs` | parent step ids or source ids (both 64 hex); `[]` when the field has no source |
 | `method` | `{name, version}`; the backfill is `manual_entry`, version `1` |
-| `params` | always `entity`, `field` and `entity_file_sha256`; for attributes also `evidence_type` and `reproducibility` as found |
+| `params` | always `entity`, `field` and `entity_file_sha256` (the entity file's hash when the step was written: context, not in the id); for attributes also `evidence_type` and `reproducibility` as found |
 | `value` | the field's value as found |
 | `assumptions` | assumption ids (`A-…`); null = not assessed; `[]` = read, none named |
 | `scope` | conditions the value holds under, as recorded; null = none recorded |
@@ -51,13 +52,14 @@ Entity files are not changed by the chain and carry no provenance key.
 Canonical JSON: UTF-8, keys sorted, separators `,` and `:` with no spaces,
 non-ASCII characters written as themselves.
 
-`assumptions`, `scope`, `status`, `status_note` and the last five keys are
-not part of the id. Two steps that differ only in those have the same id, and the second is
-refused. A revision must differ in `inputs`, `method`, `params` or `value`.
+`status_note`, `supersedes`, `declared_pre_run`, `claim`, `void`,
+`snapshot_class` and `params.entity_file_sha256` are not part of the id.
 
-Because the id covers the entity file hash, any byte change to an entity
-file gives every field of that entity a new step, including fields whose
-value did not change.
+A change to an entity file gives a new step only to a field whose value,
+sources, params, assumptions, scope or status changed. The other fields keep
+their step, which still shows the file hash it was written under. A revision
+that changes only status, assumptions or scope is a new step that supersedes
+the old one.
 
 ## Conventions copied from the bridge experiment
 
@@ -76,12 +78,16 @@ Copied from `JinnZ2/Geometric-to-Binary-Computational-Bridge`,
 
 The mapping is PROPOSED; it was written here, not taken from the bridge.
 
-| state | LID condition | in the backfill |
-|---|---|---|
-| LEXICAL_VOID | the field is null and the record states the gap in words (`unmeasured`, or a note for the field) | 9 |
-| VOID | the field is null and no reason is recorded | 31 |
-| UNMAPPED | the field has a value and no source | 12 |
-| REJECTED | a value was offered and refused by a gate | 0; the backfill produces none |
+| state | LID condition | before (`5a066a7`) | now |
+|---|---|---|---|
+| VOID | the field is null; `reason` holds the record's words for the gap when it has any | 31 | 40 (9 with a reason) |
+| UNMAPPED | the field has a value and no source | 12 | 12 |
+| LEXICAL_VOID | no term exists: an open label slot only. In the backfill, a `contested_label` entry whose label is null | 9 | 0; no record has an open label slot |
+| REJECTED | a value failed a declared gate | 0 | 0; the chain declares no gate |
+
+The 9 steps that read LEXICAL_VOID before are the null fields with a note
+(`unmeasured`, or a note for the field). They now read VOID and keep the note
+as `reason`.
 
 In the bridge the four states describe a numerical code and its lexical
 mapping. Here they describe a field and its source. The names are kept; the
@@ -127,9 +133,9 @@ those through `inputs`, with the entity and field of each.
 ## Revision rule
 
 - Nothing is deleted and no stored step is edited.
-- When an entity file changes, `build` appends a new step for each of its
-  fields, each with `supersedes` set to the prior step id. The prior steps
-  stay in the file.
+- When an entity file changes, `build` appends a new step for each field
+  whose value, sources, params, assumptions, scope or status changed, with
+  `supersedes` set to the prior step id. The prior steps stay in the file.
 - When an assumption changes, a new registry entry is appended with
   `supersedes`; the old entry stays. Steps that cite the old id read
   ASSUMPTION_CHANGED, and their children INPUT_CHANGED, until revised.
@@ -181,6 +187,7 @@ missing check.
 | PRV_001 | Every stored step id equals the sha256 recomputed from the stored step | `provenance_chain.py stale`: 0 flagged | one HASH_MISMATCH on the committed files | SUPPORTED |
 | PRV_002 | A second `build` on unchanged entity files appends nothing | second run: appended 0; selftest "build twice" | a second run that appends | SUPPORTED |
 | PRV_003 | A changed assumption is found by `trace` and flags downstream steps while old steps stay | selftest planted chain A→B→C | a planted chain where B or C is missed, or a step disappears | SUPPORTED |
-| PRV_004 | `declared_pre_run` names a commit made before the build it governs | commit order: `1c31cf8` declares, `9d4b56f` first build; `b8ca746` amends, then the rebuild | a live step built before `b8ca746` | SUPPORTED, with two limits: the first declaring commit was amended once before any build, to correct a mistyped commit hash in a source path (that version was not pushed and is not in the history); and the rules were changed after the first build, by order, which the amendment records |
+| PRV_004 | `declared_pre_run` names a commit made before the build it governs | commit order: `1c31cf8` declares, `9d4b56f` first build; `b8ca746` amends, then the rebuild; `c1eff92` amends, then the v2 rebuild | a live step built before `c1eff92` | SUPPORTED, with two limits: the first declaring commit was amended once before any build, to correct a mistyped commit hash in a source path (that version was not pushed and is not in the history); and the rules were changed after the first and second builds, by order, which the amendments record |
 | PRV_005 | The source strings in the chain are correct citations | none: no source was opened by the backfill | — | UNVERIFIED; the check is opening each source |
+| PRV_007 | Changing one field of an entity file flags only that field's step, and `build` appends one step | selftest "change one field"; on the live chain, an edit to `coordination.carrier` of ANT gave `stale: 1` (FIELD_CHANGED on that step), then reverted | an edit to one field that flags or appends a second step | SUPPORTED |
 | PRV_006 | The void-state mapping reads LID nulls the way the bridge states are meant | none | — | UNVERIFIED; the mapping is a proposal written here |

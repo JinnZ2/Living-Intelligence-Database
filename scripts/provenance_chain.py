@@ -49,7 +49,16 @@ def sha(text):
 
 
 def step_id(step):
-    return sha(canon({k: step[k] for k in ("inputs", "method", "params", "value")}))
+    """Fixes v2: the id covers entity id, field path, value hash, inputs, method,
+    params without the entity file hash, assumptions, scope and status. The
+    entity file hash stays in params as context only."""
+    params = {k: v for k, v in step["params"].items() if k != "entity_file_sha256"}
+    return sha(canon({"entity_id": step["params"].get("entity"),
+                      "field_path": step["params"].get("field"),
+                      "value_sha256": sha(canon(step["value"])),
+                      "inputs": step["inputs"], "method": step["method"], "params": params,
+                      "assumptions": step["assumptions"], "scope": step["scope"],
+                      "status": step["status"]}))
 
 
 def source_id(text):
@@ -124,12 +133,14 @@ def near_duplicates(sources):
     return {k: v for k, v in sorted(groups.items()) if len(v) > 1}
 
 
-def _void(value, has_source, reason):
-    """Map an LID field to a void state (mapping declared PROPOSED)."""
+def _void(value, has_source, reason, label_slot=False):
+    """Map an LID field to a void state (mapping declared PROPOSED, fixes v2).
+    VOID = null, reason kept when the record gives one. LEXICAL_VOID = an open
+    label slot only. REJECTED needs a declared gate; none exists, none is made."""
     if value is None:
-        if reason:
-            return {"state": "LEXICAL_VOID", "reason": reason}
-        return {"state": "VOID", "reason": None}
+        if label_slot:
+            return {"state": "LEXICAL_VOID", "reason": reason or "open label slot: no term recorded"}
+        return {"state": "VOID", "reason": reason or None}
     if not has_source:
         return {"state": "UNMAPPED", "reason": "value present, no source recorded"}
     return None
@@ -211,7 +222,7 @@ def entity_fields(d):
 
 def compute_steps(d, declared, file_sha=None):
     """One step per field of one entity. Returns (steps, sources, assumptions).
-    file_sha (sha256 of the entity file's bytes) goes into params, so into the id."""
+    file_sha (sha256 of the entity file's bytes) goes into params as context; it is not in the id."""
     steps, sources, assumptions = [], {}, {}
     eid = d.get("id")
     for field, value, srcs, status, scope, extra, reason, ass in entity_fields(d):
@@ -224,7 +235,10 @@ def compute_steps(d, declared, file_sha=None):
         params.update(extra)
         note = ATTR_STATUS_NOTE if field.startswith("attributes.") else None
         steps.append(make_step([source_id(s) for s in srcs], params, value, ass, scope, status,
-                               None, declared, None, _void(value, bool(srcs), reason), None,
+                               None, declared, None,
+                               _void(value, bool(srcs), reason,
+                                     field.startswith("functional_intelligence.contested_label[")),
+                               None,
                                status_note=note))
     return steps, sources, assumptions
 
@@ -500,15 +514,42 @@ def selftest():
          "SOURCE_CHANGED" in stale({A["id"]: ("T", A)}, [], before).get(A["id"], []))
     case("field drift fires FIELD_CHANGED",
          "FIELD_CHANGED" in stale({D["id"]: ("T", D)}, srcs, before, {("T", "d"): "0" * 64}).get(D["id"], []))
-    case("void mapping: null + reason -> LEXICAL_VOID", _void(None, False, "unmeasured")["state"] == "LEXICAL_VOID")
-    case("void mapping: null, no reason -> VOID", _void(None, False, None)["state"] == "VOID")
+    case("void mapping: null + reason -> VOID, reason kept",
+         _void(None, False, "unmeasured") == {"state": "VOID", "reason": "unmeasured"})
+    case("void mapping: null, no reason -> VOID", _void(None, False, None) == {"state": "VOID", "reason": None})
+    case("void mapping: open label slot -> LEXICAL_VOID", _void(None, False, None, True)["state"] == "LEXICAL_VOID")
+    case("void mapping: nothing maps to REJECTED",
+         all((_void(v, h, r, l) or {}).get("state") != "REJECTED"
+             for v in (None, 1) for h in (False, True) for r in (None, "x") for l in (False, True)))
+    ls = compute_steps({"id": "T", "functional_intelligence": {"contested_label": [
+        {"label": None, "claimed_by": ["Planted (0000)"]}, {"label": "learning"}]}}, None, "0" * 64)[0]
+    lv = {s["params"]["field"]: (s["void"] or {}).get("state") for s in ls}
+    case("backfill: null contested label -> LEXICAL_VOID, null capability -> VOID",
+         lv["functional_intelligence.contested_label[0]"] == "LEXICAL_VOID"
+         and lv["functional_intelligence.contested_label[1]"] == "UNMAPPED"
+         and lv["functional_intelligence.adapts"] == "VOID")
     case("void mapping: value, no source -> UNMAPPED", _void(1, False, None)["state"] == "UNMAPPED")
     case("void mapping: value + source -> null", _void(1, True, None) is None)
     attr = compute_steps({"id": "T", "attributes": {"k": 1}}, None, "0" * 64)[0][0]
     case("attribute step: assumptions null, status null with a note",
          attr["assumptions"] is None and attr["status"] is None and attr["status_note"] == ATTR_STATUS_NOTE)
-    case("id covers the entity file hash",
-         compute_steps({"id": "T", "attributes": {"k": 1}}, None, "1" * 64)[0][0]["id"] != attr["id"])
+    attr2 = compute_steps({"id": "T", "attributes": {"k": 1}}, None, "1" * 64)[0][0]
+    case("id does not cover the entity file hash; the hash stays in params",
+         attr2["id"] == attr["id"] and attr2["params"]["entity_file_sha256"] == "1" * 64
+         and attr["params"]["entity_file_sha256"] == "0" * 64)
+    base = make_step([], {"entity": "T", "field": "s"}, 1, [], None, "PROPOSED")
+    variants = [make_step([], {"entity": "T", "field": "s"}, 1, [], None, "OBSERVED"),
+                make_step([], {"entity": "T", "field": "s"}, 1, ["A-000000000000"], None, "PROPOSED"),
+                make_step([], {"entity": "T", "field": "s"}, 1, [], {"condition": "c"}, "PROPOSED"),
+                make_step([], {"entity": "T", "field": "s"}, 1, None, None, "PROPOSED"),
+                make_step([], {"entity": "T", "field": "s2"}, 1, [], None, "PROPOSED"),
+                make_step([], {"entity": "T2", "field": "s"}, 1, [], None, "PROPOSED")]
+    case("id covers status, assumptions, scope, field path and entity id",
+         len({base["id"]} | {v["id"] for v in variants}) == 7)
+    case("id does not cover status_note, claim, void, snapshot_class, supersedes, declared_pre_run",
+         step_id(dict(base, status_note="n", void={"state": "VOID", "reason": None}, supersedes="0" * 64,
+                      snapshot_class="SUMMARY_ONLY", declared_pre_run="x",
+                      claim={"statement": "s", "evidence": "e", "refuter": "r", "state": "UNVERIFIED"})) == base["id"])
     case("source id is the full sha256 of the exact string",
          srcs[0]["id"] == hashlib.sha256(src_text.encode("utf-8")).hexdigest() and len(srcs[0]["id"]) == 64)
     se = source_entry("X Y (2016) T. PMID 1 [abstract read via NCBI efetch 2026-11-24; full text not read]")
@@ -531,25 +572,57 @@ def selftest():
         root = Path(tmp)
         (root / "ontology" / "x").mkdir(parents=True)
         ent = {"id": "T1", "name": "t", "ontology": "x",
-               "attributes": {"k": {"value": 1, "scope": {"evidence": {"source": "Planted (0000)"}}}, "u": 5}}
+               "attributes": {"k": {"value": 1, "scope": {"evidence": {"source": "Planted (0000)"}}}, "u": 5},
+               "gate_sensing": {"limit_sensed": "x", "early_signal": "y", "response": "z", "lead_time": None,
+                                "sources": {"limit_sensed": ["Planted (0000)"]},
+                                "status": {"limit_sensed": "PROPOSED"}}}
         (root / "ontology" / "x" / "t1.json").write_text(json.dumps(ent), encoding="utf-8")
         c1 = build(root, quiet=True)
         c2 = build(root, quiet=True)
-        case("build: one step per field", c1["appended"] == 2 and c1["steps_total"] == 2)
-        case("build twice: nothing appended", c2["appended"] == 0 and c2["steps_total"] == 2)
+        case("build: one step per field", c1["appended"] == 6 and c1["steps_total"] == 6)
+        case("build twice: nothing appended", c2["appended"] == 0 and c2["steps_total"] == 6)
         case("build leaves the entity file untouched",
              json.loads((root / "ontology" / "x" / "t1.json").read_text(encoding="utf-8")) == ent)
         ent["attributes"]["k"]["value"] = 2
         (root / "ontology" / "x" / "t1.json").write_text(json.dumps(ent), encoding="utf-8")
         st, sr, asr = load_chain(root)
-        case("entity edit fires FIELD_CHANGED before rebuild",
-             any("FIELD_CHANGED" in v for v in stale(st, sr, asr, current_ids(root)).values()))
+        fl = stale(st, sr, asr, current_ids(root))
+        case("change one field: only that field's step is FIELD_CHANGED",
+             [st[i][1]["params"]["field"] for i in fl] == ["attributes.k"]
+             and list(fl.values()) == [["FIELD_CHANGED"]])
         c3 = build(root, quiet=True)
         doc = json.loads((root / "provenance" / "T1.json").read_text(encoding="utf-8"))
-        case("rebuild appends a superseding step per field, keeps the old",
-             c3["appended"] == 2 and c3["superseding"] == 2 and len(doc["steps"]) == 4
-             and doc["steps"][2]["supersedes"] == doc["steps"][0]["id"]
-             and doc["steps"][3]["supersedes"] == doc["steps"][1]["id"])
+        case("rebuild appends one superseding step for that field, keeps the old",
+             c3["appended"] == 1 and c3["superseding"] == 1 and len(doc["steps"]) == 7
+             and doc["steps"][6]["supersedes"] == doc["steps"][0]["id"]
+             and doc["steps"][6]["params"]["field"] == "attributes.k")
+        case("unchanged fields keep the file hash they were written under",
+             doc["steps"][1]["params"]["entity_file_sha256"] != doc["steps"][6]["params"]["entity_file_sha256"])
+        st, sr, asr = load_chain(root)
+        case("after rebuild nothing is stale", stale(st, sr, asr, current_ids(root)) == {})
+        # status-only revision: new step, supersedes old, old kept
+        ent["gate_sensing"]["status"]["limit_sensed"] = "OBSERVED"
+        (root / "ontology" / "x" / "t1.json").write_text(json.dumps(ent), encoding="utf-8")
+        st, sr, asr = load_chain(root)
+        fl = stale(st, sr, asr, current_ids(root))
+        case("status-only change: only that field's step is FIELD_CHANGED",
+             [st[i][1]["params"]["field"] for i in fl] == ["gate_sensing.limit_sensed"])
+        c4 = build(root, quiet=True)
+        doc = json.loads((root / "provenance" / "T1.json").read_text(encoding="utf-8"))
+        old = [s for s in doc["steps"] if s["params"]["field"] == "gate_sensing.limit_sensed"]
+        case("status-only revision: new step supersedes the old, old kept, value unchanged",
+             c4["appended"] == 1 and len(old) == 2 and old[1]["supersedes"] == old[0]["id"]
+             and old[0]["status"] == "PROPOSED" and old[1]["status"] == "OBSERVED"
+             and old[0]["value"] == old[1]["value"])
+        # scope-only revision
+        ent["attributes"]["k"]["scope"]["condition"] = "at 20 C"
+        (root / "ontology" / "x" / "t1.json").write_text(json.dumps(ent), encoding="utf-8")
+        c5 = build(root, quiet=True)
+        doc = json.loads((root / "provenance" / "T1.json").read_text(encoding="utf-8"))
+        ks = [s for s in doc["steps"] if s["params"]["field"] == "attributes.k"]
+        case("scope-only revision: new step supersedes the old, old kept",
+             c5["appended"] == 1 and len(ks) == 3 and ks[2]["supersedes"] == ks[1]["id"]
+             and ks[1]["scope"] is None and ks[2]["scope"] == {"condition": "at 20 C"})
         st, sr, asr = load_chain(root)
         case("unsourced value carries UNMAPPED",
              {s["void"]["state"] for _, s in st.values() if s["params"]["field"] == "attributes.u"} == {"UNMAPPED"})
