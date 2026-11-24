@@ -5,6 +5,14 @@ broken dependencies, and evidence that is a noun pretending to be a verb.
 
 Usage:
   python3 audit.py [ontology_index.json]
+  python3 audit.py [ontology_index.json] --legacy     behaviour before the 2026-11-24 repair
+
+Repair 2026-11-24 (fixture F5 in validation/fixtures/DECLARED.json):
+  an entity whose file cannot be loaded is reported under "load_failures" with state LOAD_FAILED
+  and is left out of the scan (entities_loaded counts what was scanned). Before, the thin index
+  entry was scanned in its place: it has no attributes, so it could only look clean.
+  scoped_ratio is null when there is no numeric attribute to count (before: 1.0).
+  The behaviour before the repair is kept behind legacy=True / --legacy, for comparison.
 """
 
 import json
@@ -35,12 +43,34 @@ def _load_full_entities(ontology: dict, repo_root: Path) -> list:
         full.append(e)
     return full
 
-def audit(ontology: dict, repo_root: Path = None) -> dict:
+def _load_entities_reported(ontology: dict, repo_root: Path):
+    """Return (entities, load_failures). A failed entry is not replaced by its thin index entry."""
+    full, failures = [], []
+    for e in ontology.get("entities", []):
+        entity_path = e.get("path")
+        if not entity_path:
+            full.append(e)
+            continue
+        try:
+            with open(repo_root / entity_path, "r") as f:
+                full.append(json.load(f))
+        except (OSError, json.JSONDecodeError) as exc:
+            failures.append({"id": e.get("id"), "path": str(entity_path), "state": "LOAD_FAILED",
+                             "reason": "%s: %s" % (type(exc).__name__, exc)})
+    return full, failures
+
+def audit(ontology: dict, repo_root: Path = None, legacy: bool = False) -> dict:
     if repo_root is None:
         repo_root = Path(__file__).parent.parent
-    entities = _load_full_entities(ontology, repo_root)
+    if legacy:
+        entities, failures = _load_full_entities(ontology, repo_root), None
+    else:
+        entities, failures = _load_entities_reported(ontology, repo_root)
     report = {
-        "total_entities": len(entities),
+        "mode": "legacy" if legacy else "repaired",
+        "total_entities": len(ontology.get("entities", [])) if not legacy else len(entities),
+        "entities_loaded": len(entities),
+        "load_failures": failures,
         "unscoped_numerics": [],
         "noun_pretenders": [],
         "confidence_distribution": defaultdict(int),
@@ -118,16 +148,22 @@ def audit(ontology: dict, repo_root: Path = None) -> dict:
                         for a in e.get("attributes",{}).values()
                         if isinstance(a,(int,float)) or (isinstance(a,dict) and "value" in a))
     unscoped_count = len(report["unscoped_numerics"])
-    report["scoped_ratio"] = round(1 - unscoped_count / total_numeric, 2) if total_numeric else 1.0
+    if total_numeric:
+        report["scoped_ratio"] = round(1 - unscoped_count / total_numeric, 2)
+    else:
+        report["scoped_ratio"] = 1.0 if legacy else None
+        if not legacy:
+            report["scoped_ratio_reason"] = "no numeric attribute was scanned: no ratio"
 
     return report
 
 if __name__ == "__main__":
     repo_root = Path(__file__).parent.parent
-    if len(sys.argv) > 1:
-        path = sys.argv[1]
+    args = [a for a in sys.argv[1:] if a != "--legacy"]
+    if args:
+        path = args[0]
     else:
         path = repo_root / "ontology_index.json"
     ontology = load_ontology(path)
-    report = audit(ontology, repo_root=repo_root)
+    report = audit(ontology, repo_root=repo_root, legacy="--legacy" in sys.argv[1:])
     print(json.dumps(report, indent=2))
