@@ -1,0 +1,34 @@
+{
+ "entity": "QUARTZ",
+ "path": "ontology/crystal/quartz.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "6f6ce4c638c4190d3e38e28af2f1d6aa5f2fffbee47a2563f0ae76d0becbc9e1",
+   "inputs": [
+    "173b0830c0343561db9c3601dd2949c60695c1ed7a1ab7cb72f50e1bc1b8135d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUARTZ",
+    "field": "attributes.piezoelectric_coefficient",
+    "entity_file_sha256": "b6c20aaa32408d9363f274cf870adb5e107c884d371f33931c3cbfc28a92b487",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

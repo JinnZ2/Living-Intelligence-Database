@@ -1,0 +1,10 @@
+{"question_id": "Q01", "question": "What is trust based on in the stone-and-art obligation ledger?", "entity": "STONE_LEDGER"}
+{"question_id": "Q02", "question": "Where is the record of coordination held in an ant colony?", "entity": "ANT"}
+{"question_id": "Q03", "question": "What is the loop topology of coordination in an ant colony?", "entity": "ANT"}
+{"question_id": "Q04", "question": "What does coordination cost in energy in the stone-and-art obligation ledger?", "entity": "STONE_LEDGER"}
+{"question_id": "Q05", "question": "Does the Venus flytrap co-adapt with its prey?", "entity": "VENUS"}
+{"question_id": "Q06", "question": "What early signal does the Venus flytrap use?", "entity": "VENUS"}
+{"question_id": "Q07", "question": "Is Mimosa conscious?", "entity": "MIMOSA"}
+{"question_id": "Q08", "question": "How do wolves in a pack communicate?", "entity": "WOLF_PACK"}
+{"question_id": "Q09", "question": "How well does an ant colony recover after losing workers?", "entity": "ANT"}
+{"question_id": "Q10", "question": "What carries the coordination signal in a slime mold?", "entity": "SLIME"}

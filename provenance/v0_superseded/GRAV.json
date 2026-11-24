@@ -1,0 +1,32 @@
+{
+ "entity": "GRAV",
+ "path": "ontology/energy/gravitational.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "ea75b4355c928789cb0261e553d77d68df5133089342d60d4c92b3209b18d57d",
+   "inputs": [
+    "S-d7cdf4176b6a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GRAV",
+    "field": "attributes.equivalence_principle_precision",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

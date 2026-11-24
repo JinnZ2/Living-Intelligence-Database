@@ -1,0 +1,88 @@
+{
+ "entity": "BX",
+ "path": "ontology/animal/bat.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "7cda3b99a39e15f1a01f354defa1268414063f333c0cd3eced2c0fa6d9a46365",
+   "inputs": [
+    "854511faa3020adc4484d0e00fc2faf6b33032aa8676a363dc23bf2aa9e3feff"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BX",
+    "field": "attributes.echolocation_mapping",
+    "entity_file_sha256": "549fcfbb617b8931ace2337cf28e239eedd73eae96648a2b6919f298ad39ee13",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "cfc416f11796a24df28c36a3d4527a024e3757b83ccf2abd42fb52fe5cde15a3",
+   "inputs": [
+    "5166977eec90ecb0a1060065fead9d26013f7ef601f8a9ed9ffb56d3c4758468"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BX",
+    "field": "attributes.doppler_compensation",
+    "entity_file_sha256": "549fcfbb617b8931ace2337cf28e239eedd73eae96648a2b6919f298ad39ee13",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "740430798430c87294b9c6a8c29efa2ff43367daa727476f404ae52bd868b12a",
+   "inputs": [
+    "0ba0efc5a77d8814f2562ca47579c8b2fed4a467e92cb99e8deb079786aaf6cb"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BX",
+    "field": "attributes.jamming_avoidance",
+    "entity_file_sha256": "549fcfbb617b8931ace2337cf28e239eedd73eae96648a2b6919f298ad39ee13",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+ "entity": "WOLF_PACK",
+ "path": "ontology/social/wolf_pack.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "bed0262d8be7036e5ebeb9332d820ee152c9973b7bae9badc1d40557939834da",
+   "inputs": [
+    "S-19e955b454a0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF_PACK",
+    "field": "attributes.hunt_success_rate",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.82,
+   "assumptions": [],
+   "scope": {
+    "condition": {
+     "environment": "open grassland/forest edge, prey is elk or bison",
+     "constraints": [
+      "pack size 4-8",
+      "terrain allows encirclement",
+      "pack is socially cohesive"
+     ]
+    }
+   },
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8d4cbb075a6210626c7bc4fbcd1fcb997ea038050ab46bc0d51fae69fa4fd125",
+   "inputs": [
+    "S-620d5880fde1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF_PACK",
+    "field": "attributes.social_cohesion",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": {
+    "condition": {
+     "environment": "stable pack with established hierarchy and pair bond at center",
+     "constraints": [
+      "breeding pair intact",
+      "no recent pack disruption"
+     ]
+    }
+   },
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8d0e4184d5c6c6c954f7809e21633e88d3dfc96c7b892c3f19bad0cf9e7be5b2",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF_PACK",
+    "field": "attributes.intergenerational_teaching"
+   },
+   "value": "Pups learn hunt coordination through direct participation alongside experienced pack members. Skills are transmitted socially across generations without genetic encoding.",
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "fc723aec43c5d948720c7af8ce4b45aaf45b1ab21b8ffa3052a4a7d58fbe9d16",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF_PACK",
+    "field": "attributes.territory_negotiation"
+   },
+   "value": "Howling broadcasts territory boundaries, reducing direct conflict. Scent marking creates persistent spatial memory readable by non-pack members.",
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "b89997fabced84650a268176566c08984f8c74f40cf355e5b63b70216499333a",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF_PACK",
+    "field": "attributes.communication_mode"
+   },
+   "value": "Vocalization (howl, bark, whimper) + body posture + scent marking. Multi-modal, context-sensitive.",
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "a3de9d5049e46bb25a559bb8dd0131391289e0b709e87bac0bc0c0fd529c4cc3",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF_PACK",
+    "field": "attributes.pattern"
+   },
+   "value": "relational hierarchy, earned trust, multi-year social bonds, distributed care of young",
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  }
+ ]
+}

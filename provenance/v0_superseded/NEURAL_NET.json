@@ -1,0 +1,82 @@
+{
+ "entity": "NEURAL_NET",
+ "path": "ontology/ai/neural_network.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "e6e0e45488a5bdf70b5695842bbe80ebbbd96200fa1ab76e4cdd0a07c599bab6",
+   "inputs": [
+    "S-a562f44b661f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "NEURAL_NET",
+    "field": "attributes.backpropagation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ffb3c1d6bf1dd7f9e27ee1a9a70ab114cafc58ffe2f7d11ce683f119ae89b38a",
+   "inputs": [
+    "S-0fddb3058191"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "NEURAL_NET",
+    "field": "attributes.activation_cascade",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.85,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "928ee24f601d3ea7a60f3a25da52e40464af3abd8b2d9c12f3e5b966ff0c8dea",
+   "inputs": [
+    "S-afb236f9abcf"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "NEURAL_NET",
+    "field": "attributes.weight_convergence",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

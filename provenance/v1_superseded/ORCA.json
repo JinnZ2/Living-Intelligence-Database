@@ -1,0 +1,88 @@
+{
+ "entity": "ORCA",
+ "path": "ontology/animal/orca.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "646cb9192b77ef6e2057b6e33c541930f74cb8c179012bc38f64ea8cc72a7a82",
+   "inputs": [
+    "708f09aaaacd84b120562a4b1ec553ccd0eb86277505195cdbacadcedbbd14e1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ORCA",
+    "field": "attributes.cultural_hunting_tradition",
+    "entity_file_sha256": "eac7b126e66a3aa8e396082c0f2318b10f0a380fc84c34944471eba0a20d54f6",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "7166df4dc6030793f6ba7c33fa3edd2672f0cafd18839fab1905cedb250293e4",
+   "inputs": [
+    "5e61e7667ca76005bb0ecd4363ed5b2415f6e8d50723dfbdb8e3ea5df55f63c2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ORCA",
+    "field": "attributes.matriarchal_leadership",
+    "entity_file_sha256": "eac7b126e66a3aa8e396082c0f2318b10f0a380fc84c34944471eba0a20d54f6",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "50e7e18ce771f054be1200db3db0c09b384853364c176592f69027373c99e6f6",
+   "inputs": [
+    "723e048e40e8cc0e05a32310391fe2ba4dfd5f02e683d1532f1562adce1d6be7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ORCA",
+    "field": "attributes.dialect_transmission",
+    "entity_file_sha256": "eac7b126e66a3aa8e396082c0f2318b10f0a380fc84c34944471eba0a20d54f6",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

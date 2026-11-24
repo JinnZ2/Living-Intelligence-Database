@@ -1,0 +1,32 @@
+{
+ "entity": "THERMAL",
+ "path": "ontology/energy/thermal.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "a26ea3f27da306453b8bc95f3808d66ba2880311de9e0f760d327100c9374212",
+   "inputs": [
+    "S-2d9b53db9394"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "THERMAL",
+    "field": "attributes.carnot_efficiency_bound",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.98,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

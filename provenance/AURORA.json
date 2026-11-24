@@ -1,0 +1,34 @@
+{
+ "entity": "AURORA",
+ "path": "ontology/plasma/aurora.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2da025d7dd90c0555982ce48dab7fed5d52d637c0bdd64e06ed66adf72751766",
+   "inputs": [
+    "920942d917bf19a01fe885a2c3593e30297bb6ee1e60bf4d1e34446790c4c983"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AURORA",
+    "field": "attributes.particle_energy_dissipation",
+    "entity_file_sha256": "fc2d29e6b3f837af1cd36e51e9c1b91c8230a5ed46a98abd45363a44e9291312",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

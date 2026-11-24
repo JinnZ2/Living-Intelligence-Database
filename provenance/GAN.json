@@ -1,0 +1,61 @@
+{
+ "entity": "GAN",
+ "path": "ontology/ai/generative_adversarial_network.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "4ad6ef9d13662cab0d384fcf1956daef0b25cf90b96b118ac10ea8fe6c1229d6",
+   "inputs": [
+    "64d22f3898f483c2d547df10c5d8902928072a169aeb2d2c505015361901e981"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GAN",
+    "field": "attributes.adversarial_equilibrium",
+    "entity_file_sha256": "b1d4718b94c7e659ddf108e4316cbcbeb20a665c4aaae420a9f90cb79bc62dec",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.86,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "e5c921bc4948d272a28b8f8e280992b8b4ee3f06868b25e062ef981087f5025e",
+   "inputs": [
+    "82644c1097c7b6a08c0d5fa2a8939bea317844d062abfa41832d1aeb43d92f0c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GAN",
+    "field": "attributes.latent_space_navigation",
+    "entity_file_sha256": "b1d4718b94c7e659ddf108e4316cbcbeb20a665c4aaae420a9f90cb79bc62dec",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.83,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

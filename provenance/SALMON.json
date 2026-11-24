@@ -1,0 +1,88 @@
+{
+ "entity": "SALMON",
+ "path": "ontology/animal/salmon.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "b92a2e78553142cd3000d1fc4458ae3545fcbfd552dba63baf225a9a32d9dff6",
+   "inputs": [
+    "af3f51b37cb9495e69cf5a3ef96f8db908ab09c77c263512970d546ff1d797ab"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SALMON",
+    "field": "attributes.olfactory_homing",
+    "entity_file_sha256": "acf0ac22c853bd7c684680f2662713ee7e046e8651886dab041737343befcc9b",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "3f25e56cc9c9ea61ff18ae55baf39b888852bef42eabfcb2091249c8acfa2435",
+   "inputs": [
+    "f821bd6806aa990d5b1cc15f2d4dfc723dab4dfe24f8000d053777abd7f4a7d3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SALMON",
+    "field": "attributes.osmoregulatory_switch",
+    "entity_file_sha256": "acf0ac22c853bd7c684680f2662713ee7e046e8651886dab041737343befcc9b",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "154fbddf7d6108de2f3d8fe4582a3d327aa6fcdd220ed509b1a6a7bed7cec188",
+   "inputs": [
+    "7dcbe7a5ebb06d85ce0a7bc105877cc9d8c5f555f68bb0208d1193148e794dc5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SALMON",
+    "field": "attributes.nutrient_teleportation",
+    "entity_file_sha256": "acf0ac22c853bd7c684680f2662713ee7e046e8651886dab041737343befcc9b",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

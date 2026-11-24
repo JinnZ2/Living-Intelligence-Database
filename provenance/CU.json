@@ -1,0 +1,88 @@
+{
+ "entity": "CU",
+ "path": "ontology/animal/cuttlefish.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "3f49d11e86e8c6093cab7afc57737dbd34aa67baa23f655e993e05aff10100bc",
+   "inputs": [
+    "76bfed4e7422256d3e0e89cc91ac8e5c33f46b89eced2a47f285b9cfb78e5cb8"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CU",
+    "field": "attributes.hypnotic_display",
+    "entity_file_sha256": "d5c07c47908e90edd5b46d14dab53d8e542082710d874ec74d54495f8590c89c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "b132e9b3749b9dca00f7795ee16fb9f9b7c73d90cd97fc654c45d5de81dd6bfc",
+   "inputs": [
+    "dc47204c5a2a4f0705633a635191d093ff4be2240dada4fc5e059f40cad28d0b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CU",
+    "field": "attributes.instant_camouflage",
+    "entity_file_sha256": "d5c07c47908e90edd5b46d14dab53d8e542082710d874ec74d54495f8590c89c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c10ef07317e691415284fe11f4e6ba03c6c5aba7f18820999d10f3ab9b62def9",
+   "inputs": [
+    "ce3e63b3fd0c65889a232335a01f4597e46c9be416fb34a33ddf09c225de4134"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CU",
+    "field": "attributes.buoyancy_control",
+    "entity_file_sha256": "d5c07c47908e90edd5b46d14dab53d8e542082710d874ec74d54495f8590c89c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

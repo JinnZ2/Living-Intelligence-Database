@@ -1,0 +1,34 @@
+{
+ "entity": "ECHO",
+ "path": "ontology/temporal/echo.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2b9aae42538adaa7749a3bedb40f9bb99bf8ebc1b9836f5c40db881ffafcd150",
+   "inputs": [
+    "970252a7da9bf528def353603235329050879d1e102a81aae5c76c8b67201f5b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ECHO",
+    "field": "attributes.signal_persistence_ratio",
+    "entity_file_sha256": "4c3cd8e222fad1fefcb6307a402f073486f1b009e81cd077ce12b896d88c6c48",
+    "evidence_type": "cross_domain_rhyme",
+    "reproducibility": "medium"
+   },
+   "value": 0.73,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

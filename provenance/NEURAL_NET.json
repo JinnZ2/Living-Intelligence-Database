@@ -1,0 +1,88 @@
+{
+ "entity": "NEURAL_NET",
+ "path": "ontology/ai/neural_network.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "3c12364ef749e498fcf50471d8d9fe7633d1546732ae0d2c2f60b66c0906e6c9",
+   "inputs": [
+    "a562f44b661f2bb8ae447dcd0eacc717ced888777a441bd7033062caf26286bf"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "NEURAL_NET",
+    "field": "attributes.backpropagation",
+    "entity_file_sha256": "1af61b47784f662f79de3633acd46e333a9aca99058f5bcbc42659056b6f2c82",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "db88f131532a69bf922d4f84c3a336cd8037332dff13f54ac7024e3aa021c49e",
+   "inputs": [
+    "0fddb3058191751c0e67221351007b6832e96eff791b0f3457c4abcb83c7ad05"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "NEURAL_NET",
+    "field": "attributes.activation_cascade",
+    "entity_file_sha256": "1af61b47784f662f79de3633acd46e333a9aca99058f5bcbc42659056b6f2c82",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.85,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "76ab2a84512e3d0c43576f76205895c66a86d3babe3c0d99601d50eeb7ecb902",
+   "inputs": [
+    "afb236f9abcf54202a2b19b52a3cce8da284c57384c6ce4b7a100e3ee5cd9701"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "NEURAL_NET",
+    "field": "attributes.weight_convergence",
+    "entity_file_sha256": "1af61b47784f662f79de3633acd46e333a9aca99058f5bcbc42659056b6f2c82",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

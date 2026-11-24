@@ -1,0 +1,34 @@
+{
+ "entity": "FE",
+ "path": "ontology/plant/fern.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "ad0c8d7fdf8d177982c668e77148e1a4625975bb9445500ed992c20a02561655",
+   "inputs": [
+    "02a7bfbdcba4bc80233bc51095376d7c4312ae794fafc9730628df3a67d255e1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FE",
+    "field": "attributes.shade_photosynthetic_efficiency",
+    "entity_file_sha256": "917c771efc0f05983dee8b0f487415b33c85158992677245b6f3b1fa5d0f20a3",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

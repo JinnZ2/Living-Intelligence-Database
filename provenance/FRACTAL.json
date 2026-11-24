@@ -1,0 +1,34 @@
+{
+ "entity": "FRACTAL",
+ "path": "ontology/shape/fractal.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "ecbc809a0090e68f2bb18bb4c69a26169f9416c2bbab270c7523927187361071",
+   "inputs": [
+    "40a999084e8300c7f66102987d5f3173a11f6f1044cffa977f4ce176285beb2a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FRACTAL",
+    "field": "attributes.self_similarity_index",
+    "entity_file_sha256": "2ec8681963df6b6c4cc7b50db99330d222364020076c514bc45a2395b0e3a3fe",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

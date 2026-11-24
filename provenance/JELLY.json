@@ -1,0 +1,88 @@
+{
+ "entity": "JELLY",
+ "path": "ontology/animal/jellyfish.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "df3fab08694039bce1e446bc368a16dbd2d802130abc9a1c3d50e7d5fe68a9a7",
+   "inputs": [
+    "6d748af344bdae8b6f19f2a492ffc46553cedd8819797d60a192dfb23745b301"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "JELLY",
+    "field": "attributes.bioluminescent_signaling",
+    "entity_file_sha256": "dc3c546bab31d79ec30926babec99fd1a72287776d139ba2844bde1f87a8dbcf",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "66a4ffbaf5f1429f69d29c77fca1225de32171767fd836541be52ec4e828fb77",
+   "inputs": [
+    "f52ac56679c9fb0cd65704e139c3ff2bee3cedd2b4cdcd731aba19e03c7e7fd7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "JELLY",
+    "field": "attributes.transdifferentiation",
+    "entity_file_sha256": "dc3c546bab31d79ec30926babec99fd1a72287776d139ba2844bde1f87a8dbcf",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "9689cd77e787de1df050e623c1172d4ba46ce329ad39ba4ea7ca1b6461b0f042",
+   "inputs": [
+    "762707bd4ddf550d7d4f5c24f4c20601f7e96cdf03c11f3610cbdbbb1d7eecb1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "JELLY",
+    "field": "attributes.jet_propulsion_rhythm",
+    "entity_file_sha256": "dc3c546bab31d79ec30926babec99fd1a72287776d139ba2844bde1f87a8dbcf",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "entity": "SINE_WAVE",
+ "path": "ontology/energy/sine_wave.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "681db04d77add8935f9f4dd493ddc3971c39b5f3f09e4603cb5bea9d4d15e55c",
+   "inputs": [
+    "S-979fd13973e7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SINE_WAVE",
+    "field": "attributes.fourier_decomposition_universality",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

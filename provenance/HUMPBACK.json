@@ -1,0 +1,88 @@
+{
+ "entity": "HUMPBACK",
+ "path": "ontology/animal/humpback_song.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "5c0e56e89ab2f325ebf305d42f79a400bfef357eedb074f813e902971e1c4e0c",
+   "inputs": [
+    "40b59501ee54bc594d0d07d5501dac3dc5302f926d8e4b3bc4fcaccad79f95d5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HUMPBACK",
+    "field": "attributes.cultural_wave_propagation",
+    "entity_file_sha256": "71b8196eeda2626f89801c067ebb74874f06e08f694d41ff1bb45536cece4741",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "eca6fb5c2dc0b876186b173eced7106d7b66c3a81c3787e9cbfb33cb1e76d289",
+   "inputs": [
+    "aac1e2efe74b2e6968dcd6e971f9738dfb6e2741067c710431eebcf0108316cb"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HUMPBACK",
+    "field": "attributes.hierarchical_composition",
+    "entity_file_sha256": "71b8196eeda2626f89801c067ebb74874f06e08f694d41ff1bb45536cece4741",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "92e673f5b578f593b5a5710de7bb15baff28e1f17a7ad54d6492a4d398a4c705",
+   "inputs": [
+    "7ef3bf63a979837731d9d5bd6182d8f13445a740b247b430f738d834c8d12a9b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HUMPBACK",
+    "field": "attributes.seasonal_evolution",
+    "entity_file_sha256": "71b8196eeda2626f89801c067ebb74874f06e08f694d41ff1bb45536cece4741",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

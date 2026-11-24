@@ -1,0 +1,88 @@
+{
+ "entity": "MANTIS",
+ "path": "ontology/animal/praying_mantis.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "bbcad6014bc4a683b19138424e8fcc720e6558c6ad73dd83170eead0d8efcc19",
+   "inputs": [
+    "cc9c874d8c2cb4c21bc0170d614313463cb73cf77a2e34160a43932c670535bf"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MANTIS",
+    "field": "attributes.stereoscopic_vision",
+    "entity_file_sha256": "ebf40b0b2f7cf66504652da79122a9a9b0da820849ff91dfd26b8d6688f8f6e9",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "5ea04ba3dc0ab8e28aa1a1e70d16b2d2ca8df4a76e891c033a9ef42a1054b88e",
+   "inputs": [
+    "5eddbedf5e24bfc51455da7407223061b299c329dc36b50f4f2fe9e74d10b1b7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MANTIS",
+    "field": "attributes.raptorial_strike",
+    "entity_file_sha256": "ebf40b0b2f7cf66504652da79122a9a9b0da820849ff91dfd26b8d6688f8f6e9",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "17131a148f653f9bb93bc4eb61d44cd0d7f82d9c5a0c16db41f6dfd373ea17da",
+   "inputs": [
+    "53ac81dce99e32238087828465b9d087d0d83720f4e349888c89d9369294213d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MANTIS",
+    "field": "attributes.ambush_patience",
+    "entity_file_sha256": "ebf40b0b2f7cf66504652da79122a9a9b0da820849ff91dfd26b8d6688f8f6e9",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

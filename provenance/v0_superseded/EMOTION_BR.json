@@ -1,0 +1,32 @@
+{
+ "entity": "EMOTION_BR",
+ "path": "ontology/energy/emotion_bridge.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "7a59f7802361523a0afc00151a0204af8a093d4dc5b103746b88eb7e824d3f56",
+   "inputs": [
+    "S-a3f844f5adaa"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EMOTION_BR",
+    "field": "attributes.PAD_encoding_coverage",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

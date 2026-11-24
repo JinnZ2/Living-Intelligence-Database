@@ -1,0 +1,88 @@
+{
+ "entity": "WH",
+ "path": "ontology/animal/whale.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "08976b48c34e7a55f3f746676a6f982eb6bba505c1988cbd1bba8563bb91af82",
+   "inputs": [
+    "3f4549e1a138613ed55e77a5ccffd8ca21a0c118278fda34395f30932a40f742"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WH",
+    "field": "attributes.long_range_acoustic",
+    "entity_file_sha256": "e43d97fd75c3c6a18f8b443ba6d166d5541d1f8bb321297f84066810bca28ca7",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "86d2aeb3ce8b8ad107cbf3761c750bce0c6b6877d3f61539e966cea78dcead25",
+   "inputs": [
+    "165a941ddc7f948e9db883010946bb1a232159691315ae08350f3b7a90654689"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WH",
+    "field": "attributes.magnetic_navigation",
+    "entity_file_sha256": "e43d97fd75c3c6a18f8b443ba6d166d5541d1f8bb321297f84066810bca28ca7",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "366efeee7daa4de34a32e27c85e64f0b56b4f4b631be2e0f2f7654e575a82335",
+   "inputs": [
+    "8c71dac0dd4978228ad83a65160c686712713eef83590c4ff0aee1496def9bb3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WH",
+    "field": "attributes.cultural_song_transmission",
+    "entity_file_sha256": "e43d97fd75c3c6a18f8b443ba6d166d5541d1f8bb321297f84066810bca28ca7",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

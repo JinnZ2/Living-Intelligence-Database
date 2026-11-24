@@ -1,0 +1,88 @@
+{
+ "entity": "CR",
+ "path": "ontology/animal/cricket.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "b04d5c9ca7559af83fc42be7577985b37713762e6fa19d7019dc81be43317732",
+   "inputs": [
+    "a40e1b33eccb1520c702e5ff6cada592023cc2095a1fb90ae75ef7b71bba6ec8"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CR",
+    "field": "attributes.stridulation_encoding",
+    "entity_file_sha256": "96703bf6c632c68ad52db5355facc9835b73e5a1c532250a2cac07aa36593c2b",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "772924ca509678007f5d776923e86ec067239d9200eb09f535b5beff54c32182",
+   "inputs": [
+    "ca3c91657f583695d31d604ccefa2d774d9eec118f71691eba50488ddb7c31c4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CR",
+    "field": "attributes.phonotactic_navigation",
+    "entity_file_sha256": "96703bf6c632c68ad52db5355facc9835b73e5a1c532250a2cac07aa36593c2b",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "aadd855bffeef8de6b96ad20fcc702ec63e2c41fc74fa22a806735dda96d2761",
+   "inputs": [
+    "0b188b60a7f822b34fa80b2c2f325b4b24a715e312de1e7c0179d27116c361cc"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CR",
+    "field": "attributes.temperature_frequency_coupling",
+    "entity_file_sha256": "96703bf6c632c68ad52db5355facc9835b73e5a1c532250a2cac07aa36593c2b",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "entity": "PRESSURE",
+ "path": "ontology/energy/pressure_field.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "7ab988620b279e4970024f78b697eb5c1cb1f0e3802f3a4f7c92e7b5b547722e",
+   "inputs": [
+    "c67492bd56a81dded3a3672f00bc2de6dc3786d3e3bd1dde0613c4faf9a90cfa"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PRESSURE",
+    "field": "attributes.pascal_principle_precision",
+    "entity_file_sha256": "c4196067748a31d2fa0307e8679262faf0fd799c63d5c3e3dd202d189d983a58",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

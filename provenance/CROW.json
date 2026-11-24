@@ -1,0 +1,88 @@
+{
+ "entity": "CROW",
+ "path": "ontology/animal/crow.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "74a5afe7e2ae057cd323f869a48d1c5d4d2e06f9c72dec4061d36a7fa35839fd",
+   "inputs": [
+    "035c320d89272b92192054eb69397cf21e535eaa4cd91940232c5c1c7615c496"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CROW",
+    "field": "attributes.tool_manufacture",
+    "entity_file_sha256": "6bbf9e06f553c8d244b1968fd257c61c0f8cf912fe1469f9b26d5403e06bc286",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "e5eb408267b021ef44d4bce98309cc7b41054a1dfe1febf48da2c650eb6e4ee1",
+   "inputs": [
+    "334649ebe3c6600af17a6a4391983749e8574128f94cdbc443c3cfe93858886f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CROW",
+    "field": "attributes.metacognition",
+    "entity_file_sha256": "6bbf9e06f553c8d244b1968fd257c61c0f8cf912fe1469f9b26d5403e06bc286",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c78c76ad0d1ac3ec6f5aaf4eb22a8f59fe29eb4b22142896ce4badb860977156",
+   "inputs": [
+    "028f1c31038367998fef8d2e2da172cf76b597609c251fbecd2817b5b2db8a0d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CROW",
+    "field": "attributes.cultural_transmission",
+    "entity_file_sha256": "6bbf9e06f553c8d244b1968fd257c61c0f8cf912fe1469f9b26d5403e06bc286",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

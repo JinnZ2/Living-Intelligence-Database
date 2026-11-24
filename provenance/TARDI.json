@@ -1,0 +1,88 @@
+{
+ "entity": "TARDI",
+ "path": "ontology/animal/tardigrade.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "9114066b81a7be8688f7d981ac9169ed835cd030b1e866d5bae161c6d79c6eb2",
+   "inputs": [
+    "037c0fb19bb19c17083a03b00d25c1d8d5fd97a4d9179ea48fbc86408b3ea7ba"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TARDI",
+    "field": "attributes.cryptobiosis",
+    "entity_file_sha256": "b6f45ad47a4f8859a735be66bf7678c102745aad0523f8c910d79c9b82ed7550",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.99,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "756014398ff228c73e46d497c44121bf1c0aceea7c3028ada082c9337a4e460f",
+   "inputs": [
+    "08ab67e2393b4bad8b4e774e763a962e5bb4a2c16f5707ec9b12b219ff3af4a3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TARDI",
+    "field": "attributes.radiation_resistance",
+    "entity_file_sha256": "b6f45ad47a4f8859a735be66bf7678c102745aad0523f8c910d79c9b82ed7550",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "f2338bf9a2fe4c176bb6dc3cf4f1e9a82952d1e9fd6e00a5afdfea5e88af0cab",
+   "inputs": [
+    "5765499ac3e35a026ebb06709eed56957c8f7348f35b78a95304c7ee35202d02"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TARDI",
+    "field": "attributes.tdp_protein_shielding",
+    "entity_file_sha256": "b6f45ad47a4f8859a735be66bf7678c102745aad0523f8c910d79c9b82ed7550",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

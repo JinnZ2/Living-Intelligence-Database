@@ -1,0 +1,34 @@
+{
+ "entity": "LIGHTNING",
+ "path": "ontology/plasma/lightning.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "98764a63d39bfe649ebd8ffb4893d5417b9835708ad25116fce374048e42c3fd",
+   "inputs": [
+    "7cefae50f32fba0c545dd6caa549425f57e7cd481ede60ead914eb688b36b3cd"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LIGHTNING",
+    "field": "attributes.channel_temperature_peak",
+    "entity_file_sha256": "8751c1df1c9abd2c07c4fd671fe413b7d45f5bd4037a3979f7ebb1713777b34c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

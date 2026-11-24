@@ -1,0 +1,32 @@
+{
+ "entity": "SUN",
+ "path": "ontology/plant/sunflower.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "74cb4df2d1d1bbae2dc47b0a911d3bd72206c0f6cd732437d1cbacca382f3425",
+   "inputs": [
+    "S-c12c9e5deb97"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SUN",
+    "field": "attributes.fibonacci_packing_density",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.97,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

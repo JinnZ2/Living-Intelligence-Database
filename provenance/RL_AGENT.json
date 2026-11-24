@@ -1,0 +1,88 @@
+{
+ "entity": "RL_AGENT",
+ "path": "ontology/ai/reinforcement_learner.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "0528da567e810b8c54e77ba40c240be53fea75c38876925854c0ae942421aa73",
+   "inputs": [
+    "a2695dffd5dd64eb348a9d782bab76fd62d661455690a9adca3144367a2d0ce4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RL_AGENT",
+    "field": "attributes.temporal_difference_learning",
+    "entity_file_sha256": "d580050d3af9c242edf5f0e584758d4aa6edc2ea7e3d6ce3fb6652b884461ba9",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a42b1e3dcf224ef8dd784a9d0433c75269d1785b61d44e3bc8fac14b842206d3",
+   "inputs": [
+    "58ff0c8055f4c2a7ea26e48810f66ef787c12fccfaec9aafda3f52e3f7206a3d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RL_AGENT",
+    "field": "attributes.policy_gradient",
+    "entity_file_sha256": "d580050d3af9c242edf5f0e584758d4aa6edc2ea7e3d6ce3fb6652b884461ba9",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.84,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "9cd1b655c8e86e32d8d8a781880e4652c977d02fa4e45899bf91a6be21a442fc",
+   "inputs": [
+    "1cfdfc7b890b29b49437934c2a38549c9bd474cb973d08bd0a14516a322554f0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RL_AGENT",
+    "field": "attributes.exploration_exploitation",
+    "entity_file_sha256": "d580050d3af9c242edf5f0e584758d4aa6edc2ea7e3d6ce3fb6652b884461ba9",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.81,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

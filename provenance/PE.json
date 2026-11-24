@@ -1,0 +1,88 @@
+{
+ "entity": "PE",
+ "path": "ontology/animal/penguin.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "3a472f02f7590bf168cc6a6fc16c7d3ed30ad95a54908513393501cbcba3a98a",
+   "inputs": [
+    "f015a75204270c184050b0595d6635c4c2a5e1de4ef249f81f9ce816833c029f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PE",
+    "field": "attributes.thermal_huddle_rotation",
+    "entity_file_sha256": "aa54c3e498245897f3a7e78cd21796b7c6bbf4d2ac32028e9f2652e4c4b17035",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "39687239e92ec20efc38bd77c2d4543e658209edaf6e3f6c0d55b4b614b0debe",
+   "inputs": [
+    "968ba3d97c485131c837d4b82904f2e54ac7c2a9b690521c24e7179f2f5258ec"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PE",
+    "field": "attributes.counter_current_exchange",
+    "entity_file_sha256": "aa54c3e498245897f3a7e78cd21796b7c6bbf4d2ac32028e9f2652e4c4b17035",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "7c1cf5f8d71a2abdb4303a5cb6ef346e25555caf13fbbf6c46f871a031d7f031",
+   "inputs": [
+    "9b63fbc72b202f5ee191acc7b1fe769e18ffa5cf75ec4d8d30620f7219cf92f8"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PE",
+    "field": "attributes.hydrodynamic_diving",
+    "entity_file_sha256": "aa54c3e498245897f3a7e78cd21796b7c6bbf4d2ac32028e9f2652e4c4b17035",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "entity": "KA",
+ "path": "ontology/animal/kangaroo.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "922ec6c8864ef95e8109af3a24c00a41eb62543ba448400d78394988ff327ff3",
+   "inputs": [
+    "S-60703e1d04e7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "KA",
+    "field": "attributes.elastic_energy_storage",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "22653816dbefe252f84d61f6d9be4e4d9a9cb10b425736ea4247935ba361df28",
+   "inputs": [
+    "S-abee7a95cd88"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "KA",
+    "field": "attributes.ballistic_locomotion",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "3f67897ed6ece09adec9535fffee104f92b0d1bed2391006c70840769d13b1d0",
+   "inputs": [
+    "S-dd03a167489c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "KA",
+    "field": "attributes.pendulum_gait",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a9cd9a3c74198e8de0b55a88c9ea9156d2808f011045f366a8f70f89c12b072c",
+   "inputs": [
+    "S-6bc5a082a849"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "KA",
+    "field": "attributes.dynamic_counterbalance",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

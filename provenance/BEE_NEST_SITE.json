@@ -1,0 +1,335 @@
+{
+ "entity": "BEE_NEST_SITE",
+ "path": "ontology/social/honeybee_nest_site_selection.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "4058771c8c2844d8e96a75761b4587702c83f783888a7a8691b3e3b4869fffa8",
+   "inputs": [
+    "93859cb378d354cb54864c26904cbc15a2b4f6281a28137388a279fa6eda344a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "attributes.quorum_threshold_at_site",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1",
+    "evidence_type": "not_assessed",
+    "reproducibility": "not_assessed"
+   },
+   "value": null,
+   "assumptions": null,
+   "scope": {
+    "condition": {
+     "environment": "a swarm that has left its hive and is choosing a new cavity",
+     "constraints": [
+      "not assessed: source not opened"
+     ]
+    }
+   },
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "1d0778fd4c8c73e3ef4473bd54b002d71261fb847256768b8d8bd7e7c275483e",
+   "inputs": [
+    "93859cb378d354cb54864c26904cbc15a2b4f6281a28137388a279fa6eda344a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "attributes.time_to_decision",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1",
+    "evidence_type": "not_assessed",
+    "reproducibility": "not_assessed"
+   },
+   "value": null,
+   "assumptions": null,
+   "scope": {
+    "condition": {
+     "environment": "a swarm that has left its hive and is choosing a new cavity",
+     "constraints": [
+      "not assessed: source not opened"
+     ]
+    }
+   },
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "e7e605ca2c33c840dd781d07398e8fa0264eadbaf9b54d477c6df6e8c138dc28",
+   "inputs": [
+    "93859cb378d354cb54864c26904cbc15a2b4f6281a28137388a279fa6eda344a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "attributes.choice_accuracy",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1",
+    "evidence_type": "not_assessed",
+    "reproducibility": "not_assessed"
+   },
+   "value": null,
+   "assumptions": null,
+   "scope": {
+    "condition": {
+     "environment": "a swarm that has left its hive and is choosing a new cavity",
+     "constraints": [
+      "not assessed: source not opened"
+     ]
+    }
+   },
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "d2d5052e4f250ff94611e4fdbb4ec5f775333dbdef3aa1e6104e0c3b33a48001",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.carrier",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "2b0b26acc0d5ac2c60e5f6290b9e52208d13270e659efc577771f182eda0a19a",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.signal",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "af1fbcc944c8813e7d8df34d2b7c66558a852e7c5b04dd069e7789a5b27adcd3",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.record",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "7dfe072589bac7844cbe44f112417753225f37c409d33b0453dccdd2cb1aaf74",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.closure",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "bdcfcc705f052731ab298eaee3df0e71804a317b45d543e6ca6b0dfd3e6ad7f4",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "653b5d0af5f963957d55bff5207aa5d721b6693ada12986d68a53f73492ffe1e",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "540048097ee60d1f5940838f3e96266c7a978e22300e35f4182769baa2ef4a45",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "1215051c962197e9adac4808c33aa946beeff7529dc409e47cd6b451b346bea6",
+   "inputs": [
+    "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BEE_NEST_SITE",
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "78cd93c9ca9307f181d54b7e466b36f1854d573a6a07abba67ccd7f977abd9b1"
+   },
+   "value": [
+    "coordination requires money",
+    "collective decisions require a leader",
+    "agreement requires a shared language",
+    "only humans deliberate"
+   ],
+   "assumptions": [
+    "A-c6ed44ae9df7",
+    "A-beeabf1e52fd",
+    "A-21eda837cf89",
+    "A-625b0d50ad85"
+   ],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

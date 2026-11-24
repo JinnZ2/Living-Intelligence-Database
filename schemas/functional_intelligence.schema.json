@@ -1,0 +1,343 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "functional_intelligence.schema.json",
+  "title": "Functional intelligence block",
+  "description": "What an entity is observed to do, recorded without requiring a label such as 'intelligent' or 'conscious'. Each capability is yes / no / unmeasured with its own status and source. Null means no information.",
+  "type": ["object", "null"],
+  "required": [
+    "adapts",
+    "signals",
+    "responds_to_other",
+    "changes_environment",
+    "co_adapts",
+    "coupling_note",
+    "contested_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "adapts": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "value",
+        "status",
+        "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unmeasured"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        },
+        "source": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "description": "Changes its own response with conditions or with what has happened to it."
+    },
+    "signals": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "value",
+        "status",
+        "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unmeasured"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        },
+        "source": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "description": "Emits a signal that another part of itself or another organism can read."
+    },
+    "responds_to_other": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "value",
+        "status",
+        "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unmeasured"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        },
+        "source": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "description": "Changes what it does in response to another organism."
+    },
+    "changes_environment": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "value",
+        "status",
+        "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unmeasured"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        },
+        "source": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "description": "Alters its surroundings in a way that then bears on itself or others."
+    },
+    "co_adapts": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "value",
+        "status",
+        "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unmeasured"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "DERIVED (basis: PROPOSED)",
+            "DERIVED (basis: OBSERVED)",
+            "PROPOSED",
+            null
+          ]
+        },
+        "source": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "description": "It and a partner each change in response to the other, over repeated contact."
+    },
+    "coupling_note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "What the relation is with (the partner, prey, host, substrate)."
+    },
+    "contested_label": {
+      "description": "Open slot: labels under dispute and who disputes them. Recorded; never required for the yes/no fields, and never changes them.",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "claimed_by",
+          "disputed_by"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "claimed_by": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "disputed_by": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

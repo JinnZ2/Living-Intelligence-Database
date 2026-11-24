@@ -1,0 +1,88 @@
+{
+ "entity": "RA",
+ "path": "ontology/animal/rat.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "fb34fbb879c7e812d708e912b44bb8a4facf8fa271ad3d8bfccf969694e13535",
+   "inputs": [
+    "7f666d3dd14bdcd328ea164d331412d68e0cbb7e2d7b3ede6d5c54085a85f444"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RA",
+    "field": "attributes.cognitive_mapping",
+    "entity_file_sha256": "5b2cbab496ba997e4b53e98ea6ff72c58d308bf9b7a64ae015d7a8953f74a860",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "443e5fc60f80499448be51b168010be41fae65c1659242b9961e44b37a5397e3",
+   "inputs": [
+    "860b94f1c3db9fd606160989b40d70bf9dd33d235f7acb0bf2a8ad1ec09ce58d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RA",
+    "field": "attributes.hexagonal_grid_cells",
+    "entity_file_sha256": "5b2cbab496ba997e4b53e98ea6ff72c58d308bf9b7a64ae015d7a8953f74a860",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "4d8457c32caa60d77b9bec0b9779931c21607fab3687b63ddd7cc5a9582faf8b",
+   "inputs": [
+    "8d939a7fd8f683cc6185a90901554defb9f93e3582b01b46acde1eae1e28e191"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RA",
+    "field": "attributes.sleep_replay",
+    "entity_file_sha256": "5b2cbab496ba997e4b53e98ea6ff72c58d308bf9b7a64ae015d7a8953f74a860",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

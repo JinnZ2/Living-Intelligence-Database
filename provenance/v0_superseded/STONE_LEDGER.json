@@ -1,0 +1,221 @@
+{
+ "entity": "STONE_LEDGER",
+ "path": "ontology/social/stone_art_ledger.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "43bed82c1905bd49170de0105c4d9b96760bd70254dcdeead505093a61a555b6",
+   "inputs": [
+    "S-5958170d9ad5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.carrier"
+   },
+   "value": "Etched stone or clay recording what is owed on a mismatch.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c3cbce5af3666eb438f78e713835f5f45d5a43c632fb060d085dc7cc25d0f788",
+   "inputs": [
+    "S-5958170d9ad5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.signal"
+   },
+   "value": "The mismatch itself: an unequal exchange between parties.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ce6a9735b0f25e3beafb5cdc4f7959c789532235d8c9f51f7f629bf60f7a652f",
+   "inputs": [
+    "S-5958170d9ad5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.record"
+   },
+   "value": "A shared physical object, held by the parties.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ef008cbc878272fec64d98c7facd3a4b3e8e4f8a2be8dc9678a8cb0a92e86c29",
+   "inputs": [
+    "S-5958170d9ad5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.closure"
+   },
+   "value": "Art is made over the record when the obligation completes. The record is transformed, not destroyed.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "240c3cdde0a27359a982a5b3386a7b300f1c1f28261874bd139f1edddb0ca98a",
+   "inputs": [
+    "S-5958170d9ad5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.trust_basis"
+   },
+   "value": "The count of completed-record artworks from many different people.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "351fe9890f821372fbbb55cee7e91015e783875e3665d39d092273e84cd9206a",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.energy_cost"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "unmeasured"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "2624b572f790d2c8cc29387ad88902bd77be50d433a949ad74611ec2ff710871",
+   "inputs": [
+    "S-5958170d9ad5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.loop_topology"
+   },
+   "value": {
+    "cycles": [
+     {
+      "id": "L1",
+      "path": "unequal exchange -> obligation etched on the object -> obligation completed -> art made over the record -> the completed artwork is seen by others"
+     }
+    ],
+    "observer_cuts": [
+     {
+      "cut": "the object seen after closure and recorded as art only",
+      "cycles_surviving": [],
+      "note": "the obligation and its completion are not on the record; the trust count reads as decoration"
+     },
+     {
+      "cut": "parties and object followed from mismatch to closure",
+      "cycles_surviving": [
+       "L1"
+      ],
+      "note": null
+     }
+    ]
+   },
+   "assumptions": [],
+   "scope": null,
+   "status": "DERIVED (basis: OBSERVED)",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "df7cd56c53bce39266a9c9e78c687a2a723b2fe496bd732e8d37e74510ee1b81",
+   "inputs": [
+    "S-5958170d9ad5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.assumption_trace"
+   },
+   "value": [
+    "coordination requires money",
+    "trust requires a central ledger or institution",
+    "closed debts carry no further value"
+   ],
+   "assumptions": [
+    "A-c6ed44ae9df7",
+    "A-3cbf006ee956",
+    "A-e4d9be4d1a8c"
+   ],
+   "scope": null,
+   "status": "PROPOSED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

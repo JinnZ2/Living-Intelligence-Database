@@ -1,0 +1,169 @@
+{
+ "entity": "BE",
+ "path": "ontology/animal/bee.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "36d6c752a8cd3b4b5028d0889311128673a3f7795f01ca78deea07fd70576bf2",
+   "inputs": [
+    "82b3eb8372a3528ecd8d9a7727a15218d883dab31cc46bbd64ac73dbafe0123d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.hexagonal_cell_efficiency",
+    "entity_file_sha256": "c7ab64502669fe038b07d541c7c0f6d4f0f5501b8f096eed308e7a952d37d2c9",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "23ece5370dd3dc6f9af30ec29a1e53ec4d7a7173b048e928a8f52c30884cd9f3",
+   "inputs": [
+    "2915902723ace520a7e4dab9957ad2f657a7ab87119f0e0b35dfca59c1f75f95"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.waggle_dance_precision",
+    "entity_file_sha256": "c7ab64502669fe038b07d541c7c0f6d4f0f5501b8f096eed308e7a952d37d2c9",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "990538f452a1c4162e09abdd5d8ff86e83cd5de3fa9a056e78254ce6e6ac9df9",
+   "inputs": [
+    "a04bc6fa3e69932c815fb2082bd91b11fdebc73e59da841421277783e9f04b07"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.hexagonal_tessellation",
+    "entity_file_sha256": "c7ab64502669fe038b07d541c7c0f6d4f0f5501b8f096eed308e7a952d37d2c9",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ba5fad31de4dc374c21ae8910b1208641ea7703d799d6c20b5096dadd51e2ac1",
+   "inputs": [
+    "2db5724365e8cb113486295c886588ff5b44683d2f9e650a843bff2ed80a1dea"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.waggle_dance_communication",
+    "entity_file_sha256": "c7ab64502669fe038b07d541c7c0f6d4f0f5501b8f096eed308e7a952d37d2c9",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c043f235b3eb1346bff3ca6accea9c39cc01d8e0fb4dea8d525aba0fc39fdb99",
+   "inputs": [
+    "23dd81e2d056c12ed1f3c9385f4f2b243061b129a5c05b32d573c069585a1f63"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.swarm_coordination",
+    "entity_file_sha256": "c7ab64502669fe038b07d541c7c0f6d4f0f5501b8f096eed308e7a952d37d2c9",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "f735210872f931c95d7b409605577db33276dffb9dcf5e72de8fef9598ac2ccf",
+   "inputs": [
+    "a67ce7406a52cb364f5f891770cf5907ee437113293dc82d69834665cf53efb7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.collective_thermoregulation",
+    "entity_file_sha256": "c7ab64502669fe038b07d541c7c0f6d4f0f5501b8f096eed308e7a952d37d2c9",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

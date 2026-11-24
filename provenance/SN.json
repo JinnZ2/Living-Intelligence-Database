@@ -1,0 +1,88 @@
+{
+ "entity": "SN",
+ "path": "ontology/animal/snake.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "e074b1bceeeaaca5aa8d57c314cf65cd741721ca912e2b4f1bc965a2aebe2212",
+   "inputs": [
+    "d1ac7cf2c205dca46f6bacde5842f95e3effa4042a290bc93f9209f8cb9cb3e9"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SN",
+    "field": "attributes.infrared_thermal_imaging",
+    "entity_file_sha256": "7e2404b80d07e6c1f9a5c583e860e2810f6712c754969e574894c9e84bf7fa6c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "99a34028677e71435d23a52887e603ef7308fb6e5c4562263225826abfb9e6ef",
+   "inputs": [
+    "13435911442f858d2d9c628a06755937cf55466c5e82182c60b15c081cdad81f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SN",
+    "field": "attributes.chemical_stereoscopy",
+    "entity_file_sha256": "7e2404b80d07e6c1f9a5c583e860e2810f6712c754969e574894c9e84bf7fa6c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "5864e0e714b4b78c0b3528865f601cdb1c24747081aa06c9eac70e3961217628",
+   "inputs": [
+    "583b179e1ada7ad0a479a91bb47ec252da34ffb1188df37c59f121749d3ed4b3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SN",
+    "field": "attributes.terrain_adaptive_locomotion",
+    "entity_file_sha256": "7e2404b80d07e6c1f9a5c583e860e2810f6712c754969e574894c9e84bf7fa6c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

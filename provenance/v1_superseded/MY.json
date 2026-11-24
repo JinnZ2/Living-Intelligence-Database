@@ -1,0 +1,276 @@
+{
+ "entity": "MY",
+ "path": "ontology/plant/mycelium.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "b6a02a53de16373bb36e5e5770529a5350e4302b62e44332bbbc6775f91a1568",
+   "inputs": [
+    "f9ae6f7e553454081f6467806f7f8da0545e3ccd05c703a553648292c04ac2f1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "attributes.phosphorus_transfer_efficiency",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.85,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "03e45186c57ad4130e3e469727c5f385d20ac54aadc08a9e0ecf18e0b62f9192",
+   "inputs": [
+    "0207e08374d88a21c610adcb8632c2f3484cbc76ee337639933510af4970d417"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "attributes.network_fault_tolerance",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.78,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "6ccc7c6d4dd7fcdbad6065cf9907ae3bf258b7cb6d5d20190cc0df9208749cfd",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "coordination.carrier",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "9c01b2a1c418831a1fdb345fabcbcf8374a37b6071d52103836cf7d61abc272d",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "coordination.signal",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "874913ac28ed90a19b469da1c67ca68eafe0fe2c5c0ae368628fb00a0ecb82b4",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "coordination.record",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "e1048d96615781fbba4c2fe2d9dc4a50fef9b9af1cd58c2207c2836b00704ac7",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "coordination.closure",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "4ee5e45f5490520266ec18f1274df60615f13a2772e308b6455441322f28e814",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "31ca2021accda4f8e9b96e4e5d2cd829cfdff6fbd7008c84e6045ee367e45ac6",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "2b450210104a13f30d115139af9d46f59e2e6b0d3317bbfcd92c2e5a4311cf9b",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "b47bd56765a426f3905ef65df76e59ccb86f9312c86a65f6ccbe6a4d249fbd1d",
+   "inputs": [
+    "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MY",
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "e1b6e63f48a0188f8e08a5055f799f22e566a8cea0823c56617580f3ea44e6d3"
+   },
+   "value": [
+    "coordination requires money",
+    "fair exchange requires contracts or enforcement by a third party",
+    "markets are a human invention"
+   ],
+   "assumptions": [
+    "A-c6ed44ae9df7",
+    "A-5a25f5f9cd64",
+    "A-287cb4aabf52"
+   ],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

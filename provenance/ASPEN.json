@@ -1,0 +1,34 @@
+{
+ "entity": "ASPEN",
+ "path": "ontology/plant/aspen_grove.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "dce87f36e1394b97971afafe0c2e07344bc88c171b3176d50aa6be07ea74faa4",
+   "inputs": [
+    "95421f11f4eb1cb89784fb95f8f3ab2239c1fe0ed2364efd8f411a3f6c1175c1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ASPEN",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "b95a68c99803f98e43587bfe35e89b0069bf7cd43a2228831d5f5ae3c04e3d1d",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

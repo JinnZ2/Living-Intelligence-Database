@@ -80,5 +80,48 @@
     "tree_mutualism",
     "nutrient_redistribution",
     "interspecies_signaling"
-  ]
+  ],
+  "coordination": {
+    "carrier": null,
+    "signal": null,
+    "record": null,
+    "closure": null,
+    "trust_basis": null,
+    "energy_cost": null,
+    "loop_topology": null,
+    "assumption_trace": [
+      "coordination requires money",
+      "fair exchange requires contracts or enforcement by a third party",
+      "markets are a human invention"
+    ],
+    "sources": {
+      "carrier": null,
+      "signal": null,
+      "record": null,
+      "closure": null,
+      "trust_basis": null,
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": [
+        "work order, 2026-11-24 (Kavik + Claude)"
+      ]
+    },
+    "status": {
+      "carrier": null,
+      "signal": null,
+      "record": null,
+      "closure": null,
+      "trust_basis": null,
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": "PROPOSED"
+    },
+    "notes": {
+      "_stub": "Stub: fields are null = no information yet. Candidate sources for filling: Kiers ET et al. (2011) Reciprocal rewards stabilize cooperation in the mycorrhizal symbiosis. Science 333(6044):880-882. doi:10.1126/science.1208473. PMID 21836016 [abstract read via NCBI efetch 2026-11-24]; Karst J, Jones MD, Hoeksema JD (2023) Positive citation bias and overinterpreted results lead to misinformation on common mycorrhizal networks in forests. Nat Ecol Evol 7(4):501-511. doi:10.1038/s41559-023-01986-1. PMID 36782032 [abstract read via NCBI efetch 2026-11-24; erratum doi:10.1038/s41559-023-02035-7 not read]",
+      "_abstract_depth": "Both read at abstract depth only. Kiers 2011 abstract: plants reward the best arbuscular fungal partners with more carbohydrates, and fungi increase nutrient transfer only to roots providing more carbohydrates; control is bidirectional.",
+      "_contested": "CONTESTED. Karst 2023 abstract: the claims that common mycorrhizal networks are widespread in forests and that resources moved through them increase seedling performance are insufficiently supported; the claim that mature trees preferentially send resources and defence signals to offspring through them has no peer-reviewed published evidence. Kiers 2011 concerns plant-fungus exchange in arbuscular mycorrhiza; Karst 2023 concerns plant-to-plant transfer through common networks in forests. A field filled from one must not be read as support for the other.",
+      "_related": "Related records carrying network claims: ontology/plant/mother_tree.json, ontology/plant/root_network.json. Their existing attributes were not checked by this change.",
+      "_existing_attributes": "phosphorus_transfer_efficiency and network_fault_tolerance in this file were not checked against either source."
+    }
+  }
 }

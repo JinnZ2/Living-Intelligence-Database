@@ -1,0 +1,88 @@
+{
+ "entity": "SWARM_AI",
+ "path": "ontology/ai/swarm_intelligence.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "5995212f8ccfa04bf4e43616837cf231cc4ed44d36db87ab2edd4e1856d81069",
+   "inputs": [
+    "d413229066c73c120045c8ebb09c3959f4aaee31b80a33ff55f36599a81df192"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWARM_AI",
+    "field": "attributes.particle_swarm_optimization",
+    "entity_file_sha256": "43c6abfc2561a94e764ab74497dc6d8f311a63b8927e4c4e0419a58619a6f289",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8a8dd76976acd9081fe5013e7824262b0a539f8dcfabaf07f61ae37489f344f7",
+   "inputs": [
+    "105f0407624ac48dbffbd2a91647c36e510c02e513ceff14748cd43924f32499"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWARM_AI",
+    "field": "attributes.ant_colony_optimization",
+    "entity_file_sha256": "43c6abfc2561a94e764ab74497dc6d8f311a63b8927e4c4e0419a58619a6f289",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.85,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "9f96098c5ad3da3b0d160e6f8714dda22fa255b6e3a46223c24b1afa3a4a0044",
+   "inputs": [
+    "74af786b56b1d489018162757b89843011903c5e5203d6ba9b2afa5a814b7319"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWARM_AI",
+    "field": "attributes.consensus_formation",
+    "entity_file_sha256": "43c6abfc2561a94e764ab74497dc6d8f311a63b8927e4c4e0419a58619a6f289",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.83,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

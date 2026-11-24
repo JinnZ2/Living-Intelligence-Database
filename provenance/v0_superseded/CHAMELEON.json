@@ -1,0 +1,82 @@
+{
+ "entity": "CHAMELEON",
+ "path": "ontology/animal/chameleon.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2cb5d67ea7702efeddb30dbfdc8477d1a891be0c14dd6b2cecad437c25779bcf",
+   "inputs": [
+    "S-5f78020093f7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CHAMELEON",
+    "field": "attributes.nanocrystal_structural_color",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "23554533cdaca62bf8f1f42a674ba9487beb01e8de2af24b3ac8e235ba575d42",
+   "inputs": [
+    "S-eebf5e42d9c4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CHAMELEON",
+    "field": "attributes.independent_eye_tracking",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "5a235413c2cff6b7e6d5b9e898a5167799a0e3251773e3c795a71ade13921311",
+   "inputs": [
+    "S-b8dbe31df7bd"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CHAMELEON",
+    "field": "attributes.ballistic_tongue",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

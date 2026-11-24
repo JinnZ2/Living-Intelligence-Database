@@ -1,0 +1,106 @@
+{
+  "id": "STONE_LEDGER",
+  "name": "Stone-and-art obligation ledger",
+  "ontology": "social",
+  "description": "A practice common across many Indigenous peoples of the Americas: what is owed after an unequal exchange is recorded on stone or clay, and art is made over the record when the obligation completes. No specific tribe, nation or person is named in this record.",
+  "co_creation": true,
+  "coordination": {
+    "carrier": "Etched stone or clay recording what is owed on a mismatch.",
+    "signal": "The mismatch itself: an unequal exchange between parties.",
+    "record": "A shared physical object, held by the parties.",
+    "closure": "Art is made over the record when the obligation completes. The record is transformed, not destroyed.",
+    "trust_basis": "The count of completed-record artworks from many different people.",
+    "energy_cost": {
+      "joules": null,
+      "per": null,
+      "note": "unmeasured"
+    },
+    "loop_topology": {
+      "cycles": [
+        {
+          "id": "L1",
+          "path": "unequal exchange -> obligation etched on the object -> obligation completed -> art made over the record -> the completed artwork is seen by others"
+        }
+      ],
+      "observer_cuts": [
+        {
+          "cut": "the object seen after closure and recorded as art only",
+          "cycles_surviving": [],
+          "note": "the obligation and its completion are not on the record; the trust count reads as decoration"
+        },
+        {
+          "cut": "parties and object followed from mismatch to closure",
+          "cycles_surviving": [
+            "L1"
+          ],
+          "note": null
+        }
+      ]
+    },
+    "assumption_trace": [
+      "coordination requires money",
+      "trust requires a central ledger or institution",
+      "closed debts carry no further value"
+    ],
+    "sources": {
+      "carrier": [
+        "Contributor oral knowledge and lived practice (contributor-held; not a published citation)"
+      ],
+      "signal": [
+        "Contributor oral knowledge and lived practice (contributor-held; not a published citation)"
+      ],
+      "record": [
+        "Contributor oral knowledge and lived practice (contributor-held; not a published citation)"
+      ],
+      "closure": [
+        "Contributor oral knowledge and lived practice (contributor-held; not a published citation)"
+      ],
+      "trust_basis": [
+        "Contributor oral knowledge and lived practice (contributor-held; not a published citation)"
+      ],
+      "loop_topology": [
+        "Contributor oral knowledge and lived practice (contributor-held; not a published citation)"
+      ],
+      "assumption_trace": [
+        "Contributor oral knowledge and lived practice (contributor-held; not a published citation)"
+      ],
+      "energy_cost": null
+    },
+    "status": {
+      "carrier": "OBSERVED",
+      "signal": "OBSERVED",
+      "record": "OBSERVED",
+      "closure": "OBSERVED",
+      "trust_basis": "OBSERVED",
+      "loop_topology": "DERIVED (basis: OBSERVED)",
+      "assumption_trace": "PROPOSED",
+      "energy_cost": null
+    },
+    "notes": {
+      "_source": "OBSERVED here means held by the contributor from oral knowledge and lived practice. It is not a published citation and no document was read for it.",
+      "loop_topology": "Each obligation is one closed loop, made visible on closure. Contrast: transferable or compounding debt keeps loops open. The two observer cuts are this record's derivation from the contributor's description, not part of it.",
+      "assumption_trace": "The three assumptions were named by the contributor; the tag PROPOSED marks that the tracing itself has not been tested.",
+      "_channels": "One object carries multiple channels: trust record, art, and knowledge transfer between makers. Value persists after closure."
+    }
+  },
+  "functional_intelligence": null,
+  "links": [
+    {
+      "rel": "synergy",
+      "to": "ANT",
+      "note": "state held outside individuals: shared object vs environment trail",
+      "status": "PROPOSED"
+    }
+  ],
+  "metadata": {
+    "scope_note": "Name no specific tribe, nation or person in this record.",
+    "related_literature": {
+      "_note": "Related record devices in the literature. The ledger is not attributed to them, and nothing is stated from them.",
+      "items": [
+        "wampum as a record and treaty device [NOT OPENED: no source fetched]",
+        "engraved shell exchange, e.g. Spiro [NOT OPENED: no source fetched]"
+      ]
+    },
+    "functional_intelligence_note": "Block present, null: no information (human practice)."
+  }
+}

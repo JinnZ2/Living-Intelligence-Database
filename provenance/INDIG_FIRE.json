@@ -1,0 +1,88 @@
+{
+ "entity": "INDIG_FIRE",
+ "path": "ontology/animal/indigenous_fire.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f26c17769931026b1a12324c609abfddf547810fde80244e79acc41d68915096",
+   "inputs": [
+    "50e42dd6583bb82d70655c9c49a012e47e4b08d693b87e681413e720375b6897"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "INDIG_FIRE",
+    "field": "attributes.mosaic_burn_pattern",
+    "entity_file_sha256": "a01c0845a9b563768ad58449e2f6243c0dd7d78ea4d22e1ce368c25ae7ac6bd2",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "7660aca96b024afee1bfa3f15adbb6d3dca668c65fa437781e5a615c59dec12d",
+   "inputs": [
+    "89e60d88b841d99313cf7ab98db99839085e82790cdb7900ca1ea085a5012c3f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "INDIG_FIRE",
+    "field": "attributes.phenological_timing",
+    "entity_file_sha256": "a01c0845a9b563768ad58449e2f6243c0dd7d78ea4d22e1ce368c25ae7ac6bd2",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ce50cea16bb67d70518426b0fa5d91b1563ba6b1112e20e3d12d0d50654f6a6f",
+   "inputs": [
+    "cf0ec22b078c61fc811adaeac26133b1322036a5bc599abf363bd14882b11361"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "INDIG_FIRE",
+    "field": "attributes.oral_tradition_transfer",
+    "entity_file_sha256": "a01c0845a9b563768ad58449e2f6243c0dd7d78ea4d22e1ce368c25ae7ac6bd2",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,413 @@
+{
+  "what": "Declarations for the provenance chain, written and committed BEFORE scripts/provenance.py existed or any step was built. The commit that adds this file is the pre-run commit; every step carries it as declared_pre_run. A later change is a new dated entry under 'amendments', never an edit.",
+  "declared": "2026-11-24",
+  "status": "PROPOSED",
+  "co_authored": true,
+  "conventions_copied_from": {
+    "repository": "JinnZ2/Geometric-to-Binary-Computational-Bridge",
+    "note": "Conventions only; no code imported.",
+    "paths": {
+      "declared_pre_run": "experiments/experiment_bridge/eqsearch/DECLARED.json and eqsearch/README.md at main e8b7d12fa3a1d59c9ce25da1d573d5e6f17e58dc",
+      "as_received": "experiments/experiment_bridge/evidence/kimi_round2_as_received/MANIFEST.json, evidence/equation_search_as_received/MANIFEST.json, raw/manifest.json at main e8b7d12",
+      "claim_table": "experiments/experiment_bridge/CLAIM_TABLE.md at main e8b7d12",
+      "void_states": "experiments/experiment_bridge/v1/README.md lines 16-20, v1/semantics.py, eqsearch/exact.py at main e8b7d12",
+      "snapshot_classes": "experiments/experiment_bridge/snapshot/README.md and snapshot/snapshot_class.py on branch claude/snapshot-class at baa114e2eecec3c8e8a30c388039f6cc2f4ec5d6 (not on main at e8b7d12)"
+    }
+  },
+  "hash": {
+    "algorithm": "sha256, lowercase hex, full length",
+    "canonical_json": "UTF-8; keys sorted; separators ',' and ':' with no spaces; non-ASCII characters written as themselves; no trailing newline",
+    "step_id": "sha256 of the canonical JSON of {inputs, method, params, value}",
+    "source_id": "'S-' + first 12 hex of sha256 of the source string as UTF-8",
+    "assumption_id": "'A-' + first 12 hex of sha256 of the statement as UTF-8",
+    "not_in_step_id": [
+      "assumptions",
+      "scope",
+      "status",
+      "supersedes",
+      "declared_pre_run",
+      "claim",
+      "void",
+      "snapshot_class"
+    ]
+  },
+  "backfill": {
+    "method": {
+      "name": "manual_entry",
+      "version": "1"
+    },
+    "one_step_per": "attributes.<name>; coordination.<field>; gate_sensing.<field>; functional_intelligence.<capability>; functional_intelligence.contested_label[i]",
+    "params": "entity id and field path always; for attributes also evidence_type and reproducibility as found",
+    "inputs": "the source ids of the field's source strings, in the order found; [] when the field has none",
+    "status": "the field's existing status tag, or null when it has none; no tag is assigned by the backfill",
+    "assumptions": "the ids of the entity's assumption_trace on the coordination.assumption_trace step only; [] elsewhere",
+    "no_new_claims": "claim is null on every backfilled step"
+  },
+  "stale_rules": {
+    "HASH_MISMATCH": "a stored step id differs from the id recomputed from the stored step",
+    "SOURCE_CHANGED": "an input source id is missing from registry/sources.json, or its text no longer hashes to its id",
+    "ASSUMPTION_CHANGED": "an assumption id on the step is missing from registry/assumptions.json, is superseded by a later entry, or its statement no longer hashes to its id",
+    "FIELD_CHANGED": "the head step of a field differs from the step computed now from the entity file",
+    "INPUT_CHANGED": "a parent step named in inputs is flagged by any rule above or has been superseded; applied transitively"
+  },
+  "revision_rule": "Nothing is deleted or edited. A revision appends a new step whose supersedes is the prior step id. A superseded step stays in the file. An appended step whose id already exists in the file is refused.",
+  "claim": {
+    "fields": [
+      "statement",
+      "evidence",
+      "refuter",
+      "state"
+    ],
+    "states": [
+      "SUPPORTED",
+      "UNVERIFIED"
+    ],
+    "separate_from": "status (OBSERVED / DERIVED (basis: ...) / PROPOSED)"
+  },
+  "void_states": {
+    "keep_all_four": [
+      "REJECTED",
+      "UNMAPPED",
+      "LEXICAL_VOID",
+      "VOID"
+    ],
+    "mapping_status": "PROPOSED",
+    "mapping": {
+      "LEXICAL_VOID": "the field is null and the record states the gap in words (a note such as 'unmeasured', or a notes entry for the field)",
+      "VOID": "the field is null and no reason is recorded",
+      "UNMAPPED": "the field has a value and no source at all",
+      "REJECTED": "a value was offered and refused by a gate; none is produced by the backfill"
+    },
+    "shape": "void is null, or {state, reason}; a step with a void state for a null field has value null"
+  },
+  "snapshot_classes": {
+    "values": [
+      "CONTEXT_FREE_EXACT",
+      "STABLE_LOSSY",
+      "CHAOTIC_REFRESH",
+      "SUMMARY_ONLY"
+    ],
+    "use": "a field on any summarized or coarse record; null on a record that is not a summary",
+    "provenance/INDEX.json": "SUMMARY_ONLY (per-entity counts; the steps cannot be rebuilt from it)"
+  },
+  "thresholds": "none: the chain has no numeric gate",
+  "amendments": [
+    {
+      "date": "2026-11-24",
+      "after": "the first build (commit 9d4b56f, 303 steps) and the owner's answers to the step-0 questions",
+      "changes_a_declared_value": true,
+      "what": "Rules changed by order before any use of the chain. The text above is kept as first declared; where it differs, this entry governs.",
+      "changes": {
+        "step_id": "sha256 of the canonical JSON of {inputs, method, params, value}, unchanged in form; params now always holds entity, field and entity_file_sha256 (sha256 of the entity file's bytes), so the id covers entity file hash + field path + value",
+        "source_id": "the full sha256 (64 hex) of the exact source string as UTF-8; no prefix. Registry fields: id, string, same_as (null), opened (false or a depth word), fetched (null or a date)",
+        "assumptions_on_attribute_steps": "null = not assessed; never []. [] is used only where a block field was read and names none",
+        "status_note": "new step key, not in the id. Attribute steps carry status null and status_note 'not assessed in this vocabulary'",
+        "schema": "schemas/provenance_step.schema.json validates files under provenance/. No entity schema references it and no entity file carries a provenance key",
+        "tool": "scripts/provenance_chain.py; doc docs/provenance_chain.md",
+        "declared_pre_run": "steps cite the latest commit that changed this file before the build, which is the commit adding this amendment",
+        "first_build": "the 303 steps and the source registry of the first build are kept unchanged under provenance/v0_superseded/ and registry/v0_superseded/; they are not part of the live chain",
+        "FIELD_CHANGED_consequence": "because the id covers the entity file hash, any byte change to an entity file gives every field of that entity a new step"
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "name": "fixes v2",
+      "after": "the rebuild at 5a066a7 (303 live steps, id rule of the first amendment) and the owner's work order 'provenance-chain, fixes v2'",
+      "changes_a_declared_value": true,
+      "what": "Rules changed by order before the v2 rebuild. Earlier text is kept as declared; where it differs, this entry governs.",
+      "changes": {
+        "step_id": "sha256 of the canonical JSON of {entity_id, field_path, value_sha256, inputs, method, params, assumptions, scope, status}. entity_id = params.entity; field_path = params.field; value_sha256 = sha256 of the canonical JSON of the value; params is taken without entity_file_sha256.",
+        "entity_file_sha256": "stays in params as context: the entity file's sha256 when the step was written. It is not in the id. A byte change to an entity file gives a new step only to a field whose id inputs changed.",
+        "not_in_step_id": [
+          "params.entity_file_sha256",
+          "status_note",
+          "supersedes",
+          "declared_pre_run",
+          "claim",
+          "void",
+          "snapshot_class"
+        ],
+        "revision_rule": "a revision that changes only status, assumptions or scope now has a new id: build appends it as a new step whose supersedes names the old one; the old step stays.",
+        "void_states": {
+          "mapping_status": "PROPOSED",
+          "VOID": "the field is null; reason holds the record's words for the gap when it has any, else null",
+          "UNMAPPED": "the field has a value and no source",
+          "LEXICAL_VOID": "no term exists: an open label slot only. In the backfill: a functional_intelligence.contested_label entry whose label is null",
+          "REJECTED": "a value failed a declared gate. The chain declares no gate (thresholds: none), so the backfill produces none"
+        },
+        "live_chain_before_this_amendment": "the 303 steps built at 5a066a7 carry ids under the previous rule and cannot be re-derived under this one. They are moved unchanged to provenance/v1_superseded/ (with INDEX.json) and are not part of the live chain. The registries keep their id rules and stay in place.",
+        "kept_as_is": [
+          "provenance/v0_superseded/",
+          "registry/v0_superseded/",
+          "snapshot_class values and use"
+        ],
+        "selftest_added": "change one field of an entity file: only that field's step reads FIELD_CHANGED, and build appends one step",
+        "renames": "none"
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "name": "physics usage: runtime reference",
+      "after": "fixes v2 (cc3d4ee) and the owner's work order 'physics-provenance usage, two tracks'",
+      "changes_a_declared_value": true,
+      "what": "LEXICAL_VOID wording changed by order; rules for the runtime reference export, declared before scripts/export_reference.py existed. No step is rebuilt by this entry.",
+      "changes": {
+        "void_states": {
+          "LEXICAL_VOID": "a value for which no term exists in the record's language ('not interpretable at the moment'). The backfill rule is unchanged (a contested_label entry whose label is null) and is the only case it can detect. Count stays 0.",
+          "mapping_status": "PROPOSED"
+        },
+        "reference_export": {
+          "tool": "scripts/export_reference.py",
+          "output": "reference/lid_reference.jsonl, one line per entity that has steps",
+          "source": "head steps under provenance/ only (a step nobody supersedes). Entity files are not read for values.",
+          "per_field": "field, value, status, status_note, evidence_type, reproducibility, scope, assumptions, step_id, source_ids, void {state, reason}; copied from the head step, nothing recomputed",
+          "reading": "a derived label per field, from the step alone, in this order: void VOID or LEXICAL_VOID -> NO_INFORMATION; void UNMAPPED -> UNSOURCED; status OBSERVED -> OBSERVED; status DERIVED -> DERIVED; status PROPOSED -> PROPOSED; status null with sources -> NOT_ASSESSED",
+          "nothing_promoted": "no status is assigned or raised. The evidence_type -> status table in docs/provenance_chain.md stays not applied. An UNSOURCED value is exported with that label, never as a finding.",
+          "snapshot_class": "SUMMARY_ONLY on every line: superseded steps, method, claim and declared_pre_run are not in it",
+          "verify": "a reference field is refused when its step_id is not a head step under provenance/, or its value, status, void or source_ids differ from that step, or a source id is not in registry/sources.json",
+          "test": "reference/planted_questions.json: 10 questions with the expected reading, written by hand from the records before the test ran; answers are produced from reference/lid_reference.jsonl alone and each cites its step id. One planted wrong record (a copy of a real field with status raised and value changed) must be refused by verify."
+        },
+        "renames": "none"
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "name": "physics usage: example export",
+      "after": "the runtime reference export passed its test; before scripts/export_examples.py existed and before any example or split was computed",
+      "changes_a_declared_value": false,
+      "what": "Filters, field roles, path rule and hold-out split for examples/lid_examples.jsonl. No model is trained by this order.",
+      "status": "PROPOSED",
+      "example_export": {
+        "tool": "scripts/export_examples.py",
+        "output": "examples/lid_examples.jsonl and examples/MANIFEST.json",
+        "source": "head steps under provenance/, read with the reading labels of the runtime reference amendment. The reference must pass its own check first.",
+        "one_example_per": "one target field (head step) that passes the filters",
+        "filters": {
+          "include": {
+            "OBSERVED": "reading OBSERVED",
+            "DERIVED": "reading DERIVED (has a source); the basis is stated in the answer",
+            "PROPOSED": "reading PROPOSED; the answer is labeled PROPOSED and never worded as fact",
+            "UNMEASURED": "reading NO_INFORMATION (the field is null), in any block including attributes; the answer claim is 'unmeasured'",
+            "CONTESTED_LABEL": "a functional_intelligence.contested_label entry; the answer says the label does not decide and gives the function fields"
+          },
+          "exclude": {
+            "NOT_ASSESSED": "a value with a source and no status tag (most attribute values). Not promoted: the evidence_type -> status table stays not applied",
+            "UNSOURCED": "a value with no source, whatever its status tag",
+            "assumption_trace": "coordination.assumption_trace is not a target and not a path element; its assumption ids are carried in the answer scope of coordination examples"
+          }
+        },
+        "roles": {
+          "status": "PROPOSED mapping of record fields to path positions; written here, not taken from a source",
+          "observation": [
+            "functional_intelligence.adapts",
+            "functional_intelligence.signals",
+            "functional_intelligence.responds_to_other",
+            "functional_intelligence.changes_environment",
+            "functional_intelligence.co_adapts",
+            "gate_sensing.limit_sensed",
+            "gate_sensing.early_signal",
+            "attributes.* (null ones only)"
+          ],
+          "mechanism": [
+            "coordination.carrier",
+            "coordination.signal",
+            "coordination.record",
+            "coordination.closure",
+            "coordination.trust_basis",
+            "coordination.loop_topology",
+            "gate_sensing.response"
+          ],
+          "physics": [
+            "coordination.energy_cost",
+            "gate_sensing.lead_time"
+          ],
+          "status_element": "the last path element: the target's status tag, status note, reading and void"
+        },
+        "derivation_path": "the entity's included fields (contested labels excepted) whose role comes before the target's, then those of the target's role that come before it in the order listed above, then the target, then the status element. Each element carries field, role, reading, value, status, step_id, source_ids, void. The path is an ordering of record fields by declared role. No stored step names another field as its input, so the path does not claim one field was derived from another.",
+        "question": "one fixed template per field, filled with the entity name",
+        "answer": "claim, status, scope (the step's scope and, for coordination fields, the entity's assumption ids), kind, and void when null",
+        "provenance": "step_ids and source_ids of every path element",
+        "holdout": {
+          "unit": "entity: all examples of an entity are on one side",
+          "rule": "take the entities that have at least one example, sort by sha256 of the entity id as UTF-8 (hex, ascending), and hold out the first ceil(0.2 * n)",
+          "field": "split = 'train' or 'holdout' on each example"
+        },
+        "snapshot_class": "SUMMARY_ONLY on the manifest",
+        "check": "every step id is a head step; no example has an UNSOURCED or NOT_ASSESSED target or path element; an OBSERVED example has status OBSERVED; a PROPOSED answer carries the PROPOSED label; an UNMEASURED answer has a null value; no entity is on both sides of the split"
+      },
+      "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "stratified hold-out",
+      "after": "the example export at 2f3d933, whose hold-out (BEE_NEST_SITE, MY) held only UNMEASURED examples; by the owner's order",
+      "changes_a_declared_value": true,
+      "what": "Replaces the hold-out rule of the amendment 'physics usage: example export'. Filters, roles, path rule and checks are unchanged. Declared before the new split was computed.",
+      "holdout": {
+        "unit": "entity: all examples of an entity are on one side",
+        "strata": "has_statused_field = yes when the entity has at least one example of kind OBSERVED, DERIVED or PROPOSED; no otherwise. coordination.assumption_trace is not an example and does not count.",
+        "rule": "within each stratum, sort the entities by sha256 of the entity id as UTF-8 (hex, ascending) and hold out the first max(1, ceil(0.2 * n)); an empty stratum holds out none",
+        "field": "split = 'train' or 'holdout' on each example; the manifest lists each stratum with its entities and its hold-out",
+        "check_added": "each non-empty stratum has at least one hold-out entity",
+        "note": "n too small to measure: with 8 entities the split shows the rule works; no rate computed on it is a measurement"
+      },
+      "evidence_type_table": "stays NOT APPLIED. Status comes from reading the source, not from its evidence_type.",
+      "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "existence states (source pass, stage 1)",
+      "after": "the source pass plan at 4221e16; before scripts/existence_check.py existed and before any search was sent. The entity ranking below was already visible when this was written; its rule is the one used throughout (count descending, id ascending).",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "what": "What an existence check is, its four states, how a match is decided, and what is written to registry/sources.json. Stage 1 checks whether a cited work can be found as cited. It reads no abstract and no full text, and it sets no status on any field.",
+      "existence_states": {
+        "FOUND_AS_CITED": "a PubMed record is identified and every compared item agrees with the string",
+        "FOUND_DIFFERS": "a PubMed record is identified and at least one compared item differs; each difference is listed as {item, cited, record}",
+        "NOT_FOUND_INDEXED": "PubMed was searched and no record was identified",
+        "NOT_INDEXED": "a book, book chapter or non-biomedical venue, or a string naming no work with an author and a year: not searchable here",
+        "never": "no state means 'does not exist'. A miss is a statement about one index and one search."
+      },
+      "scope": {
+        "entities": "rank entities by number of attribute fields (head steps under attributes.*), descending, ties by entity id ascending; take the first 10",
+        "sources": "every source string that is an input of an attribute head step of those entities; near-duplicate strings are each checked separately",
+        "index": "PubMed through NCBI esearch and esummary (bibliographic summary records only). No efetch, no abstract, no full text."
+      },
+      "works": "a string may name several works. A work is each 'Surname (YYYY)' occurrence (with 'et al.', '& Name' or a lowercase particle allowed); its text runs to the next occurrence. Title = the first quoted text in it; venue, volume and pages are read from what follows the title.",
+      "search": [
+        "1: first-author surname [au] AND year [pdat] AND title words [ti]",
+        "2, if 1 is empty: surname [au] AND title words [ti]",
+        "3, if 2 is empty: title words [ti]",
+        "a work with no quoted title: surname [au] AND year [pdat] AND up to 4 words of its description [tiab]"
+      ],
+      "title_words": "lowercase alphanumeric tokens of 4 or more letters, stop words removed, at most 8",
+      "identified": "with a title: among at most 5 returned records, the best one whose title holds at least 0.8 of the cited title's tokens (3+ letters) and whose own tokens are at least 0.5 covered by the cited title. Without a title: only when the description query returns exactly one record.",
+      "compared_items": "author (first-author surname), year (publication date year), title (token sets equal), venue (cited journal tokens contained in the record's journal name or the reverse, or an acronym of it), volume, pages (first page; last page when both give one). An item the string does not give is listed under not_compared, never counted as agreeing or differing. A work with no title, when identified, is FOUND_DIFFERS with the item 'title' cited as null.",
+      "miss_label": "every work is searched first. A miss is NOT_INDEXED when the work's text carries a book or non-biomedical marker (publisher words, 'ed.', a chapter 'in', or a venue on the list in the script), else NOT_FOUND_INDEXED.",
+      "string_state": "the weakest state among the string's works, in the order NOT_FOUND_INDEXED, NOT_INDEXED, FOUND_DIFFERS, FOUND_AS_CITED. A string is FOUND_AS_CITED only when every work in it is. Per-work results are kept.",
+      "registry": "registry/sources.json gains 'existence' on every entry: null when not checked, else {state, matched_record, checked, works}. matched_record lists the identified records (pmid, doi, title, first_author, year, journal, volume, pages). No source string is edited and no id changes; a difference is recorded under the work's 'differs', never in place. same_as, opened and fetched are not touched.",
+      "as_received": "search responses are not committed; their sha256 are listed in provenance/as_received/existence_MANIFEST.json",
+      "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "existence states: identification amended after the first run",
+      "after": "the first run of scripts/existence_check.py under 81ae5f2 (166 requests). Its results were seen before this entry was written; this is a post-run change and is recorded as one.",
+      "changes_a_declared_value": true,
+      "first_run_under_the_original_rule": {
+        "strings": {
+          "FOUND_AS_CITED": 1,
+          "FOUND_DIFFERS": 2,
+          "NOT_FOUND_INDEXED": 22,
+          "NOT_INDEXED": 12
+        },
+        "works": {
+          "FOUND_AS_CITED": 8,
+          "FOUND_DIFFERS": 7,
+          "NOT_FOUND_INDEXED": 31,
+          "NOT_INDEXED": 19
+        }
+      },
+      "why": "The title-only search (step 3) returned records by other authors that the original rule counted as the cited work: 'Brown et al. (2020) Language models are few-shot learners' was matched to Zhang C (2026) 'Making Large Vision-Language Models Better Few-Shot Learners', and 'Hanlon & Messenger (2018) Cephalopod Behaviour' (a book) to Gutnick T (2023) 'Cephalopod behaviour' in Current Biology. Listing those as FOUND_DIFFERS would say a work was found when a different work was.",
+      "changes": {
+        "identified": "in addition to the title thresholds, a record is the cited work only when its first-author surname agrees with the string, or its title token set equals the cited one and its year agrees. A record that passes the title thresholds and fails this is kept on the work as 'candidate' and the work is treated as a miss.",
+        "compared_items": "volume or pages that the record does not give are listed under not_compared ('record gives none'), not as a difference.",
+        "miss_label": "the book / non-biomedical markers are read in the work's text after its '(year)', not in the author names. (The first run read 'Wiley et al.' as the publisher Wiley; that was an implementation error against the declared rule.)"
+      },
+      "not_changed": "states, scope, search steps, title thresholds, string_state, registry shape. A record by the same first author with a similar but different title still counts as identified and is listed with its differences; it may be a different work by that author, and the difference list is what shows it.",
+      "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "UNDERSPECIFIED + MATCH_SUSPECT; second index; abstract pass (stage 1b + stage 2)",
+      "after": "the existence check at 1cd1cc8, whose results were seen; by the owner's order. Declared before any second-index search was sent and before any abstract was fetched. Reachability was probed first with one known paper: Europe PMC answered; api.openalex.org was refused by this environment's egress proxy (HTTP 403 on CONNECT).",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "existence_states_added": {
+        "UNDERSPECIFIED": "the work's text gives no quoted title and no venue, or the string names no work with an author and a year. Not searchable; it is not searched and it is not a miss. Distinct from NOT_FOUND_INDEXED, which now means a titled work was searched and no record identified. An untitled work whose description query returned exactly one record keeps the earlier rule (none occurred).",
+        "MATCH_SUSPECT": "a record was identified by first author, but the cited title's tokens (3+ letters, in order) are not a contiguous run inside the record's title and the year or the venue differs: plausibly a different work by the same author. The record and its differences are kept; the work is not counted as found. Written after the Dorigo & Gambardella (1997) row was seen, at the owner's direction.",
+        "string_state_order": "weakest first: UNDERSPECIFIED, NOT_FOUND_INDEXED, NOT_INDEXED, MATCH_SUSPECT, FOUND_DIFFERS, FOUND_AS_CITED",
+        "lead": "a work may carry 'lead': a hand-entered note from registry/existence_leads.json, marked as recall and unverified. Entered for Dorigo & Gambardella (1997): '1997 IEEE TEC 1:53-66 may exist as cited outside PubMed (recall, unverified)'."
+      },
+      "second_index": {
+        "scope": "works in state NOT_FOUND_INDEXED, NOT_INDEXED or MATCH_SUSPECT after the re-sort. UNDERSPECIFIED works are not searched.",
+        "order": "Europe PMC REST search (ebi.ac.uk/europepmc/webservices/rest/search, resultType lite); then OpenAlex for what is still not found. OpenAlex is unreachable here, so it is recorded as NOT_REACHED for each such work, never as a miss.",
+        "search": "the same three steps as PubMed: AUTH + PUB_YEAR + TITLE words; AUTH + TITLE words; TITLE words. Same title words, at most 5 records.",
+        "identified": "the same rule as PubMed after its amendment (title thresholds 0.8 / 0.5; first author agrees, or equal title with agreeing year), then the MATCH_SUSPECT test. No rule is changed after the run; an error found in the adapter is recorded as an error, not folded in silently.",
+        "control": "one known paper (Sumbre 2001, PMID 11546877) is used to confirm the adapter reads the response shape. It is already FOUND_AS_CITED and is not in scope.",
+        "recorded": "each searched work gains second_index {index, queries, state, matched_record, differs, not_compared, candidate}. When the second index identifies the work as FOUND_AS_CITED or FOUND_DIFFERS, the work's state becomes that state and matched_record names the index; the PubMed outcome is kept under 'pubmed'. Otherwise the work's state does not change."
+      },
+      "abstract_pass": {
+        "scope": "works identified in PubMed and not suspect: 8 FOUND_AS_CITED and 4 FOUND_DIFFERS (12 works, 11 attribute fields). Works found only in the second index are not in this pass.",
+        "fetch": "NCBI efetch, db=pubmed, rettype=abstract. Abstract only; no full text. Abstract text is not committed; its sha256 is listed in provenance/as_received/abstracts_MANIFEST.json.",
+        "reader": "the abstracts are read by the model writing this entry; each judgment is entered by hand in registry/attribute_readings.json with a verbatim quote of at most 25 words. One reader, no second reading.",
+        "judgment": {
+          "STATES": "the abstract states the field's value or the claim in the field's definition -> status 'OBSERVED (basis: abstract)'",
+          "RELATED": "the abstract is on the subject and does not state the value -> status 'PROPOSED', with a note",
+          "CONTRADICTS": "the abstract contradicts the value or claim -> the value is kept, status 'PROPOSED', note 'contradicted by abstract'",
+          "NO_ABSTRACT": "the record has no abstract -> no status change"
+        },
+        "what_is_judged": "the field's value together with its scope.definition in the entity file. A numeric value is 'stated' only when the abstract gives that number or one that rounds to it for the defined quantity.",
+        "several_works": "a field backed by more than one read work takes OBSERVED only when at least one abstract STATES it and none CONTRADICTS; a CONTRADICTS from any read abstract gives PROPOSED with the note. Works of the same string that were not read are named in the note.",
+        "mechanism": "entity files are not edited. registry/attribute_readings.json is an overlay read by scripts/provenance_chain.py: an attribute field with a reading gets that status, a status_note, and params.status_basis {read, source_id, pmids}. Status is in the step id, so build appends a new step that supersedes the old one; the old step stays.",
+        "registry": "a source string with at least one work read gets opened = 'abstract', fetched = the date, and opened_note = how many of its works were read. Strings are not edited.",
+        "evidence_type_table": "still NOT APPLIED. These statuses come from reading."
+      },
+      "exports": {
+        "reference": "re-exported; no rule change. Status 'OBSERVED (basis: abstract)' reads OBSERVED.",
+        "examples": "attribute fields with a status are example targets with role observation (the earlier entry listed null attributes only). An OBSERVED example's status starts with 'OBSERVED'. Filters otherwise unchanged.",
+        "holdout": "the stratified rule is re-applied unchanged, not re-chosen",
+        "blind": "blind/ is left as built at 4221e16; it is a frozen package and is not rebuilt when the reference moves"
+      },
+      "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "claim/number split (abstract pass)",
+      "after": "the second index at 1ad8882 and the leads at 80e63ab; by the owner's order. Declared before any abstract was fetched or read. Replaces the 'judgment' and 'several_works' parts of the abstract_pass entry in the amendment 'UNDERSPECIFIED + MATCH_SUSPECT; second index; abstract pass'; its scope, fetch, reader, mechanism and registry parts stand.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "why": "An attribute field holds two things: a claim (its scope.definition in the entity file) and a number (its value). An abstract can state the claim without the number. One judgment per field could not say that.",
+      "per_field": {
+        "claim_support": {
+          "STATED": "the abstract states the claim in the field's definition",
+          "RELATED": "the abstract is on the subject and does not state the claim",
+          "CONTRADICTED": "the abstract contradicts the claim or the number",
+          "NOT_READ": "no abstract was available for any work behind the field"
+        },
+        "number_support": {
+          "STATED": "the abstract gives the field's number, or one that rounds to it, for the defined quantity",
+          "NOT_STATED": "it does not"
+        }
+      },
+      "outcome": {
+        "claim STATED + number STATED": "status 'OBSERVED (basis: abstract)'; void null",
+        "claim STATED + number NOT_STATED": "status 'OBSERVED (basis: abstract)' for the claim; the number is UNMAPPED: void {state: UNMAPPED, reason: 'number not stated in the abstract read; the status applies to the claim only'}",
+        "claim RELATED": "status 'PROPOSED', with a note",
+        "claim CONTRADICTED": "the value is kept; status 'PROPOSED'; note 'contradicted by abstract'",
+        "claim NOT_READ": "no new step"
+      },
+      "several_works": "per field over the works read: claim_support is CONTRADICTED when any abstract contradicts, else STATED when any states the claim, else RELATED. number_support is STATED when any abstract gives the number. Works of the same string that were not read are named in the note.",
+      "recorded": "registry/attribute_readings.json, one entry per field: entity, field, claim (the definition, copied verbatim at reading time), value, claim_support, number_support, status, note, per-work {source_id, pmid, claim_support, number_support, quote of at most 25 words}, read 'abstract', date, reader. The step carries the status, a status_note, the void above, and params.status_basis {read, source_ids, pmids, claim_support, number_support, claim_sha256}.",
+      "reference": "a seventh reading, OBSERVED_CLAIM_ONLY: the claim is observed in an abstract and the number is not sourced; use the claim, not the number. It is read before the UNMAPPED rule. Reference fields gain claim, claim_support and number_support (null where there is no reading).",
+      "examples": "an OBSERVED_CLAIM_ONLY field is a target of kind OBSERVED_CLAIM: its answer states the claim as OBSERVED and says the number is not sourced; the number is not in the claim. Kind OBSERVED needs both STATED.",
+      "holdout": "the stratified rule is re-applied unchanged. An OBSERVED_CLAIM example carries an OBSERVED status tag, so its entity counts as has_statused_field = yes, the same as kinds OBSERVED, DERIVED and PROPOSED. This is stated here because the earlier entry listed three kinds and this kind did not exist then.",
+      "limits": "one reader, abstracts only, no second reading. STATED means stated in the abstract, not shown in the paper's data.",
+      "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "NOT_ADDRESSED + reading queue",
+      "after": "the claim/number split at bb0b4d0; by the owner's order. No reading has been recorded.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "claim_support_added": {
+        "NOT_ADDRESSED": "the source does not address the field's claim -> the value is kept, status 'PROPOSED', note 'citation does not address claim'"
+      },
+      "several_works": "per field over the works read: CONTRADICTED when any contradicts, else STATED when any states the claim, else RELATED when any is related, else NOT_ADDRESSED.",
+      "reader": "replaces the 'reader' line of the abstract_pass entry: readings arrive as registry/attribute_readings.json from an outside reader. scripts in this repository build the steps and re-export from that file; they make no judgment.",
+      "reading_queue": "docs/reading_queue.md, written by scripts/reading_queue.py: one row per field and found work (12 rows, 11 fields): entity, field, value, the field's definition text, PMID, DOI. It holds no abstract text and no judgment.",
+      "renames": "none"
+    }
+  ]
+}

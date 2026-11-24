@@ -1,0 +1,110 @@
+{
+ "instructions": "Answer each question using only the files in this package. Read READING_PROTOCOL.md first. For each question fill one entry of 'answers': 'reading' is one of OBSERVED, DERIVED, PROPOSED, NOT_ASSESSED, UNSOURCED, NO_INFORMATION; 'statement' is your answer in one or two sentences, worded as the protocol requires for that reading; 'value' is the field value you relied on, or null; 'step_ids' lists the step id of every field you relied on; 'source_ids' lists their source ids; 'usable' is false when a field you would need cannot be used under the protocol, with the reason in 'why_not_usable'. Do not use outside knowledge to fill a gap in the record.",
+ "reader": {
+  "name": "",
+  "version": "",
+  "date": ""
+ },
+ "answers": [
+  {
+   "question_id": "Q01",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q02",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q03",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q04",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q05",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q06",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q07",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q08",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q09",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  },
+  {
+   "question_id": "Q10",
+   "reading": "",
+   "statement": "",
+   "value": null,
+   "step_ids": [],
+   "source_ids": [],
+   "usable": true,
+   "why_not_usable": ""
+  }
+ ]
+}

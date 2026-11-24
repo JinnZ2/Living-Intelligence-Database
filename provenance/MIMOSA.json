@@ -1,0 +1,195 @@
+{
+ "entity": "MIMOSA",
+ "path": "ontology/plant/mimosa.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "bf94ee781b4d926848bd5b39097661caae43d54695b40d4d9e58db9ade499a91",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.adapts",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "dae895347456c6680a481222af9558013ba8265abb15e5ce21b85fa3d3c5b5d0",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.signals",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "1313a7adcfa717a9fd3d842f884490e160b25b0106169d8392d9c27c7f4a7515",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.responds_to_other",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "fe1416c944034c23b123557e7b98e8780a48d0d45b4f159570600fbf11d061a0",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.changes_environment",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "cf0038840ef5a081c3379a7ea39da435a768e0c12c190223aa00c8fabcec8dd4",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.co_adapts",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": "The five capability fields are null by order: this record carries the label dispute only. The dispute does not set any of them."
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "02ecc6476786d120a757b29d286201bb0ac860dcd254fb89cfe8dc8d286f5e7b",
+   "inputs": [
+    "4d63460b8ede30e6dcee6dc370c5c22bb2069d615d55c963f5a6df9c148b3665"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.contested_label[0]",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985",
+    "claimed_by": [
+     "4d63460b8ede30e6dcee6dc370c5c22bb2069d615d55c963f5a6df9c148b3665"
+    ],
+    "disputed_by": []
+   },
+   "value": "learning (habituation of leaf folding)",
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "2380e26fd6c93c826c260dd77fdb9df5309a9f2988309f1c47fdc3d8085082e0",
+   "inputs": [
+    "3fdd07b2093e3a9cf8080e59bdc4ab1d21dd7eb177cba050db66efe9aa6d206b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MIMOSA",
+    "field": "functional_intelligence.contested_label[1]",
+    "entity_file_sha256": "880c4c7e888c5256bb44869df7a51d9e2226d80e5f57a3522776158de1353985",
+    "claimed_by": [],
+    "disputed_by": [
+     "3fdd07b2093e3a9cf8080e59bdc4ab1d21dd7eb177cba050db66efe9aa6d206b"
+    ]
+   },
+   "value": "consciousness (plants in general)",
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

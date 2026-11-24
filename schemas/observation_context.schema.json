@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "observation_context.schema.json",
+  "title": "Observation context",
+  "description": "Per claim, the setting in which it was observed. Key = '<block>.<field>' (e.g. 'gate_sensing.response'). Value = lab / field / long_term_coupled / mixed, or null = not known. A lab setting is an observer cut: it removes the loops that run through the organism's environment.",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": {
+    "type": [
+      "string",
+      "null"
+    ],
+    "enum": [
+      "lab",
+      "field",
+      "long_term_coupled",
+      "mixed",
+      null
+    ]
+  }
+}

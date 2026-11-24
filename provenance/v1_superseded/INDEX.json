@@ -1,0 +1,739 @@
+{
+ "snapshot_class": "SUMMARY_ONLY",
+ "note": "Per-entity counts. The steps cannot be rebuilt from this file.",
+ "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+ "entities": [
+  {
+   "entity": "AUTOENC",
+   "path": "ontology/ai/autoencoder.json",
+   "steps": 2,
+   "head_steps": 2
+  },
+  {
+   "entity": "EVOL_ALG",
+   "path": "ontology/ai/evolutionary_algorithm.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "GAN",
+   "path": "ontology/ai/generative_adversarial_network.json",
+   "steps": 2,
+   "head_steps": 2
+  },
+  {
+   "entity": "GNN",
+   "path": "ontology/ai/graph_neural_network.json",
+   "steps": 2,
+   "head_steps": 2
+  },
+  {
+   "entity": "LLM",
+   "path": "ontology/ai/large_language_model.json",
+   "steps": 4,
+   "head_steps": 4
+  },
+  {
+   "entity": "NEURAL_NET",
+   "path": "ontology/ai/neural_network.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "RL_AGENT",
+   "path": "ontology/ai/reinforcement_learner.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "SWARM_AI",
+   "path": "ontology/ai/swarm_intelligence.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "AN",
+   "path": "ontology/animal/ant.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "BX",
+   "path": "ontology/animal/bat.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "BE",
+   "path": "ontology/animal/bee.json",
+   "steps": 6,
+   "head_steps": 6
+  },
+  {
+   "entity": "BT",
+   "path": "ontology/animal/beetle.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "CHAMELEON",
+   "path": "ontology/animal/chameleon.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "CORAL",
+   "path": "ontology/animal/coral_reef.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "CR",
+   "path": "ontology/animal/cricket.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "CROW",
+   "path": "ontology/animal/crow.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "CU",
+   "path": "ontology/animal/cuttlefish.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "DOLPHIN",
+   "path": "ontology/animal/dolphin.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "EL",
+   "path": "ontology/animal/elephant.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "FIRE_BT",
+   "path": "ontology/animal/fire_beetle.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "GE",
+   "path": "ontology/animal/gecko.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "GRANDMOTHER",
+   "path": "ontology/animal/grandmother.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "HAW",
+   "path": "ontology/animal/hawk.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "HUMPBACK",
+   "path": "ontology/animal/humpback_song.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "INDIG_FIRE",
+   "path": "ontology/animal/indigenous_fire.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "JELLY",
+   "path": "ontology/animal/jellyfish.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "KA",
+   "path": "ontology/animal/kangaroo.json",
+   "steps": 4,
+   "head_steps": 4
+  },
+  {
+   "entity": "MONARCH",
+   "path": "ontology/animal/monarch_butterfly.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "MORMYRID",
+   "path": "ontology/animal/mormyridae.json",
+   "steps": 4,
+   "head_steps": 4
+  },
+  {
+   "entity": "MTN_LION",
+   "path": "ontology/animal/mountain_lion.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "OC",
+   "path": "ontology/animal/octopus.json",
+   "steps": 5,
+   "head_steps": 5
+  },
+  {
+   "entity": "ORCA",
+   "path": "ontology/animal/orca.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "OW",
+   "path": "ontology/animal/owl.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "PE",
+   "path": "ontology/animal/penguin.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "MANTIS",
+   "path": "ontology/animal/praying_mantis.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "RA",
+   "path": "ontology/animal/rat.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "SALMON",
+   "path": "ontology/animal/salmon.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "TU",
+   "path": "ontology/animal/sea_turtle.json",
+   "steps": 4,
+   "head_steps": 4
+  },
+  {
+   "entity": "SEED_KEEPER",
+   "path": "ontology/animal/seed_keeper.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "SHARK",
+   "path": "ontology/animal/shark.json",
+   "steps": 2,
+   "head_steps": 2
+  },
+  {
+   "entity": "SN",
+   "path": "ontology/animal/snake.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "SP",
+   "path": "ontology/animal/spider.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "STORYTELLER",
+   "path": "ontology/animal/storyteller.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "SWAN",
+   "path": "ontology/animal/swan.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "TARDI",
+   "path": "ontology/animal/tardigrade.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "TERMITE",
+   "path": "ontology/animal/termite_mound.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "WH",
+   "path": "ontology/animal/whale.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "WOLF",
+   "path": "ontology/animal/wolf.json",
+   "steps": 3,
+   "head_steps": 3
+  },
+  {
+   "entity": "CRYSTAL_LATTICE",
+   "path": "ontology/crystal/crystal_lattice.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "DIA",
+   "path": "ontology/crystal/diamond.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "OBS",
+   "path": "ontology/crystal/obsidian.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "QUARTZ",
+   "path": "ontology/crystal/quartz.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "SILICON_LAT",
+   "path": "ontology/crystal/silicon_lattice.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "TOUR",
+   "path": "ontology/crystal/tourmaline.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "BIOGRID2",
+   "path": "ontology/energy/biogrid2.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "CONSCIOUSNESS_BR",
+   "path": "ontology/energy/consciousness_bridge.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "ELECTRIC_FIELD",
+   "path": "ontology/energy/electric_field.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "EM_FIELD",
+   "path": "ontology/energy/electromagnetic_field.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "EMOTION_BR",
+   "path": "ontology/energy/emotion_bridge.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "FLUX",
+   "path": "ontology/energy/flux.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "GRAV",
+   "path": "ontology/energy/gravitational.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "LIGHT_BR",
+   "path": "ontology/energy/light_bridge.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "MAG_BRIDGE",
+   "path": "ontology/energy/magnetic_bridge.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "MAGNETIC_FIELD",
+   "path": "ontology/energy/magnetic_field.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "NEGENTROPY",
+   "path": "ontology/energy/negentropic_field.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "PRESSURE",
+   "path": "ontology/energy/pressure_field.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "RES_SENSOR",
+   "path": "ontology/energy/resonance_sensor.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "SINE_WAVE",
+   "path": "ontology/energy/sine_wave.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "THERMAL",
+   "path": "ontology/energy/thermal.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "ASPEN",
+   "path": "ontology/plant/aspen_grove.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "BAMBOO",
+   "path": "ontology/plant/bamboo.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "CORDYCEPS",
+   "path": "ontology/plant/cordyceps.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "CURLY_DOCK",
+   "path": "ontology/plant/curly_dock.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "CYANO",
+   "path": "ontology/plant/cyanobacteria.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "DANDELION",
+   "path": "ontology/plant/dandelion.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "DUCKWEED",
+   "path": "ontology/plant/duckweed.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "FE",
+   "path": "ontology/plant/fern.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "LEAF_TESS",
+   "path": "ontology/plant/leaf_tessellation.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "LI",
+   "path": "ontology/plant/lichen.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "MANGROVE",
+   "path": "ontology/plant/mangrove.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "MIMOSA",
+   "path": "ontology/plant/mimosa.json",
+   "steps": 7,
+   "head_steps": 7
+  },
+  {
+   "entity": "MOSS",
+   "path": "ontology/plant/moss.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "MOTHER_TREE",
+   "path": "ontology/plant/mother_tree.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "MY",
+   "path": "ontology/plant/mycelium.json",
+   "steps": 10,
+   "head_steps": 10
+  },
+  {
+   "entity": "OLD_GROWTH",
+   "path": "ontology/plant/old_growth.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "ORCHID",
+   "path": "ontology/plant/orchid.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "QUORUM",
+   "path": "ontology/plant/quorum_biofilm.json",
+   "steps": 9,
+   "head_steps": 9
+  },
+  {
+   "entity": "ROOT_NET",
+   "path": "ontology/plant/root_network.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "SAWGRASS",
+   "path": "ontology/plant/sawgrass.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "SLIME",
+   "path": "ontology/plant/slime_mold.json",
+   "steps": 9,
+   "head_steps": 9
+  },
+  {
+   "entity": "SUN",
+   "path": "ontology/plant/sunflower.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "PHLOEM_XYLEM",
+   "path": "ontology/plant/vascular_flow.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "VENUS",
+   "path": "ontology/plant/venus_flytrap.json",
+   "steps": 10,
+   "head_steps": 10
+  },
+  {
+   "entity": "AURORA",
+   "path": "ontology/plasma/aurora.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "LIGHTNING",
+   "path": "ontology/plasma/lightning.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "PLASMA_FIELD",
+   "path": "ontology/plasma/plasma_field.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "SOLAR_WIND",
+   "path": "ontology/plasma/solar_wind.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "VORTEX_DYN",
+   "path": "ontology/plasma/vortex_dynamics.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "FRACTAL",
+   "path": "ontology/shape/fractal.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "GEIS_ENC",
+   "path": "ontology/shape/geis_encoder.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "GEO_CIPHER",
+   "path": "ontology/shape/geometric_cipher.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "HEX",
+   "path": "ontology/shape/hexagon.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "MANDALA",
+   "path": "ontology/shape/mandala_bloom.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "MULTI_HELIX",
+   "path": "ontology/shape/multi_helix.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "OCTA_STATE",
+   "path": "ontology/shape/octahedral_state.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "POLY_INT",
+   "path": "ontology/shape/polyhedral_intelligence.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "ROSETTA_SHAPE",
+   "path": "ontology/shape/rosetta_shape_core.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "SPHERE",
+   "path": "ontology/shape/sphere.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "SPIRAL",
+   "path": "ontology/shape/spiral.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "TORUS",
+   "path": "ontology/shape/torus.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "TREE_GRAPH",
+   "path": "ontology/shape/tree_graph.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "ANT",
+   "path": "ontology/social/ant_colony.json",
+   "steps": 14,
+   "head_steps": 14
+  },
+  {
+   "entity": "BEE_NEST_SITE",
+   "path": "ontology/social/honeybee_nest_site_selection.json",
+   "steps": 11,
+   "head_steps": 11
+  },
+  {
+   "entity": "WHALE",
+   "path": "ontology/social/humpback_whale_pod.json",
+   "steps": 6,
+   "head_steps": 6
+  },
+  {
+   "entity": "STONE_LEDGER",
+   "path": "ontology/social/stone_art_ledger.json",
+   "steps": 8,
+   "head_steps": 8
+  },
+  {
+   "entity": "WOLF_PACK",
+   "path": "ontology/social/wolf_pack.json",
+   "steps": 6,
+   "head_steps": 6
+  },
+  {
+   "entity": "CYCLE",
+   "path": "ontology/temporal/cycle.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "DECAY",
+   "path": "ontology/temporal/decay.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "ECHO",
+   "path": "ontology/temporal/echo.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "EMERGE",
+   "path": "ontology/temporal/emergence.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "FOLD",
+   "path": "ontology/temporal/fold.json",
+   "steps": 1,
+   "head_steps": 1
+  },
+  {
+   "entity": "TEMPORAL",
+   "path": "ontology/temporal/temporal.json",
+   "steps": 1,
+   "head_steps": 1
+  }
+ ]
+}

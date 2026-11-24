@@ -1,0 +1,88 @@
+{
+ "entity": "GRANDMOTHER",
+ "path": "ontology/animal/grandmother.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "167cc886a62f7468ef23c42586a4eb337822f7ca38bdcf69f916f06bd80e8701",
+   "inputs": [
+    "0f1ad1250f9d0fdc65b5df0891d1d343034b3200c5f49c91780be0d9e9efb06c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GRANDMOTHER",
+    "field": "attributes.wisdom_compounding",
+    "entity_file_sha256": "9e75578ba8defa416488b88153b5f434a8acc8ccf110863e6c3aeb23a7e18019",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "d903ecb790a7bbabc84a1b21df1a4d3824c731bd3e1573ff34178aa556942c15",
+   "inputs": [
+    "b39ddbd8751a46c0359ec102a51cc37bacdf4af28e7320732eac4bc5c8c842e6"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GRANDMOTHER",
+    "field": "attributes.caregiving_transmission",
+    "entity_file_sha256": "9e75578ba8defa416488b88153b5f434a8acc8ccf110863e6c3aeb23a7e18019",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "f5b9f08042d40b0b5398a8ec48c848a3688ebabbbcc50fb899a645f436fc121a",
+   "inputs": [
+    "6c7bce780224edf678ab15cc89216ddcc97599bf5c44260cb3a31123572fc9bc"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GRANDMOTHER",
+    "field": "attributes.social_mediation",
+    "entity_file_sha256": "9e75578ba8defa416488b88153b5f434a8acc8ccf110863e6c3aeb23a7e18019",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "entity": "BT",
+ "path": "ontology/animal/beetle.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "cea4fb18c4ae2281bfedf15fc05a9ff9f7fbd8623180b6f762659ff4b544abe4",
+   "inputs": [
+    "2a89338cf18ccd3babb626c2083cb2addd6f9a3656d8a9c0fb61c3b2a70e3140"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BT",
+    "field": "attributes.milky_way_navigation",
+    "entity_file_sha256": "64566f0c3ed4548c5c133d98a5553d548f69b3df0e4d4f415548c8d112bbd52e",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "cff99dd164bfa9152ced50345465c86c608e4e62e669552aed3ab050fc570cc0",
+   "inputs": [
+    "a3a5015de0eff84f8eed31e8db3c5568dfba33ecc7c949b60d77deb2037eee65"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BT",
+    "field": "attributes.chemical_trail_encoding",
+    "entity_file_sha256": "64566f0c3ed4548c5c133d98a5553d548f69b3df0e4d4f415548c8d112bbd52e",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "373147f2c39be0d0224eb898519408f7ac53b29e4362eb1af0f743bceb6c5914",
+   "inputs": [
+    "b559ca258b7ad768589d5df462eaf6b21b5b6d1528defb9cbf5135f290108a20"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BT",
+    "field": "attributes.bioluminescent_signaling",
+    "entity_file_sha256": "64566f0c3ed4548c5c133d98a5553d548f69b3df0e4d4f415548c8d112bbd52e",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

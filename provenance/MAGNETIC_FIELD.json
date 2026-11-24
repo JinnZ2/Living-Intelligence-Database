@@ -1,0 +1,34 @@
+{
+ "entity": "MAGNETIC_FIELD",
+ "path": "ontology/energy/magnetic_field.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "d5550cfda93658d83dd26a04bbcb53ec72527ee2f62b351099ab8129814a4790",
+   "inputs": [
+    "c4eaa7fae25d17d62d95a7a5d569ac585c72997591622b6ec165e70b8bb0cb56"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MAGNETIC_FIELD",
+    "field": "attributes.flux_conservation_precision",
+    "entity_file_sha256": "4f8140ce33782372331d4069ea19be25f2d1332f179a73693506c5ef414d1849",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

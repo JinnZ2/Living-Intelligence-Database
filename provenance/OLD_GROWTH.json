@@ -1,0 +1,34 @@
+{
+ "entity": "OLD_GROWTH",
+ "path": "ontology/plant/old_growth.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "31dd9bcfb1d2ed3fdb02acf5c8bea67cace113a2918ba3e77afe367cded24fe4",
+   "inputs": [
+    "7981860b9f67378afdd45cf064bfea7b711e8722b63117b8f1701d15ab4160bd"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OLD_GROWTH",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "5abf7f17456f078a3a48d16c19be60c4735ffbac2d6d9f3308f91ec467e7296b",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.98,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

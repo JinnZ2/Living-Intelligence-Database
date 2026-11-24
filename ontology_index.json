@@ -1041,6 +1041,13 @@
       "substrate_layer": "substrate_primary"
     },
     {
+      "id": "MIMOSA",
+      "name": "Mimosa pudica",
+      "ontology": "plant",
+      "path": "ontology/plant/mimosa.json",
+      "description": "The sensitive plant. Created to hold a contested-label record only; no capability field is filled."
+    },
+    {
       "id": "MOSS",
       "name": "Moss",
       "ontology": "plant",
@@ -1444,6 +1451,19 @@
       "substrate_layer": "substrate_primary"
     },
     {
+      "id": "BEE_NEST_SITE",
+      "name": "Honeybee Nest-Site Selection",
+      "ontology": "social",
+      "path": "ontology/social/honeybee_nest_site_selection.json",
+      "description": "A honeybee swarm choosing a new nest cavity. Recorded here as a coordination case; the mechanism fields are not filled because no primary source was opened when the record was made.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
+    },
+    {
       "id": "WHALE",
       "name": "Humpback Whale Pod",
       "ontology": "social",
@@ -1455,6 +1475,13 @@
         "archetype": "cycle"
       },
       "substrate_layer": "both"
+    },
+    {
+      "id": "STONE_LEDGER",
+      "name": "Stone-and-art obligation ledger",
+      "ontology": "social",
+      "path": "ontology/social/stone_art_ledger.json",
+      "description": "A practice common across many Indigenous peoples of the Americas: what is owed after an unequal exchange is recorded on stone or clay, and art is made over the record when the obligation completes. No specific tribe, nation or person is named in this record."
     },
     {
       "id": "WOLF_PACK",
@@ -1753,6 +1780,11 @@
       "source": "AN",
       "target": "FRACTAL",
       "relation": "geometry_link"
+    },
+    {
+      "source": "AN",
+      "target": "ANT",
+      "relation": "energy_coupling"
     },
     {
       "source": "BX",
@@ -3515,6 +3547,11 @@
       "relation": "energy_coupling"
     },
     {
+      "source": "MIMOSA",
+      "target": "VENUS",
+      "relation": "connected_to"
+    },
+    {
       "source": "MOSS",
       "target": "LI",
       "relation": "synergy"
@@ -4158,6 +4195,71 @@
       "source": "TREE_GRAPH",
       "target": "MY",
       "relation": "resonance"
+    },
+    {
+      "source": "ANT",
+      "target": "HEX",
+      "relation": "geometry_link"
+    },
+    {
+      "source": "ANT",
+      "target": "BE",
+      "relation": "synergy"
+    },
+    {
+      "source": "ANT",
+      "target": "MY",
+      "relation": "resonance"
+    },
+    {
+      "source": "BEE_NEST_SITE",
+      "target": "BE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "BEE_NEST_SITE",
+      "target": "ANT",
+      "relation": "resonance"
+    },
+    {
+      "source": "WHALE",
+      "target": "ECHO",
+      "relation": "resonance"
+    },
+    {
+      "source": "WHALE",
+      "target": "ANT",
+      "relation": "synergy"
+    },
+    {
+      "source": "WHALE",
+      "target": "SPIRAL",
+      "relation": "energy_coupling"
+    },
+    {
+      "source": "WHALE",
+      "target": "FOLD",
+      "relation": "temporal_bridge"
+    },
+    {
+      "source": "STONE_LEDGER",
+      "target": "ANT",
+      "relation": "synergy"
+    },
+    {
+      "source": "WOLF_PACK",
+      "target": "COUNCIL",
+      "relation": "synergy"
+    },
+    {
+      "source": "WOLF_PACK",
+      "target": "OC",
+      "relation": "resonance"
+    },
+    {
+      "source": "WOLF_PACK",
+      "target": "ECHO",
+      "relation": "temporal_bridge"
     },
     {
       "source": "CYCLE",

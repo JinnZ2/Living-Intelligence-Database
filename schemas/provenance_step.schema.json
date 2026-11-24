@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "provenance_step.schema.json",
+  "title": "provenance step file",
+  "description": "One file under provenance/: the append-only list of hashed steps for one entity. Validates provenance/<entity_id>.json only. No entity schema references this file and no entity carries a provenance key. See docs/provenance_chain.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "entity",
+    "path",
+    "snapshot_class",
+    "steps"
+  ],
+  "properties": {
+    "entity": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "snapshot_class": {
+      "enum": [
+        "CONTEXT_FREE_EXACT",
+        "STABLE_LOSSY",
+        "CHAOTIC_REFRESH",
+        "SUMMARY_ONLY",
+        null
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "inputs",
+          "method",
+          "params",
+          "value",
+          "assumptions",
+          "scope",
+          "status",
+          "status_note",
+          "supersedes",
+          "declared_pre_run",
+          "claim",
+          "void",
+          "snapshot_class"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "description": "sha256 of the canonical JSON of {entity_id, field_path, value_sha256, inputs, method, params, assumptions, scope, status}, with params taken without entity_file_sha256 (fixes v2). The entity file sha256 stays in params as context and is not in the id."
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "description": "Parent step ids or source ids (registry/sources.json). Empty when the field has no source."
+          },
+          "method": {
+            "type": "object",
+            "required": [
+              "name",
+              "version"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            }
+          },
+          "params": {
+            "type": "object",
+            "required": [
+              "entity",
+              "field",
+              "entity_file_sha256"
+            ],
+            "properties": {
+              "entity": {
+                "type": "string"
+              },
+              "field": {
+                "type": "string"
+              },
+              "entity_file_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "value": {
+            "description": "The field's value as found. Null when the field is null."
+          },
+          "assumptions": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string",
+              "pattern": "^A-[0-9a-f]{12}$"
+            },
+            "description": "Ids in registry/assumptions.json. Null = not assessed. [] = read, none named."
+          },
+          "scope": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Conditions the value holds under, as recorded. Null = none recorded."
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^(OBSERVED|PROPOSED|DERIVED|DERIVED \\(basis: (OBSERVED|PROPOSED|DERIVED)\\))$",
+            "description": "The field's existing tag. Null = the field carries none."
+          },
+          "status_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "supersedes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Prior step id this one revises, or null. The prior step stays in the file."
+          },
+          "declared_pre_run": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Latest commit that changed registry/DECLARED.json before the build."
+          },
+          "claim": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "required": [
+              "statement",
+              "evidence",
+              "refuter",
+              "state"
+            ],
+            "properties": {
+              "statement": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "string"
+              },
+              "refuter": {
+                "type": "string"
+              },
+              "state": {
+                "enum": [
+                  "SUPPORTED",
+                  "UNVERIFIED"
+                ]
+              }
+            },
+            "description": "Separate from status. Null on every backfilled step."
+          },
+          "void": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "required": [
+              "state",
+              "reason"
+            ],
+            "properties": {
+              "state": {
+                "enum": [
+                  "REJECTED",
+                  "UNMAPPED",
+                  "LEXICAL_VOID",
+                  "VOID"
+                ]
+              },
+              "reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "snapshot_class": {
+            "enum": [
+              "CONTEXT_FREE_EXACT",
+              "STABLE_LOSSY",
+              "CHAOTIC_REFRESH",
+              "SUMMARY_ONLY",
+              null
+            ]
+          }
+        }
+      }
+    }
+  }
+}

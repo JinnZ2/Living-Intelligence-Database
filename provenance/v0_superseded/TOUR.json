@@ -1,0 +1,32 @@
+{
+ "entity": "TOUR",
+ "path": "ontology/crystal/tourmaline.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "67c71ccd4c642b62d5ff108faf167d822b12b70cac9f91524ccf3da796f33ade",
+   "inputs": [
+    "S-ef567179407c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TOUR",
+    "field": "attributes.pyroelectric_sensitivity",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "entity": "AN",
+ "path": "ontology/animal/ant.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f5f5338b72a15d649702f06580e88142d56fb9e83a7c01bcbe1df0d2ef7f2540",
+   "inputs": [
+    "0f5c97bb9388d564d4d63b984bddf8fab57dea471a0eba015be47cdea295394d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AN",
+    "field": "attributes.pheromone_trail_optimization",
+    "entity_file_sha256": "0bf04f7ff7a0d671f470fe863a299060b0e03389d08c990fb270b4e42ef364dd",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "20d746be60ce6a38fe009584246b3f04b76dd0a7f0da30833bea788fc1ee44b4",
+   "inputs": [
+    "bb2a3794dfe471be58df0dad8365368c370bf7837f0c3c4cb358e0668a2279b7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AN",
+    "field": "attributes.stigmergic_construction",
+    "entity_file_sha256": "0bf04f7ff7a0d671f470fe863a299060b0e03389d08c990fb270b4e42ef364dd",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "191e749dfa7f621b3d961ae20f632bbd3b14f88dd9748cd05180624a9d0e3106",
+   "inputs": [
+    "eefbde78a7620ac42c7f3e4926bed5db0797ab8c2252ea3586f10c7d0e9a11d4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AN",
+    "field": "attributes.distributed_task_allocation",
+    "entity_file_sha256": "0bf04f7ff7a0d671f470fe863a299060b0e03389d08c990fb270b4e42ef364dd",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

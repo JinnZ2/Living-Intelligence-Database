@@ -1,0 +1,82 @@
+{
+ "entity": "EL",
+ "path": "ontology/animal/elephant.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "9108a970c1e21fea5c99f2233442f8aec3edc2d7eea2660069d09822929624ee",
+   "inputs": [
+    "S-d79784a651d1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EL",
+    "field": "attributes.infrasonic_communication",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "e2e3dcda1d872e7ff66de8cb1f80c378811ea6c1204ca179fa432713cf8fdf7d",
+   "inputs": [
+    "S-a716552f5642"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EL",
+    "field": "attributes.spatial_memory_mapping",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1cef45cb7b57eb221966e0b8ac178a62b1a3262f7b915ab5494fbe043639d357",
+   "inputs": [
+    "S-24569092f9eb"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EL",
+    "field": "attributes.empathic_social_bonding",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

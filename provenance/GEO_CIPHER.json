@@ -1,0 +1,34 @@
+{
+ "entity": "GEO_CIPHER",
+ "path": "ontology/shape/geometric_cipher.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "7782193d5297dc67b4bc87b1471a38eefabfae471d0cd9ecafe24c5a78a9ef5c",
+   "inputs": [
+    "2251d48921b467524abcfaf5c3f8436186ea0cfdfb52332ced981993f578f48c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GEO_CIPHER",
+    "field": "attributes.homomorphic_computation_overhead",
+    "entity_file_sha256": "153dbacb39fa112b11064f5f67a1fa9c276e349c217970bd5a16037cc797a75e",
+    "evidence_type": "simulation",
+    "reproducibility": "medium"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

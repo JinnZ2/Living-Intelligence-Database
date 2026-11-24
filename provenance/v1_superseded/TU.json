@@ -1,0 +1,115 @@
+{
+ "entity": "TU",
+ "path": "ontology/animal/sea_turtle.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2c09df4a11ee35cad6aa169ac485c11716b3595bdec90ec7a8ca5ed82d4f15c5",
+   "inputs": [
+    "7828b8676f0416c92bdfcb68e487d443765539db9c3b1f6bbc6b1bcfd5fc4668"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TU",
+    "field": "attributes.magnetic_field_navigation",
+    "entity_file_sha256": "4179b6fbc5827c7223e163a39203d19402bec0b3832059d0590eecea55a9bf95",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "7a3ec76a3bba50cadc5758e51276d2ca57c3e6e5b8c1b97f2cbeb6ed8ae46244",
+   "inputs": [
+    "f302e91023b264d87b79d83f88b2ab89ef99453e271b0f59e1c2804781cbfb51"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TU",
+    "field": "attributes.generational_homing",
+    "entity_file_sha256": "4179b6fbc5827c7223e163a39203d19402bec0b3832059d0590eecea55a9bf95",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "79830f8ef34d35e682475bf1ab2b87b7ee9d777d353c19ce53cffb3fa37c9124",
+   "inputs": [
+    "ca989883fbb0c8eae13c4d2d51f9ab651d90a56e21b8ee7edad3b0ad9dce0386"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TU",
+    "field": "attributes.current_optimization",
+    "entity_file_sha256": "4179b6fbc5827c7223e163a39203d19402bec0b3832059d0590eecea55a9bf95",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "adad40384cd98cae463a39813fefee45876ac58a7f1f3b1f9898a341a6f8ecb1",
+   "inputs": [
+    "bca0d1caa4e9b98a742327b64a1732e58e71b1804f7f8510fb04e6bed6416495"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TU",
+    "field": "attributes.magnetic_storm_compensation",
+    "entity_file_sha256": "4179b6fbc5827c7223e163a39203d19402bec0b3832059d0590eecea55a9bf95",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

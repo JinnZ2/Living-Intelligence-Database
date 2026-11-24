@@ -1,0 +1,34 @@
+{
+ "entity": "BIOGRID2",
+ "path": "ontology/energy/biogrid2.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "c62c9aca6e2c0613a20ee5938b82e1f80113cbcea487a47b66421b9f8377d9f4",
+   "inputs": [
+    "6a5e0e322bcae3f2716f30fe3614c2335e4be13c95415f436afdb1ab255021e4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BIOGRID2",
+    "field": "attributes.network_resilience_index",
+    "entity_file_sha256": "46636236185a81d070323847a89b8fd9ff17b702ea344c9b895cd283786cd176",
+    "evidence_type": "simulation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

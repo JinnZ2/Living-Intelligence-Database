@@ -1,0 +1,34 @@
+{
+ "entity": "DECAY",
+ "path": "ontology/temporal/decay.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "c78c2e249be8374fc24604c73e7dfebe75f1c11840b1ce0abf3081b5b46fb6d4",
+   "inputs": [
+    "2772ad8badeb35b2aa6651ebf29e4527318a060371e1ada4b1bf968b916aa0a7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DECAY",
+    "field": "attributes.radioactive_decay_precision",
+    "entity_file_sha256": "a063c86d6e575809e495eecbc104b4f6be55dde9fa3091e105a6abc2a3a00194",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

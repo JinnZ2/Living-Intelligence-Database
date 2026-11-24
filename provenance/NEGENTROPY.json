@@ -1,0 +1,34 @@
+{
+ "entity": "NEGENTROPY",
+ "path": "ontology/energy/negentropic_field.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "7f0bd03fb15ed9284bf8e4150a623f9d4f8f6b636615510342f79e50b4480086",
+   "inputs": [
+    "2c582e268cfe522661dff511915e56451febc59efc9b4fc0db15697e4aa3edea"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "NEGENTROPY",
+    "field": "attributes.local_order_parameter",
+    "entity_file_sha256": "7240cd3e9bdd360f7bf9f97fd17668d293ff19dce129fcf5d177936d5c20c2b6",
+    "evidence_type": "theoretical",
+    "reproducibility": "medium"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

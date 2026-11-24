@@ -1,0 +1,32 @@
+{
+ "entity": "CONSCIOUSNESS_BR",
+ "path": "ontology/energy/consciousness_bridge.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "618670fe041a0a13f864c81540e40f68e29fe0e393294d86a67bda231364636e",
+   "inputs": [
+    "S-80b33359f094"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CONSCIOUSNESS_BR",
+    "field": "attributes.integration_phi_estimate",
+    "evidence_type": "theoretical",
+    "reproducibility": "low"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

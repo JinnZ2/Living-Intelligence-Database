@@ -1,0 +1,142 @@
+{
+ "entity": "OC",
+ "path": "ontology/animal/octopus.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "4e99ab6eb84512051258643fe3528d67db75564974518ca103f8fcd52f54f7a9",
+   "inputs": [
+    "7cc6491b4502b695a6e79005cb46ff48c4478a991a65e2c457f3e4bf00ea704b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.arm_autonomy_fraction",
+    "entity_file_sha256": "c366775967ffc35efe1b1c379cdf16fb2fe8da43254d61bd8350aec57fc1a302",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.64,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "7bfb59c43dea160d4ced48748747917efae543925860e048f110ac41b7ca52a0",
+   "inputs": [
+    "b6365f159a5b26f458cd540e6e4a8559102fc5595037786d95690d5f460b5bf6"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.chromatophore_response_latency",
+    "entity_file_sha256": "c366775967ffc35efe1b1c379cdf16fb2fe8da43254d61bd8350aec57fc1a302",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.2,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "9ce7afff737db916e19a0dded1889b9f6d9c6419a5e2344fcc3d6d558625c559",
+   "inputs": [
+    "b77eade4b5c4aea3928b545f2c8f48f188b1f0f2b2cad16538f9c2e00bfe25e0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.distributed_neural_processing",
+    "entity_file_sha256": "c366775967ffc35efe1b1c379cdf16fb2fe8da43254d61bd8350aec57fc1a302",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.64,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "efa8a874a0789b55343b5b00a4eca1d767aa8ae1f9650d6071f232db7d00a441",
+   "inputs": [
+    "8ae2d41bffc93805877011ca044061374c561c858f791deea49f90d79901586f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.chromatophore_camouflage",
+    "entity_file_sha256": "c366775967ffc35efe1b1c379cdf16fb2fe8da43254d61bd8350aec57fc1a302",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "72ca2a55afe22ebf7472ce48f62cdc9e1b2b2f8e2c6fe120738f907ad9e6e10e",
+   "inputs": [
+    "bc73fb7c6187b644d2f31a7b125d6f2ec48f892dce0e756650ade579b9cc712f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OC",
+    "field": "attributes.arm_regeneration",
+    "entity_file_sha256": "c366775967ffc35efe1b1c379cdf16fb2fe8da43254d61bd8350aec57fc1a302",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.78,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

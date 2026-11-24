@@ -1,0 +1,34 @@
+{
+ "entity": "SOLAR_WIND",
+ "path": "ontology/plasma/solar_wind.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "10e0ee72e968cf886384d960d5cf0a1bab639a76c3fafae3919ed63a9c0e199e",
+   "inputs": [
+    "d6b8d8ef1e6641d20c8b4935e775c6622853d3e5e4d4e3c4c6d4b788c01d536c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SOLAR_WIND",
+    "field": "attributes.heliosphere_boundary_precision",
+    "entity_file_sha256": "a85d87a70c8a052bdb6e18b41dd99ae7b4d8aeb59c6329e0bb43b2f874e52272",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

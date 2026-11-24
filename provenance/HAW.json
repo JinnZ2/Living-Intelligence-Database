@@ -1,0 +1,88 @@
+{
+ "entity": "HAW",
+ "path": "ontology/animal/hawk.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "1d5f2de6fd79bf9fbe4639771598a73a7dd468e07ed64dbc2be85cdc29f464ae",
+   "inputs": [
+    "7f3085818b58c9b3920fffff33206b5440c898d78cfb4465b624d949392eb4fa"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HAW",
+    "field": "attributes.precision_targeting",
+    "entity_file_sha256": "eca834f2ac00287e10fe86e4a41e30f797c4a5d2a1e1e53c206eacb7533833de",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "987f9563af5d4aec24cdd5711d543d4ac890d85b15b447e84c39cff39ecd651f",
+   "inputs": [
+    "416a75cabc791cabc2ff30592c41c1a0898a6883683bac285d6283575412c927"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HAW",
+    "field": "attributes.ballistic_dive",
+    "entity_file_sha256": "eca834f2ac00287e10fe86e4a41e30f797c4a5d2a1e1e53c206eacb7533833de",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a8ec92005da469740f1f434b1fc9fec79e3a3b6294152a63daf76502ff8288b0",
+   "inputs": [
+    "99095756ce942bbd512aafa7245289dc21b9309b795474af4f78dccb9d19ae2c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HAW",
+    "field": "attributes.dual_fovea_scanning",
+    "entity_file_sha256": "eca834f2ac00287e10fe86e4a41e30f797c4a5d2a1e1e53c206eacb7533833de",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

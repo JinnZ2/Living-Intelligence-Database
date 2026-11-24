@@ -1,0 +1,88 @@
+{
+ "entity": "TERMITE",
+ "path": "ontology/animal/termite_mound.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "77200c43c2b40b6b6d9eb55ac7b59c4f15d9d61c9129c0ca9d844a5272e01c5b",
+   "inputs": [
+    "65925f7a1c186e6ff1aab4dfb29e294f66e84b5602512f212a1c2ad446d560d9"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TERMITE",
+    "field": "attributes.convective_ventilation",
+    "entity_file_sha256": "a58f3756408299e1a95e31e2de8928edfff85b58fb3568dd6c1a0123a612361b",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "81d10e4931cccfe75e328d6dab4c1785c8e97575c8105c03f569b864a03a2054",
+   "inputs": [
+    "b246dd6085bb9d8309a3b43a93cf47a7d4db70dcf2b41fcdb864131cb98babf7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TERMITE",
+    "field": "attributes.stigmergic_construction",
+    "entity_file_sha256": "a58f3756408299e1a95e31e2de8928edfff85b58fb3568dd6c1a0123a612361b",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "b0747a7c1b1846ab1d3cba8e9170d4725a0c9dcb0bf1241926705168fc4590c8",
+   "inputs": [
+    "ad88a8d13a06cd2e9808d5267bb673c3e3c2906b0756e3ed9199ac93ae98ea2b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TERMITE",
+    "field": "attributes.fungal_agriculture",
+    "entity_file_sha256": "a58f3756408299e1a95e31e2de8928edfff85b58fb3568dd6c1a0123a612361b",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

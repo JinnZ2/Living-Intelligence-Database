@@ -1,0 +1,34 @@
+{
+ "entity": "BAMBOO",
+ "path": "ontology/plant/bamboo.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "9d446f8bd6863e59bda34bf3b5dae8111fe515fe051c15930e78e1fc190a6533",
+   "inputs": [
+    "bf5f3033e1fe0f99064923f551705190977a45c202ccb599ae4eaf74d44faa55"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BAMBOO",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "c39b91ad6afaf666e9693abe820d9093894dd1d3fb24b24a81d808ba3d62dcbd",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

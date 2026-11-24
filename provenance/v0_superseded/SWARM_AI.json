@@ -1,0 +1,82 @@
+{
+ "entity": "SWARM_AI",
+ "path": "ontology/ai/swarm_intelligence.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "dda955e1398c08c41c3f47612133d38e56583566923992fce973ee03744da948",
+   "inputs": [
+    "S-d413229066c7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWARM_AI",
+    "field": "attributes.particle_swarm_optimization",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "9a2fbda6eb1e3622d79d7f373a0e47a61589baa9606c5d6d16673a26d6a7bced",
+   "inputs": [
+    "S-105f0407624a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWARM_AI",
+    "field": "attributes.ant_colony_optimization",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.85,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "92fb94a2da056a4aa95e5375ab066b9ef72a17a59379c3defa49f2771e30d7ae",
+   "inputs": [
+    "S-74af786b56b1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWARM_AI",
+    "field": "attributes.consensus_formation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.83,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

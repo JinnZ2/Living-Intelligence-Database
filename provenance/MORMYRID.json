@@ -1,0 +1,115 @@
+{
+ "entity": "MORMYRID",
+ "path": "ontology/animal/mormyridae.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2b7402908cf5884b3f20f9d43fc2af88bac0b1f603509253109a6a965aef988a",
+   "inputs": [
+    "5bea5baaff13b5cdcd038840e71f43a49f99ea5ae990f486f03c77c9a98d6815"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MORMYRID",
+    "field": "attributes.active_electrolocation",
+    "entity_file_sha256": "365d8c1678c1c4e2a4eae85777f112f0b52e70dde850c151b5c492e43e13feb6",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "3447dee7b4ce1b143e22c6673aac881973f679eec97b2b4984885fa58768b4b8",
+   "inputs": [
+    "89472de72cbdaff28d7c07b3c539d64084db91dbd04090db36c408a717d0b90a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MORMYRID",
+    "field": "attributes.eod_communication",
+    "entity_file_sha256": "365d8c1678c1c4e2a4eae85777f112f0b52e70dde850c151b5c492e43e13feb6",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "5e1ad6fef10320a7e1ad0aee0ee3447035064d6a6bf5ebdf28954b07ce4f308c",
+   "inputs": [
+    "ffdbcf284aff79b04beb34a7d053ecb9c5836bf8331ffd0a9151f859eca85ea9"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MORMYRID",
+    "field": "attributes.dual_channel_processing",
+    "entity_file_sha256": "365d8c1678c1c4e2a4eae85777f112f0b52e70dde850c151b5c492e43e13feb6",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "fa84fabcccd47d26a3d0686753a5d306f0c65534adc8e61490d3466b7ed8c214",
+   "inputs": [
+    "6ef3d475b788b42d6986117f2d89c0bc84c84fbdb09b87f060b4ce649f092742"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MORMYRID",
+    "field": "attributes.temporal_microsecond_precision",
+    "entity_file_sha256": "365d8c1678c1c4e2a4eae85777f112f0b52e70dde850c151b5c492e43e13feb6",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

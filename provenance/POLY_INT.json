@@ -1,0 +1,34 @@
+{
+ "entity": "POLY_INT",
+ "path": "ontology/shape/polyhedral_intelligence.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "9b3fd58451b31c3769f127976ce12f0f8387586ab45da767411107009db6dc10",
+   "inputs": [
+    "ad935ea66aa5b9baf21c43433f5ef8ae7687d41de9e768eb694c71e15d0dc3af"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "POLY_INT",
+    "field": "attributes.euler_characteristic_universality",
+    "entity_file_sha256": "c6925547fe257b1475b3d1dfea092fddcd6c16a89fd7bf844e0eab1238c554fd",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

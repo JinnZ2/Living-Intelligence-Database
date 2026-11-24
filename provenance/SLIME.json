@@ -1,0 +1,251 @@
+{
+ "entity": "SLIME",
+ "path": "ontology/plant/slime_mold.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "12b9e2b568ca5628d7c9bd8092553b34ac8b2516d6d5387cf30b756445565031",
+   "inputs": [
+    "e9d681f7ad5fae863fbac0675957ba5886b0174da92c61908e306684383b5075"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "66c1da9131e154717dbac237fe6740a9fb21bc1076fad917ee550f0008ce654c",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "coordination.carrier",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "81997807ac0a8e44671730241c0bc3b87741401aea915b45c43b05947a3bb7de",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "coordination.signal",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "a4b6163cd683e3835e38c6962ed3c412540df2cf502b77becf396229eae7a0f0",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "coordination.record",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "8b9c5366fb53464a4d0e46edf2bc5f7cedb5d7e8ce6f991abd19af772e6b74f2",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "coordination.closure",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "6c17336975528d77ac8fedca7103910d8104eab13c556af4f0412cb465f574ce",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "2315b44f6eb1b67cc1c551cf8362867ce5a7a94a4201e6cd4b559837c5209d93",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "6a88689c2d5b2a12d532d5a521a98257e3fdf197fe35e652071e2cc4213c72bb",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "132ce3533e4afac5cce5ca9814199565d51ae971ef80ae0de72789556a4a17c8",
+   "inputs": [
+    "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SLIME",
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "b401f1ae6c8e72a9a1f559a6260a34e2d4e5fd4e774f2187c23b3ffeec39cd65"
+   },
+   "value": [
+    "optimization requires an optimizer",
+    "network design requires a central planner",
+    "coordination requires money",
+    "only humans innovate"
+   ],
+   "assumptions": [
+    "A-5bdb8c8b07b3",
+    "A-cabbedc6ccb6",
+    "A-c6ed44ae9df7",
+    "A-57eca4b5bab7"
+   ],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

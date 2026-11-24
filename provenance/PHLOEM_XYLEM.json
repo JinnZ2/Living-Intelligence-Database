@@ -1,0 +1,34 @@
+{
+ "entity": "PHLOEM_XYLEM",
+ "path": "ontology/plant/vascular_flow.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "3cdbb6a4f16e8ee676874ed342cf19f26772be09548614fc3effb81d4f59f768",
+   "inputs": [
+    "bc1cf1c96001e67bdca986454f0433c39c02b32196471e8f17d1ba74faeca6f2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "PHLOEM_XYLEM",
+    "field": "attributes.phloem_transport_efficiency",
+    "entity_file_sha256": "a10cc6ff70f0353ae2eaecb8b81869aa8eab062c92e53b386de75160bdb057f6",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "entity": "DOLPHIN",
+ "path": "ontology/animal/dolphin.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "56e07a78909c7baa26728e3f187d820cf7f7b33d93225b9732ef4de6964317f6",
+   "inputs": [
+    "9bf9ea6a4373bfa79305a8089ee8f6ca9678d6b69e54a8372088a4b6714bad20"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DOLPHIN",
+    "field": "attributes.echolocation_holography",
+    "entity_file_sha256": "8c7877847be346c9ef130912afb7167b3904558f9946c0fedeee283776b6e18c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ed2b8a04e56ca341028c1ce396e51622e2a588147380d98fdb159a17973886b2",
+   "inputs": [
+    "f22b317e726ea54e5dcdffaca3f265761a567c710ee10506c44c2a925ae3328c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DOLPHIN",
+    "field": "attributes.unihemispheric_sleep",
+    "entity_file_sha256": "8c7877847be346c9ef130912afb7167b3904558f9946c0fedeee283776b6e18c",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1bd42070762a4a324be82b1ff505980a0e94fffaa440313afaf9fec85bed3b5b",
+   "inputs": [
+    "c0ad2d4c1f1e07f7703cbaaa1dec94b171a68bcb21bdc0d3176c99d9bf8e891e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DOLPHIN",
+    "field": "attributes.cooperative_hunting",
+    "entity_file_sha256": "8c7877847be346c9ef130912afb7167b3904558f9946c0fedeee283776b6e18c",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

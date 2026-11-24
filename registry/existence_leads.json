@@ -1,0 +1,45 @@
+{
+ "note": "Hand-entered leads for existence works. A lead is recall, unverified, and not evidence; it changes no state. Misses have two possible causes, venue coverage or title paraphrase, and the strict search rule cannot tell them apart.",
+ "leads": [
+  {
+   "surname": "Dorigo",
+   "year": "1997",
+   "title": "Ant colony system",
+   "lead": "1997 IEEE TEC 1:53-66 may exist as cited outside PubMed (recall, unverified)",
+   "entered": "2026-11-24",
+   "by": "owner's work order"
+  },
+  {
+   "surname": "Goss",
+   "year": "1989",
+   "title": "Self-organized shortcuts in the Argentine ant",
+   "lead": "Naturwissenschaften 76:579-581 (recall, unverified, not evidence)",
+   "entered": "2026-11-24",
+   "by": "owner's work order"
+  },
+  {
+   "surname": "Alexander",
+   "year": "1975",
+   "title": "The mechanics of hopping by kangaroos",
+   "lead": "Journal of Zoology (recall, unverified, not evidence)",
+   "entered": "2026-11-24",
+   "by": "owner's work order"
+  },
+  {
+   "surname": "Sumbre",
+   "year": "2001",
+   "title": "Octopus shows controlled arm coordination despite decentralized neural design",
+   "lead": "Science; real title reportedly 'Control of octopus arm extension by a peripheral motor program'; the string title may be a paraphrase (recall, unverified, not evidence)",
+   "entered": "2026-11-24",
+   "by": "owner's work order"
+  },
+  {
+   "surname": "Seeley",
+   "year": "2004",
+   "title": "Group decision making in nest-site selection by honey bees",
+   "lead": "Apidologie; the journal is possibly outside PubMed (recall, unverified, not evidence)",
+   "entered": "2026-11-24",
+   "by": "owner's work order"
+  }
+ ]
+}

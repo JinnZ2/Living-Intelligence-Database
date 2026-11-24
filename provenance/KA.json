@@ -1,0 +1,115 @@
+{
+ "entity": "KA",
+ "path": "ontology/animal/kangaroo.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f794c267802ebadc899771a8601dc200d03617821177d466dc0fd6e845876bd6",
+   "inputs": [
+    "60703e1d04e75c1471b3b22d04014e17b666d2038c830bbd4a1b457dfb458c57"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "KA",
+    "field": "attributes.elastic_energy_storage",
+    "entity_file_sha256": "6fabc40333c8f25bffa89e37a731f2427ae71d181ea1b756c28a47f7ebd03aa8",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "3854e3171a8bcbb4ae5d0742cc5010cba0db3723bf0ae5f7cfd0135c487c4f0c",
+   "inputs": [
+    "abee7a95cd886b0ed7528fa1a465bd8b402ba508b60ff0bbf01cc3d114766c93"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "KA",
+    "field": "attributes.ballistic_locomotion",
+    "entity_file_sha256": "6fabc40333c8f25bffa89e37a731f2427ae71d181ea1b756c28a47f7ebd03aa8",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "7cffda2e6a2ae3c68dc9db204ea14b3ebdffc2546cd27935f9729089e7018c53",
+   "inputs": [
+    "dd03a167489cf1847f7aa6134bc576dc86f54d7530f9741b9c5fb8cbac824c5c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "KA",
+    "field": "attributes.pendulum_gait",
+    "entity_file_sha256": "6fabc40333c8f25bffa89e37a731f2427ae71d181ea1b756c28a47f7ebd03aa8",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "da9c3b85c029d82a58f467934b036149723c0199b6daa864ec2599fde0e960ca",
+   "inputs": [
+    "6bc5a082a849fb666bdaa1911b150a24e51687d4b79632ae3664f70ed96a1378"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "KA",
+    "field": "attributes.dynamic_counterbalance",
+    "entity_file_sha256": "6fabc40333c8f25bffa89e37a731f2427ae71d181ea1b756c28a47f7ebd03aa8",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

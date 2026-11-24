@@ -1,0 +1,237 @@
+{
+ "entity": "STONE_LEDGER",
+ "path": "ontology/social/stone_art_ledger.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "a9a1f8cf40948f16c59d84a4671c878fd43050f67619287fe3ba9d8a41231549",
+   "inputs": [
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.carrier",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
+   },
+   "value": "Etched stone or clay recording what is owed on a mismatch.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "110b4ee13c3734cc65c3931789ebef880aa87be07c522334a5a7c57033e60198",
+   "inputs": [
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.signal",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
+   },
+   "value": "The mismatch itself: an unequal exchange between parties.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "ae040e78d845708afbc7ede92c04459b47f1178f16fbd9313b57fe82b9d51461",
+   "inputs": [
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.record",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
+   },
+   "value": "A shared physical object, held by the parties.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "51e7c273fbb3b980c1b0cff8b6ade4005d0fe228a9501862f3d58521df55bbd3",
+   "inputs": [
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.closure",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
+   },
+   "value": "Art is made over the record when the obligation completes. The record is transformed, not destroyed.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0f5bc0325727540ca3715409e81300d8b72c0baf3cd91490ceff9369bdafec55",
+   "inputs": [
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
+   },
+   "value": "The count of completed-record artworks from many different people.",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "f4a4fb1db97990e62f1a35e64afc5975d40727dea489428a448921238285a7c4",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": "unmeasured"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "d74f69f628766fcf63dadc1f6afcb071b7a23d2677b511d0e539f2057646107f",
+   "inputs": [
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
+   },
+   "value": {
+    "cycles": [
+     {
+      "id": "L1",
+      "path": "unequal exchange -> obligation etched on the object -> obligation completed -> art made over the record -> the completed artwork is seen by others"
+     }
+    ],
+    "observer_cuts": [
+     {
+      "cut": "the object seen after closure and recorded as art only",
+      "cycles_surviving": [],
+      "note": "the obligation and its completion are not on the record; the trust count reads as decoration"
+     },
+     {
+      "cut": "parties and object followed from mismatch to closure",
+      "cycles_surviving": [
+       "L1"
+      ],
+      "note": null
+     }
+    ]
+   },
+   "assumptions": [],
+   "scope": null,
+   "status": "DERIVED (basis: OBSERVED)",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "08803b8dd3a52191b9e75e276bb29157e37c7d17569b60b01e3ad3e0a5373948",
+   "inputs": [
+    "5958170d9ad55a82d28c47350ed75b687aae51395bdad12a0baa99481d74fc08"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STONE_LEDGER",
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "81685a26a9307537daf73a7d4bcf6e290c7902a2430a9ec2bc20252641e73666"
+   },
+   "value": [
+    "coordination requires money",
+    "trust requires a central ledger or institution",
+    "closed debts carry no further value"
+   ],
+   "assumptions": [
+    "A-c6ed44ae9df7",
+    "A-3cbf006ee956",
+    "A-e4d9be4d1a8c"
+   ],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

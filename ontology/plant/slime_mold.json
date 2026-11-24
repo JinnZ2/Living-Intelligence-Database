@@ -80,5 +80,46 @@
         ]
       }
     }
+  },
+  "coordination": {
+    "carrier": null,
+    "signal": null,
+    "record": null,
+    "closure": null,
+    "trust_basis": null,
+    "energy_cost": null,
+    "loop_topology": null,
+    "assumption_trace": [
+      "optimization requires an optimizer",
+      "network design requires a central planner",
+      "coordination requires money",
+      "only humans innovate"
+    ],
+    "sources": {
+      "carrier": null,
+      "signal": null,
+      "record": null,
+      "closure": null,
+      "trust_basis": null,
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": [
+        "work order, 2026-11-24 (Kavik + Claude)"
+      ]
+    },
+    "status": {
+      "carrier": null,
+      "signal": null,
+      "record": null,
+      "closure": null,
+      "trust_basis": null,
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": "PROPOSED"
+    },
+    "notes": {
+      "_stub": "Stub: fields are null = no information yet. Candidate sources for filling: Tero A, Takagi S, Saigusa T, Ito K, Bebber DP, Fricker MD, Yumiki K, Kobayashi R, Nakagaki T (2010) Rules for biologically inspired adaptive network design. Science 327(5964):439-442. doi:10.1126/science.1177894. PMID 20093467 [abstract read via NCBI efetch 2026-11-24]",
+      "_abstract_depth": "Read at abstract depth only. The abstract states that Physarum polycephalum forms networks with efficiency, fault tolerance and cost comparable to the Tokyo rail system, and that the networks develop without centralized control. Fields are left null until the full text is read."
+    }
   }
 }

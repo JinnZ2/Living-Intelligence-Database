@@ -1,0 +1,34 @@
+{
+ "entity": "SPIRAL",
+ "path": "ontology/shape/spiral.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "cd503e1b9b020ec7b128e2afa8fade7cc5d504bfe0680321388b7dec4ef2abe9",
+   "inputs": [
+    "77b6d3fd4b520e1873a75af93266f210e8680f59d09d40e6c9971d281a62b933"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SPIRAL",
+    "field": "attributes.phi_ratio_cross_domain_frequency",
+    "entity_file_sha256": "2814b532ff7c945c99eef6835a808bda866cfdc8d5ad7ab4a50b16554084256b",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

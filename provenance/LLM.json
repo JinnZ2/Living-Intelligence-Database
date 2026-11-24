@@ -1,0 +1,115 @@
+{
+ "entity": "LLM",
+ "path": "ontology/ai/large_language_model.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "edff3506f47809e8d252f8d660de1b520e9f115c5b90eed999a0a6afaddaf3bf",
+   "inputs": [
+    "2899c24ea76855b778a3395a6405dc6ee91904cb108236abc5001f2a72408712"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LLM",
+    "field": "attributes.self_attention",
+    "entity_file_sha256": "17dde802956db21af6d4a4e484911144010e20327be2c8f3c7e55f76e5fcba04",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "cff2cd4475e774686735f5e7c70e3caa3054a3a6130e759c4adfe0ae7d7729d9",
+   "inputs": [
+    "6b7af81e854f99261511d8042babcbeb8b429ec3e9adad80740d40257029050e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LLM",
+    "field": "attributes.in_context_learning",
+    "entity_file_sha256": "17dde802956db21af6d4a4e484911144010e20327be2c8f3c7e55f76e5fcba04",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "509632ebc0e19cd4caf41dc39db64d1d2d2134143d1aa2408bedd90546f975a6",
+   "inputs": [
+    "c9e39bea49b42834829b2a1d56b5a30e8367d622a70ab21c5e9bf31567054c72"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LLM",
+    "field": "attributes.token_embedding",
+    "entity_file_sha256": "17dde802956db21af6d4a4e484911144010e20327be2c8f3c7e55f76e5fcba04",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "7f5c4d9279ad3f74e0cac0df50d21f6063174a15d35ee8ed0769472d4532abed",
+   "inputs": [
+    "e18606a00b7d4bd29b9d191558b57802fd752e15e67984ad81b6cb1bb1bd1d01"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LLM",
+    "field": "attributes.co_creative_dialogue",
+    "entity_file_sha256": "17dde802956db21af6d4a4e484911144010e20327be2c8f3c7e55f76e5fcba04",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

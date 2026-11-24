@@ -1,0 +1,107 @@
+{
+ "entity": "TU",
+ "path": "ontology/animal/sea_turtle.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "5d60ed11f74020adb5592f26751096bf01fea8d3dcb43b9997fbc63dde35440d",
+   "inputs": [
+    "S-7828b8676f04"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TU",
+    "field": "attributes.magnetic_field_navigation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "470a2b90e9d9a0df968ce08a19d612280db9db2877a07b6050ceff4e003d279d",
+   "inputs": [
+    "S-f302e91023b2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TU",
+    "field": "attributes.generational_homing",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c9ecb311e65c1a545007b89abad739aba6ae9acc299106217dab15ac2d9e7048",
+   "inputs": [
+    "S-ca989883fbb0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TU",
+    "field": "attributes.current_optimization",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "96922cc893ed8dcbe70e37524b980675d5d4ac5a3cf2d45cc57ae5da7a4dc0f7",
+   "inputs": [
+    "S-bca0d1caa4e9"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "TU",
+    "field": "attributes.magnetic_storm_compensation",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

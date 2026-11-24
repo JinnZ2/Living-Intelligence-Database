@@ -1,0 +1,34 @@
+{
+ "entity": "DANDELION",
+ "path": "ontology/plant/dandelion.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "faf765f36d9233020ee123fdbcaa97bd95dc78ad45d3da2b8f32797a725eba94",
+   "inputs": [
+    "c5d18562c667b87b92dea2e6e57c3c787088e11271e3559771e42d9bda4507a0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DANDELION",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "3940443c6351de6ff5434afb462bf37a0e7442ff5732bf01fda1a007562fec58",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

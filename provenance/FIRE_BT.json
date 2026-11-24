@@ -1,0 +1,88 @@
+{
+ "entity": "FIRE_BT",
+ "path": "ontology/animal/fire_beetle.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "e0715f1411b7e60eeb0886dd5dfa9a4e0a08fb10d652faf17ea6e8bddbe17258",
+   "inputs": [
+    "b2f391d4bd7c06059c8030dde94f4a95dc9eb5523b52d574f79b55eaeb58a0f5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FIRE_BT",
+    "field": "attributes.infrared_detection",
+    "entity_file_sha256": "1110928d84f517d2f05e002c4d61cf58d9e0b872bf2b028f2e17aa0a277e7765",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "923e693af022b41f81c7d3610d049b06afe1262295534804727fb299b820fb68",
+   "inputs": [
+    "cae502f6779971c68ad0691810bdcdf3aa553c8d12bfb55e58d47107455e99a0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FIRE_BT",
+    "field": "attributes.pyrophilic_strategy",
+    "entity_file_sha256": "1110928d84f517d2f05e002c4d61cf58d9e0b872bf2b028f2e17aa0a277e7765",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "30573b7d90d8be586eba3495a7cdee2a0d57f0bb9f27d493914f112bb511441a",
+   "inputs": [
+    "3082d6adcd12a2b493823c09040968b899a859a9e7af26047b5209c0dea6f18c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FIRE_BT",
+    "field": "attributes.fire_navigation",
+    "entity_file_sha256": "1110928d84f517d2f05e002c4d61cf58d9e0b872bf2b028f2e17aa0a277e7765",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

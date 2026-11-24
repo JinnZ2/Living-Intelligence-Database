@@ -1,0 +1,34 @@
+{
+ "entity": "RES_SENSOR",
+ "path": "ontology/energy/resonance_sensor.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "5e0ed533df38c96ccd6332c1e75c967d07e82f4b585221178f10be70f246a20e",
+   "inputs": [
+    "a03c28583d8b1712495b06dcd393b4593abd14af6a6438955c0415147368fead"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "RES_SENSOR",
+    "field": "attributes.parallel_field_sensitivity",
+    "entity_file_sha256": "082bc9e478eacd52ec23bd4edda74ae0ff7675c322456bc2516eecc7875557b0",
+    "evidence_type": "theoretical",
+    "reproducibility": "medium"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

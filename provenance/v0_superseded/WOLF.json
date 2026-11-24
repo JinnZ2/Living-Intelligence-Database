@@ -1,0 +1,82 @@
+{
+ "entity": "WOLF",
+ "path": "ontology/animal/wolf.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "ed4d0e9c9a6a93e72f72810cb3f875a15c6843e27787e6a6e26c09309e98ec94",
+   "inputs": [
+    "S-f3b98e31c42f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF",
+    "field": "attributes.coordinated_pursuit",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "71c2b1b06b76855f116b9ad46fe24a8f7d53b0da9ec8f1f383824a0482267970",
+   "inputs": [
+    "S-5a05783f1663"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF",
+    "field": "attributes.acoustic_identity_encoding",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "896b777d70ea2cbbdb3701acc1bb465ff47d39bdbd1701fbc064e52131e4490a",
+   "inputs": [
+    "S-43f94cb01925"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WOLF",
+    "field": "attributes.trophic_cascade",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

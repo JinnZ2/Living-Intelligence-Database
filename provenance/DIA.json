@@ -1,0 +1,34 @@
+{
+ "entity": "DIA",
+ "path": "ontology/crystal/diamond.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "69c5c515d85bc9b125e11fe226c34e7f5a24dad1d44d03d4ba307533f26d6339",
+   "inputs": [
+    "8cd464f242bfb8aeff6246b6f0868fceca6c6bb771e8d68fcc6ec2b0ceb4b505"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DIA",
+    "field": "attributes.thermal_conductivity_ratio",
+    "entity_file_sha256": "157093ece1096360af5a1622df66747322fdecb37beb7dc4f6ce8b654a114d7e",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

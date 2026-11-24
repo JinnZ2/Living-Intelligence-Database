@@ -1,0 +1,34 @@
+{
+ "entity": "FOLD",
+ "path": "ontology/temporal/fold.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "680ec4de5880705f657bfd704e9244cbdd602e4dee1e5ab8ef5a62462eea1760",
+   "inputs": [
+    "52f7918068f8771e55f8784b820c5e0a0b05ddc22386df5fce6393e152e38a96"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FOLD",
+    "field": "attributes.causal_compression_ratio",
+    "entity_file_sha256": "d4f38950259431cfff2665b0498e7f063ae8dc7610ca8a8eab14a3f9a73d65e3",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

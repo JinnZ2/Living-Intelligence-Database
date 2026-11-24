@@ -1,0 +1,112 @@
+{
+ "snapshot_class": "SUMMARY_ONLY",
+ "note": "Counts and the hold-out list for examples/lid_examples.jsonl. No model was trained. A derivation_path is an ordering of record fields by declared role; it does not claim that one field was derived from another.",
+ "declared": "registry/DECLARED.json, amendment 'physics usage: example export'",
+ "declared_commit": "0105a1d70a75021d317cb8c1db215d1f90b3c2dd",
+ "sha256": "a0d690c57d78726955a3186e37fc6d27bbffd719c3c526bfe58284fa5714274e",
+ "examples": 60,
+ "entities_with_examples": [
+  "ANT",
+  "BEE_NEST_SITE",
+  "MIMOSA",
+  "MY",
+  "QUORUM",
+  "SLIME",
+  "STONE_LEDGER",
+  "VENUS"
+ ],
+ "holdout_entities": [
+  "VENUS",
+  "BEE_NEST_SITE"
+ ],
+ "holdout_fraction": 0.2,
+ "holdout_strata": {
+  "key": "has_statused_field",
+  "strata": {
+   "yes": {
+    "entities": [
+     "VENUS",
+     "ANT",
+     "STONE_LEDGER"
+    ],
+    "holdout": [
+     "VENUS"
+    ]
+   },
+   "no": {
+    "entities": [
+     "BEE_NEST_SITE",
+     "MY",
+     "SLIME",
+     "QUORUM",
+     "MIMOSA"
+    ],
+    "holdout": [
+     "BEE_NEST_SITE"
+    ]
+   }
+  }
+ },
+ "measurement_note": "n too small to measure: the split shows the rule works; no rate computed on it is a measurement",
+ "by_split": {
+  "train": 41,
+  "holdout": 19
+ },
+ "by_kind": {
+  "CONTESTED_LABEL": {
+   "train": 2,
+   "holdout": 0
+  },
+  "DERIVED": {
+   "train": 1,
+   "holdout": 0
+  },
+  "OBSERVED": {
+   "train": 5,
+   "holdout": 6
+  },
+  "PROPOSED": {
+   "train": 5,
+   "holdout": 1
+  },
+  "UNMEASURED": {
+   "train": 28,
+   "holdout": 12
+  }
+ },
+ "by_status": {
+  "DERIVED (basis: OBSERVED)": {
+   "train": 1,
+   "holdout": 0
+  },
+  "OBSERVED": {
+   "train": 5,
+   "holdout": 6
+  },
+  "PROPOSED": {
+   "train": 5,
+   "holdout": 1
+  },
+  "null": {
+   "train": 30,
+   "holdout": 12
+  }
+ },
+ "by_ontology": {
+  "plant": {
+   "train": 28,
+   "holdout": 9
+  },
+  "social": {
+   "train": 13,
+   "holdout": 10
+  }
+ },
+ "excluded_fields": {
+  "NOT_ASSESSED": 225,
+  "UNSOURCED": 12,
+  "assumption_trace": 6
+ },
+ "entities_in_chain": 122,
+ "entities_without_examples": 114
+}

@@ -1,0 +1,88 @@
+{
+ "entity": "MONARCH",
+ "path": "ontology/animal/monarch_butterfly.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2f641576b73c3ceba61995d156a863418f49b4047b9d44536affd797fa282700",
+   "inputs": [
+    "1ce463c85a49559e6175e50c22511a975acaa3b45f17bf3c3e35cb9482cac72d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MONARCH",
+    "field": "attributes.multigenerational_navigation",
+    "entity_file_sha256": "8a5e14de542cca4e25d3c56fdc0362be2fcdd19b9d671065dc94c84c3732a2c2",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8448816f871d5b92c371852e13a5877ed87a239113741f1f62e006c98bf58151",
+   "inputs": [
+    "233badf7ffec5c68291d68ab9f8e19b8aa7684b5f324769d36c4a09028a79eee"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MONARCH",
+    "field": "attributes.time_compensated_compass",
+    "entity_file_sha256": "8a5e14de542cca4e25d3c56fdc0362be2fcdd19b9d671065dc94c84c3732a2c2",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "adad07eb83383efd50f168bb698348d797ea5d99b2aa09d531a41048ef398129",
+   "inputs": [
+    "cfb1b28184d3f3d2fabb733316f5b270db830d2a9d60d66f04d4becded31bc6b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MONARCH",
+    "field": "attributes.metamorphic_reorganization",
+    "entity_file_sha256": "8a5e14de542cca4e25d3c56fdc0362be2fcdd19b9d671065dc94c84c3732a2c2",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

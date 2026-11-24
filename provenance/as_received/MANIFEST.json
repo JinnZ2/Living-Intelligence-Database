@@ -1,0 +1,62 @@
+{
+ "date": "2026-11-24",
+ "status": "HASHES_ONLY_SPECIMENS_NOT_COMMITTED",
+ "provenance_note": "Abstract text fetched from eutils.ncbi.nlm.nih.gov during the build sessions. Hashes identify the received bytes; they do not authenticate the source. The files held abstracts only; no full text was fetched.",
+ "kept_in_repository": false,
+ "note": "The abstract text is not committed. The files lived in a session scratch directory and are not durable; this manifest is what remains.",
+ "rule": "A specimen placed in this directory is kept unchanged and listed here with its sha256. A correction goes beside it in a new file, never in place.",
+ "files": [
+  {
+   "original_name": "abstracts.txt",
+   "bytes": 7031,
+   "sha256": "305180865655aa72e00b6618db01de0a56410655db80ac1dd0014d1a7d4cdc1f",
+   "pmids_found_in_file": [
+    "11544353",
+    "20093467",
+    "21836016",
+    "36782032"
+   ],
+   "fetched_via": "eutils.ncbi.nlm.nih.gov efetch, db=pubmed"
+  },
+  {
+   "original_name": "abstracts2.txt",
+   "bytes": 54954,
+   "sha256": "62ef3fd493a953842b0065e14a3ad4ebd47cb68bd1651fce43a3c5b5cba33d1a",
+   "pmids_found_in_file": [
+    "12816648",
+    "15591194",
+    "24390479",
+    "26804557",
+    "30213912",
+    "31279732",
+    "32573434",
+    "32909941",
+    "32909944",
+    "33196907",
+    "39994230",
+    "42383002",
+    "42717275",
+    "42779115",
+    "42816729",
+    "42855980",
+    "42984180",
+    "43011870",
+    "43020545",
+    "43030271",
+    "43068891"
+   ],
+   "fetched_via": "eutils.ncbi.nlm.nih.gov efetch, db=pubmed"
+  },
+  {
+   "original_name": "abstracts3.txt",
+   "bytes": 3724,
+   "sha256": "c14ffe6b3491050911d4e6225a1eb808e87cbaf42a33429fb5046a6cd468bad7",
+   "pmids_found_in_file": [
+    "14151401",
+    "27910933",
+    "42226317"
+   ],
+   "fetched_via": "eutils.ncbi.nlm.nih.gov efetch, db=pubmed"
+  }
+ ]
+}

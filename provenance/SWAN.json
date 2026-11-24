@@ -1,0 +1,88 @@
+{
+ "entity": "SWAN",
+ "path": "ontology/animal/swan.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "059546959a91292f143e57b1517d1c0785c793ac4c9e21e018a914f7431eeae8",
+   "inputs": [
+    "e178271d748af6519fba402c965ee74ed811d5697c731d09d81e1663903acc05"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWAN",
+    "field": "attributes.formation_flight",
+    "entity_file_sha256": "89021908c85ad5f1c168c808681efb63ebfafcc3fd776668a03e411321dfd8f0",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "a75f3965e9933c4abb6b75d2d349946d78fb84fd805dead25d3053ee7130e621",
+   "inputs": [
+    "23dfceca82939fee140e08b466fec693110764a86d25e814c1a1f78890c3c260"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWAN",
+    "field": "attributes.pair_bond_coordination",
+    "entity_file_sha256": "89021908c85ad5f1c168c808681efb63ebfafcc3fd776668a03e411321dfd8f0",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "572c43063ce3885ef55499476b23ad26ccfa97ced5f7b90ce97905a70584ba19",
+   "inputs": [
+    "992db7be0cce5dc8ef3d334a8bf0245074bded0829d4018dd2d1edb97f4ef9ba"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SWAN",
+    "field": "attributes.cultural_route_learning",
+    "entity_file_sha256": "89021908c85ad5f1c168c808681efb63ebfafcc3fd776668a03e411321dfd8f0",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.85,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

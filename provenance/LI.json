@@ -1,0 +1,34 @@
+{
+ "entity": "LI",
+ "path": "ontology/plant/lichen.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "4a9dc6a388fa69262d3fa26de5a632cef5833e29508cae4b308453d1e7eb3a0a",
+   "inputs": [
+    "976613239a8b723b8b47e43aecb819d3bad46129e4ae2ac00c0d0fab3ae518dc"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LI",
+    "field": "attributes.mineral_weathering_rate",
+    "entity_file_sha256": "bbfb74f1c931ec05abf861baf4d7e594753ebaa6add6dbb596e96e9766cef8c2",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

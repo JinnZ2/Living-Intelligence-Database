@@ -1,0 +1,34 @@
+{
+ "entity": "MAG_BRIDGE",
+ "path": "ontology/energy/magnetic_bridge.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "9bbe59886342faef39e1922220c0b71a8c0bebd9c8d8e3e5e1c1e4f27c6a518a",
+   "inputs": [
+    "36d0f9243aee24efb6899ae38b884377e4cd3dd4757a652438fa10a9933d26b1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MAG_BRIDGE",
+    "field": "attributes.polarity_encoding_fidelity",
+    "entity_file_sha256": "68c722aaa1ab69be16a4cff82ea91c6c8f8408e8e1c9e592e3cbe85f3c490e8a",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

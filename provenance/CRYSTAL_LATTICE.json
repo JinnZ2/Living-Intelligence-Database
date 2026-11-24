@@ -1,0 +1,34 @@
+{
+ "entity": "CRYSTAL_LATTICE",
+ "path": "ontology/crystal/crystal_lattice.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "13d6efa1c1d8aef47d82a7b735d94fbca68bda85b28649329a829d8239546246",
+   "inputs": [
+    "c10fa1bb4a6b297446fce9b98e8c64f91ad7972a3303761d35e9fc032449d1ab"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CRYSTAL_LATTICE",
+    "field": "attributes.lattice_coherence_length",
+    "entity_file_sha256": "623cf60da5b8b9489881cf6e3960bfde57dad9a3e414607fa60955c63bec3de5",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.98,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

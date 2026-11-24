@@ -1,0 +1,82 @@
+{
+ "entity": "SN",
+ "path": "ontology/animal/snake.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "a1b45ce3e3ac6d0f1c1332bc6dd32bd311510366825ea0c1d00b34ec7e874f77",
+   "inputs": [
+    "S-d1ac7cf2c205"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SN",
+    "field": "attributes.infrared_thermal_imaging",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "6689c13ecf253a6a99849fbe97a49e31ebee714d5a9957549a981c0ef8e9263a",
+   "inputs": [
+    "S-13435911442f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SN",
+    "field": "attributes.chemical_stereoscopy",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "d60154afed786c75e12fe84e0b522be3f5140bbf98822cf943da37f1c11b13d1",
+   "inputs": [
+    "S-583b179e1ada"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SN",
+    "field": "attributes.terrain_adaptive_locomotion",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

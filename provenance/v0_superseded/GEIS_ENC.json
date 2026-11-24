@@ -1,0 +1,32 @@
+{
+ "entity": "GEIS_ENC",
+ "path": "ontology/shape/geis_encoder.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "f0d89b6757cb5da8de09164def172fd45de37d2c4f0ca1e726d32970e0bfa51c",
+   "inputs": [
+    "S-dcbc41322a79"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GEIS_ENC",
+    "field": "attributes.geometric_encoding_fidelity",
+    "evidence_type": "theoretical",
+    "reproducibility": "medium"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

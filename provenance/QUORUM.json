@@ -1,0 +1,249 @@
+{
+ "entity": "QUORUM",
+ "path": "ontology/plant/quorum_biofilm.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "d9e8b3e824dac282957fafa91e2fd34cc9376c0d0c036a71658d67e88a2d61a0",
+   "inputs": [
+    "4e0a54b9c9531a8a451b6ae6432ebd163a59b9f90180cbb0ca2f15f4839be519"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "9d7e544fc44f4bd5c22501c3a3c0ac2da8d616c8744198ba6e6bdf301153b69a",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "coordination.carrier",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "0ef01476a7f5b5c25d634db45c32da90d4f1e9c2b2b0a4ddbca47f86fc3b7b0c",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "coordination.signal",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "d5fa488394b7c3df45b7e20a6673ebf517b4a26800e1c2f1dc0576c7b0674bf0",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "coordination.record",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "54b3bc1549ca62130f6bf115cb8fc3c67c18d214b251f36f361ab9155da05e6b",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "coordination.closure",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "10321ee52b73ca137b9d4dfcfa0d636d80efe31616e3f01cd39e46e8f74252c4",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "coordination.trust_basis",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "394d12581ff47edcd403fdd978fc6c9733a51fb4d94ae6110530e12c75ac1e22",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "coordination.energy_cost",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "942d9939d0a85410625d0174e01968a7e0a5410efb777ac6fd8e6584d1ee19de",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "coordination.loop_topology",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "VOID",
+    "reason": null
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "dd144a4fbe1695c1ed8b1d496d908c85191dd20fec53015dedd0798376250409",
+   "inputs": [
+    "0123fa592debaae5bca159011c94374e0ed869b59fc3a58b720ab9732dd78b13"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "QUORUM",
+    "field": "coordination.assumption_trace",
+    "entity_file_sha256": "623ef8073e42f046bc1f7ea5e42cecf85cf4e3a837230a35cf11c9cdc535590e"
+   },
+   "value": [
+    "coordination requires money",
+    "coordination requires language",
+    "collective decisions require a leader or a vote count held by someone"
+   ],
+   "assumptions": [
+    "A-c6ed44ae9df7",
+    "A-c3fed856b1eb",
+    "A-c1c0f47f371f"
+   ],
+   "scope": null,
+   "status": "PROPOSED",
+   "status_note": null,
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

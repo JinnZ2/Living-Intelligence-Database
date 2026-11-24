@@ -1,0 +1,32 @@
+{
+ "entity": "HEX",
+ "path": "ontology/shape/hexagon.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "54e9c0cc60aa7dcd180bebee0d64f5b84e1eac5bc1608cf17c69bd5212cab3c2",
+   "inputs": [
+    "S-be07fab1f920"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "HEX",
+    "field": "attributes.isoperimetric_packing_efficiency",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

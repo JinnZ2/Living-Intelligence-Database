@@ -1,0 +1,88 @@
+{
+ "entity": "GE",
+ "path": "ontology/animal/gecko.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "a62b6b53b872c0280d9a680b9dad7ba03e420103f129b1e63b6405b3068b2d46",
+   "inputs": [
+    "90cde95c171b2e8d64ca15d5410ef14a5f60a77d2820aafc36f3c5a582597614"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GE",
+    "field": "attributes.setae_adhesion",
+    "entity_file_sha256": "61fca3bbb079bd67d6210a0d8e0516ddcffcda8d01cbcdcec09f89628f8f4583",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "216283a1ba17dfe6362105b4bc7cacec9a20846227e64a6966be578ecb268d87",
+   "inputs": [
+    "8e1800d5b5b65c5c3ef47224e8c39e9568adf20dae59ace3dda44f1dbb17effc"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GE",
+    "field": "attributes.self_cleaning_locomotion",
+    "entity_file_sha256": "61fca3bbb079bd67d6210a0d8e0516ddcffcda8d01cbcdcec09f89628f8f4583",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1c38f391f53df17e035e2e0b2e0dbf4074ab6a77e6515bf3357c094f245bb338",
+   "inputs": [
+    "5189d45dd39c58663128ff22de4d830ad3f854bf49432b73df9e8cacfdc8a3be"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GE",
+    "field": "attributes.directional_grip",
+    "entity_file_sha256": "61fca3bbb079bd67d6210a0d8e0516ddcffcda8d01cbcdcec09f89628f8f4583",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

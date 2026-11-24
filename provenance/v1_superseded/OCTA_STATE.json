@@ -1,0 +1,34 @@
+{
+ "entity": "OCTA_STATE",
+ "path": "ontology/shape/octahedral_state.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "4b8c04c434c2f0f03e76a375cabd1c56ed485f42d832140b6d2308a3da5fe95a",
+   "inputs": [
+    "0f8ebbefb324602920e223d078533a43785fddc262763abe8271567ad06a45e5"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OCTA_STATE",
+    "field": "attributes.octahedral_ligand_field_stabilization",
+    "entity_file_sha256": "da741e3404cdd92f7bfce67a430b52a4731b425f053e94f7749439e89f702651",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

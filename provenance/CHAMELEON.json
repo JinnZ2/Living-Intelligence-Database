@@ -1,0 +1,88 @@
+{
+ "entity": "CHAMELEON",
+ "path": "ontology/animal/chameleon.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "415bd634c428c9f05c25fe00395252e872f02c5eea32bec9e3e81fad19c2dab6",
+   "inputs": [
+    "5f78020093f713e04ef1039f99202ee0513ed841b24674d75134dddedec7ef1c"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CHAMELEON",
+    "field": "attributes.nanocrystal_structural_color",
+    "entity_file_sha256": "10bcbd6e1f9e3570a1895b2bc73c3eda27030d5d5bb62222c94d9afa256d3e81",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "e714fb308de70838c13106c1e122e3cc0136cbbabcf262a4d4495e82a29f0f1f",
+   "inputs": [
+    "eebf5e42d9c4a0c1e012e15d67197bd89cc834d546fe10b26ebc86aaa07ce2da"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CHAMELEON",
+    "field": "attributes.independent_eye_tracking",
+    "entity_file_sha256": "10bcbd6e1f9e3570a1895b2bc73c3eda27030d5d5bb62222c94d9afa256d3e81",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "319e029042d1e84fbf532ff14f585f794c303b4dd75c19ccf7afb9117a6587aa",
+   "inputs": [
+    "b8dbe31df7bd8db1bfbababf94eb55e9491c5268f86d618e68e3b8750c392312"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CHAMELEON",
+    "field": "attributes.ballistic_tongue",
+    "entity_file_sha256": "10bcbd6e1f9e3570a1895b2bc73c3eda27030d5d5bb62222c94d9afa256d3e81",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

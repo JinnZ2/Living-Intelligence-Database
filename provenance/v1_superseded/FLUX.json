@@ -1,0 +1,34 @@
+{
+ "entity": "FLUX",
+ "path": "ontology/energy/flux.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "a277e51bb0cf73ea43afc96b46c69568a5dae4ef15feba71724e213a6616010c",
+   "inputs": [
+    "c9c97ade85cfe25a320a4786ef1d99c70f4fb5af080b9b48806003d1519ea487"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "FLUX",
+    "field": "attributes.energy_continuity_across_boundary",
+    "entity_file_sha256": "6cf2d3006d566b2c5f9fc35f579f9260df978fa2b910adc705cee6bd1b019a58",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.92,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

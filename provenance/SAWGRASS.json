@@ -1,0 +1,34 @@
+{
+ "entity": "SAWGRASS",
+ "path": "ontology/plant/sawgrass.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "e4e25e32881906a6bd3121485371ee22f2c20975f007b47dc08e2641aec2fbc6",
+   "inputs": [
+    "d0f46f64923d473b8b1cb2f7901b665493762a7a7dd7c2421f2c9fa224882925"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SAWGRASS",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "5c73ba65ce8c80ba3c927fec0482c8c68967f9b7ec0a6aa89526d948d4c5dbc2",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

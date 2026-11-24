@@ -1,0 +1,88 @@
+{
+ "entity": "STORYTELLER",
+ "path": "ontology/animal/storyteller.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "1340354370929ea3c01eef9da981ba987afd8e8cca1d6cf5242908b19a464b52",
+   "inputs": [
+    "867b4b70d95026605f8c0662b09db099e8058b3175334935852dc4e3c9f8a036"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STORYTELLER",
+    "field": "attributes.mnemonic_encoding",
+    "entity_file_sha256": "3130c149bc1c3d58ce937334964eb5a8d445fcb74a18a602ad889352c18ea875",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "40166432a120c7d7c3a0b81c370607d344ea0528bc19af02bf9c74f93602b512",
+   "inputs": [
+    "5ed14ead407517d343328dce6a0b6aa6681ffb146e7df51a59fdfc766811492d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STORYTELLER",
+    "field": "attributes.songline_navigation",
+    "entity_file_sha256": "3130c149bc1c3d58ce937334964eb5a8d445fcb74a18a602ad889352c18ea875",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c35b3b5d2d4b14d9628e387c08988e380c0abed53a01b88609b0e8bcbb1593a8",
+   "inputs": [
+    "226b708ada7b34e227ba6e3c8624124bcb1903e6b0bef993cf7c6826808cf3ab"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "STORYTELLER",
+    "field": "attributes.error_correction_retelling",
+    "entity_file_sha256": "3130c149bc1c3d58ce937334964eb5a8d445fcb74a18a602ad889352c18ea875",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

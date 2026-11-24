@@ -1,0 +1,34 @@
+{
+ "entity": "EMERGE",
+ "path": "ontology/temporal/emergence.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "1b5962d53dcdd2fc3ec3abae06a8d0ad983f6d6344465cd3855c374687e14080",
+   "inputs": [
+    "436ae551a61cabd34c74bfa3aea15fd1c36538c67dd25dc191fb86d64b5ca312"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "EMERGE",
+    "field": "attributes.critical_threshold_universality",
+    "entity_file_sha256": "a9360562bcf65942d20b0c8ec05964a34e5a8595dab8f76a933a756756a399de",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,162 @@
+{
+ "note": "One entry per assumption. id = 'A-' + first 12 hex of sha256(statement). A revision is a new entry with supersedes; old entries stay.",
+ "assumptions": [
+  {
+   "id": "A-c6ed44ae9df7",
+   "statement": "coordination requires money",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/plant/mycelium.json",
+    "ontology/plant/quorum_biofilm.json",
+    "ontology/plant/slime_mold.json",
+    "ontology/social/ant_colony.json",
+    "ontology/social/honeybee_nest_site_selection.json",
+    "ontology/social/stone_art_ledger.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-5a25f5f9cd64",
+   "statement": "fair exchange requires contracts or enforcement by a third party",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/plant/mycelium.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-287cb4aabf52",
+   "statement": "markets are a human invention",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/plant/mycelium.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-c3fed856b1eb",
+   "statement": "coordination requires language",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/plant/quorum_biofilm.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-c1c0f47f371f",
+   "statement": "collective decisions require a leader or a vote count held by someone",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/plant/quorum_biofilm.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-5bdb8c8b07b3",
+   "statement": "optimization requires an optimizer",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/plant/slime_mold.json",
+    "ontology/social/ant_colony.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-cabbedc6ccb6",
+   "statement": "network design requires a central planner",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/plant/slime_mold.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-57eca4b5bab7",
+   "statement": "only humans innovate",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/plant/slime_mold.json",
+    "ontology/social/ant_colony.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-a8928d7bb384",
+   "statement": "coordination requires a central planner or a shared plan",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/social/ant_colony.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-27a1d5fa31de",
+   "statement": "a record of who did what must be held by an individual or an institution",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/social/ant_colony.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-beeabf1e52fd",
+   "statement": "collective decisions require a leader",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/social/honeybee_nest_site_selection.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-21eda837cf89",
+   "statement": "agreement requires a shared language",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/social/honeybee_nest_site_selection.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-625b0d50ad85",
+   "statement": "only humans deliberate",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/social/honeybee_nest_site_selection.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-3cbf006ee956",
+   "statement": "trust requires a central ledger or institution",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/social/stone_art_ledger.json"
+   ],
+   "supersedes": null
+  },
+  {
+   "id": "A-e4d9be4d1a8c",
+   "statement": "closed debts carry no further value",
+   "domain": "coordination",
+   "status": "PROPOSED",
+   "sources": [
+    "ontology/social/stone_art_ledger.json"
+   ],
+   "supersedes": null
+  }
+ ]
+}

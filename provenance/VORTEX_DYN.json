@@ -1,0 +1,34 @@
+{
+ "entity": "VORTEX_DYN",
+ "path": "ontology/plasma/vortex_dynamics.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "1ed9fc4aa0da2999e079415c28483881c7fb9be1085c05e1733354e7c8ab315a",
+   "inputs": [
+    "6786b1fddb8f75aebf7c3df36abab7b8196260d1ba248046ade281cd711985d4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VORTEX_DYN",
+    "field": "attributes.angular_momentum_conservation",
+    "entity_file_sha256": "67b7ccce55bc15f435d39d2068cc4ca2b3a19ff4a21319d2deab4e3ee1b3d817",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

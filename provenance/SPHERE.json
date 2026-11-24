@@ -1,0 +1,34 @@
+{
+ "entity": "SPHERE",
+ "path": "ontology/shape/sphere.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "2a29a35183e98c226359a87aa949d473473220efde14b60919d5d46d50483b06",
+   "inputs": [
+    "03f72ab952de4fde8761775fa5a4daee7cf807eba00a6867d26474ffdba56176"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SPHERE",
+    "field": "attributes.isoperimetric_ratio",
+    "entity_file_sha256": "738ce06f986a2f7a9ef6c46317c326b7f30b118b6f30806ccfc383f3181e9c6e",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain"
+   },
+   "value": 0.99,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "entity": "WHALE",
+ "path": "ontology/social/humpback_whale_pod.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "5336205020228621d71e31dfbf27950801a3965caa75f2d0d560e2f0e92b0e2e",
+   "inputs": [
+    "024bf6ae22e886fbed8d301e1feec965a163fcf6b0d0f715c5a3f1946484b711"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WHALE",
+    "field": "attributes.song_coherence_across_pods",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c",
+    "evidence_type": "cyclic_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": {
+    "condition": {
+     "environment": "open ocean, breeding season, males singing",
+     "constraints": [
+      "acoustic channel intact (below thermocline)",
+      "no major anthropogenic noise disruption"
+     ]
+    }
+   },
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "9dc523d55bffe00fd10dba2b3832ea403796d95ba80d9374450b5d9eff9cc0e4",
+   "inputs": [
+    "4bbe1c474bd2894ce12f2d031285e07bff2546475ad0838e4f80d7fa39d89ffa"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WHALE",
+    "field": "attributes.bubble_net_coordination",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c",
+    "evidence_type": "cross_domain_rhyme",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": {
+    "condition": {
+     "environment": "prey school (herring, krill) in shallow water, group of experienced individuals",
+     "constraints": [
+      "requires learned coordination — naive whales cannot initiate",
+      "prey must be schooling"
+     ]
+    }
+   },
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "237032f3384228b4a703de770bc77304fee842803d787137bf5111b3ed93eaf9",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WHALE",
+    "field": "attributes.long_range_communication",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c"
+   },
+   "value": "Song carries 1,000km+ through the deep sound channel (SOFAR). No other land-derived mammal communicates at this spatial scale.",
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "4e596413ed833f5e4c6e141afe39c7b279681a1254c3c864b626fe70ac9a5573",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WHALE",
+    "field": "attributes.cultural_transmission",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c"
+   },
+   "value": "Song evolves each year via social learning. New phrases originate in one region and spread across the ocean basin within a single season — demonstrating rapid, basin-wide cultural updating.",
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "28907a694a9df4f7339c49c2fb4da270bdb3b019db234d95f8470b5238f1825f",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WHALE",
+    "field": "attributes.migration_range",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c"
+   },
+   "value": "20,000km round trip annually between tropical breeding grounds and polar feeding grounds.",
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "3328e77b15675536ef3457eef88960e8a2cd55ba7be70e3762f2fc22d7b69155",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "WHALE",
+    "field": "attributes.pattern",
+    "entity_file_sha256": "67d43af328e4c40dc0f40fe4f9968ff52ec10c1346200b58d8c362166b95217c"
+   },
+   "value": "acoustic culture, basin-scale social coherence, intergenerational learning, seasonal cycle fidelity",
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": {
+    "state": "UNMAPPED",
+    "reason": "value present, no source recorded"
+   },
+   "snapshot_class": null
+  }
+ ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "BEE_NEST_SITE",
+  "name": "Honeybee Nest-Site Selection",
+  "ontology": "social",
+  "emoji": "🐝",
+  "symbolic_code": "[BEE_NEST_SITE_QUORUM_DANCE]",
+  "description": "A honeybee swarm choosing a new nest cavity. Recorded here as a coordination case; the mechanism fields are not filled because no primary source was opened when the record was made.",
+  "co_creation": true,
+  "attributes": {
+    "quorum_threshold_at_site": {
+      "value_status": "unmeasured: no source opened this session; no number recorded",
+      "scope": {
+        "definition": "Number of scouts present at a candidate site at which the swarm commits to it.",
+        "evidence": {
+          "source": "Seeley TD, Visscher PK (2004) Quorum sensing during nest-site selection by honeybee swarms. Behav Ecol Sociobiol 56:594-601 [NOT OPENED]; Seeley TD (2010) Honeybee Democracy. Princeton University Press [NOT OPENED]",
+          "evidence_type": "not_assessed",
+          "reproducibility": "not_assessed"
+        },
+        "condition": {
+          "environment": "a swarm that has left its hive and is choosing a new cavity",
+          "constraints": [
+            "not assessed: source not opened"
+          ]
+        },
+        "falsifiability": "not stated: source not opened",
+        "measurement_limits": "No value is recorded. Fill from the primary source, with the species, swarm size and site setup it reports."
+      }
+    },
+    "time_to_decision": {
+      "value_status": "unmeasured: no source opened this session; no number recorded",
+      "scope": {
+        "definition": "Time from the first scout report to swarm lift-off.",
+        "evidence": {
+          "source": "Seeley TD, Visscher PK (2004) Quorum sensing during nest-site selection by honeybee swarms. Behav Ecol Sociobiol 56:594-601 [NOT OPENED]; Seeley TD (2010) Honeybee Democracy. Princeton University Press [NOT OPENED]",
+          "evidence_type": "not_assessed",
+          "reproducibility": "not_assessed"
+        },
+        "condition": {
+          "environment": "a swarm that has left its hive and is choosing a new cavity",
+          "constraints": [
+            "not assessed: source not opened"
+          ]
+        },
+        "falsifiability": "not stated: source not opened",
+        "measurement_limits": "No value is recorded. Fill from the primary source, with the species, swarm size and site setup it reports."
+      }
+    },
+    "choice_accuracy": {
+      "value_status": "unmeasured: no source opened this session; no number recorded",
+      "scope": {
+        "definition": "Fraction of trials in which the swarm chose the best of the offered sites.",
+        "evidence": {
+          "source": "Seeley TD, Visscher PK (2004) Quorum sensing during nest-site selection by honeybee swarms. Behav Ecol Sociobiol 56:594-601 [NOT OPENED]; Seeley TD (2010) Honeybee Democracy. Princeton University Press [NOT OPENED]",
+          "evidence_type": "not_assessed",
+          "reproducibility": "not_assessed"
+        },
+        "condition": {
+          "environment": "a swarm that has left its hive and is choosing a new cavity",
+          "constraints": [
+            "not assessed: source not opened"
+          ]
+        },
+        "falsifiability": "not stated: source not opened",
+        "measurement_limits": "No value is recorded. Fill from the primary source, with the species, swarm size and site setup it reports."
+      }
+    }
+  },
+  "links": [
+    {
+      "rel": "connected_to",
+      "to": "BE",
+      "note": "The individual-bee record; this record is the swarm-level decision."
+    },
+    {
+      "rel": "resonance",
+      "to": "ANT",
+      "note": "Another coordination record with no central coordinator. Similarity not assessed."
+    }
+  ],
+  "entropy_profile": {
+    "stability": "low",
+    "adaptability": "high",
+    "archetype": "sensor"
+  },
+  "substrate_layer": "substrate_primary",
+  "metadata": {
+    "record_status": "stub",
+    "entropy_profile_status": "PROPOSED",
+    "entropy_profile_note": "unsourced: the three values are required by the schema and were assigned without a source",
+    "created": "2026-11-24",
+    "credit": "co-authored (JinnZ2 + Claude)"
+  },
+  "coordination": {
+    "carrier": null,
+    "signal": null,
+    "record": null,
+    "closure": null,
+    "trust_basis": null,
+    "energy_cost": null,
+    "loop_topology": null,
+    "assumption_trace": [
+      "coordination requires money",
+      "collective decisions require a leader",
+      "agreement requires a shared language",
+      "only humans deliberate"
+    ],
+    "sources": {
+      "carrier": null,
+      "signal": null,
+      "record": null,
+      "closure": null,
+      "trust_basis": null,
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": [
+        "work order, 2026-11-24 (Kavik + Claude)"
+      ]
+    },
+    "status": {
+      "carrier": null,
+      "signal": null,
+      "record": null,
+      "closure": null,
+      "trust_basis": null,
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": "PROPOSED"
+    },
+    "notes": {
+      "_stub": "Stub: fields are null = no information yet. Candidate sources for filling: Seeley TD, Visscher PK (2004) Quorum sensing during nest-site selection by honeybee swarms. Behav Ecol Sociobiol 56:594-601 [NOT OPENED]; Seeley TD (2010) Honeybee Democracy. Princeton University Press [NOT OPENED]",
+      "_unverified": "unverified: neither source was opened this session (not indexed in PubMed; publisher and DOI hosts refused)."
+    }
+  }
+}

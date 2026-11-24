@@ -1,0 +1,34 @@
+{
+ "entity": "MOSS",
+ "path": "ontology/plant/moss.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "8cb6f9796fa6d03709485f6b7a1d4a9d5e991a34ff5db54101f3ea7868ddec39",
+   "inputs": [
+    "74e0d1572dbff1941489a79c19b763bf8dc611781cf80419e2253a39a56940d3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MOSS",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "61cf13c72a8bce52c05c4add1d22968eee5c60e817a2c12189b1a954635c4f46",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

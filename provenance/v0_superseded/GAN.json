@@ -1,0 +1,57 @@
+{
+ "entity": "GAN",
+ "path": "ontology/ai/generative_adversarial_network.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "8bd5e10e9528a00e18f44ab23645bd5f153d8c173c42a5d77f5602c64f6e7b5c",
+   "inputs": [
+    "S-64d22f3898f4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GAN",
+    "field": "attributes.adversarial_equilibrium",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.86,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0894575fc40e596f513de48788f911898324c6d7a021f4680c5588106f54a81b",
+   "inputs": [
+    "S-82644c1097c7"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "GAN",
+    "field": "attributes.latent_space_navigation",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.83,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

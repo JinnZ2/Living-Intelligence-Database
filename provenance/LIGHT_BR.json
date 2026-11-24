@@ -1,0 +1,34 @@
+{
+ "entity": "LIGHT_BR",
+ "path": "ontology/energy/light_bridge.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "ce248868b1ea5aaedc800675451c1af6439316599d80879fadeb9fd7a7bbc1b5",
+   "inputs": [
+    "a5313e37d6104a7437dc16675228eb3230010b37b7e3349f5ffd187cf61b5ebc"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "LIGHT_BR",
+    "field": "attributes.spectral_encoding_capacity",
+    "entity_file_sha256": "048801172a3ba904daf16c31acfe1b3d12ca14156188b46857e127b505e1f25a",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

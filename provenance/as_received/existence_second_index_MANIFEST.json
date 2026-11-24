@@ -1,0 +1,549 @@
+{
+ "date": "2026-11-24",
+ "status": "HASHES_ONLY_SPECIMENS_NOT_COMMITTED",
+ "kept_in_repository": false,
+ "provenance_note": "Responses of the Europe PMC REST search (resultType lite) received by scripts/existence_check.py second. Bibliographic records only. Hashes identify the received bytes; they do not authenticate the source. api.openalex.org was not reached from this environment (egress proxy, HTTP 403 on CONNECT).",
+ "requests": 49,
+ "distinct_responses": 49,
+ "files": [
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Sumbre\" AND PUB_YEAR:2001 AND TITLE:(control AND octopus AND extension AND peripheral AND motor AND program)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 1039,
+   "sha256": "cd0f907ceb4ab327a0cc137727b32129f4af1b8d77bcded2229cf956a018cbdc"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Goss\" AND PUB_YEAR:1989 AND TITLE:(self AND organized AND shortcuts AND argentine)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 252,
+   "sha256": "32e2ae79ca382f2f7694895fef9dd2ed84c6d6e701fd0ce26273ab712dcc31bf"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Goss\" AND TITLE:(self AND organized AND shortcuts AND argentine)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 234,
+   "sha256": "7730bf8c3c1f9098081dd52b1d1ad6d0d25bf2ca08ee7c41624d8f8d3300ad07"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(self AND organized AND shortcuts AND argentine)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 216,
+   "sha256": "cf951dfd1ec39fc381d44ffebff21e00ad1f0b5e2286434cdbad9ad5055ba66b"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Seeley\" AND PUB_YEAR:2004 AND TITLE:(group AND decision AND making AND nest AND site AND selection AND honey AND bees)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 288,
+   "sha256": "dd316ca2a222dcdedc56785b36cc40ff734b68f193136f7c206856427dda3169"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Seeley\" AND TITLE:(group AND decision AND making AND nest AND site AND selection AND honey AND bees)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 270,
+   "sha256": "aeef03b3fea7b96d7c8c2559a9f73f53b68497df63b90d4d2768831feb283aee"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(group AND decision AND making AND nest AND site AND selection AND honey AND bees)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 250,
+   "sha256": "a2de9e860f18b592dcb72de1d8bcb37cc6883f2c7a5cfca8ad5c85bae03f7afb"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Frisch\" AND PUB_YEAR:1967 AND TITLE:(dance AND language AND orientation AND bees)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 251,
+   "sha256": "6a68d84eebcb813a846e5a7f687cc17f05dfc8badd25a856a4072d6df35830d2"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Frisch\" AND TITLE:(dance AND language AND orientation AND bees)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 233,
+   "sha256": "9cd6af27e2096ee1e81b20418d6961be00373194048e760210d45cd5fe03546e"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(dance AND language AND orientation AND bees)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 213,
+   "sha256": "41547408e9693f8542d57732d2850bfd0dd1dd173826d3499d789067cae589f7"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Seeley\" AND PUB_YEAR:1995 AND TITLE:(wisdom AND hive)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 223,
+   "sha256": "3d754326a667af652cc2a8acbce578cecae4b8aa2b75aa31c23c3e9e7e4a5631"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Seeley\" AND TITLE:(wisdom AND hive)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 205,
+   "sha256": "368f8c043d00a9c66c099d1469ad70424029bc09f9fd9eb43a5be4ab4d34783d"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(wisdom AND hive)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 185,
+   "sha256": "d4ae3100b0c8fcfb7241811d76fa861699f381c448d24f468ac32df1669ca1e1"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Seeley\" AND PUB_YEAR:2010 AND TITLE:(honeybee AND democracy)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 230,
+   "sha256": "a8f61c3a3ae35d42288d25d6c25b5d3937d7838320b963112c0bbb45ce1c291c"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Seeley\" AND TITLE:(honeybee AND democracy)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 212,
+   "sha256": "53e610351116816c6caaed0512dfc5124949bdf33f830c41f093e9d69a675598"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(honeybee AND democracy)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 192,
+   "sha256": "063a144ed6b055382fe8af02ab423ffc92c2158991fedc7fc9618d6e0b03f0d5"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Alexander\" AND PUB_YEAR:1975 AND TITLE:(mechanics AND hopping AND kangaroos)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 246,
+   "sha256": "e27741257f8063ff5b78e8428eace1c68cbb378d942b87455542dc80498592dc"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Alexander\" AND TITLE:(mechanics AND hopping AND kangaroos)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 228,
+   "sha256": "8d12ba145e4fe23ad4d7964726a55c5cbd96121e31ba152dd0b2b07f02f1ab1e"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(mechanics AND hopping AND kangaroos)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 205,
+   "sha256": "39298443ac96fe57b5b40dd575c5d6d1cd95181a936144a281d25ae5dd8c72ab"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Hochner\" AND PUB_YEAR:2006 AND TITLE:(unified AND view AND animal AND body AND movements)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 259,
+   "sha256": "44a0142c892819130504f6c34ce5c509fc595d8d76ec8235e9aa0655931aac22"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Hochner\" AND TITLE:(unified AND view AND animal AND body AND movements)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 241,
+   "sha256": "37bd5f5c5a5469ace6c37f101c539d1f445169c8045a58a89b00caa4f4ee5993"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(unified AND view AND animal AND body AND movements)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 220,
+   "sha256": "7640bef1927381d3da96a873fe61ee3d56245e185354d2992d319981556204b1"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Fahrenholz\" AND PUB_YEAR:1989 AND TITLE:(thermal AND analysis AND honey AND colony)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 253,
+   "sha256": "8b0eac9aef62d0deb3f0a5fefa775943c44b931bd999406780e1a08acd5c3e96"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Fahrenholz\" AND TITLE:(thermal AND analysis AND honey AND colony)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 235,
+   "sha256": "816304e8639c703c9d69f57980e2fcf35990faca6b3e0c73d95cc7746a463697"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(thermal AND analysis AND honey AND colony)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 211,
+   "sha256": "45a159695b5fe51265b4b1f709382d376e2426da229849c18ebd28cd1ea2e8de"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Baudinette\" AND PUB_YEAR:1992 AND TITLE:(cost AND locomotion AND wild AND tammar AND wallabies)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 265,
+   "sha256": "8befe0c9a4f4f3a726f4a75d4435d00b47b1bc223b0a8a4df6d7f97a8eabecf6"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Baudinette\" AND TITLE:(cost AND locomotion AND wild AND tammar AND wallabies)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 247,
+   "sha256": "a766ae5c67223fd42320632e14e81c5aa798b3df412323fed1757a5b98d14f2d"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(cost AND locomotion AND wild AND tammar AND wallabies)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 223,
+   "sha256": "b21637bef1fd3c91813108714e471fa6620ac81ef3cfcdc2f81f0532cb0c65ff"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Packard\" AND PUB_YEAR:1971 AND TITLE:(body AND patterns AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 251,
+   "sha256": "82c76855bee97207eb5081a048a23dd6baa7e0b59d97193d77853cce07b709c8"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Packard\" AND TITLE:(body AND patterns AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 233,
+   "sha256": "ccd0875ab3d13289167d43c91a2e4606c5ec0ddbb18e8a8babb037c4a79c8e50"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(body AND patterns AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 971,
+   "sha256": "ec5264db4a17605d356f7e34034b989feec11956b13e1129faaf087c32255ad8"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Sumbre\" AND PUB_YEAR:2001 AND TITLE:(octopus AND shows AND controlled AND coordination AND despite AND decentralized AND neural AND design)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 309,
+   "sha256": "ce2a9f3b0b9c0cd82750206de7314418903d3ae8d1d8819bc96bf5236111765a"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Sumbre\" AND TITLE:(octopus AND shows AND controlled AND coordination AND despite AND decentralized AND neural AND design)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 291,
+   "sha256": "a2f0126196acc8bec224817e15c9e44938523a3bb9b9c047f284a15be586ce65"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(octopus AND shows AND controlled AND coordination AND despite AND decentralized AND neural AND design)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 271,
+   "sha256": "fa50e6cc27a10e221e258cdff04b950831f84cb8b0d2e4dd97a50b69f415351c"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Hochner\" AND PUB_YEAR:2012 AND TITLE:(almost AND infinite AND behavioral AND repertoire)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 258,
+   "sha256": "97a32580e2a4d4201272876f75d8e89c42b5dc418a8e580ef598ead32c17bc68"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Hochner\" AND TITLE:(almost AND infinite AND behavioral AND repertoire)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 240,
+   "sha256": "fb74c820b5fa4fe3c18b76214dfd06efb6fa3acf308657c4c44c06be7f9fc8c5"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(almost AND infinite AND behavioral AND repertoire)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 219,
+   "sha256": "b92659637394e1b4b38d3e7b9db7763b44035f720346ffe4901fe2f58848d7c3"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Fossati\" AND PUB_YEAR:2011 AND TITLE:(neural AND regeneration AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 257,
+   "sha256": "91b913ba885aabe709cdf4a7da50f51347d122f62cfde98a0430d4040d47edbd"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Fossati\" AND TITLE:(neural AND regeneration AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 239,
+   "sha256": "53f9fc5c365e8a058abe14b5b13f41ef6879365634688080889bcb84fa076f50"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(neural AND regeneration AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 218,
+   "sha256": "f745cffb1a98f407c05721e48e00eeb1980cc20a01252380848c7c835a8d79f9"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Rohrbach\" AND PUB_YEAR:2006 AND TITLE:(regeneration AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 247,
+   "sha256": "f28848285d7e6c50ed1dfba362175b41e501fffc6b31c04f63d604cda6b1f3bc"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Rohrbach\" AND TITLE:(regeneration AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 229,
+   "sha256": "b62ff4b390cc9ded3e50bf13e2bf8302bec6d8f68aca61865894fce520304bf4"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(regeneration AND octopus AND vulgaris)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 4617,
+   "sha256": "b0dac1a1c77069a34dbee72f179ec021169630c7788093acfd56decffb89af37"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Dawson\" AND PUB_YEAR:1973 AND TITLE:(energetic AND cost AND locomotion AND kangaroos)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 255,
+   "sha256": "1f72ca28e24e4b10320877f00853a80a3f795cf9b2aae96f3d664fae3243e135"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Dawson\" AND TITLE:(energetic AND cost AND locomotion AND kangaroos)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 237,
+   "sha256": "3fcbba86f01c797a5fa701f72742d7fe6379e67b6419d49571de35fd12201a0e"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(energetic AND cost AND locomotion AND kangaroos)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 217,
+   "sha256": "42d0a4a256272a7439ed91b9d3b0def64e4465953643dbeedb818f8f91ad9af5"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Bowen\" AND PUB_YEAR:1993 AND TITLE:(population AND structure AND loggerhead AND turtles AND northwestern AND atlantic AND ocean AND mediterranean)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 316,
+   "sha256": "55d010b4c4b76e5d49d20ad2013158d22f098a2520c2e3c88af1b94268877ef8"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "AUTH:\"Bowen\" AND TITLE:(population AND structure AND loggerhead AND turtles AND northwestern AND atlantic AND ocean AND mediterranean)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 298,
+   "sha256": "f00c7f746f7e9947647dc937d32f5cd6b8ca8428b7509952da7fc2afa9ca56c0"
+  },
+  {
+   "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+   "params": {
+    "query": "TITLE:(population AND structure AND loggerhead AND turtles AND northwestern AND atlantic AND ocean AND mediterranean)",
+    "format": "json",
+    "resultType": "lite",
+    "pageSize": 5
+   },
+   "bytes": 279,
+   "sha256": "8086db5d6eb162f29adf27fc3defcaa72ac476695e3e5c967a9c6afdfbe6796b"
+  }
+ ]
+}

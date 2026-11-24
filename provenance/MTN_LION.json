@@ -1,0 +1,88 @@
+{
+ "entity": "MTN_LION",
+ "path": "ontology/animal/mountain_lion.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "fc878363c29261174aad1a9618052b49147a65829b5d0cd4f456ec350b87c444",
+   "inputs": [
+    "ea473bccaa835f73587d51f81c3b3d95e62376ba138432b710a08a46cb371650"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MTN_LION",
+    "field": "attributes.ambush_calculus",
+    "entity_file_sha256": "a3eef9cbd906b238c1fb34a26df3449ae4073f7a225404968c8934b1769d181f",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "f8839d3ff36e8d7589ced1bdbe718d2f98f9c71283a558acf0bda6f51b36b38b",
+   "inputs": [
+    "9a2825bfb772a997b805f4f1c5954a1552aec37765fc05e335e2ba44fa95052d"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MTN_LION",
+    "field": "attributes.territory_management",
+    "entity_file_sha256": "a3eef9cbd906b238c1fb34a26df3449ae4073f7a225404968c8934b1769d181f",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "6b7c0d94ca8ae9dbfed0205b5abf62f0546983e3fa32217571aa1ddcf5d55f9a",
+   "inputs": [
+    "6018a21225e4b7a2abf434540b6daf7678d0f55d833e7359de9f6a756ee18603"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "MTN_LION",
+    "field": "attributes.crepuscular_timing",
+    "entity_file_sha256": "a3eef9cbd906b238c1fb34a26df3449ae4073f7a225404968c8934b1769d181f",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.86,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

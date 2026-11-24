@@ -7,14 +7,29 @@ ONTOLOGY_DIR = ROOT / "ontology"
 SCHEMA_DIR = ROOT / "schemas"
 OUTPUT_FILE = ROOT / "ontology_index.json"
 
+# Schemas referenced by file name from the per-type schemas ($ref: "<name>").
+SHARED_SCHEMAS = ("coordination.schema.json", "gate_sensing.schema.json",
+                  "functional_intelligence.schema.json", "observation_context.schema.json")
+
 def load_schema(schema_name):
     schema_path = SCHEMA_DIR / schema_name
     with open(schema_path, "r") as f:
         return json.load(f)
 
+def _shared_registry():
+    """Registry for the shared schemas referenced by file name."""
+    from referencing import Registry, Resource
+    from referencing.jsonschema import DRAFT7
+    registry = Registry()
+    for name in SHARED_SCHEMAS:
+        registry = registry.with_resource(name, Resource(contents=load_schema(name), specification=DRAFT7))
+    return registry
+
 def validate_entity(entity, schema):
     try:
-        validate(instance=entity, schema=schema)
+        from jsonschema import validators
+        cls = validators.validator_for(schema)
+        cls(schema, registry=_shared_registry()).validate(entity)
         return True, None
     except ValidationError as e:
         return False, str(e)
@@ -80,12 +95,14 @@ def build_index():
             index["entities"].append(entry)
 
             # Collect relational data from links array
+            # Two link shapes exist: {relation, target} and {rel, to}. Read both.
             for link in data.get("links", []):
-                if "target" in link:
+                target = link.get("target", link.get("to"))
+                if target is not None:
                     index["relations"].append({
                         "source": data["id"],
-                        "target": link["target"],
-                        "relation": link.get("relation", "connected_to")
+                        "target": target,
+                        "relation": link.get("relation", link.get("rel", "connected_to"))
                     })
 
     # Link integrity check

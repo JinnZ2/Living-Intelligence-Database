@@ -1,0 +1,88 @@
+{
+ "entity": "OW",
+ "path": "ontology/animal/owl.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "67c0fca51a83dadc32b567a05af406826b34d78f1171dc753392b917e4d343f2",
+   "inputs": [
+    "17929f9f81330af3e77dee63f69af7eb4417db2d7c120630d86f761fc742942e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OW",
+    "field": "attributes.asymmetric_sound_triangulation",
+    "entity_file_sha256": "38c60313f10a9561b5743accd59f497ccd798506369b410254822c220745c56a",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "4fb421edeabb043e4428a4aea39bc998fb68b1ab0dd8697a3238fda03ad6e361",
+   "inputs": [
+    "658edee416dae7d8656d889098abf7e79402fb1ee6ff2a40dc785fd9685f7c2a"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OW",
+    "field": "attributes.silent_flight",
+    "entity_file_sha256": "38c60313f10a9561b5743accd59f497ccd798506369b410254822c220745c56a",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "f9771c50e4ae14fded2540c5ab4c07b0d88be7e8e8e163f1691b42904fb28ee0",
+   "inputs": [
+    "d050c0e07ed5d249905d32f355e2aaf0400e5818060cca997de4a4ec29c86f9b"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "OW",
+    "field": "attributes.extreme_low_light_vision",
+    "entity_file_sha256": "38c60313f10a9561b5743accd59f497ccd798506369b410254822c220745c56a",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

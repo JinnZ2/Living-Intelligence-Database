@@ -1,0 +1,251 @@
+{
+ "entity": "VENUS",
+ "path": "ontology/plant/venus_flytrap.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "32b3c1ef375db246aee116750ad2f030e60508abf982a2e6da9166e909322798",
+   "inputs": [
+    "S-80dbe6e08543"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "attributes.core_efficiency_factor",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "51a535c99282513a04e0622c56984f470598f429fac878fa680498fe14ee0631",
+   "inputs": [
+    "S-e6e40c0963c3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "gate_sensing.limit_sensed"
+   },
+   "value": "Spending the digestive secretion on a trapped object that is not prey.",
+   "assumptions": [],
+   "scope": null,
+   "status": "PROPOSED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0f0c0b423bc261af7af2c967b1440e8c088e3418d0726f1013fd390301df9a58",
+   "inputs": [
+    "S-e6e40c0963c3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "gate_sensing.early_signal"
+   },
+   "value": "The number of action potentials fired as trigger hairs are touched: a running count of mechanical stimulations.",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "16d278c0d3d68f416fd9ed816c242fd43e90b685a1b4022739c7edf317f5da0a",
+   "inputs": [
+    "S-e6e40c0963c3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "gate_sensing.response"
+   },
+   "value": "Staged by the count. Two action potentials: the trap snaps shut. After the second stimulus: the jasmonic acid signalling pathway is activated. More than three: genes for prey-degrading hydrolases are expressed, in proportion to the number of stimulations. Transcripts of the sodium channel DmHKT1 also depend on the number of stimulations.",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "2e46dc92766e1520fa701f757ca6f4a6832f5e4380f1f070c0478a2f4906604f",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "gate_sensing.lead_time"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "unmeasured: the abstract gives counts of stimulations, not times"
+   },
+   "snapshot_class": null
+  },
+  {
+   "id": "c27f588733d7d73d10ca096c9fbcc5b3e64665517c1d96c107ccab6c26e89214",
+   "inputs": [
+    "S-e6e40c0963c3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.adapts"
+   },
+   "value": "yes",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "fbc765adef8a58bb52d5b18edeb61365637e7332e0b45a7c300ec71bf2e4d353",
+   "inputs": [
+    "S-e6e40c0963c3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.signals"
+   },
+   "value": "yes",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "4f150661ffd8808f3768558c08b3d6e72e8966884aa393405a3f1ecb9031683c",
+   "inputs": [
+    "S-e6e40c0963c3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.responds_to_other"
+   },
+   "value": "yes",
+   "assumptions": [],
+   "scope": {
+    "observation_context": "lab"
+   },
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "88b0f8e5f0b51bc944cf52276f74d71904ae48a303dfb407bd267a05f060aa41",
+   "inputs": [
+    "S-e6e40c0963c3"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.changes_environment"
+   },
+   "value": "yes",
+   "assumptions": [],
+   "scope": null,
+   "status": "OBSERVED",
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "c00a4cc0f8f690302dec5bb8e95566244ea710011d17d981a97f42cc4467a9bf",
+   "inputs": [],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "VENUS",
+    "field": "functional_intelligence.co_adapts"
+   },
+   "value": null,
+   "assumptions": [],
+   "scope": null,
+   "status": null,
+   "supersedes": null,
+   "declared_pre_run": "1c31cf8eae97d79872be0f9d52d0e4fed3c1dc89",
+   "claim": null,
+   "void": {
+    "state": "LEXICAL_VOID",
+    "reason": "unmeasured: no source read addresses change in the prey in response to the plant."
+   },
+   "snapshot_class": null
+  }
+ ]
+}

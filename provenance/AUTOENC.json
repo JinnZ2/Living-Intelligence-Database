@@ -1,0 +1,61 @@
+{
+ "entity": "AUTOENC",
+ "path": "ontology/ai/autoencoder.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "33317dcded47efcf6a3f714ec436c5b13d413d12877a07ce65457933647ef7a1",
+   "inputs": [
+    "bc3cf88740e347088caa20fada8dde5343a88a34d561b4df5ae05469915f51f2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AUTOENC",
+    "field": "attributes.latent_compression",
+    "entity_file_sha256": "364627155cbd8612c75429996f3deb3bb79e4550a2ec9dae67585bcc056c0da0",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.87,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "e3ebdfe0e242ec43a9558595904d8863fcb0811db3399592b2ad20d011f10348",
+   "inputs": [
+    "3b2e979f7c9dce737fd7b4f1e3115dc791ee5c29f64c46309066bf950328f99e"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "AUTOENC",
+    "field": "attributes.variational_sampling",
+    "entity_file_sha256": "364627155cbd8612c75429996f3deb3bb79e4550a2ec9dae67585bcc056c0da0",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.83,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

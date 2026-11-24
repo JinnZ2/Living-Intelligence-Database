@@ -1,0 +1,88 @@
+{
+ "entity": "CORAL",
+ "path": "ontology/animal/coral_reef.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "5d97e9e8b0f4e699c0813861adfbd7d8837385d1f396edb21e473c234bfe4c08",
+   "inputs": [
+    "fdf08f28d583115c37db8039b841752fc7a8d268f25a82430a3bf55952c6c8b1"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CORAL",
+    "field": "attributes.symbiotic_photosynthesis",
+    "entity_file_sha256": "21d3d68ff1d96d78cdca5d2d5b9c9ec8f7665edc3cfc51611c3641be2c738bf3",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.94,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "47ac1a97ca9b23b8986c2ec9dc811a8ad89d684c90304496a0041392886b5c4f",
+   "inputs": [
+    "e6d93ac29a15871fbf5a5a97406105dce4dda4046991c3510390d425e17a8f84"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CORAL",
+    "field": "attributes.fractal_construction",
+    "entity_file_sha256": "21d3d68ff1d96d78cdca5d2d5b9c9ec8f7665edc3cfc51611c3641be2c738bf3",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.91,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "1fb7a7ba6e34d3045c1ac11b7fb35c2106f8f110196964a69ca6ff601b053924",
+   "inputs": [
+    "6b966ad0cb7c8b6bee5a08d949d89370b6d3cb5857fff035cfd6cf6259f3b3c2"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "CORAL",
+    "field": "attributes.niche_scaffolding",
+    "entity_file_sha256": "21d3d68ff1d96d78cdca5d2d5b9c9ec8f7665edc3cfc51611c3641be2c738bf3",
+    "evidence_type": "field_observation",
+    "reproducibility": "high"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

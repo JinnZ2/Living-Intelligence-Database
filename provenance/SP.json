@@ -1,0 +1,88 @@
+{
+ "entity": "SP",
+ "path": "ontology/animal/spider.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "a07f1b24f10620bcd3e3480ec4c8e8c96b7b3b7a32ebddb25b003a2342d89ce2",
+   "inputs": [
+    "8a2a71631e6137959b6d9e5b43823c517e8513ce4ba774bf4aefe506ca9e0f08"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SP",
+    "field": "attributes.web_architecture",
+    "entity_file_sha256": "e3cd13691ae94346804a21b36f240b44552f23b02fcff8c68a383cc8e77e5e9b",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "3f79e2970b102c00260ee223ecbe80dbae33425e61aa34790a234f8edcf30f67",
+   "inputs": [
+    "0ee670833b45a229824bec298e53d0f4c07bc70413daab6e59e5f73c11c968f0"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SP",
+    "field": "attributes.vibration_analysis",
+    "entity_file_sha256": "e3cd13691ae94346804a21b36f240b44552f23b02fcff8c68a383cc8e77e5e9b",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "medium"
+   },
+   "value": 0.89,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "8385f467587eb2aa0f0f155218cc15ca4cb3011c614446cae79a5dc601214025",
+   "inputs": [
+    "2ce9f0318bb2596b43e4aa8706b4ac44bf3f96d86841ca08f229c581146c83d4"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SP",
+    "field": "attributes.silk_tensile_engineering",
+    "entity_file_sha256": "e3cd13691ae94346804a21b36f240b44552f23b02fcff8c68a383cc8e77e5e9b",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.95,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

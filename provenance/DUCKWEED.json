@@ -1,0 +1,34 @@
+{
+ "entity": "DUCKWEED",
+ "path": "ontology/plant/duckweed.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "4e3042c40a22bf98f409611a98f7d5e1f6cf143a50b816d343a9b24fd030df9e",
+   "inputs": [
+    "03ee807f6d4dc0d78a1f5dfbeca33df3e9388ad4b02bb9966dea7b0581732a84"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "DUCKWEED",
+    "field": "attributes.core_efficiency_factor",
+    "entity_file_sha256": "6d18b438582cc226c577670cf44836b566769dc5edd808915d9ee6d892bf4150",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.96,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

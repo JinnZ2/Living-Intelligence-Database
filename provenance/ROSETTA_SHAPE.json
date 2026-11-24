@@ -1,0 +1,34 @@
+{
+ "entity": "ROSETTA_SHAPE",
+ "path": "ontology/shape/rosetta_shape_core.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "b1dfe57dbbafb7bccf15ead74090d1ceb5f37275d5aafffa1f47140fa1c6be23",
+   "inputs": [
+    "c1802bfa9177ced25e8c18abaad8e4edc5bbe4d55a0dd89b8b50f5a126098b7f"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "ROSETTA_SHAPE",
+    "field": "attributes.cross_ontology_translation_accuracy",
+    "entity_file_sha256": "d15ae6317e89772f3df82b07552af39db0608bf17e9b2bdd046df50ac15b08df",
+    "evidence_type": "simulation",
+    "reproducibility": "medium"
+   },
+   "value": 0.88,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "c1eff9253760e72fb9cecf806efa9e87b37e890b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}

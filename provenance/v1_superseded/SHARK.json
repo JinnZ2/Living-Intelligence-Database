@@ -1,0 +1,61 @@
+{
+ "entity": "SHARK",
+ "path": "ontology/animal/shark.json",
+ "snapshot_class": null,
+ "steps": [
+  {
+   "id": "846d8ce1946d6567cca4b977e455a515e653eebeaf1671de12b0ed62a6bdd220",
+   "inputs": [
+    "81c160ca5b1e9892e02e370d78a4faeb73baa4017b9c5eb7f679f6aac1d373cd"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SHARK",
+    "field": "attributes.electroreception",
+    "entity_file_sha256": "dacccb766d2698c5755f98de0cefe931ba10592ffae8e833a92dc270269ae9da",
+    "evidence_type": "lab_measurement",
+    "reproducibility": "high"
+   },
+   "value": 0.93,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  },
+  {
+   "id": "0e35e184bd7d65146217e81be12182db19fbaf970e41b5d53b80b3b60d13d90f",
+   "inputs": [
+    "dfc17c17abdc7270326135ee1d291cd219580cb2f3856db14eb81fec6acd0951"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "SHARK",
+    "field": "attributes.pursuit_predation",
+    "entity_file_sha256": "dacccb766d2698c5755f98de0cefe931ba10592ffae8e833a92dc270269ae9da",
+    "evidence_type": "field_observation",
+    "reproducibility": "medium"
+   },
+   "value": 0.9,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": null,
+   "declared_pre_run": "b8ca746de6e0fbe7d73a3c66b9d09ac91f5ef4cc",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
+  }
+ ]
+}
