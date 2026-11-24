@@ -105,3 +105,9 @@ python3 scripts/build_index.py                       # JSON Schema validation (n
 ```
 
 Neither check tests whether a source says what a field says.
+
+## Known broken links
+
+| link | state |
+|---|---|
+| `WOLF_PACK --synergy--> COUNCIL` | left broken. The target is a validation fixture (`validation/example/council.json`), held out of `ontology/` pending a source audit. |
