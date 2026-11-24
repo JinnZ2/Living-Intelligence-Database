@@ -5,6 +5,7 @@ Stdlib only.
 
   python3 scripts/existence_check.py run [--cache DIR]   # search PubMed, write the registry
   python3 scripts/existence_check.py resort              # apply UNDERSPECIFIED / MATCH_SUSPECT (offline)
+  python3 scripts/existence_check.py second [--cache DIR] # Europe PMC, NOT_FOUND_INDEXED works only
   python3 scripts/existence_check.py report              # write docs/existence_check.md (offline)
   python3 scripts/existence_check.py --selftest          # parsing and comparison, offline
 
@@ -190,12 +191,12 @@ def same_work(work, rv):
     return set(tokens(work["title"])) == set(tokens(rv["title"])) and work["year"] == rv["year"]
 
 
-def pick(work, records):
+def pick(work, records, view=None):
     """(identified record or None, candidate or None). A candidate passes the
     title thresholds but is not accepted as the cited work."""
     best = cand = None
     for rec in records:
-        rv = record_view(rec)
+        rv = (view or record_view)(rec)
         hold, cover = title_fit(work["title"], rv["title"])
         if hold >= TITLE_HOLD and cover >= TITLE_COVER:
             key = (hold + cover, fold(work["surname"]) in fold(rv["first_author"] or ""), work["year"] == rv["year"])
@@ -274,8 +275,8 @@ class Client:
         self.cache.mkdir(parents=True, exist_ok=True)
         self.log = []
 
-    def get(self, endpoint, params):
-        url = EUTILS + endpoint + "?" + urllib.parse.urlencode(params)
+    def get(self, endpoint, params, base=EUTILS):
+        url = base + endpoint + "?" + urllib.parse.urlencode(params)
         f = self.cache / (hashlib.sha256(url.encode("utf-8")).hexdigest() + ".json")
         if f.exists():
             body = f.read_bytes()
@@ -291,7 +292,7 @@ class Client:
                     time.sleep(2 + 2 * attempt)
             f.write_bytes(body)
             time.sleep(0.4)
-        self.log.append({"endpoint": endpoint, "params": {k: v for k, v in params.items() if k != "retmode"},
+        self.log.append({"endpoint": endpoint or base, "params": {k: v for k, v in params.items() if k != "retmode"},
                          "bytes": len(body), "sha256": hashlib.sha256(body).hexdigest()})
         return json.loads(body)
 
@@ -345,6 +346,115 @@ def check_work(work, client):
         elif res["state"] == "NOT_INDEXED":
             res["note"] = "book, chapter or non-biomedical venue marker in the string; searched, no record identified"
     return res
+
+
+# ------------------------------------------------------------ second index
+EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+EPMC_NAME = "Europe PMC"
+VIEW_KEYS = ("pmid", "doi", "title", "first_author", "year", "journal", "volume", "pages")
+
+
+def epmc_view(r):
+    """One Europe PMC 'lite' result in the same shape as record_view."""
+    return {"pmid": r.get("pmid"), "doi": r.get("doi"), "title": (r.get("title") or "").rstrip("."),
+            "first_author": (r.get("authorString") or "").split(",")[0].strip(" .") or None,
+            "year": r.get("pubYear"), "journal": r.get("journalTitle"), "journal_abbrev": None,
+            "volume": r.get("journalVolume") or None, "pages": r.get("pageInfo") or None,
+            "epmc_id": r.get("id"), "epmc_source": r.get("source")}
+
+
+def epmc_terms(cited):
+    """The same three steps as PubMed: author + year + title words; author + title words; title words."""
+    words = title_words(cited["title"])
+    ti = "TITLE:(%s)" % " AND ".join(words)
+    au = 'AUTH:"%s"' % surname(cited["author"])
+    return ["%s AND PUB_YEAR:%s AND %s" % (au, cited["year"], ti), "%s AND %s" % (au, ti), ti]
+
+
+def epmc_search(client, term):
+    r = client.get("", {"query": term, "format": "json", "resultType": "lite", "pageSize": MAX_RECORDS}, base=EPMC)
+    return int(r.get("hitCount", 0) or 0), (r.get("resultList") or {}).get("result", [])
+
+
+def second_index_work(cited, client):
+    """Search Europe PMC for one titled work. Returns the second_index block."""
+    work = dict(cited, surname=surname(cited["author"]))
+    queries, rv, cand = [], None, None
+    for term in epmc_terms(cited):
+        n, results = epmc_search(client, term)
+        queries.append({"term": term, "count": n})
+        if n:
+            rv, c = pick(work, results, view=epmc_view)
+            cand = cand or c
+            if rv:
+                break
+    out = {"index": EPMC_NAME, "queries": queries, "state": "NOT_FOUND_INDEXED", "matched_record": None,
+           "differs": [], "not_compared": [], "candidate": None, "openalex": "NOT_REACHED"}
+    if rv is not None:
+        out["differs"], out["not_compared"] = compare(work, rv)
+        out["matched_record"] = dict({k: rv[k] for k in VIEW_KEYS}, index=EPMC_NAME,
+                                     epmc_id=rv["epmc_id"], epmc_source=rv["epmc_source"])
+        out["state"] = "FOUND_DIFFERS" if out["differs"] else "FOUND_AS_CITED"
+        if is_suspect(cited, out["matched_record"], out["differs"]):
+            out["state"] = "MATCH_SUSPECT"
+        out["openalex"] = "NOT_NEEDED"
+    elif cand is not None:
+        out["candidate"] = dict({k: cand[k] for k in VIEW_KEYS[:6]}, index=EPMC_NAME)
+    return out
+
+
+def apply_second(w, block):
+    """Attach a second-index block to a work. A FOUND state replaces the work's
+    state and record; the PubMed outcome is kept under 'pubmed'."""
+    w["second_index"] = block
+    if block["state"] in ("FOUND_AS_CITED", "FOUND_DIFFERS"):
+        w["pubmed"] = {"state": w["state"], "matched_record": w["matched_record"], "differs": w["differs"]}
+        w["state"], w["matched_record"] = block["state"], block["matched_record"]
+        w["differs"], w["not_compared"] = block["differs"], block["not_compared"]
+        w["note"] = "not identified in PubMed by the search; identified in %s" % block["index"]
+    return w
+
+
+def second(cache, scope=("NOT_FOUND_INDEXED",)):
+    """Europe PMC search of the works in `scope`. Writes the registry."""
+    reg_path = ROOT / "registry" / "sources.json"
+    reg = json.loads(reg_path.read_text(encoding="utf-8"))
+    client = Client(cache)
+    n, results = epmc_search(client, epmc_terms({"author": "Sumbre et al.", "year": "2001",
+                                                 "title": "Control of Octopus Arm Extension by a Peripheral Motor Program"})[0])
+    ctl = epmc_view(results[0]) if results else {}
+    if not (n == 1 and ctl.get("pmid") == "11546877" and ctl.get("first_author", "").startswith("Sumbre")
+            and ctl.get("year") == "2001" and ctl.get("volume") == "293"):
+        raise SystemExit("control failed: the adapter does not read the response shape; nothing written")
+    print("control ok: Sumbre 2001 read as PMID %s, %s %s:%s" % (ctl["pmid"], ctl["journal"], ctl["volume"], ctl["pages"]))
+    today = date.today().isoformat()
+    for e in reg["sources"]:
+        ex = e.get("existence")
+        if not ex:
+            continue
+        for w in ex["works"]:
+            if w["state"] in scope and "second_index" not in w and w["cited"]["title"]:
+                apply_second(w, dict(second_index_work(w["cited"], client), checked=today))
+                b = w["second_index"]
+                print("%-18s %s (%s) %s" % (b["state"], w["cited"]["author"], w["cited"]["year"],
+                                            [q["count"] for q in b["queries"]]))
+        ex["state"] = string_state([w["state"] for w in ex["works"]])
+        ex["matched_record"] = [w["matched_record"] for w in ex["works"]
+                                if w["matched_record"] and w["state"] in ("FOUND_AS_CITED", "FOUND_DIFFERS")]
+    pc.dump(reg_path, reg)
+    seen, files = set(), []
+    for item in client.log:
+        if item["sha256"] not in seen:
+            seen.add(item["sha256"])
+            files.append(item)
+    pc.dump(ROOT / "provenance" / "as_received" / "existence_second_index_MANIFEST.json", {
+        "date": today, "status": "HASHES_ONLY_SPECIMENS_NOT_COMMITTED", "kept_in_repository": False,
+        "provenance_note": "Responses of the Europe PMC REST search (resultType lite) received by "
+                           "scripts/existence_check.py second. Bibliographic records only. Hashes identify "
+                           "the received bytes; they do not authenticate the source. api.openalex.org was "
+                           "not reached from this environment (egress proxy, HTTP 403 on CONNECT).",
+        "requests": len(client.log), "distinct_responses": len(files), "files": files})
+    print("requests: %d   distinct responses: %d" % (len(client.log), len(files)))
 
 
 # ------------------------------------------------------------------- scope
@@ -633,6 +743,46 @@ def selftest():
     none = resort_entry({"state": "NOT_INDEXED", "works": [], "matched_record": [], "note": None})
     case("a string naming no work -> UNDERSPECIFIED, note 'names no work'",
          none["state"] == "UNDERSPECIFIED" and none["note"] == "names no work" and none["resorted_from"] == "NOT_INDEXED")
+    er_ = {"id": "PMC1", "source": "MED", "pmid": "7", "doi": "10.1/y", "title": "Energetic cost of locomotion in kangaroos.",
+           "authorString": "Dawson TJ, Taylor CR.", "pubYear": "1973", "journalTitle": "Nature",
+           "journalVolume": "246", "pageInfo": "313-314"}
+    ev = epmc_view(er_)
+    case("Europe PMC result read into the common shape",
+         (ev["pmid"], ev["first_author"], ev["year"], ev["journal"], ev["volume"], ev["pages"])
+         == ("7", "Dawson TJ", "1973", "Nature", "246", "313-314"))
+    cited = {"author": "Dawson & Taylor", "year": "1973", "title": "Energetic cost of locomotion in kangaroos",
+             "venue": "Nature", "volume": "246", "pages": "313-314"}
+    case("Europe PMC terms mirror the three PubMed steps",
+         epmc_terms(cited) == ['AUTH:"Dawson" AND PUB_YEAR:1973 AND TITLE:(energetic AND cost AND locomotion AND kangaroos)',
+                               'AUTH:"Dawson" AND TITLE:(energetic AND cost AND locomotion AND kangaroos)',
+                               'TITLE:(energetic AND cost AND locomotion AND kangaroos)'])
+
+    class Fake:
+        def __init__(self, results):
+            self.results, self.log = results, []
+
+        def get(self, endpoint, params, base=None):
+            return {"hitCount": len(self.results), "resultList": {"result": self.results}}
+
+    b = second_index_work(cited, Fake([er_]))
+    case("second index: found as cited", b["state"] == "FOUND_AS_CITED" and b["matched_record"]["index"] == "Europe PMC"
+         and b["openalex"] == "NOT_NEEDED")
+    b2 = second_index_work(cited, Fake([]))
+    case("second index: a miss stays a miss, OpenAlex recorded as not reached",
+         b2["state"] == "NOT_FOUND_INDEXED" and b2["openalex"] == "NOT_REACHED" and len(b2["queries"]) == 3)
+    b3 = second_index_work(cited, Fake([dict(er_, authorString="Smith A.", pubYear="1990")]))
+    case("second index: other author and year is a candidate, not a find",
+         b3["state"] == "NOT_FOUND_INDEXED" and b3["candidate"]["first_author"] == "Smith A")
+    b4 = second_index_work(cited, Fake([dict(er_, journalVolume="247")]))
+    case("second index: a differing volume is listed", b4["state"] == "FOUND_DIFFERS"
+         and [d["item"] for d in b4["differs"]] == ["volume"])
+    w0 = {"state": "NOT_FOUND_INDEXED", "matched_record": None, "differs": [], "not_compared": [], "note": None}
+    apply_second(w0, b)
+    w1 = {"state": "NOT_FOUND_INDEXED", "matched_record": None, "differs": [], "not_compared": [], "note": None}
+    apply_second(w1, b2)
+    case("a find replaces the work's state and keeps the PubMed outcome; a miss changes nothing",
+         w0["state"] == "FOUND_AS_CITED" and w0["pubmed"]["state"] == "NOT_FOUND_INDEXED"
+         and w1["state"] == "NOT_FOUND_INDEXED" and "pubmed" not in w1 and w1["second_index"]["openalex"] == "NOT_REACHED")
     case("UNDERSPECIFIED is the weakest string state",
          string_state(["UNDERSPECIFIED", "NOT_FOUND_INDEXED", "FOUND_AS_CITED"]) == "UNDERSPECIFIED"
          and string_state(["MATCH_SUSPECT", "FOUND_DIFFERS"]) == "MATCH_SUSPECT")
@@ -650,6 +800,10 @@ def main(argv):
     if argv[:1] == ["run"]:
         cache = argv[argv.index("--cache") + 1] if "--cache" in argv else str(ROOT / ".existence_cache")
         run(cache)
+        return 0
+    if argv[:1] == ["second"]:
+        cache = argv[argv.index("--cache") + 1] if "--cache" in argv else str(ROOT / ".existence_cache")
+        second(cache)
         return 0
     if argv[:1] == ["resort"]:
         resort()
