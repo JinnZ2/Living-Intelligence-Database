@@ -24,7 +24,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -50,8 +50,9 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      },
      {
       "cited": {
@@ -73,10 +74,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -175,18 +178,7 @@
    "fetched": null,
    "existence": {
     "state": "NOT_FOUND_INDEXED",
-    "matched_record": [
-     {
-      "pmid": "18263004",
-      "doi": "10.1109/3477.484436",
-      "title": "Ant system: optimization by a colony of cooperating agents",
-      "first_author": "Dorigo M",
-      "year": "1996",
-      "journal": "IEEE transactions on systems, man, and cybernetics. Part B, Cybernetics : a publication of the IEEE Systems, Man, and Cybernetics Society",
-      "volume": "26",
-      "pages": "29-41"
-     }
-    ],
+    "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
     "note": null,
@@ -250,8 +242,10 @@
       ],
       "not_compared": [],
       "candidate": null,
-      "note": null,
-      "state": "FOUND_DIFFERS"
+      "note": "the record may be a different work by the same author; not counted as found",
+      "state": "MATCH_SUSPECT",
+      "lead": "1997 IEEE TEC 1:53-66 may exist as cited outside PubMed (recall, unverified)",
+      "resorted_from": "FOUND_DIFFERS"
      },
      {
       "cited": {
@@ -358,7 +352,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -384,10 +378,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -896,7 +892,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -922,10 +918,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -1047,7 +1045,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -1073,10 +1071,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -1440,12 +1440,13 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
-    "note": "no work with an author and a year in the string",
-    "works": []
+    "note": "names no work",
+    "works": [],
+    "resorted_from": "NOT_INDEXED"
    }
   },
   {
@@ -1703,7 +1704,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -1760,10 +1761,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 631 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -2190,7 +2193,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -2247,10 +2250,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -2276,7 +2281,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [
      {
       "pmid": "20392722",
@@ -2375,10 +2380,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 3 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -2682,7 +2689,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -2739,10 +2746,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -2823,7 +2832,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -2849,10 +2858,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -2926,7 +2937,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -2983,8 +2994,9 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      },
      {
       "cited": {
@@ -3024,7 +3036,8 @@
       "note": "a record with a similar title and a different first author was returned; not accepted as the cited work",
       "state": "NOT_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -3569,7 +3582,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -3626,10 +3639,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -3671,7 +3686,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -3697,10 +3712,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -4144,7 +4161,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -4201,10 +4218,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {
@@ -4262,7 +4281,7 @@
    "opened": false,
    "fetched": null,
    "existence": {
-    "state": "NOT_FOUND_INDEXED",
+    "state": "UNDERSPECIFIED",
     "matched_record": [],
     "checked": "2026-11-24",
     "index": "PubMed (NCBI esearch + esummary)",
@@ -4288,8 +4307,9 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      },
      {
       "cited": {
@@ -4311,10 +4331,12 @@
       "differs": [],
       "not_compared": [],
       "candidate": null,
-      "note": "no title in the string; 0 record(s) match the author, year and description words",
-      "state": "NOT_FOUND_INDEXED"
+      "note": "no title and no venue in the string: not searchable",
+      "state": "UNDERSPECIFIED",
+      "resorted_from": "NOT_FOUND_INDEXED"
      }
-    ]
+    ],
+    "resorted_from": "NOT_FOUND_INDEXED"
    }
   },
   {

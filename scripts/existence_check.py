@@ -4,6 +4,7 @@ existence_check.py -- source pass, stage 1: can a cited work be found as cited?
 Stdlib only.
 
   python3 scripts/existence_check.py run [--cache DIR]   # search PubMed, write the registry
+  python3 scripts/existence_check.py resort              # apply UNDERSPECIFIED / MATCH_SUSPECT (offline)
   python3 scripts/existence_check.py report              # write docs/existence_check.md (offline)
   python3 scripts/existence_check.py --selftest          # parsing and comparison, offline
 
@@ -31,8 +32,11 @@ import export_reference as er   # noqa: E402
 ROOT = pc.ROOT
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 TOP_ENTITIES = 10
-STATES = ("FOUND_AS_CITED", "FOUND_DIFFERS", "NOT_FOUND_INDEXED", "NOT_INDEXED")
-WEAKEST_FIRST = ("NOT_FOUND_INDEXED", "NOT_INDEXED", "FOUND_DIFFERS", "FOUND_AS_CITED")
+STATES = ("FOUND_AS_CITED", "FOUND_DIFFERS", "MATCH_SUSPECT", "NOT_FOUND_INDEXED", "NOT_INDEXED",
+          "UNDERSPECIFIED")
+WEAKEST_FIRST = ("UNDERSPECIFIED", "NOT_FOUND_INDEXED", "NOT_INDEXED", "MATCH_SUSPECT", "FOUND_DIFFERS",
+                 "FOUND_AS_CITED")
+MISSES = ("NOT_FOUND_INDEXED", "NOT_INDEXED")
 TITLE_HOLD, TITLE_COVER, MAX_RECORDS, MAX_TITLE_WORDS = 0.8, 0.5, 5, 8
 STOP = set("the a an of and in on for to by with from at as is are its their this that into "
            "during using between among under over via not does can".split())
@@ -203,9 +207,63 @@ def pick(work, records):
     return (best[1] if best else None), (cand[1] if cand else None)
 
 
+def contiguous(cited_title, record_title):
+    """The cited title's tokens appear, in order and adjacent, inside the record's title."""
+    c, r = tokens(cited_title), tokens(record_title)
+    return bool(c) and any(r[i:i + len(c)] == c for i in range(len(r) - len(c) + 1))
+
+
+def is_suspect(cited, record, differs):
+    """MATCH_SUSPECT: first author agrees, the cited title is not a contiguous
+    run inside the record's title, and the year or the venue differs."""
+    if record is None or not cited.get("title"):
+        return False
+    items = {d["item"] for d in differs}
+    return "author" not in items and bool(items & {"year", "venue"}) \
+        and not contiguous(cited["title"], record["title"])
+
+
+def is_underspecified(cited):
+    return not cited.get("title") and not cited.get("venue")
+
+
+def resort_work(w, leads=()):
+    """Apply the two added states to one stored work result. Returns the prior
+    state when the state changed, else None. Nothing is searched."""
+    before = w["state"]
+    if before in MISSES and is_underspecified(w["cited"]):
+        w["state"] = "UNDERSPECIFIED"
+        w["note"] = "no title and no venue in the string: not searchable"
+    elif before in ("FOUND_AS_CITED", "FOUND_DIFFERS") and is_suspect(w["cited"], w["matched_record"], w["differs"]):
+        w["state"] = "MATCH_SUSPECT"
+        w["note"] = "the record may be a different work by the same author; not counted as found"
+    for ld in leads:
+        if (ld["surname"], ld["year"], ld["title"]) == (surname(w["cited"]["author"]), w["cited"]["year"], w["cited"]["title"]):
+            w["lead"] = ld["lead"]
+    if w["state"] != before:
+        w["resorted_from"] = before
+        return before
+    return None
+
+
+def resort_entry(ex, leads=()):
+    """Re-sort one registry existence block in place; recompute the string state."""
+    for w in ex["works"]:
+        resort_work(w, leads)
+    before = ex["state"]
+    ex["state"] = string_state([w["state"] for w in ex["works"]])
+    if not ex["works"]:
+        ex["note"] = "names no work"
+    ex["matched_record"] = [w["matched_record"] for w in ex["works"]
+                            if w["matched_record"] and w["state"] in ("FOUND_AS_CITED", "FOUND_DIFFERS")]
+    if ex["state"] != before:
+        ex["resorted_from"] = before
+    return ex
+
+
 def string_state(work_states):
     if not work_states:
-        return "NOT_INDEXED"
+        return "UNDERSPECIFIED"
     return next(s for s in WEAKEST_FIRST if s in work_states)
 
 
@@ -341,6 +399,26 @@ def run(cache):
     print("requests: %d   distinct responses: %d" % (len(client.log), len(files)))
 
 
+def resort():
+    """Offline: apply UNDERSPECIFIED and MATCH_SUSPECT to the stored results."""
+    reg_path = ROOT / "registry" / "sources.json"
+    reg = json.loads(reg_path.read_text(encoding="utf-8"))
+    leads = pc.load(ROOT / "registry" / "existence_leads.json", {"leads": []})["leads"]
+    moved = {}
+    for e in reg["sources"]:
+        ex = e.get("existence")
+        if not ex:
+            continue
+        resort_entry(ex, leads)
+        for w in ex["works"]:
+            if "resorted_from" in w:
+                k = "%s -> %s" % (w["resorted_from"], w["state"])
+                moved[k] = moved.get(k, 0) + 1
+    pc.dump(reg_path, reg)
+    for k, v in sorted(moved.items()):
+        print("works %-40s %d" % (k, v))
+
+
 # ------------------------------------------------------------------ report
 def report():
     reg = {e["id"]: e for e in json.loads((ROOT / "registry" / "sources.json").read_text(encoding="utf-8"))["sources"]}
@@ -352,20 +430,26 @@ def report():
          "no full text was read, so **no field gained a status** and no source is",
          "marked opened. A found record shows the work exists and how it is indexed.",
          "It does not show that the work supports the value it is cited for.", "",
-         "No state means \"does not exist\". NOT_FOUND_INDEXED says one search of one",
-         "index identified no record. NOT_INDEXED says the work is a book, a chapter",
-         "or from a non-biomedical venue, or the string names no work, so PubMed is",
-         "the wrong place to look.", "",
+         "No state means \"does not exist\".", "",
+         "| state | meaning |", "|---|---|",
+         "| FOUND_AS_CITED | a record is identified and every compared item agrees |",
+         "| FOUND_DIFFERS | a record is identified and at least one item differs |",
+         "| MATCH_SUSPECT | a record by the same first author was returned, but it may be a different work; not counted as found |",
+         "| NOT_FOUND_INDEXED | a titled work was searched and no record identified |",
+         "| NOT_INDEXED | a book, a chapter or a non-biomedical venue: PubMed is the wrong place to look |",
+         "| UNDERSPECIFIED | no title and no venue in the string, or the string names no work: not searchable, so not a miss |", "",
          "A string's state is the weakest among the works it names",
-         "(NOT_FOUND_INDEXED, NOT_INDEXED, FOUND_DIFFERS, FOUND_AS_CITED).", "",
+         "(%s)." % ", ".join(WEAKEST_FIRST), "",
          "## Per entity", "",
-         "| entity | attribute fields | sources | FOUND_AS_CITED | FOUND_DIFFERS | NOT_FOUND_INDEXED | NOT_INDEXED |",
-         "|---|---|---|---|---|---|---|"]
+         "| entity | attribute fields | sources | %s |" % " | ".join(STATES),
+         "|---|---|---|" + "---|" * len(STATES)]
     tot = {s: 0 for s in STATES}
     wtot = {s: 0 for s in STATES}
     nsrc = nworks = nfields = 0
     seen = set()
-    differs, misses = [], []
+    differs, misses, suspects = [], [], []
+    before_w = {s: 0 for s in STATES}
+    before_s = {s: 0 for s in STATES}
     for ent, nat, src in top_entities():
         c = {s: 0 for s in STATES}
         for sid in src:
@@ -374,11 +458,15 @@ def report():
             if sid in seen:
                 continue
             seen.add(sid)
+            before_s[ex.get("resorted_from", ex["state"])] += 1
             for w in ex["works"]:
                 wtot[w["state"]] += 1
+                before_w[w.get("resorted_from", w["state"])] += 1
                 nworks += 1
                 if w["state"] == "FOUND_DIFFERS":
                     differs.append((ent, sid, w))
+                elif w["state"] == "MATCH_SUSPECT":
+                    suspects.append((ent, sid, w))
                 elif w["state"] != "FOUND_AS_CITED":
                     misses.append((ent, sid, w))
             if not ex["works"]:
@@ -391,6 +479,23 @@ def report():
     L.append("| total | %d | %d | %s |" % (nfields, nsrc, " | ".join(str(tot[s]) for s in STATES)))
     L += ["", "Per work (a string may name several): %d works in %d strings. %s." % (
         nworks, len(seen), ", ".join("%s %d" % (s, wtot[s]) for s in STATES)), "",
+        "## Before and after the re-sort", "",
+        "The re-sort (amendment \"UNDERSPECIFIED + MATCH_SUSPECT\") searched nothing. It",
+        "relabeled stored results: a miss with no title and no venue became",
+        "UNDERSPECIFIED, the string naming no work became UNDERSPECIFIED, and a match",
+        "that may be a different work by the same author became MATCH_SUSPECT.", "",
+        "| state | strings before | strings after | works before | works after |", "|---|---|---|---|---|"] + [
+        "| %s | %d | %d | %d | %d |" % (s, before_s[s], sum(reg[i]["existence"]["state"] == s for i in seen),
+                                       before_w[s], wtot[s]) for s in STATES] + [
+        "| total | %d | %d | %d | %d |" % (len(seen), len(seen), nworks, nworks), "",
+        "## MATCH_SUSPECT", ""] + [x for ent, sid, w in suspects for x in (
+            "- **%s** `%s` %s (%s) '%s'" % (ent, sid[:12], w["cited"]["author"], w["cited"]["year"], w["cited"]["title"]),
+            "  - record returned: PMID %s. %s (%s) %s. %s %s:%s" % (
+                w["matched_record"]["pmid"], w["matched_record"]["first_author"], w["matched_record"]["year"],
+                w["matched_record"]["title"], w["matched_record"]["journal"], w["matched_record"]["volume"],
+                w["matched_record"]["pages"]),
+            "  - differs in: %s" % ", ".join(d["item"] for d in w["differs"]),
+            "  - lead: %s" % w.get("lead", "none"))] + ([] if suspects else ["None."]) + ["",
         "## FOUND_DIFFERS", "",
         "Each line: the work as cited, the record identified, and every item that",
         "differs. The source strings are unchanged; these are records of a",
@@ -420,7 +525,7 @@ def report():
     L += ["", "## Not identified", ""]
     for ent, sid, w in misses:
         if w is None:
-            L.append("- NOT_INDEXED %s `%s`: no work with an author and a year in the string: %s"
+            L.append("- UNDERSPECIFIED %s `%s`: names no work: %s"
                      % (ent, sid[:12], reg[sid]["string"]))
         else:
             L.append("- %s %s `%s` %s (%s)%s%s" % (
@@ -431,9 +536,11 @@ def report():
           "- One index. A work absent from PubMed may be in another index; nothing else was searched.",
           "- The match rule is mechanical (declared before the run). A work whose cited title is",
           "  paraphrased, or whose first author is cited differently, can be missed.",
-          "- A string with no quoted title is identified only when its description query returns",
-          "  exactly one record; that is a weak identification and is listed under FOUND_DIFFERS",
-          "  with the title cited as null.",
+          "- UNDERSPECIFIED says the string gives too little to search on. It says nothing about",
+          "  the work. The works were searched once by description words before this state",
+          "  existed; those searches identified nothing and are kept on each work under queries.",
+          "- MATCH_SUSPECT is a mechanical test (title run, year or venue). It was written after",
+          "  the one row it applies to was seen.",
           "- The book and non-biomedical test is a word list. It decides only the label of a miss.",
           ""]
     (ROOT / "docs" / "existence_check.md").write_text("\n".join(L), encoding="utf-8")
@@ -498,8 +605,37 @@ def selftest():
     case("string state is the weakest work", string_state(["FOUND_AS_CITED", "NOT_INDEXED"]) == "NOT_INDEXED"
          and string_state(["FOUND_DIFFERS", "FOUND_AS_CITED"]) == "FOUND_DIFFERS"
          and string_state(["NOT_INDEXED", "NOT_FOUND_INDEXED"]) == "NOT_FOUND_INDEXED"
-         and string_state([]) == "NOT_INDEXED" and string_state(["FOUND_AS_CITED"]) == "FOUND_AS_CITED")
+         and string_state([]) == "UNDERSPECIFIED" and string_state(["FOUND_AS_CITED"]) == "FOUND_AS_CITED")
     case("no state says a work does not exist", not any("EXIST" in s for s in STATES))
+    case("contiguous title run", contiguous("Evidence for distributed light-sensing in the skin of cuttlefish",
+                                            "Evidence for distributed light sensing in the skin of cuttlefish, Sepia officinalis")
+         and not contiguous("Ant colony system", "Ant system: optimization by a colony of cooperating agents"))
+    dor = {"cited": {"author": "Dorigo & Gambardella", "year": "1997", "title": "Ant colony system", "venue": "IEEE TEC"},
+           "state": "FOUND_DIFFERS", "note": None,
+           "matched_record": {"title": "Ant system: optimization by a colony of cooperating agents"},
+           "differs": [{"item": "year"}, {"item": "title"}, {"item": "venue"}]}
+    lead = [{"surname": "Dorigo", "year": "1997", "title": "Ant colony system", "lead": "x"}]
+    case("same author, other title, other year -> MATCH_SUSPECT, lead attached",
+         resort_work(dor, lead) == "FOUND_DIFFERS" and dor["state"] == "MATCH_SUSPECT" and dor["lead"] == "x")
+    ext = {"cited": {"author": "M", "year": "2008", "title": "Evidence for distributed light-sensing in the skin of cuttlefish", "venue": "J"},
+           "state": "FOUND_DIFFERS", "note": None,
+           "matched_record": {"title": "Evidence for distributed light sensing in the skin of cuttlefish, Sepia officinalis"},
+           "differs": [{"item": "year"}, {"item": "title"}, {"item": "venue"}]}
+    case("a longer record title that contains the cited one stays FOUND_DIFFERS",
+         resort_work(ext) is None and ext["state"] == "FOUND_DIFFERS")
+    bare = {"cited": {"author": "Pratt et al.", "year": "2002", "title": None, "venue": None},
+            "state": "NOT_FOUND_INDEXED", "note": None, "matched_record": None, "differs": []}
+    titled = {"cited": {"author": "A", "year": "2002", "title": "T", "venue": None},
+              "state": "NOT_FOUND_INDEXED", "note": None, "matched_record": None, "differs": []}
+    case("no title and no venue -> UNDERSPECIFIED; a titled miss stays a miss",
+         resort_work(bare) == "NOT_FOUND_INDEXED" and bare["state"] == "UNDERSPECIFIED"
+         and resort_work(titled) is None and titled["state"] == "NOT_FOUND_INDEXED")
+    none = resort_entry({"state": "NOT_INDEXED", "works": [], "matched_record": [], "note": None})
+    case("a string naming no work -> UNDERSPECIFIED, note 'names no work'",
+         none["state"] == "UNDERSPECIFIED" and none["note"] == "names no work" and none["resorted_from"] == "NOT_INDEXED")
+    case("UNDERSPECIFIED is the weakest string state",
+         string_state(["UNDERSPECIFIED", "NOT_FOUND_INDEXED", "FOUND_AS_CITED"]) == "UNDERSPECIFIED"
+         and string_state(["MATCH_SUSPECT", "FOUND_DIFFERS"]) == "MATCH_SUSPECT")
     failed = 0
     for name, ok in cases:
         failed += not ok
@@ -514,6 +650,9 @@ def main(argv):
     if argv[:1] == ["run"]:
         cache = argv[argv.index("--cache") + 1] if "--cache" in argv else str(ROOT / ".existence_cache")
         run(cache)
+        return 0
+    if argv[:1] == ["resort"]:
+        resort()
         return 0
     if argv[:1] == ["report"]:
         report()

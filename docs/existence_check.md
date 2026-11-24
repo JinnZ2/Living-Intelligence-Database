@@ -9,31 +9,61 @@ no full text was read, so **no field gained a status** and no source is
 marked opened. A found record shows the work exists and how it is indexed.
 It does not show that the work supports the value it is cited for.
 
-No state means "does not exist". NOT_FOUND_INDEXED says one search of one
-index identified no record. NOT_INDEXED says the work is a book, a chapter
-or from a non-biomedical venue, or the string names no work, so PubMed is
-the wrong place to look.
+No state means "does not exist".
+
+| state | meaning |
+|---|---|
+| FOUND_AS_CITED | a record is identified and every compared item agrees |
+| FOUND_DIFFERS | a record is identified and at least one item differs |
+| MATCH_SUSPECT | a record by the same first author was returned, but it may be a different work; not counted as found |
+| NOT_FOUND_INDEXED | a titled work was searched and no record identified |
+| NOT_INDEXED | a book, a chapter or a non-biomedical venue: PubMed is the wrong place to look |
+| UNDERSPECIFIED | no title and no venue in the string, or the string names no work: not searchable, so not a miss |
 
 A string's state is the weakest among the works it names
-(NOT_FOUND_INDEXED, NOT_INDEXED, FOUND_DIFFERS, FOUND_AS_CITED).
+(UNDERSPECIFIED, NOT_FOUND_INDEXED, NOT_INDEXED, MATCH_SUSPECT, FOUND_DIFFERS, FOUND_AS_CITED).
 
 ## Per entity
 
-| entity | attribute fields | sources | FOUND_AS_CITED | FOUND_DIFFERS | NOT_FOUND_INDEXED | NOT_INDEXED |
-|---|---|---|---|---|---|---|
-| ANT | 6 | 3 | 0 | 0 | 3 | 0 |
-| BE | 6 | 6 | 0 | 0 | 3 | 3 |
-| WHALE | 6 | 2 | 0 | 0 | 2 | 0 |
-| WOLF_PACK | 6 | 2 | 0 | 0 | 1 | 1 |
-| OC | 5 | 5 | 0 | 0 | 5 | 0 |
-| KA | 4 | 4 | 0 | 1 | 3 | 0 |
-| LLM | 4 | 4 | 0 | 0 | 0 | 4 |
-| MORMYRID | 4 | 4 | 0 | 0 | 3 | 1 |
-| TU | 4 | 4 | 1 | 1 | 2 | 0 |
-| AN | 3 | 3 | 0 | 0 | 1 | 2 |
-| total | 48 | 37 | 1 | 2 | 23 | 11 |
+| entity | attribute fields | sources | FOUND_AS_CITED | FOUND_DIFFERS | MATCH_SUSPECT | NOT_FOUND_INDEXED | NOT_INDEXED | UNDERSPECIFIED |
+|---|---|---|---|---|---|---|---|---|
+| ANT | 6 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
+| BE | 6 | 6 | 0 | 0 | 0 | 2 | 3 | 1 |
+| WHALE | 6 | 2 | 0 | 0 | 0 | 0 | 0 | 2 |
+| WOLF_PACK | 6 | 2 | 0 | 0 | 0 | 0 | 0 | 2 |
+| OC | 5 | 5 | 0 | 0 | 0 | 3 | 0 | 2 |
+| KA | 4 | 4 | 0 | 1 | 0 | 3 | 0 | 0 |
+| LLM | 4 | 4 | 0 | 0 | 0 | 0 | 4 | 0 |
+| MORMYRID | 4 | 4 | 0 | 0 | 0 | 0 | 1 | 3 |
+| TU | 4 | 4 | 1 | 1 | 0 | 0 | 0 | 2 |
+| AN | 3 | 3 | 0 | 0 | 0 | 1 | 2 | 0 |
+| total | 48 | 37 | 1 | 2 | 0 | 9 | 10 | 15 |
 
-Per work (a string may name several): 65 works in 37 strings. FOUND_AS_CITED 8, FOUND_DIFFERS 5, NOT_FOUND_INDEXED 32, NOT_INDEXED 20.
+Per work (a string may name several): 65 works in 37 strings. FOUND_AS_CITED 8, FOUND_DIFFERS 4, MATCH_SUSPECT 1, NOT_FOUND_INDEXED 16, NOT_INDEXED 20, UNDERSPECIFIED 16.
+
+## Before and after the re-sort
+
+The re-sort (amendment "UNDERSPECIFIED + MATCH_SUSPECT") searched nothing. It
+relabeled stored results: a miss with no title and no venue became
+UNDERSPECIFIED, the string naming no work became UNDERSPECIFIED, and a match
+that may be a different work by the same author became MATCH_SUSPECT.
+
+| state | strings before | strings after | works before | works after |
+|---|---|---|---|---|
+| FOUND_AS_CITED | 1 | 1 | 8 | 8 |
+| FOUND_DIFFERS | 2 | 2 | 5 | 4 |
+| MATCH_SUSPECT | 0 | 0 | 0 | 1 |
+| NOT_FOUND_INDEXED | 23 | 9 | 32 | 16 |
+| NOT_INDEXED | 11 | 10 | 20 | 20 |
+| UNDERSPECIFIED | 0 | 15 | 0 | 16 |
+| total | 37 | 37 | 65 | 65 |
+
+## MATCH_SUSPECT
+
+- **AN** `0f5c97bb9388` Dorigo & Gambardella (1997) 'Ant colony system'
+  - record returned: PMID 18263004. Dorigo M (1996) Ant system: optimization by a colony of cooperating agents. IEEE transactions on systems, man, and cybernetics. Part B, Cybernetics : a publication of the IEEE Systems, Man, and Cybernetics Society 26:29-41
+  - differs in: year, title, venue, volume, pages
+  - lead: 1997 IEEE TEC 1:53-66 may exist as cited outside PubMed (recall, unverified)
 
 ## FOUND_DIFFERS
 
@@ -58,13 +88,6 @@ difference, not corrections applied.
   - record: PMID 9317267, DOI 10.1242/jeb.194.1.23. Lohmann K (1994) DETECTION OF MAGNETIC INCLINATION ANGLE BY SEA TURTLES: A POSSIBLE MECHANISM FOR DETERMINING LATITUDE. The Journal of experimental biology 194:23-32
   - volume: cited "190"; record "194"
   - pages: cited "69-78"; record "23-32"
-- **AN** `0f5c97bb9388` Dorigo & Gambardella (1997) 'Ant colony system'
-  - record: PMID 18263004, DOI 10.1109/3477.484436. Dorigo M (1996) Ant system: optimization by a colony of cooperating agents. IEEE transactions on systems, man, and cybernetics. Part B, Cybernetics : a publication of the IEEE Systems, Man, and Cybernetics Society 26:29-41
-  - year: cited "1997"; record "1996"
-  - title: cited "Ant colony system"; record "Ant system: optimization by a colony of cooperating agents"
-  - venue: cited "IEEE Transactions on Evolutionary Computation"; record "IEEE transactions on systems, man, and cybernetics. Part B, Cybernetics : a publication of the IEEE Systems, Man, and Cybernetics Society"
-  - volume: cited "1"; record "26"
-  - pages: cited "53-66"; record "29-41"
 
 ## Found as cited
 
@@ -79,9 +102,9 @@ difference, not corrections applied.
 
 ## Not identified
 
-- NOT_FOUND_INDEXED ANT `ad120380ae74` Deneubourg et al. (1990) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_FOUND_INDEXED ANT `3786c807f671` Pratt et al. (2002) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_FOUND_INDEXED ANT `cf5d62eb0710` Gordon (1999) [no title in the string; 0 record(s) match the author, year and description words]
+- UNDERSPECIFIED ANT `ad120380ae74` Deneubourg et al. (1990) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED ANT `3786c807f671` Pratt et al. (2002) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED ANT `cf5d62eb0710` Gordon (1999) [no title and no venue in the string: not searchable]
 - NOT_INDEXED BE `82b3eb8372a3` Hales (1999) 'Proof of the Honeycomb Conjecture' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_FOUND_INDEXED BE `2915902723ac` von Frisch (1967) 'The Dance Language and Orientation of Bees'
 - NOT_FOUND_INDEXED BE `2915902723ac` Seeley (1995) 'The Wisdom of the Hive'
@@ -92,19 +115,19 @@ difference, not corrections applied.
 - NOT_FOUND_INDEXED BE `23dd81e2d056` Seeley & Visscher (2004) 'Group decision making in nest-site selection by honey bees'
 - NOT_INDEXED BE `23dd81e2d056` Seeley (2010) 'Honeybee Democracy' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_FOUND_INDEXED BE `a67ce7406a52` Fahrenholz et al. (1989) 'Thermal analysis of a honey bee colony'
-- NOT_FOUND_INDEXED BE `a67ce7406a52` Stabentheiner et al. (2010) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_FOUND_INDEXED WHALE `024bf6ae22e8` Noad et al. (2000) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_FOUND_INDEXED WHALE `024bf6ae22e8` Garland et al. (2011) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_FOUND_INDEXED WHALE `4bbe1c474bd2` Wiley et al. (2011) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_FOUND_INDEXED WOLF_PACK `19e955b454a0` Mech & Peterson (2003) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_INDEXED WOLF_PACK `620d5880fde1`: no work with an author and a year in the string: GPS collar data from Yellowstone packs, 2005-2020.
+- UNDERSPECIFIED BE `a67ce7406a52` Stabentheiner et al. (2010) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED WHALE `024bf6ae22e8` Noad et al. (2000) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED WHALE `024bf6ae22e8` Garland et al. (2011) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED WHALE `4bbe1c474bd2` Wiley et al. (2011) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED WOLF_PACK `19e955b454a0` Mech & Peterson (2003) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED WOLF_PACK `620d5880fde1`: names no work: GPS collar data from Yellowstone packs, 2005-2020.
 - NOT_FOUND_INDEXED OC `7cc6491b4502` Hochner et al. (2006) 'A Unified View of Animal Body Movements'
 - NOT_FOUND_INDEXED OC `b6365f159a5b` Packard & Sanders (1971) 'Body patterns of Octopus vulgaris'
-- NOT_FOUND_INDEXED OC `b6365f159a5b` Langridge (2009) [no title in the string; 0 record(s) match the author, year and description words]
+- UNDERSPECIFIED OC `b6365f159a5b` Langridge (2009) [no title and no venue in the string: not searchable]
 - NOT_INDEXED OC `b6365f159a5b` Hanlon & Messenger (2018) 'Cephalopod Behaviour' [a record with a similar title and a different first author was returned; not accepted as the cited work]
 - NOT_FOUND_INDEXED OC `b77eade4b5c4` Sumbre et al. (2001) 'Octopus shows controlled arm coordination despite decentralized neural design'
 - NOT_FOUND_INDEXED OC `b77eade4b5c4` Hochner (2012) 'An almost infinite behavioral repertoire'
-- NOT_FOUND_INDEXED OC `8ae2d41bffc9` Hanlon et al. (2009) [no title in the string; 3 record(s) match the author, year and description words]
+- UNDERSPECIFIED OC `8ae2d41bffc9` Hanlon et al. (2009) [no title and no venue in the string: not searchable]
 - NOT_FOUND_INDEXED OC `bc73fb7c6187` Fossati et al. (2011) 'Neural regeneration in the arm of Octopus vulgaris'
 - NOT_FOUND_INDEXED OC `bc73fb7c6187` Rohrbach & Schmidtberg (2006) 'Arm regeneration in Octopus vulgaris'
 - NOT_FOUND_INDEXED KA `60703e1d04e7` Alexander & Vernon (1975) 'The mechanics of hopping by kangaroos'
@@ -120,15 +143,15 @@ difference, not corrections applied.
 - NOT_INDEXED LLM `e18606a00b7d` Chakrabarty et al. (2023) 'Art or artifice? Large language models and the false promise of creativity' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_INDEXED MORMYRID `5bea5baaff13` Heiligenberg (1991) 'Neural Nets in Electric Fish' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_INDEXED MORMYRID `89472de72cbd` Hopkins (1988) 'Social communication in the aquatic environment' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
-- NOT_FOUND_INDEXED MORMYRID `89472de72cbd` Terleph & Moller (2003) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_FOUND_INDEXED MORMYRID `ffdbcf284aff` Bodznick & Boord (1986) [no title in the string; 0 record(s) match the author, year and description words]
-- NOT_FOUND_INDEXED MORMYRID `ffdbcf284aff` Engelmann et al. (2002) [no title in the string; 0 record(s) match the author, year and description words]
+- UNDERSPECIFIED MORMYRID `89472de72cbd` Terleph & Moller (2003) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED MORMYRID `ffdbcf284aff` Bodznick & Boord (1986) [no title and no venue in the string: not searchable]
+- UNDERSPECIFIED MORMYRID `ffdbcf284aff` Engelmann et al. (2002) [no title and no venue in the string: not searchable]
 - NOT_INDEXED MORMYRID `6ef3d475b788` Moller (1995) 'Electric Fishes: History and Behavior' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
-- NOT_FOUND_INDEXED MORMYRID `6ef3d475b788` Bell (2001) [no title in the string; 631 record(s) match the author, year and description words]
+- UNDERSPECIFIED MORMYRID `6ef3d475b788` Bell (2001) [no title and no venue in the string: not searchable]
 - NOT_FOUND_INDEXED TU `f302e91023b2` Bowen et al. (1993) 'Population structure of loggerhead turtles in the northwestern Atlantic Ocean and Mediterranean Sea'
-- NOT_FOUND_INDEXED TU `f302e91023b2` Luschi et al. (1998) [no title in the string; 0 record(s) match the author, year and description words]
+- UNDERSPECIFIED TU `f302e91023b2` Luschi et al. (1998) [no title and no venue in the string: not searchable]
 - NOT_INDEXED TU `ca989883fbb0` Bolten (2003) 'Variation in sea turtle life history patterns' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
-- NOT_FOUND_INDEXED TU `ca989883fbb0` Gaspar et al. (2006) [no title in the string; 0 record(s) match the author, year and description words]
+- UNDERSPECIFIED TU `ca989883fbb0` Gaspar et al. (2006) [no title and no venue in the string: not searchable]
 - NOT_FOUND_INDEXED AN `0f5c97bb9388` Goss et al. (1989) 'Self-organized shortcuts in the Argentine ant'
 - NOT_INDEXED AN `bb2a3794dfe4` Tschinkel (2003) 'Subterranean ant nests: trace fossils past and future' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
 - NOT_INDEXED AN `eefbde78a762` Gordon (2010) 'Ant Encounters: Interaction Networks and Colony Behavior' [book, chapter or non-biomedical venue marker in the string; searched, no record identified]
@@ -138,7 +161,9 @@ difference, not corrections applied.
 - One index. A work absent from PubMed may be in another index; nothing else was searched.
 - The match rule is mechanical (declared before the run). A work whose cited title is
   paraphrased, or whose first author is cited differently, can be missed.
-- A string with no quoted title is identified only when its description query returns
-  exactly one record; that is a weak identification and is listed under FOUND_DIFFERS
-  with the title cited as null.
+- UNDERSPECIFIED says the string gives too little to search on. It says nothing about
+  the work. The works were searched once by description words before this state
+  existed; those searches identified nothing and are kept on each work under queries.
+- MATCH_SUSPECT is a mechanical test (title run, year or venue). It was written after
+  the one row it applies to was seen.
 - The book and non-biomedical test is a word list. It decides only the label of a miss.
