@@ -65,7 +65,13 @@ is the recovered fraction of the true dissipation under each cut.
 | static I(x;y) across driven loop | 0.000 at every coupling 0.05-0.9 |
 
 The last row is a mutual-information value, not a recovered fraction; it is
-listed here as delivered. Units of tau and of drive were not delivered.
+listed here as delivered.
+
+Notes delivered 2026-11-24 (REPORTED, same toy model):
+
+- tau: the model time unit (rates are per this unit). The fast loop runs at
+  about 10 per unit, the slow loop at about 0.4 per unit.
+- drive: the forward/backward rate ratio around the loop, dimensionless.
 
 ## Proposed
 
