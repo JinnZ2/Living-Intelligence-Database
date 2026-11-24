@@ -18,13 +18,20 @@ if len(sys.argv) > 1 and sys.argv[1] == "--selftest":
         nosrc = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), source=[])], "cycles": []}
         mism = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), note="x -> CITATION_MISMATCH")], "cycles": []}
         other = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), status="VERIFIED")], "cycles": []}
+        prop_cyc = {"record": "SELFTEST", "nodes": clean["nodes"],
+                    "cycles": [dict(cyc("CY_A", 5, "CY_B"), status="PROPOSED", source=None, unsourced=True), cyc("CY_B", 50, None)]}
+        traced_cyc = {"record": "SELFTEST", "nodes": clean["nodes"], "cycles": [dict(cyc("CY_A", 5, None), source=None)]}
+        mism2 = {"record": "SELFTEST", "nodes": [node("P", "D5_pattern", ["L"]), dict(node("L", "D0_law", []), note="x -> SCOPE_MISMATCH")], "cycles": []}
         for name, rec_, want, must in (("clean trace exits 0", clean, 0, None),
                                        ("dangling dependency exits 1", dirty, 1, "DANGLING_DEP"),
                                        ("nesting violation exits 1", nest, 1, "NESTING_VIOLATION"),
                                        ("INFO-only trace (GAP, no period, top-level cycle) exits 0", info, 0, "CYCLE_NO_PERIOD"),
                                        ("TRACED node without a source exits 1", nosrc, 1, "NO_SOURCE"),
                                        ("noted CITATION_MISMATCH exits 1", mism, 1, "NOTED_MISMATCH"),
-                                       ("a code with no declared severity (BAD_STATUS) exits 1", other, 1, "BAD_STATUS")):
+                                       ("BAD_STATUS exits 1", other, 1, "BAD_STATUS"),
+                                       ("PROPOSED cycle without a source: CYCLE_NO_SOURCE is INFO, exits 0", prop_cyc, 0, "CYCLE_NO_SOURCE"),
+                                       ("TRACED cycle without a source: CYCLE_NO_SOURCE is ERROR, exits 1", traced_cyc, 1, "CYCLE_NO_SOURCE"),
+                                       ("noted SCOPE_MISMATCH exits 1", mism2, 1, "NOTED_MISMATCH")):
             src, dst = os.path.join(t, "in.json"), os.path.join(t, "out.json")
             json.dump(rec_, open(src, "w"))
             r = subprocess.run([sys.executable, os.path.abspath(__file__), src, dst], capture_output=True, text=True,
@@ -72,6 +79,9 @@ for c in C.values():
     if not c.get("name"): F(["CYCLE_UNNAMED", c["id"]])
     if c.get("period_s") is None: F(["CYCLE_NO_PERIOD", c["id"], c["status"]])
     if c["status"] == "TRACED" and not c.get("source"): F(["CYCLE_NO_SOURCE", c["id"]])
+    # 2026-11-24 (order 'trace v0.4'): also raised for a PROPOSED cycle with no source, as INFO.
+    # The status is written into the finding; the TRACED form above is unchanged.
+    if c["status"] == "PROPOSED" and not c.get("source"): F(["CYCLE_NO_SOURCE", c["id"], "PROPOSED"])
     if c.get("parent") and c["parent"] not in C: F(["CYCLE_DANGLING_PARENT", c["id"], c["parent"]])
     if c.get("parent") is None: F(["CYCLE_TOP_LEVEL", c["id"], c["name"]])
 ladder = []
@@ -140,8 +150,14 @@ if os.environ.get("LID_STRICT") == "1" and out["findings"]:
 # 2026-11-24, follow-up order (registry/DECLARED.json, 'trace_check severities; ...'): severities.
 # ERROR exits 1. INFO is reported and exits 0. A code with no declared severity is ERROR.
 # The findings list and the output file are unchanged; severities are printed to stderr.
+# 2026-11-24, order 'trace v0.4' (registry/DECLARED.json, 'trace v0.4: severity assignment; ...'):
+# the owner assigned the codes left open: BAD_STATUS, CYCLE_UNNAMED, CYCLE_DANGLING_PARENT, DIFF_*,
+# SENSITIVITY_INCOMPLETE and every *_MISMATCH are ERROR. CYCLE_NO_SOURCE is ERROR for a TRACED
+# cycle and INFO for a PROPOSED one. Any other code is ERROR.
 INFO = {"CYCLE_NO_PERIOD", "CYCLE_TOP_LEVEL", "GAP"}
 def severity(f):
+    if f[0] == "CYCLE_NO_SOURCE":
+        return "INFO" if len(f) > 2 and f[2] == "PROPOSED" else "ERROR"
     return "INFO" if f[0] in INFO else "ERROR"
 _err = [f for f in out["findings"] if severity(f) == "ERROR"]
 _inf = [f for f in out["findings"] if severity(f) == "INFO"]

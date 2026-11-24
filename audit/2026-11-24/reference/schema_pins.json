@@ -1,0 +1,41 @@
+{
+ "record": "REFERENCE_TRACE_SCHEMA_PINS",
+ "date": "2026-11-24",
+ "status": "PROPOSED",
+ "rule": "each trace file is validated against the one schema version named here; v0.1-v0.3 are not edited, so their pin is written in this file only",
+ "note": "the as-received schema file carries no version field; 0.1.0 is the name the owner's order gives it. The adopted schema's version is read from its x-lid block.",
+ "pins": [
+  {
+   "trace": "reference_trace_BE_hex.json",
+   "trace_version": "0.1",
+   "schema_version": "0.1.0",
+   "schema_kind": "as received (Kimi)",
+   "schema": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
+   "schema_sha256": "da46a1203305181eeab3bc5272ba7ae30e35bfaf2646fe01c8002958803e26db"
+  },
+  {
+   "trace": "reference_trace_BE_hex_v0.2.json",
+   "trace_version": "0.2",
+   "schema_version": "0.1.0",
+   "schema_kind": "as received (Kimi)",
+   "schema": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
+   "schema_sha256": "da46a1203305181eeab3bc5272ba7ae30e35bfaf2646fe01c8002958803e26db"
+  },
+  {
+   "trace": "reference_trace_BE_hex_v0.3.json",
+   "trace_version": "0.3",
+   "schema_version": "0.1.0",
+   "schema_kind": "as received (Kimi)",
+   "schema": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
+   "schema_sha256": "da46a1203305181eeab3bc5272ba7ae30e35bfaf2646fe01c8002958803e26db"
+  },
+  {
+   "trace": "reference_trace_BE_hex_v0.4.json",
+   "trace_version": "0.4",
+   "schema_version": "0.3.0",
+   "schema_kind": "adopted",
+   "schema": "schemas/reference_trace.schema.json",
+   "schema_sha256": "7f378ab892f92d12e16e39e5cb4c138467796f84a37567f44ea4d0c5fe0c5c84"
+  }
+ ]
+}
