@@ -408,6 +408,20 @@
       "reader": "replaces the 'reader' line of the abstract_pass entry: readings arrive as registry/attribute_readings.json from an outside reader. scripts in this repository build the steps and re-export from that file; they make no judgment.",
       "reading_queue": "docs/reading_queue.md, written by scripts/reading_queue.py: one row per field and found work (12 rows, 11 fields): entity, field, value, the field's definition text, PMID, DOI. It holds no abstract text and no judgment.",
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "weekly intake (source pass, stage 0)",
+      "after": "by the owner's request of 2026-11-24 for a weekly action; declared before any scheduled run",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "scope": "works first indexed in Europe PMC in the run window, for the queries in intake_queries.json",
+      "reads": "bibliographic record and abstract only; no full text",
+      "writes": "intake/weekly/<date>/ only; nothing in ontology/ or registry/",
+      "judgment": "none; candidates carry reading_state AWAITING_READER; claim_support is written only by an outside reader under 'NOT_ADDRESSED + reading queue'",
+      "failure": "any query NOT_RUN fails the run; no pull request is opened from an incomplete run",
+      "merge": "never by the workflow",
+      "adopted": "owner's yes, 2026-11-24, answer 1 on PR #30. Workflow at .github/workflows/weekly_science_intake.yml; takes effect when on main. The amendment text is the draft in audit/2026-11-24/LID_intake_biosphere_council_crosswalk_2026-11-24.md, unchanged, plus this line. The seed queries in intake_queries.json remain PROPOSED (the owner's edit)."
     }
   ]
 }

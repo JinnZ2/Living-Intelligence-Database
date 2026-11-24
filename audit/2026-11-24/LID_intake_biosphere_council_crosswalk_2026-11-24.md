@@ -246,6 +246,8 @@ Its test suite, `tests/run_counts.py`, gave 561 ran, 543 passed, 18 NOT_RUN and 
 
 Every D role falls on two or more L layers, so D and L are not aliases. This supports branch (b): two stacks with a declared crosswalk.
 
+> **Note, 2026-11-24 (added; the sentence above is unchanged).** "This supports branch (b)" goes too far. Spanning layers argues against (a). By itself it does not choose between (b) and (c), and D and L turn out to be positively correlated. See section 5.
+
 Lε sits where a measured node becomes a recorded D5 attribute. P_HEX_CELL, the stored 0.97, is Lε.enc. P_BUILT_MEASURED, "no more than 18% Fejes Tóth cells", is Lε.obs of something bees built (L4).
 
 ### Flags for the owner
@@ -267,6 +269,107 @@ In the bee trace it would sit between E_SUN / E_SURFACE / L_SCATTER, which are o
 
 ---
 
+## 5. Owner's answers, 2026-11-24
+
+The owner answered the four decisions listed on PR #30: "1. Yes 2. Yes ( relational as in physics terms not social relational only) 3. Let's view evidence for and against 4. Yes".
+
+### 1. Weekly workflow: adopted
+
+- `.github/workflows/weekly_science_intake.yml` is a copy of `intake/weekly_science_intake.yml`. Only the header comment differs, and the body is byte-identical (checked). The copy in this folder is unchanged.
+- `registry/DECLARED.json` has a new, eleventh amendment, "weekly intake (source pass, stage 0)". It is the draft from section 1, unchanged, plus one `adopted` line. It was appended; nothing earlier was edited.
+- Scheduled runs start only once the file is on `main`. The pull-request step also needs the repository setting "Allow GitHub Actions to create and approve pull requests". Without it, that step fails loudly and the snapshots are still uploaded.
+- The five seed queries stay PROPOSED. Restricting them to title and abstract (finding 1 of the live run) is still the owner's edit to make.
+
+### 2. relational/ indexed, in the physical sense
+
+- `schemas/relational.schema.json` (new). Its description puts the owner's clarification on record: relational means physical relations, that is couplings, flows, boundaries, dependencies and closures, and social relationship is one case of these.
+- The schema has two shapes, a graph file (`{nodes, edges}`, no id) and a reference record (`id`, `name`, `ontology: relational`, `record_kind`, `status`, `sources`, `links`).
+- `scripts/build_index.py` has one change. A graph file in `relational/` is validated against the graph shape and reported, rather than skipped as an entity without an id (finding N3). `synergies.json` (78 nodes, 219 edges) now validates and is not indexed as an entity. The general skip of files without an id is unchanged.
+- BIOSPHERE is indexed. The build went from 123 entities and 557 relations to 124 and 561.
+- BIOSPHERE's link to COUNCIL points at an id that is not indexed. It is appended to `registry/known_held_links.json` as KNOWN_HELD with its reason, beside the WOLF_PACK→COUNCIL entry. The record file is unchanged and the link is not retargeted to COUNCIL_PATTERN.
+- COUNCIL_PATTERN's BIOSPHERE link moved from `held_links` into `links`. The record was rebuilt, still with 0 coordination-check failures and 0 names, and copied byte-for-byte to `ontology/social/`. `pattern_of COUNCIL` stays held.
+- Instruments run after the change (OBSERVED):
+  - `coordination_check` 0 failures, and its self-test 38/38;
+  - fixtures 8/8 PASS;
+  - `verify`, `audit` exit 0;
+  - `reading_queue`, `source_plan`, `export_reference` `--check` all match;
+  - `existence_check --selftest` 34/34;
+  - `dependency_tree` exit 0, no load failures.
+- `falsifier.py --entity BIOSPHERE` and `--entity COUNCIL_PATTERN` return `{"error": "No scoped attributes found…"}` with exit 0. The tool does not crash, but it does not fail loudly either. This adds two cases to OPEN_QUESTIONS #7, and the tool is not changed.
+
+### 4. Per-node L tags: approved
+
+- In `crosswalk/crosswalk_D_L.json`, each of the 28 nodes now carries `L_status: OWNER_APPROVED` and an `L_status_history` that keeps the PROPOSED entry.
+- The four flags carry `flag_status: OPEN (owner decides)`.
+- The record's own status stays PROPOSED, because the branch question (3) is still open.
+
+### 3. Evidence for and against each branch
+
+`crosswalk/crosswalk_evidence.py` computes the following from `crosswalk_D_L.json` (DERIVED; seed 20261124; deterministic, checked by re-running and comparing bytes). Each statistic is given twice, once with each node's first L tag and once with its last.
+
+| Measure | First L tag | Last L tag | Under aliases (a) one would expect |
+|---|---|---|---|
+| D roles that span ≥ 2 L layers | 6 of 6 | 6 of 6 | 0 of 6 |
+| Same-D pairs with no L in common | 29 | 29 | 0 |
+| H(L) / H(L given D), bits | 2.288 / 0.940 | 2.364 / 1.354 | H(L given D) = 0 |
+| H(D) / H(D given L), bits | 2.471 / 1.122 | 2.471 / 1.460 | H(D given L) = 0 |
+| L predicted from D by majority rule | 17/28 | 15/28 | 28/28 |
+| No-information baseline (most common L) | 12/28 (L4) | 9/28 (L4) | — |
+| Spearman, D index vs L index (Lε excluded) | 0.502 (n 26, perm p 0.010) | 0.587 (n 27, perm p 0.002) | near 1 |
+
+What the numbers say:
+
+- **D and L are related, not independent.** The rank correlation is positive and clear. Both run from fundamental to emergent.
+- **D and L are not the same.** Knowing D leaves about 1 to 1.4 bits of L undetermined, and knowing L leaves about 1.1 to 1.5 bits of D. On 28 nodes the plug-in entropy is biased low, so the true conditional entropies are, if anything, higher.
+
+**(a) Aliases, one stack.**
+- For:
+  - the positive correlation;
+  - both stacks are ordered from fundamental to emergent;
+  - all six D0 nodes sit at L0 or L1 (four at L0);
+  - the owner's "dependencies trace down to physics" is already what L says;
+  - one tag per node is half the work.
+- Against:
+  - every D role spans two to four L layers;
+  - 29 same-D pairs share no layer. For example, E_SUN (L2) and E_BODY_HEAT (L4) are both D1 energy, and C_MELT (L1) and C_BROOD_T (L4, L3) are both D2 condition;
+  - Lε has no D counterpart;
+  - aliasing would erase the distinctions the table measures.
+
+**(b) Two stacks with a declared crosswalk.**
+- For:
+  - all of the evidence against (a);
+  - D is relative to the subject of the trace. D4_MANUKA is an entity here, and in a mānuka trace it would be the subject. L belongs to the node whatever is traced (reasoning, PROPOSED);
+  - D roles are functional, such as "supplies energy" and "holds a condition", which sits close to "every noun is a verb". L says where in the substrate a node sits (interpretive, PROPOSED);
+  - the repository already keeps parallel axes, such as `substrate_layer`.
+- Against:
+  - D is the auditor's import, built before `docs/GROUNDING_LAYERS.md` was read (W08), and the protocol says the implementation serves the owner's architecture;
+  - two tags per node double the tagging work and the room for disagreement;
+  - the correlation means part of the second axis is redundant: 1.35 of 2.29 bits of L are shared with D (first-tag reading);
+  - D's own categories are not clean. D0 holds both laws and a mechanism (F_FLOW).
+
+**(c) Withdraw D, keep L.**
+- For:
+  - L is the owner's stack;
+  - withdrawing D removes weld W08 at its source;
+  - there is no duplicate axis to maintain.
+- Against:
+  - L cannot state role. REGIME_HEX is a derived condition and E_SUN is an energy input, but L files them only by substrate;
+  - `reference/trace_check.py` is written in D (OBSERVED). It roots at the D5 node and counts paths ending at D0. Two of the six D0 nodes are L1 (F_FLOW, L_CONSERVE), so "the trace reaches physics" rewritten in L would have to read "ends at L0 or L1", which is a new rule and not a renaming.
+
+**Limits.**
+- This is one trace of 28 nodes.
+- The nodes are not independent: the three geometry nodes share one reason, so the permutation p overstates the evidence.
+- One audit wrote both the D tags (first) and the L tags (second). The owner approved the L tags, but no second reader has tagged them.
+- None of this settles the branch. That is the owner's call, and OPEN_QUESTIONS #3 stays open.
+
+**A test that could discriminate (PROPOSED, NOT_TESTED).**
+- A second reader, blind to these tags, tags D and L on a different trace, for example a mānuka-honey trace with mānuka as the subject. Measure inter-reader agreement on each axis, and measure H(L given D) on the independent tags.
+- If D determines L there, that favours (a).
+- If readers agree on L but not on D, that favours (c).
+- If both agree and H(L given D) stays well above 0, that favours (b).
+
+---
+
 ## Hashes
 
 | File | sha256 |
@@ -280,3 +383,22 @@ In the bee trace it would sit between E_SUN / E_SURFACE / L_SCATTER, which are o
 | `biosphere/biosphere_candidates_results.json` | `e69491deb76024754d8256fd84eb27f1f54cf56676297a7a21abeea5cfdc0105` |
 | `crosswalk/build_crosswalk.py` | `66addc3fe59ad0ed92ba4ecb37fdc0d1c7455ef1f76c6b4da7653e22e9efacf1` |
 | `crosswalk/crosswalk_D_L.json` | `8345635d5116d121aaf8a5982c9bdf6da64b838afc3f309eadd169de3c77fba6` |
+
+> **Note, 2026-11-24 (added; the rows above are unchanged).** These hashes are from before the owner's answers. Files changed since are listed under "Hashes after the owner's answers".
+
+### Hashes after the owner's answers (2026-11-24)
+
+| File | sha256 |
+|---|---|
+| `crosswalk/build_crosswalk.py` | `d8a8ebfd19c836b85bfe5a690da2f110c9ea1f556b5af99c216bbe05e67888b2` |
+| `crosswalk/crosswalk_D_L.json` | `460b27a3bcf4ab99e51c073e8082f942eea07989de03059bd1aaec507fd3eddc` |
+| `crosswalk/crosswalk_evidence.py` | `fd70575129c0ccf3e31399ea6edbf9cbfe394cae787667a1b7cda20739ea6b54` |
+| `crosswalk/crosswalk_evidence.json` | `d14aee730def03a56a10172109ed66d52f5e72a8ecff62ceebfe42a2fbb1f5ce` |
+| `council/build_council_pattern.py` | `1e69015557d56ba4af1abc882e82719d649dde01371b131ee7d4cc2d2c18a4a5` |
+| `council/council_pattern.json` | `508edef6d42e4a8679dcc68e8b1f7d8787cff657e4f374421f11abdbae3ead9f` |
+| `.github/workflows/weekly_science_intake.yml` (repo root) | `4a1af37497caf4b4b602fb06556eedbaeb757e59a1070e274cd059294098e6e1` |
+| `schemas/relational.schema.json` (repo root) | `24c01d9beaaee08084c6f0cb39ff02942dab4b2f512c0d35c65384f070869c28` |
+| `scripts/build_index.py` (repo root) | `f66b5fd75d6d5f598f95336a22215cafe95c7267edb1a1106bea131d1a619000` |
+| `registry/known_held_links.json` (repo root) | `78bb59faf37200001f0fc54d34bc860cd94b9e54dbc784cd0edd5b843f57729e` |
+| `registry/DECLARED.json` (repo root) | `9d9c04dc175ee8686bfb1a20a8ce71d6611ffe7625a6ad7a4c489e8333b90bf1` |
+| `ontology_index.json` (repo root) | `13f332a975cc2ced1772fa70941fee53675228e90c800a48b1356b6d24fc830e` |

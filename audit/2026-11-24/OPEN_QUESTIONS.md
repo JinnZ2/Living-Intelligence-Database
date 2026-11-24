@@ -54,6 +54,8 @@ Context: the audit built a D0–D5 dependency stack from the owner's answer with
 
 > **Note, 2026-11-24 (added; the entry above is unchanged).** The owner wrote: "I liked your previous suggestions on mapping those." I read that as permission to draft a mapping, not as a statement of which branch holds. Branch (b) is drafted in `crosswalk/crosswalk_D_L.json`, with its rationale in `LID_intake_biosphere_council_crosswalk_2026-11-24.md`. On the 28 bee-trace nodes, every D role (D0 through D5) falls across two or more L layers under the proposed tags. That is why the two cannot be aliases (DERIVED from tags that are themselves PROPOSED). Lε is placed where a measured node becomes a recorded D5 attribute. The tags were read from each node's claim, not from the layer names. The question stays open until the owner confirms (b) and where Lε sits; the per-node tags stay PROPOSED after that.
 
+> **Note, 2026-11-24, second (added; the entry and the note above are unchanged).** The owner approved the per-node L tags (answer 4 on PR #30). They are now OWNER_APPROVED, and their PROPOSED history is kept. The branch is not decided. The owner asked to see "evidence for and against" (answer 3), and that evidence is in `LID_intake_biosphere_council_crosswalk_2026-11-24.md` section 5, computed by `crosswalk/crosswalk_evidence.py`. It shows that D and L are positively correlated (Spearman 0.50–0.59) but neither determines the other (H(L|D) 0.94–1.35 bits). That argues against (a) and does not separate (b) from (c). The earlier note's "that is why the two cannot be aliases" still stands. Where Lε sits is still the owner's to confirm. The question stays open.
+
 ---
 
 ### 4. SCHEMA — a process stored as a static noun
@@ -113,3 +115,5 @@ Context: the audit built a D0–D5 dependency stack from the owner's answer with
 **Data sources:** `validation/falsifier.py`; `recheck_main.py`; `recheck_results_906e86a.json`
 
 **Falsifier:** if a reading of the 360 matches finds none relevant to its claim, then searching the full records adds nothing beyond the thin search, and the gap closes as harmless.
+
+> **Note, 2026-11-24 (added).** BIOSPHERE and COUNCIL_PATTERN are now indexed and carry no scoped attributes. `falsifier.py --entity BIOSPHERE` returns `{"error": "No scoped attributes found in entity BIOSPHERE."}` with exit 0, and COUNCIL_PATTERN does the same. The error is reported in the output, but the exit code does not fail. Whether exit 0 is right for "nothing to test" is part of this question. The tool is not changed.

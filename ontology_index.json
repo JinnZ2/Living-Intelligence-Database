@@ -1269,6 +1269,13 @@
       "substrate_layer": "substrate_primary"
     },
     {
+      "id": "BIOSPHERE",
+      "name": "Earth biosphere (reference record)",
+      "ontology": "relational",
+      "path": "ontology/relational/biosphere_reference.json",
+      "description": "The life-sustaining zone of Earth, held as one reference case for waste-cycling and gradient use. Every evidence line below is either a quote from a source fetched on 2026-11-24 or is marked NOT OPENED. The framing lines are the owner's, from the work order 'Earth-scale reference record', and are marked as such."
+    },
+    {
       "id": "FRACTAL",
       "name": "Fractal",
       "ontology": "shape",
@@ -3919,6 +3926,21 @@
       "relation": "connected_to"
     },
     {
+      "source": "BIOSPHERE",
+      "target": "COUNCIL",
+      "relation": "connected_to"
+    },
+    {
+      "source": "BIOSPHERE",
+      "target": "STONE_LEDGER",
+      "relation": "connected_to"
+    },
+    {
+      "source": "BIOSPHERE",
+      "target": "ANT",
+      "relation": "connected_to"
+    },
+    {
       "source": "FRACTAL",
       "target": "SPIRAL",
       "relation": "resonance"
@@ -4226,6 +4248,11 @@
     {
       "source": "COUNCIL_PATTERN",
       "target": "CYCLE",
+      "relation": "connected_to"
+    },
+    {
+      "source": "COUNCIL_PATTERN",
+      "target": "BIOSPHERE",
       "relation": "connected_to"
     },
     {

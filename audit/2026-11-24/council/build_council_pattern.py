@@ -130,12 +130,12 @@ DOC = {
     "links": [
         {"rel": "connected_to", "to": "STONE_LEDGER", "status": "PROPOSED", "note": "accounting: what is owed is recorded until it completes"},
         {"rel": "connected_to", "to": "CYCLE", "status": "PROPOSED", "note": "long cycles"},
+        {"rel": "connected_to", "to": "BIOSPHERE", "status": "PROPOSED", "note": "root dependency. Moved here from held_links on 2026-11-24, when relational/ was indexed on the owner's yes."},
     ],
     "held_links": {
-        "_note": "Not in links: neither target is in the index, so the build would stop on them, and 'pattern_of' is not in the schema's rel list. Held here; they move into links when their targets are indexed (owner's decision). registry/known_held_links.json is not edited.",
+        "_note": "Not in links: COUNCIL is not in the index, so the build would stop on it, and 'pattern_of' is not in the schema's rel list. Held here until the owner decides. (2026-11-24: the BIOSPHERE link held here at first moved into links when relational/ was indexed.)",
         "items": [
             {"rel": "pattern_of", "to": "COUNCIL", "where": "validation/example/council.json (unindexed; not edited)", "status": "PROPOSED"},
-            {"rel": "connected_to", "to": "BIOSPHERE", "where": "ontology/relational/biosphere_reference.json (unindexed: relational/ has no schema)", "note": "root dependency", "status": "PROPOSED"},
         ],
     },
     "not_carried": "The names of peoples and the cross-domain examples in validation/example/council.json. They remain there, held under its _audit_note ('unsourced; not consented; not promoted').",

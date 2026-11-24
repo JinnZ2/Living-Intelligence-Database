@@ -10,6 +10,11 @@ Two axes, held separately (option (b) of OPEN_QUESTIONS #3):
                                      L2 planetary, L3 ecological, L4 biological, Lε epistemic membrane,
                                      L5 social/cultural)
 A node keeps its D tag (OBSERVED in the trace) and gets one or more PROPOSED L tags with a reason.
+
+2026-11-24 (dated note): the owner approved the per-node L tags (answer 4 on PR #30). Each node
+now carries L_status OWNER_APPROVED with its history; the PROPOSED entry is kept, not replaced.
+The flags stay open questions. Option (b) itself, two separate stacks, is NOT approved: the owner
+asked to see evidence for and against (answer 3), so the record's own status stays PROPOSED.
 """
 import hashlib, json, sys
 from pathlib import Path
@@ -67,7 +72,11 @@ def main(out):
     for n in trace["nodes"]:
         L, why, flag = TAGS[n["id"]]
         nodes.append({"id": n["id"], "D": n["layer"], "D_status": "OBSERVED (in trace v0.3)",
-                      "L": L, "L_status": "PROPOSED", "L_reason": why, "flag": flag})
+                      "L": L, "L_status": "OWNER_APPROVED", "L_reason": why,
+                      "L_status_history": [
+                          {"date": "2026-11-24", "status": "PROPOSED", "by": "auditor"},
+                          {"date": "2026-11-24", "status": "OWNER_APPROVED", "by": "owner, answer 4 on PR #30"}],
+                      "flag": flag, "flag_status": "OPEN (owner decides)" if flag else None})
     pairs = {}
     for x in nodes:
         for l in x["L"]:
@@ -75,6 +84,7 @@ def main(out):
             pairs[x["D"]][l] += 1
     doc = {"record": "CROSSWALK_D_L", "status": "PROPOSED", "date": "2026-11-24",
            "option": "OPEN_QUESTIONS #3 option (b): two axes, declared crosswalk; D and L are not aliases",
+           "option_status_2026-11-24": "under evidence review: the owner asked for evidence for and against (answer 3 on PR #30). Not approved. The per-node L tags are approved (answer 4) and stand whichever option is chosen.",
            "axes": {"D": "role in the dependency chain", "L": "substrate layer (docs/GROUNDING_LAYERS.md)"},
            "membrane_reading": "Lε is where a measured node becomes a recorded D5 attribute (P_HEX_CELL is Lε.enc; P_BUILT_MEASURED carries Lε.obs).",
            "trace": {"path": "reference/reference_trace_BE_hex_v0.3.json",
@@ -82,6 +92,7 @@ def main(out):
            "existing_field_note": "120 entity files carry substrate_layer with values substrate_primary / language_primary / both (OBSERVED). That is a third, coarser axis (substrate L0-L4 vs language L5) and is not changed here.",
            "biosphere_placement": {
                "id": "BIOSPHERE", "source": "ontology/relational/biosphere_reference.json (PROPOSED, unindexed)",
+               "source_note_2026-11-24": "indexed on the owner's yes (answer 2 on PR #30) under schemas/relational.schema.json; the record file is unchanged.",
                "D": "D4_entity at earth scale; its state (temperature, water, oxygen, carbon, soil, season) acts as D2 conditions for every contained entity",
                "L": ["L3", "L2"], "L_reason": "the record's scope is 'life-sustaining zone, not planetary energy balance' (owner's order): ecological (L3), bounded by planetary constraints (L2)",
                "status": "PROPOSED",
