@@ -150,3 +150,14 @@ The checker confirmed, read-only against the clone, that all nine strings exist 
 - The bee record has two attributes valued at 0.97 with different definitions: `hexagonal_cell_efficiency` (honey volume per wax mass) and `hexagonal_tessellation` (wall area per wax consumed).
 - It also has two waggle-dance attributes valued at 0.89, with 50 m and 200 m arrival radii.
 - Whether these are intended as separate measurements is UNKNOWN.
+
+## Dated note, 2026-11-24 (v0.3): corrections and additions
+
+The rows above are unchanged. The v0.3 trace (`reference/reference_trace_BE_hex_v0.3.json`, built by `build_reference_v03.py`) sits beside v0.1 and v0.2. These leads came from an outside reader's report (Kimi, 2026-11-25). Each was re-fetched before it was added.
+
+- **Label correction.** The F_FLOW source written above as "Nature 2026" is Gallo, Bridges, Woodgate & Chittka, published in [npj Entomology](https://www.nature.com/articles/s44434-026-00004-2) on 2026-10-06. That is a Nature Portfolio journal, not Nature. The URL was right; the label was wrong.
+- **C_FLOW_T: TRACED → CONTESTED.** [Bauer & Bienefeld 2013](https://pubmed.ncbi.nlm.nih.gov/23149932/) measured wax at 33.6–37.6 °C while hexagonal cells were being built, below the roughly 40 °C a liquid-equilibrium account needs. [Karihaloo et al. 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/3730681) give about 45 °C. Both readings are kept. REGIME_HEX takes its 45 °C lower bound from this node, so the regime is now CONDITIONAL.
+- **F_FLOW, a fourth account.** Direct construction ([Bauer & Bienefeld 2013](https://pubmed.ncbi.nlm.nih.gov/23149932/)). Related sources: [Pirk et al. 2004](https://pubmed.ncbi.nlm.nih.gov/15257392/) and [Smith, Napp & Petersen 2021](https://pubmed.ncbi.nlm.nih.gov/34312229/).
+- **New G3D_DAUTER (D0).** The Fejes Tóth gain improves to 0.50% when the hexagonal faces tilt a further 2.8° ([Dauter & Jaskolski 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC11873813/)). This is a geometric optimum, not a measurement of bees.
+- **New P_BUILT_MEASURED (D5).** Natural combs contain no more than 18% Fejes Tóth cells. The measured dihedral angle is 108.70° ± 0.16°, against a theoretical 120° ([Yang et al. 2022](https://hal.science/hal-04025696/document)). This is the measured gap between the optimum and what bees actually build. It is a sourced quantity, not noise.
+- **Checker result for v0.3 (OBSERVED).** 28 paths, 26 ending at D0, 2 CONTESTED nodes, and the same 8 findings as v0.2.

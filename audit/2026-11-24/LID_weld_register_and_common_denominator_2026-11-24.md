@@ -115,3 +115,8 @@ Checks run against Simulators at `b40dfde`, without writing into that repository
 
 - `tools/gap_index.py` `parse_entries` and `build_row` parse all four entries, and `complete` is True for each. Entry #3 uses the DECISION template: Fork, Winning condition, Discriminator, Blocked by, Who could run it.
 - `category-weld/weld.py` `load_welds` and `score` read all four weld files. Every case reads `--` because no case has paired before/after readings. That is correct: none of these welds has been quantified.
+
+## Dated note, 2026-11-24 (v0.3 trace)
+
+- **W01 label correction.** W01 cites "Nature 2026". The correct citation is Gallo et al. 2026 in [npj Entomology](https://www.nature.com/articles/s44434-026-00004-2). The row above is unchanged.
+- **W01 widened.** The weld now spans a contested condition as well as a contested mechanism. Construction-time wax temperature is about 45 °C in [Karihaloo et al. 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/3730681) and 33.6–37.6 °C as measured by [Bauer & Bienefeld 2013](https://pubmed.ncbi.nlm.nih.gov/23149932/). The single value 0.97 also has two sourced comparators: the geometric optimum of [Dauter & Jaskolski 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC11873813/) and the built cells measured by [Yang et al. 2022](https://hal.science/hal-04025696/document). Neither comparator is a measurement of 0.97 itself. The status stays NOT_DE_WELDED.

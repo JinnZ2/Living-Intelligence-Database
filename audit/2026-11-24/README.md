@@ -29,3 +29,10 @@ All scripts are Python 3 standard library only and need no network. `jsonschema`
 | `reference/trace_check.py <record> <out>` | `reference/trace_check_results.json`, `reference/trace_check_results_v0.2.json` |
 | `reference/common_denominator.py [out]` | `reference/common_denominator_results.json` (run it from `reference/`) |
 | `reference/lid_welds.py [out]` | `reference/lid_welds_results.json`, `reference/lid_welds_render.txt` (needs `METHOD_LAYER=/path/to/method-layer`) |
+| `reference/build_reference_v03.py` | `reference/reference_trace_BE_hex_v0.3.json` (adds to v0.2; v0.2 is unchanged) |
+| `reference/trace_check.py` with `LID_STRICT=1` | the same output file; exits 1 if there are findings (opt-in, added 2026-11-24) |
+| `reference/trace_check.py reference_trace_BE_hex_v0.3.json trace_check_results_v0.3.json` | `reference/trace_check_results_v0.3.json` |
+
+## Outside-reader package (added 2026-11-24)
+
+`kimi_2026-11-25/` holds the package Kimi (Moonshot AI) produced, unzipped byte-for-byte and not edited. It contains four draft schemas, a completed readings file, a 28-check suite, a report and figures. The `#U2014` in the report's filename is how an em dash came through the zip. Everything in the package is PROPOSED. To run `tests/validate_loud.py`, first copy this audit folder (`audit/2026-11-24/`) to `/tmp/audit/lid_audit/`. The suite reads its fixtures from `/tmp/audit/lid_audit/reference/`. Result on 2026-11-24: 28/28, exit 0. The review is `LID_review_of_Kimi_schema_additions_2026-11-24.md`.

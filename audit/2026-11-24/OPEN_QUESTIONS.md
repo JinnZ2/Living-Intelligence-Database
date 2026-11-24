@@ -67,3 +67,31 @@ Context: the audit built a D0–D5 dependency stack from the owner's answer with
 **Data sources:** `schemas/animal.schema.json`; `reference/common_denominator.py`
 
 **Falsifier:** if the slots cannot be added without breaking `scripts/build_index.py` validation of current records, the additive route fails.
+
+### 5. EVIDENCE — a kangaroo attribute cites a penguin paper
+
+**Gap:** The KA `pendulum_gait` attribute cites PMID 11140670, Griffin & Kram 2000. That record is "Penguin waddling is not wasteful" (Nature), which has no abstract. The cited work is about penguins, not kangaroos.
+
+**Knowledge state:** OBSERVED (title, Europe PMC); whether the citation is a slip or deliberate is UNKNOWN
+
+**Research question:** Which source supports the kangaroo pendulum-gait claim, and was this PMID meant for a different attribute?
+
+**Disciplines:** Biomechanics, bibliographic provenance
+
+**Data sources:** `ontology/` KA record; Europe PMC record for PMID 11140670
+
+**Falsifier:** if the full text of PMID 11140670 contains kangaroo gait measurements that the attribute uses, the mismatch is only apparent.
+
+### 6. SCHEMA — outside readings have no way in, and the proposed schema cannot carry history
+
+**Gap:** No script reads `registry/attribute_readings.json`. `reading_queue.py --check` checks only the queue document. So the completed readings from an outside reader (Kimi, 2026-11-25) cannot yet reach any record. Separately, the proposed `reference_trace.schema.json` is closed (`additionalProperties: false`). It rejects the v0.3 trace because v0.3 carries `status_history`, the dated record of a status change. As drafted, the schema cannot hold the repository's own rule that corrections are added and never overwritten.
+
+**Knowledge state:** OBSERVED (no consumer; v0.3 fails validation on `nodes[5].status_history`); the remedy is NOT_STUDIED
+
+**Research question:** What ingest path should outside readings use, and which fields should a trace schema reserve for dated history (status_history, dated notes) so that adding corrections never fails validation?
+
+**Disciplines:** Knowledge representation, schema design, provenance
+
+**Data sources:** `audit/2026-11-24/kimi_2026-11-25/` (proposed schemas and readings); `reference/reference_trace_BE_hex_v0.3.json`
+
+**Falsifier:** if a history field can be added to the proposed schema and all 28 of Kimi's checks still pass, the second half of this gap closes.
