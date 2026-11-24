@@ -1,0 +1,1658 @@
+{
+  "record": "CONFIDENCE_RECORDS_EXTRACTED",
+  "version": "0.1",
+  "date": "2026-11-24",
+  "status": "PROPOSED",
+  "note": "Transcribed from scope.measurement_limits by scripts/extract_deviation.py. deviation.quote is the prose verbatim; deviation.expressions are substrings of it. deviation.value is null: nothing was parsed. certainty and recurrence are null: not recorded, which is neither zero nor certain. scope_ref points at the attribute's scope block; no regime block exists yet. A matched expression is not shown to be a deviation of the attribute's value: 'varies', a range or a percentage can describe something else in the sentence. That reading has not been made.",
+  "counts": {
+    "attributes_with_a_scope": 228,
+    "without_measurement_limits_prose": 0,
+    "records": 81,
+    "by_expression_kind": {
+      "numeric_range": 50,
+      "percent": 25,
+      "varies": 23,
+      "plus_minus": 6
+    },
+    "kinds_overlap": "an attribute can match more than one kind, so the kinds sum to more than the records",
+    "near_matches_not_extracted": 7,
+    "ledger_2026-11-24": {
+      "records": 92,
+      "numeric_range": 55,
+      "percent": 26,
+      "varies": 23,
+      "plus_minus": 6,
+      "note": "as stated in audit/2026-11-24/LID_translation_loss_ledger_2026-11-24.md; its matching rule is not in the repository"
+    }
+  },
+  "patterns": {
+    "numeric_range": "\\d+(?:[.,]\\d+)?\\s*[-\\u2013]\\s*\\d+(?:[.,]\\d+)?(?:\\s*%)?",
+    "percent": "\\d+(?:[.,]\\d+)?\\s*%",
+    "varies": "\\bvaries\\b",
+    "plus_minus": "±\\s*\\d+(?:[.,]\\d+)?(?:\\s*[-\\u2013]\\s*\\d+(?:[.,]\\d+)?)?(?:\\s*%)?|\\u00b1"
+  },
+  "confidence_records": [
+    {
+      "attribute": "EVOL_ALG.mutation_exploration",
+      "source_field": "ontology/ai/evolutionary_algorithm.json#attributes.mutation_exploration.scope.measurement_limits",
+      "scope_ref": "ontology/ai/evolutionary_algorithm.json#attributes.mutation_exploration.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Optimal mutation rate depends on problem — too low causes premature convergence, too high causes random walk. Self-adaptive mutation rates (CMA-ES) outperform fixed rates by 30-50% on continuous optimization.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "30-50%"
+          },
+          {
+            "kind": "percent",
+            "text": "50%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "GNN.message_passing",
+      "source_field": "ontology/ai/graph_neural_network.json#attributes.message_passing.scope.measurement_limits",
+      "scope_ref": "ontology/ai/graph_neural_network.json#attributes.message_passing.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Message-passing depth is limited by over-smoothing — beyond 4-6 layers, node representations converge and accuracy degrades. Long-range dependencies require graph transformers rather than standard GNNs.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "4-6"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "NEURAL_NET.backpropagation",
+      "source_field": "ontology/ai/neural_network.json#attributes.backpropagation.scope.measurement_limits",
+      "scope_ref": "ontology/ai/neural_network.json#attributes.backpropagation.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Backpropagation requires exact gradient computation — not biologically plausible. Performance claims assume clean datasets; noisy labels or distribution shift degrade convergence. Random seeds introduce ±2% variance.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "2%"
+          },
+          {
+            "kind": "plus_minus",
+            "text": "±2%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SWARM_AI.ant_colony_optimization",
+      "source_field": "ontology/ai/swarm_intelligence.json#attributes.ant_colony_optimization.scope.measurement_limits",
+      "scope_ref": "ontology/ai/swarm_intelligence.json#attributes.ant_colony_optimization.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "ACO quality-time tradeoff depends on pheromone evaporation rate. Too-slow evaporation causes stagnation on suboptimal tours. Computational TSP performance lags biological ant colonies by 10-15% on equivalent problem sizes.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "10-15%"
+          },
+          {
+            "kind": "percent",
+            "text": "15%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "AN.stigmergic_construction",
+      "source_field": "ontology/animal/ant.json#attributes.stigmergic_construction.scope.measurement_limits",
+      "scope_ref": "ontology/animal/ant.json#attributes.stigmergic_construction.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Precision measurements require casting with dental plaster or CT scanning. Soil heterogeneity introduces variance of ±12%. Values from controlled lab substrates; wild nest precision is lower.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "12%"
+          },
+          {
+            "kind": "plus_minus",
+            "text": "±12%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "BE.hexagonal_cell_efficiency",
+      "source_field": "ontology/animal/bee.json#attributes.hexagonal_cell_efficiency.scope.measurement_limits",
+      "scope_ref": "ontology/animal/bee.json#attributes.hexagonal_cell_efficiency.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Value assumes uniform cell depth. Varies ±0.01 with cell aspect ratio and wax thickness. Theoretical maximum; real colonies deviate slightly from perfect hexagons.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "Varies"
+          },
+          {
+            "kind": "plus_minus",
+            "text": "±0.01"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "BE.hexagonal_tessellation",
+      "source_field": "ontology/animal/bee.json#attributes.hexagonal_tessellation.scope.measurement_limits",
+      "scope_ref": "ontology/animal/bee.json#attributes.hexagonal_tessellation.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Mathematical optimality is proven for regular geometries. Real honeycomb deviates <1% from ideal hexagon due to construction tolerances and cell-size variation for worker vs drone brood.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "1%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "BE.swarm_coordination",
+      "source_field": "ontology/animal/bee.json#attributes.swarm_coordination.scope.measurement_limits",
+      "scope_ref": "ontology/animal/bee.json#attributes.swarm_coordination.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Quorum threshold varies with urgency — starving swarms accept lower consensus. Weather constraints can force premature departure at 65-70% consensus.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "65-70%"
+          },
+          {
+            "kind": "percent",
+            "text": "70%"
+          },
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "BE.collective_thermoregulation",
+      "source_field": "ontology/animal/bee.json#attributes.collective_thermoregulation.scope.measurement_limits",
+      "scope_ref": "ontology/animal/bee.json#attributes.collective_thermoregulation.scope",
+      "deviation": {
+        "value": null,
+        "kind": "plus_minus_unspecified",
+        "quote": "Thermoregulation precision requires minimum colony size of ~5000 bees. Small swarms (< 2000) show ±4°C variance. Regulation fails during severe winter starvation or disease-induced population collapse.",
+        "expressions": [
+          {
+            "kind": "plus_minus",
+            "text": "±4"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "BT.bioluminescent_signaling",
+      "source_field": "ontology/animal/beetle.json#attributes.bioluminescent_signaling.scope.measurement_limits",
+      "scope_ref": "ontology/animal/beetle.json#attributes.bioluminescent_signaling.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Flash pattern specificity depends on temperature — flash duration changes 20% over 10°C range, requiring receiver compensation. Measurement requires controlled temperature and dark environment.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "20%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CHAMELEON.nanocrystal_structural_color",
+      "source_field": "ontology/animal/chameleon.json#attributes.nanocrystal_structural_color.scope.measurement_limits",
+      "scope_ref": "ontology/animal/chameleon.json#attributes.nanocrystal_structural_color.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Nanocrystal mechanism explains rapid (1-2 s) color change. Slow hormonal pigment dispersal adds additional color range on 5-30 min timescale. Both mechanisms co-occur.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "1-2"
+          },
+          {
+            "kind": "numeric_range",
+            "text": "5-30"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CORAL.symbiotic_photosynthesis",
+      "source_field": "ontology/animal/coral_reef.json#attributes.symbiotic_photosynthesis.scope.measurement_limits",
+      "scope_ref": "ontology/animal/coral_reef.json#attributes.symbiotic_photosynthesis.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Photosynthetic contribution drops sharply with depth (light attenuation), water turbidity, and elevated temperature. Deep corals (>30 m) may only receive 30-50% of carbon from photosynthesis.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "30-50%"
+          },
+          {
+            "kind": "percent",
+            "text": "50%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CORAL.fractal_construction",
+      "source_field": "ontology/animal/coral_reef.json#attributes.fractal_construction.scope.measurement_limits",
+      "scope_ref": "ontology/animal/coral_reef.json#attributes.fractal_construction.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Fractal dimension measurement is scale-dependent and methodology varies between studies. Storm damage and bleaching reduce D by 0.3-0.8 units. Measurements from photogrammetric 3D models may underestimate fine-scale complexity.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.3-0.8"
+          },
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CORAL.niche_scaffolding",
+      "source_field": "ontology/animal/coral_reef.json#attributes.niche_scaffolding.scope.measurement_limits",
+      "scope_ref": "ontology/animal/coral_reef.json#attributes.niche_scaffolding.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Niche scaffolding depends on live coral coverage — degraded reefs with <20% live cover show 60-80% species loss. Edge effects complicate per-area comparisons between reef zones.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "60-80%"
+          },
+          {
+            "kind": "percent",
+            "text": "20%"
+          },
+          {
+            "kind": "percent",
+            "text": "80%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CR.stridulation_encoding",
+      "source_field": "ontology/animal/cricket.json#attributes.stridulation_encoding.scope.measurement_limits",
+      "scope_ref": "ontology/animal/cricket.json#attributes.stridulation_encoding.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Encoding specificity is carrier-frequency and temperature-dependent. Chirp rate shifts 30% over 10°C range, requiring temperature compensation for species identification. Background noise masks at 10 dB above signal.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "30%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CR.phonotactic_navigation",
+      "source_field": "ontology/animal/cricket.json#attributes.phonotactic_navigation.scope.measurement_limits",
+      "scope_ref": "ontology/animal/cricket.json#attributes.phonotactic_navigation.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Path efficiency degrades with noise from multiple simultaneous male calls. Tympanic membrane coupling to trachea only provides directional information at optimal carrier frequencies (4-5 kHz for G. bimaculatus).",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "4-5"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CROW.tool_manufacture",
+      "source_field": "ontology/animal/crow.json#attributes.tool_manufacture.scope.measurement_limits",
+      "scope_ref": "ontology/animal/crow.json#attributes.tool_manufacture.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Tool manufacture complexity varies by population — insular NCC populations show highest rates. Mainland crow populations rarely manufacture tools. The 0.96 applies specifically to NCC.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CU.buoyancy_control",
+      "source_field": "ontology/animal/cuttlefish.json#attributes.buoyancy_control.scope.measurement_limits",
+      "scope_ref": "ontology/animal/cuttlefish.json#attributes.buoyancy_control.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Buoyancy control works best in the 0-200 m depth range for which cuttlebone evolved. Crushing depth is ~600 m. Rapid depth changes exceed adjustment rate and require active swimming compensation.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0-200"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "DOLPHIN.echolocation_holography",
+      "source_field": "ontology/animal/dolphin.json#attributes.echolocation_holography.scope.measurement_limits",
+      "scope_ref": "ontology/animal/dolphin.json#attributes.echolocation_holography.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Resolution degrades with range, background reverberation, and target complexity. Values reflect ideal tank conditions; open ocean performance is 0.80-0.88 due to multipath.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.80-0.88"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "DOLPHIN.unihemispheric_sleep",
+      "source_field": "ontology/animal/dolphin.json#attributes.unihemispheric_sleep.scope.measurement_limits",
+      "scope_ref": "ontology/animal/dolphin.json#attributes.unihemispheric_sleep.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "True bilateral sleep is occasionally observed in captive dolphins in very safe environments. Unihemispheric fraction varies with perceived predation risk.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "GE.setae_adhesion",
+      "source_field": "ontology/animal/gecko.json#attributes.setae_adhesion.scope.measurement_limits",
+      "scope_ref": "ontology/animal/gecko.json#attributes.setae_adhesion.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Adhesion strength is direction-dependent — shear outperforms peel by 10:1. Contamination reduces adhesion by 60-80%. Gecko setae self-clean via repeated contact cycles — critical for maintained function.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "60-80%"
+          },
+          {
+            "kind": "percent",
+            "text": "80%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "HAW.precision_targeting",
+      "source_field": "ontology/animal/hawk.json#attributes.precision_targeting.scope.measurement_limits",
+      "scope_ref": "ontology/animal/hawk.json#attributes.precision_targeting.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Accuracy is prey-behavior-dependent: evasive prey reduce success to 0.55-0.70. Tail-wind dives are less accurate than headwind dives. The 0.97 is for high-confidence stoops, not all hunting attempts.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.55-0.70"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "HAW.ballistic_dive",
+      "source_field": "ontology/animal/hawk.json#attributes.ballistic_dive.scope.measurement_limits",
+      "scope_ref": "ontology/animal/hawk.json#attributes.ballistic_dive.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Terminal velocity depends heavily on dive angle and atmospheric conditions. Ground-level measurement requires radar tracking. The 389 km/h record may be exceptional; typical dives reach 200-300 km/h.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "200-300"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "HUMPBACK.hierarchical_composition",
+      "source_field": "ontology/animal/humpback_song.json#attributes.hierarchical_composition.scope.measurement_limits",
+      "scope_ref": "ontology/animal/humpback_song.json#attributes.hierarchical_composition.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Hierarchical analysis requires minimum 3-5 hours of continuous recording per individual. Song structure changes seasonally (peak breeding complexity) and between years as songs evolve.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "3-5"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "JELLY.transdifferentiation",
+      "source_field": "ontology/animal/jellyfish.json#attributes.transdifferentiation.scope.measurement_limits",
+      "scope_ref": "ontology/animal/jellyfish.json#attributes.transdifferentiation.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Reverse development has been induced in lab but frequency in wild is unknown. Lab reverse-development rate ~0.65-0.80 under stress conditions. Aging may still occur at molecular level despite cellular rejuvenation.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.65-0.80"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "JELLY.jet_propulsion_rhythm",
+      "source_field": "ontology/animal/jellyfish.json#attributes.jet_propulsion_rhythm.scope.measurement_limits",
+      "scope_ref": "ontology/animal/jellyfish.json#attributes.jet_propulsion_rhythm.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Efficiency is bell-shape dependent — oblate (moon jellyfish) outperforms prolate (lion's mane) by 25%. Cold water increases viscosity and reduces efficiency. Measurement requires controlled flow tank without walls.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "25%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "KA.elastic_energy_storage",
+      "source_field": "ontology/animal/kangaroo.json#attributes.elastic_energy_storage.scope.measurement_limits",
+      "scope_ref": "ontology/animal/kangaroo.json#attributes.elastic_energy_storage.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Elastic storage efficiency is speed-dependent — optimal at 6-8 m/s for red kangaroo. Very slow hops and very fast hops are metabolically expensive. Measurement requires oxygen consumption + kinematic analysis simultaneously.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "6-8"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "MONARCH.multigenerational_navigation",
+      "source_field": "ontology/animal/monarch_butterfly.json#attributes.multigenerational_navigation.scope.measurement_limits",
+      "scope_ref": "ontology/animal/monarch_butterfly.json#attributes.multigenerational_navigation.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Navigation accuracy is time-compensated — disruption of circadian clock by constant light leads to random flight direction. Climate change has shifted timing by 2-3 weeks, degrading arrival accuracy.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "2-3"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "MONARCH.metamorphic_reorganization",
+      "source_field": "ontology/animal/monarch_butterfly.json#attributes.metamorphic_reorganization.scope.measurement_limits",
+      "scope_ref": "ontology/animal/monarch_butterfly.json#attributes.metamorphic_reorganization.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Neural persistence varies by structure type: some larval motor neurons survive while most sensory neurons are rebuilt. Learned behavior retention through metamorphosis remains experimentally contested.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "OC.arm_autonomy_fraction",
+      "source_field": "ontology/animal/octopus.json#attributes.arm_autonomy_fraction.scope.measurement_limits",
+      "scope_ref": "ontology/animal/octopus.json#attributes.arm_autonomy_fraction.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Value from Octopus vulgaris; other species show 0.5-0.7 range. Autonomy is task-dependent: reaching shows higher autonomy than fine manipulation. Decerebrate preparations may underestimate full-intact coordination.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.5-0.7"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "OC.arm_regeneration",
+      "source_field": "ontology/animal/octopus.json#attributes.arm_regeneration.scope.measurement_limits",
+      "scope_ref": "ontology/animal/octopus.json#attributes.arm_regeneration.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Regeneration rate is temperature-dependent — faster in warmer water (22°C: 6 weeks; 15°C: 10 weeks). Neural function recovery lags morphological recovery by 2-3 weeks. Complete function restoration takes 10-12 weeks.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "2-3"
+          },
+          {
+            "kind": "numeric_range",
+            "text": "10-12"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "ORCA.dialect_transmission",
+      "source_field": "ontology/animal/orca.json#attributes.dialect_transmission.scope.measurement_limits",
+      "scope_ref": "ontology/animal/orca.json#attributes.dialect_transmission.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Dialect stability requires multi-decade recordings of identified individuals. Pods that fission develop dialect drift within 5-10 years. Call complexity prevents automated classification — requires human expert validation.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "5-10"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "OW.silent_flight",
+      "source_field": "ontology/animal/owl.json#attributes.silent_flight.scope.measurement_limits",
+      "scope_ref": "ontology/animal/owl.json#attributes.silent_flight.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Noise reduction effectiveness is frequency-dependent — most effective 2-8 kHz (prey hearing range). Effectiveness decreases at high airspeeds (>9 m/s) due to different turbulence regime.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "2-8"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "OW.extreme_low_light_vision",
+      "source_field": "ontology/animal/owl.json#attributes.extreme_low_light_vision.scope.measurement_limits",
+      "scope_ref": "ontology/animal/owl.json#attributes.extreme_low_light_vision.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Low-light sensitivity requires dark adaptation time of 20-30 minutes. Absolute threshold is measured for stationary targets; moving target detection has a higher threshold. Day vision is mediocre.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "20-30"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "PE.counter_current_exchange",
+      "source_field": "ontology/animal/penguin.json#attributes.counter_current_exchange.scope.measurement_limits",
+      "scope_ref": "ontology/animal/penguin.json#attributes.counter_current_exchange.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Efficiency varies with swim speed — higher speed increases blood flow, reducing contact time in exchanger. Measurement requires invasive thermocouple placement; surface temperature is only a proxy.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "PE.hydrodynamic_diving",
+      "source_field": "ontology/animal/penguin.json#attributes.hydrodynamic_diving.scope.measurement_limits",
+      "scope_ref": "ontology/animal/penguin.json#attributes.hydrodynamic_diving.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Efficiency measurement requires instrumented penguin surrogates or PIV wake analysis — direct measurements on live animals are limited. Speed varies with species: emperor (2 m/s cruise) vs gentoo (4 m/s).",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "MANTIS.raptorial_strike",
+      "source_field": "ontology/animal/praying_mantis.json#attributes.raptorial_strike.scope.measurement_limits",
+      "scope_ref": "ontology/animal/praying_mantis.json#attributes.raptorial_strike.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Accuracy is prey-size dependent — small flies vs large beetles require different foreleg timing. Strike accuracy decreases 25% in sub-optimal illumination. Mantis uses visual peaking behavior to increase accuracy.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "25%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "RA.cognitive_mapping",
+      "source_field": "ontology/animal/rat.json#attributes.cognitive_mapping.scope.measurement_limits",
+      "scope_ref": "ontology/animal/rat.json#attributes.cognitive_mapping.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Cognitive map accuracy degrades over multi-day intervals without re-exposure. Novel environments require 20-30 minutes of exploration before stable place field maps form. Map resolution decreases in large environments.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "20-30"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "TU.magnetic_field_navigation",
+      "source_field": "ontology/animal/sea_turtle.json#attributes.magnetic_field_navigation.scope.measurement_limits",
+      "scope_ref": "ontology/animal/sea_turtle.json#attributes.magnetic_field_navigation.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Magnetic navigation provides coarse positional information (100-200 km accuracy). Chemical and visual cues provide fine-scale beach recognition. Solar and wave cues dominate in shallow coastal waters.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "100-200"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "TU.generational_homing",
+      "source_field": "ontology/animal/sea_turtle.json#attributes.generational_homing.scope.measurement_limits",
+      "scope_ref": "ontology/animal/sea_turtle.json#attributes.generational_homing.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Homing accuracy is natal-beach size dependent — small beaches show higher precision than large continuous beaches. Genetic markers assign natal beach at 70-80 km resolution for most populations.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "70-80"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SHARK.electroreception",
+      "source_field": "ontology/animal/shark.json#attributes.electroreception.scope.measurement_limits",
+      "scope_ref": "ontology/animal/shark.json#attributes.electroreception.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Electroreception functions only in water (seawater conductivity required). Detection range limited to 0.5-1 m. Electrical noise from ocean currents can mask weak bioelectric signals.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.5-1"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SN.infrared_thermal_imaging",
+      "source_field": "ontology/animal/snake.json#attributes.infrared_thermal_imaging.scope.measurement_limits",
+      "scope_ref": "ontology/animal/snake.json#attributes.infrared_thermal_imaging.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Sensitivity measured for stationary warm objects against cool backgrounds. Moving prey detection threshold is higher (0.01-0.02°C). Resolution (spatial acuity) is poor — 1 pixel per degree.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.01-0.02"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SN.terrain_adaptive_locomotion",
+      "source_field": "ontology/animal/snake.json#attributes.terrain_adaptive_locomotion.scope.measurement_limits",
+      "scope_ref": "ontology/animal/snake.json#attributes.terrain_adaptive_locomotion.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Mode switching responsiveness varies by species. Highly specialized sidewinders (Crotalus cerastes) show poor performance in forest-litter concertina contexts. Generalist species (ratsnakes) show widest mode flexibility.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SP.web_architecture",
+      "source_field": "ontology/animal/spider.json#attributes.web_architecture.scope.measurement_limits",
+      "scope_ref": "ontology/animal/spider.json#attributes.web_architecture.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Web geometry varies by species, prey type, and ambient conditions. Wind and substrate attachment points constrain achievable geometry. 0.93 is from ideal-substrate lab measurements.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SP.silk_tensile_engineering",
+      "source_field": "ontology/animal/spider.json#attributes.silk_tensile_engineering.scope.measurement_limits",
+      "scope_ref": "ontology/animal/spider.json#attributes.silk_tensile_engineering.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Tensile strength varies significantly by silk type: dragline > flagelliform > tubuliform. Measurement at single-filament level; woven web threads show 20-30% lower effective strength due to knot geometry.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "20-30%"
+          },
+          {
+            "kind": "percent",
+            "text": "30%"
+          },
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SWAN.formation_flight",
+      "source_field": "ontology/animal/swan.json#attributes.formation_flight.scope.measurement_limits",
+      "scope_ref": "ontology/animal/swan.json#attributes.formation_flight.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Savings depend on inter-bird spacing, formation geometry, and wingbeat synchronization. Precise positioning within 0.5-1 m is required — loose formations provide minimal benefit.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.5-1"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "TARDI.radiation_resistance",
+      "source_field": "ontology/animal/tardigrade.json#attributes.radiation_resistance.scope.measurement_limits",
+      "scope_ref": "ontology/animal/tardigrade.json#attributes.radiation_resistance.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Radiation resistance decreases significantly below 5000 Gy threshold in some populations. Active (non-cryptobiotic) tardigrades show 50-70% lower radiation resistance than desiccated tuns.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "50-70%"
+          },
+          {
+            "kind": "percent",
+            "text": "70%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "TERMITE.fungal_agriculture",
+      "source_field": "ontology/animal/termite_mound.json#attributes.fungal_agriculture.scope.measurement_limits",
+      "scope_ref": "ontology/animal/termite_mound.json#attributes.fungal_agriculture.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Conversion efficiency is substrate quality-dependent — dry woody material (poor substrate) reduces efficiency to 0.70-0.75. Measurement requires N-15 isotope tracing through the cellulose-to-termite pathway.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.70-0.75"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "WH.long_range_acoustic",
+      "source_field": "ontology/animal/whale.json#attributes.long_range_acoustic.scope.measurement_limits",
+      "scope_ref": "ontology/animal/whale.json#attributes.long_range_acoustic.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Efficiency degrades with ocean noise pollution, temperature inversions, and shipping traffic. SOFAR efficiency assumes clean mid-ocean propagation; near shipping lanes values drop to 0.6-0.75.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.6-0.75"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "DIA.thermal_conductivity_ratio",
+      "source_field": "ontology/crystal/diamond.json#attributes.thermal_conductivity_ratio.scope.measurement_limits",
+      "scope_ref": "ontology/crystal/diamond.json#attributes.thermal_conductivity_ratio.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Thermal conductivity is temperature and purity dependent — at 80 K diamond peaks near 10,000 W/m·K. Measurement requires single-crystal samples; polycrystalline diamond shows 500-1000 W/m·K.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "500-1000"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "OBS.conchoidal_fracture_sharpness",
+      "source_field": "ontology/crystal/obsidian.json#attributes.conchoidal_fracture_sharpness.scope.measurement_limits",
+      "scope_ref": "ontology/crystal/obsidian.json#attributes.conchoidal_fracture_sharpness.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Sharpness is maintained only in fresh fracture surfaces — obsidian edges dull to 50-200 nm within seconds of exposure to soil. Measurement must be performed immediately after knapping.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "50-200"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "QUARTZ.piezoelectric_coefficient",
+      "source_field": "ontology/crystal/quartz.json#attributes.piezoelectric_coefficient.scope.measurement_limits",
+      "scope_ref": "ontology/crystal/quartz.json#attributes.piezoelectric_coefficient.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Piezoelectric coefficient varies with crystal orientation — AT-cut is thermally optimized. Radiation damage (cosmic ray exposure) slowly degrades oscillator performance — important for space applications.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SILICON_LAT.electron_mobility",
+      "source_field": "ontology/crystal/silicon_lattice.json#attributes.electron_mobility.scope.measurement_limits",
+      "scope_ref": "ontology/crystal/silicon_lattice.json#attributes.electron_mobility.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Mobility is strongly temperature and dopant-concentration dependent — drops 50% for dopant density >10¹⁵/cm³. Values apply to bulk silicon; thin films show reduced mobility from surface scattering.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "50%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "TOUR.pyroelectric_sensitivity",
+      "source_field": "ontology/crystal/tourmaline.json#attributes.pyroelectric_sensitivity.scope.measurement_limits",
+      "scope_ref": "ontology/crystal/tourmaline.json#attributes.pyroelectric_sensitivity.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Pyroelectric response varies significantly with composition — iron-rich tourmalines show higher coefficients than magnesium-dominated specimens. Measurement requires surface preparation to remove electrostatic contamination.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "BIOGRID2.network_resilience_index",
+      "source_field": "ontology/energy/biogrid2.json#attributes.network_resilience_index.scope.measurement_limits",
+      "scope_ref": "ontology/energy/biogrid2.json#attributes.network_resilience_index.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Scale-free resilience to random failure comes at the cost of vulnerability to targeted hub attack (3% hub removal can fragment the network). Resilience is failure-mode-specific.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "3%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "EMOTION_BR.PAD_encoding_coverage",
+      "source_field": "ontology/energy/emotion_bridge.json#attributes.PAD_encoding_coverage.scope.measurement_limits",
+      "scope_ref": "ontology/energy/emotion_bridge.json#attributes.PAD_encoding_coverage.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "PAD coverage varies by culture and language — WEIRD (Western Educated Industrial Rich Democratic) samples show higher PAD coverage. Cross-cultural emotion concepts that lack PAD equivalents exist in many traditions.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "FLUX.energy_continuity_across_boundary",
+      "source_field": "ontology/energy/flux.json#attributes.energy_continuity_across_boundary.scope.measurement_limits",
+      "scope_ref": "ontology/energy/flux.json#attributes.energy_continuity_across_boundary.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "0.92 is a system-class upper bound. Actual values range 0.6-0.99 depending on coupling efficiency and dissipation mechanism. Biological systems average 0.6-0.8. Electromagnetic systems approach 0.99 in ideal conditions. The mean masks wide variability across domains.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.6-0.99"
+          },
+          {
+            "kind": "numeric_range",
+            "text": "0.6-0.8"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "PRESSURE.pascal_principle_precision",
+      "source_field": "ontology/energy/pressure_field.json#attributes.pascal_principle_precision.scope.measurement_limits",
+      "scope_ref": "ontology/energy/pressure_field.json#attributes.pascal_principle_precision.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Deviations occur with compressible fluids (gases) and at very high pressures where fluid density changes measurably. Perfect Pascal's law requires ideal incompressibility — water deviates 0.004%/bar.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "0.004%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "ASPEN.core_efficiency_factor",
+      "source_field": "ontology/plant/aspen_grove.json#attributes.core_efficiency_factor.scope.measurement_limits",
+      "scope_ref": "ontology/plant/aspen_grove.json#attributes.core_efficiency_factor.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Clonal WUE advantage is most pronounced during drought — shared root access reduces stomatal closure frequency. Individual tree efficiency varies by crown position and stem age.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CURLY_DOCK.core_efficiency_factor",
+      "source_field": "ontology/plant/curly_dock.json#attributes.core_efficiency_factor.scope.measurement_limits",
+      "scope_ref": "ontology/plant/curly_dock.json#attributes.core_efficiency_factor.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Viability varies with soil moisture and temperature during storage. Seeds in waterlogged conditions show lower viability than well-drained seed banks. The 0.87 is for undisturbed loam soil burial.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CYANO.core_efficiency_factor",
+      "source_field": "ontology/plant/cyanobacteria.json#attributes.core_efficiency_factor.scope.measurement_limits",
+      "scope_ref": "ontology/plant/cyanobacteria.json#attributes.core_efficiency_factor.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Fixation efficiency requires anoxic microenvironment (heterocysts protect nitrogenase from O2 inactivation). Combined nitrogen (NO3-, NH4+) suppresses nitrogenase expression. Temperature optimum 25-30°C.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "25-30"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "DANDELION.core_efficiency_factor",
+      "source_field": "ontology/plant/dandelion.json#attributes.core_efficiency_factor.scope.measurement_limits",
+      "scope_ref": "ontology/plant/dandelion.json#attributes.core_efficiency_factor.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Dispersal efficiency depends on humidity — wet conditions cause pappus collapse. Maximum dispersal achieved at 30-40% relative humidity. Seed:pappus mass ratio optimized for vortex stability.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "30-40%"
+          },
+          {
+            "kind": "percent",
+            "text": "40%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "DUCKWEED.core_efficiency_factor",
+      "source_field": "ontology/plant/duckweed.json#attributes.core_efficiency_factor.scope.measurement_limits",
+      "scope_ref": "ontology/plant/duckweed.json#attributes.core_efficiency_factor.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Doubling time is nutrient-concentration dependent — phosphorus is typically limiting in natural systems. Overcrowding causes light self-shading that reduces growth to 4-7 day doubling time.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "4-7"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "MOSS.core_efficiency_factor",
+      "source_field": "ontology/plant/moss.json#attributes.core_efficiency_factor.scope.measurement_limits",
+      "scope_ref": "ontology/plant/moss.json#attributes.core_efficiency_factor.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Revival efficiency varies widely by moss species — Sphagnum (bog moss) is more sensitive than Tortula (desert moss). Multi-day desiccation recovery is slightly lower than single-day desiccation recovery.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "MY.phosphorus_transfer_efficiency",
+      "source_field": "ontology/plant/mycelium.json#attributes.phosphorus_transfer_efficiency.scope.measurement_limits",
+      "scope_ref": "ontology/plant/mycelium.json#attributes.phosphorus_transfer_efficiency.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Efficiency varies strongly by soil type, host species, and fungal genus. Measured values range 0.6-0.95 depending on conditions. 0.85 represents ectomycorrhizal networks in temperate forest soils.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.6-0.95"
+          },
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "MY.network_fault_tolerance",
+      "source_field": "ontology/plant/mycelium.json#attributes.network_fault_tolerance.scope.measurement_limits",
+      "scope_ref": "ontology/plant/mycelium.json#attributes.network_fault_tolerance.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Measured in wood-block microcosm experiments. Field network resilience varies with soil disturbance type, hyphal growth rate, and environmental stress. Resilience is lower under simultaneous multi-point disturbance.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "ORCHID.core_efficiency_factor",
+      "source_field": "ontology/plant/orchid.json#attributes.core_efficiency_factor.scope.measurement_limits",
+      "scope_ref": "ontology/plant/orchid.json#attributes.core_efficiency_factor.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Specificity varies enormously by mimicry type — food-source mimics (rewardless) achieve 0.85-0.96; pseudocopulation mimics achieve 0.95-0.99 due to species-specific pheromone matching.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.85-0.96"
+          },
+          {
+            "kind": "numeric_range",
+            "text": "0.95-0.99"
+          },
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "ROOT_NET.water_uptake_efficiency",
+      "source_field": "ontology/plant/root_network.json#attributes.water_uptake_efficiency.scope.measurement_limits",
+      "scope_ref": "ontology/plant/root_network.json#attributes.water_uptake_efficiency.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Efficiency drops to 0.50-0.70 as soil water potential falls below -0.3 MPa (field capacity) — soil conductivity becomes limiting. Root architecture efficiency is species-specific and deeply linked to soil type.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.50-0.70"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "VENUS.core_efficiency_factor",
+      "source_field": "ontology/plant/venus_flytrap.json#attributes.core_efficiency_factor.scope.measurement_limits",
+      "scope_ref": "ontology/plant/venus_flytrap.json#attributes.core_efficiency_factor.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Capture efficiency decreases with trap age — each trap closes 7-10 times before senescence. Non-prey captures (rain drops, debris) open spontaneously within hours — counting mechanism reduces but doesn't eliminate false positives.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "7-10"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "AURORA.particle_energy_dissipation",
+      "source_field": "ontology/plasma/aurora.json#attributes.particle_energy_dissipation.scope.measurement_limits",
+      "scope_ref": "ontology/plasma/aurora.json#attributes.particle_energy_dissipation.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Energy dissipation fractions are derived from model-data comparisons, not direct calorimetric measurement. Satellite constellation coverage gaps introduce systematic uncertainty of ±25%.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "25%"
+          },
+          {
+            "kind": "plus_minus",
+            "text": "±25%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "LIGHTNING.channel_temperature_peak",
+      "source_field": "ontology/plasma/lightning.json#attributes.channel_temperature_peak.scope.measurement_limits",
+      "scope_ref": "ontology/plasma/lightning.json#attributes.channel_temperature_peak.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Peak temperature exists for <1 µs in the core channel (0.1-1 cm diameter). Channel edge temperature is 3-5× lower. Measurement requires spectroscopic analysis with ns time resolution.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.1-1"
+          },
+          {
+            "kind": "numeric_range",
+            "text": "3-5"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SOLAR_WIND.heliosphere_boundary_precision",
+      "source_field": "ontology/plasma/solar_wind.json#attributes.heliosphere_boundary_precision.scope.measurement_limits",
+      "scope_ref": "ontology/plasma/solar_wind.json#attributes.heliosphere_boundary_precision.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Accuracy limited by interstellar medium pressure variability, solar cycle effects on wind density, and single-trajectory sampling by Voyager spacecraft. Uncertainty in ISM properties propagates to 20-30% model uncertainty.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "20-30%"
+          },
+          {
+            "kind": "percent",
+            "text": "30%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "FRACTAL.self_similarity_index",
+      "source_field": "ontology/shape/fractal.json#attributes.self_similarity_index.scope.measurement_limits",
+      "scope_ref": "ontology/shape/fractal.json#attributes.self_similarity_index.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "Biological fractals are finite-scale approximations; self-similarity holds across 3-5 orders, not infinite. Deviations increase at molecular and cellular scales where physical limits dominate. The 0.87 mean excludes synthetic mathematical fractals (which approach 1.0).",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "3-5"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "HEX.isoperimetric_packing_efficiency",
+      "source_field": "ontology/shape/hexagon.json#attributes.isoperimetric_packing_efficiency.scope.measurement_limits",
+      "scope_ref": "ontology/shape/hexagon.json#attributes.isoperimetric_packing_efficiency.scope",
+      "deviation": {
+        "value": null,
+        "kind": "range",
+        "quote": "The 0.9069 applies to perfect hexagonal packing of equal circles. Honeybee cells deviate slightly (cylindrical larvae require rounded corners) — real efficiency is 0.88-0.91.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.88-0.91"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "OCTA_STATE.octahedral_ligand_field_stabilization",
+      "source_field": "ontology/shape/octahedral_state.json#attributes.octahedral_ligand_field_stabilization.scope.measurement_limits",
+      "scope_ref": "ontology/shape/octahedral_state.json#attributes.octahedral_ligand_field_stabilization.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "CFSE varies significantly with metal identity (d⁰ and d¹⁰ metals gain no stabilization), ligand field strength, and temperature. The 0.93 is for strong-field ligand octahedral complexes specifically.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "SPIRAL.phi_ratio_cross_domain_frequency",
+      "source_field": "ontology/shape/spiral.json#attributes.phi_ratio_cross_domain_frequency.scope.measurement_limits",
+      "scope_ref": "ontology/shape/spiral.json#attributes.phi_ratio_cross_domain_frequency.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "φ is an attractor, not a constraint — real spirals show ±5-10% deviation. The ratio emerges from iterative proportional growth, not a hardcoded geometric blueprint. Galaxy arms are approximate and vary by type.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "5-10%"
+          },
+          {
+            "kind": "percent",
+            "text": "10%"
+          },
+          {
+            "kind": "plus_minus",
+            "text": "±5-10%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "TORUS.toroidal_confinement_advantage",
+      "source_field": "ontology/shape/torus.json#attributes.toroidal_confinement_advantage.scope.measurement_limits",
+      "scope_ref": "ontology/shape/torus.json#attributes.toroidal_confinement_advantage.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Confinement time varies with plasma temperature, field strength, and instability modes. Value represents ITER-class parameters; earlier tokamaks show 0.6-0.8. The topological advantage is real but not sufficient alone — field configuration and plasma shaping matter.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "0.6-0.8"
+          },
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "ANT.quorum_sensing_threshold",
+      "source_field": "ontology/social/ant_colony.json#attributes.quorum_sensing_threshold.scope.measurement_limits",
+      "scope_ref": "ontology/social/ant_colony.json#attributes.quorum_sensing_threshold.scope",
+      "deviation": {
+        "value": null,
+        "kind": "varies_unquantified",
+        "quote": "Threshold varies by species and colony health.",
+        "expressions": [
+          {
+            "kind": "varies",
+            "text": "varies"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "CYCLE.phase_lock_fidelity",
+      "source_field": "ontology/temporal/cycle.json#attributes.phase_lock_fidelity.scope.measurement_limits",
+      "scope_ref": "ontology/temporal/cycle.json#attributes.phase_lock_fidelity.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Phase-lock fidelity decreases with perturbation magnitude — perturbations >50% of natural period may not recover. Measured in isolated oscillator systems; coupled oscillators (e.g., circadian + cardiac) may show faster recovery through mutual entrainment.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "50%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "ECHO.signal_persistence_ratio",
+      "source_field": "ontology/temporal/echo.json#attributes.signal_persistence_ratio.scope.measurement_limits",
+      "scope_ref": "ontology/temporal/echo.json#attributes.signal_persistence_ratio.scope",
+      "deviation": {
+        "value": null,
+        "kind": "mixed",
+        "quote": "Retention ratio is strongly medium-dependent. Physical acoustic echoes retain 40-95% (surface-type dependent). Neural echoes decay within 500ms without active rehearsal. Cultural echoes show century-scale variability and selection bias toward memorable content.",
+        "expressions": [
+          {
+            "kind": "numeric_range",
+            "text": "40-95%"
+          },
+          {
+            "kind": "percent",
+            "text": "95%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    },
+    {
+      "attribute": "FOLD.causal_compression_ratio",
+      "source_field": "ontology/temporal/fold.json#attributes.causal_compression_ratio.scope.measurement_limits",
+      "scope_ref": "ontology/temporal/fold.json#attributes.causal_compression_ratio.scope",
+      "deviation": {
+        "value": null,
+        "kind": "percent",
+        "quote": "Compression ratio depends on the degree of causal structure in the data — random sequences show 0% compression. The 0.87 reflects average compression on signals with moderate autocorrelation.",
+        "expressions": [
+          {
+            "kind": "percent",
+            "text": "0%"
+          }
+        ]
+      },
+      "certainty": null,
+      "recurrence": null
+    }
+  ],
+  "near_matches": {
+    "rule": "no declared pattern matched; the prose holds a word from the 'vary' family other than 'varies'. Listed for a reader; no record was made.",
+    "pattern": "\\bvar(?:y|ied|ying|iable|iables|iation|iations|iability)\\b",
+    "items": [
+      {
+        "attribute": "MTN_LION.territory_management",
+        "source_field": "ontology/animal/mountain_lion.json#attributes.territory_management.scope.measurement_limits",
+        "quote": "Territory boundary precision decreases with prey migration (lions follow prey across nominal boundaries). Sub-adult lions have undefined territories with highly variable movement patterns.",
+        "matched_word": "variable"
+      },
+      {
+        "attribute": "PE.thermal_huddle_rotation",
+        "source_field": "ontology/animal/penguin.json#attributes.thermal_huddle_rotation.scope.measurement_limits",
+        "quote": "Savings depend on huddle size — minimum ~20 individuals for measurable effect. Wind speed is the dominant variable. Inner-core individuals achieve 0.50 metabolic savings; edge individuals gain 0.20.",
+        "matched_word": "variable"
+      },
+      {
+        "attribute": "SHARK.pursuit_predation",
+        "source_field": "ontology/animal/shark.json#attributes.pursuit_predation.scope.measurement_limits",
+        "quote": "Energetic efficiency is highly variable: failed attacks cost significant energy with zero caloric return. Strike success rate against alerted prey drops to 0.15. Deep-dive approach is the primary efficiency gain.",
+        "matched_word": "variable"
+      },
+      {
+        "attribute": "SN.chemical_stereoscopy",
+        "source_field": "ontology/animal/snake.json#attributes.chemical_stereoscopy.scope.measurement_limits",
+        "quote": "Stereo resolution depends on inter-fork spacing relative to odor gradient width. Most effective in continuous odor trails; point-source localization in still air is more variable.",
+        "matched_word": "variable"
+      },
+      {
+        "attribute": "WOLF.coordinated_pursuit",
+        "source_field": "ontology/animal/wolf.json#attributes.coordinated_pursuit.scope.measurement_limits",
+        "quote": "Success rates vary by prey type, terrain, and pack experience. Deep snow favors wolves; shallow terrain favors prey. Pack size beyond 8 shows diminishing returns.",
+        "matched_word": "vary"
+      },
+      {
+        "attribute": "ANT.foraging_efficiency",
+        "source_field": "ontology/social/ant_colony.json#attributes.foraging_efficiency.scope.measurement_limits",
+        "quote": "Measured in laboratory corridors and semi-natural environments; extreme field conditions may vary.",
+        "matched_word": "vary"
+      },
+      {
+        "attribute": "DECAY.radioactive_decay_precision",
+        "source_field": "ontology/temporal/decay.json#attributes.radioactive_decay_precision.scope.measurement_limits",
+        "quote": "Decay constants are among the most reproducible measurements in physics. Small variations in extreme conditions (stellar core pressures, nuclear shells) are predicted and observed. Chemical environment cannot alter nuclear decay rates.",
+        "matched_word": "variations"
+      }
+    ]
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "record": "CYCLE_REGISTRY_BE_HEX",
+  "version": "0.1",
+  "date": "2026-11-24",
+  "status": "PROPOSED",
+  "baseline_commit": "63d93c00951b14ed7352891747468c9b65cca146",
+  "note": "The 12 cycles of audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json, copied field for field. One change: the retired status PROPOSED_UNSOURCED is written PROPOSED with unsourced true and legacy_status kept. No period, source or parent was added or changed. These are the cycles of one trace (honeybee comb), not a registry of every cycle in the database. Added since, outside the trace: CY_SALMON_LIFE.",
+  "cycles": [
+    {
+      "id": "CY_WING",
+      "name": "wingbeat",
+      "kind": "oscillation",
+      "period_s": 0.004347826086956522,
+      "period_text": "≈230 Hz (229.8 ± 11.0 Hz, n=4, hovering)",
+      "context": "hovering flight, normal air",
+      "parent": "CY_DAY",
+      "source": [
+        "https://www.pnas.org/doi/10.1073/pnas.0506590102"
+      ],
+      "status": "TRACED"
+    },
+    {
+      "id": "CY_HEXFORM",
+      "name": "circle→hexagon transition",
+      "kind": "transient_within_cycle",
+      "period_s": 6,
+      "period_text": "≈6 s fully heated; ≈36 s partially heated",
+      "context": "comb building, wax ~45 °C",
+      "parent": "CY_SCALE",
+      "source": [
+        "https://www.nbcnews.com/sciencemain/bees-dont-do-math-hexagonal-honeycombs-emerge-naturally-6c10677058"
+      ],
+      "status": "TRACED",
+      "note": "A relaxation, not a repeat. Recorded as a transient phase inside the comb-building cycle; whether it counts as a cycle in its own right is an owner call."
+    },
+    {
+      "id": "CY_SCALE",
+      "name": "wax-scale secretion",
+      "kind": "production_cycle",
+      "period_s": 43200,
+      "period_text": "8 scales every 12 h",
+      "context": "wax-producing worker",
+      "parent": "CY_GLAND",
+      "source": [
+        "https://www.fao.org/4/i0842e/i0842e12.pdf"
+      ],
+      "status": "TRACED"
+    },
+    {
+      "id": "CY_DAY",
+      "name": "daily activity (circadian)",
+      "kind": "oscillation",
+      "period_s": 86400,
+      "period_text": "≈24 h endogenous; free-runs slightly off 24 h in constant conditions; entrains to light–dark cycles; period ≈24 h at both 23 °C and 31 °C (temperature-compensated)",
+      "context": "foraging / in-hive activity",
+      "parent": "CY_LIFE",
+      "status": "TRACED",
+      "note": "v0.2 (2026-11-24): sourced. The same clock drives time memory and sun-compass compensation (Beier & Lindauer 1970 as reported). External driver: the light–dark cycle.",
+      "source": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10995049/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4667876/"
+      ]
+    },
+    {
+      "id": "CY_GLAND",
+      "name": "wax-gland age window",
+      "kind": "developmental_window",
+      "period_s": 518400,
+      "period_text": "begins <1 wk, peaks ≈2 wk (≈day 12), declines after day 18",
+      "context": "worker life stage; swarm regime overrides (all ages build)",
+      "parent": "CY_LIFE",
+      "source": [
+        "https://hal.science/hal-00890889v1/file/hal-00890889.pdf",
+        "https://www.fao.org/4/i0842e/i0842e12.pdf"
+      ],
+      "status": "TRACED"
+    },
+    {
+      "id": "CY_DEV",
+      "name": "worker development",
+      "kind": "developmental_cycle",
+      "period_s": 1814400,
+      "period_text": "21 days (3 egg, 6 larva, 12 pupa)",
+      "context": "brood at 33–36 °C",
+      "parent": "CY_YEAR",
+      "source": [
+        "https://www.fao.org/4/X0083E/X0083E03.htm"
+      ],
+      "status": "TRACED"
+    },
+    {
+      "id": "CY_LIFE",
+      "name": "worker adult life",
+      "kind": "life_cycle",
+      "period_text": "not attached",
+      "context": "season-dependent",
+      "parent": "CY_YEAR",
+      "status": "UNKNOWN"
+    },
+    {
+      "id": "CY_YEAR",
+      "name": "colony annual cycle",
+      "kind": "seasonal_cycle",
+      "period_s": 31557600.0,
+      "period_text": "1 year (winter cluster vs summer energy partition)",
+      "context": "temperate colony",
+      "parent": "CY_SOLAR",
+      "source": [
+        "https://www.pnas.org/doi/10.1073/pnas.1232346100"
+      ],
+      "status": "TRACED"
+    },
+    {
+      "id": "CY_SOLAR",
+      "name": "solar activity cycle",
+      "kind": "oscillation",
+      "period_s": 347133600.0,
+      "period_text": "≈11 years; TSI varies ≈0.1% min→max",
+      "context": "Sun at 1 AU",
+      "source": [
+        "https://www.swsc-journal.org/articles/swsc/full_html/2016/01/swsc160010/swsc160010.html"
+      ],
+      "status": "TRACED"
+    },
+    {
+      "id": "CY_MANUKA_BLOOM",
+      "name": "mānuka flowering window",
+      "kind": "seasonal_window",
+      "period_s": 4838400,
+      "period_text": "usual 10–12 weeks; 4 weeks in a short season (MPI 2018); 6–12 weeks, often less, Sept–March, <6 weeks in Taranaki (Landcare)",
+      "context": "New Zealand, region- and year-dependent",
+      "parent": "CY_YEAR",
+      "source": [
+        "https://www.mpi.govt.nz/dmsdocument/34329/direct",
+        "https://pnrp.gw.govt.nz/assets/Documents/2021/07/Manuka-plantation-guide-landcare-April2017.pdf"
+      ],
+      "status": "TRACED",
+      "note": "period_s set to 8 weeks as a midpoint for ordering only; the record keeps the range."
+    },
+    {
+      "id": "CY_FLOWER_AGE",
+      "name": "mānuka flower nectar stages",
+      "kind": "developmental_window",
+      "period_s": null,
+      "period_text": "opening → end of nectar flow; >2-fold changes in sugar, DHA and DHA:sugar across stages",
+      "context": "single flower",
+      "parent": "CY_MANUKA_BLOOM",
+      "source": [
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/nph.17632",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5838834/"
+      ],
+      "status": "TRACED",
+      "note": "Duration in days not given by these sources."
+    },
+    {
+      "id": "CY_WILDFLOWER",
+      "name": "multifloral forage season",
+      "kind": "superposition",
+      "period_s": null,
+      "period_text": "union of many species' flowering windows",
+      "context": "site- and year-dependent",
+      "parent": "CY_YEAR",
+      "source": null,
+      "status": "PROPOSED",
+      "note": "No source describes the combined window; kept as a structural placeholder.",
+      "legacy_status": "PROPOSED_UNSOURCED",
+      "unsourced": true
+    },
+    {
+      "id": "CY_SALMON_LIFE",
+      "name": "salmon life cycle",
+      "kind": "life_cycle",
+      "context": "example cycle from the owner's addendum of 2026-11-24 (process form: being_tense, phase_now, carried_from_phase); no population or species named",
+      "period_text": "not attached",
+      "status": "PROPOSED",
+      "unsourced": true,
+      "source": null,
+      "phases": [
+        "juvenile",
+        "spawning"
+      ],
+      "note": "Holds only the two phases the addendum names, in the order its example implies (juvenile is completed when spawning is now). No other phase, no period and no parent is supplied; none was typed from memory."
+    }
+  ]
+}

@@ -408,6 +408,300 @@
       "reader": "replaces the 'reader' line of the abstract_pass entry: readings arrive as registry/attribute_readings.json from an outside reader. scripts in this repository build the steps and re-export from that file; they make no judgment.",
       "reading_queue": "docs/reading_queue.md, written by scripts/reading_queue.py: one row per field and found work (12 rows, 11 fields): entity, field, value, the field's definition text, PMID, DOI. It holds no abstract text and no judgment.",
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "process form + Kimi schemas",
+      "after": "main at ad2ae9b (merge of the review of the outside-reader package); by the owner's order. Declared before the extraction pass, the cycle registry and the trace_check change.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "schemas_adopted": {
+        "status": "PROPOSED",
+        "version": "0.1.0 (MINOR: additive; no existing schema or entity file is changed)",
+        "files": [
+          "schemas/reference_trace.schema.json",
+          "schemas/cycle_registry.schema.json",
+          "schemas/attribute_reading.schema.json",
+          "schemas/translation_loss_blocks.schema.json"
+        ],
+        "from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/, written by Kimi (Moonshot AI), kept there byte for byte. Each adopted copy records the as-received sha256 and every change in its x-lid block.",
+        "not_wired": "scripts/build_index.py does not read these schemas; they validate the audit and registry records only"
+      },
+      "status_vocabulary": {
+        "rule": "one vocabulary for nodes and cycles: status PROPOSED plus a flag unsourced (true/false). PROPOSED_UNSOURCED is retired.",
+        "mapping": {
+          "PROPOSED_UNSOURCED": "status PROPOSED, unsourced true, legacy_status 'PROPOSED_UNSOURCED'"
+        },
+        "existing": "one record carries the retired status: cycle CY_WILDFLOWER in reference_trace_BE_hex v0.1, v0.2 and v0.3. Those dated files are not edited; the mapping is applied where the cycle is written anew (registry/cycles.json)."
+      },
+      "process_form": {
+        "rule": "every attribute is stored as a process form: {rate or state, driver, timescale or cycle_ref, regime bounds, scope}. A bare scalar with none of these is legacy and is flagged LEGACY_SCALAR. Nothing is converted by this entry and no value is invented to fill a form.",
+        "fields": {
+          "form": "kind rate | state; the quantity; value and units as recorded",
+          "driver": "what changes the quantity or holds the state",
+          "timescale": "cycle_ref into registry/cycles.json, or the timescale as recorded",
+          "regime_bounds": "variable -> [low, high] within which the form holds",
+          "scope_ref": "the scope block the form is read under"
+        },
+        "flag": "scripts/process_form.py reports each attribute as PROCESS_FORM or LEGACY_SCALAR; it writes nothing into entity files",
+        "relates_to": "audit/2026-11-24/OPEN_QUESTIONS.md #4 (a process stored as a static noun)"
+      },
+      "readings": {
+        "rule": "readings from more than one reader are recorded side by side under readings_by; none is deleted. The field-level claim_support is read under the declared rule of the 'claim/number split' entry: the claim is the field's scope.definition. STATED needs the abstract to state that definition's claim; an abstract that states a neighbouring quantity is RELATED.",
+        "applied": {
+          "KA attributes.elastic_energy_storage": "Kimi STATED; reviewer RELATED. The definition is the fraction of mechanical energy recovered per stride against a muscle-powered stride; the quoted abstract gives recovery as a share of metabolic energy expenditure at one speed. Under the rule the field is RELATED, status PROPOSED.",
+          "other fields": "no reviewer reading; the reviewer slot is recorded as null (NOT_TESTED), and the field keeps the single reading"
+        },
+        "file": "registry/attribute_readings.json"
+      },
+      "extraction": {
+        "rule": "transcription only. For each attribute whose scope.measurement_limits prose holds a deviation or range expression, one confidence record {scope_ref, deviation, certainty: null, recurrence: null}. deviation holds the prose verbatim (quote) and the matched expressions verbatim; no number is parsed, computed or added.",
+        "patterns": {
+          "numeric_range": "a number, then - or an en dash, then a number",
+          "percent": "a number followed by %",
+          "varies": "the word 'varies'",
+          "plus_minus": "the sign ±"
+        },
+        "count_expected": "the 2026-11-24 ledger reports 92 of 228 (55 / 26 / 23 / 6). The ledger's own matching rule is not in the repository; the counts found under the patterns above are reported beside it, and no pattern is tuned to reach 92."
+      },
+      "cycles": {
+        "file": "registry/cycles.json from the 12 cycles of reference_trace_BE_hex_v0.3.json, with the status mapping above",
+        "check": "scripts/cycles_check.py: schema validation, parent exists, nesting (parent period > child period). Exit 1 on a violation. A missing period and a top-level cycle are recorded gaps, listed and not counted as violations."
+      },
+      "trace_check": "audit/2026-11-24/reference/trace_check.py exits 1 whenever findings is non-empty (LID_STRICT is no longer needed); --selftest added. The output file bytes are unchanged.",
+      "renames": "PROPOSED_UNSOURCED -> PROPOSED + unsourced",
+      "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "process form addendum: being_tense, phase_now, carried_from_phase",
+      "after": "the entry 'process form + Kimi schemas' and branch process-form-kimi-schemas at 8697312; by the owner's addendum. Declared before the schema change, the checker and the example record.",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "fields": {
+        "being_tense": "per entry or attribute: CURRENTLY_BEING | HAVING_BEEN | PROJECTED | null. Null = not assessed.",
+        "phase_now": "list of {cycle_ref, phase, observed_at, scope}. cycle_ref is an id in registry/cycles.json. Several cycles are allowed: an organism sits in several at once. observed_at null = no observation recorded.",
+        "carried_from_phase": "list of {cycle_ref, phase, carried, still_acting, source, status}. phase is a completed phase; carried says what persists (imprint, learning, structure, memory); still_acting is yes | no | unmeasured; source null goes with status PROPOSED and unsourced true."
+      },
+      "rule": "a completed phase is never deleted. It is marked HAVING_BEEN and what it carried is kept.",
+      "all_new_fields": "status PROPOSED. Null = not assessed, which is neither no nor zero.",
+      "checker": {
+        "script": "scripts/phase_check.py",
+        "violations": [
+          "a cycle_ref (phase_now or carried_from_phase) that is not in registry/cycles.json",
+          "a carried phase that is not earlier than the phase_now of the same cycle, where the cycle lists its phases in order",
+          "a carried phase or phase_now phase that the cycle's phase list does not contain",
+          "a value outside a declared vocabulary (being_tense, still_acting)",
+          "a carried item marked with a being_tense other than HAVING_BEEN",
+          "a carried item with no source that is not PROPOSED + unsourced",
+          "a carried item present in the last committed file and missing now (the never-deleted rule)"
+        ],
+        "recorded_gaps": [
+          "a carried phase whose order cannot be checked: the cycle lists no phases, or the subject has no phase_now in that cycle. Listed; not passed and not failed."
+        ],
+        "what_completed_means": "the cycle in registry/cycles.json carries an ordered list 'phases'; a phase is completed relative to phase_now when it comes earlier in that list. For a repeating cycle this reads one turn only."
+      },
+      "where": "records live in registry/process_forms.json under phase_records (subject = entity id or entity.attribute); entity files are not edited. The schema copies gain the three fields and the cycle item gains an optional ordered 'phases' list; version 0.2.0 (MINOR, additive).",
+      "example": "from the addendum: salmon, phase_now spawning; carried_from_phase juvenile -> geomagnetic imprint, still_acting yes, PROPOSED until sourced. Recorded as an example with source null. The cycle it needs (CY_SALMON_LIFE) is added to registry/cycles.json as PROPOSED + unsourced, holding only the two phases the addendum names, in the order the example implies; no period.",
+      "renames": "none",
+      "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "trace_check severities; status_history; reviewer slots; pilot process form",
+      "after": "branch process-form-kimi-schemas at cc93da9; by the owner's follow-up order (written against 8697312). Declared before the checker change, the schema change, the readings change and the pilot record.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "trace_check_severities": {
+        "replaces": "the line 'trace_check.py exits 1 whenever findings is non-empty' of the entry 'process form + Kimi schemas'",
+        "ERROR": {
+          "exit": 1,
+          "codes": [
+            "DANGLING_DEP",
+            "NESTING_VIOLATION",
+            "NO_SOURCE",
+            "NOTED_MISMATCH naming CITATION_MISMATCH or SCOPE_MISMATCH",
+            "BINDING_TARGET_MISSING",
+            "BINDING_STRING_NOT_IN_REPO"
+          ]
+        },
+        "INFO": {
+          "exit": 0,
+          "codes": [
+            "CYCLE_NO_PERIOD",
+            "CYCLE_TOP_LEVEL",
+            "GAP"
+          ],
+          "note": "reported, never hidden"
+        },
+        "codes_the_order_does_not_name": {
+          "codes": [
+            "BAD_STATUS",
+            "CYCLE_UNNAMED",
+            "CYCLE_NO_SOURCE",
+            "CYCLE_DANGLING_PARENT",
+            "DIFF_UNKNOWN_NODE",
+            "DIFF_NO_SOURCE",
+            "DIFF_REGIME_MISSING",
+            "SENSITIVITY_INCOMPLETE",
+            "NOTED_MISMATCH naming any other *_MISMATCH"
+          ],
+          "rule": "ERROR until the owner assigns them. A code with no declared severity is never treated as INFO."
+        },
+        "output": "the findings list in the results file is unchanged, so earlier result files still reproduce; the severity counts are printed, not written into that file"
+      },
+      "status_history": "schemas/reference_trace.schema.json: optional status_history on a node and on a cycle: a list of {version, status} with optional date and note. MINOR, additive (0.3.0). The cycle definition stays identical in cycle_registry.schema.json.",
+      "being_tense_addendum": "already declared in the entry 'process form addendum: being_tense, phase_now, carried_from_phase' (commit e7321e6) and built at cc93da9. The follow-up order restates it; nothing differs, nothing is declared again.",
+      "reviewer_slots": "registry/attribute_readings.json: the reviewer slot of the 10 fields that had none is filled 'agree' (the reviewer's reading equals the first reader's), source 'reviewer readings file 2026-11-24 (Claude chat)'. That file is not in this repository; the entry is recorded on the owner's order and says so. KA elastic_energy_storage is unchanged (RELATED).",
+      "pilot_process_form": {
+        "subject": "BE.hexagonal_cell_efficiency",
+        "rule": "one process_forms record in registry/process_forms.json, built only from audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json and registry/cycles.json: driver, timescale / cycle_ref, regime bounds, scope, D-layer dependencies, deviation. Every value is copied from a named trace node or cycle; nothing is computed or added. A part the trace does not give is null with a reason.",
+        "legacy": "the stored scalar is kept beside the record as legacy_scalar, flagged LEGACY_SCALAR, not deleted; the entity file is not edited. Every other attribute stays flagged LEGACY_SCALAR."
+      },
+      "renames": "none",
+      "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "trace v0.4: severity assignment; schema pinning; pilot rebuilt from v0.4",
+      "after": "branch process-form-kimi-schemas at 084aebd; by the owner's order 'trace v0.4'. Declared before the checker change, the pin file, the v0.4 trace and the rebuilt pilot record.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "trace_check_severities": {
+        "replaces": "the block codes_the_order_does_not_name of the entry 'trace_check severities; status_history; reviewer slots; pilot process form'. The owner has now assigned those codes.",
+        "ERROR": {
+          "exit": 1,
+          "codes": [
+            "DANGLING_DEP",
+            "NESTING_VIOLATION",
+            "NO_SOURCE",
+            "BINDING_TARGET_MISSING",
+            "BINDING_STRING_NOT_IN_REPO",
+            "BAD_STATUS",
+            "CYCLE_UNNAMED",
+            "CYCLE_DANGLING_PARENT",
+            "DIFF_UNKNOWN_NODE",
+            "DIFF_NO_SOURCE",
+            "DIFF_REGIME_MISSING",
+            "SENSITIVITY_INCOMPLETE",
+            "NOTED_MISMATCH naming any *_MISMATCH",
+            "CYCLE_NO_SOURCE when the cycle is TRACED"
+          ]
+        },
+        "INFO": {
+          "exit": 0,
+          "codes": [
+            "CYCLE_NO_PERIOD",
+            "CYCLE_TOP_LEVEL",
+            "GAP",
+            "CYCLE_NO_SOURCE when the cycle is PROPOSED"
+          ]
+        },
+        "CYCLE_NO_SOURCE": "before this entry the checker raised it only for a TRACED cycle. It is now also raised for a PROPOSED cycle with no source, as INFO, written [CYCLE_NO_SOURCE, id, PROPOSED]. The TRACED form [CYCLE_NO_SOURCE, id] is unchanged. Traces v0.1-v0.3 hold no cycle with status PROPOSED (theirs is PROPOSED_UNSOURCED), so their result files reproduce unchanged. A cycle with status UNKNOWN is not asked for a source.",
+        "any_other_code": "ERROR. A code with no declared severity is never treated as INFO."
+      },
+      "schema_pinning": {
+        "rule": "every trace file is validated against one named schema version, and that pin is written down.",
+        "pins": {
+          "reference_trace_BE_hex.json (v0.1)": "as received 0.1.0 (Kimi): audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
+          "reference_trace_BE_hex_v0.2.json": "as received 0.1.0 (Kimi), same file",
+          "reference_trace_BE_hex_v0.3.json": "as received 0.1.0 (Kimi), same file",
+          "v0.4 and later": "adopted 0.3.0: schemas/reference_trace.schema.json"
+        },
+        "where_the_pin_is_written": "audit/2026-11-24/reference/schema_pins.json holds the pin of every trace file, with the sha256 of the schema file. v0.1-v0.3 are not edited, so their pin can only be written there. The adopted 0.3.0 schema is closed at the top level and has no field for a schema name; v0.4 therefore names its schema in its supersedes_note text and in the pin file. No schema is changed by this entry.",
+        "check": "audit/2026-11-24/reference/validate_pins.py validates each trace against its pin and reports the result per pin. A trace that fails its pin is reported as failing; it is not moved to another pin to make it pass."
+      },
+      "trace_v0_4": "reference_trace_BE_hex_v0.4.json is a new file built from v0.3 by build_reference_v04.py; v0.1-v0.3 are read, never written. Each change carries a status_history entry on the node or cycle it touches. The 0.3.0 schema holds depends_on as plain ids with no per-edge record, so the status of an added edge (PROPOSED) and its note are written in the status_history entry and the note of the node that gains the edge.",
+      "pilot_process_form": "registry/process_forms.json: the BE.hexagonal_cell_efficiency record is rebuilt from the v0.4 trace by the same script and the same rule (every value copied from a named trace node, a cycle or the entity file). The record built from v0.3 is kept unchanged in registry/process_forms_pilot_v0.3.json. This replaces 'built only from ...v0.3.json' in the earlier entry.",
+      "renames": "none",
+      "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "schema 0.2.0 and 0.4.0; ENTITY_TRACE_DIVERGENCE; entity correction in the provenance step",
+      "after": "branch process-form-kimi-schemas at 0fcb623; by the owner's order 'pins + entity correction'. Declared before the schema files, the checker change, the entity edit, the provenance step and the v0.5 trace.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "schemas": {
+        "0.2.0": "the reference_trace schema as received (0.1.0, Kimi) plus one optional field, status_history, on a node; nothing else differs. File: schemas/pinned/reference_trace.0.2.0.schema.json. Trace v0.3 is pinned to it (replaces the pin 'v0.3 -> as received 0.1.0' of the entry 'trace v0.4: ...', under which v0.3 failed).",
+        "0.2.0_name_clash": "the adopted schema's own change list already used the number 0.2.0 for a different change ('cycle field phases added'), a state of schemas/reference_trace.schema.json that was superseded by 0.3.0. The two are different schemas. The owner's 0.2.0 above is the one that is pinned; a pin names its schema by file path and sha256, never by the number alone. The adopted file's change list is left as written.",
+        "0.3.0": "frozen copy of the adopted schema as it stands at 0fcb623: schemas/pinned/reference_trace.0.3.0.schema.json, byte-identical, so trace v0.4 keeps its pin when the adopted file moves on.",
+        "0.4.0": "0.3.0 plus: an item of a node's depends_on is a string (the node id, as before) or an object {id, status, note} with id required. MINOR, additive: every trace valid under 0.3.0 stays valid. schemas/reference_trace.schema.json becomes 0.4.0.",
+        "pins": {
+          "v0.1": "as received 0.1.0",
+          "v0.2": "as received 0.1.0",
+          "v0.3": "0.2.0",
+          "v0.4": "0.3.0 (frozen copy)",
+          "v0.5": "0.4.0"
+        }
+      },
+      "ENTITY_TRACE_DIVERGENCE": {
+        "severity": "ERROR",
+        "meaning": "the trace records a correction that the entity's attribute does not carry",
+        "trace_records_a_correction_when": "a node's note, or the note of an entry in a node's status_history, holds a *_MISMATCH word (the schema calls these words load-bearing)",
+        "entity_carries_it_when": "the attribute named in the trace's subject has scope.evidence.correction with a non-empty source and a non-empty scope, in the entity file",
+        "finding": "[ENTITY_TRACE_DIVERGENCE, node id, entity.attribute], once per node. When the entity file cannot be read the check is not run and the summary says so; it is not counted as a pass.",
+        "what_it_does_not_check": "it does not compare the text of the correction with the trace; presence only",
+        "earlier_traces": "v0.1-v0.3 keep their NOTED_MISMATCH findings. Once the entity carries the correction they raise no ENTITY_TRACE_DIVERGENCE, so their stored result files still reproduce."
+      },
+      "entity_correction": {
+        "field": "attributes.<name>.scope.evidence.correction = {source, scope, note}. Added beside the original evidence.source, which is never edited.",
+        "provenance_step": "the backfill rule gains one clause: when an attribute has evidence.correction, the source id of correction.source is added to the step's inputs after the original source, and params.correction = {scope, note}. A step for an attribute with no correction is computed exactly as before, so no other step id moves. The entity edit therefore appends one superseding step for that field; the earlier step stays.",
+        "this_order": "BE.hexagonal_cell_efficiency only; text of the correction as given in the owner's order"
+      },
+      "trace_v0_5": "reference_trace_BE_hex_v0.5.json is a new file built from v0.4 (v0.1-v0.4 untouched): the status and note of the edges added in v0.4 move from the root's note onto the edges; the root's note gains a dated line saying the entity file now carries the correction. The pilot record stays built from v0.4; this order does not ask for a rebuild.",
+      "renames": "none",
+      "observer_slots": null
+    },
+    {
+      "date": "2026-11-24",
+      "name": "close-out: pinned label 0.1.0+status_history; divergence by identity; historical mode; schema 0.5.0; trace v0.6",
+      "after": "branch process-form-kimi-schemas at 9fcd25c; by the owner's order 'close-out'. Declared before the file rename, the checker change, the schema file, the v0.6 trace, the pilot rebuild and the full run.",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "pinned_label": {
+        "change": "the pinned schema labelled 0.2.0 in the entry 'schema 0.2.0 and 0.4.0; ...' is labelled '0.1.0+status_history'. File: schemas/pinned/reference_trace.0.1.0+status_history.schema.json (moved from reference_trace.0.2.0.schema.json). The bytes are not changed, so its sha256 is unchanged.",
+        "former_label": "0.2.0. The file's own x-lid block still reads version 0.2.0, because the bytes are kept; the pin entry carries former_label and the pin check accepts the file's inner version when it equals the label or the former label.",
+        "effect": "the number 0.2.0 again names one thing only: the superseded 'cycle phases' state in the adopted schema's change list."
+      },
+      "ENTITY_TRACE_DIVERGENCE": {
+        "replaces": "the presence rule ('entity_carries_it_when', 'what_it_does_not_check') of the entry 'schema 0.2.0 and 0.4.0; ...'",
+        "rule": "identity, not presence. For each trace node that records the correction (a *_MISMATCH word in its note or in a status_history note): (1) the source id of the entity's correction.source (sha256 of the string, the registry's id) must be in registry/sources.json and must equal the source id of one of the node's source strings; (2) the entity's correction.scope must equal the node's scope string, compared after stripping outer whitespace, nothing else. Any miss is one ENTITY_TRACE_DIVERGENCE finding naming what missed: NO_CORRECTION, SOURCE_NOT_IN_REGISTRY, SOURCE_ID_DIFFERS, NODE_HAS_NO_SCOPE, SCOPE_DIFFERS.",
+        "severity": "ERROR"
+      },
+      "historical_mode": {
+        "which": "a trace that has a successor. The trace files are frozen and the schemas they are pinned to have no such field, so superseded_by is written on the trace's entry in audit/2026-11-24/reference/schema_pins.json.",
+        "pass": "a historical trace passes if and only if rerunning the checker gives exactly the findings list stored in its result file. Its exit code is not the test; v0.1-v0.3 keep their two NOTED_MISMATCH errors and pass by reproducing them.",
+        "entity_check": "ENTITY_TRACE_DIVERGENCE is not applied in historical mode: it compares the trace with the entity file as it is today, and a superseded trace is not held against today's entity; its successor is. The stored result files were written without it.",
+        "current": "the one trace with no successor must read 0 ERROR.",
+        "runner": "audit/2026-11-24/reference/run_all.py runs pins, every trace in its mode, and reports one line each."
+      },
+      "schema_0_5_0": {
+        "why": "the order needs two things schema 0.4.0 cannot hold; both are additive (MINOR).",
+        "changes": [
+          "optional node field scope (string): what the node's claim covers. The divergence rule compares it with the entity's correction.scope.",
+          "an edge status (depends_on item object) may be a node status, or a string of the form 'DERIVED (basis: ...)' as in the provenance vocabulary. The order asks for 'DERIVED (basis: OBSERVED)', which is not in the node status list."
+        ],
+        "files": "schemas/reference_trace.schema.json becomes 0.5.0; the 0.4.0 state is kept byte-identical at schemas/pinned/reference_trace.0.4.0.schema.json so trace v0.5 keeps its pin."
+      },
+      "trace_v0_6": {
+        "rule": "new file built from v0.5; v0.1-v0.5 untouched. v0.6 is the current trace; v0.5 becomes historical.",
+        "changes": [
+          "root edge to G3D_BASE_NOT_OPTIMAL: status 'DERIVED (basis: OBSERVED)' (owner's order)",
+          "G2D_HALES: scope '2D cross-section perimeter' as a field (it was prose in the note), and the reference string 'Hales (2001) Discrete Comput Geom 25:1-22' added to its source list beside the two URLs. Not in the order's list: without these two the identity rule cannot be met by any trace, since the node's sources were URLs only and it had no scope field."
+        ],
+        "pins": {
+          "v0.1": "0.1.0",
+          "v0.2": "0.1.0",
+          "v0.3": "0.1.0+status_history",
+          "v0.4": "0.3.0",
+          "v0.5": "0.4.0 (frozen copy)",
+          "v0.6": "0.5.0"
+        }
+      },
+      "pilot_process_form": "registry/process_forms.json: the pilot record is rebuilt from v0.6. The v0.4 build is kept in registry/process_forms_pilot_v0.4.json, beside the v0.3 build. A direct dependency written as an edge object carries its edge status into the record.",
+      "renames": "schemas/pinned/reference_trace.0.2.0.schema.json -> schemas/pinned/reference_trace.0.1.0+status_history.schema.json (content unchanged)",
+      "observer_slots": null
     }
   ]
 }

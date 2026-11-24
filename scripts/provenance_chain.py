@@ -164,6 +164,13 @@ def entity_fields(d):
                 src = [ev["source"]] if isinstance(ev.get("source"), str) and ev["source"] else []
                 extra = {"evidence_type": ev.get("evidence_type"),
                          "reproducibility": ev.get("reproducibility")}
+                # 2026-11-24 (registry/DECLARED.json, 'schema 0.2.0 and 0.4.0; ...'): an attribute with
+                # evidence.correction adds the correction's source to the inputs, after the original
+                # source, and carries {scope, note} in params. Without a correction nothing changes.
+                corr = ev.get("correction")
+                if isinstance(corr, dict) and isinstance(corr.get("source"), str) and corr["source"]:
+                    src = src + [corr["source"]]
+                    extra["correction"] = {"scope": corr.get("scope"), "note": corr.get("note")}
                 cond = sc.get("condition")
                 yield ("attributes." + name, v.get("value"), src, None,
                        {"condition": cond} if cond is not None else None, extra, None, None)

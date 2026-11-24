@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-lid": {
+    "status": "PROPOSED",
+    "version": "0.2.0",
+    "version_rule": "MINOR: additive; no existing schema or entity file is changed",
+    "adopted": "2026-11-24",
+    "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/attribute_reading.schema.json",
+    "as_received_sha256": "d2855371e14fe58535d13719efeef5279c07196e099ce6377f05ed12199dcb51",
+    "author_of_as_received": "Kimi (Moonshot AI), outside reader, 2026-11-25",
+    "changes_from_as_received": [
+      "fields readings_by and status_rule added (optional), for readings from more than one reader",
+      "0.2.0: readings_by items gain agreement and source (optional)"
+    ]
+  },
+  "$id": "attribute_reading.schema.json",
+  "title": "attribute readings file",
+  "description": "registry/attribute_readings.json: one entry per attribute field, written by an outside reader from abstracts only, under the contract declared in registry/DECLARED.json amendments 'claim/number split (abstract pass)' and 'NOT_ADDRESSED + reading queue'. The claim is the field's definition copied verbatim at reading time; the value is the field's stored value; claim_support and number_support are judged separately; each work read carries a quote of at most 25 words. The several-works aggregation rule (CONTRADICTED if any contradicts, else STATED if any states, else RELATED if any is related, else NOT_ADDRESSED; number STATED if any gives it) and the outcome mapping to provenance statuses are prose rules: scripts/reading_queue.py and the build scripts enforce them, this schema does not. Registry-file convention follows registry/sources.json: {note, readings}.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "readings"
+  ],
+  "definitions": {
+    "claim_support": {
+      "enum": [
+        "STATED",
+        "RELATED",
+        "CONTRADICTED",
+        "NOT_ADDRESSED",
+        "NOT_READ"
+      ],
+      "description": "STATED: the abstract states the claim in the field's definition. RELATED: on the subject, does not state the claim. CONTRADICTED: contradicts the claim or the number. NOT_ADDRESSED: the source does not address the field's claim (value kept, status PROPOSED, note 'citation does not address claim'). NOT_READ: no abstract was available for any work behind the field."
+    },
+    "number_support": {
+      "enum": [
+        "STATED",
+        "NOT_STATED"
+      ],
+      "description": "STATED: the abstract gives the field's number, or one that rounds to it, for the defined quantity. NOT_STATED: it does not."
+    }
+  },
+  "properties": {
+    "note": {
+      "type": "string"
+    },
+    "readings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "entity",
+          "field",
+          "claim",
+          "value",
+          "claim_support",
+          "number_support",
+          "status",
+          "note",
+          "works",
+          "read",
+          "date",
+          "reader"
+        ],
+        "properties": {
+          "entity": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The field's definition, copied verbatim at reading time. sha256 of this string is the claim_sha256 in params.status_basis of the step the build script writes."
+          },
+          "value": {
+            "description": "The field's stored value, as read. Never coerced; null when the field is null."
+          },
+          "claim_support": {
+            "$ref": "#/definitions/claim_support"
+          },
+          "number_support": {
+            "$ref": "#/definitions/number_support"
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Outcome per the amendment-8 mapping: 'OBSERVED (basis: abstract)' when claim and number are both STATED; 'OBSERVED (basis: abstract)' for the claim with the number void UNMAPPED when claim STATED and number NOT_STATED; 'PROPOSED' when claim is RELATED, CONTRADICTED or NOT_ADDRESSED. Null when claim_support is NOT_READ: no new step is written."
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Reader's note. Names works of the same string that were not read, and carries the amendment-9 note text where it applies."
+          },
+          "works": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "source_id",
+                "pmid",
+                "claim_support",
+                "number_support",
+                "quote"
+              ],
+              "properties": {
+                "source_id": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$",
+                  "description": "Id in registry/sources.json: full lowercase sha256 of the exact source string."
+                },
+                "pmid": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[0-9]+$",
+                  "description": "PubMed id of the record read, as a string. Null when the work was identified in a second index without a PMID."
+                },
+                "claim_support": {
+                  "$ref": "#/definitions/claim_support"
+                },
+                "number_support": {
+                  "$ref": "#/definitions/number_support"
+                },
+                "quote": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^\\S+(\\s+\\S+){0,24}$",
+                  "description": "Verbatim words from the abstract, at most 25 (the pattern counts whitespace-separated tokens and fails the file on a 26th word). Null only when claim_support is NOT_READ and nothing was read."
+                }
+              }
+            }
+          },
+          "read": {
+            "const": "abstract",
+            "description": "What was read. The declared pass is abstracts only; no full text. A different value means a different, separately declared pass."
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "reader": {
+            "type": "string",
+            "description": "Who read. One reader, no second reading (declared limit of the pass)."
+          },
+          "readings_by": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Readings side by side, one per reader. No reading is deleted or overwritten. The field-level claim_support, number_support and status are derived from these by the declared rule (definition = claim).",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "reader",
+                "claim_support",
+                "number_support",
+                "basis",
+                "date"
+              ],
+              "properties": {
+                "reader": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "claim_support": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/definitions/claim_support"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "number_support": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/definitions/number_support"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "type": "string"
+                },
+                "note": {
+                  "type": "string"
+                },
+                "agreement": {
+                  "enum": [
+                    "agree"
+                  ],
+                  "description": "The reader's reading equals the first reader's; claim_support and number_support repeat it."
+                },
+                "source": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Where this reader's reading is recorded."
+                }
+              }
+            }
+          },
+          "status_rule": {
+            "type": "string",
+            "description": "How the field-level values were derived from readings_by."
+          }
+        }
+      }
+    }
+  }
+}

@@ -164,6 +164,38 @@
    "claim": null,
    "void": null,
    "snapshot_class": null
+  },
+  {
+   "id": "29bcd4671a6661b3654ff92900676fd3b0745ec9704d61361473779f231e7def",
+   "inputs": [
+    "82b3eb8372a3528ecd8d9a7727a15218d883dab31cc46bbd64ac73dbafe0123d",
+    "d7edcf682f167b9c7b1fea102fd52c821ee78d80ab366078dfef9628f4c12dec"
+   ],
+   "method": {
+    "name": "manual_entry",
+    "version": "1"
+   },
+   "params": {
+    "entity": "BE",
+    "field": "attributes.hexagonal_cell_efficiency",
+    "entity_file_sha256": "d56b63acffadc1d04bab9efaa30b87b43cb3b7f6e74c45f7b79cbb136fcc04fb",
+    "evidence_type": "mathematical_proof",
+    "reproducibility": "certain",
+    "correction": {
+     "scope": "2D cross-section perimeter",
+     "note": "3D cell base: Fejes Tóth (1964) Bull AMS 70:468-481 shows bee cell not optimal (<0.35%; 0.50% with 2.8° tilt, PMC11873813)"
+    }
+   },
+   "value": 0.97,
+   "assumptions": null,
+   "scope": null,
+   "status": null,
+   "status_note": "not assessed in this vocabulary",
+   "supersedes": "36d6c752a8cd3b4b5028d0889311128673a3f7795f01ca78deea07fd70576bf2",
+   "declared_pre_run": "6bd80a940612b95554ef276e6e86a9854668b19b",
+   "claim": null,
+   "void": null,
+   "snapshot_class": null
   }
  ]
 }

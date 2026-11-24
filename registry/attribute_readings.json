@@ -1,0 +1,472 @@
+{
+  "note": "Readings side by side, one entry per field. First reader: Kimi (Moonshot AI), file kept byte for byte at audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json (sha256 18c82bb2723db8b7c995d389fe297e3e9208dacae1e8ef47bb6eed9db9c94459). No reading is deleted. Nothing in this repository consumes this file yet (audit/2026-11-24/OPEN_QUESTIONS.md #6); no provenance step was built from it. Reviewer slots: 10 filled 'agree' from 'reviewer readings file 2026-11-24 (Claude chat)' on the owner's follow-up order; 1 (KA elastic_energy_storage) differs and is kept as recorded.",
+  "readings": [
+    {
+      "entity": "AN",
+      "field": "attributes.stigmergic_construction",
+      "claim": "Structural precision of ant-built tunnel branching angles and pillar spacing relative to computationally optimal ventilation geometry (as a fraction of theoretical optimum) in fire ant and army ant studies.",
+      "value": 0.93,
+      "claim_support": "RELATED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "Abstract is on stigmergic mechanisms generally; it does not state the field's claim about tunnel branching-angle optimality, and no number is given.",
+      "works": [
+        {
+          "source_id": "bb2a3794dfe471be58df0dad8365368c370bf7837f0c3c4cb358e0668a2279b7",
+          "pmid": "10633572",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "quote": "Stigmergy is a class of mechanisms that mediate animal-animal interactions."
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "AN",
+      "field": "attributes.distributed_task_allocation",
+      "claim": "Efficiency of colony-level response rebalancing after 20% of workers in one task category are removed — measured as time to return to optimal task distribution divided by time for human-managed rebalancing of equivalent work unit.",
+      "value": 0.94,
+      "claim_support": "RELATED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "Review of division-of-labor models; on the subject, but the defined rebalancing-efficiency claim and its number do not appear in the abstract.",
+      "works": [
+        {
+          "source_id": "eefbde78a7620ac42c7f3e4926bed5db0797ab8c2252ea3586f10c7d0e9a11d4",
+          "pmid": "11112175",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "quote": "Studies of division of labor are concerned with the integration of individual worker behavior into colony level task organization"
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "BE",
+      "field": "attributes.waggle_dance_communication",
+      "claim": "Information transfer accuracy of honeybee waggle dance — fraction of recruited foragers that arrive within 200 m of the communicated food source after following dance instructions.",
+      "value": 0.89,
+      "claim_support": "RELATED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "Abstract confirms dance communicates spatial location of food; the defined arrival-within-200-m fraction and the number 0.89 are not in the abstract.",
+      "works": [
+        {
+          "source_id": "2db5724365e8cb113486295c886588ff5b44683d2f9e650a843bff2ed80a1dea",
+          "pmid": "11729095",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "quote": "Honey bee foragers dance to communicate the spatial location of food and other resources to their nestmates."
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "KA",
+      "field": "attributes.elastic_energy_storage",
+      "claim": "Fraction of mechanical energy recovered from tendon elastic storage during each hopping stride, compared to equivalent muscle-powered stride without tendon recoil contribution.",
+      "value": 0.93,
+      "claim_support": "RELATED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "Two readings differ (STATED / RELATED); both are kept under readings_by. Under the declared rule (definition = claim) the field is RELATED: the abstract is on elastic energy recovery in hopping and does not state the per-stride mechanical fraction the definition names. First reader's note: Claim observed: elastic energy recovery during hopping is stated and quantified. Number void: UNMAPPED — the abstract's 25% of metabolic energy expenditure at 6.3 m/s is not the field's 0.93 per-stride recovery fraction; the status applies to the claim only.",
+      "works": [
+        {
+          "source_id": "60703e1d04e75c1471b3b22d04014e17b666d2038c830bbd4a1b457dfb458c57",
+          "pmid": "9319738",
+          "claim_support": "STATED",
+          "number_support": "NOT_STATED",
+          "quote": "Elastic energy recovery reached a maximum of 25 % of metabolic energy expenditure at 6.3 m s-1"
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "STATED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: OBSERVED (basis: abstract)"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "declared rule: the claim is the field's definition. The definition is a fraction of mechanical energy recovered per stride against a muscle-powered stride. The abstract quote recorded by the first reader gives recovery as a share of metabolic energy expenditure at one speed ('Elastic energy recovery reached a maximum of 25 % of metabolic energy expenditure at 6.3 m s-1'). The abstract is on the subject and does not state the definition's claim. The abstract was not re-read for this entry; the judgment rests on the quote and note already recorded.",
+          "date": "2026-11-24"
+        }
+      ],
+      "status_rule": "readings differ; field-level values follow the declared rule definition = claim (amendments 'claim/number split' and 'process form + Kimi schemas')"
+    },
+    {
+      "entity": "KA",
+      "field": "attributes.pendulum_gait",
+      "claim": "Inverted pendulum mechanical efficiency of kangaroo slow quadrupedal gait (pentapedal walk) — fraction of gravitational potential energy recovered as forward kinetic energy per stride.",
+      "value": 0.91,
+      "claim_support": "NOT_READ",
+      "number_support": "NOT_STATED",
+      "status": null,
+      "note": "NOT_READ: no abstract available from Europe PMC or from NCBI efetch for PMID 11140670; the record's title ('Penguin waddling is not wasteful') is also off the cited subject (kangaroo pentapedal gait). No new step.",
+      "works": [
+        {
+          "source_id": "dd03a167489cf1847f7aa6134bc576dc86f54d7530f9741b9c5fb8cbac824c5c",
+          "pmid": "11140670",
+          "claim_support": "NOT_READ",
+          "number_support": "NOT_STATED",
+          "quote": null
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST; NCBI efetch cross-checked",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST; NCBI efetch cross-checked",
+          "claim_support": "NOT_READ",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: None"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "NOT_READ",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "KA",
+      "field": "attributes.dynamic_counterbalance",
+      "claim": "Contribution of tail inertia to angular momentum balance during rapid acceleration — measured as fraction of whole-body angular momentum change absorbed by tail during stride initiation.",
+      "value": 0.92,
+      "claim_support": "RELATED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "Abstract establishes the tail as propulsive in pentapedal gait; the defined angular-momentum counterbalance fraction is not stated and no matching number appears.",
+      "works": [
+        {
+          "source_id": "6bc5a082a849fb666bdaa1911b150a24e51687d4b79632ae3664f70ed96a1378",
+          "pmid": "24990111",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "quote": "the tail is responsible for as much propulsive force as the front and hind legs combined"
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "MORMYRID",
+      "field": "attributes.active_electrolocation",
+      "claim": "Spatial resolution of mormyrid active electrolocation — minimum distinguishable object separation at 10 cm range, expressed as fraction of body length.",
+      "value": 0.96,
+      "claim_support": "RELATED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "Abstract defines and characterizes active electrolocation in mormyrids; the defined spatial-resolution fraction at 10 cm and the number 0.96 are not stated.",
+      "works": [
+        {
+          "source_id": "5bea5baaff13b5cdcd038840e71f43a49f99ea5ae990f486f03c77c9a98d6815",
+          "pmid": "10210662",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "quote": "The detection, localisation and analysis of objects performed by monitoring self-produced electric signals is called active electrolocation"
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "OC",
+      "field": "attributes.arm_autonomy_fraction",
+      "claim": "Proportion of octopus arm motor commands executed by arm-local ganglia without involving the central brain, measured by comparing coordinated arm movements in intact vs. decerebrate preparations.",
+      "value": 0.64,
+      "claim_support": "RELATED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "Abstract shows arm motor programs run without the brain (peripheral control), on the subject of arm autonomy; the defined 0.64 fraction of arm-local commands is not stated.",
+      "works": [
+        {
+          "source_id": "7cc6491b4502b695a6e79005cb46ff48c4478a991a65e2c457f3e4bf00ea704b",
+          "pmid": "11546877",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "quote": "arm extensions can be evoked mechanically or electrically in arms whose connection with the brain has been severed"
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "OC",
+      "field": "attributes.chromatophore_camouflage",
+      "claim": "Spectral match quality of octopus camouflage against novel substrates — cosine similarity of octopus skin reflectance spectrum to background substrate reflectance, averaged across 20 novel substrates.",
+      "value": 0.89,
+      "claim_support": "NOT_ADDRESSED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "citation does not address claim: the abstract is about distributed light sensing in cuttlefish skin, not spectral match quality of octopus camouflage against novel substrates.",
+      "works": [
+        {
+          "source_id": "8ae2d41bffc93805877011ca044061374c561c858f791deea49f90d79901586f",
+          "pmid": "20392722",
+          "claim_support": "NOT_ADDRESSED",
+          "number_support": "NOT_STATED",
+          "quote": "the skin of cuttlefish, Sepia officinalis, contains opsin transcripts suggesting a possible role of distributed light sensing"
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "NOT_ADDRESSED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "NOT_ADDRESSED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "TU",
+      "field": "attributes.magnetic_field_navigation",
+      "claim": "Accuracy of loggerhead sea turtle magnetic navigation — fraction of hatchlings swimming in magnetically appropriate direction when total darkness eliminates wave-following as cue, in rotating-coil experiments.",
+      "value": 0.96,
+      "claim_support": "RELATED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "Two works read, both related, neither states the claim's rotating-coil accuracy fraction or the number 0.96. Aggregated per the several-works rule: RELATED / NOT_STATED.",
+      "works": [
+        {
+          "source_id": "7828b8676f0416c92bdfcb68e487d443765539db9c3b1f6bbc6b1bcfd5fc4668",
+          "pmid": "9317267",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "quote": "sea turtles can distinguish between different magnetic inclination angles and perhaps derive from them an approximation of latitude"
+        },
+        {
+          "source_id": "7828b8676f0416c92bdfcb68e487d443765539db9c3b1f6bbc6b1bcfd5fc4668",
+          "pmid": "11598298",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "quote": "regional magnetic fields function as navigational markers and elicit changes in swimming direction at crucial geographic boundaries"
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "RELATED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    },
+    {
+      "entity": "TU",
+      "field": "attributes.magnetic_storm_compensation",
+      "claim": "Proportion of sea turtle navigational error introduced by moderate geomagnetic storms (Kp index 5-7) that is actively compensated vs persistent as navigational deviation over 48-hour tracking periods.",
+      "value": 0.88,
+      "claim_support": "NOT_ADDRESSED",
+      "number_support": "NOT_STATED",
+      "status": "PROPOSED",
+      "note": "citation does not address claim: the abstract proposes geomagnetic imprinting for natal homing; geomagnetic-storm error compensation over 48-hour tracking is not addressed.",
+      "works": [
+        {
+          "source_id": "bca0d1caa4e9b98a742327b64a1732e58e71b1804f7f8510fb04e6bed6416495",
+          "pmid": "19060188",
+          "claim_support": "NOT_ADDRESSED",
+          "number_support": "NOT_STATED",
+          "quote": "we propose that salmon and sea turtles imprint on the magnetic field of their natal areas and later use this information to direct natal homing"
+        }
+      ],
+      "read": "abstract",
+      "date": "2026-11-25",
+      "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+      "readings_by": [
+        {
+          "reader": "kimi (Moonshot AI), outside reader; abstracts via Europe PMC REST",
+          "claim_support": "NOT_ADDRESSED",
+          "number_support": "NOT_STATED",
+          "basis": "abstract; as received in audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/examples/attribute_readings.2026-11-25.json",
+          "date": "2026-11-25",
+          "note": "status as received: PROPOSED"
+        },
+        {
+          "reader": "reviewer; reading given in the owner's order of 2026-11-24 ('process form + Kimi schemas')",
+          "claim_support": "NOT_ADDRESSED",
+          "number_support": "NOT_STATED",
+          "basis": "agree with the first reader, as recorded in the source named here. That file is not in this repository; this slot is filled on the owner's order of 2026-11-24 and repeats the first reader's values. Before that order the slot was null (NOT_TESTED).",
+          "date": "2026-11-24",
+          "agreement": "agree",
+          "source": "reviewer readings file 2026-11-24 (Claude chat)"
+        }
+      ],
+      "status_rule": "two readings agree; field-level values are unchanged"
+    }
+  ]
+}
