@@ -22,6 +22,10 @@
     {
       "relation": "geometry_link",
       "target": "FRACTAL"
+    },
+    {
+      "relation": "energy_coupling",
+      "target": "ANT"
     }
   ],
   "validation_meta": {

@@ -1,0 +1,367 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "coordination.schema.json",
+  "title": "Coordination block",
+  "description": "How an entity coordinates exchange without assuming money, language or a central planner. Every field is nullable. Null means no information: keep the key, never drop it. See docs/coordination_layer.md.",
+  "type": "object",
+  "required": [
+    "carrier",
+    "signal",
+    "record",
+    "closure",
+    "trust_basis",
+    "energy_cost",
+    "loop_topology",
+    "assumption_trace",
+    "sources",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "carrier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Physical token exchanged (carbon, pheromone, phase, shell and art)."
+    },
+    "signal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "How need or offer is sensed (gradient, quorum, dance)."
+    },
+    "record": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Where the state lives (environment, body, shared object)."
+    },
+    "closure": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "How an exchange completes and becomes visible."
+    },
+    "trust_basis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "What accumulates (completed cycles, reinforcement)."
+    },
+    "energy_cost": {
+      "description": "Upkeep of the coordination itself. joules is a number only if a source measured it; otherwise null with note 'unmeasured'.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "joules",
+        "note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "joules": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "per": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "loop_topology": {
+      "description": "Cycles in the exchange, and which of them survive common observer cuts. A cut that removes a cycle can read that cycle's cost as 0.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "cycles",
+        "observer_cuts"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cycles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "path"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "observer_cuts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "required": [
+              "cut",
+              "cycles_surviving"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "cut": {
+                "type": "string"
+              },
+              "cycles_surviving": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "assumption_trace": {
+      "description": "Corpus assumptions this entity tests.",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "description": "Citations per field. Key = field name; value = list of citations or null.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "carrier": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "signal": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "record": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "closure": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "trust_basis": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "energy_cost": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "loop_topology": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "assumption_trace": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "description": "Per field: OBSERVED, DERIVED, PROPOSED, or null where the field is null.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "carrier": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "PROPOSED",
+            null
+          ]
+        },
+        "signal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "PROPOSED",
+            null
+          ]
+        },
+        "record": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "PROPOSED",
+            null
+          ]
+        },
+        "closure": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "PROPOSED",
+            null
+          ]
+        },
+        "trust_basis": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "PROPOSED",
+            null
+          ]
+        },
+        "energy_cost": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "PROPOSED",
+            null
+          ]
+        },
+        "loop_topology": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "PROPOSED",
+            null
+          ]
+        },
+        "assumption_trace": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "OBSERVED",
+            "DERIVED",
+            "PROPOSED",
+            null
+          ]
+        }
+      }
+    },
+    "notes": {
+      "description": "Optional free text per field, e.g. 'unmeasured', 'unverified: source not opened', 'contested'.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

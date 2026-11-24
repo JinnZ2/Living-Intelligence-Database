@@ -5,6 +5,7 @@
   "type": "object",
   "required": ["id", "name", "ontology"],
   "properties": {
+    "coordination": { "$ref": "coordination.schema.json" },
     "id": { "type": "string" },
     "name": { "type": "string" },
     "ontology": { "const": "social" },

@@ -1444,6 +1444,19 @@
       "substrate_layer": "substrate_primary"
     },
     {
+      "id": "BEE_NEST_SITE",
+      "name": "Honeybee Nest-Site Selection",
+      "ontology": "social",
+      "path": "ontology/social/honeybee_nest_site_selection.json",
+      "description": "A honeybee swarm choosing a new nest cavity. Recorded here as a coordination case; the mechanism fields are not filled because no primary source was opened when the record was made.",
+      "entropy_profile": {
+        "stability": "low",
+        "adaptability": "high",
+        "archetype": "sensor"
+      },
+      "substrate_layer": "substrate_primary"
+    },
+    {
       "id": "WHALE",
       "name": "Humpback Whale Pod",
       "ontology": "social",
@@ -1753,6 +1766,11 @@
       "source": "AN",
       "target": "FRACTAL",
       "relation": "geometry_link"
+    },
+    {
+      "source": "AN",
+      "target": "ANT",
+      "relation": "energy_coupling"
     },
     {
       "source": "BX",

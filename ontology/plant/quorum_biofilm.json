@@ -80,5 +80,45 @@
         ]
       }
     }
+  },
+  "coordination": {
+    "carrier": null,
+    "signal": null,
+    "record": null,
+    "closure": null,
+    "trust_basis": null,
+    "energy_cost": null,
+    "loop_topology": null,
+    "assumption_trace": [
+      "coordination requires money",
+      "coordination requires language",
+      "collective decisions require a leader or a vote count held by someone"
+    ],
+    "sources": {
+      "carrier": null,
+      "signal": null,
+      "record": null,
+      "closure": null,
+      "trust_basis": null,
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": [
+        "work order, 2026-11-24 (Kavik + Claude)"
+      ]
+    },
+    "status": {
+      "carrier": null,
+      "signal": null,
+      "record": null,
+      "closure": null,
+      "trust_basis": null,
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": "PROPOSED"
+    },
+    "notes": {
+      "_stub": "Stub: fields are null = no information yet. Candidate sources for filling: Miller MB, Bassler BL (2001) Quorum sensing in bacteria. Annu Rev Microbiol 55:165-199. doi:10.1146/annurev.micro.55.1.165. PMID 11544353 [abstract read via NCBI efetch 2026-11-24]",
+      "_abstract_depth": "Read at abstract depth only. The abstract states that bacteria produce and release autoinducers whose concentration increases with cell density, and that detection of a minimal threshold concentration alters gene expression. Fields are left null until the full text is read."
+    }
   }
 }

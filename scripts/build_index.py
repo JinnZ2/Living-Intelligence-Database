@@ -12,9 +12,18 @@ def load_schema(schema_name):
     with open(schema_path, "r") as f:
         return json.load(f)
 
+def _shared_registry():
+    """Registry for schemas referenced by file name ($ref: "coordination.schema.json")."""
+    from referencing import Registry, Resource
+    from referencing.jsonschema import DRAFT7
+    shared = load_schema("coordination.schema.json")
+    return Registry().with_resource("coordination.schema.json", Resource(contents=shared, specification=DRAFT7))
+
 def validate_entity(entity, schema):
     try:
-        validate(instance=entity, schema=schema)
+        from jsonschema import validators
+        cls = validators.validator_for(schema)
+        cls(schema, registry=_shared_registry()).validate(entity)
         return True, None
     except ValidationError as e:
         return False, str(e)

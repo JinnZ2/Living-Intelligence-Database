@@ -85,5 +85,116 @@
     { "rel": "geometry_link", "to": "HEX", "note": "Colony tunnels often approximate hexagonal packing for structural efficiency." },
     { "rel": "synergy", "to": "BE", "note": "Both use pheromone/waggle communication and quorum sensing for collective decision." },
     { "rel": "resonance", "to": "MYCELIUM", "note": "Both distribute information without central nodes; both show self-repairing network topology." }
-  ]
+  ],
+  "coordination": {
+    "carrier": "Trail pheromone deposited on the substrate by walking foragers.",
+    "signal": "Local pheromone concentration on the ground at a branch point; a forager's branch choice is biased toward the stronger trail.",
+    "record": "The environment: the trail on the ground. No individual ant holds the map; the state is outside the bodies.",
+    "closure": "A round trip nest -> food -> nest. A completed trip is visible to others only as added pheromone on the path walked.",
+    "trust_basis": "Reinforcement: pheromone accumulated from completed trips, set against loss of the mark over time. A shorter path is completed more often per unit time and so accumulates faster.",
+    "energy_cost": {
+      "joules": null,
+      "per": null,
+      "note": "unmeasured"
+    },
+    "loop_topology": {
+      "cycles": [
+        {
+          "id": "L1",
+          "path": "forager walks path -> deposits pheromone -> pheromone biases the next forager's choice -> next forager walks path"
+        },
+        {
+          "id": "L2",
+          "path": "food returned to nest -> colony sustains and recruits foragers -> foragers leave nest -> food returned to nest"
+        },
+        {
+          "id": "L3",
+          "path": "pheromone decays -> unused path loses its mark -> fewer ants choose it -> less deposit on it"
+        }
+      ],
+      "observer_cuts": [
+        {
+          "cut": "single ant followed, trail state not recorded",
+          "cycles_surviving": [],
+          "note": "L1 and L3 pass through the trail and many agents; the record reads as an individual choosing, and the coordination cost reads as 0"
+        },
+        {
+          "cut": "trail imaged at one instant, ant traffic not recorded",
+          "cycles_surviving": [],
+          "note": "the trail reads as a fixed structure, not a loop"
+        },
+        {
+          "cut": "food intake counted at the nest entrance only",
+          "cycles_surviving": [
+            "L2"
+          ],
+          "note": "L1 and L3 are outside the boundary; pheromone production is not on the ledger"
+        },
+        {
+          "cut": "colony plus arena observed over many round trips",
+          "cycles_surviving": [
+            "L1",
+            "L2",
+            "L3"
+          ],
+          "note": null
+        }
+      ]
+    },
+    "assumption_trace": [
+      "coordination requires money",
+      "coordination requires a central planner or a shared plan",
+      "a record of who did what must be held by an individual or an institution",
+      "optimization requires an optimizer",
+      "only humans innovate"
+    ],
+    "sources": {
+      "carrier": [
+        "Goss S, Aron S, Deneubourg JL, Pasteels JM (1989) Self-organized shortcuts in the Argentine ant. Naturwissenschaften 76:579-581 [NOT OPENED]",
+        "Deneubourg JL, Aron S, Goss S, Pasteels JM (1990) The self-organizing exploratory pattern of the Argentine ant. Journal of Insect Behavior 3:159-168 [NOT OPENED]",
+        "ontology/social/ant_colony.json and ontology/animal/ant.json at a11feb1 (repository text, not a primary source)"
+      ],
+      "signal": [
+        "Goss S, Aron S, Deneubourg JL, Pasteels JM (1989) Self-organized shortcuts in the Argentine ant. Naturwissenschaften 76:579-581 [NOT OPENED]",
+        "Deneubourg JL, Aron S, Goss S, Pasteels JM (1990) The self-organizing exploratory pattern of the Argentine ant. Journal of Insect Behavior 3:159-168 [NOT OPENED]",
+        "ontology/social/ant_colony.json and ontology/animal/ant.json at a11feb1 (repository text, not a primary source)"
+      ],
+      "record": [
+        "ontology/social/ant_colony.json and ontology/animal/ant.json at a11feb1 (repository text, not a primary source)"
+      ],
+      "closure": [
+        "Goss S, Aron S, Deneubourg JL, Pasteels JM (1989) Self-organized shortcuts in the Argentine ant. Naturwissenschaften 76:579-581 [NOT OPENED]"
+      ],
+      "trust_basis": [
+        "Goss S, Aron S, Deneubourg JL, Pasteels JM (1989) Self-organized shortcuts in the Argentine ant. Naturwissenschaften 76:579-581 [NOT OPENED]",
+        "Deneubourg JL, Aron S, Goss S, Pasteels JM (1990) The self-organizing exploratory pattern of the Argentine ant. Journal of Insect Behavior 3:159-168 [NOT OPENED]"
+      ],
+      "energy_cost": null,
+      "loop_topology": null,
+      "assumption_trace": [
+        "work order, 2026-11-24 (Kavik + Claude)"
+      ]
+    },
+    "status": {
+      "carrier": "PROPOSED",
+      "signal": "PROPOSED",
+      "record": "PROPOSED",
+      "closure": "PROPOSED",
+      "trust_basis": "PROPOSED",
+      "energy_cost": null,
+      "loop_topology": "DERIVED",
+      "assumption_trace": "PROPOSED"
+    },
+    "notes": {
+      "carrier": "unverified: source not opened this session (hosts refused); statement carried from the repository's own entity text",
+      "signal": "unverified: source not opened this session (hosts refused); statement carried from the repository's own entity text. No choice-function parameters are given here: none was read.",
+      "record": "unverified: source not opened this session (hosts refused); statement carried from the repository's own entity text",
+      "closure": "unverified: source not opened. Wording is this record's reading of the double-bridge setup.",
+      "trust_basis": "unverified: source not opened. Decay rate and deposit amounts: unmeasured in this record.",
+      "energy_cost": "unmeasured. No source read this session gives the cost of pheromone synthesis or trail upkeep in joules.",
+      "loop_topology": "DERIVED from the five fields above, which are themselves PROPOSED; not taken from a source.",
+      "_scope": "Argentine ant (the species named in the two cited titles) foraging on a branched path in a laboratory arena. Not checked for other species or for field conditions.",
+      "_existing_attributes": "The numeric attributes already in this file (e.g. foraging_efficiency 0.93) were not checked by this change and are not used by this block."
+    }
+  }
 }
