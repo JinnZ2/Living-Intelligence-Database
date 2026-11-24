@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "x-lid": {
     "status": "PROPOSED",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "version_rule": "MINOR: additive; no existing schema or entity file is changed",
     "adopted": "2026-11-24",
     "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/reference_trace.schema.json",
@@ -12,7 +12,8 @@
       "cycle status enum is TRACED / PROPOSED / UNKNOWN; PROPOSED_UNSOURCED retired; fields unsourced and legacy_status added",
       "node field unsourced added",
       "not changed: the schema is still closed and has no status_history field, so it rejects reference_trace_BE_hex_v0.3.json (audit OPEN_QUESTIONS #6, owner's decision)",
-      "traces v0.1 and v0.2 carry the retired status and validate against the as-received schema, not this copy"
+      "traces v0.1 and v0.2 carry the retired status and validate against the as-received schema, not this copy",
+      "0.2.0: cycle field phases added (ordered list, optional)"
     ]
   },
   "$id": "reference_trace.schema.json",
@@ -209,6 +210,16 @@
         "legacy_status": {
           "type": "string",
           "description": "The status as first recorded, when it was mapped (for example PROPOSED_UNSOURCED)."
+        },
+        "phases": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "The cycle's phases in order, earliest first. Optional. Used to decide whether a phase is completed relative to phase_now. For a repeating cycle the order reads one turn."
         }
       },
       "allOf": [

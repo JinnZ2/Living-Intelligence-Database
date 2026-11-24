@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "x-lid": {
     "status": "PROPOSED",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "version_rule": "MINOR: additive; no existing schema or entity file is changed",
     "adopted": "2026-11-24",
     "adopted_from": "audit/2026-11-24/kimi_2026-11-25/lid-schema-additions/schemas/translation_loss_blocks.schema.json",
@@ -10,7 +10,8 @@
     "author_of_as_received": "Kimi (Moonshot AI), outside reader, 2026-11-25",
     "changes_from_as_received": [
       "confidence record: certainty and recurrence may be null (not recorded); deviation.value may be null; deviation gains quote and expressions; kind gains plus_minus_unspecified, varies_unquantified, mixed; fields attribute and source_field added",
-      "process_forms block added"
+      "process_forms block added",
+      "0.2.0: being_tense, phase_now, carried_from_phase added to process_forms items; phase_records block added"
     ]
   },
   "id": "translation_loss_blocks.schema.json",
@@ -601,6 +602,276 @@
             "items": {
               "type": "string"
             }
+          },
+          "being_tense": {
+            "enum": [
+              "CURRENTLY_BEING",
+              "HAVING_BEEN",
+              "PROJECTED",
+              null
+            ],
+            "description": "Null = not assessed."
+          },
+          "phase_now": {
+            "type": "array",
+            "description": "Where the subject is now, one item per cycle it sits in.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "cycle_ref",
+                "phase",
+                "observed_at",
+                "scope"
+              ],
+              "properties": {
+                "cycle_ref": {
+                  "type": "string",
+                  "pattern": "^CY_[A-Z0-9_]+$"
+                },
+                "phase": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "observed_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "When the phase was observed. Null = no observation recorded."
+                },
+                "scope": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "being_tense": {
+                  "enum": [
+                    "CURRENTLY_BEING",
+                    "HAVING_BEEN",
+                    "PROJECTED",
+                    null
+                  ],
+                  "description": "Null = not assessed."
+                }
+              }
+            }
+          },
+          "carried_from_phase": {
+            "type": "array",
+            "description": "Completed phases and what they left. An item is never deleted.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "cycle_ref",
+                "phase",
+                "carried",
+                "still_acting",
+                "source",
+                "status"
+              ],
+              "properties": {
+                "cycle_ref": {
+                  "type": "string",
+                  "pattern": "^CY_[A-Z0-9_]+$"
+                },
+                "phase": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "carried": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "What persists: imprint, learning, structure, memory."
+                },
+                "still_acting": {
+                  "enum": [
+                    "yes",
+                    "no",
+                    "unmeasured"
+                  ]
+                },
+                "source": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1
+                },
+                "status": {
+                  "type": "string"
+                },
+                "unsourced": {
+                  "type": "boolean"
+                },
+                "being_tense": {
+                  "enum": [
+                    "CURRENTLY_BEING",
+                    "HAVING_BEEN",
+                    "PROJECTED",
+                    null
+                  ],
+                  "description": "Null = not assessed."
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "phase_records": {
+      "type": "array",
+      "description": "being_tense, phase_now and carried_from_phase for an entry or an attribute that has no process_forms item yet.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "subject",
+          "being_tense",
+          "phase_now",
+          "carried_from_phase",
+          "status"
+        ],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Entity id, or entity id + '.' + attribute name."
+          },
+          "being_tense": {
+            "enum": [
+              "CURRENTLY_BEING",
+              "HAVING_BEEN",
+              "PROJECTED",
+              null
+            ],
+            "description": "Null = not assessed."
+          },
+          "phase_now": {
+            "type": "array",
+            "description": "Where the subject is now, one item per cycle it sits in.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "cycle_ref",
+                "phase",
+                "observed_at",
+                "scope"
+              ],
+              "properties": {
+                "cycle_ref": {
+                  "type": "string",
+                  "pattern": "^CY_[A-Z0-9_]+$"
+                },
+                "phase": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "observed_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "When the phase was observed. Null = no observation recorded."
+                },
+                "scope": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "being_tense": {
+                  "enum": [
+                    "CURRENTLY_BEING",
+                    "HAVING_BEEN",
+                    "PROJECTED",
+                    null
+                  ],
+                  "description": "Null = not assessed."
+                }
+              }
+            }
+          },
+          "carried_from_phase": {
+            "type": "array",
+            "description": "Completed phases and what they left. An item is never deleted.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "cycle_ref",
+                "phase",
+                "carried",
+                "still_acting",
+                "source",
+                "status"
+              ],
+              "properties": {
+                "cycle_ref": {
+                  "type": "string",
+                  "pattern": "^CY_[A-Z0-9_]+$"
+                },
+                "phase": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "carried": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "What persists: imprint, learning, structure, memory."
+                },
+                "still_acting": {
+                  "enum": [
+                    "yes",
+                    "no",
+                    "unmeasured"
+                  ]
+                },
+                "source": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1
+                },
+                "status": {
+                  "type": "string"
+                },
+                "unsourced": {
+                  "type": "boolean"
+                },
+                "being_tense": {
+                  "enum": [
+                    "CURRENTLY_BEING",
+                    "HAVING_BEEN",
+                    "PROJECTED",
+                    null
+                  ],
+                  "description": "Null = not assessed."
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
           }
         }
       }

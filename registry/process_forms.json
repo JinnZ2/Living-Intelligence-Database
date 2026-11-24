@@ -1,0 +1,37 @@
+{
+  "record": "PROCESS_FORMS",
+  "version": "0.1",
+  "date": "2026-11-24",
+  "status": "PROPOSED",
+  "note": "Process-form records kept beside the entity files; no entity file is edited. All fields are PROPOSED. Null = not assessed. The one record here is the example given in the owner's addendum of 2026-11-24; it is not an observation and has no source.",
+  "phase_records": [
+    {
+      "subject": "SALMON",
+      "being_tense": null,
+      "status": "PROPOSED",
+      "note": "Example from the owner's addendum. being_tense of the entry is null: not assessed. No attribute named geomagnetic imprint exists in ontology/animal/salmon.json.",
+      "phase_now": [
+        {
+          "cycle_ref": "CY_SALMON_LIFE",
+          "phase": "spawning",
+          "observed_at": null,
+          "scope": "example; no individual, population or date observed",
+          "being_tense": "CURRENTLY_BEING"
+        }
+      ],
+      "carried_from_phase": [
+        {
+          "cycle_ref": "CY_SALMON_LIFE",
+          "phase": "juvenile",
+          "carried": "geomagnetic imprint",
+          "still_acting": "yes",
+          "source": null,
+          "status": "PROPOSED",
+          "unsourced": true,
+          "being_tense": "HAVING_BEEN",
+          "note": "PROPOSED until sourced (owner's wording). still_acting 'yes' is the example's value, not a measurement."
+        }
+      ]
+    }
+  ]
+}

@@ -26,6 +26,18 @@ SCHEMA = os.path.join(ROOT, "schemas", "cycle_registry.schema.json")
 STATUS = {"TRACED", "PROPOSED", "UNKNOWN"}
 
 
+# Cycles that do not come from the reference trace. Each names the order that added it.
+ADDED = [
+    {"id": "CY_SALMON_LIFE", "name": "salmon life cycle", "kind": "life_cycle",
+     "context": "example cycle from the owner's addendum of 2026-11-24 (process form: being_tense, phase_now, "
+                "carried_from_phase); no population or species named",
+     "period_text": "not attached", "status": "PROPOSED", "unsourced": True, "source": None,
+     "phases": ["juvenile", "spawning"],
+     "note": "Holds only the two phases the addendum names, in the order its example implies (juvenile is completed "
+             "when spawning is now). No other phase, no period and no parent is supplied; none was typed from memory."},
+]
+
+
 def build():
     t = json.load(open(TRACE, encoding="utf-8"))
     cycles = []
@@ -36,13 +48,16 @@ def build():
             c["status"] = "PROPOSED"
             c["unsourced"] = True
         cycles.append(c)
+    n_trace = len(cycles)
+    cycles += [dict(c) for c in ADDED]
     return {"record": "CYCLE_REGISTRY_BE_HEX", "version": "0.1", "date": "2026-11-24", "status": "PROPOSED",
             "baseline_commit": t["baseline_commit"],
             "note": "The %d cycles of audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json, copied field for "
                     "field. One change: the retired status PROPOSED_UNSOURCED is written PROPOSED with unsourced "
                     "true and legacy_status kept. No period, source or parent was added or changed. These are the "
-                    "cycles of one trace (honeybee comb), not a registry of every cycle in the database."
-                    % len(t["cycles"]),
+                    "cycles of one trace (honeybee comb), not a registry of every cycle in the database. "
+                    "Added since, outside the trace: %s."
+                    % (n_trace, ", ".join(c["id"] for c in ADDED)),
             "cycles": cycles}
 
 

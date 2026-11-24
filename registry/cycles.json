@@ -4,7 +4,7 @@
   "date": "2026-11-24",
   "status": "PROPOSED",
   "baseline_commit": "63d93c00951b14ed7352891747468c9b65cca146",
-  "note": "The 12 cycles of audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json, copied field for field. One change: the retired status PROPOSED_UNSOURCED is written PROPOSED with unsourced true and legacy_status kept. No period, source or parent was added or changed. These are the cycles of one trace (honeybee comb), not a registry of every cycle in the database.",
+  "note": "The 12 cycles of audit/2026-11-24/reference/reference_trace_BE_hex_v0.3.json, copied field for field. One change: the retired status PROPOSED_UNSOURCED is written PROPOSED with unsourced true and legacy_status kept. No period, source or parent was added or changed. These are the cycles of one trace (honeybee comb), not a registry of every cycle in the database. Added since, outside the trace: CY_SALMON_LIFE.",
   "cycles": [
     {
       "id": "CY_WING",
@@ -165,6 +165,21 @@
       "note": "No source describes the combined window; kept as a structural placeholder.",
       "legacy_status": "PROPOSED_UNSOURCED",
       "unsourced": true
+    },
+    {
+      "id": "CY_SALMON_LIFE",
+      "name": "salmon life cycle",
+      "kind": "life_cycle",
+      "context": "example cycle from the owner's addendum of 2026-11-24 (process form: being_tense, phase_now, carried_from_phase); no population or species named",
+      "period_text": "not attached",
+      "status": "PROPOSED",
+      "unsourced": true,
+      "source": null,
+      "phases": [
+        "juvenile",
+        "spawning"
+      ],
+      "note": "Holds only the two phases the addendum names, in the order its example implies (juvenile is completed when spawning is now). No other phase, no period and no parent is supplied; none was typed from memory."
     }
   ]
 }
