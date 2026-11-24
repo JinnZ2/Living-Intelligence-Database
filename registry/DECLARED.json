@@ -253,6 +253,41 @@
       },
       "evidence_type_table": "stays NOT APPLIED. Status comes from reading the source, not from its evidence_type.",
       "renames": "none"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "existence states (source pass, stage 1)",
+      "after": "the source pass plan at 4221e16; before scripts/existence_check.py existed and before any search was sent. The entity ranking below was already visible when this was written; its rule is the one used throughout (count descending, id ascending).",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "what": "What an existence check is, its four states, how a match is decided, and what is written to registry/sources.json. Stage 1 checks whether a cited work can be found as cited. It reads no abstract and no full text, and it sets no status on any field.",
+      "existence_states": {
+        "FOUND_AS_CITED": "a PubMed record is identified and every compared item agrees with the string",
+        "FOUND_DIFFERS": "a PubMed record is identified and at least one compared item differs; each difference is listed as {item, cited, record}",
+        "NOT_FOUND_INDEXED": "PubMed was searched and no record was identified",
+        "NOT_INDEXED": "a book, book chapter or non-biomedical venue, or a string naming no work with an author and a year: not searchable here",
+        "never": "no state means 'does not exist'. A miss is a statement about one index and one search."
+      },
+      "scope": {
+        "entities": "rank entities by number of attribute fields (head steps under attributes.*), descending, ties by entity id ascending; take the first 10",
+        "sources": "every source string that is an input of an attribute head step of those entities; near-duplicate strings are each checked separately",
+        "index": "PubMed through NCBI esearch and esummary (bibliographic summary records only). No efetch, no abstract, no full text."
+      },
+      "works": "a string may name several works. A work is each 'Surname (YYYY)' occurrence (with 'et al.', '& Name' or a lowercase particle allowed); its text runs to the next occurrence. Title = the first quoted text in it; venue, volume and pages are read from what follows the title.",
+      "search": [
+        "1: first-author surname [au] AND year [pdat] AND title words [ti]",
+        "2, if 1 is empty: surname [au] AND title words [ti]",
+        "3, if 2 is empty: title words [ti]",
+        "a work with no quoted title: surname [au] AND year [pdat] AND up to 4 words of its description [tiab]"
+      ],
+      "title_words": "lowercase alphanumeric tokens of 4 or more letters, stop words removed, at most 8",
+      "identified": "with a title: among at most 5 returned records, the best one whose title holds at least 0.8 of the cited title's tokens (3+ letters) and whose own tokens are at least 0.5 covered by the cited title. Without a title: only when the description query returns exactly one record.",
+      "compared_items": "author (first-author surname), year (publication date year), title (token sets equal), venue (cited journal tokens contained in the record's journal name or the reverse, or an acronym of it), volume, pages (first page; last page when both give one). An item the string does not give is listed under not_compared, never counted as agreeing or differing. A work with no title, when identified, is FOUND_DIFFERS with the item 'title' cited as null.",
+      "miss_label": "every work is searched first. A miss is NOT_INDEXED when the work's text carries a book or non-biomedical marker (publisher words, 'ed.', a chapter 'in', or a venue on the list in the script), else NOT_FOUND_INDEXED.",
+      "string_state": "the weakest state among the string's works, in the order NOT_FOUND_INDEXED, NOT_INDEXED, FOUND_DIFFERS, FOUND_AS_CITED. A string is FOUND_AS_CITED only when every work in it is. Per-work results are kept.",
+      "registry": "registry/sources.json gains 'existence' on every entry: null when not checked, else {state, matched_record, checked, works}. matched_record lists the identified records (pmid, doi, title, first_author, year, journal, volume, pages). No source string is edited and no id changes; a difference is recorded under the work's 'differs', never in place. same_as, opened and fetched are not touched.",
+      "as_received": "search responses are not committed; their sha256 are listed in provenance/as_received/existence_MANIFEST.json",
+      "renames": "none"
     }
   ]
 }
