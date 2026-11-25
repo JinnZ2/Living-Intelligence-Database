@@ -7,6 +7,7 @@
 # Usage:
 #   ./pipeline.sh              # Run full pipeline (validate + build index)
 #   ./pipeline.sh validate     # Validate all entities against schemas
+#   ./pipeline.sh validate --legacy   # behaviour before the 2026-11-24 repair (fixture F7)
 #   ./pipeline.sh build        # Rebuild ontology_index.json
 #   ./pipeline.sh add <type>   # Scaffold a new entity (interactive)
 #   ./pipeline.sh check <file> # Validate a single entity file
@@ -60,6 +61,8 @@ cmd_validate() {
   check_python
   check_jsonschema
 
+  local legacy=0
+  [ "${1:-}" = "--legacy" ] && legacy=1
   local errors=0
   local valid=0
   local skipped=0
@@ -82,14 +85,17 @@ cmd_validate() {
       filename="$(basename "$entity_file")"
 
       # Validate JSON syntax
-      if ! python3 -c "import json; json.load(open('$entity_file'))" 2>/dev/null; then
+      if ! python3 -c "import json, sys; json.load(open(sys.argv[1]))" "$entity_file" 2>/dev/null; then
         echo -e "  ${RED}[FAIL]${NC} ${type_name}/${filename} — invalid JSON"
         errors=$((errors + 1))
         continue
       fi
 
       # Validate against schema
-      result=$(python3 -c "
+      if [ "$legacy" = 1 ]; then
+        # Behaviour before the 2026-11-24 repair (fixture F7), kept for comparison:
+        # a $ref the bare validate() cannot resolve ends the run with no FAIL line.
+        result=$(python3 -c "
 import json, sys
 from jsonschema import validate, ValidationError
 with open('$entity_file') as f:
@@ -102,13 +108,19 @@ try:
 except ValidationError as e:
     print(f'FAIL: {e.message}')
 " 2>&1)
+      elif ! result=$(python3 "$SCRIPTS_DIR/validate_entity.py" "$entity_file" "$schema_file" 2>&1); then
+        # Exit 1 is a validation failure; anything else is a crash. Either way the
+        # file is counted as failed and its message is printed. The loop goes on.
+        [ -n "$result" ] || result="FAIL: validator exited nonzero with no output"
+      fi
 
       if [ "$result" = "OK" ]; then
         echo -e "  ${GREEN}[PASS]${NC} ${type_name}/${filename}"
         valid=$((valid + 1))
       else
         echo -e "  ${RED}[FAIL]${NC} ${type_name}/${filename}"
-        echo -e "         ${result}"
+        printf '%s\n' "$result" | sed 's/^/         /'
+
         errors=$((errors + 1))
       fi
     done
@@ -156,33 +168,8 @@ cmd_check() {
     exit 1
   fi
 
-  # Validate
-  python3 -c "
-import json, sys
-from jsonschema import validate, ValidationError
-with open('$file') as f:
-    data = json.load(f)
-with open('$schema_file') as f:
-    schema = json.load(f)
-
-# Check required fields
-for field in ['id', 'name', 'ontology']:
-    if field not in data:
-        print(f'Missing required field: {field}')
-        sys.exit(1)
-
-try:
-    validate(instance=data, schema=schema)
-    print('Entity is valid!')
-    print(f'  ID:       {data[\"id\"]}')
-    print(f'  Name:     {data[\"name\"]}')
-    print(f'  Ontology: {data[\"ontology\"]}')
-    links = data.get('links', [])
-    print(f'  Links:    {len(links)} connection(s)')
-except ValidationError as e:
-    print(f'Validation failed: {e.message}')
-    sys.exit(1)
-"
+  # Validate (repaired 2026-11-24, fixture F7: same validator as cmd_validate)
+  python3 "$SCRIPTS_DIR/validate_entity.py" --report "$file" "$schema_file"
 }
 
 cmd_add() {
@@ -318,6 +305,7 @@ cmd_help() {
   echo ""
   echo -e "  ${CYAN}./pipeline.sh${NC}              Run full pipeline (validate + build)"
   echo -e "  ${CYAN}./pipeline.sh validate${NC}     Validate all entities against schemas"
+  echo -e "  ${CYAN}./pipeline.sh validate --legacy${NC}  Behaviour before the 2026-11-24 repair (for comparison)"
   echo -e "  ${CYAN}./pipeline.sh build${NC}        Rebuild ontology_index.json"
   echo -e "  ${CYAN}./pipeline.sh add [type]${NC}   Scaffold a new entity interactively"
   echo -e "  ${CYAN}./pipeline.sh check <file>${NC} Validate a single entity file"
@@ -337,7 +325,7 @@ cmd_help() {
 
 case "${1:-}" in
   validate)
-    cmd_validate
+    cmd_validate "${2:-}"
     ;;
   build)
     cmd_build
