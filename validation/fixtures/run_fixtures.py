@@ -165,6 +165,55 @@ def f6(tmp):
     return (a == 0 and b == 1 and c == 1), seen
 
 
+def _pipeline_copy(tmp, name, social_only=False):
+    d = tmp / name
+    shutil.copytree(ROOT / "schemas", d / "schemas")
+    shutil.copytree(ROOT / "scripts", d / "scripts")
+    shutil.copy(ROOT / "pipeline.sh", d / "pipeline.sh")
+    if social_only:
+        shutil.copytree(ROOT / "ontology" / "social", d / "ontology" / "social")
+    else:
+        shutil.copytree(ROOT / "ontology", d / "ontology")
+    return d
+
+
+def _pipeline_validate(d):
+    import re
+    r = subprocess.run(["bash", str(d / "pipeline.sh"), "validate"], capture_output=True, text=True, cwd=str(d))
+    out = re.sub(r"\x1b\[[0-9;]*m", "", r.stdout + r.stderr)
+    lines = out.splitlines()
+    results = [l.strip() for l in lines if l.strip().startswith("Results:")]
+    fails = [l.strip() for l in lines if "[FAIL]" in l]
+    return {"exit": r.returncode, "results_line": results[-1] if results else None, "fail_lines": fails,
+            "last_line": next((l.strip() for l in reversed(lines) if l.strip()), None)}, out
+
+
+def f7(tmp):
+    try:
+        import jsonschema  # noqa: F401  (pipeline.sh needs it; without it the fixture cannot run)
+    except ImportError:
+        return None, "jsonschema not installed: pipeline.sh validate cannot run"
+    a, _ = _pipeline_validate(_pipeline_copy(tmp, "a"))
+    db = _pipeline_copy(tmp, "b", social_only=True)
+    p = db / "ontology" / "social" / "wolf_pack.json"
+    e = json.loads(p.read_text()); e["id"] = 12345; p.write_text(json.dumps(e))
+    b, _ = _pipeline_validate(db)
+    dc = _pipeline_copy(tmp, "c", social_only=True)
+    (dc / "schemas" / "coordination.schema.json").unlink()
+    c, out_c = _pipeline_validate(dc)
+    crashing = ["ant_colony.json", "council_pattern.json", "honeybee_nest_site_selection.json", "stone_art_ledger.json"]
+    ok_a = a["exit"] == 0 and bool(a["results_line"]) and "0 failed" in a["results_line"]
+    ok_b = b["exit"] == 1 and bool(b["results_line"]) and "1 failed" in b["results_line"] \
+        and any("wolf_pack.json" in l for l in b["fail_lines"])
+    ok_c = c["exit"] == 1 and bool(c["results_line"]) \
+        and all(any(f in l for l in c["fail_lines"]) for f in crashing) and "coordination.schema.json" in out_c
+    seen = {"a": {k: a[k] for k in ("exit", "results_line", "last_line")},
+            "b": {"exit": b["exit"], "results_line": b["results_line"], "fail_lines": b["fail_lines"][:2]},
+            "c": {"exit": c["exit"], "results_line": c["results_line"], "fail_count": len(c["fail_lines"]),
+                  "last_line": c["last_line"]}}
+    return (ok_a and ok_b and ok_c), seen
+
+
 FIXTURES = [
     ("F1", "verify.py", "unknown claim -> UNKNOWN, posterior null", f1),
     ("F2", "verify.py", "one claim over 5 attributes -> evidence count 1", f2),
@@ -174,6 +223,7 @@ FIXTURES = [
     ("F5b", "audit.py", "load fails -> LOAD_FAILED, scoped_ratio null", f5_audit),
     ("F5c", "dependency_tree.py", "load fails -> LOAD_FAILED, not built from thin entry", f5_dependency_tree),
     ("F6", "scripts/build_index.py", "broken link -> exit 1 (one KNOWN_HELD link allowlisted)", f6),
+    ("F7", "pipeline.sh validate", "always a Results line; exit 0 only with 0 failed; crashes named", f7),
 ]
 
 

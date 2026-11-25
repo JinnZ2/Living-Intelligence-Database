@@ -44,6 +44,14 @@
       "must_read": "(a) exit 0; (b) exit 1; (c) exit 1",
       "allowlist": "WOLF_PACK -> COUNCIL (synergy) is declared KNOWN_HELD in registry/known_held_links.json with its reason, so the build passes on that one link and on no other",
       "defect": "broken links are printed and the build still writes the index and exits 0"
+    },
+    "F7": {
+      "instrument": "pipeline.sh validate",
+      "declared": "2026-11-24",
+      "input": "(a) a copy of pipeline.sh, ontology/, schemas/, scripts/ as they are; (b) the same copy reduced to ontology/social/, with one record made invalid (id set to a number); (c) the reduced copy with schemas/coordination.schema.json removed, so a $ref cannot resolve",
+      "must_read": "every case prints a 'Results:' line. (a) exit 0 and '0 failed'; (b) exit 1, a [FAIL] line naming the invalid file, '1 failed'; (c) exit 1, a [FAIL] line naming each file whose $ref cannot resolve, with the exception text",
+      "defect": "a $ref that the bare jsonschema.validate() cannot resolve raises an exception the snippet does not catch; set -e ends the script with exit 1 and no FAIL line, no reason and no Results line (audit/2026-11-24/LID_review_of_Kimi_rev2_and_pipeline_gate_2026-11-24.md). Reported by Kimi (Moonshot AI), reproduced by the audit.",
+      "not_run": "jsonschema not installed"
     }
   },
   "rules": {
