@@ -142,3 +142,63 @@ Proposed (PROPOSED):
 | `pipeline/pipeline_gate_check_8bf3d00.json` | `56033458f63cf96c111510cb15c47ddde12abc4106df9a3850bbc63781cb99a5` |
 
 The sha1 of rev2 is `82109926…`, for comparison with Kimi's `sha1sum` convention.
+
+## 4. Done after the owner's answers, 2026-11-24
+
+The owner answered: "1. Yes please and 2. You and Claude are the only ones able to touch repos so yes". That means open the PR, and this audit writes the pipeline.sh fix and the tightened date pattern. Sections 1–3 above are unchanged.
+
+### pipeline.sh repaired (OBSERVED)
+
+The fixture rules in `validation/fixtures/DECLARED.json` were followed in order.
+
+1. **Declare.** Fixture F7 is declared in `validation/fixtures/DECLARED.json`, with its required answers fixed before the run:
+   - every case prints a `Results:` line;
+   - (a) the repository as it is: exit 0 and "0 failed";
+   - (b) one record made invalid: exit 1, that file named, "1 failed";
+   - (c) `coordination.schema.json` removed: exit 1, each affected file named with the exception text.
+2. **Run against the unchanged instrument.** F7 FAILs in all three cases: no Results line, exit 1, no FAIL line. In (b) the run dies on `ant_colony.json` before it reaches the invalid file. This is committed as `validation/fixtures/results_before_F7.json` (commit `012944d`).
+3. **Repair** (commit `fc062c8`):
+   - `scripts/validate_entity.py` (new) validates one file against one schema with the registry `build_index.py` already uses. It prints every error with its path. Exit 1 means invalid; exit 2 means the validator could not run, and it prints the exception type and text.
+   - `cmd_validate` guards the command substitution, so a crash is counted as `[FAIL]` with its message and the loop goes on. The Results line always prints. File paths are passed as arguments and are no longer spliced into Python source.
+   - `cmd_check` uses the same validator.
+   - `./pipeline.sh validate --legacy` keeps the old behaviour for comparison, as the fixture rules require. It still exits 1 after 80 PASS lines.
+4. **After:**
+   - F7 PASS, all fixtures 9/9 (`results_after_F7.json`);
+   - `./pipeline.sh validate` gives 125 passed, 0 failed, exit 0 (`pipeline/pipeline_gate_check_fc062c8.json`);
+   - the full `./pipeline.sh` reaches the build (124 entities, 561 relations, index unchanged);
+   - `check` passes COUNCIL_PATTERN and mimosa, and names a missing field.
+
+Not changed: `scripts/build_index.py`, the schemas and every record.
+
+### rev3 date pattern (PROPOSED, in this folder only)
+
+`schema_rev3/build_rev3.py` writes `schema_rev3/reference_trace.schema.rev3.json` from Kimi's rev2. Rev2 stays unedited in `kimi_2026-11-25_rev2/`. The script stops if either date property is not what was reviewed.
+
+There are two changes, R1 and R2:
+
+- **R1.** The history-entry `date` gets `^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$` with minLength and maxLength 10.
+- **R2.** The top-level `date` keeps `format: date` and gets the same pattern and lengths.
+
+`schema_rev3/rev3_checks.py --suite` (OBSERVED; its expectations are written in the docstring before the run):
+
+| Schema | R1 | R2 | R3 (rejected for the named reason) |
+|---|---|---|---|
+| rev3 | pass | pass | pass |
+| rev2 | fail, as expected | fail, as expected | pass |
+| rev3 with `status_history` stripped | — | — | fail, as expected: rejected by `additionalProperties` |
+
+Kimi's 36-check suite on rev3: exit 0, ALL CHECKS PASS.
+
+R3 is met by the new checks, which name the keyword and path for each of Kimi's five negative cases. Kimi's suite is not edited. Whether rev3 or its checks replace anything in Kimi's package is for Kimi and the owner to decide. Nothing under `schemas/` uses the trace schema yet.
+
+### Hashes (after)
+
+| File | sha256 |
+|---|---|
+| `pipeline.sh` (repo root) | `de48cb8016ee2bd37171f03329a46176b2e5d71d3d3c6332df4b1a41df3d8210` |
+| `scripts/validate_entity.py` (repo root) | `4c0bef3b3c507c111a8b3e80521821443b9d19dae2e0d409e411880bd8699c9d` |
+| `validation/fixtures/run_fixtures.py` (repo root) | `1f189aba3bae9111105ffe81bf818757dceee7ff0bec29e614f471f0b2980cc6` |
+| `schema_rev3/build_rev3.py` | `5833804209ceea751300e170c0e851799907a11627d6b4d856395e1103b679cf` |
+| `schema_rev3/reference_trace.schema.rev3.json` | `ab4c21284376fa46f7693b6915240ab6df3c4639e406572d58c7a51adad2d602` |
+| `schema_rev3/rev3_checks.py` | `df98fa58885bcf4655e0c98ebbc1cc70a9904a3d7fbc04c2abaa50f225a234f9` |
+| `pipeline/pipeline_gate_check_fc062c8.json` | `12b63a195f2758540855c09772e3fa1bc43b1d8397eb5a6ea5ac450ae61111fa` |
