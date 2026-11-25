@@ -1,0 +1,72 @@
+{
+ "record": "PIPELINE_GATE_CHECK",
+ "status": "OBSERVED",
+ "jsonschema": "4.26.0",
+ "per_file": {
+  "bare OK / resolved OK": 116,
+  "bare CRASH / resolved OK": 9
+ },
+ "not_clean": [
+  {
+   "file": "ontology/plant/mimosa.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: functional_intelligence.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  },
+  {
+   "file": "ontology/plant/mycelium.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: coordination.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  },
+  {
+   "file": "ontology/plant/quorum_biofilm.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: coordination.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  },
+  {
+   "file": "ontology/plant/slime_mold.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: coordination.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  },
+  {
+   "file": "ontology/plant/venus_flytrap.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: gate_sensing.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  },
+  {
+   "file": "ontology/social/ant_colony.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: coordination.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  },
+  {
+   "file": "ontology/social/council_pattern.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: coordination.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  },
+  {
+   "file": "ontology/social/honeybee_nest_site_selection.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: coordination.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  },
+  {
+   "file": "ontology/social/stone_art_ledger.json",
+   "bare": "CRASH _WrappedReferencingError: Unresolvable: coordination.schema.json",
+   "resolved": "OK",
+   "first_errors": []
+  }
+ ],
+ "pipeline_validate": {
+  "exit": 1,
+  "pass_lines": 80,
+  "fail_lines": 0,
+  "results_line_printed": false,
+  "last_line": "[PASS] plant/mangrove.json"
+ }
+}
