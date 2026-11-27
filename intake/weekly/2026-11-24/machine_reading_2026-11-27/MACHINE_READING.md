@@ -118,3 +118,95 @@ Under the repository's rule, any change below would be a new dated amendment, de
 ## Limits
 
 One machine reader, no second reading. Full texts were read for term location and scope only, and no supplementary data were read. The relevance calls are judgments against each field's `scope.definition`, and another reader could place the two off-scope PARTIAL works (43048754, 43041999) differently.
+
+Added 2026-11-27, later the same day: the sections below are new. Nothing above was changed. The owner's decisions on the questions above are recorded in `registry/DECLARED.json`, amendment "owner's decisions on PR #34 (machine reading, full text, registration)". The owner's principle: "I like science and evidence to choose, not my preference."
+
+## Note 2026-11-27: 43056305, full text and supplementary data
+
+Reading state MACHINE_READ_NOT_REVIEWED. Reader: Claude Opus 5.5 (Anthropic), working in Perplexity Computer. Prompt: `reading_prompt_2026-11-27_supplementary.md` (sha256 on the note in `machine_reading.json`). Files read: S1 Data (s009.xlsx) and S2 Data (s010.xlsx), PLOS Biology, open access, CC BY. Their sha256 values are in `supplementary_MANIFEST.json`; their bytes are not committed. The record's earlier fields are unchanged, and the note is added as `notes[0]`.
+
+OBSERVED (full-text and supplementary observation):
+
+- S1 sheet `Brood_nest_T_RH_XSBN_lhasa` holds 1160 brood-nest temperature records taken at 5-min intervals.
+- Lhasa, hives 1–3: n = 288 each, covering one day (stamped 2026-07-20 22:52 to 2026-07-21 22:50).
+- Xishuangbanna, hives 4–6: n = 113, 83 and 100, covering the daytime of 2024-08-02 only. S2 says why: "Only daytime data was collected because Xishuangbanna has a tropical rainforest climate".
+- S2 gives per-hive mean/SD in °C: 34.1/0.1, 34.2/0.3, 34.2/0.2, 34.4/0.8, 34.6/0.2 and 34.5/0.8.
+- Ambient temperature is not recorded beside the series.
+- The hypoxia-experiment sheets give hive-air temperature, not brood-nest temperature.
+- The full text's general statement, "honey bee colonies maintain a highly stable brood-nest microclimate in which V. destructor reproduces, typically between 33 and 36 °C", cites refs 9 and 10. It does not report the paper's own data.
+
+DERIVED from the S1 series (population SD; RMS = root-mean-square deviation about 35 °C). `build_machine_reading.py` recomputes these values with the standard library and fails if they differ.
+
+| hive | site | n | mean (°C) | SD | RMS about 35 °C |
+|---|---|---|---|---|---|
+| 1 | Lhasa | 288 | 34.143 | 0.126 | 0.866 |
+| 2 | Lhasa | 288 | 34.156 | 0.260 | 0.883 |
+| 3 | Lhasa | 288 | 34.236 | 0.179 | 0.785 |
+| 4 | Xishuangbanna | 113 | 34.429 | 0.762 | 0.952 |
+| 5 | Xishuangbanna | 83 | 34.608 | 0.198 | 0.439 |
+| 6 | Xishuangbanna | 100 | 34.500 | 0.823 | 0.963 |
+| all | | 1160 | | 0.411 | 0.846 |
+
+Limits:
+
+- The series covers one day at Lhasa and one daytime at Xishuangbanna. Nothing spans the field's −30 °C to +45 °C.
+- Ambient temperature was not recorded.
+- The field's 0.94 has no stated unit or form, so the derived numbers are not compared with it.
+- No claim_support and no number_support are written.
+
+PROPOSED:
+
+- Disposition after the note: ACCEPT_FOR_LEDGER_CANDIDACY. The series measures the quantity the field defines.
+- The earlier disposition, NEEDS_FULL_TEXT_READER, stays as written.
+- The HX4 verdict stays FALSIFIER_MET.
+- 43056305 is not registered. That is the owner's call.
+
+## Evidence 2026-11-27: the nine proposals tested
+
+Method:
+
+- Read-only Europe PMC searches, re-fetched 2026-11-27, over three FIRST_IDATE windows: W1 2026-11-17..24, W2 2026-11-10..17 and W3 2026-11-03..10.
+- Relevance was judged by machine reading of each abstract against the touched field's `scope.definition` (MACHINE_READ_NOT_REVIEWED, not claim_support). No work was RELEVANT, so PARTIAL counts as relevant.
+- Precision is relevant hits over hits with an abstract. Records with no abstract are removed by F1 in any case.
+- Recall is measured against the relevant works the current query finds.
+- Filter proposals were measured by running `weekly_intake.py` offline on each window, with the code from before 2026-11-27 and with the amended code.
+- Script: `proposal_evidence.py`. Numbers, id lists and the sha256 of every raw response: `proposal_evidence.json`. The raw responses (1.7 MB) are not committed.
+- `python3 proposal_evidence.py check` recomputes the query table from the stored id lists.
+
+Adopted, each as its own amendment in `registry/DECLARED.json`:
+
+| proposal | change | evidence (three windows) |
+|---|---|---|
+| query 2, my_phosphorus | TITLE_ABS clauses with phosphate, uptake, mobiliz*, transloc*, 32P, 33P, hyphal | hits 39 → 5; precision 4/37 → 4/5; recall 4/4, none lost |
+| filter 4, window edge | default window 14 days (7-day overlap) + F4 SEEN_IN_EARLIER_INTAKE | 7 works indexed late in W1. 2 of them (43069007, PARTIAL; 43062364) could not be caught by the next 7-day window. Observed lag ≥ 3 days |
+| filter 2, HX4 (dependency part) | keep only terms that are in the field's scope.dependencies | HX4 stubs 59 → 52; on PARTIAL works 9 → 9. Removes the 2 FALSIFIER_MET stubs of W1 and keeps the only NOT_MET |
+| filter 3, HX1 (CONDITIONAL_CHANGE part) | skip numbers the extractor tags CONDITIONAL_CHANGE | HX1 stubs 8 → 6; on PARTIAL works 3 → 3 |
+
+All adopted changes together (amended code + new my_phosphorus query): candidates 64 → 35, PARTIAL candidates 9 → 9, HX1 8 → 4, HX4 59 → 23. The HX1 and HX4 stubs on PARTIAL works are unchanged at 3 and 9.
+
+Rejected or not adopted:
+
+| proposal | evidence (three windows) | why |
+|---|---|---|
+| query 1, TITLE_ABS on be_comb | 7 → 0 hits; the current query had 0/5 relevant | no relevant work either way; no evidence to change |
+| query 1/3, TITLE_ABS on be_thermo (with or without added terms) | 7 → 0 hits; recall 0/2; loses 43029483, 43048754 and the full-text-only 43056305 | loses all relevant work |
+| query 3 terms without TITLE_ABS (be_thermo) | 7 hits, 2/7, identical to the current query | no gain |
+| query 1, TITLE_ABS on my_phosphorus with the old terms | 39 → 1 hit; recall 1/4 | loses 43061600, 42979373 and 42985422 |
+| query 2 terms without TITLE_ABS (my_phosphorus) | 78 hits, 4/76 | precision falls |
+| query 1, TITLE_ABS on root_water_uptake | 18 → 0 hits; recall 0/3 | loses all relevant work |
+| query 4, root_water_uptake TITLE_ABS with added terms | 1 hit, 1/1; recall 0/3; gains 42985935 | loses 43069007, 43075482 and 42989086 |
+| query 4 terms without TITLE_ABS | 46 hits, 4/46 (current 3/18); gains 42985935 | precision falls by half for one gained work |
+| query 5, biosphere_recycling | 0 hits in all windows, current and TITLE_ABS | nothing to measure; unchanged |
+| filter 1, flag QUERY_CLAUSE_NOT_IN_ABSTRACT | flags 63 of 64 candidates, including 8 of the 9 PARTIAL works | does not discriminate |
+| filter 2, HX4 also needs the entity named in the abstract | stubs 59 → 21, but 3 PARTIAL works lose their stub (43048754, 43075482, 43029483) | loses relevant stubs |
+| filter 2, drop `photosynth` from biosphere_candidates terms | the dependency rule already removes the one case | redundant, and it would change the shared biosphere tool |
+| filter 3, HX1 named ratios; extractor gene-token digits | not tested | not adopted; deviation_extract.py unchanged |
+| filter 5, ABSTRACT_PENDING instead of F1 | of the 4 W1 records with no abstract, PMC13781785 is now PMID 43082195 with an abstract, first indexed 2026-11-26, inside the next window; the other 3 still have none | not needed: the record comes back on its own, and F4 counts only candidates, so it is tried again |
+
+OBSERVED, not changed: `candidates()` in `weekly_intake.py` skips extractor matches whose span begins with whitespace, so a sentence such as "Retention reached 0.42." gives no number for HX1. The new HX1 selftest therefore uses "(0.42)". This is left for a separate decision.
+
+## Limits added 2026-11-27
+
+- One machine reader made the relevance labels for the evidence. They have no second reading.
+- Three weekly windows are a small sample. The precision of the adopted my_phosphorus query rests on 5 hits.
+- The adopted amendments were declared after the evidence was seen (post hoc), and before the next scheduled run.

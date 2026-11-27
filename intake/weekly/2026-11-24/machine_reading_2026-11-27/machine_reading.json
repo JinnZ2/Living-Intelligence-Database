@@ -14,6 +14,7 @@
   "disposition": "ACCEPT_FOR_LEDGER_CANDIDACY (worth an outside reader's reading-ledger entry once the source is registered) | NEEDS_FULL_TEXT_READER | REJECT"
  },
  "limits": "One machine reader, no second reading. Full texts were read to locate query terms and to check the abstract's scope. No supplementary data were read. Full-text text is not committed; its sha256 is in fulltext_MANIFEST.json.",
+ "limits_added_2026-11-27": "Later on 2026-11-27, after the owner's decisions on PR #34, the S1 and S2 Data of 43056305 were read; see that record's notes. Their bytes are not committed; their sha256 is in supplementary_MANIFEST.json. No other supplementary data were read.",
  "summary": {
   "candidates": 15,
   "relevance": {
@@ -201,7 +202,102 @@
    "reader": "Claude Opus 5.5 (Anthropic), working in Perplexity Computer",
    "prompt_sha256": "19d1869f1d59a9d91767585a33be3c04e458b0d04c821f3d25f5a68dd8129fa1",
    "date": "2026-11-27",
-   "status": "PROPOSED"
+   "status": "PROPOSED",
+   "notes": [
+    {
+     "date": "2026-11-27",
+     "kind": "FULL_TEXT_AND_SUPPLEMENTARY_READ",
+     "authority": "Owner's decisions on PR #34 (registry/DECLARED.json, amendment of 2026-11-27): full text may be read where it is open access, labelled as full-text observation.",
+     "read": [
+      "full_text",
+      "supplementary:S1 Data (s009.xlsx)",
+      "supplementary:S2 Data (s010.xlsx)",
+      "supplementary:S2 Fig (s002.tif, hash only)"
+     ],
+     "observed": [
+      "Full-text and supplementary observation. S1 Data sheet Brood_nest_T_RH_XSBN_lhasa has 1160 brood-nest records at 5-min intervals: hive, site, device, brood temperature, brood RH, time.",
+      "Lhasa hives 1-3: n = 288 each, one day, recorded 2026-07-20 22:52 to 2026-07-21 22:50 as stamped in the sheet. Xishuangbanna hives 4-6: n = 113, 83 and 100, daytime of 2024-08-02 only (08:47 to 18:07).",
+      "S2 Data sheet Brood_nest_T_RH_XSBN_Lhasa reports per-hive mean/SD (C): 34.1/0.1, 34.2/0.3, 34.2/0.2, 34.4/0.8, 34.6/0.2, 34.5/0.8.",
+      "Ambient temperature is not recorded beside the brood-nest series. S2 Data Study_site_location gives altitude (Lhasa 3637 m), barometric pressure and pO2, not ambient temperature.",
+      "S2 Data Hypoxic_hive_Conditions: artificial-hypoxia experiment, hive-air temperature mean about 32.6-33.0 C, SD about 1.7 C. Hive air, not brood nest."
+     ],
+     "derived_from": "S1 Data, sheet Brood_nest_T_RH_XSBN_lhasa, column Brood_Temperature (°C); population SD; RMS = sqrt(mean((T - 35)^2)).",
+     "derived": {
+      "hives": {
+       "1": {
+        "site": "Lhasa",
+        "n": 288,
+        "mean": 34.143,
+        "sd": 0.126,
+        "rms_about_35": 0.866
+       },
+       "2": {
+        "site": "Lhasa",
+        "n": 288,
+        "mean": 34.156,
+        "sd": 0.26,
+        "rms_about_35": 0.883
+       },
+       "3": {
+        "site": "Lhasa",
+        "n": 288,
+        "mean": 34.236,
+        "sd": 0.179,
+        "rms_about_35": 0.785
+       },
+       "4": {
+        "site": "Xishuangbanna",
+        "n": 113,
+        "mean": 34.429,
+        "sd": 0.762,
+        "rms_about_35": 0.952
+       },
+       "5": {
+        "site": "Xishuangbanna",
+        "n": 83,
+        "mean": 34.608,
+        "sd": 0.198,
+        "rms_about_35": 0.439
+       },
+       "6": {
+        "site": "Xishuangbanna",
+        "n": 100,
+        "mean": 34.5,
+        "sd": 0.823,
+        "rms_about_35": 0.963
+       }
+      },
+      "pooled": {
+       "n": 1160,
+       "sd": 0.411,
+       "rms_about_35": 0.846
+      }
+     },
+     "quote_notes": [
+      "The full-text sentence cites the paper's references 9 and 10; it is not the paper's own data."
+     ],
+     "limits": "One day at Lhasa (July) and one daytime at Xishuangbanna (August); ambient not recorded; nothing spans the field's -30 C to +45 C. The unit and form of the field's 0.94 are not stated, so the derived numbers are not compared with it. No claim_support, no number_support.",
+     "proposed": "Disposition after this note: ACCEPT_FOR_LEDGER_CANDIDACY. The series measures the quantity the field defines (brood-nest temperature about 35 C) at two climates, though not across the stated ambient range. The earlier disposition NEEDS_FULL_TEXT_READER stays as written. The HX4 stub verdict FALSIFIER_MET is unchanged. Registering the source is the owner's call; it is not registered here.",
+     "disposition_after_note": "ACCEPT_FOR_LEDGER_CANDIDACY",
+     "quotes": [
+      {
+       "source": "full_text",
+       "quote": "honey bee colonies maintain a highly stable brood-nest microclimate in which V. destructor reproduces, typically between 33 and 36 °C",
+       "words": 20
+      },
+      {
+       "source": "supplementary",
+       "quote": "Only daytime data was collected because Xishuangbanna has a tropical rainforest climate",
+       "words": 12
+      }
+     ],
+     "reading_state": "MACHINE_READ_NOT_REVIEWED",
+     "reader": "Claude Opus 5.5 (Anthropic), working in Perplexity Computer",
+     "prompt": "reading_prompt_2026-11-27_supplementary.md",
+     "prompt_sha256": "1cc6ec50ad1d34a8ce6657bf8bb77d538bc9905fcfa23f165c8b934be9ab2050",
+     "status": "PROPOSED"
+    }
+   ]
   },
   {
    "candidate_id": "C:43048754:BE:collective_thermoregulation",

@@ -1,0 +1,1180 @@
+{
+ "record": "INTAKE_PROPOSAL_EVIDENCE",
+ "date": "2026-11-27",
+ "status": "PROPOSED evidence; MACHINE_READ_NOT_REVIEWED relevance labels; no claim_support",
+ "reader": "Claude Opus 5.5 (Anthropic), working in Perplexity Computer",
+ "windows": {
+  "W1": [
+   "2026-11-17",
+   "2026-11-24"
+  ],
+  "W2": [
+   "2026-11-10",
+   "2026-11-17"
+  ],
+  "W3": [
+   "2026-11-03",
+   "2026-11-10"
+  ]
+ },
+ "variants": {
+  "be_comb_geometry": {
+   "cur": "(honeycomb OR \"comb building\" OR \"comb cell\") AND (bee OR Apis)",
+   "P1": "TITLE_ABS:(honeycomb OR \"comb building\" OR \"comb cell\") AND TITLE_ABS:(bee OR Apis)"
+  },
+  "be_thermoregulation": {
+   "cur": "(thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND (Apis OR honeybee)",
+   "P1": "TITLE_ABS:(thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND TITLE_ABS:(Apis OR honeybee)",
+   "P3": "TITLE_ABS:(thermoregulation OR \"brood temperature\" OR \"nest temperature\" OR \"brood nest\" OR \"cluster temperature\") AND TITLE_ABS:(Apis OR honeybee OR \"honey bee\")",
+   "P3ft": "(thermoregulation OR \"brood temperature\" OR \"nest temperature\" OR \"brood nest\" OR \"cluster temperature\") AND (Apis OR honeybee OR \"honey bee\")"
+  },
+  "my_phosphorus": {
+   "cur": "mycorrhiz* AND phosphorus AND transfer",
+   "P1": "TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus) AND TITLE_ABS:(transfer)",
+   "P2": "TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus OR phosphate) AND TITLE_ABS:(transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)",
+   "P2ft": "mycorrhiz* AND (phosphorus OR phosphate) AND (transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)"
+  },
+  "root_water_uptake": {
+   "cur": "\"root water uptake\" AND (\"soil water potential\" OR drought)",
+   "P1": "TITLE_ABS:(\"root water uptake\") AND TITLE_ABS:(\"soil water potential\" OR drought)",
+   "P4": "TITLE_ABS:(\"root water uptake\" OR \"root hydraulic conductivit*\" OR \"root system architecture\") AND TITLE_ABS:(\"soil water potential\" OR drought)",
+   "P4ft": "(\"root water uptake\" OR \"root hydraulic conductivit*\" OR \"root system architecture\") AND (\"soil water potential\" OR drought)"
+  },
+  "biosphere_recycling": {
+   "cur": "biosphere AND (\"nutrient recycling\" OR \"biogeochemical cycl*\") AND (planetary OR Earth)",
+   "P1": "TITLE_ABS:(biosphere) AND TITLE_ABS:(\"nutrient recycling\" OR \"biogeochemical cycl*\") AND TITLE_ABS:(planetary OR Earth)"
+  }
+ },
+ "labels": {
+  "PARTIAL": {
+   "be_thermoregulation": [
+    "43029483",
+    "43048754"
+   ],
+   "my_phosphorus": [
+    "43041999",
+    "43061600",
+    "42985422",
+    "42979373"
+   ],
+   "root_water_uptake": [
+    "43069007",
+    "43075482",
+    "42989086",
+    "42985935"
+   ]
+  },
+  "PARTIAL_full_text_only": {
+   "be_thermoregulation": [
+    "43056305"
+   ]
+  },
+  "reasons": {
+   "43029483": "BE thermo: multi-year smart-hive telemetry; inferred internal temperature 34.8 C and thermal buffer vs ambient (abstract).",
+   "43048754": "BE thermo: Bombus brood incubation; off-genus (as in machine_reading.json).",
+   "43056305": "BE thermo: brood-nest temperature only in the full text and S1/S2 Data.",
+   "43041999": "MY: AMF-maize review on P exchange (as in machine_reading.json).",
+   "43061600": "MY: ECM deep-soil review, nutrient mobilisation (as in machine_reading.json).",
+   "42985422": "MY: AMF x P level x drought, N and P accumulation in oat organs.",
+   "42979373": "MY: ECM tree masting; nutrient uptake by roots and mycorrhizas, equilibration across the mycorrhizal-root network.",
+   "43069007": "ROOT_NET: AMF + PGPR maize under drought, root hydraulic conductivity.",
+   "43075482": "ROOT_NET: review of legacies that constrain root water and nutrient uptake; hydraulic conductivity hysteresis.",
+   "42989086": "ROOT_NET: water-uptake sources of a clonal wetland plant.",
+   "42985935": "ROOT_NET: review of root system architecture under osmotic stress; drought lowers soil water potential."
+  },
+  "note": "Every other work returned by any variant in any window was judged NOT_RELEVANT on its abstract; records with no abstract were not judged and are counted apart."
+ },
+ "responses": {
+  "be_comb_geometry__P1__W1.json": {
+   "sha256": "17ff26a71f90f0b6fa72254395956fd76fe4208754cbe15cc3340506ec4c09b3",
+   "bytes": 210,
+   "query": "(TITLE_ABS:(honeycomb OR \"comb building\" OR \"comb cell\") AND TITLE_ABS:(bee OR Apis)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:04Z",
+   "hitCount": 0
+  },
+  "be_comb_geometry__P1__W2.json": {
+   "sha256": "a84bc50f31ca4f0740e1d7b4dc830c77ccf3c0c437eefab477e8f46b245a2953",
+   "bytes": 210,
+   "query": "(TITLE_ABS:(honeycomb OR \"comb building\" OR \"comb cell\") AND TITLE_ABS:(bee OR Apis)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:39Z",
+   "hitCount": 0
+  },
+  "be_comb_geometry__P1__W3.json": {
+   "sha256": "27b0d3618f380fef3dfc7144ca611af5f7912740121274c444b391fb5be21bcd",
+   "bytes": 210,
+   "query": "(TITLE_ABS:(honeycomb OR \"comb building\" OR \"comb cell\") AND TITLE_ABS:(bee OR Apis)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:06Z",
+   "hitCount": 0
+  },
+  "be_comb_geometry__cur__W1.json": {
+   "sha256": "36f6e9099b266562b7ca26c1282e854b73925a22080bb610bba3aa46c926831d",
+   "bytes": 24167,
+   "query": "((honeycomb OR \"comb building\" OR \"comb cell\") AND (bee OR Apis)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:01Z",
+   "hitCount": 3
+  },
+  "be_comb_geometry__cur__W2.json": {
+   "sha256": "7661f47697573a6e70b6e1ca6107a3f53489f03c89a364aa59abfd4151fa688d",
+   "bytes": 19340,
+   "query": "((honeycomb OR \"comb building\" OR \"comb cell\") AND (bee OR Apis)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:35Z",
+   "hitCount": 2
+  },
+  "be_comb_geometry__cur__W3.json": {
+   "sha256": "4c4f88a38c373ac30e4b5111d94077ef49268402f1a50aba45572599e1b0a84e",
+   "bytes": 9812,
+   "query": "((honeycomb OR \"comb building\" OR \"comb cell\") AND (bee OR Apis)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:04Z",
+   "hitCount": 2
+  },
+  "be_thermoregulation__P1__W1.json": {
+   "sha256": "018906a02ef82fe58bffdcfb476b8a580eaa9e4e1c4f0bc2bdc4ec21dda56a1e",
+   "bytes": 233,
+   "query": "(TITLE_ABS:(thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND TITLE_ABS:(Apis OR honeybee)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:12Z",
+   "hitCount": 0
+  },
+  "be_thermoregulation__P1__W2.json": {
+   "sha256": "82201b44eaaccce8be82e077cc6ec760a165c75c24a2f91f4b3a0115774c812e",
+   "bytes": 233,
+   "query": "(TITLE_ABS:(thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND TITLE_ABS:(Apis OR honeybee)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:40Z",
+   "hitCount": 0
+  },
+  "be_thermoregulation__P1__W3.json": {
+   "sha256": "3e26fc18427052f12d385c11f2d1ca1e871b58be6643a01dd68bfd63f9e37b86",
+   "bytes": 233,
+   "query": "(TITLE_ABS:(thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND TITLE_ABS:(Apis OR honeybee)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:12Z",
+   "hitCount": 0
+  },
+  "be_thermoregulation__P3__W1.json": {
+   "sha256": "76d544a20f3d4ce606be3c10742cc5c99f3d70393e33b76e930550846225d94c",
+   "bytes": 295,
+   "query": "(TITLE_ABS:(thermoregulation OR \"brood temperature\" OR \"nest temperature\" OR \"brood nest\" OR \"cluster temperature\") AND TITLE_ABS:(Apis OR honeybee OR \"honey bee\")) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:13Z",
+   "hitCount": 0
+  },
+  "be_thermoregulation__P3__W2.json": {
+   "sha256": "a93635cb10afcc04790545725a753abd7d9162e5fdc6d0905e35d9eb44b82d5e",
+   "bytes": 295,
+   "query": "(TITLE_ABS:(thermoregulation OR \"brood temperature\" OR \"nest temperature\" OR \"brood nest\" OR \"cluster temperature\") AND TITLE_ABS:(Apis OR honeybee OR \"honey bee\")) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:40Z",
+   "hitCount": 0
+  },
+  "be_thermoregulation__P3__W3.json": {
+   "sha256": "344fc3838859c2527ada2a1913f1dbebaa09b08b355c52423847805d91d27790",
+   "bytes": 295,
+   "query": "(TITLE_ABS:(thermoregulation OR \"brood temperature\" OR \"nest temperature\" OR \"brood nest\" OR \"cluster temperature\") AND TITLE_ABS:(Apis OR honeybee OR \"honey bee\")) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:14Z",
+   "hitCount": 0
+  },
+  "be_thermoregulation__P3ft__W1.json": {
+   "sha256": "60a7855078729dd01b50254bc3b849073e9f738535e6f506a122c09e9afb9d30",
+   "bytes": 18433,
+   "query": "((thermoregulation OR \"brood temperature\" OR \"nest temperature\" OR \"brood nest\" OR \"cluster temperature\") AND (Apis OR honeybee OR \"honey bee\")) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:16Z",
+   "hitCount": 3
+  },
+  "be_thermoregulation__P3ft__W2.json": {
+   "sha256": "7f3248d8df00ed5c935fe42d6d17ff46c38d3e416729b971f8da2cc446e9cdc9",
+   "bytes": 19493,
+   "query": "((thermoregulation OR \"brood temperature\" OR \"nest temperature\" OR \"brood nest\" OR \"cluster temperature\") AND (Apis OR honeybee OR \"honey bee\")) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:41Z",
+   "hitCount": 3
+  },
+  "be_thermoregulation__P3ft__W3.json": {
+   "sha256": "1aa3396138087fb336bb4f8c9c93636b7c945617cf5d396ca784427a50b70e3e",
+   "bytes": 6417,
+   "query": "((thermoregulation OR \"brood temperature\" OR \"nest temperature\" OR \"brood nest\" OR \"cluster temperature\") AND (Apis OR honeybee OR \"honey bee\")) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:18Z",
+   "hitCount": 1
+  },
+  "be_thermoregulation__cur__W1.json": {
+   "sha256": "19ee499ab131896593cebad6ff4a2d323de7ee2b234d04eca1db70933d6516de",
+   "bytes": 18371,
+   "query": "((thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND (Apis OR honeybee)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:08Z",
+   "hitCount": 3
+  },
+  "be_thermoregulation__cur__W2.json": {
+   "sha256": "f8a9cf67048371477e092e6f9e17af5826877946eab80e0f5b3d32d7c3d3d23e",
+   "bytes": 19431,
+   "query": "((thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND (Apis OR honeybee)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:39Z",
+   "hitCount": 3
+  },
+  "be_thermoregulation__cur__W3.json": {
+   "sha256": "d3833cbb23ee8167086d12e3484a2b025b01099becb7a91b2f56890e456e7c56",
+   "bytes": 6355,
+   "query": "((thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND (Apis OR honeybee)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:08Z",
+   "hitCount": 1
+  },
+  "biosphere_recycling__P1__W1.json": {
+   "sha256": "68c1b7c7d4f8d773d7bdb90ae66380c7c33b95ebc29bd2659eac66f97de5e9c8",
+   "bytes": 246,
+   "query": "(TITLE_ABS:(biosphere) AND TITLE_ABS:(\"nutrient recycling\" OR \"biogeochemical cycl*\") AND TITLE_ABS:(planetary OR Earth)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:34Z",
+   "hitCount": 0
+  },
+  "biosphere_recycling__P1__W2.json": {
+   "sha256": "5f10054a507edca6366746cd52c87e987c99880bf16d4c59602568ea9a916835",
+   "bytes": 246,
+   "query": "(TITLE_ABS:(biosphere) AND TITLE_ABS:(\"nutrient recycling\" OR \"biogeochemical cycl*\") AND TITLE_ABS:(planetary OR Earth)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:59Z",
+   "hitCount": 0
+  },
+  "biosphere_recycling__P1__W3.json": {
+   "sha256": "a74c11dc4d8f84f10b0c498f9f0483b979641ca11a3fac775f3e8986e54a16b7",
+   "bytes": 246,
+   "query": "(TITLE_ABS:(biosphere) AND TITLE_ABS:(\"nutrient recycling\" OR \"biogeochemical cycl*\") AND TITLE_ABS:(planetary OR Earth)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:46Z",
+   "hitCount": 0
+  },
+  "biosphere_recycling__cur__W1.json": {
+   "sha256": "5f9ce941c7ab490878503730eca9c171fe4c32cfeb41322dfcbafdc1b68b443b",
+   "bytes": 214,
+   "query": "(biosphere AND (\"nutrient recycling\" OR \"biogeochemical cycl*\") AND (planetary OR Earth)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:33Z",
+   "hitCount": 0
+  },
+  "biosphere_recycling__cur__W2.json": {
+   "sha256": "6d6571e27d473b75a361bdbfaf09e1d4c47edd580ba59246a1dfccb54cd33bd4",
+   "bytes": 214,
+   "query": "(biosphere AND (\"nutrient recycling\" OR \"biogeochemical cycl*\") AND (planetary OR Earth)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:55Z",
+   "hitCount": 0
+  },
+  "biosphere_recycling__cur__W3.json": {
+   "sha256": "4140dfbb7dc5a9537de101c3a0a92340892a2bbe2d8c0cadbc18d61dadd04d5a",
+   "bytes": 214,
+   "query": "(biosphere AND (\"nutrient recycling\" OR \"biogeochemical cycl*\") AND (planetary OR Earth)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:40Z",
+   "hitCount": 0
+  },
+  "my_phosphorus__P1__W1.json": {
+   "sha256": "ab875c40f5ceccd91cf78bac4d9ae74ba9d514fb964e4da452a69fdfd7dc8fee",
+   "bytes": 6803,
+   "query": "(TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus) AND TITLE_ABS:(transfer)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:20Z",
+   "hitCount": 1
+  },
+  "my_phosphorus__P1__W2.json": {
+   "sha256": "415bd6831ae313bdf36030588bf80b65197def5c4146075c746b4a9ac4d04ed7",
+   "bytes": 197,
+   "query": "(TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus) AND TITLE_ABS:(transfer)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:42Z",
+   "hitCount": 0
+  },
+  "my_phosphorus__P1__W3.json": {
+   "sha256": "6e384d7d048843542d91f970259eb5fae7dc3f33ebee3a3fbc899bb23428ec0f",
+   "bytes": 197,
+   "query": "(TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus) AND TITLE_ABS:(transfer)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:21Z",
+   "hitCount": 0
+  },
+  "my_phosphorus__P2__W1.json": {
+   "sha256": "7c63a76e11a2f590bcb4c79b5b03a2dd579fdf40d30ebc9269b218c6d3fce4c0",
+   "bytes": 13023,
+   "query": "(TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus OR phosphate) AND TITLE_ABS:(transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:22Z",
+   "hitCount": 2
+  },
+  "my_phosphorus__P2__W2.json": {
+   "sha256": "7dc3a132d47d2f8f10e1d1285a4ed5f419a9cd42e02f1db7b4fa7899775049ac",
+   "bytes": 8317,
+   "query": "(TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus OR phosphate) AND TITLE_ABS:(transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:46Z",
+   "hitCount": 1
+  },
+  "my_phosphorus__P2__W3.json": {
+   "sha256": "6f259870395a49ed06791b64d2bfaf81d6f58e0d5bc07a87c51be2e7bad33453",
+   "bytes": 13773,
+   "query": "(TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus OR phosphate) AND TITLE_ABS:(transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:26Z",
+   "hitCount": 2
+  },
+  "my_phosphorus__P2ft__W1.json": {
+   "sha256": "15e32d249e16f267a07374fc693e7a55f7ee01106e217f68dd45aed7dfaf7fe0",
+   "bytes": 136363,
+   "query": "(mycorrhiz* AND (phosphorus OR phosphate) AND (transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:26Z",
+   "hitCount": 20
+  },
+  "my_phosphorus__P2ft__W2.json": {
+   "sha256": "e1bd208b14105b4dc5b0f6d55a4bd9825e654334de91f81a00368c9773490dc7",
+   "bytes": 260041,
+   "query": "(mycorrhiz* AND (phosphorus OR phosphate) AND (transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:48Z",
+   "hitCount": 37
+  },
+  "my_phosphorus__P2ft__W3.json": {
+   "sha256": "1fd37eab5532987ff0a14469b951e43515d78e8811361e459dda73a54755002d",
+   "bytes": 172470,
+   "query": "(mycorrhiz* AND (phosphorus OR phosphate) AND (transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:27Z",
+   "hitCount": 21
+  },
+  "my_phosphorus__cur__W1.json": {
+   "sha256": "1c3ba5442d468699b98658a31bc2b183b7a4837e97e5ec1b8a854378ca127601",
+   "bytes": 96476,
+   "query": "(mycorrhiz* AND phosphorus AND transfer) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:17Z",
+   "hitCount": 14
+  },
+  "my_phosphorus__cur__W2.json": {
+   "sha256": "bd30158084c287f6a564377ea94a155dc5f3e8ba112535d1ce3e6e9398a0e45b",
+   "bytes": 116898,
+   "query": "(mycorrhiz* AND phosphorus AND transfer) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:42Z",
+   "hitCount": 16
+  },
+  "my_phosphorus__cur__W3.json": {
+   "sha256": "5b927b3bdb2d36ea1729e86104f1b4e3b28a9a197fd2e3ab1826c202d6760160",
+   "bytes": 75731,
+   "query": "(mycorrhiz* AND phosphorus AND transfer) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:20Z",
+   "hitCount": 9
+  },
+  "root_water_uptake__P1__W1.json": {
+   "sha256": "2f01bb2c5d5bbe457890734ce54d6e5136b435e5031e24fcdf53968c02cabf96",
+   "bytes": 208,
+   "query": "(TITLE_ABS:(\"root water uptake\") AND TITLE_ABS:(\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:28Z",
+   "hitCount": 0
+  },
+  "root_water_uptake__P1__W2.json": {
+   "sha256": "fa98baa2e96c33cb64ae73cbe2a67dbeb69c035e559b21acca01e5c1af351e66",
+   "bytes": 208,
+   "query": "(TITLE_ABS:(\"root water uptake\") AND TITLE_ABS:(\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:53Z",
+   "hitCount": 0
+  },
+  "root_water_uptake__P1__W3.json": {
+   "sha256": "a22f0ad488a0debc7fe8c3b4664e7e093237d66c55bb4ce69ae26c30a2db0b5b",
+   "bytes": 208,
+   "query": "(TITLE_ABS:(\"root water uptake\") AND TITLE_ABS:(\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:30Z",
+   "hitCount": 0
+  },
+  "root_water_uptake__P4__W1.json": {
+   "sha256": "7ac124682504c695d64d38ae7fac22c6d22f9a0cfa73bef018202b41f658484c",
+   "bytes": 275,
+   "query": "(TITLE_ABS:(\"root water uptake\" OR \"root hydraulic conductivit*\" OR \"root system architecture\") AND TITLE_ABS:(\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:32Z",
+   "hitCount": 0
+  },
+  "root_water_uptake__P4__W2.json": {
+   "sha256": "5ae03543d7184ba4e7ebc724a8a8e7ba5a211064405501bf356ac62bbb7ffbbe",
+   "bytes": 275,
+   "query": "(TITLE_ABS:(\"root water uptake\" OR \"root hydraulic conductivit*\" OR \"root system architecture\") AND TITLE_ABS:(\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:53Z",
+   "hitCount": 0
+  },
+  "root_water_uptake__P4__W3.json": {
+   "sha256": "29c744c78a1a45dfb7c0ae710eab95f8def807c7dcaac6498c90cd638c03c983",
+   "bytes": 5807,
+   "query": "(TITLE_ABS:(\"root water uptake\" OR \"root hydraulic conductivit*\" OR \"root system architecture\") AND TITLE_ABS:(\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:33Z",
+   "hitCount": 1
+  },
+  "root_water_uptake__P4ft__W1.json": {
+   "sha256": "6e28bad4241857d5d6eed2b5760ee02c265c160fc6a6e521aa1d671ccbd294f8",
+   "bytes": 78558,
+   "query": "((\"root water uptake\" OR \"root hydraulic conductivit*\" OR \"root system architecture\") AND (\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:33Z",
+   "hitCount": 11
+  },
+  "root_water_uptake__P4ft__W2.json": {
+   "sha256": "dd8865a8445b708ae43bde1c2487681e36d9274e77de961200d8ac4246aaf78b",
+   "bytes": 186879,
+   "query": "((\"root water uptake\" OR \"root hydraulic conductivit*\" OR \"root system architecture\") AND (\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:54Z",
+   "hitCount": 22
+  },
+  "root_water_uptake__P4ft__W3.json": {
+   "sha256": "16ac416a85dbd2f2b27dfde1d2d5038d80326c2555a4e1dca654364681f433bf",
+   "bytes": 105054,
+   "query": "((\"root water uptake\" OR \"root hydraulic conductivit*\" OR \"root system architecture\") AND (\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:39Z",
+   "hitCount": 13
+  },
+  "root_water_uptake__cur__W1.json": {
+   "sha256": "fe243521b89d1099b958121167b44f46675b4a81a12bcc23f5ad98e743479f5e",
+   "bytes": 37357,
+   "query": "(\"root water uptake\" AND (\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-17 TO 2026-11-24]",
+   "fetched": "2026-11-27T19:29:27Z",
+   "hitCount": 5
+  },
+  "root_water_uptake__cur__W2.json": {
+   "sha256": "df2e32a4a793c751a02ea9bbbee4c5de3764e7ad3a266a5b657df24358317731",
+   "bytes": 85842,
+   "query": "(\"root water uptake\" AND (\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-10 TO 2026-11-17]",
+   "fetched": "2026-11-27T19:29:48Z",
+   "hitCount": 10
+  },
+  "root_water_uptake__cur__W3.json": {
+   "sha256": "6df89722dbea5fee592fb7895c71a6f9c21f8c3583d9ecac7fe6db5e1934b86e",
+   "bytes": 24691,
+   "query": "(\"root water uptake\" AND (\"soil water potential\" OR drought)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]",
+   "fetched": "2026-11-27T19:30:30Z",
+   "hitCount": 3
+  }
+ },
+ "ids": {
+  "be_comb_geometry__P1__W1": [],
+  "be_comb_geometry__P1__W2": [],
+  "be_comb_geometry__P1__W3": [],
+  "be_comb_geometry__cur__W1": [
+   "43058457",
+   "PMC13785964",
+   "43071390"
+  ],
+  "be_comb_geometry__cur__W2": [
+   "43029148",
+   "43027637"
+  ],
+  "be_comb_geometry__cur__W3": [
+   "42982737",
+   "PMC5110665"
+  ],
+  "be_thermoregulation__P1__W1": [],
+  "be_thermoregulation__P1__W2": [],
+  "be_thermoregulation__P1__W3": [],
+  "be_thermoregulation__P3__W1": [],
+  "be_thermoregulation__P3__W2": [],
+  "be_thermoregulation__P3__W3": [],
+  "be_thermoregulation__P3ft__W1": [
+   "43056305",
+   "43050400",
+   "43048754"
+  ],
+  "be_thermoregulation__P3ft__W2": [
+   "43027056",
+   "43012323",
+   "43029483"
+  ],
+  "be_thermoregulation__P3ft__W3": [
+   "42996216"
+  ],
+  "be_thermoregulation__cur__W1": [
+   "43056305",
+   "43048754",
+   "43050400"
+  ],
+  "be_thermoregulation__cur__W2": [
+   "43027056",
+   "43012323",
+   "43029483"
+  ],
+  "be_thermoregulation__cur__W3": [
+   "42996216"
+  ],
+  "biosphere_recycling__P1__W1": [],
+  "biosphere_recycling__P1__W2": [],
+  "biosphere_recycling__P1__W3": [],
+  "biosphere_recycling__cur__W1": [],
+  "biosphere_recycling__cur__W2": [],
+  "biosphere_recycling__cur__W3": [],
+  "my_phosphorus__P1__W1": [
+   "43041999"
+  ],
+  "my_phosphorus__P1__W2": [],
+  "my_phosphorus__P1__W3": [],
+  "my_phosphorus__P2__W1": [
+   "43061600",
+   "43041999"
+  ],
+  "my_phosphorus__P2__W2": [
+   "43020471"
+  ],
+  "my_phosphorus__P2__W3": [
+   "42985422",
+   "42979373"
+  ],
+  "my_phosphorus__P2ft__W1": [
+   "43041999",
+   "43071297",
+   "43075482",
+   "PMC13787050",
+   "43061600",
+   "43069007",
+   "43041303",
+   "43043610",
+   "43041495",
+   "43062778",
+   "43061529",
+   "43061450",
+   "43054905",
+   "43058479",
+   "43046923",
+   "43047453",
+   "43073734",
+   "43062364",
+   "43041360",
+   "PMC13785933"
+  ],
+  "my_phosphorus__P2ft__W2": [
+   "43028980",
+   "43005992",
+   "43016950",
+   "43027704",
+   "43029067",
+   "43015790",
+   "43028900",
+   "43029058",
+   "43022627",
+   "43027643",
+   "43028949",
+   "43028992",
+   "43017180",
+   "43005720",
+   "43036827",
+   "43022071",
+   "43020471",
+   "43006819",
+   "43029034",
+   "43009628",
+   "43028995",
+   "43029083",
+   "43004482",
+   "43011049",
+   "43006026",
+   "43028858",
+   "43032376",
+   "43029031",
+   "43031968",
+   "43029009",
+   "43029044",
+   "43028999",
+   "43015620",
+   "43027747",
+   "43016981",
+   "43017279",
+   "43029078"
+  ],
+  "my_phosphorus__P2ft__W3": [
+   "42984748",
+   "42985422",
+   "42968024",
+   "42979657",
+   "42979373",
+   "42984538",
+   "42978422",
+   "42993822",
+   "42972519",
+   "43004482",
+   "42995617",
+   "42975453",
+   "42992232",
+   "42978934",
+   "42979962",
+   "42976182",
+   "42997365",
+   "42992689",
+   "42972265",
+   "42979488",
+   "42979136"
+  ],
+  "my_phosphorus__cur__W1": [
+   "43041999",
+   "43075482",
+   "43041303",
+   "43071297",
+   "43062778",
+   "PMC13787050",
+   "43061600",
+   "43043610",
+   "43047453",
+   "43061529",
+   "43041360",
+   "43073734",
+   "43062364",
+   "PMC13785933"
+  ],
+  "my_phosphorus__cur__W2": [
+   "43029067",
+   "43028980",
+   "43027704",
+   "43005720",
+   "43006819",
+   "43028949",
+   "43015790",
+   "43029009",
+   "43028900",
+   "43009628",
+   "43005992",
+   "43028995",
+   "43027643",
+   "43022627",
+   "43027747",
+   "43029058"
+  ],
+  "my_phosphorus__cur__W3": [
+   "42979657",
+   "42985422",
+   "42978422",
+   "42972519",
+   "42984748",
+   "42979373",
+   "42997365",
+   "42975453",
+   "42992232"
+  ],
+  "root_water_uptake__P1__W1": [],
+  "root_water_uptake__P1__W2": [],
+  "root_water_uptake__P1__W3": [],
+  "root_water_uptake__P4__W1": [],
+  "root_water_uptake__P4__W2": [],
+  "root_water_uptake__P4__W3": [
+   "42985935"
+  ],
+  "root_water_uptake__P4ft__W1": [
+   "43042603",
+   "43061155",
+   "43069007",
+   "43047990",
+   "43075482",
+   "43061600",
+   "43061450",
+   "43047459",
+   "43047570",
+   "43040456",
+   "43045997"
+  ],
+  "root_water_uptake__P4ft__W2": [
+   "43028900",
+   "43031968",
+   "43029000",
+   "43028864",
+   "43028927",
+   "43010120",
+   "43027049",
+   "43029103",
+   "43027902",
+   "43007470",
+   "43004482",
+   "43028968",
+   "43028895",
+   "43029083",
+   "43029026",
+   "43034280",
+   "43021302",
+   "43040456",
+   "43029457",
+   "43028921",
+   "43005917",
+   "43015599"
+  ],
+  "root_water_uptake__P4ft__W3": [
+   "42985935",
+   "42987460",
+   "42984748",
+   "42973534",
+   "42979213",
+   "42967995",
+   "43004482",
+   "42983288",
+   "42989086",
+   "42981313",
+   "42992079",
+   "42989097",
+   "42978678"
+  ],
+  "root_water_uptake__cur__W1": [
+   "43061155",
+   "43069007",
+   "43075482",
+   "43047459",
+   "43045997"
+  ],
+  "root_water_uptake__cur__W2": [
+   "43028900",
+   "43028864",
+   "43027049",
+   "43007470",
+   "43028968",
+   "43029083",
+   "43021302",
+   "43029457",
+   "43028921",
+   "43015599"
+  ],
+  "root_water_uptake__cur__W3": [
+   "42973534",
+   "42984748",
+   "42989086"
+  ]
+ },
+ "has_abstract": {
+  "43058457": true,
+  "PMC13785964": false,
+  "43071390": true,
+  "43029148": true,
+  "43027637": true,
+  "42982737": true,
+  "PMC5110665": false,
+  "43056305": true,
+  "43050400": true,
+  "43048754": true,
+  "43027056": true,
+  "43012323": true,
+  "43029483": true,
+  "42996216": true,
+  "43041999": true,
+  "43061600": true,
+  "43020471": true,
+  "42985422": true,
+  "42979373": true,
+  "43071297": true,
+  "43075482": true,
+  "PMC13787050": false,
+  "43069007": true,
+  "43041303": true,
+  "43043610": true,
+  "43041495": true,
+  "43062778": true,
+  "43061529": true,
+  "43061450": true,
+  "43054905": true,
+  "43058479": true,
+  "43046923": true,
+  "43047453": true,
+  "43073734": true,
+  "43062364": true,
+  "43041360": true,
+  "PMC13785933": false,
+  "43028980": true,
+  "43005992": true,
+  "43016950": true,
+  "43027704": true,
+  "43029067": true,
+  "43015790": true,
+  "43028900": true,
+  "43029058": true,
+  "43022627": true,
+  "43027643": true,
+  "43028949": true,
+  "43028992": true,
+  "43017180": true,
+  "43005720": true,
+  "43036827": true,
+  "43022071": true,
+  "43006819": true,
+  "43029034": true,
+  "43009628": true,
+  "43028995": true,
+  "43029083": true,
+  "43004482": true,
+  "43011049": true,
+  "43006026": true,
+  "43028858": true,
+  "43032376": true,
+  "43029031": true,
+  "43031968": true,
+  "43029009": true,
+  "43029044": true,
+  "43028999": true,
+  "43015620": true,
+  "43027747": true,
+  "43016981": true,
+  "43017279": true,
+  "43029078": true,
+  "42984748": true,
+  "42968024": true,
+  "42979657": true,
+  "42984538": true,
+  "42978422": true,
+  "42993822": true,
+  "42972519": true,
+  "42995617": true,
+  "42975453": true,
+  "42992232": true,
+  "42978934": true,
+  "42979962": true,
+  "42976182": true,
+  "42997365": true,
+  "42992689": true,
+  "42972265": true,
+  "42979488": true,
+  "42979136": true,
+  "42985935": true,
+  "43042603": true,
+  "43061155": true,
+  "43047990": true,
+  "43047459": true,
+  "43047570": true,
+  "43040456": true,
+  "43045997": true,
+  "43029000": true,
+  "43028864": true,
+  "43028927": true,
+  "43010120": true,
+  "43027049": true,
+  "43029103": true,
+  "43027902": true,
+  "43007470": true,
+  "43028968": true,
+  "43028895": true,
+  "43029026": true,
+  "43034280": true,
+  "43021302": true,
+  "43029457": true,
+  "43028921": true,
+  "43005917": true,
+  "43015599": true,
+  "42987460": true,
+  "42973534": true,
+  "42979213": true,
+  "42967995": true,
+  "42983288": true,
+  "42989086": true,
+  "42981313": true,
+  "42992079": true,
+  "42989097": true,
+  "42978678": true
+ },
+ "query_table": {
+  "be_comb_geometry:cur": {
+   "hits": 7,
+   "with_abstract": 5,
+   "relevant": 0,
+   "current_relevant": 0,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 3,
+    "W2": 2,
+    "W3": 2
+   },
+   "precision": "0/5",
+   "recall_vs_current": "0/0"
+  },
+  "be_comb_geometry:P1": {
+   "hits": 0,
+   "with_abstract": 0,
+   "relevant": 0,
+   "current_relevant": 0,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 0
+   },
+   "precision": "0/0",
+   "recall_vs_current": "0/0"
+  },
+  "be_thermoregulation:cur": {
+   "hits": 7,
+   "with_abstract": 7,
+   "relevant": 2,
+   "current_relevant": 2,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 3,
+    "W2": 3,
+    "W3": 1
+   },
+   "precision": "2/7",
+   "recall_vs_current": "2/2"
+  },
+  "be_thermoregulation:P1": {
+   "hits": 0,
+   "with_abstract": 0,
+   "relevant": 0,
+   "current_relevant": 2,
+   "lost_vs_current": [
+    "43048754",
+    "43056305",
+    "43029483"
+   ],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 0
+   },
+   "precision": "0/0",
+   "recall_vs_current": "0/2"
+  },
+  "be_thermoregulation:P3": {
+   "hits": 0,
+   "with_abstract": 0,
+   "relevant": 0,
+   "current_relevant": 2,
+   "lost_vs_current": [
+    "43048754",
+    "43056305",
+    "43029483"
+   ],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 0
+   },
+   "precision": "0/0",
+   "recall_vs_current": "0/2"
+  },
+  "be_thermoregulation:P3ft": {
+   "hits": 7,
+   "with_abstract": 7,
+   "relevant": 2,
+   "current_relevant": 2,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 3,
+    "W2": 3,
+    "W3": 1
+   },
+   "precision": "2/7",
+   "recall_vs_current": "2/2"
+  },
+  "my_phosphorus:cur": {
+   "hits": 39,
+   "with_abstract": 37,
+   "relevant": 4,
+   "current_relevant": 4,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 14,
+    "W2": 16,
+    "W3": 9
+   },
+   "precision": "4/37",
+   "recall_vs_current": "4/4"
+  },
+  "my_phosphorus:P1": {
+   "hits": 1,
+   "with_abstract": 1,
+   "relevant": 1,
+   "current_relevant": 4,
+   "lost_vs_current": [
+    "43061600",
+    "42979373",
+    "42985422"
+   ],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 1,
+    "W2": 0,
+    "W3": 0
+   },
+   "precision": "1/1",
+   "recall_vs_current": "1/4"
+  },
+  "my_phosphorus:P2": {
+   "hits": 5,
+   "with_abstract": 5,
+   "relevant": 4,
+   "current_relevant": 4,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 2,
+    "W2": 1,
+    "W3": 2
+   },
+   "precision": "4/5",
+   "recall_vs_current": "4/4"
+  },
+  "my_phosphorus:P2ft": {
+   "hits": 78,
+   "with_abstract": 76,
+   "relevant": 4,
+   "current_relevant": 4,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 20,
+    "W2": 37,
+    "W3": 21
+   },
+   "precision": "4/76",
+   "recall_vs_current": "4/4"
+  },
+  "root_water_uptake:cur": {
+   "hits": 18,
+   "with_abstract": 18,
+   "relevant": 3,
+   "current_relevant": 3,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 5,
+    "W2": 10,
+    "W3": 3
+   },
+   "precision": "3/18",
+   "recall_vs_current": "3/3"
+  },
+  "root_water_uptake:P1": {
+   "hits": 0,
+   "with_abstract": 0,
+   "relevant": 0,
+   "current_relevant": 3,
+   "lost_vs_current": [
+    "43069007",
+    "43075482",
+    "42989086"
+   ],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 0
+   },
+   "precision": "0/0",
+   "recall_vs_current": "0/3"
+  },
+  "root_water_uptake:P4": {
+   "hits": 1,
+   "with_abstract": 1,
+   "relevant": 1,
+   "current_relevant": 3,
+   "lost_vs_current": [
+    "43069007",
+    "43075482",
+    "42989086"
+   ],
+   "gained_vs_current": [
+    "42985935"
+   ],
+   "per_window_hits": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 1
+   },
+   "precision": "1/1",
+   "recall_vs_current": "0/3"
+  },
+  "root_water_uptake:P4ft": {
+   "hits": 46,
+   "with_abstract": 46,
+   "relevant": 4,
+   "current_relevant": 3,
+   "lost_vs_current": [],
+   "gained_vs_current": [
+    "42985935"
+   ],
+   "per_window_hits": {
+    "W1": 11,
+    "W2": 22,
+    "W3": 13
+   },
+   "precision": "4/46",
+   "recall_vs_current": "3/3"
+  },
+  "biosphere_recycling:cur": {
+   "hits": 0,
+   "with_abstract": 0,
+   "relevant": 0,
+   "current_relevant": 0,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 0
+   },
+   "precision": "0/0",
+   "recall_vs_current": "0/0"
+  },
+  "biosphere_recycling:P1": {
+   "hits": 0,
+   "with_abstract": 0,
+   "relevant": 0,
+   "current_relevant": 0,
+   "lost_vs_current": [],
+   "gained_vs_current": [],
+   "per_window_hits": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 0
+   },
+   "precision": "0/0",
+   "recall_vs_current": "0/0"
+  }
+ },
+ "filters": {
+  "P5_flag_query_clause_not_in_abstract": {
+   "flagged_relevant": 8,
+   "flagged_not_relevant": 55,
+   "unflagged_relevant": 1,
+   "unflagged_not_relevant": 0
+  },
+  "P6_hx4": {
+   "stubs_before": 59,
+   "on_partial_before": 9,
+   "dependency_rule": 52,
+   "dependency_rule_on_partial": 9,
+   "dependency_and_entity_named": 21,
+   "dependency_and_entity_named_on_partial": 6,
+   "entity_rule_lost_partial": [
+    "43048754",
+    "43075482",
+    "43029483"
+   ]
+  },
+  "pipeline_three_windows": {
+   "before": {
+    "candidates": 64,
+    "partial_candidates": 9,
+    "HX1": 8,
+    "HX1_on_partial": 3,
+    "HX4": 59,
+    "HX4_on_partial": 9
+   },
+   "amended_code_current_queries": {
+    "candidates": 64,
+    "partial_candidates": 9,
+    "HX1": 6,
+    "HX1_on_partial": 3,
+    "HX4": 52,
+    "HX4_on_partial": 9
+   },
+   "adopted": {
+    "candidates": 35,
+    "partial_candidates": 9,
+    "HX1": 4,
+    "HX1_on_partial": 3,
+    "HX4": 23,
+    "HX4_on_partial": 9
+   }
+  }
+ },
+ "late_and_pending": {
+  "late_works_W1": {
+   "note": "in the 2026-11-27 re-fetch of W1 but not in the 2026-11-24 snapshot; FIRST_IDATE 2026-11-21..2026-11-24",
+   "be_comb_geometry": [
+    "43071390"
+   ],
+   "my_phosphorus": [
+    "43075482",
+    "43071297",
+    "43073734",
+    "43062364"
+   ],
+   "root_water_uptake": [
+    "43069007",
+    "43075482"
+   ],
+   "unreachable_by_next_7_day_window": {
+    "43069007": "FIRST_IDATE 2026-11-23, PARTIAL (root)",
+    "43062364": "FIRST_IDATE 2026-11-21"
+   },
+   "observed_lag_days_at_least": 3
+  },
+  "no_abstract_W1": {
+   "PMC13781785": "now PMID 43082195 with an abstract, new FIRST_IDATE 2026-11-26 (inside the next window)",
+   "PMC13785964": "still no abstract",
+   "PMC13787050": "still no abstract",
+   "PMC13785933": "still no abstract"
+  }
+ }
+}

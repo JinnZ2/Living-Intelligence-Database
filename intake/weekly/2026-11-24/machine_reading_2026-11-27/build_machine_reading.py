@@ -5,7 +5,7 @@ intake of 2026-11-24 from the judgments entered by hand in READINGS below.
 
 Python standard library only. No network.
 
-  python3 build_machine_reading.py [FULLTEXT_DIR]
+  python3 build_machine_reading.py [FULLTEXT_DIR [SUPPLEMENTARY_DIR]]
 
 The script makes no judgment. The judgments in READINGS were entered by the machine reader
 (Claude Opus 5.5 working in Perplexity Computer) and are MACHINE_READ_NOT_REVIEWED.
@@ -22,12 +22,24 @@ FULLTEXT_DIR, when given, holds the Europe PMC fullTextXML files <PMCID>.xml tha
 Their text is not committed. Their sha256 must equal fulltext_MANIFEST.json; the query-term
 locations below are recomputed from them. Without FULLTEXT_DIR the locations are taken from
 the existing machine_reading.json and full-text quotes are not re-checked (reported).
+
+Added 2026-11-27 (later the same day, after the owner's decisions on PR #34):
+SUPPLEMENTARY_DIR, when given, holds the supplementary files of PMID 43056305 that were read
+(PLOS Biology, open access, CC BY): s009.xlsx (S1 Data) and s010.xlsx (S2 Data). Their bytes are
+not committed; their sha256 must equal supplementary_MANIFEST.json. The script parses the S1
+sheet Brood_nest_T_RH_XSBN_lhasa with the standard library (zipfile and XML) and recomputes the
+per-hive numbers in NOTES; it fails if any differs at the stated rounding. Without
+SUPPLEMENTARY_DIR the NOTES numbers are taken as entered and reported as not re-checked.
+The readings in READINGS are not changed by a note: a note is added beside them, dated.
 """
 import hashlib
 import html
 import json
 import re
+import math
 import sys
+import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -256,6 +268,109 @@ READINGS = {
     ),
 }
 
+# Dated notes added after a reading. A note never replaces the reading's fields; it is
+# appended to the record's "notes" list. Labels: OBSERVED (what the file says), DERIVED
+# (computed here from the file), PROPOSED (a suggestion for the owner).
+NOTES = {
+    "43056305": [dict(
+        date="2026-11-27",
+        kind="FULL_TEXT_AND_SUPPLEMENTARY_READ",
+        authority="Owner's decisions on PR #34 (registry/DECLARED.json, amendment of 2026-11-27): full text may be read where it is open access, labelled as full-text observation.",
+        read=["full_text", "supplementary:S1 Data (s009.xlsx)", "supplementary:S2 Data (s010.xlsx)", "supplementary:S2 Fig (s002.tif, hash only)"],
+        observed=[
+            "Full-text and supplementary observation. S1 Data sheet Brood_nest_T_RH_XSBN_lhasa has 1160 brood-nest records at 5-min intervals: hive, site, device, brood temperature, brood RH, time.",
+            "Lhasa hives 1-3: n = 288 each, one day, recorded 2026-07-20 22:52 to 2026-07-21 22:50 as stamped in the sheet. Xishuangbanna hives 4-6: n = 113, 83 and 100, daytime of 2024-08-02 only (08:47 to 18:07).",
+            "S2 Data sheet Brood_nest_T_RH_XSBN_Lhasa reports per-hive mean/SD (C): 34.1/0.1, 34.2/0.3, 34.2/0.2, 34.4/0.8, 34.6/0.2, 34.5/0.8.",
+            "Ambient temperature is not recorded beside the brood-nest series. S2 Data Study_site_location gives altitude (Lhasa 3637 m), barometric pressure and pO2, not ambient temperature.",
+            "S2 Data Hypoxic_hive_Conditions: artificial-hypoxia experiment, hive-air temperature mean about 32.6-33.0 C, SD about 1.7 C. Hive air, not brood nest.",
+        ],
+        derived_from="S1 Data, sheet Brood_nest_T_RH_XSBN_lhasa, column Brood_Temperature (°C); population SD; RMS = sqrt(mean((T - 35)^2)).",
+        derived={"hives": {
+            "1": {"site": "Lhasa", "n": 288, "mean": 34.143, "sd": 0.126, "rms_about_35": 0.866},
+            "2": {"site": "Lhasa", "n": 288, "mean": 34.156, "sd": 0.26, "rms_about_35": 0.883},
+            "3": {"site": "Lhasa", "n": 288, "mean": 34.236, "sd": 0.179, "rms_about_35": 0.785},
+            "4": {"site": "Xishuangbanna", "n": 113, "mean": 34.429, "sd": 0.762, "rms_about_35": 0.952},
+            "5": {"site": "Xishuangbanna", "n": 83, "mean": 34.608, "sd": 0.198, "rms_about_35": 0.439},
+            "6": {"site": "Xishuangbanna", "n": 100, "mean": 34.5, "sd": 0.823, "rms_about_35": 0.963}},
+            "pooled": {"n": 1160, "sd": 0.411, "rms_about_35": 0.846}},
+        quotes=[("full_text", "honey bee colonies maintain a highly stable brood-nest microclimate in which V. destructor reproduces, typically between 33 and 36 °C"),
+                ("supplementary", "Only daytime data was collected because Xishuangbanna has a tropical rainforest climate")],
+        quote_notes=["The full-text sentence cites the paper's references 9 and 10; it is not the paper's own data."],
+        limits="One day at Lhasa (July) and one daytime at Xishuangbanna (August); ambient not recorded; nothing spans the field's -30 C to +45 C. The unit and form of the field's 0.94 are not stated, so the derived numbers are not compared with it. No claim_support, no number_support.",
+        proposed="Disposition after this note: ACCEPT_FOR_LEDGER_CANDIDACY. The series measures the quantity the field defines (brood-nest temperature about 35 C) at two climates, though not across the stated ambient range. The earlier disposition NEEDS_FULL_TEXT_READER stays as written. The HX4 stub verdict FALSIFIER_MET is unchanged. Registering the source is the owner's call; it is not registered here.",
+        disposition_after_note="ACCEPT_FOR_LEDGER_CANDIDACY",
+    )],
+}
+
+NOTE_PROMPT = "reading_prompt_2026-11-27_supplementary.md"
+
+NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
+      "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+      "p": "http://schemas.openxmlformats.org/package/2006/relationships"}
+
+
+def xlsx_rows(path, sheet):
+    """Rows of one sheet as dicts column -> string (shared strings resolved). Standard library only."""
+    z = zipfile.ZipFile(path)
+    shared = []
+    if "xl/sharedStrings.xml" in z.namelist():
+        for si in ET.fromstring(z.read("xl/sharedStrings.xml")).findall("m:si", NS):
+            shared.append("".join(t.text or "" for t in si.iter(f"{{{NS['m']}}}t")))
+    wb = ET.fromstring(z.read("xl/workbook.xml"))
+    rid = next(s.get(f"{{{NS['r']}}}id") for s in wb.find("m:sheets", NS) if s.get("name") == sheet)
+    rels = ET.fromstring(z.read("xl/_rels/workbook.xml.rels"))
+    target = next(r.get("Target") for r in rels.findall("p:Relationship", NS) if r.get("Id") == rid).lstrip("/")
+    target = target if target.startswith("xl/") else "xl/" + target
+    rows = []
+    for row in ET.fromstring(z.read(target)).iter(f"{{{NS['m']}}}row"):
+        cells = {}
+        for c in row.findall("m:c", NS):
+            col = re.match(r"[A-Z]+", c.get("r")).group(0)
+            v = c.find("m:v", NS)
+            if c.get("t") == "s" and v is not None:
+                val = shared[int(v.text)]
+            elif c.get("t") == "inlineStr":
+                val = "".join(t.text or "" for t in c.iter(f"{{{NS['m']}}}t"))
+            else:
+                val = v.text if v is not None else None
+            cells[col] = val
+        rows.append(cells)
+    return rows
+
+
+def check_supplementary(supdir, fails):
+    man = json.loads((HERE / "supplementary_MANIFEST.json").read_text(encoding="utf-8"))
+    for name, e in man["files"].items():
+        if sha((supdir / name).read_bytes()) != e["sha256"]:
+            fails.append(f"supplementary {name}: sha256 differs from supplementary_MANIFEST.json")
+    rows = xlsx_rows(supdir / "s009.xlsx", "Brood_nest_T_RH_XSBN_lhasa")
+    col = {v: k for k, v in rows[0].items()}
+    by = {}
+    for r in rows[1:]:
+        if r.get(col["Hive_ID"]) is None:
+            continue
+        by.setdefault(str(int(float(r[col["Hive_ID"]]))), []).append(float(r[col["Brood_Temperature (°C)"]]))
+    d = NOTES["43056305"][0]["derived"]
+    allt = []
+    for h, e in d["hives"].items():
+        t = by.get(h, [])
+        allt += t
+        m = sum(t) / len(t)
+        got = {"n": len(t), "mean": round(m, 3), "sd": round(math.sqrt(sum((x - m) ** 2 for x in t) / len(t)), 3),
+               "rms_about_35": round(math.sqrt(sum((x - 35) ** 2 for x in t) / len(t)), 3)}
+        for k, v in got.items():
+            if abs(v - e[k]) > 1e-9:
+                fails.append(f"43056305 hive {h}: {k} recomputed {v}, entered {e[k]}")
+    if sorted(by) != sorted(d["hives"]):
+        fails.append(f"43056305: hives in sheet {sorted(by)} differ from NOTES")
+    m = sum(allt) / len(allt)
+    pooled = {"n": len(allt), "sd": round(math.sqrt(sum((x - m) ** 2 for x in allt) / len(allt)), 3),
+              "rms_about_35": round(math.sqrt(sum((x - 35) ** 2 for x in allt) / len(allt)), 3)}
+    if pooled != d["pooled"]:
+        fails.append(f"43056305 pooled recomputed {pooled}, entered {d['pooled']}")
+    return rows + xlsx_rows(supdir / "s010.xlsx", "Brood_nest_T_RH_XSBN_Lhasa")
+
+
 # Observed outside the 15, while testing query proposals on 2026-11-27 (read-only searches).
 LATE_INDEXED = {
     "note": "Re-running the unchanged seed queries for the same window on 2026-11-27 returned more works than the snapshot: root_water_uptake 5 (snapshot 3), my_phosphorus 14 (snapshot 10). The extra works have FIRST_IDATE 2026-11-23 or 2026-11-24, so they were indexed after the run. They are not candidates here. One abstract was read (below); the others are UNCHECKED.",
@@ -268,11 +383,15 @@ LATE_INDEXED = {
 
 def main():
     ftdir = Path(sys.argv[1]) if len(sys.argv) > 1 else None
+    supdir = Path(sys.argv[2]) if len(sys.argv) > 2 else None
     intake = json.loads((INTAKE / "intake.json").read_text(encoding="utf-8"))
     man = json.loads((INTAKE / "snapshots" / "manifest.json").read_text(encoding="utf-8"))
     ftman = json.loads((HERE / "fulltext_MANIFEST.json").read_text(encoding="utf-8"))
     prompt_sha = sha((HERE / "reading_prompt.md").read_bytes())
     fails = []
+    sup_rows = check_supplementary(supdir, fails) if supdir else None
+    if not supdir:
+        print("NOTE 43056305: supplementary numbers not re-checked (no SUPPLEMENTARY_DIR)")
 
     abstracts, pmcids, titles = {}, {}, {}
     for e in man["entries"]:
@@ -346,6 +465,27 @@ def main():
                           "verdict": v[0], "reason": v[1]})
         if len(stubs) != len(R["stubs"]):
             fails.append(f"{p}: verdict count differs from stub count")
+        notes = []
+        for nt in NOTES.get(p, []):
+            nq = []
+            for src, q in nt["quotes"]:
+                n = len(q.split())
+                if n > 25:
+                    fails.append(f"{p} note: quote over 25 words ({n})")
+                if src == "full_text":
+                    hay = ft_body
+                elif src == "supplementary":
+                    hay = clean(" ".join(str(v) for r in sup_rows for v in r.values() if v)) if sup_rows else None
+                else:
+                    hay = clean(a)
+                if hay is None:
+                    print(f"NOTE {p}: note quote from {src} not re-checked")
+                elif clean(q) not in hay:
+                    fails.append(f"{p} note: quote not verbatim in {src}: {q[:60]}")
+                nq.append({"source": src, "quote": q, "words": n})
+            notes.append({**{k: v for k, v in nt.items() if k != "quotes"}, "quotes": nq,
+                          "reading_state": STATE, "reader": MODEL, "prompt": NOTE_PROMPT,
+                          "prompt_sha256": sha((HERE / NOTE_PROMPT).read_bytes()), "status": "PROPOSED"})
         out.append({
             "candidate_id": c["id"], "pmid": p, "pmcid": pmc, "doi": c["work"]["doi"],
             "title": c["work"]["title"], "query_id": c["query_id"],
@@ -360,6 +500,7 @@ def main():
             "disposition": R["disposition"], "disposition_reason": R["disposition_reason"],
             "reading_state": STATE, "reader": MODEL, "prompt_sha256": prompt_sha, "date": DATE,
             "status": "PROPOSED",
+            **({"notes": notes} if notes else {}),
         })
     for p in READINGS:
         if p not in seen:
@@ -411,6 +552,7 @@ def main():
             "disposition": "ACCEPT_FOR_LEDGER_CANDIDACY (worth an outside reader's reading-ledger entry once the source is registered) | NEEDS_FULL_TEXT_READER | REJECT",
         },
         "limits": "One machine reader, no second reading. Full texts were read to locate query terms and to check the abstract's scope. No supplementary data were read. Full-text text is not committed; its sha256 is in fulltext_MANIFEST.json.",
+        "limits_added_2026-11-27": "Later on 2026-11-27, after the owner's decisions on PR #34, the S1 and S2 Data of 43056305 were read; see that record's notes. Their bytes are not committed; their sha256 is in supplementary_MANIFEST.json. No other supplementary data were read.",
         "summary": summary, "candidates": out, "outside_the_15": LATE_INDEXED,
     }
     if fails:
