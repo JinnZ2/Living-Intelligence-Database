@@ -12,6 +12,9 @@ Repair 2026-11-24 (fixture F5 in validation/fixtures/DECLARED.json):
   and is left out of the scan (entities_loaded counts what was scanned). Before, the thin index
   entry was scanned in its place: it has no attributes, so it could only look clean.
   scoped_ratio is null when there is no numeric attribute to count (before: 1.0).
+  F7 (second order): the confidence of a scoped attribute is scope_checker.confidence_record,
+  the same function every instrument uses. An attribute with no stored confidence is bucketed at
+  its computed value (before: at 0.5), and confidence_by_attribute lists value and basis for each.
   The behaviour before the repair is kept behind legacy=True / --legacy, for comparison.
 """
 
@@ -21,7 +24,7 @@ from pathlib import Path
 from collections import defaultdict
 from scope_checker import (
     is_scoped, extract_value, extract_confidence,
-    list_unscoped_attributes, list_noun_pretenders
+    list_unscoped_attributes, list_noun_pretenders, confidence_record
 )
 
 def load_ontology(path):
@@ -74,6 +77,7 @@ def audit(ontology: dict, repo_root: Path = None, legacy: bool = False) -> dict:
         "unscoped_numerics": [],
         "noun_pretenders": [],
         "confidence_distribution": defaultdict(int),
+        "confidence_by_attribute": [],
         "possible_contradictions": [],
         "dependency_checks": [],
         "scoped_ratio": 0.0
@@ -99,10 +103,17 @@ def audit(ontology: dict, repo_root: Path = None, legacy: bool = False) -> dict:
                     "note": "Has value but no scope block."
                 })
             elif is_scoped(attr_val):
-                evidence = attr_val["scope"].get("evidence", {})
-                conf = evidence.get("relational_confidence",
-                       attr_val["scope"].get("relational_confidence", 0.5))
-                report["confidence_distribution"][round(conf, 2)] += 1
+                if legacy:
+                    evidence = attr_val["scope"].get("evidence", {})
+                    conf = evidence.get("relational_confidence",
+                           attr_val["scope"].get("relational_confidence", 0.5))
+                    report["confidence_distribution"][round(conf, 2)] += 1
+                else:
+                    rec = confidence_record(attr_val)
+                    report["confidence_distribution"][round(rec["value"], 2)] += 1
+                    report["confidence_by_attribute"].append({
+                        "entity": e["id"], "attribute": attr_name,
+                        "value": rec["value"], "basis": rec["basis"]})
 
         # Noun pretenders
         nouns = list_noun_pretenders(e)
