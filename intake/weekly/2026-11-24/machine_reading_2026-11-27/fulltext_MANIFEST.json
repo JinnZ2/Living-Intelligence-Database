@@ -1,0 +1,96 @@
+{
+ "record": "FULLTEXT_AS_RECEIVED_MANIFEST",
+ "note": "Europe PMC fullTextXML as received on 2026-11-27 by the machine reader. Text is not committed, following provenance/as_received/abstracts_MANIFEST.json; only bytes and sha256 are listed. A later fetch may differ.",
+ "files": {
+  "PMC13770832": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13770832/fullTextXML",
+   "bytes": 141382,
+   "sha256": "4b8e50c77f23f8813b3e1248dc1cd10fcdfe50e309aeb1066b4efb81d2b3a906",
+   "fetched": "2026-11-27"
+  },
+  "PMC13771051": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13771051/fullTextXML",
+   "bytes": 206739,
+   "sha256": "92fe554936713f9510eb90ff7b7d08deabb9235d8e0272f9d31f550a37324863",
+   "fetched": "2026-11-27"
+  },
+  "PMC13772793": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13772793/fullTextXML",
+   "bytes": 239358,
+   "sha256": "3561161ecc01b52f9f84ffc4fbb7a227dcb2d5688b2019572cfa89d080a79949",
+   "fetched": "2026-11-27"
+  },
+  "PMC13773938": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13773938/fullTextXML",
+   "bytes": 226823,
+   "sha256": "d1ab5b1eb56c7e522bd06ec463f06ed2dbacc2ac005aa2ad20ae476f41d99dfc",
+   "fetched": "2026-11-27"
+  },
+  "PMC13773956": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13773956/fullTextXML",
+   "bytes": 134386,
+   "sha256": "5c836a835fb21147d667757503674d838c05f8322044dc1ac5b671411144a186",
+   "fetched": "2026-11-27"
+  },
+  "PMC13776390": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13776390/fullTextXML",
+   "bytes": 197380,
+   "sha256": "e98c62c3aa9df12e74c9eab475ecf2c2b10e44019c09293d1a057a7942cd982c",
+   "fetched": "2026-11-27"
+  },
+  "PMC13777460": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13777460/fullTextXML",
+   "bytes": 146642,
+   "sha256": "5b5da4b9b7a4aec7b2e722c0e2a61c3fbb35e87c709ccb00f6ca373fe4413c58",
+   "fetched": "2026-11-27"
+  },
+  "PMC13777887": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13777887/fullTextXML",
+   "bytes": 224929,
+   "sha256": "7e7aadddef6f23a3d918f2dafd07754597c3721ec308ea3031d91a2efd402288",
+   "fetched": "2026-11-27"
+  },
+  "PMC13781326": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13781326/fullTextXML",
+   "bytes": 163142,
+   "sha256": "07d9e7422d9b0aabe8ae5b18cf34e359550ba3c13a0746a5c9470a09e8323663",
+   "fetched": "2026-11-27"
+  },
+  "PMC13783529": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13783529/fullTextXML",
+   "bytes": 597811,
+   "sha256": "ffc8ce5181fbfa12b4960cad345617cc9fdddc60c45b7d6e3ffa7711ea8c6be3",
+   "fetched": "2026-11-27"
+  },
+  "PMC13783693": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13783693/fullTextXML",
+   "bytes": 139074,
+   "sha256": "689639b0c583c34fc1b781beef1939dde4722566c9334d4fcd68a6f4e3b3e3a8",
+   "fetched": "2026-11-27"
+  },
+  "PMC13784354": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13784354/fullTextXML",
+   "bytes": 261306,
+   "sha256": "2a4f865ce06302834ea6e3cdd1932e7da058197397927285bd932d9d60be9127",
+   "fetched": "2026-11-27"
+  },
+  "PMC13784459": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13784459/fullTextXML",
+   "bytes": 110338,
+   "sha256": "ca4778723260f243652042d21b947a91d5cbdf7896f8ef4df7c14a4878dc9ccc",
+   "fetched": "2026-11-27"
+  },
+  "PMC13784587": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13784587/fullTextXML",
+   "bytes": 150346,
+   "sha256": "9843bfdc5edbea5e083dbbb869244342bfd7390e767bb070dea762ab9cbbee0a",
+   "fetched": "2026-11-27"
+  },
+  "PMC13788082": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13788082/fullTextXML",
+   "bytes": 133839,
+   "sha256": "27a481c0d1ccc963f261e56f8a06ce9f3b02d4422e7f8ed412efcc01ab55d41a",
+   "fetched": "2026-11-27"
+  }
+ }
+}
