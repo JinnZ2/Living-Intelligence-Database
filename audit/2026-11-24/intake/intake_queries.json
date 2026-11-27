@@ -3,6 +3,7 @@
  "status": "PROPOSED; seed list written by the auditor from fields already traced. The owner edits, adds or removes queries; the script reads this file and nothing else to decide what to ask for.",
  "date": "2026-11-24",
  "query_language": "Europe PMC search syntax. The script adds the window clause FIRST_IDATE:[since TO until].",
+ "notes": ["2026-11-27: my_phosphorus amended by the owner's order (evidence chooses); the other four queries were tested and kept unchanged. The proposals tested and rejected, with their numbers, are in intake/weekly/2026-11-24/machine_reading_2026-11-27/MACHINE_READING.md."],
  "queries": [
   {"id": "be_comb_geometry", "query": "(honeycomb OR \"comb building\" OR \"comb cell\") AND (bee OR Apis)",
    "terms": ["honeycomb", "comb", "hexagon", "cell"],
@@ -10,7 +11,9 @@
   {"id": "be_thermoregulation", "query": "(thermoregulation OR \"brood temperature\" OR \"nest temperature\") AND (Apis OR honeybee)",
    "terms": ["thermoregulation", "temperature", "brood"],
    "touches": [{"entity": "BE", "field": "collective_thermoregulation"}]},
-  {"id": "my_phosphorus", "query": "mycorrhiz* AND phosphorus AND transfer",
+  {"id": "my_phosphorus", "query": "TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus OR phosphate) AND TITLE_ABS:(transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)",
+   "query_before_2026-11-27": "mycorrhiz* AND phosphorus AND transfer",
+   "amended": "2026-11-27, amendment 'my_phosphorus query, title and abstract' in registry/DECLARED.json. Three windows (2026-11-03 to 2026-11-24): hits 39 to 5, precision 4/37 to 4/5, no relevant work lost (4 of 4). Evidence: intake/weekly/2026-11-24/machine_reading_2026-11-27/proposal_evidence.json",
    "terms": ["phosphorus", "mycorrhiz", "transfer"],
    "touches": [{"entity": "MY", "field": "phosphorus_transfer_efficiency"}]},
   {"id": "root_water_uptake", "query": "\"root water uptake\" AND (\"soil water potential\" OR drought)",
