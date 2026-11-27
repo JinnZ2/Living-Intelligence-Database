@@ -19,6 +19,8 @@ run can be repeated from its snapshots and gives the same output.
                F1 NO_ABSTRACT          no abstract text in the record
                F2 ALREADY_REGISTERED   PMID already in registry/sources.json
                F3 DUPLICATE            same PMID/DOI already taken from an earlier query
+               F4 SEEN_IN_EARLIER_INTAKE  PMID/DOI already a candidate in an earlier week's
+                                       intake/weekly/<date>/intake.json (date before until)
              Flags (the item is kept, the flag is shown):
                G1 RETRACTION_OR_NOTICE pubType names a retraction, erratum, correction or
                                        expression of concern
@@ -40,13 +42,23 @@ run can be repeated from its snapshots and gives the same output.
                HX3 DEVIATION_OFFERED      a ± in the abstract for a field with no deviation
                                           candidate in its own prose
                HX4 BIOSPHERE_CONDITION    the abstract names a biosphere-carried condition
-                                          term and the touched entity is a BIOSPHERE candidate
+                                          term and the touched entity is a BIOSPHERE candidate;
+                                          only terms that also occur in the touched field's
+                                          scope.dependencies are kept (none kept, no stub)
  5 REPORT    intake.json and intake.md in the output directory, for a pull request that a
              person reviews. Nothing is merged and nothing in ontology/ or registry/ is written.
 
 An optional language-model reading slot is declared in the workflow and not implemented
 here. If it is ever filled, its output must carry the model name, the prompt sha256 and
 reading_state MACHINE_READ_NOT_REVIEWED, and it must not write claim_support.
+
+Amendments of 2026-11-27 (registry/DECLARED.json, one entry each; evidence in
+intake/weekly/2026-11-24/machine_reading_2026-11-27/proposal_evidence.json):
+  - window: the default window is until minus 14 days, not 7, so consecutive weekly runs
+    overlap by 7 days; F4 drops works already taken as candidates in an earlier week.
+  - HX4: a term is kept only if it also occurs in the touched field's scope.dependencies.
+  - HX1: numbers the deviation extractor tags CONDITIONAL_CHANGE do not raise HX1.
+  The my_phosphorus query change is in intake_queries.json.
 """
 import hashlib
 import json
@@ -69,6 +81,7 @@ PAGE = 100
 NOTICE = re.compile(r"retract|erratum|correction|corrigendum|expression of concern", re.I)
 WORD = re.compile(r"\S+")
 TAG = re.compile(r"<[^>]+>")
+WINDOW_DAYS = 14   # amendment 2026-11-27 "intake window overlap and F4"; was 7
 
 
 def sha(b):
@@ -78,7 +91,8 @@ def sha(b):
 # ------------------------------------------------------------------ stage 1
 def window(since, until):
     u = date.fromisoformat(until) if until else date.today()
-    s = date.fromisoformat(since) if since else u - timedelta(days=7)
+    # 14 days since the amendment of 2026-11-27 (was 7); explicit --since is unchanged.
+    s = date.fromisoformat(since) if since else u - timedelta(days=WINDOW_DAYS)
     if s > u:
         raise SystemExit(f"FAIL: since {s} is after until {u}")
     return s.isoformat(), u.isoformat()
@@ -139,6 +153,22 @@ def registered_pmids(repo):
     return out
 
 
+def earlier_candidates(repo, until):
+    """PMIDs and DOIs taken as candidates by earlier weeks' intakes (folder date < until).
+    Removed items of earlier weeks are not counted: a record without an abstract is tried again."""
+    seen = set()
+    base = Path(repo) / "intake" / "weekly"
+    for f in sorted(base.glob("*/intake.json")) if base.is_dir() else []:
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", f.parent.name) or f.parent.name >= until:
+            continue
+        for c in json.loads(f.read_text(encoding="utf-8")).get("candidates", []):
+            w = c.get("work") or {}
+            for k in ("pmid", "doi"):
+                if w.get(k):
+                    seen.add(str(w[k]).lower())
+    return seen
+
+
 def load_snapshots(snapdir):
     snapdir = Path(snapdir)
     man = json.load(open(snapdir / "manifest.json"))
@@ -154,7 +184,7 @@ def load_snapshots(snapdir):
     return man, out
 
 
-def filter_items(snaps, registered):
+def filter_items(snaps, registered, earlier=frozenset()):
     kept, removed, seen = [], [], set()
     for entry, body in snaps:
         if body is None:
@@ -169,6 +199,8 @@ def filter_items(snaps, registered):
                 removed.append({**base, "reason": "F2 ALREADY_REGISTERED"}); continue
             if key in seen:
                 removed.append({**base, "reason": "F3 DUPLICATE"}); continue
+            if any(str(r.get(k) or "").lower() in earlier for k in ("pmid", "doi") if r.get(k)):
+                removed.append({**base, "reason": "F4 SEEN_IN_EARLIER_INTAKE"}); continue
             seen.add(key)
             types = (r.get("pubTypeList") or {}).get("pubType") or []
             types = [types] if isinstance(types, str) else types
@@ -270,7 +302,9 @@ def candidates(kept, queries, records, bio_ids):
                              "falsifier": falsifier, "evidence_spans": evidence,
                              "status": "PROPOSED", "generated_by": rule})
             if av is not None:
-                scale = [n["span"] for n in nums if (n["pct"] or (not n["unit"] and "." in n["span"]))]
+                # CONDITIONAL_CHANGE numbers are skipped (amendment 2026-11-27 "HX1 skips CONDITIONAL_CHANGE")
+                scale = [n["span"] for n in nums if (n["pct"] or (not n["unit"] and "." in n["span"]))
+                         and n["role"] != "CONDITIONAL_CHANGE"]
                 if scale:
                     hyp("HX1", f"The abstract gives numbers on a value-like scale; one may bear on {t['entity']}.{t['field']} = {(av or {}).get('value')}.",
                         "A reader finds each number measures a different quantity from the field's scope.definition.", scale)
@@ -283,7 +317,11 @@ def candidates(kept, queries, records, bio_ids):
                     hyp("HX3", "The abstract states a ± spread; the field's own prose has no deviation candidate.",
                         "A reader finds the ± is for a different quantity than the field's value.", pm)
             if t["entity"] in bio_ids:
-                bt = bc.terms_in(abstract)
+                # only terms that the field's own dependencies also name
+                # (amendment 2026-11-27 "HX4 on field dependencies")
+                deps = sc.get("dependencies") if isinstance(sc.get("dependencies"), list) else []
+                dep_terms = set(bc.terms_in(" ".join(str(d) for d in deps).replace("_", " ")))
+                bt = [x for x in bc.terms_in(abstract) if x in dep_terms]
                 if bt:
                     hyp("HX4", f"The abstract names biosphere-carried conditions ({', '.join(bt)}) for {t['entity']}, a BIOSPHERE dependency candidate.",
                         "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.", bt)
@@ -327,7 +365,7 @@ def run_offline(repo, queries_path, snapdir, outdir):
     qbytes = Path(queries_path).read_bytes()
     queries = json.loads(qbytes)["queries"]
     man, snaps = load_snapshots(snapdir)
-    kept, removed = filter_items(snaps, registered_pmids(repo))
+    kept, removed = filter_items(snaps, registered_pmids(repo), earlier_candidates(repo, man["until"]))
     records = attr_index(repo)
     bio = bc.run(repo)
     bio_ids = {r["id"] for r in bio["rows"] if r["rules"]}
@@ -363,7 +401,41 @@ def selftest():
     check("F3 duplicate removed", any(r["reason"] == "F3 DUPLICATE" and r["pmid"] == "3" for r in removed))
     check("G1 retraction flagged, kept", any("G1 RETRACTION_OR_NOTICE" in k["flags"] for k in kept))
     check("G2 preprint flagged, kept", any("G2 PREPRINT" in k["flags"] for k in kept))
-    check("window default is 7 days", window(None, "2026-11-24") == ("2026-11-17", "2026-11-24"))
+    # was "window default is 7 days"; changed by the amendment of 2026-11-27
+    check("window default is 14 days", window(None, "2026-11-24") == ("2026-11-10", "2026-11-24"))
+    check("explicit since is kept", window("2026-11-17", "2026-11-24") == ("2026-11-17", "2026-11-24"))
+    kept4, removed4 = filter_items([({"query_id": "q1"}, {"resultList": {"result": [
+        {"pmid": "7", "abstractText": "a.", "title": "e"}, {"pmid": "8", "doi": "10.1/X", "abstractText": "b.", "title": "f"},
+        {"pmid": "9", "abstractText": "c.", "title": "g"}]}})], set(), {"7", "10.1/x"})
+    check("F4 earlier candidate removed (PMID and DOI)",
+          sorted(r["pmid"] for r in removed4 if r["reason"] == "F4 SEEN_IN_EARLIER_INTAKE") == ["7", "8"]
+          and [k["record"]["pmid"] for k in kept4] == ["9"])
+    import tempfile
+    with tempfile.TemporaryDirectory() as td:
+        for d, pm in (("2026-11-17", "11"), ("2026-11-24", "12")):
+            (Path(td) / "intake" / "weekly" / d).mkdir(parents=True)
+            (Path(td) / "intake" / "weekly" / d / "intake.json").write_text(json.dumps(
+                {"candidates": [{"work": {"pmid": pm, "doi": None}}], "removed": [{"pmid": "13"}]}))
+        check("F4 reads only weeks before until, candidates only",
+              earlier_candidates(td, "2026-11-24") == {"11"})
+    recs = {"X": {"attributes": {"f": {"value": 0.5, "scope": {"definition": "d", "measurement_limits": "",
+                                                                "dependencies": ["ambient_temperature", "soil_phosphorus_availability"]}}}}}
+    qx = [{"id": "q", "terms": ["t"], "touches": [{"entity": "X", "field": "f"}]}]
+    kx = [{"query_id": "q", "flags": [], "pub_types": [], "record": {"pmid": "5", "title": "t", "abstractText":
+          "Oxygen and temperature and soil were measured. Yield rose by 40% under drought. The share was 0.42."}}]
+    _, hx = candidates(kx, qx, recs, {"X"})
+    h4 = [h for h in hx if h["rule"] == "HX4"]
+    check("HX4 keeps only terms named in the field's dependencies", len(h4) == 1 and h4[0]["evidence_spans"] == ["soil", "temperature"])
+    kx[0]["record"]["abstractText"] = "Oxygen was measured."
+    _, hx = candidates(kx, qx, recs, {"X"})
+    check("HX4 not raised when no term is a dependency", not [h for h in hx if h["rule"] == "HX4"])
+    kx[0]["record"]["abstractText"] = "Yield increased by ~\u200940% under drought."
+    _, hx = candidates(kx, qx, recs, {"X"})
+    roles = [n["role"] for c in _ for n in c["numbers"]]
+    check("HX1 not raised by a CONDITIONAL_CHANGE number", "CONDITIONAL_CHANGE" in roles and not [h for h in hx if h["rule"] == "HX1"])
+    kx[0]["record"]["abstractText"] = "Yield increased by ~\u200940% under drought. A fraction (0.42) was retained."
+    _, hx = candidates(kx, qx, recs, {"X"})
+    check("HX1 still raised by the other number", [h["evidence_spans"] for h in hx if h["rule"] == "HX1"] == [["0.42"]])
     try:
         window("2026-11-25", "2026-11-24"); check("reversed window fails", False)
     except SystemExit:

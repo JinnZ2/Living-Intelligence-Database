@@ -331,6 +331,14 @@
    "existence": null
   },
   {
+   "id": "12616bf5f9ef7fe5382d19d3b9ec5cbb434747f35578c77f9af9d62baabbf6d8",
+   "string": "Yang H, Liu H, Tian E, Liu Y, Ji S, Wang S, Li X, Zheng M, Guo L. (2026) Crop-adapted arbuscular mycorrhizal fungi in maize: from symbiotic function to field reliability. Front Plant Sci 17:1955423. doi:10.3389/fpls.2026.1955423. PMID 43041999 [weekly intake 2026-11-24; abstract and full text read via Europe PMC by machine reader 2026-11-27, MACHINE_READ_NOT_REVIEWED; registered for an outside reader 2026-11-27]",
+   "same_as": null,
+   "opened": false,
+   "fetched": null,
+   "existence": null
+  },
+  {
    "id": "13435911442f858d2d9c628a06755937cf55466c5e82182c60b15c081cdad81f",
    "string": "Schwenk (1994) 'Why snakes have forked tongues', Science 263:1573-1577; Kubie & Halpern (1975) forked tongue chemoreception studies.",
    "same_as": null,
@@ -3112,6 +3120,14 @@
   {
    "id": "afb236f9abcf54202a2b19b52a3cce8da284c57384c6ce4b7a100e3ee5cd9701",
    "string": "Sutskever et al. (2013) 'On the importance of initialization and momentum in deep learning', ICML; He et al. (2016) 'Deep residual learning', CVPR.",
+   "same_as": null,
+   "opened": false,
+   "fetched": null,
+   "existence": null
+  },
+  {
+   "id": "aff6fb71edf3503021f08e99f29b016defddef1eeab5882aae92405ed4159fbc",
+   "string": "Zuffi V, Puliga F, Graziosi S, Di Bonito M, Iotti M, Falsone G. (2026) Ectomycorrhizal fungi in deep soils: current knowledge, functional roles, and future directions. Front Plant Sci 17:1945261. doi:10.3389/fpls.2026.1945261. PMID 43061600 [weekly intake 2026-11-24; abstract and full text read via Europe PMC by machine reader 2026-11-27, MACHINE_READ_NOT_REVIEWED; registered for an outside reader 2026-11-27]",
    "same_as": null,
    "opened": false,
    "fetched": null,

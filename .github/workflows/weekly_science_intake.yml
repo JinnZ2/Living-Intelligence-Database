@@ -19,6 +19,10 @@
 #  3. The repo setting blocks Actions from opening pull requests. If `gh pr create` fails, the
 #     step now opens an issue linking the pushed branch instead, so a person still reviews and
 #     merges. The branch is pushed either way. Nothing here merges.
+#
+# Note 2026-11-27 (amendment "intake window overlap and F4" in DECLARED.json): the script's
+# default window is now until minus 14 days, so weekly runs overlap by 7 days; F4 drops works
+# already taken as candidates in an earlier week. Only the since-input description below changed.
 name: weekly-science-intake
 
 on:
@@ -26,7 +30,7 @@ on:
     - cron: "17 11 * * 1"   # Mondays 11:17 UTC
   workflow_dispatch:
     inputs:
-      since: { description: "YYYY-MM-DD (default: until minus 7 days)", required: false }
+      since: { description: "YYYY-MM-DD (default: until minus 14 days)", required: false }
       until: { description: "YYYY-MM-DD (default: today)", required: false }
 
 permissions:

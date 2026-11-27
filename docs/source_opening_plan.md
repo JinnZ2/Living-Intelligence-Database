@@ -12,14 +12,14 @@ source says.
 
 | | |
 |---|---|
-| sources in the registry | 234 |
+| sources in the registry | 236 |
 | opened (abstract read) | 3 |
-| unopened | 231 |
-| unopened with a PMID or DOI in the string | 0 |
+| unopened | 233 |
+| unopened with a PMID or DOI in the string | 2 |
 | NOT_ASSESSED attribute fields behind unopened sources | 225 |
 | those behind the top 25 | 25 |
 
-Fields per unopened source: 225 source(s) unblock 1, 6 source(s) unblock 0.
+Fields per unopened source: 225 source(s) unblock 1, 8 source(s) unblock 0.
 
 ## Top 25
 

@@ -1,0 +1,29 @@
+{
+ "record": "SUPPLEMENTARY_AS_RECEIVED_MANIFEST",
+ "pmid": "43056305",
+ "doi": "10.1371/journal.pbio.3004091",
+ "note": "PLOS Biology supplementary files as received on 2026-11-27 by the machine reader (open access, CC BY). Bytes are not committed, following fulltext_MANIFEST.json; only bytes and sha256 are listed. S2 Fig was hashed, not read as an image. A later fetch may differ.",
+ "files": {
+  "s009.xlsx": {
+   "label": "S1 Data",
+   "url": "https://journals.plos.org/plosbiology/article/file?type=supplementary&id=10.1371/journal.pbio.3004091.s009",
+   "bytes": 6666210,
+   "sha256": "c9c175525ae1c518bed7bd42cf4d70fba92e4d703d640e022fe8c08f7e5b7740",
+   "fetched": "2026-11-27"
+  },
+  "s010.xlsx": {
+   "label": "S2 Data",
+   "url": "https://journals.plos.org/plosbiology/article/file?type=supplementary&id=10.1371/journal.pbio.3004091.s010",
+   "bytes": 52288,
+   "sha256": "836e6cb30794ff9be4a72a34dbb1cb4414e25ccfdfa6addef3349a579ae361c7",
+   "fetched": "2026-11-27"
+  },
+  "s002.tif": {
+   "label": "S2 Fig",
+   "url": "https://journals.plos.org/plosbiology/article/file?type=supplementary&id=10.1371/journal.pbio.3004091.s002",
+   "bytes": 6369016,
+   "sha256": "3da32f4b8e74826c77ca8dd838caf0b665fa0032bc1739d02592481ba4f1f07b",
+   "fetched": "2026-11-27"
+  }
+ }
+}
