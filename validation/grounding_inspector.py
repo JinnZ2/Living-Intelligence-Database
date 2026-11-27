@@ -25,6 +25,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 INDEX_FILE = ROOT / "ontology_index.json"
 
+# 2026-11-24 (fixture F7, validation/fixtures/DECLARED.json): every scored attribute also reports
+# its relational confidence from scope_checker.confidence_record, the function audit.py, verify.py
+# and goal_refiner.py use, so one record reads one confidence everywhere. le_score is a different
+# quantity and is not changed; neither is the inflation warning, which still looks at a stored
+# confidence only. LEGACY = True (--legacy) gives the output as it was before: no such field.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from scope_checker import confidence_record  # noqa: E402
+
+LEGACY = False
+
 
 # ── L-layer classification ────────────────────────────────────────────────────
 
@@ -254,7 +264,7 @@ def le_score_attribute(attribute: dict) -> dict:
         3
     )
 
-    return {
+    out = {
         "le_score": aggregate,
         "sublayers": {
             "Le.obs": round(obs_score, 3),
@@ -264,6 +274,9 @@ def le_score_attribute(attribute: dict) -> dict:
         },
         "warnings": obs_warn + pat_warn + xfr_warn + enc_warn,
     }
+    if not LEGACY:
+        out["relational_confidence"] = confidence_record(attribute)
+    return out
 
 
 def _score_all_attributes(entity: dict) -> dict:
@@ -474,7 +487,11 @@ def main():
         help="Lε score below which entities are flagged (default: 0.65)"
     )
     parser.add_argument("--explain", action="store_true", help="Explain the Lε model")
+    parser.add_argument("--legacy", action="store_true",
+                        help="output as before the 2026-11-24 repair (no relational_confidence field)")
     args = parser.parse_args()
+    global LEGACY
+    LEGACY = args.legacy
 
     if args.explain:
         explain()
