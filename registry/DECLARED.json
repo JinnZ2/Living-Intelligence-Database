@@ -422,6 +422,63 @@
       "failure": "any query NOT_RUN fails the run; no pull request is opened from an incomplete run",
       "merge": "never by the workflow",
       "adopted": "owner's yes, 2026-11-24, answer 1 on PR #30. Workflow at .github/workflows/weekly_science_intake.yml; takes effect when on main. The amendment text is the draft in audit/2026-11-24/LID_intake_biosphere_council_crosswalk_2026-11-24.md, unchanged, plus this line. The seed queries in intake_queries.json remain PROPOSED (the owner's edit)."
+    },
+    {
+      "date": "2026-11-27",
+      "name": "owner's decisions on PR #34 (machine reading, full text, registration)",
+      "after": "the machine reading of the weekly intake of 2026-11-24 (PR #34) and its question 'What the owner decides'; by the owner's yes",
+      "changes_a_declared_value": true,
+      "status": "PROPOSED",
+      "machine_reading": "a machine reading counts toward review when every record carries reading_state MACHINE_READ_NOT_REVIEWED, the model name, the prompt file and the prompt's sha256. It still carries no claim_support and no number_support. Counting toward review does not make it a reviewed reading.",
+      "full_text": "full text and supplementary data may be read where they are open access. What is taken from them is labelled as full-text observation (or full-text and supplementary observation). Their bytes are not committed; their sha256 is. This amends the 11th amendment's 'reads' line for machine readings only; the weekly workflow itself still reads bibliographic records and abstracts only.",
+      "registered": "PMIDs 43041999 and 43061600 are registered in registry/sources.json for an outside reader, under the convention of the 11th amendment's draft ('The source is registered, which is a declared step. An outside reader writes the reading.'). Entries are made by scripts/provenance_chain.py source_entry; opened stays false and fetched null, because that function reads only an 'abstract read via NCBI efetch' note and these were read via Europe PMC. Registration does not add them to docs/reading_queue.md, which lists only works cited by a field. F2 removes them from later intakes. 43056305 is not registered.",
+      "not_overridden": [
+        "claim_support is written only by an outside reader, as registry/attribute_readings.json (amendment 'NOT_ADDRESSED + reading queue'). The machine reader of PR #34 is this repository's own auditor, so it is not that reader, and nothing here writes claim_support.",
+        "No script yet reads registry/attribute_readings.json (audit/2026-11-24/OPEN_QUESTIONS.md). A reading for the two registered sources cannot reach any record until that gap is closed; that needs the owner or an outside reader.",
+        "'merge: never by the workflow' (11th amendment) stands. The squash-merge of the pull request carrying this amendment is done under the owner's yes, not by the workflow."
+      ],
+      "principle": "the owner's words: 'I like science and evidence to choose, not my preference.' Query and rule proposals were adopted only on measured evidence; each adopted change is its own amendment below, and the rejected proposals, with their numbers, are in intake/weekly/2026-11-24/machine_reading_2026-11-27/MACHINE_READING.md.",
+      "adopted": "owner's yes, 2026-11-27, to all decisions put on PR #34, with the principle above."
+    },
+    {
+      "date": "2026-11-27",
+      "name": "my_phosphorus query, title and abstract",
+      "after": "declared on 2026-11-27 after the evidence was seen (post hoc), before the next scheduled run (Monday 2026-11-30, 11:17 UTC)",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "change": "intake_queries.json, query my_phosphorus: from 'mycorrhiz* AND phosphorus AND transfer' to 'TITLE_ABS:(mycorrhiz*) AND TITLE_ABS:(phosphorus OR phosphate) AND TITLE_ABS:(transfer OR uptake OR mobiliz* OR transloc* OR \"32P\" OR \"33P\" OR hyphal)'. The former string is kept in the entry as query_before_2026-11-27.",
+      "evidence": "three weekly windows, 2026-11-03 to 2026-11-24, Europe PMC re-fetched 2026-11-27, relevance by machine reading of abstracts (MACHINE_READ_NOT_REVIEWED): hits 39 to 5; precision 4/37 to 4/5; recall against the current query 4/4, no relevant work lost; hits per window 2, 1, 2. Evidence: intake/weekly/2026-11-24/machine_reading_2026-11-27/proposal_evidence.json",
+      "adopted": "owner's yes of 2026-11-27 (the amendment above): evidence chooses."
+    },
+    {
+      "date": "2026-11-27",
+      "name": "intake window overlap and F4",
+      "after": "declared on 2026-11-27 after the evidence was seen (post hoc), before the next scheduled run (Monday 2026-11-30, 11:17 UTC)",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "change": "weekly_intake.py: the default window is until minus 14 days (was 7), so consecutive weekly runs overlap by 7 days. New filter F4 SEEN_IN_EARLIER_INTAKE removes a work whose PMID or DOI is already a candidate in intake/weekly/<date>/intake.json for a date before until. Removed items of earlier weeks are not counted, so a record without an abstract is tried again. An explicit since is unchanged.",
+      "evidence": "the 2026-11-27 re-fetch of the window 2026-11-17..2026-11-24 found 7 works first indexed 2026-11-21..2026-11-24 that were not in the 2026-11-24 snapshot (be_comb 1, my_phosphorus 4, root_water_uptake 2; 43075482 in two queries). Two of them (43069007, first indexed 2026-11-23, PARTIAL for ROOT_NET; 43062364, 2026-11-21) fall before the next 7-day window and would never be taken. Observed indexing lag at least 3 days; a 7-day overlap covers a lag up to 7 days. Evidence: intake/weekly/2026-11-24/machine_reading_2026-11-27/proposal_evidence.json",
+      "adopted": "owner's yes of 2026-11-27: evidence chooses."
+    },
+    {
+      "date": "2026-11-27",
+      "name": "HX4 on field dependencies",
+      "after": "declared on 2026-11-27 after the evidence was seen (post hoc), before the next scheduled run (Monday 2026-11-30, 11:17 UTC)",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "change": "weekly_intake.py, stub HX4: a biosphere-condition term found in the abstract is kept only if biosphere_candidates.terms_in also finds it in the touched field's scope.dependencies (underscores read as spaces). No term kept, no stub.",
+      "evidence": "three windows, current queries: HX4 stubs 59 to 52; stubs on PARTIAL works 9 to 9. In the week to 2026-11-24 it removes the two stubs read FALSIFIER_MET (43056305, oxygen; 43045997, sunlight via 'photosynth') and keeps the only FALSIFIER_NOT_MET (43041999). Tested and not adopted: also requiring the abstract to name the entity (59 to 21 stubs, but 3 PARTIAL works lose their stub). Evidence: intake/weekly/2026-11-24/machine_reading_2026-11-27/proposal_evidence.json",
+      "adopted": "owner's yes of 2026-11-27: evidence chooses."
+    },
+    {
+      "date": "2026-11-27",
+      "name": "HX1 skips CONDITIONAL_CHANGE",
+      "after": "declared on 2026-11-27 after the evidence was seen (post hoc), before the next scheduled run (Monday 2026-11-30, 11:17 UTC)",
+      "changes_a_declared_value": false,
+      "status": "PROPOSED",
+      "change": "weekly_intake.py, stub HX1: numbers the deviation extractor tags CONDITIONAL_CHANGE do not raise HX1. deviation_extract.py is not changed.",
+      "evidence": "three windows, current queries: HX1 stubs 8 to 6 (43047459, read FALSIFIER_MET, and 42973534, NOT_RELEVANT, lose theirs); HX1 stubs on PARTIAL works 3 to 3. Not tested and not adopted: skipping named ratios, and the extractor's gene-token digits. Evidence: intake/weekly/2026-11-24/machine_reading_2026-11-27/proposal_evidence.json",
+      "adopted": "owner's yes of 2026-11-27: evidence chooses."
     }
   ]
 }
