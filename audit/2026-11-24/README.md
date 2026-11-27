@@ -57,3 +57,19 @@ All scripts are Python 3 standard library only and need no network. `jsonschema`
 `intake/weekly_science_intake.yml` is a PROPOSED workflow. GitHub does not run it from this folder. Adopting it means copying it to `.github/workflows/`, which is the owner's decision.
 
 > **Note, 2026-11-24 (added).** The owner adopted it (answer 1 on PR #30). A copy now sits at `.github/workflows/weekly_science_intake.yml`, where only the header differs, and the amendment is appended to `registry/DECLARED.json`. The file in this folder is unchanged. Section 5 of `LID_intake_biosphere_council_crosswalk_2026-11-24.md` records all four answers.
+
+## Added 2026-11-24 (third batch, after main 8bf3d00)
+
+| File | Contents |
+|---|---|
+| `LID_review_of_Kimi_rev2_and_pipeline_gate_2026-11-24.md` | Review of Kimi's rev2 schema, 36-check suite and pipeline.sh finding: confirmed, with corrections and three new findings (R1–R3) |
+| `kimi_2026-11-25_rev2/` | Kimi's `reference_trace.schema.rev2.json` and `validate_loud.36checks.py`, unedited |
+
+| Script | Output |
+|---|---|
+| `pipeline/pipeline_gate_check.py <repo> <out>` (read-only) | `pipeline/pipeline_gate_check_8bf3d00.json`: every record validated bare and with a schema registry, plus `pipeline.sh validate` exit code and lines |
+| the same, after the repair | `pipeline/pipeline_gate_check_fc062c8.json` (125 passed, 0 failed, exit 0) |
+| `schema_rev3/build_rev3.py` | `schema_rev3/reference_trace.schema.rev3.json` (PROPOSED by the audit: date findings R1 and R2) |
+| `schema_rev3/rev3_checks.py [--suite]` | console: R1–R3 known-answer checks on rev3, rev2 and a stripped rev3; `--suite` also runs Kimi's 36 checks on rev3 |
+
+To run the 36-check suite: copy this folder to `/tmp/audit/lid_audit/`, copy `kimi_2026-11-25/lid-schema-additions/` somewhere, put rev2 in its `schemas/` as `reference_trace.schema.json`, and pass that folder as the first argument.

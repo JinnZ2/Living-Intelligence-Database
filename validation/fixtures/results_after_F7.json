@@ -1,0 +1,162 @@
+{
+  "record": "known-answer fixtures",
+  "commit": "380dde48201ac4e3e2bf41e6df8fe5e01fdd3005",
+  "counts": {
+    "PASS": 9,
+    "FAIL": 0,
+    "ERROR": 0,
+    "NOT_RUN": 0
+  },
+  "fixtures": [
+    {
+      "id": "F1",
+      "instrument": "verify.py",
+      "must_read": "unknown claim -> UNKNOWN, posterior null",
+      "state": "PASS",
+      "observed": {
+        "verdict": "UNKNOWN",
+        "posterior_probability": null,
+        "tests_passed": 0
+      }
+    },
+    {
+      "id": "F2",
+      "instrument": "verify.py",
+      "must_read": "one claim over 5 attributes -> evidence count 1",
+      "state": "PASS",
+      "observed": {
+        "evidence_count": 1,
+        "claim_calls": 1,
+        "posterior_5_attrs": 0.79,
+        "posterior_1_attr": 0.79
+      }
+    },
+    {
+      "id": "F3",
+      "instrument": "falsifier.py",
+      "must_read": "no match -> NOT_TESTED; 0 tests -> no score",
+      "state": "PASS",
+      "observed": {
+        "a_outcomes": [
+          "NOT_TESTED"
+        ],
+        "a_survived": 0,
+        "a_resistance": null,
+        "b_counterexamples": 0,
+        "b_resistance": null
+      }
+    },
+    {
+      "id": "F4",
+      "instrument": "dependency_tree.py",
+      "must_read": "unresolved link reported, not dropped",
+      "state": "PASS",
+      "observed": {
+        "unresolved": [
+          {
+            "source": "A",
+            "target": "NOT_THERE",
+            "relation": "synergy"
+          }
+        ],
+        "children": [
+          [
+            "NOT_THERE",
+            "unresolved"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "F5a",
+      "instrument": "falsifier.py",
+      "must_read": "load fails -> LOAD_FAILED, no thin substitution",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/workspace/lid/does/not/exist.json'"
+          }
+        ],
+        "error": "LOAD_FAILED: entity file for GHOST could not be loaded; nothing was analysed.",
+        "analysed": false
+      }
+    },
+    {
+      "id": "F5b",
+      "instrument": "audit.py",
+      "must_read": "load fails -> LOAD_FAILED, scoped_ratio null",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/workspace/lid/does/not/exist.json'"
+          }
+        ],
+        "total_entities": 1,
+        "scoped_ratio": null
+      }
+    },
+    {
+      "id": "F5c",
+      "instrument": "dependency_tree.py",
+      "must_read": "load fails -> LOAD_FAILED, not built from thin entry",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/workspace/lid/does/not/exist.json'"
+          }
+        ],
+        "start_entity": null,
+        "error": "LOAD_FAILED: entity file for GHOST could not be loaded; no t"
+      }
+    },
+    {
+      "id": "F6",
+      "instrument": "scripts/build_index.py",
+      "must_read": "broken link -> exit 1 (one KNOWN_HELD link allowlisted)",
+      "state": "PASS",
+      "observed": {
+        "a_as_is_with_allowlist_exit": 0,
+        "b_extra_broken_link_exit": 1,
+        "c_no_allowlist_exit": 1
+      }
+    },
+    {
+      "id": "F7",
+      "instrument": "pipeline.sh validate",
+      "must_read": "always a Results line; exit 0 only with 0 failed; crashes named",
+      "state": "PASS",
+      "observed": {
+        "a": {
+          "exit": 0,
+          "results_line": "Results: 125 passed, 0 failed, 0 skipped",
+          "last_line": "Results: 125 passed, 0 failed, 0 skipped"
+        },
+        "b": {
+          "exit": 1,
+          "results_line": "Results: 5 passed, 1 failed, 0 skipped",
+          "fail_lines": [
+            "[FAIL] social/wolf_pack.json"
+          ]
+        },
+        "c": {
+          "exit": 1,
+          "results_line": "Results: 0 passed, 6 failed, 0 skipped",
+          "fail_count": 6,
+          "last_line": "Results: 0 passed, 6 failed, 0 skipped"
+        }
+      }
+    }
+  ]
+}
