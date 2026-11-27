@@ -1,0 +1,1 @@
+{"version":"6.9","hitCount":0,"request":{"queryString":"(biosphere AND (\"nutrient recycling\" OR \"biogeochemical cycl*\") AND (planetary OR Earth)) AND FIRST_IDATE:[2026-11-03 TO 2026-11-10]","resultType":"core","cursorMark":"*","pageSize":100,"sort":"","synonym":false},"resultList":{"result":[]}}

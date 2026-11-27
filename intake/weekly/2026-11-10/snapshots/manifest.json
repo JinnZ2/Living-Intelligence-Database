@@ -1,0 +1,52 @@
+{
+ "since": "2026-11-03",
+ "until": "2026-11-10",
+ "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+ "entries": [
+  {
+   "query_id": "be_comb_geometry",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28honeycomb+OR+%22comb+building%22+OR+%22comb+cell%22%29+AND+%28bee+OR+Apis%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "be_comb_geometry.json",
+   "bytes": 9436,
+   "sha256": "56f8f989484da9ccc33961c30cc722dfc934f8051c0c02e2fbf0f2c62cfc5094",
+   "hit_count": 2
+  },
+  {
+   "query_id": "be_thermoregulation",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28thermoregulation+OR+%22brood+temperature%22+OR+%22nest+temperature%22%29+AND+%28Apis+OR+honeybee%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "be_thermoregulation.json",
+   "bytes": 6170,
+   "sha256": "40ac0e32bc1d70a434d65708e3c41b14509dd812597bb4e0612c7b6cf8dd8b46",
+   "hit_count": 1
+  },
+  {
+   "query_id": "my_phosphorus",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28mycorrhiz%2A%29+AND+TITLE_ABS%3A%28phosphorus+OR+phosphate%29+AND+TITLE_ABS%3A%28transfer+OR+uptake+OR+mobiliz%2A+OR+transloc%2A+OR+%2232P%22+OR+%2233P%22+OR+hyphal%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "my_phosphorus.json",
+   "bytes": 13261,
+   "sha256": "b5282c3ab2be5db005c96625241aa5cf4f38e23f9cc04fb2ef9bd35ef0a7c4f0",
+   "hit_count": 2
+  },
+  {
+   "query_id": "root_water_uptake",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22root+water+uptake%22+AND+%28%22soil+water+potential%22+OR+drought%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "root_water_uptake.json",
+   "bytes": 23798,
+   "sha256": "7caf36dbb54babc338322b012bab325e3a79008948450c47c93f9711a412a6a1",
+   "hit_count": 3
+  },
+  {
+   "query_id": "biosphere_recycling",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28biosphere+AND+%28%22nutrient+recycling%22+OR+%22biogeochemical+cycl%2A%22%29+AND+%28planetary+OR+Earth%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "biosphere_recycling.json",
+   "bytes": 300,
+   "sha256": "468910355eb01b924a315ac3b3db547b8a9fb39c9a84d5d3a75f0e040c855816",
+   "hit_count": 0
+  }
+ ]
+}

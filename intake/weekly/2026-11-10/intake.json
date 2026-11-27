@@ -1,0 +1,687 @@
+{
+ "record": "WEEKLY_INTAKE",
+ "status": "PROPOSED; nothing here is reviewed",
+ "window": {
+  "since": "2026-11-03",
+  "until": "2026-11-10"
+ },
+ "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+ "queries_sha256": "6800a68886ded85dd5f224acb80971e134ca68f61d5d0327136ba85c974f3f9c",
+ "snapshots": [
+  {
+   "query_id": "be_comb_geometry",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28honeycomb+OR+%22comb+building%22+OR+%22comb+cell%22%29+AND+%28bee+OR+Apis%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "be_comb_geometry.json",
+   "bytes": 9436,
+   "sha256": "56f8f989484da9ccc33961c30cc722dfc934f8051c0c02e2fbf0f2c62cfc5094",
+   "hit_count": 2
+  },
+  {
+   "query_id": "be_thermoregulation",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28thermoregulation+OR+%22brood+temperature%22+OR+%22nest+temperature%22%29+AND+%28Apis+OR+honeybee%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "be_thermoregulation.json",
+   "bytes": 6170,
+   "sha256": "40ac0e32bc1d70a434d65708e3c41b14509dd812597bb4e0612c7b6cf8dd8b46",
+   "hit_count": 1
+  },
+  {
+   "query_id": "my_phosphorus",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%28mycorrhiz%2A%29+AND+TITLE_ABS%3A%28phosphorus+OR+phosphate%29+AND+TITLE_ABS%3A%28transfer+OR+uptake+OR+mobiliz%2A+OR+transloc%2A+OR+%2232P%22+OR+%2233P%22+OR+hyphal%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "my_phosphorus.json",
+   "bytes": 13261,
+   "sha256": "b5282c3ab2be5db005c96625241aa5cf4f38e23f9cc04fb2ef9bd35ef0a7c4f0",
+   "hit_count": 2
+  },
+  {
+   "query_id": "root_water_uptake",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22root+water+uptake%22+AND+%28%22soil+water+potential%22+OR+drought%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "root_water_uptake.json",
+   "bytes": 23798,
+   "sha256": "7caf36dbb54babc338322b012bab325e3a79008948450c47c93f9711a412a6a1",
+   "hit_count": 3
+  },
+  {
+   "query_id": "biosphere_recycling",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28biosphere+AND+%28%22nutrient+recycling%22+OR+%22biogeochemical+cycl%2A%22%29+AND+%28planetary+OR+Earth%29%29+AND+FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D&format=json&resultType=core&pageSize=100&cursorMark=%2A",
+   "state": "SAVED",
+   "file": "biosphere_recycling.json",
+   "bytes": 300,
+   "sha256": "468910355eb01b924a315ac3b3db547b8a9fb39c9a84d5d3a75f0e040c855816",
+   "hit_count": 0
+  }
+ ],
+ "not_run": [],
+ "counts": {
+  "kept": 7,
+  "removed": 1,
+  "candidates": 7,
+  "hypotheses": 6,
+  "hypotheses_by_rule": {
+   "HX1": 1,
+   "HX2": 0,
+   "HX3": 0,
+   "HX4": 5
+  },
+  "removed_by_reason": {
+   "F1 NO_ABSTRACT": 1
+  }
+ },
+ "removed": [
+  {
+   "query_id": "be_comb_geometry",
+   "pmid": null,
+   "doi": null,
+   "title": "61ST ASMS Conference on Mass Spectrometry and Allied Topics",
+   "reason": "F1 NO_ABSTRACT"
+  }
+ ],
+ "candidates": [
+  {
+   "id": "C:42982737:BE:hexagonal_cell_efficiency",
+   "query_id": "be_comb_geometry",
+   "work": {
+    "pmid": "42982737",
+    "doi": "10.1002/advs.77999",
+    "title": "Wearable E-Textiles for Cardiovascular Monitoring: Materials, Devices, and Integrated Systems.",
+    "first_index_date": "2026-11-06",
+    "first_publication_date": "2026-11-04",
+    "pub_types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "8524a8cc315babd294a13ba03ee3d317ef66ea2fd1ac4dd52b02ee391faae669"
+   },
+   "touches": {
+    "entity": "BE",
+    "field": "hexagonal_cell_efficiency",
+    "claim": "Ratio of honey volume stored per unit wax mass in hexagonal cells compared to the next-best regular tessellation. Derives from the honeycomb conjecture: hexagons minimize total perimeter for equal-area tiling of a plane.",
+    "claim_sha256": "3c83177222a1a6ab9eb2edf4f951b50bc4f4dc574b49fd6fc31ab7408ce7913c",
+    "value": 0.97
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "Smart textiles have emerged as a promising platform for personalized cardiovascular healthcare by combining wearability, mechanical comfort, and seamless integration into everyday garments.",
+     "truncated": false
+    }
+   ],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:42996216:BE:collective_thermoregulation",
+   "query_id": "be_thermoregulation",
+   "work": {
+    "pmid": "42996216",
+    "doi": "10.3389/fphys.2026.1945469",
+    "title": "Functional analyses of &lt;i&gt;Apis cerana cerana DnaJC28&lt;/i&gt;: a new biomarker for environmental stress.",
+    "first_index_date": "2026-11-08",
+    "first_publication_date": "2026-10-23",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "10472ba0afdc064039f04fc240e732c64881741431ba785b5e9259aef02f11b7"
+   },
+   "touches": {
+    "entity": "BE",
+    "field": "collective_thermoregulation",
+    "claim": "Precision of honeybee cluster temperature maintenance — standard deviation of brood nest temperature from 35°C target across ambient temperatures ranging from -30°C to +45°C.",
+    "claim_sha256": "3610498d6ed3bf0f1885b67c253be41333c7d57f8249d2789b7ca331455b4c94",
+    "value": 0.94
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2 cells",
+     "role": "CONDITION_NUMBER",
+     "rule": "R4: unit-bearing number, no spread language",
+     "unit": "cells",
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "28",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:42985422:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "42985422",
+    "doi": "10.3389/fpls.2026.1984943",
+    "title": "Rhizophagus clarus and phosphorus co-regulate oat rhizosphere metabolome-microbiome under drought: a candidate hub metabolite perspective.",
+    "first_index_date": "2026-11-06",
+    "first_publication_date": "2026-10-21",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "3e793222c98ea06829b4b49ab41727ddf45adca48ac1b5e04fcb04b83314e32b"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "The interaction between arbuscular mycorrhizal fungi (AMF) and phosphorus (P) availability could enhance plant drought tolerance.",
+     "truncated": false
+    }
+   ],
+   "numbers": [
+    {
+     "span": "75%",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": true
+    },
+    {
+     "span": "0",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "0",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "0",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:42979373:MY:phosphorus_transfer_efficiency",
+   "query_id": "my_phosphorus",
+   "work": {
+    "pmid": "42979373",
+    "doi": "10.1098/rsos.260234",
+    "title": "Mast fruiting in a large tropical African legume tree species and the mineral nutrient limitation hypothesis.",
+    "first_index_date": "2026-11-04",
+    "first_publication_date": "2026-11-04",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "e52cc4895a20164511b5fde5b12f72680a1f4756e997fb4f10446e87e6836cb6"
+   },
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "claim": "Fraction of radiotracer-labeled phosphorus mobilized from mineral soil by mycorrhizal hyphae that reaches host plant roots within 72 hours, measured under field-comparable pot conditions.",
+    "claim_sha256": "6d3791f6b2c6f18a0a84f62d25f1de5217dcca6749021e3821e2d1affc439b3d",
+    "value": 0.85
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "The large grove-forming ectomycorrhizal tropical tree Microberlinia bisulcata displays strong mast fruiting on poor soils.",
+     "truncated": false
+    },
+    {
+     "quote": "Fallen-leaf phosphorus concentration increased in the inter-mast interval, and that for potassium peaked mid-interval.",
+     "truncated": false
+    },
+    {
+     "quote": "A drier dry season prior to masting may have increased tree carbon, while a wetter one increased nutrient uptake by roots and mycorrhizas.",
+     "truncated": false
+    },
+    {
+     "quote": "Synchrony across masting trees may be enhanced by equilibration of nutrients across the mycorrhizal-root network.",
+     "truncated": false
+    }
+   ],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:42973534:ROOT_NET:water_uptake_efficiency",
+   "query_id": "root_water_uptake",
+   "work": {
+    "pmid": "42973534",
+    "doi": "10.3389/fpls.2026.1951660",
+    "title": "Combined application of salicylic acid and silicon enhances photosynthetic capacity and yield in different dry-cultivated rice varieties: associations with osmotic adjustment substances and antioxidant enzyme activity.",
+    "first_index_date": "2026-11-04",
+    "first_publication_date": "2026-10-19",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "7b0fd4cfa35536a18b494965bddd6d4ed8433620c5a90abd049a28b46807b9d9"
+   },
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "claim": "Hydraulic efficiency of root architecture — fraction of available soil water extracted per unit root length per day at field capacity, relative to theoretical maximum given soil hydraulic conductivity.",
+    "claim_sha256": "bf826957475f393c27fd29d993c79747719193660ff172f5be1ff881592052f3",
+    "value": 0.93
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "This finding suggests that drought-resistant varieties may require greater accumulation of osmotic adjustment substances to alleviate drought stress.",
+     "truncated": false
+    },
+    {
+     "quote": "These coordinated physiological responses contribute to enhanced photosynthetic capacity of the PSII system, ultimately improving drought tolerance, dry matter accumulation, and grain yield in dry-cultivated",
+     "truncated": true
+    },
+    {
+     "quote": "This approach provides a new and effective way of alleviating drought stress and increasing the yield of dry-cultivated rice.",
+     "truncated": false
+    }
+   ],
+   "numbers": [
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "1",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "2",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "3",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "3",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "18",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "88",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "10 days",
+     "role": "CONDITION_NUMBER",
+     "rule": "R4: unit-bearing number, no spread language",
+     "unit": "days",
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "88",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "18",
+     "role": "UNCHECKED",
+     "rule": "R5: role not settled by the rules",
+     "unit": null,
+     "pm": false,
+     "pct": false
+    },
+    {
+     "span": "10.7%",
+     "role": "CONDITIONAL_CHANGE",
+     "rule": "R6: change verb with a percent or fold: a change under a condition, not a spread",
+     "unit": null,
+     "pm": false,
+     "pct": true
+    }
+   ],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:42984748:ROOT_NET:water_uptake_efficiency",
+   "query_id": "root_water_uptake",
+   "work": {
+    "pmid": "42984748",
+    "doi": "10.3389/fmicb.2026.1974097",
+    "title": "Plant physiological control of root microbiome assembly and feedback under environmental stress.",
+    "first_index_date": "2026-11-06",
+    "first_publication_date": "2026-10-21",
+    "pub_types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "2937aa94c47592eed94a35d45ffda6c98c97045c22b318adfb79325860d34337"
+   },
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "claim": "Hydraulic efficiency of root architecture — fraction of available soil water extracted per unit root length per day at field capacity, relative to theoretical maximum given soil hydraulic conductivity.",
+    "claim_sha256": "bf826957475f393c27fd29d993c79747719193660ff172f5be1ff881592052f3",
+    "value": 0.93
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  },
+  {
+   "id": "C:42989086:ROOT_NET:water_uptake_efficiency",
+   "query_id": "root_water_uptake",
+   "work": {
+    "pmid": "42989086",
+    "doi": "10.1186/s12870-026-09689-y",
+    "title": "Effects of physiological integration on water use patterns and adaptation strategies in typical alpine wetland clonal plants Potentilla anserina.",
+    "first_index_date": "2026-11-07",
+    "first_publication_date": "2026-08-10",
+    "pub_types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "flags": [],
+    "abstract_sha256": "5ea280e89ebe2c7464601f7628f76dff53a2041c361ff950b6a972725a60a159"
+   },
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "claim": "Hydraulic efficiency of root architecture — fraction of available soil water extracted per unit root length per day at field capacity, relative to theoretical maximum given soil hydraulic conductivity.",
+    "claim_sha256": "bf826957475f393c27fd29d993c79747719193660ff172f5be1ff881592052f3",
+    "value": 0.93
+   },
+   "touched_record_unindexed": false,
+   "quote_candidates": [
+    {
+     "quote": "Understanding plant water uptakes in alpine wetlands are pivotal for sustaining water conservation and maintaining ecological safety of the lower reaches under continuous wetland degradation.",
+     "truncated": false
+    },
+    {
+     "quote": "However, the physiological integration, a unique process in clonal plants, of water uptake and morphological adaptation in these ecosystems remain insufficiently characterized.",
+     "truncated": false
+    },
+    {
+     "quote": "In this study, the water uptake sources, functional traits, and biomass allocation of Potentilla anserina were examined along a riverbank distance gradient in the Zoige",
+     "truncated": true
+    },
+    {
+     "quote": "The xylem water isotope values were significantly lower in intact ramets than in severed ones, and the physiological integration significantly promoted the deep-water uptake through",
+     "truncated": true
+    },
+    {
+     "quote": "Compared with the intact groups, the severed ramets displayed lower specific leaf area (SLA) and leaf water content (LWC), but higher leaf dry matter content",
+     "truncated": true
+    }
+   ],
+   "numbers": [],
+   "reading_state": "AWAITING_READER"
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H:HX4:C:42996216:BE:collective_thermoregulation",
+   "rule": "HX4",
+   "touches": {
+    "entity": "BE",
+    "field": "collective_thermoregulation",
+    "candidate": "C:42996216:BE:collective_thermoregulation"
+   },
+   "statement": "The abstract names biosphere-carried conditions (temperature) for BE, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "temperature"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX1:C:42985422:MY:phosphorus_transfer_efficiency",
+   "rule": "HX1",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:42985422:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract gives numbers on a value-like scale; one may bear on MY.phosphorus_transfer_efficiency = 0.85.",
+   "falsifier": "A reader finds each number measures a different quantity from the field's scope.definition.",
+   "evidence_spans": [
+    "75%"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX1"
+  },
+  {
+   "id": "H:HX4:C:42985422:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:42985422:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient, soil) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient",
+    "soil"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:42979373:MY:phosphorus_transfer_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "MY",
+    "field": "phosphorus_transfer_efficiency",
+    "candidate": "C:42979373:MY:phosphorus_transfer_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (nutrient, soil) for MY, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "nutrient",
+    "soil"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:42973534:ROOT_NET:water_uptake_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "candidate": "C:42973534:ROOT_NET:water_uptake_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (water) for ROOT_NET, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "water"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  },
+  {
+   "id": "H:HX4:C:42989086:ROOT_NET:water_uptake_efficiency",
+   "rule": "HX4",
+   "touches": {
+    "entity": "ROOT_NET",
+    "field": "water_uptake_efficiency",
+    "candidate": "C:42989086:ROOT_NET:water_uptake_efficiency"
+   },
+   "statement": "The abstract names biosphere-carried conditions (soil, water) for ROOT_NET, a BIOSPHERE dependency candidate.",
+   "falsifier": "A reader finds the condition is not one the entity depends on, or the dependency runs the other way.",
+   "evidence_spans": [
+    "soil",
+    "water"
+   ],
+   "status": "PROPOSED",
+   "generated_by": "HX4"
+  }
+ ]
+}
