@@ -14,9 +14,18 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 from temporal_scope import assess_goal
-from verify import load_ontology
+from verify import load_ontology, hydrate_entities
 from paradigm_selector import select_paradigm as suggest_paradigm
-from scope_checker import is_scoped, extract_value, extract_confidence
+from scope_checker import is_scoped, extract_value, extract_confidence, confidence_record
+
+# 2026-11-24 (fixtures F7 and F3, validation/fixtures/DECLARED.json):
+#   - an inspiration's confidence comes from scope_checker.confidence_record, with its basis
+#     (explicit / computed), the same value audit.py and grounding_inspector.py report;
+#   - refine_goal loads the full records behind the thin index entries before looking for rhymes.
+#     Before, it searched index entries, which have no attributes, so no rhyme was found by pattern
+#     and no inspiration evidence was ever attached. Records that fail to load are listed as
+#     LOAD_FAILED and left out.
+# legacy=True / --legacy gives the behaviour before the repair.
 
 # ------------------------------------------------------------------
 # 1. Extract core purpose and domain keywords from goal text
@@ -62,7 +71,7 @@ def find_rhymes(domain: str, ontology: dict) -> List[dict]:
 # ------------------------------------------------------------------
 # 3. Generate alternative strategies from a rhyming entity
 # ------------------------------------------------------------------
-def generate_alternatives(goal: str, goal_domain: str, entity: dict) -> List[Dict[str, Any]]:
+def generate_alternatives(goal: str, goal_domain: str, entity: dict, legacy: bool = False) -> List[Dict[str, Any]]:
     """For a given entity, produce one or more alternative strategies."""
     alternatives = []
     pattern = entity.get("attributes", {}).get("pattern", "")
@@ -73,11 +82,20 @@ def generate_alternatives(goal: str, goal_domain: str, entity: dict) -> List[Dic
     for attr_name, attr_val in entity.get("attributes", {}).items():
         if is_scoped(attr_val):
             val = extract_value(attr_val)
-            conf = extract_confidence(attr_val)
+            if legacy:
+                inspirations.append({
+                    "attribute": attr_name,
+                    "value": val,
+                    "confidence": extract_confidence(attr_val),
+                    "definition": attr_val.get("scope", {}).get("definition", "")
+                })
+                continue
+            rec = confidence_record(attr_val)
             inspirations.append({
                 "attribute": attr_name,
                 "value": val,
-                "confidence": conf,
+                "confidence": rec["value"],
+                "confidence_basis": rec["basis"],
                 "definition": attr_val.get("scope", {}).get("definition", "")
             })
 
@@ -119,7 +137,8 @@ def score_alternative(alternative: dict, goal_horizon: dict, goal_domain: str) -
 # ------------------------------------------------------------------
 # 5. Main refine function
 # ------------------------------------------------------------------
-def refine_goal(goal: str, ontology: Optional[dict] = None, ontology_path: Optional[str] = None) -> dict:
+def refine_goal(goal: str, ontology: Optional[dict] = None, ontology_path: Optional[str] = None,
+                legacy: bool = False) -> dict:
     """
     Take a goal, assess its temporal scope, find rhymes,
     generate alternatives, score them, and return a report.
@@ -132,13 +151,17 @@ def refine_goal(goal: str, ontology: Optional[dict] = None, ontology_path: Optio
     domain = goal_info["domain"]
     horizon = temporal_assessment["detected_horizon"]
 
+    hydrated, load_failures = 0, []
+    if not legacy:
+        full, hydrated, load_failures = hydrate_entities(ontology.get("entities", []))
+        ontology = dict(ontology, entities=full)
     rhymes = find_rhymes(domain, ontology)
     if not rhymes:
         rhymes = ontology.get("entities", [])[:10]
 
     all_alternatives = []
     for ent in rhymes:
-        alts = generate_alternatives(goal, domain, ent)
+        alts = generate_alternatives(goal, domain, ent, legacy=legacy)
         for alt in alts:
             alt["score"] = round(score_alternative(alt, horizon, domain), 2)
             all_alternatives.append(alt)
@@ -155,6 +178,9 @@ def refine_goal(goal: str, ontology: Optional[dict] = None, ontology_path: Optio
         "temporal_assessment": temporal_assessment,
         "domain": domain,
         "rhyme_sources_count": len(rhymes),
+        "mode": "legacy" if legacy else "repaired",
+        "entities_hydrated": hydrated,
+        "load_failures": load_failures,
         "alternatives": top_alternatives,
         "recommendation": recommendation
     }
@@ -167,6 +193,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Refine a goal using cross-domain rhymes.")
     parser.add_argument("--goal", type=str, required=True, help="The goal to refine")
     parser.add_argument("--ontology", type=str, default=None, help="Path to ontology_index.json")
+    parser.add_argument("--legacy", action="store_true",
+                        help="behaviour before the 2026-11-24 repair (thin index entries; no confidence basis)")
     args = parser.parse_args()
-    result = refine_goal(args.goal, ontology_path=args.ontology)
+    result = refine_goal(args.goal, ontology_path=args.ontology, legacy=args.legacy)
     print(json.dumps(result, indent=2))

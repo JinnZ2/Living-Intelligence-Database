@@ -1,8 +1,8 @@
 {
   "record": "known-answer fixtures",
-  "commit": "1d09b498fbceb0ea9e1482b96830f0e3fbdda963",
+  "commit": "4b43b75cb7f743a18ca9656fafe736b7f3dd9b55",
   "counts": {
-    "PASS": 8,
+    "PASS": 10,
     "FAIL": 0,
     "ERROR": 0,
     "NOT_RUN": 0
@@ -33,6 +33,28 @@
     },
     {
       "id": "F3",
+      "instrument": "verify.py",
+      "must_read": "thin index entry -> full record loaded before checks",
+      "state": "PASS",
+      "observed": {
+        "a_hydrated": 1,
+        "a_tests_gathered": 1,
+        "a_evidence_count": 1,
+        "a_verdict": "TESTED",
+        "b_load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
+          }
+        ],
+        "b_evidence_count": 0,
+        "b_verdict": "NOT_TESTED"
+      }
+    },
+    {
+      "id": "F4",
       "instrument": "falsifier.py",
       "must_read": "no match -> NOT_TESTED; 0 tests -> no score",
       "state": "PASS",
@@ -47,7 +69,7 @@
       }
     },
     {
-      "id": "F4",
+      "id": "F5",
       "instrument": "dependency_tree.py",
       "must_read": "unresolved link reported, not dropped",
       "state": "PASS",
@@ -68,25 +90,7 @@
       }
     },
     {
-      "id": "F5a",
-      "instrument": "falsifier.py",
-      "must_read": "load fails -> LOAD_FAILED, no thin substitution",
-      "state": "PASS",
-      "observed": {
-        "load_failures": [
-          {
-            "id": "GHOST",
-            "path": "does/not/exist.json",
-            "state": "LOAD_FAILED",
-            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
-          }
-        ],
-        "error": "LOAD_FAILED: entity file for GHOST could not be loaded; nothing was analysed.",
-        "analysed": false
-      }
-    },
-    {
-      "id": "F5b",
+      "id": "F6",
       "instrument": "audit.py",
       "must_read": "load fails -> LOAD_FAILED, scoped_ratio null",
       "state": "PASS",
@@ -104,7 +108,25 @@
       }
     },
     {
-      "id": "F5c",
+      "id": "F6a",
+      "instrument": "falsifier.py",
+      "must_read": "load fails -> LOAD_FAILED, no thin substitution",
+      "state": "PASS",
+      "observed": {
+        "load_failures": [
+          {
+            "id": "GHOST",
+            "path": "does/not/exist.json",
+            "state": "LOAD_FAILED",
+            "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/living-intelligence-database/does/not/exist.json'"
+          }
+        ],
+        "error": "LOAD_FAILED: entity file for GHOST could not be loaded; nothing was analysed.",
+        "analysed": false
+      }
+    },
+    {
+      "id": "F6c",
       "instrument": "dependency_tree.py",
       "must_read": "load fails -> LOAD_FAILED, not built from thin entry",
       "state": "PASS",
@@ -122,7 +144,59 @@
       }
     },
     {
-      "id": "F6",
+      "id": "F7",
+      "instrument": "scope_checker/audit/grounding/goal",
+      "must_read": "same record -> same confidence in every instrument",
+      "state": "PASS",
+      "observed": {
+        "scope_checker": {
+          "computed": [
+            0.544,
+            "computed"
+          ],
+          "explicit": [
+            0.9,
+            "explicit"
+          ]
+        },
+        "grounding_inspector": {
+          "computed": [
+            0.544,
+            "computed"
+          ],
+          "explicit": [
+            0.9,
+            "explicit"
+          ]
+        },
+        "audit": {
+          "computed": [
+            0.544,
+            "computed"
+          ],
+          "explicit": [
+            0.9,
+            "explicit"
+          ]
+        },
+        "goal_refiner": {
+          "computed": [
+            0.544,
+            "computed"
+          ],
+          "explicit": [
+            0.9,
+            "explicit"
+          ]
+        },
+        "audit_buckets": {
+          "0.54": 1,
+          "0.9": 1
+        }
+      }
+    },
+    {
+      "id": "F8",
       "instrument": "scripts/build_index.py",
       "must_read": "broken link -> exit 1 (one KNOWN_HELD link allowlisted)",
       "state": "PASS",
